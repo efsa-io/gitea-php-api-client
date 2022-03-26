@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Hook a hook is a web hook when one repository changed
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -98,7 +98,7 @@ class HookTest extends TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "createdAt"
      */
     public function testPropertyCreatedAt()
     {
@@ -134,7 +134,7 @@ class HookTest extends TestCase
     }
 
     /**
-     * Test attribute "updated_at"
+     * Test attribute "updatedAt"
      */
     public function testPropertyUpdatedAt()
     {

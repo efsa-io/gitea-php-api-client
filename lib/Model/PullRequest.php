@@ -64,28 +64,28 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'assignees' => '\Efsa\Client\Gitea\Model\User[]',
         'base' => '\Efsa\Client\Gitea\Model\PRBranchInfo',
         'body' => 'string',
-        'closed_at' => '\DateTime',
+        'closedAt' => '\DateTime',
         'comments' => 'int',
-        'created_at' => '\DateTime',
-        'diff_url' => 'string',
-        'due_date' => '\DateTime',
+        'createdAt' => '\DateTime',
+        'diffUrl' => 'string',
+        'dueDate' => '\DateTime',
         'head' => '\Efsa\Client\Gitea\Model\PRBranchInfo',
-        'html_url' => 'string',
+        'htmlUrl' => 'string',
         'id' => 'int',
-        'is_locked' => 'bool',
+        'isLocked' => 'bool',
         'labels' => '\Efsa\Client\Gitea\Model\Label[]',
-        'merge_base' => 'string',
-        'merge_commit_sha' => 'string',
+        'mergeBase' => 'string',
+        'mergeCommitSha' => 'string',
         'mergeable' => 'bool',
         'merged' => 'bool',
-        'merged_at' => '\DateTime',
-        'merged_by' => '\Efsa\Client\Gitea\Model\User',
+        'mergedAt' => '\DateTime',
+        'mergedBy' => '\Efsa\Client\Gitea\Model\User',
         'milestone' => '\Efsa\Client\Gitea\Model\Milestone',
         'number' => 'int',
-        'patch_url' => 'string',
+        'patchUrl' => 'string',
         'state' => 'string',
         'title' => 'string',
-        'updated_at' => '\DateTime',
+        'updatedAt' => '\DateTime',
         'url' => 'string',
         'user' => '\Efsa\Client\Gitea\Model\User'
     ];
@@ -102,28 +102,28 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'assignees' => null,
         'base' => null,
         'body' => null,
-        'closed_at' => 'date-time',
+        'closedAt' => 'date-time',
         'comments' => 'int64',
-        'created_at' => 'date-time',
-        'diff_url' => null,
-        'due_date' => 'date-time',
+        'createdAt' => 'date-time',
+        'diffUrl' => null,
+        'dueDate' => 'date-time',
         'head' => null,
-        'html_url' => null,
+        'htmlUrl' => null,
         'id' => 'int64',
-        'is_locked' => null,
+        'isLocked' => null,
         'labels' => null,
-        'merge_base' => null,
-        'merge_commit_sha' => null,
+        'mergeBase' => null,
+        'mergeCommitSha' => null,
         'mergeable' => null,
         'merged' => null,
-        'merged_at' => 'date-time',
-        'merged_by' => null,
+        'mergedAt' => 'date-time',
+        'mergedBy' => null,
         'milestone' => null,
         'number' => 'int64',
-        'patch_url' => null,
+        'patchUrl' => null,
         'state' => null,
         'title' => null,
-        'updated_at' => 'date-time',
+        'updatedAt' => 'date-time',
         'url' => null,
         'user' => null
     ];
@@ -159,28 +159,28 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'assignees' => 'assignees',
         'base' => 'base',
         'body' => 'body',
-        'closed_at' => 'closed_at',
+        'closedAt' => 'closed_at',
         'comments' => 'comments',
-        'created_at' => 'created_at',
-        'diff_url' => 'diff_url',
-        'due_date' => 'due_date',
+        'createdAt' => 'created_at',
+        'diffUrl' => 'diff_url',
+        'dueDate' => 'due_date',
         'head' => 'head',
-        'html_url' => 'html_url',
+        'htmlUrl' => 'html_url',
         'id' => 'id',
-        'is_locked' => 'is_locked',
+        'isLocked' => 'is_locked',
         'labels' => 'labels',
-        'merge_base' => 'merge_base',
-        'merge_commit_sha' => 'merge_commit_sha',
+        'mergeBase' => 'merge_base',
+        'mergeCommitSha' => 'merge_commit_sha',
         'mergeable' => 'mergeable',
         'merged' => 'merged',
-        'merged_at' => 'merged_at',
-        'merged_by' => 'merged_by',
+        'mergedAt' => 'merged_at',
+        'mergedBy' => 'merged_by',
         'milestone' => 'milestone',
         'number' => 'number',
-        'patch_url' => 'patch_url',
+        'patchUrl' => 'patch_url',
         'state' => 'state',
         'title' => 'title',
-        'updated_at' => 'updated_at',
+        'updatedAt' => 'updated_at',
         'url' => 'url',
         'user' => 'user'
     ];
@@ -195,28 +195,28 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'assignees' => 'setAssignees',
         'base' => 'setBase',
         'body' => 'setBody',
-        'closed_at' => 'setClosedAt',
+        'closedAt' => 'setClosedAt',
         'comments' => 'setComments',
-        'created_at' => 'setCreatedAt',
-        'diff_url' => 'setDiffUrl',
-        'due_date' => 'setDueDate',
+        'createdAt' => 'setCreatedAt',
+        'diffUrl' => 'setDiffUrl',
+        'dueDate' => 'setDueDate',
         'head' => 'setHead',
-        'html_url' => 'setHtmlUrl',
+        'htmlUrl' => 'setHtmlUrl',
         'id' => 'setId',
-        'is_locked' => 'setIsLocked',
+        'isLocked' => 'setIsLocked',
         'labels' => 'setLabels',
-        'merge_base' => 'setMergeBase',
-        'merge_commit_sha' => 'setMergeCommitSha',
+        'mergeBase' => 'setMergeBase',
+        'mergeCommitSha' => 'setMergeCommitSha',
         'mergeable' => 'setMergeable',
         'merged' => 'setMerged',
-        'merged_at' => 'setMergedAt',
-        'merged_by' => 'setMergedBy',
+        'mergedAt' => 'setMergedAt',
+        'mergedBy' => 'setMergedBy',
         'milestone' => 'setMilestone',
         'number' => 'setNumber',
-        'patch_url' => 'setPatchUrl',
+        'patchUrl' => 'setPatchUrl',
         'state' => 'setState',
         'title' => 'setTitle',
-        'updated_at' => 'setUpdatedAt',
+        'updatedAt' => 'setUpdatedAt',
         'url' => 'setUrl',
         'user' => 'setUser'
     ];
@@ -231,28 +231,28 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'assignees' => 'getAssignees',
         'base' => 'getBase',
         'body' => 'getBody',
-        'closed_at' => 'getClosedAt',
+        'closedAt' => 'getClosedAt',
         'comments' => 'getComments',
-        'created_at' => 'getCreatedAt',
-        'diff_url' => 'getDiffUrl',
-        'due_date' => 'getDueDate',
+        'createdAt' => 'getCreatedAt',
+        'diffUrl' => 'getDiffUrl',
+        'dueDate' => 'getDueDate',
         'head' => 'getHead',
-        'html_url' => 'getHtmlUrl',
+        'htmlUrl' => 'getHtmlUrl',
         'id' => 'getId',
-        'is_locked' => 'getIsLocked',
+        'isLocked' => 'getIsLocked',
         'labels' => 'getLabels',
-        'merge_base' => 'getMergeBase',
-        'merge_commit_sha' => 'getMergeCommitSha',
+        'mergeBase' => 'getMergeBase',
+        'mergeCommitSha' => 'getMergeCommitSha',
         'mergeable' => 'getMergeable',
         'merged' => 'getMerged',
-        'merged_at' => 'getMergedAt',
-        'merged_by' => 'getMergedBy',
+        'mergedAt' => 'getMergedAt',
+        'mergedBy' => 'getMergedBy',
         'milestone' => 'getMilestone',
         'number' => 'getNumber',
-        'patch_url' => 'getPatchUrl',
+        'patchUrl' => 'getPatchUrl',
         'state' => 'getState',
         'title' => 'getTitle',
-        'updated_at' => 'getUpdatedAt',
+        'updatedAt' => 'getUpdatedAt',
         'url' => 'getUrl',
         'user' => 'getUser'
     ];
@@ -318,28 +318,28 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['assignees'] = $data['assignees'] ?? null;
         $this->container['base'] = $data['base'] ?? null;
         $this->container['body'] = $data['body'] ?? null;
-        $this->container['closed_at'] = $data['closed_at'] ?? null;
+        $this->container['closedAt'] = $data['closedAt'] ?? null;
         $this->container['comments'] = $data['comments'] ?? null;
-        $this->container['created_at'] = $data['created_at'] ?? null;
-        $this->container['diff_url'] = $data['diff_url'] ?? null;
-        $this->container['due_date'] = $data['due_date'] ?? null;
+        $this->container['createdAt'] = $data['createdAt'] ?? null;
+        $this->container['diffUrl'] = $data['diffUrl'] ?? null;
+        $this->container['dueDate'] = $data['dueDate'] ?? null;
         $this->container['head'] = $data['head'] ?? null;
-        $this->container['html_url'] = $data['html_url'] ?? null;
+        $this->container['htmlUrl'] = $data['htmlUrl'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['is_locked'] = $data['is_locked'] ?? null;
+        $this->container['isLocked'] = $data['isLocked'] ?? null;
         $this->container['labels'] = $data['labels'] ?? null;
-        $this->container['merge_base'] = $data['merge_base'] ?? null;
-        $this->container['merge_commit_sha'] = $data['merge_commit_sha'] ?? null;
+        $this->container['mergeBase'] = $data['mergeBase'] ?? null;
+        $this->container['mergeCommitSha'] = $data['mergeCommitSha'] ?? null;
         $this->container['mergeable'] = $data['mergeable'] ?? null;
         $this->container['merged'] = $data['merged'] ?? null;
-        $this->container['merged_at'] = $data['merged_at'] ?? null;
-        $this->container['merged_by'] = $data['merged_by'] ?? null;
+        $this->container['mergedAt'] = $data['mergedAt'] ?? null;
+        $this->container['mergedBy'] = $data['mergedBy'] ?? null;
         $this->container['milestone'] = $data['milestone'] ?? null;
         $this->container['number'] = $data['number'] ?? null;
-        $this->container['patch_url'] = $data['patch_url'] ?? null;
+        $this->container['patchUrl'] = $data['patchUrl'] ?? null;
         $this->container['state'] = $data['state'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
-        $this->container['updated_at'] = $data['updated_at'] ?? null;
+        $this->container['updatedAt'] = $data['updatedAt'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
         $this->container['user'] = $data['user'] ?? null;
     }
@@ -465,25 +465,25 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets closed_at
+     * Gets closedAt
      *
      * @return \DateTime|null
      */
     public function getClosedAt()
     {
-        return $this->container['closed_at'];
+        return $this->container['closedAt'];
     }
 
     /**
-     * Sets closed_at
+     * Sets closedAt
      *
-     * @param \DateTime|null $closed_at closed_at
+     * @param \DateTime|null $closedAt closedAt
      *
      * @return self
      */
-    public function setClosedAt($closed_at)
+    public function setClosedAt($closedAt)
     {
-        $this->container['closed_at'] = $closed_at;
+        $this->container['closedAt'] = $closedAt;
 
         return $this;
     }
@@ -513,73 +513,73 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime|null
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $createdAt createdAt
      *
      * @return self
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }
 
     /**
-     * Gets diff_url
+     * Gets diffUrl
      *
      * @return string|null
      */
     public function getDiffUrl()
     {
-        return $this->container['diff_url'];
+        return $this->container['diffUrl'];
     }
 
     /**
-     * Sets diff_url
+     * Sets diffUrl
      *
-     * @param string|null $diff_url diff_url
+     * @param string|null $diffUrl diffUrl
      *
      * @return self
      */
-    public function setDiffUrl($diff_url)
+    public function setDiffUrl($diffUrl)
     {
-        $this->container['diff_url'] = $diff_url;
+        $this->container['diffUrl'] = $diffUrl;
 
         return $this;
     }
 
     /**
-     * Gets due_date
+     * Gets dueDate
      *
      * @return \DateTime|null
      */
     public function getDueDate()
     {
-        return $this->container['due_date'];
+        return $this->container['dueDate'];
     }
 
     /**
-     * Sets due_date
+     * Sets dueDate
      *
-     * @param \DateTime|null $due_date due_date
+     * @param \DateTime|null $dueDate dueDate
      *
      * @return self
      */
-    public function setDueDate($due_date)
+    public function setDueDate($dueDate)
     {
-        $this->container['due_date'] = $due_date;
+        $this->container['dueDate'] = $dueDate;
 
         return $this;
     }
@@ -609,25 +609,25 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets html_url
+     * Gets htmlUrl
      *
      * @return string|null
      */
     public function getHtmlUrl()
     {
-        return $this->container['html_url'];
+        return $this->container['htmlUrl'];
     }
 
     /**
-     * Sets html_url
+     * Sets htmlUrl
      *
-     * @param string|null $html_url html_url
+     * @param string|null $htmlUrl htmlUrl
      *
      * @return self
      */
-    public function setHtmlUrl($html_url)
+    public function setHtmlUrl($htmlUrl)
     {
-        $this->container['html_url'] = $html_url;
+        $this->container['htmlUrl'] = $htmlUrl;
 
         return $this;
     }
@@ -657,25 +657,25 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets is_locked
+     * Gets isLocked
      *
      * @return bool|null
      */
     public function getIsLocked()
     {
-        return $this->container['is_locked'];
+        return $this->container['isLocked'];
     }
 
     /**
-     * Sets is_locked
+     * Sets isLocked
      *
-     * @param bool|null $is_locked is_locked
+     * @param bool|null $isLocked isLocked
      *
      * @return self
      */
-    public function setIsLocked($is_locked)
+    public function setIsLocked($isLocked)
     {
-        $this->container['is_locked'] = $is_locked;
+        $this->container['isLocked'] = $isLocked;
 
         return $this;
     }
@@ -705,49 +705,49 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets merge_base
+     * Gets mergeBase
      *
      * @return string|null
      */
     public function getMergeBase()
     {
-        return $this->container['merge_base'];
+        return $this->container['mergeBase'];
     }
 
     /**
-     * Sets merge_base
+     * Sets mergeBase
      *
-     * @param string|null $merge_base merge_base
+     * @param string|null $mergeBase mergeBase
      *
      * @return self
      */
-    public function setMergeBase($merge_base)
+    public function setMergeBase($mergeBase)
     {
-        $this->container['merge_base'] = $merge_base;
+        $this->container['mergeBase'] = $mergeBase;
 
         return $this;
     }
 
     /**
-     * Gets merge_commit_sha
+     * Gets mergeCommitSha
      *
      * @return string|null
      */
     public function getMergeCommitSha()
     {
-        return $this->container['merge_commit_sha'];
+        return $this->container['mergeCommitSha'];
     }
 
     /**
-     * Sets merge_commit_sha
+     * Sets mergeCommitSha
      *
-     * @param string|null $merge_commit_sha merge_commit_sha
+     * @param string|null $mergeCommitSha mergeCommitSha
      *
      * @return self
      */
-    public function setMergeCommitSha($merge_commit_sha)
+    public function setMergeCommitSha($mergeCommitSha)
     {
-        $this->container['merge_commit_sha'] = $merge_commit_sha;
+        $this->container['mergeCommitSha'] = $mergeCommitSha;
 
         return $this;
     }
@@ -801,49 +801,49 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets merged_at
+     * Gets mergedAt
      *
      * @return \DateTime|null
      */
     public function getMergedAt()
     {
-        return $this->container['merged_at'];
+        return $this->container['mergedAt'];
     }
 
     /**
-     * Sets merged_at
+     * Sets mergedAt
      *
-     * @param \DateTime|null $merged_at merged_at
+     * @param \DateTime|null $mergedAt mergedAt
      *
      * @return self
      */
-    public function setMergedAt($merged_at)
+    public function setMergedAt($mergedAt)
     {
-        $this->container['merged_at'] = $merged_at;
+        $this->container['mergedAt'] = $mergedAt;
 
         return $this;
     }
 
     /**
-     * Gets merged_by
+     * Gets mergedBy
      *
      * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getMergedBy()
     {
-        return $this->container['merged_by'];
+        return $this->container['mergedBy'];
     }
 
     /**
-     * Sets merged_by
+     * Sets mergedBy
      *
-     * @param \Efsa\Client\Gitea\Model\User|null $merged_by merged_by
+     * @param \Efsa\Client\Gitea\Model\User|null $mergedBy mergedBy
      *
      * @return self
      */
-    public function setMergedBy($merged_by)
+    public function setMergedBy($mergedBy)
     {
-        $this->container['merged_by'] = $merged_by;
+        $this->container['mergedBy'] = $mergedBy;
 
         return $this;
     }
@@ -897,25 +897,25 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets patch_url
+     * Gets patchUrl
      *
      * @return string|null
      */
     public function getPatchUrl()
     {
-        return $this->container['patch_url'];
+        return $this->container['patchUrl'];
     }
 
     /**
-     * Sets patch_url
+     * Sets patchUrl
      *
-     * @param string|null $patch_url patch_url
+     * @param string|null $patchUrl patchUrl
      *
      * @return self
      */
-    public function setPatchUrl($patch_url)
+    public function setPatchUrl($patchUrl)
     {
-        $this->container['patch_url'] = $patch_url;
+        $this->container['patchUrl'] = $patchUrl;
 
         return $this;
     }
@@ -969,25 +969,25 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets updated_at
+     * Gets updatedAt
      *
      * @return \DateTime|null
      */
     public function getUpdatedAt()
     {
-        return $this->container['updated_at'];
+        return $this->container['updatedAt'];
     }
 
     /**
-     * Sets updated_at
+     * Sets updatedAt
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updatedAt updatedAt
      *
      * @return self
      */
-    public function setUpdatedAt($updated_at)
+    public function setUpdatedAt($updatedAt)
     {
-        $this->container['updated_at'] = $updated_at;
+        $this->container['updatedAt'] = $updatedAt;
 
         return $this;
     }

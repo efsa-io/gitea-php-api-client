@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description WikiPageMetaData wiki page meta information
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class WikiPageMetaDataTest extends TestCase
     }
 
     /**
-     * Test attribute "html_url"
+     * Test attribute "htmlUrl"
      */
     public function testPropertyHtmlUrl()
     {
@@ -89,7 +89,7 @@ class WikiPageMetaDataTest extends TestCase
     }
 
     /**
-     * Test attribute "last_commit"
+     * Test attribute "lastCommit"
      */
     public function testPropertyLastCommit()
     {
@@ -98,7 +98,7 @@ class WikiPageMetaDataTest extends TestCase
     }
 
     /**
-     * Test attribute "sub_url"
+     * Test attribute "subUrl"
      */
     public function testPropertySubUrl()
     {

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **draft** | **bool** |  | [optional]
 **name** | **string** |  | [optional]
 **prerelease** | **bool** |  | [optional]
-**tag_name** | **string** |  |
-**target_commitish** | **string** |  | [optional]
+**tagName** | **string** |  |
+**targetCommitish** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

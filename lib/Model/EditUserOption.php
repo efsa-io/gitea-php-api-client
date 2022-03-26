@@ -62,20 +62,20 @@ class EditUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'active' => 'bool',
         'admin' => 'bool',
-        'allow_create_organization' => 'bool',
-        'allow_git_hook' => 'bool',
-        'allow_import_local' => 'bool',
+        'allowCreateOrganization' => 'bool',
+        'allowGitHook' => 'bool',
+        'allowImportLocal' => 'bool',
         'description' => 'string',
         'email' => 'string',
-        'full_name' => 'string',
+        'fullName' => 'string',
         'location' => 'string',
-        'login_name' => 'string',
-        'max_repo_creation' => 'int',
-        'must_change_password' => 'bool',
+        'loginName' => 'string',
+        'maxRepoCreation' => 'int',
+        'mustChangePassword' => 'bool',
         'password' => 'string',
-        'prohibit_login' => 'bool',
+        'prohibitLogin' => 'bool',
         'restricted' => 'bool',
-        'source_id' => 'int',
+        'sourceId' => 'int',
         'visibility' => 'string',
         'website' => 'string'
     ];
@@ -90,20 +90,20 @@ class EditUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'active' => null,
         'admin' => null,
-        'allow_create_organization' => null,
-        'allow_git_hook' => null,
-        'allow_import_local' => null,
+        'allowCreateOrganization' => null,
+        'allowGitHook' => null,
+        'allowImportLocal' => null,
         'description' => null,
         'email' => 'email',
-        'full_name' => null,
+        'fullName' => null,
         'location' => null,
-        'login_name' => null,
-        'max_repo_creation' => 'int64',
-        'must_change_password' => null,
+        'loginName' => null,
+        'maxRepoCreation' => 'int64',
+        'mustChangePassword' => null,
         'password' => null,
-        'prohibit_login' => null,
+        'prohibitLogin' => null,
         'restricted' => null,
-        'source_id' => 'int64',
+        'sourceId' => 'int64',
         'visibility' => null,
         'website' => null
     ];
@@ -137,20 +137,20 @@ class EditUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'active' => 'active',
         'admin' => 'admin',
-        'allow_create_organization' => 'allow_create_organization',
-        'allow_git_hook' => 'allow_git_hook',
-        'allow_import_local' => 'allow_import_local',
+        'allowCreateOrganization' => 'allow_create_organization',
+        'allowGitHook' => 'allow_git_hook',
+        'allowImportLocal' => 'allow_import_local',
         'description' => 'description',
         'email' => 'email',
-        'full_name' => 'full_name',
+        'fullName' => 'full_name',
         'location' => 'location',
-        'login_name' => 'login_name',
-        'max_repo_creation' => 'max_repo_creation',
-        'must_change_password' => 'must_change_password',
+        'loginName' => 'login_name',
+        'maxRepoCreation' => 'max_repo_creation',
+        'mustChangePassword' => 'must_change_password',
         'password' => 'password',
-        'prohibit_login' => 'prohibit_login',
+        'prohibitLogin' => 'prohibit_login',
         'restricted' => 'restricted',
-        'source_id' => 'source_id',
+        'sourceId' => 'source_id',
         'visibility' => 'visibility',
         'website' => 'website'
     ];
@@ -163,20 +163,20 @@ class EditUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'active' => 'setActive',
         'admin' => 'setAdmin',
-        'allow_create_organization' => 'setAllowCreateOrganization',
-        'allow_git_hook' => 'setAllowGitHook',
-        'allow_import_local' => 'setAllowImportLocal',
+        'allowCreateOrganization' => 'setAllowCreateOrganization',
+        'allowGitHook' => 'setAllowGitHook',
+        'allowImportLocal' => 'setAllowImportLocal',
         'description' => 'setDescription',
         'email' => 'setEmail',
-        'full_name' => 'setFullName',
+        'fullName' => 'setFullName',
         'location' => 'setLocation',
-        'login_name' => 'setLoginName',
-        'max_repo_creation' => 'setMaxRepoCreation',
-        'must_change_password' => 'setMustChangePassword',
+        'loginName' => 'setLoginName',
+        'maxRepoCreation' => 'setMaxRepoCreation',
+        'mustChangePassword' => 'setMustChangePassword',
         'password' => 'setPassword',
-        'prohibit_login' => 'setProhibitLogin',
+        'prohibitLogin' => 'setProhibitLogin',
         'restricted' => 'setRestricted',
-        'source_id' => 'setSourceId',
+        'sourceId' => 'setSourceId',
         'visibility' => 'setVisibility',
         'website' => 'setWebsite'
     ];
@@ -189,20 +189,20 @@ class EditUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'active' => 'getActive',
         'admin' => 'getAdmin',
-        'allow_create_organization' => 'getAllowCreateOrganization',
-        'allow_git_hook' => 'getAllowGitHook',
-        'allow_import_local' => 'getAllowImportLocal',
+        'allowCreateOrganization' => 'getAllowCreateOrganization',
+        'allowGitHook' => 'getAllowGitHook',
+        'allowImportLocal' => 'getAllowImportLocal',
         'description' => 'getDescription',
         'email' => 'getEmail',
-        'full_name' => 'getFullName',
+        'fullName' => 'getFullName',
         'location' => 'getLocation',
-        'login_name' => 'getLoginName',
-        'max_repo_creation' => 'getMaxRepoCreation',
-        'must_change_password' => 'getMustChangePassword',
+        'loginName' => 'getLoginName',
+        'maxRepoCreation' => 'getMaxRepoCreation',
+        'mustChangePassword' => 'getMustChangePassword',
         'password' => 'getPassword',
-        'prohibit_login' => 'getProhibitLogin',
+        'prohibitLogin' => 'getProhibitLogin',
         'restricted' => 'getRestricted',
-        'source_id' => 'getSourceId',
+        'sourceId' => 'getSourceId',
         'visibility' => 'getVisibility',
         'website' => 'getWebsite'
     ];
@@ -266,20 +266,20 @@ class EditUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['active'] = $data['active'] ?? null;
         $this->container['admin'] = $data['admin'] ?? null;
-        $this->container['allow_create_organization'] = $data['allow_create_organization'] ?? null;
-        $this->container['allow_git_hook'] = $data['allow_git_hook'] ?? null;
-        $this->container['allow_import_local'] = $data['allow_import_local'] ?? null;
+        $this->container['allowCreateOrganization'] = $data['allowCreateOrganization'] ?? null;
+        $this->container['allowGitHook'] = $data['allowGitHook'] ?? null;
+        $this->container['allowImportLocal'] = $data['allowImportLocal'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
         $this->container['email'] = $data['email'] ?? null;
-        $this->container['full_name'] = $data['full_name'] ?? null;
+        $this->container['fullName'] = $data['fullName'] ?? null;
         $this->container['location'] = $data['location'] ?? null;
-        $this->container['login_name'] = $data['login_name'] ?? null;
-        $this->container['max_repo_creation'] = $data['max_repo_creation'] ?? null;
-        $this->container['must_change_password'] = $data['must_change_password'] ?? null;
+        $this->container['loginName'] = $data['loginName'] ?? null;
+        $this->container['maxRepoCreation'] = $data['maxRepoCreation'] ?? null;
+        $this->container['mustChangePassword'] = $data['mustChangePassword'] ?? null;
         $this->container['password'] = $data['password'] ?? null;
-        $this->container['prohibit_login'] = $data['prohibit_login'] ?? null;
+        $this->container['prohibitLogin'] = $data['prohibitLogin'] ?? null;
         $this->container['restricted'] = $data['restricted'] ?? null;
-        $this->container['source_id'] = $data['source_id'] ?? null;
+        $this->container['sourceId'] = $data['sourceId'] ?? null;
         $this->container['visibility'] = $data['visibility'] ?? null;
         $this->container['website'] = $data['website'] ?? null;
     }
@@ -293,11 +293,11 @@ class EditUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['login_name'] === null) {
-            $invalidProperties[] = "'login_name' can't be null";
+        if ($this->container['loginName'] === null) {
+            $invalidProperties[] = "'loginName' can't be null";
         }
-        if ($this->container['source_id'] === null) {
-            $invalidProperties[] = "'source_id' can't be null";
+        if ($this->container['sourceId'] === null) {
+            $invalidProperties[] = "'sourceId' can't be null";
         }
         return $invalidProperties;
     }
@@ -363,73 +363,73 @@ class EditUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets allow_create_organization
+     * Gets allowCreateOrganization
      *
      * @return bool|null
      */
     public function getAllowCreateOrganization()
     {
-        return $this->container['allow_create_organization'];
+        return $this->container['allowCreateOrganization'];
     }
 
     /**
-     * Sets allow_create_organization
+     * Sets allowCreateOrganization
      *
-     * @param bool|null $allow_create_organization allow_create_organization
+     * @param bool|null $allowCreateOrganization allowCreateOrganization
      *
      * @return self
      */
-    public function setAllowCreateOrganization($allow_create_organization)
+    public function setAllowCreateOrganization($allowCreateOrganization)
     {
-        $this->container['allow_create_organization'] = $allow_create_organization;
+        $this->container['allowCreateOrganization'] = $allowCreateOrganization;
 
         return $this;
     }
 
     /**
-     * Gets allow_git_hook
+     * Gets allowGitHook
      *
      * @return bool|null
      */
     public function getAllowGitHook()
     {
-        return $this->container['allow_git_hook'];
+        return $this->container['allowGitHook'];
     }
 
     /**
-     * Sets allow_git_hook
+     * Sets allowGitHook
      *
-     * @param bool|null $allow_git_hook allow_git_hook
+     * @param bool|null $allowGitHook allowGitHook
      *
      * @return self
      */
-    public function setAllowGitHook($allow_git_hook)
+    public function setAllowGitHook($allowGitHook)
     {
-        $this->container['allow_git_hook'] = $allow_git_hook;
+        $this->container['allowGitHook'] = $allowGitHook;
 
         return $this;
     }
 
     /**
-     * Gets allow_import_local
+     * Gets allowImportLocal
      *
      * @return bool|null
      */
     public function getAllowImportLocal()
     {
-        return $this->container['allow_import_local'];
+        return $this->container['allowImportLocal'];
     }
 
     /**
-     * Sets allow_import_local
+     * Sets allowImportLocal
      *
-     * @param bool|null $allow_import_local allow_import_local
+     * @param bool|null $allowImportLocal allowImportLocal
      *
      * @return self
      */
-    public function setAllowImportLocal($allow_import_local)
+    public function setAllowImportLocal($allowImportLocal)
     {
-        $this->container['allow_import_local'] = $allow_import_local;
+        $this->container['allowImportLocal'] = $allowImportLocal;
 
         return $this;
     }
@@ -483,25 +483,25 @@ class EditUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets full_name
+     * Gets fullName
      *
      * @return string|null
      */
     public function getFullName()
     {
-        return $this->container['full_name'];
+        return $this->container['fullName'];
     }
 
     /**
-     * Sets full_name
+     * Sets fullName
      *
-     * @param string|null $full_name full_name
+     * @param string|null $fullName fullName
      *
      * @return self
      */
-    public function setFullName($full_name)
+    public function setFullName($fullName)
     {
-        $this->container['full_name'] = $full_name;
+        $this->container['fullName'] = $fullName;
 
         return $this;
     }
@@ -531,73 +531,73 @@ class EditUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets login_name
+     * Gets loginName
      *
      * @return string
      */
     public function getLoginName()
     {
-        return $this->container['login_name'];
+        return $this->container['loginName'];
     }
 
     /**
-     * Sets login_name
+     * Sets loginName
      *
-     * @param string $login_name login_name
+     * @param string $loginName loginName
      *
      * @return self
      */
-    public function setLoginName($login_name)
+    public function setLoginName($loginName)
     {
-        $this->container['login_name'] = $login_name;
+        $this->container['loginName'] = $loginName;
 
         return $this;
     }
 
     /**
-     * Gets max_repo_creation
+     * Gets maxRepoCreation
      *
      * @return int|null
      */
     public function getMaxRepoCreation()
     {
-        return $this->container['max_repo_creation'];
+        return $this->container['maxRepoCreation'];
     }
 
     /**
-     * Sets max_repo_creation
+     * Sets maxRepoCreation
      *
-     * @param int|null $max_repo_creation max_repo_creation
+     * @param int|null $maxRepoCreation maxRepoCreation
      *
      * @return self
      */
-    public function setMaxRepoCreation($max_repo_creation)
+    public function setMaxRepoCreation($maxRepoCreation)
     {
-        $this->container['max_repo_creation'] = $max_repo_creation;
+        $this->container['maxRepoCreation'] = $maxRepoCreation;
 
         return $this;
     }
 
     /**
-     * Gets must_change_password
+     * Gets mustChangePassword
      *
      * @return bool|null
      */
     public function getMustChangePassword()
     {
-        return $this->container['must_change_password'];
+        return $this->container['mustChangePassword'];
     }
 
     /**
-     * Sets must_change_password
+     * Sets mustChangePassword
      *
-     * @param bool|null $must_change_password must_change_password
+     * @param bool|null $mustChangePassword mustChangePassword
      *
      * @return self
      */
-    public function setMustChangePassword($must_change_password)
+    public function setMustChangePassword($mustChangePassword)
     {
-        $this->container['must_change_password'] = $must_change_password;
+        $this->container['mustChangePassword'] = $mustChangePassword;
 
         return $this;
     }
@@ -627,25 +627,25 @@ class EditUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets prohibit_login
+     * Gets prohibitLogin
      *
      * @return bool|null
      */
     public function getProhibitLogin()
     {
-        return $this->container['prohibit_login'];
+        return $this->container['prohibitLogin'];
     }
 
     /**
-     * Sets prohibit_login
+     * Sets prohibitLogin
      *
-     * @param bool|null $prohibit_login prohibit_login
+     * @param bool|null $prohibitLogin prohibitLogin
      *
      * @return self
      */
-    public function setProhibitLogin($prohibit_login)
+    public function setProhibitLogin($prohibitLogin)
     {
-        $this->container['prohibit_login'] = $prohibit_login;
+        $this->container['prohibitLogin'] = $prohibitLogin;
 
         return $this;
     }
@@ -675,25 +675,25 @@ class EditUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets source_id
+     * Gets sourceId
      *
      * @return int
      */
     public function getSourceId()
     {
-        return $this->container['source_id'];
+        return $this->container['sourceId'];
     }
 
     /**
-     * Sets source_id
+     * Sets sourceId
      *
-     * @param int $source_id source_id
+     * @param int $sourceId sourceId
      *
      * @return self
      */
-    public function setSourceId($source_id)
+    public function setSourceId($sourceId)
     {
-        $this->container['source_id'] = $source_id;
+        $this->container['sourceId'] = $sourceId;
 
         return $this;
     }

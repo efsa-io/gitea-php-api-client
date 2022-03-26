@@ -64,12 +64,12 @@ class EditPullRequestOption implements ModelInterface, ArrayAccess, \JsonSeriali
         'assignees' => 'string[]',
         'base' => 'string',
         'body' => 'string',
-        'due_date' => '\DateTime',
+        'dueDate' => '\DateTime',
         'labels' => 'int[]',
         'milestone' => 'int',
         'state' => 'string',
         'title' => 'string',
-        'unset_due_date' => 'bool'
+        'unsetDueDate' => 'bool'
     ];
 
     /**
@@ -84,12 +84,12 @@ class EditPullRequestOption implements ModelInterface, ArrayAccess, \JsonSeriali
         'assignees' => null,
         'base' => null,
         'body' => null,
-        'due_date' => 'date-time',
+        'dueDate' => 'date-time',
         'labels' => 'int64',
         'milestone' => 'int64',
         'state' => null,
         'title' => null,
-        'unset_due_date' => null
+        'unsetDueDate' => null
     ];
 
     /**
@@ -123,12 +123,12 @@ class EditPullRequestOption implements ModelInterface, ArrayAccess, \JsonSeriali
         'assignees' => 'assignees',
         'base' => 'base',
         'body' => 'body',
-        'due_date' => 'due_date',
+        'dueDate' => 'due_date',
         'labels' => 'labels',
         'milestone' => 'milestone',
         'state' => 'state',
         'title' => 'title',
-        'unset_due_date' => 'unset_due_date'
+        'unsetDueDate' => 'unset_due_date'
     ];
 
     /**
@@ -141,12 +141,12 @@ class EditPullRequestOption implements ModelInterface, ArrayAccess, \JsonSeriali
         'assignees' => 'setAssignees',
         'base' => 'setBase',
         'body' => 'setBody',
-        'due_date' => 'setDueDate',
+        'dueDate' => 'setDueDate',
         'labels' => 'setLabels',
         'milestone' => 'setMilestone',
         'state' => 'setState',
         'title' => 'setTitle',
-        'unset_due_date' => 'setUnsetDueDate'
+        'unsetDueDate' => 'setUnsetDueDate'
     ];
 
     /**
@@ -159,12 +159,12 @@ class EditPullRequestOption implements ModelInterface, ArrayAccess, \JsonSeriali
         'assignees' => 'getAssignees',
         'base' => 'getBase',
         'body' => 'getBody',
-        'due_date' => 'getDueDate',
+        'dueDate' => 'getDueDate',
         'labels' => 'getLabels',
         'milestone' => 'getMilestone',
         'state' => 'getState',
         'title' => 'getTitle',
-        'unset_due_date' => 'getUnsetDueDate'
+        'unsetDueDate' => 'getUnsetDueDate'
     ];
 
     /**
@@ -228,12 +228,12 @@ class EditPullRequestOption implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->container['assignees'] = $data['assignees'] ?? null;
         $this->container['base'] = $data['base'] ?? null;
         $this->container['body'] = $data['body'] ?? null;
-        $this->container['due_date'] = $data['due_date'] ?? null;
+        $this->container['dueDate'] = $data['dueDate'] ?? null;
         $this->container['labels'] = $data['labels'] ?? null;
         $this->container['milestone'] = $data['milestone'] ?? null;
         $this->container['state'] = $data['state'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
-        $this->container['unset_due_date'] = $data['unset_due_date'] ?? null;
+        $this->container['unsetDueDate'] = $data['unsetDueDate'] ?? null;
     }
 
     /**
@@ -357,25 +357,25 @@ class EditPullRequestOption implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets due_date
+     * Gets dueDate
      *
      * @return \DateTime|null
      */
     public function getDueDate()
     {
-        return $this->container['due_date'];
+        return $this->container['dueDate'];
     }
 
     /**
-     * Sets due_date
+     * Sets dueDate
      *
-     * @param \DateTime|null $due_date due_date
+     * @param \DateTime|null $dueDate dueDate
      *
      * @return self
      */
-    public function setDueDate($due_date)
+    public function setDueDate($dueDate)
     {
-        $this->container['due_date'] = $due_date;
+        $this->container['dueDate'] = $dueDate;
 
         return $this;
     }
@@ -477,25 +477,25 @@ class EditPullRequestOption implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets unset_due_date
+     * Gets unsetDueDate
      *
      * @return bool|null
      */
     public function getUnsetDueDate()
     {
-        return $this->container['unset_due_date'];
+        return $this->container['unsetDueDate'];
     }
 
     /**
-     * Sets unset_due_date
+     * Sets unsetDueDate
      *
-     * @param bool|null $unset_due_date unset_due_date
+     * @param bool|null $unsetDueDate unsetDueDate
      *
      * @return self
      */
-    public function setUnsetDueDate($unset_due_date)
+    public function setUnsetDueDate($unsetDueDate)
     {
-        $this->container['unset_due_date'] = $unset_due_date;
+        $this->container['unsetDueDate'] = $unsetDueDate;
 
         return $this;
     }

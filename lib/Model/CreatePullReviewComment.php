@@ -61,8 +61,8 @@ class CreatePullReviewComment implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPITypes = [
         'body' => 'string',
-        'new_position' => 'int',
-        'old_position' => 'int',
+        'newPosition' => 'int',
+        'oldPosition' => 'int',
         'path' => 'string'
     ];
 
@@ -75,8 +75,8 @@ class CreatePullReviewComment implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPIFormats = [
         'body' => null,
-        'new_position' => 'int64',
-        'old_position' => 'int64',
+        'newPosition' => 'int64',
+        'oldPosition' => 'int64',
         'path' => null
     ];
 
@@ -108,8 +108,8 @@ class CreatePullReviewComment implements ModelInterface, ArrayAccess, \JsonSeria
      */
     protected static $attributeMap = [
         'body' => 'body',
-        'new_position' => 'new_position',
-        'old_position' => 'old_position',
+        'newPosition' => 'new_position',
+        'oldPosition' => 'old_position',
         'path' => 'path'
     ];
 
@@ -120,8 +120,8 @@ class CreatePullReviewComment implements ModelInterface, ArrayAccess, \JsonSeria
      */
     protected static $setters = [
         'body' => 'setBody',
-        'new_position' => 'setNewPosition',
-        'old_position' => 'setOldPosition',
+        'newPosition' => 'setNewPosition',
+        'oldPosition' => 'setOldPosition',
         'path' => 'setPath'
     ];
 
@@ -132,8 +132,8 @@ class CreatePullReviewComment implements ModelInterface, ArrayAccess, \JsonSeria
      */
     protected static $getters = [
         'body' => 'getBody',
-        'new_position' => 'getNewPosition',
-        'old_position' => 'getOldPosition',
+        'newPosition' => 'getNewPosition',
+        'oldPosition' => 'getOldPosition',
         'path' => 'getPath'
     ];
 
@@ -195,8 +195,8 @@ class CreatePullReviewComment implements ModelInterface, ArrayAccess, \JsonSeria
     public function __construct(array $data = null)
     {
         $this->container['body'] = $data['body'] ?? null;
-        $this->container['new_position'] = $data['new_position'] ?? null;
-        $this->container['old_position'] = $data['old_position'] ?? null;
+        $this->container['newPosition'] = $data['newPosition'] ?? null;
+        $this->container['oldPosition'] = $data['oldPosition'] ?? null;
         $this->container['path'] = $data['path'] ?? null;
     }
 
@@ -249,49 +249,49 @@ class CreatePullReviewComment implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets new_position
+     * Gets newPosition
      *
      * @return int|null
      */
     public function getNewPosition()
     {
-        return $this->container['new_position'];
+        return $this->container['newPosition'];
     }
 
     /**
-     * Sets new_position
+     * Sets newPosition
      *
-     * @param int|null $new_position if comment to new file line or 0
+     * @param int|null $newPosition if comment to new file line or 0
      *
      * @return self
      */
-    public function setNewPosition($new_position)
+    public function setNewPosition($newPosition)
     {
-        $this->container['new_position'] = $new_position;
+        $this->container['newPosition'] = $newPosition;
 
         return $this;
     }
 
     /**
-     * Gets old_position
+     * Gets oldPosition
      *
      * @return int|null
      */
     public function getOldPosition()
     {
-        return $this->container['old_position'];
+        return $this->container['oldPosition'];
     }
 
     /**
-     * Sets old_position
+     * Sets oldPosition
      *
-     * @param int|null $old_position if comment to old file line or 0
+     * @param int|null $oldPosition if comment to old file line or 0
      *
      * @return self
      */
-    public function setOldPosition($old_position)
+    public function setOldPosition($oldPosition)
     {
-        $this->container['old_position'] = $old_position;
+        $this->container['oldPosition'] = $oldPosition;
 
         return $this;
     }

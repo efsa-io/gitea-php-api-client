@@ -60,8 +60,8 @@ class TransferRepoOption implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'new_owner' => 'string',
-        'team_ids' => 'int[]'
+        'newOwner' => 'string',
+        'teamIds' => 'int[]'
     ];
 
     /**
@@ -72,8 +72,8 @@ class TransferRepoOption implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'new_owner' => null,
-        'team_ids' => 'int64'
+        'newOwner' => null,
+        'teamIds' => 'int64'
     ];
 
     /**
@@ -103,8 +103,8 @@ class TransferRepoOption implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'new_owner' => 'new_owner',
-        'team_ids' => 'team_ids'
+        'newOwner' => 'new_owner',
+        'teamIds' => 'team_ids'
     ];
 
     /**
@@ -113,8 +113,8 @@ class TransferRepoOption implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'new_owner' => 'setNewOwner',
-        'team_ids' => 'setTeamIds'
+        'newOwner' => 'setNewOwner',
+        'teamIds' => 'setTeamIds'
     ];
 
     /**
@@ -123,8 +123,8 @@ class TransferRepoOption implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'new_owner' => 'getNewOwner',
-        'team_ids' => 'getTeamIds'
+        'newOwner' => 'getNewOwner',
+        'teamIds' => 'getTeamIds'
     ];
 
     /**
@@ -184,8 +184,8 @@ class TransferRepoOption implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['new_owner'] = $data['new_owner'] ?? null;
-        $this->container['team_ids'] = $data['team_ids'] ?? null;
+        $this->container['newOwner'] = $data['newOwner'] ?? null;
+        $this->container['teamIds'] = $data['teamIds'] ?? null;
     }
 
     /**
@@ -197,8 +197,8 @@ class TransferRepoOption implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $invalidProperties = [];
 
-        if ($this->container['new_owner'] === null) {
-            $invalidProperties[] = "'new_owner' can't be null";
+        if ($this->container['newOwner'] === null) {
+            $invalidProperties[] = "'newOwner' can't be null";
         }
         return $invalidProperties;
     }
@@ -216,49 +216,49 @@ class TransferRepoOption implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets new_owner
+     * Gets newOwner
      *
      * @return string
      */
     public function getNewOwner()
     {
-        return $this->container['new_owner'];
+        return $this->container['newOwner'];
     }
 
     /**
-     * Sets new_owner
+     * Sets newOwner
      *
-     * @param string $new_owner new_owner
+     * @param string $newOwner newOwner
      *
      * @return self
      */
-    public function setNewOwner($new_owner)
+    public function setNewOwner($newOwner)
     {
-        $this->container['new_owner'] = $new_owner;
+        $this->container['newOwner'] = $newOwner;
 
         return $this;
     }
 
     /**
-     * Gets team_ids
+     * Gets teamIds
      *
      * @return int[]|null
      */
     public function getTeamIds()
     {
-        return $this->container['team_ids'];
+        return $this->container['teamIds'];
     }
 
     /**
-     * Sets team_ids
+     * Sets teamIds
      *
-     * @param int[]|null $team_ids ID of the team or teams to add to the repository. Teams can only be added to organization-owned repositories.
+     * @param int[]|null $teamIds ID of the team or teams to add to the repository. Teams can only be added to organization-owned repositories.
      *
      * @return self
      */
-    public function setTeamIds($team_ids)
+    public function setTeamIds($teamIds)
     {
-        $this->container['team_ids'] = $team_ids;
+        $this->container['teamIds'] = $teamIds;
 
         return $this;
     }

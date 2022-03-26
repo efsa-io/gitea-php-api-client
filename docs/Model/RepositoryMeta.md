@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**full_name** | **string** |  | [optional]
+**fullName** | **string** |  | [optional]
 **id** | **int** |  | [optional]
 **name** | **string** |  | [optional]
 **owner** | **string** |  | [optional]

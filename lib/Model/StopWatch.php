@@ -62,10 +62,10 @@ class StopWatch implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'created' => '\DateTime',
         'duration' => 'string',
-        'issue_index' => 'int',
-        'issue_title' => 'string',
-        'repo_name' => 'string',
-        'repo_owner_name' => 'string',
+        'issueIndex' => 'int',
+        'issueTitle' => 'string',
+        'repoName' => 'string',
+        'repoOwnerName' => 'string',
         'seconds' => 'int'
     ];
 
@@ -79,10 +79,10 @@ class StopWatch implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'created' => 'date-time',
         'duration' => null,
-        'issue_index' => 'int64',
-        'issue_title' => null,
-        'repo_name' => null,
-        'repo_owner_name' => null,
+        'issueIndex' => 'int64',
+        'issueTitle' => null,
+        'repoName' => null,
+        'repoOwnerName' => null,
         'seconds' => 'int64'
     ];
 
@@ -115,10 +115,10 @@ class StopWatch implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'created' => 'created',
         'duration' => 'duration',
-        'issue_index' => 'issue_index',
-        'issue_title' => 'issue_title',
-        'repo_name' => 'repo_name',
-        'repo_owner_name' => 'repo_owner_name',
+        'issueIndex' => 'issue_index',
+        'issueTitle' => 'issue_title',
+        'repoName' => 'repo_name',
+        'repoOwnerName' => 'repo_owner_name',
         'seconds' => 'seconds'
     ];
 
@@ -130,10 +130,10 @@ class StopWatch implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'created' => 'setCreated',
         'duration' => 'setDuration',
-        'issue_index' => 'setIssueIndex',
-        'issue_title' => 'setIssueTitle',
-        'repo_name' => 'setRepoName',
-        'repo_owner_name' => 'setRepoOwnerName',
+        'issueIndex' => 'setIssueIndex',
+        'issueTitle' => 'setIssueTitle',
+        'repoName' => 'setRepoName',
+        'repoOwnerName' => 'setRepoOwnerName',
         'seconds' => 'setSeconds'
     ];
 
@@ -145,10 +145,10 @@ class StopWatch implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'created' => 'getCreated',
         'duration' => 'getDuration',
-        'issue_index' => 'getIssueIndex',
-        'issue_title' => 'getIssueTitle',
-        'repo_name' => 'getRepoName',
-        'repo_owner_name' => 'getRepoOwnerName',
+        'issueIndex' => 'getIssueIndex',
+        'issueTitle' => 'getIssueTitle',
+        'repoName' => 'getRepoName',
+        'repoOwnerName' => 'getRepoOwnerName',
         'seconds' => 'getSeconds'
     ];
 
@@ -211,10 +211,10 @@ class StopWatch implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['created'] = $data['created'] ?? null;
         $this->container['duration'] = $data['duration'] ?? null;
-        $this->container['issue_index'] = $data['issue_index'] ?? null;
-        $this->container['issue_title'] = $data['issue_title'] ?? null;
-        $this->container['repo_name'] = $data['repo_name'] ?? null;
-        $this->container['repo_owner_name'] = $data['repo_owner_name'] ?? null;
+        $this->container['issueIndex'] = $data['issueIndex'] ?? null;
+        $this->container['issueTitle'] = $data['issueTitle'] ?? null;
+        $this->container['repoName'] = $data['repoName'] ?? null;
+        $this->container['repoOwnerName'] = $data['repoOwnerName'] ?? null;
         $this->container['seconds'] = $data['seconds'] ?? null;
     }
 
@@ -291,97 +291,97 @@ class StopWatch implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets issue_index
+     * Gets issueIndex
      *
      * @return int|null
      */
     public function getIssueIndex()
     {
-        return $this->container['issue_index'];
+        return $this->container['issueIndex'];
     }
 
     /**
-     * Sets issue_index
+     * Sets issueIndex
      *
-     * @param int|null $issue_index issue_index
+     * @param int|null $issueIndex issueIndex
      *
      * @return self
      */
-    public function setIssueIndex($issue_index)
+    public function setIssueIndex($issueIndex)
     {
-        $this->container['issue_index'] = $issue_index;
+        $this->container['issueIndex'] = $issueIndex;
 
         return $this;
     }
 
     /**
-     * Gets issue_title
+     * Gets issueTitle
      *
      * @return string|null
      */
     public function getIssueTitle()
     {
-        return $this->container['issue_title'];
+        return $this->container['issueTitle'];
     }
 
     /**
-     * Sets issue_title
+     * Sets issueTitle
      *
-     * @param string|null $issue_title issue_title
+     * @param string|null $issueTitle issueTitle
      *
      * @return self
      */
-    public function setIssueTitle($issue_title)
+    public function setIssueTitle($issueTitle)
     {
-        $this->container['issue_title'] = $issue_title;
+        $this->container['issueTitle'] = $issueTitle;
 
         return $this;
     }
 
     /**
-     * Gets repo_name
+     * Gets repoName
      *
      * @return string|null
      */
     public function getRepoName()
     {
-        return $this->container['repo_name'];
+        return $this->container['repoName'];
     }
 
     /**
-     * Sets repo_name
+     * Sets repoName
      *
-     * @param string|null $repo_name repo_name
+     * @param string|null $repoName repoName
      *
      * @return self
      */
-    public function setRepoName($repo_name)
+    public function setRepoName($repoName)
     {
-        $this->container['repo_name'] = $repo_name;
+        $this->container['repoName'] = $repoName;
 
         return $this;
     }
 
     /**
-     * Gets repo_owner_name
+     * Gets repoOwnerName
      *
      * @return string|null
      */
     public function getRepoOwnerName()
     {
-        return $this->container['repo_owner_name'];
+        return $this->container['repoOwnerName'];
     }
 
     /**
-     * Sets repo_owner_name
+     * Sets repoOwnerName
      *
-     * @param string|null $repo_owner_name repo_owner_name
+     * @param string|null $repoOwnerName repoOwnerName
      *
      * @return self
      */
-    public function setRepoOwnerName($repo_owner_name)
+    public function setRepoOwnerName($repoOwnerName)
     {
-        $this->container['repo_owner_name'] = $repo_owner_name;
+        $this->container['repoOwnerName'] = $repoOwnerName;
 
         return $this;
     }

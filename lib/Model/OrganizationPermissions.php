@@ -60,11 +60,11 @@ class OrganizationPermissions implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'can_create_repository' => 'bool',
-        'can_read' => 'bool',
-        'can_write' => 'bool',
-        'is_admin' => 'bool',
-        'is_owner' => 'bool'
+        'canCreateRepository' => 'bool',
+        'canRead' => 'bool',
+        'canWrite' => 'bool',
+        'isAdmin' => 'bool',
+        'isOwner' => 'bool'
     ];
 
     /**
@@ -75,11 +75,11 @@ class OrganizationPermissions implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'can_create_repository' => null,
-        'can_read' => null,
-        'can_write' => null,
-        'is_admin' => null,
-        'is_owner' => null
+        'canCreateRepository' => null,
+        'canRead' => null,
+        'canWrite' => null,
+        'isAdmin' => null,
+        'isOwner' => null
     ];
 
     /**
@@ -109,11 +109,11 @@ class OrganizationPermissions implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'can_create_repository' => 'can_create_repository',
-        'can_read' => 'can_read',
-        'can_write' => 'can_write',
-        'is_admin' => 'is_admin',
-        'is_owner' => 'is_owner'
+        'canCreateRepository' => 'can_create_repository',
+        'canRead' => 'can_read',
+        'canWrite' => 'can_write',
+        'isAdmin' => 'is_admin',
+        'isOwner' => 'is_owner'
     ];
 
     /**
@@ -122,11 +122,11 @@ class OrganizationPermissions implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'can_create_repository' => 'setCanCreateRepository',
-        'can_read' => 'setCanRead',
-        'can_write' => 'setCanWrite',
-        'is_admin' => 'setIsAdmin',
-        'is_owner' => 'setIsOwner'
+        'canCreateRepository' => 'setCanCreateRepository',
+        'canRead' => 'setCanRead',
+        'canWrite' => 'setCanWrite',
+        'isAdmin' => 'setIsAdmin',
+        'isOwner' => 'setIsOwner'
     ];
 
     /**
@@ -135,11 +135,11 @@ class OrganizationPermissions implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'can_create_repository' => 'getCanCreateRepository',
-        'can_read' => 'getCanRead',
-        'can_write' => 'getCanWrite',
-        'is_admin' => 'getIsAdmin',
-        'is_owner' => 'getIsOwner'
+        'canCreateRepository' => 'getCanCreateRepository',
+        'canRead' => 'getCanRead',
+        'canWrite' => 'getCanWrite',
+        'isAdmin' => 'getIsAdmin',
+        'isOwner' => 'getIsOwner'
     ];
 
     /**
@@ -199,11 +199,11 @@ class OrganizationPermissions implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->container['can_create_repository'] = $data['can_create_repository'] ?? null;
-        $this->container['can_read'] = $data['can_read'] ?? null;
-        $this->container['can_write'] = $data['can_write'] ?? null;
-        $this->container['is_admin'] = $data['is_admin'] ?? null;
-        $this->container['is_owner'] = $data['is_owner'] ?? null;
+        $this->container['canCreateRepository'] = $data['canCreateRepository'] ?? null;
+        $this->container['canRead'] = $data['canRead'] ?? null;
+        $this->container['canWrite'] = $data['canWrite'] ?? null;
+        $this->container['isAdmin'] = $data['isAdmin'] ?? null;
+        $this->container['isOwner'] = $data['isOwner'] ?? null;
     }
 
     /**
@@ -231,121 +231,121 @@ class OrganizationPermissions implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets can_create_repository
+     * Gets canCreateRepository
      *
      * @return bool|null
      */
     public function getCanCreateRepository()
     {
-        return $this->container['can_create_repository'];
+        return $this->container['canCreateRepository'];
     }
 
     /**
-     * Sets can_create_repository
+     * Sets canCreateRepository
      *
-     * @param bool|null $can_create_repository can_create_repository
+     * @param bool|null $canCreateRepository canCreateRepository
      *
      * @return self
      */
-    public function setCanCreateRepository($can_create_repository)
+    public function setCanCreateRepository($canCreateRepository)
     {
-        $this->container['can_create_repository'] = $can_create_repository;
+        $this->container['canCreateRepository'] = $canCreateRepository;
 
         return $this;
     }
 
     /**
-     * Gets can_read
+     * Gets canRead
      *
      * @return bool|null
      */
     public function getCanRead()
     {
-        return $this->container['can_read'];
+        return $this->container['canRead'];
     }
 
     /**
-     * Sets can_read
+     * Sets canRead
      *
-     * @param bool|null $can_read can_read
+     * @param bool|null $canRead canRead
      *
      * @return self
      */
-    public function setCanRead($can_read)
+    public function setCanRead($canRead)
     {
-        $this->container['can_read'] = $can_read;
+        $this->container['canRead'] = $canRead;
 
         return $this;
     }
 
     /**
-     * Gets can_write
+     * Gets canWrite
      *
      * @return bool|null
      */
     public function getCanWrite()
     {
-        return $this->container['can_write'];
+        return $this->container['canWrite'];
     }
 
     /**
-     * Sets can_write
+     * Sets canWrite
      *
-     * @param bool|null $can_write can_write
+     * @param bool|null $canWrite canWrite
      *
      * @return self
      */
-    public function setCanWrite($can_write)
+    public function setCanWrite($canWrite)
     {
-        $this->container['can_write'] = $can_write;
+        $this->container['canWrite'] = $canWrite;
 
         return $this;
     }
 
     /**
-     * Gets is_admin
+     * Gets isAdmin
      *
      * @return bool|null
      */
     public function getIsAdmin()
     {
-        return $this->container['is_admin'];
+        return $this->container['isAdmin'];
     }
 
     /**
-     * Sets is_admin
+     * Sets isAdmin
      *
-     * @param bool|null $is_admin is_admin
+     * @param bool|null $isAdmin isAdmin
      *
      * @return self
      */
-    public function setIsAdmin($is_admin)
+    public function setIsAdmin($isAdmin)
     {
-        $this->container['is_admin'] = $is_admin;
+        $this->container['isAdmin'] = $isAdmin;
 
         return $this;
     }
 
     /**
-     * Gets is_owner
+     * Gets isOwner
      *
      * @return bool|null
      */
     public function getIsOwner()
     {
-        return $this->container['is_owner'];
+        return $this->container['isOwner'];
     }
 
     /**
-     * Sets is_owner
+     * Sets isOwner
      *
-     * @param bool|null $is_owner is_owner
+     * @param bool|null $isOwner isOwner
      *
      * @return self
      */
-    public function setIsOwner($is_owner)
+    public function setIsOwner($isOwner)
     {
-        $this->container['is_owner'] = $is_owner;
+        $this->container['isOwner'] = $isOwner;
 
         return $this;
     }

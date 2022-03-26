@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description CreateUserOption create user options
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -89,7 +89,7 @@ class CreateUserOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "full_name"
+     * Test attribute "fullName"
      */
     public function testPropertyFullName()
     {
@@ -98,7 +98,7 @@ class CreateUserOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "login_name"
+     * Test attribute "loginName"
      */
     public function testPropertyLoginName()
     {
@@ -107,7 +107,7 @@ class CreateUserOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "must_change_password"
+     * Test attribute "mustChangePassword"
      */
     public function testPropertyMustChangePassword()
     {
@@ -125,7 +125,7 @@ class CreateUserOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "send_notify"
+     * Test attribute "sendNotify"
      */
     public function testPropertySendNotify()
     {
@@ -134,7 +134,7 @@ class CreateUserOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "source_id"
+     * Test attribute "sourceId"
      */
     public function testPropertySourceId()
     {

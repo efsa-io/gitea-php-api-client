@@ -62,7 +62,7 @@ class AddTimeOption implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'created' => '\DateTime',
         'time' => 'int',
-        'user_name' => 'string'
+        'userName' => 'string'
     ];
 
     /**
@@ -75,7 +75,7 @@ class AddTimeOption implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'created' => 'date-time',
         'time' => 'int64',
-        'user_name' => null
+        'userName' => null
     ];
 
     /**
@@ -107,7 +107,7 @@ class AddTimeOption implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'created' => 'created',
         'time' => 'time',
-        'user_name' => 'user_name'
+        'userName' => 'user_name'
     ];
 
     /**
@@ -118,7 +118,7 @@ class AddTimeOption implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'created' => 'setCreated',
         'time' => 'setTime',
-        'user_name' => 'setUserName'
+        'userName' => 'setUserName'
     ];
 
     /**
@@ -129,7 +129,7 @@ class AddTimeOption implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'created' => 'getCreated',
         'time' => 'getTime',
-        'user_name' => 'getUserName'
+        'userName' => 'getUserName'
     ];
 
     /**
@@ -191,7 +191,7 @@ class AddTimeOption implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['created'] = $data['created'] ?? null;
         $this->container['time'] = $data['time'] ?? null;
-        $this->container['user_name'] = $data['user_name'] ?? null;
+        $this->container['userName'] = $data['userName'] ?? null;
     }
 
     /**
@@ -270,25 +270,25 @@ class AddTimeOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets user_name
+     * Gets userName
      *
      * @return string|null
      */
     public function getUserName()
     {
-        return $this->container['user_name'];
+        return $this->container['userName'];
     }
 
     /**
-     * Sets user_name
+     * Sets userName
      *
-     * @param string|null $user_name User who spent the time (optional)
+     * @param string|null $userName User who spent the time (optional)
      *
      * @return self
      */
-    public function setUserName($user_name)
+    public function setUserName($userName)
     {
-        $this->container['user_name'] = $user_name;
+        $this->container['userName'] = $userName;
 
         return $this;
     }

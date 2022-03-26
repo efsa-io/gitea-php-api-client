@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description ContentsResponse contains information about a repo&#39;s entry&#39;s (dir, file, symlink, submodule) metadata and content
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class ContentsResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "_links"
+     * Test attribute "links"
      */
     public function testPropertyLinks()
     {
@@ -98,7 +98,7 @@ class ContentsResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "download_url"
+     * Test attribute "downloadUrl"
      */
     public function testPropertyDownloadUrl()
     {
@@ -116,7 +116,7 @@ class ContentsResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "git_url"
+     * Test attribute "gitUrl"
      */
     public function testPropertyGitUrl()
     {
@@ -125,7 +125,7 @@ class ContentsResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "html_url"
+     * Test attribute "htmlUrl"
      */
     public function testPropertyHtmlUrl()
     {
@@ -170,7 +170,7 @@ class ContentsResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "submodule_git_url"
+     * Test attribute "submoduleGitUrl"
      */
     public function testPropertySubmoduleGitUrl()
     {

@@ -60,12 +60,12 @@ class CombinedStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'commit_url' => 'string',
+        'commitUrl' => 'string',
         'repository' => '\Efsa\Client\Gitea\Model\Repository',
         'sha' => 'string',
         'state' => 'string',
         'statuses' => '\Efsa\Client\Gitea\Model\CommitStatus[]',
-        'total_count' => 'int',
+        'totalCount' => 'int',
         'url' => 'string'
     ];
 
@@ -77,12 +77,12 @@ class CombinedStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'commit_url' => null,
+        'commitUrl' => null,
         'repository' => null,
         'sha' => null,
         'state' => null,
         'statuses' => null,
-        'total_count' => 'int64',
+        'totalCount' => 'int64',
         'url' => null
     ];
 
@@ -113,12 +113,12 @@ class CombinedStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'commit_url' => 'commit_url',
+        'commitUrl' => 'commit_url',
         'repository' => 'repository',
         'sha' => 'sha',
         'state' => 'state',
         'statuses' => 'statuses',
-        'total_count' => 'total_count',
+        'totalCount' => 'total_count',
         'url' => 'url'
     ];
 
@@ -128,12 +128,12 @@ class CombinedStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'commit_url' => 'setCommitUrl',
+        'commitUrl' => 'setCommitUrl',
         'repository' => 'setRepository',
         'sha' => 'setSha',
         'state' => 'setState',
         'statuses' => 'setStatuses',
-        'total_count' => 'setTotalCount',
+        'totalCount' => 'setTotalCount',
         'url' => 'setUrl'
     ];
 
@@ -143,12 +143,12 @@ class CombinedStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'commit_url' => 'getCommitUrl',
+        'commitUrl' => 'getCommitUrl',
         'repository' => 'getRepository',
         'sha' => 'getSha',
         'state' => 'getState',
         'statuses' => 'getStatuses',
-        'total_count' => 'getTotalCount',
+        'totalCount' => 'getTotalCount',
         'url' => 'getUrl'
     ];
 
@@ -209,12 +209,12 @@ class CombinedStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['commit_url'] = $data['commit_url'] ?? null;
+        $this->container['commitUrl'] = $data['commitUrl'] ?? null;
         $this->container['repository'] = $data['repository'] ?? null;
         $this->container['sha'] = $data['sha'] ?? null;
         $this->container['state'] = $data['state'] ?? null;
         $this->container['statuses'] = $data['statuses'] ?? null;
-        $this->container['total_count'] = $data['total_count'] ?? null;
+        $this->container['totalCount'] = $data['totalCount'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
     }
 
@@ -243,25 +243,25 @@ class CombinedStatus implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets commit_url
+     * Gets commitUrl
      *
      * @return string|null
      */
     public function getCommitUrl()
     {
-        return $this->container['commit_url'];
+        return $this->container['commitUrl'];
     }
 
     /**
-     * Sets commit_url
+     * Sets commitUrl
      *
-     * @param string|null $commit_url commit_url
+     * @param string|null $commitUrl commitUrl
      *
      * @return self
      */
-    public function setCommitUrl($commit_url)
+    public function setCommitUrl($commitUrl)
     {
-        $this->container['commit_url'] = $commit_url;
+        $this->container['commitUrl'] = $commitUrl;
 
         return $this;
     }
@@ -363,25 +363,25 @@ class CombinedStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets total_count
+     * Gets totalCount
      *
      * @return int|null
      */
     public function getTotalCount()
     {
-        return $this->container['total_count'];
+        return $this->container['totalCount'];
     }
 
     /**
-     * Sets total_count
+     * Sets totalCount
      *
-     * @param int|null $total_count total_count
+     * @param int|null $totalCount totalCount
      *
      * @return self
      */
-    public function setTotalCount($total_count)
+    public function setTotalCount($totalCount)
     {
-        $this->container['total_count'] = $total_count;
+        $this->container['totalCount'] = $totalCount;
 
         return $this;
     }

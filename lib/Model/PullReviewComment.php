@@ -61,19 +61,19 @@ class PullReviewComment implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'body' => 'string',
-        'commit_id' => 'string',
-        'created_at' => '\DateTime',
-        'diff_hunk' => 'string',
-        'html_url' => 'string',
+        'commitId' => 'string',
+        'createdAt' => '\DateTime',
+        'diffHunk' => 'string',
+        'htmlUrl' => 'string',
         'id' => 'int',
-        'original_commit_id' => 'string',
-        'original_position' => 'int',
+        'originalCommitId' => 'string',
+        'originalPosition' => 'int',
         'path' => 'string',
         'position' => 'int',
-        'pull_request_review_id' => 'int',
-        'pull_request_url' => 'string',
+        'pullRequestReviewId' => 'int',
+        'pullRequestUrl' => 'string',
         'resolver' => '\Efsa\Client\Gitea\Model\User',
-        'updated_at' => '\DateTime',
+        'updatedAt' => '\DateTime',
         'user' => '\Efsa\Client\Gitea\Model\User'
     ];
 
@@ -86,19 +86,19 @@ class PullReviewComment implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPIFormats = [
         'body' => null,
-        'commit_id' => null,
-        'created_at' => 'date-time',
-        'diff_hunk' => null,
-        'html_url' => null,
+        'commitId' => null,
+        'createdAt' => 'date-time',
+        'diffHunk' => null,
+        'htmlUrl' => null,
         'id' => 'int64',
-        'original_commit_id' => null,
-        'original_position' => 'uint64',
+        'originalCommitId' => null,
+        'originalPosition' => 'uint64',
         'path' => null,
         'position' => 'uint64',
-        'pull_request_review_id' => 'int64',
-        'pull_request_url' => null,
+        'pullRequestReviewId' => 'int64',
+        'pullRequestUrl' => null,
         'resolver' => null,
-        'updated_at' => 'date-time',
+        'updatedAt' => 'date-time',
         'user' => null
     ];
 
@@ -130,19 +130,19 @@ class PullReviewComment implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $attributeMap = [
         'body' => 'body',
-        'commit_id' => 'commit_id',
-        'created_at' => 'created_at',
-        'diff_hunk' => 'diff_hunk',
-        'html_url' => 'html_url',
+        'commitId' => 'commit_id',
+        'createdAt' => 'created_at',
+        'diffHunk' => 'diff_hunk',
+        'htmlUrl' => 'html_url',
         'id' => 'id',
-        'original_commit_id' => 'original_commit_id',
-        'original_position' => 'original_position',
+        'originalCommitId' => 'original_commit_id',
+        'originalPosition' => 'original_position',
         'path' => 'path',
         'position' => 'position',
-        'pull_request_review_id' => 'pull_request_review_id',
-        'pull_request_url' => 'pull_request_url',
+        'pullRequestReviewId' => 'pull_request_review_id',
+        'pullRequestUrl' => 'pull_request_url',
         'resolver' => 'resolver',
-        'updated_at' => 'updated_at',
+        'updatedAt' => 'updated_at',
         'user' => 'user'
     ];
 
@@ -153,19 +153,19 @@ class PullReviewComment implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $setters = [
         'body' => 'setBody',
-        'commit_id' => 'setCommitId',
-        'created_at' => 'setCreatedAt',
-        'diff_hunk' => 'setDiffHunk',
-        'html_url' => 'setHtmlUrl',
+        'commitId' => 'setCommitId',
+        'createdAt' => 'setCreatedAt',
+        'diffHunk' => 'setDiffHunk',
+        'htmlUrl' => 'setHtmlUrl',
         'id' => 'setId',
-        'original_commit_id' => 'setOriginalCommitId',
-        'original_position' => 'setOriginalPosition',
+        'originalCommitId' => 'setOriginalCommitId',
+        'originalPosition' => 'setOriginalPosition',
         'path' => 'setPath',
         'position' => 'setPosition',
-        'pull_request_review_id' => 'setPullRequestReviewId',
-        'pull_request_url' => 'setPullRequestUrl',
+        'pullRequestReviewId' => 'setPullRequestReviewId',
+        'pullRequestUrl' => 'setPullRequestUrl',
         'resolver' => 'setResolver',
-        'updated_at' => 'setUpdatedAt',
+        'updatedAt' => 'setUpdatedAt',
         'user' => 'setUser'
     ];
 
@@ -176,19 +176,19 @@ class PullReviewComment implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $getters = [
         'body' => 'getBody',
-        'commit_id' => 'getCommitId',
-        'created_at' => 'getCreatedAt',
-        'diff_hunk' => 'getDiffHunk',
-        'html_url' => 'getHtmlUrl',
+        'commitId' => 'getCommitId',
+        'createdAt' => 'getCreatedAt',
+        'diffHunk' => 'getDiffHunk',
+        'htmlUrl' => 'getHtmlUrl',
         'id' => 'getId',
-        'original_commit_id' => 'getOriginalCommitId',
-        'original_position' => 'getOriginalPosition',
+        'originalCommitId' => 'getOriginalCommitId',
+        'originalPosition' => 'getOriginalPosition',
         'path' => 'getPath',
         'position' => 'getPosition',
-        'pull_request_review_id' => 'getPullRequestReviewId',
-        'pull_request_url' => 'getPullRequestUrl',
+        'pullRequestReviewId' => 'getPullRequestReviewId',
+        'pullRequestUrl' => 'getPullRequestUrl',
         'resolver' => 'getResolver',
-        'updated_at' => 'getUpdatedAt',
+        'updatedAt' => 'getUpdatedAt',
         'user' => 'getUser'
     ];
 
@@ -250,19 +250,19 @@ class PullReviewComment implements ModelInterface, ArrayAccess, \JsonSerializabl
     public function __construct(array $data = null)
     {
         $this->container['body'] = $data['body'] ?? null;
-        $this->container['commit_id'] = $data['commit_id'] ?? null;
-        $this->container['created_at'] = $data['created_at'] ?? null;
-        $this->container['diff_hunk'] = $data['diff_hunk'] ?? null;
-        $this->container['html_url'] = $data['html_url'] ?? null;
+        $this->container['commitId'] = $data['commitId'] ?? null;
+        $this->container['createdAt'] = $data['createdAt'] ?? null;
+        $this->container['diffHunk'] = $data['diffHunk'] ?? null;
+        $this->container['htmlUrl'] = $data['htmlUrl'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['original_commit_id'] = $data['original_commit_id'] ?? null;
-        $this->container['original_position'] = $data['original_position'] ?? null;
+        $this->container['originalCommitId'] = $data['originalCommitId'] ?? null;
+        $this->container['originalPosition'] = $data['originalPosition'] ?? null;
         $this->container['path'] = $data['path'] ?? null;
         $this->container['position'] = $data['position'] ?? null;
-        $this->container['pull_request_review_id'] = $data['pull_request_review_id'] ?? null;
-        $this->container['pull_request_url'] = $data['pull_request_url'] ?? null;
+        $this->container['pullRequestReviewId'] = $data['pullRequestReviewId'] ?? null;
+        $this->container['pullRequestUrl'] = $data['pullRequestUrl'] ?? null;
         $this->container['resolver'] = $data['resolver'] ?? null;
-        $this->container['updated_at'] = $data['updated_at'] ?? null;
+        $this->container['updatedAt'] = $data['updatedAt'] ?? null;
         $this->container['user'] = $data['user'] ?? null;
     }
 
@@ -315,97 +315,97 @@ class PullReviewComment implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets commit_id
+     * Gets commitId
      *
      * @return string|null
      */
     public function getCommitId()
     {
-        return $this->container['commit_id'];
+        return $this->container['commitId'];
     }
 
     /**
-     * Sets commit_id
+     * Sets commitId
      *
-     * @param string|null $commit_id commit_id
+     * @param string|null $commitId commitId
      *
      * @return self
      */
-    public function setCommitId($commit_id)
+    public function setCommitId($commitId)
     {
-        $this->container['commit_id'] = $commit_id;
+        $this->container['commitId'] = $commitId;
 
         return $this;
     }
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime|null
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $createdAt createdAt
      *
      * @return self
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }
 
     /**
-     * Gets diff_hunk
+     * Gets diffHunk
      *
      * @return string|null
      */
     public function getDiffHunk()
     {
-        return $this->container['diff_hunk'];
+        return $this->container['diffHunk'];
     }
 
     /**
-     * Sets diff_hunk
+     * Sets diffHunk
      *
-     * @param string|null $diff_hunk diff_hunk
+     * @param string|null $diffHunk diffHunk
      *
      * @return self
      */
-    public function setDiffHunk($diff_hunk)
+    public function setDiffHunk($diffHunk)
     {
-        $this->container['diff_hunk'] = $diff_hunk;
+        $this->container['diffHunk'] = $diffHunk;
 
         return $this;
     }
 
     /**
-     * Gets html_url
+     * Gets htmlUrl
      *
      * @return string|null
      */
     public function getHtmlUrl()
     {
-        return $this->container['html_url'];
+        return $this->container['htmlUrl'];
     }
 
     /**
-     * Sets html_url
+     * Sets htmlUrl
      *
-     * @param string|null $html_url html_url
+     * @param string|null $htmlUrl htmlUrl
      *
      * @return self
      */
-    public function setHtmlUrl($html_url)
+    public function setHtmlUrl($htmlUrl)
     {
-        $this->container['html_url'] = $html_url;
+        $this->container['htmlUrl'] = $htmlUrl;
 
         return $this;
     }
@@ -435,49 +435,49 @@ class PullReviewComment implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets original_commit_id
+     * Gets originalCommitId
      *
      * @return string|null
      */
     public function getOriginalCommitId()
     {
-        return $this->container['original_commit_id'];
+        return $this->container['originalCommitId'];
     }
 
     /**
-     * Sets original_commit_id
+     * Sets originalCommitId
      *
-     * @param string|null $original_commit_id original_commit_id
+     * @param string|null $originalCommitId originalCommitId
      *
      * @return self
      */
-    public function setOriginalCommitId($original_commit_id)
+    public function setOriginalCommitId($originalCommitId)
     {
-        $this->container['original_commit_id'] = $original_commit_id;
+        $this->container['originalCommitId'] = $originalCommitId;
 
         return $this;
     }
 
     /**
-     * Gets original_position
+     * Gets originalPosition
      *
      * @return int|null
      */
     public function getOriginalPosition()
     {
-        return $this->container['original_position'];
+        return $this->container['originalPosition'];
     }
 
     /**
-     * Sets original_position
+     * Sets originalPosition
      *
-     * @param int|null $original_position original_position
+     * @param int|null $originalPosition originalPosition
      *
      * @return self
      */
-    public function setOriginalPosition($original_position)
+    public function setOriginalPosition($originalPosition)
     {
-        $this->container['original_position'] = $original_position;
+        $this->container['originalPosition'] = $originalPosition;
 
         return $this;
     }
@@ -531,49 +531,49 @@ class PullReviewComment implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets pull_request_review_id
+     * Gets pullRequestReviewId
      *
      * @return int|null
      */
     public function getPullRequestReviewId()
     {
-        return $this->container['pull_request_review_id'];
+        return $this->container['pullRequestReviewId'];
     }
 
     /**
-     * Sets pull_request_review_id
+     * Sets pullRequestReviewId
      *
-     * @param int|null $pull_request_review_id pull_request_review_id
+     * @param int|null $pullRequestReviewId pullRequestReviewId
      *
      * @return self
      */
-    public function setPullRequestReviewId($pull_request_review_id)
+    public function setPullRequestReviewId($pullRequestReviewId)
     {
-        $this->container['pull_request_review_id'] = $pull_request_review_id;
+        $this->container['pullRequestReviewId'] = $pullRequestReviewId;
 
         return $this;
     }
 
     /**
-     * Gets pull_request_url
+     * Gets pullRequestUrl
      *
      * @return string|null
      */
     public function getPullRequestUrl()
     {
-        return $this->container['pull_request_url'];
+        return $this->container['pullRequestUrl'];
     }
 
     /**
-     * Sets pull_request_url
+     * Sets pullRequestUrl
      *
-     * @param string|null $pull_request_url pull_request_url
+     * @param string|null $pullRequestUrl pullRequestUrl
      *
      * @return self
      */
-    public function setPullRequestUrl($pull_request_url)
+    public function setPullRequestUrl($pullRequestUrl)
     {
-        $this->container['pull_request_url'] = $pull_request_url;
+        $this->container['pullRequestUrl'] = $pullRequestUrl;
 
         return $this;
     }
@@ -603,25 +603,25 @@ class PullReviewComment implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets updated_at
+     * Gets updatedAt
      *
      * @return \DateTime|null
      */
     public function getUpdatedAt()
     {
-        return $this->container['updated_at'];
+        return $this->container['updatedAt'];
     }
 
     /**
-     * Sets updated_at
+     * Sets updatedAt
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updatedAt updatedAt
      *
      * @return self
      */
-    public function setUpdatedAt($updated_at)
+    public function setUpdatedAt($updatedAt)
     {
-        $this->container['updated_at'] = $updated_at;
+        $this->container['updatedAt'] = $updatedAt;
 
         return $this;
     }

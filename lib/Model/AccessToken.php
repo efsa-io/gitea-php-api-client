@@ -62,7 +62,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'int',
         'name' => 'string',
         'sha1' => 'string',
-        'token_last_eight' => 'string'
+        'tokenLastEight' => 'string'
     ];
 
     /**
@@ -76,7 +76,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'int64',
         'name' => null,
         'sha1' => null,
-        'token_last_eight' => null
+        'tokenLastEight' => null
     ];
 
     /**
@@ -109,7 +109,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'id',
         'name' => 'name',
         'sha1' => 'sha1',
-        'token_last_eight' => 'token_last_eight'
+        'tokenLastEight' => 'token_last_eight'
     ];
 
     /**
@@ -121,7 +121,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'setId',
         'name' => 'setName',
         'sha1' => 'setSha1',
-        'token_last_eight' => 'setTokenLastEight'
+        'tokenLastEight' => 'setTokenLastEight'
     ];
 
     /**
@@ -133,7 +133,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'getId',
         'name' => 'getName',
         'sha1' => 'getSha1',
-        'token_last_eight' => 'getTokenLastEight'
+        'tokenLastEight' => 'getTokenLastEight'
     ];
 
     /**
@@ -196,7 +196,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['id'] = $data['id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['sha1'] = $data['sha1'] ?? null;
-        $this->container['token_last_eight'] = $data['token_last_eight'] ?? null;
+        $this->container['tokenLastEight'] = $data['tokenLastEight'] ?? null;
     }
 
     /**
@@ -296,25 +296,25 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets token_last_eight
+     * Gets tokenLastEight
      *
      * @return string|null
      */
     public function getTokenLastEight()
     {
-        return $this->container['token_last_eight'];
+        return $this->container['tokenLastEight'];
     }
 
     /**
-     * Sets token_last_eight
+     * Sets tokenLastEight
      *
-     * @param string|null $token_last_eight token_last_eight
+     * @param string|null $tokenLastEight tokenLastEight
      *
      * @return self
      */
-    public function setTokenLastEight($token_last_eight)
+    public function setTokenLastEight($tokenLastEight)
     {
-        $this->container['token_last_eight'] = $token_last_eight;
+        $this->container['tokenLastEight'] = $tokenLastEight;
 
         return $this;
     }

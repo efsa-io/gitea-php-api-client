@@ -61,12 +61,12 @@ class CreateUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'email' => 'string',
-        'full_name' => 'string',
-        'login_name' => 'string',
-        'must_change_password' => 'bool',
+        'fullName' => 'string',
+        'loginName' => 'string',
+        'mustChangePassword' => 'bool',
         'password' => 'string',
-        'send_notify' => 'bool',
-        'source_id' => 'int',
+        'sendNotify' => 'bool',
+        'sourceId' => 'int',
         'username' => 'string',
         'visibility' => 'string'
     ];
@@ -80,12 +80,12 @@ class CreateUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'email' => 'email',
-        'full_name' => null,
-        'login_name' => null,
-        'must_change_password' => null,
+        'fullName' => null,
+        'loginName' => null,
+        'mustChangePassword' => null,
         'password' => null,
-        'send_notify' => null,
-        'source_id' => 'int64',
+        'sendNotify' => null,
+        'sourceId' => 'int64',
         'username' => null,
         'visibility' => null
     ];
@@ -118,12 +118,12 @@ class CreateUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'email' => 'email',
-        'full_name' => 'full_name',
-        'login_name' => 'login_name',
-        'must_change_password' => 'must_change_password',
+        'fullName' => 'full_name',
+        'loginName' => 'login_name',
+        'mustChangePassword' => 'must_change_password',
         'password' => 'password',
-        'send_notify' => 'send_notify',
-        'source_id' => 'source_id',
+        'sendNotify' => 'send_notify',
+        'sourceId' => 'source_id',
         'username' => 'username',
         'visibility' => 'visibility'
     ];
@@ -135,12 +135,12 @@ class CreateUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'email' => 'setEmail',
-        'full_name' => 'setFullName',
-        'login_name' => 'setLoginName',
-        'must_change_password' => 'setMustChangePassword',
+        'fullName' => 'setFullName',
+        'loginName' => 'setLoginName',
+        'mustChangePassword' => 'setMustChangePassword',
         'password' => 'setPassword',
-        'send_notify' => 'setSendNotify',
-        'source_id' => 'setSourceId',
+        'sendNotify' => 'setSendNotify',
+        'sourceId' => 'setSourceId',
         'username' => 'setUsername',
         'visibility' => 'setVisibility'
     ];
@@ -152,12 +152,12 @@ class CreateUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'email' => 'getEmail',
-        'full_name' => 'getFullName',
-        'login_name' => 'getLoginName',
-        'must_change_password' => 'getMustChangePassword',
+        'fullName' => 'getFullName',
+        'loginName' => 'getLoginName',
+        'mustChangePassword' => 'getMustChangePassword',
         'password' => 'getPassword',
-        'send_notify' => 'getSendNotify',
-        'source_id' => 'getSourceId',
+        'sendNotify' => 'getSendNotify',
+        'sourceId' => 'getSourceId',
         'username' => 'getUsername',
         'visibility' => 'getVisibility'
     ];
@@ -220,12 +220,12 @@ class CreateUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['email'] = $data['email'] ?? null;
-        $this->container['full_name'] = $data['full_name'] ?? null;
-        $this->container['login_name'] = $data['login_name'] ?? null;
-        $this->container['must_change_password'] = $data['must_change_password'] ?? null;
+        $this->container['fullName'] = $data['fullName'] ?? null;
+        $this->container['loginName'] = $data['loginName'] ?? null;
+        $this->container['mustChangePassword'] = $data['mustChangePassword'] ?? null;
         $this->container['password'] = $data['password'] ?? null;
-        $this->container['send_notify'] = $data['send_notify'] ?? null;
-        $this->container['source_id'] = $data['source_id'] ?? null;
+        $this->container['sendNotify'] = $data['sendNotify'] ?? null;
+        $this->container['sourceId'] = $data['sourceId'] ?? null;
         $this->container['username'] = $data['username'] ?? null;
         $this->container['visibility'] = $data['visibility'] ?? null;
     }
@@ -288,73 +288,73 @@ class CreateUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets full_name
+     * Gets fullName
      *
      * @return string|null
      */
     public function getFullName()
     {
-        return $this->container['full_name'];
+        return $this->container['fullName'];
     }
 
     /**
-     * Sets full_name
+     * Sets fullName
      *
-     * @param string|null $full_name full_name
+     * @param string|null $fullName fullName
      *
      * @return self
      */
-    public function setFullName($full_name)
+    public function setFullName($fullName)
     {
-        $this->container['full_name'] = $full_name;
+        $this->container['fullName'] = $fullName;
 
         return $this;
     }
 
     /**
-     * Gets login_name
+     * Gets loginName
      *
      * @return string|null
      */
     public function getLoginName()
     {
-        return $this->container['login_name'];
+        return $this->container['loginName'];
     }
 
     /**
-     * Sets login_name
+     * Sets loginName
      *
-     * @param string|null $login_name login_name
+     * @param string|null $loginName loginName
      *
      * @return self
      */
-    public function setLoginName($login_name)
+    public function setLoginName($loginName)
     {
-        $this->container['login_name'] = $login_name;
+        $this->container['loginName'] = $loginName;
 
         return $this;
     }
 
     /**
-     * Gets must_change_password
+     * Gets mustChangePassword
      *
      * @return bool|null
      */
     public function getMustChangePassword()
     {
-        return $this->container['must_change_password'];
+        return $this->container['mustChangePassword'];
     }
 
     /**
-     * Sets must_change_password
+     * Sets mustChangePassword
      *
-     * @param bool|null $must_change_password must_change_password
+     * @param bool|null $mustChangePassword mustChangePassword
      *
      * @return self
      */
-    public function setMustChangePassword($must_change_password)
+    public function setMustChangePassword($mustChangePassword)
     {
-        $this->container['must_change_password'] = $must_change_password;
+        $this->container['mustChangePassword'] = $mustChangePassword;
 
         return $this;
     }
@@ -384,49 +384,49 @@ class CreateUserOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets send_notify
+     * Gets sendNotify
      *
      * @return bool|null
      */
     public function getSendNotify()
     {
-        return $this->container['send_notify'];
+        return $this->container['sendNotify'];
     }
 
     /**
-     * Sets send_notify
+     * Sets sendNotify
      *
-     * @param bool|null $send_notify send_notify
+     * @param bool|null $sendNotify sendNotify
      *
      * @return self
      */
-    public function setSendNotify($send_notify)
+    public function setSendNotify($sendNotify)
     {
-        $this->container['send_notify'] = $send_notify;
+        $this->container['sendNotify'] = $sendNotify;
 
         return $this;
     }
 
     /**
-     * Gets source_id
+     * Gets sourceId
      *
      * @return int|null
      */
     public function getSourceId()
     {
-        return $this->container['source_id'];
+        return $this->container['sourceId'];
     }
 
     /**
-     * Sets source_id
+     * Sets sourceId
      *
-     * @param int|null $source_id source_id
+     * @param int|null $sourceId sourceId
      *
      * @return self
      */
-    public function setSourceId($source_id)
+    public function setSourceId($sourceId)
     {
-        $this->container['source_id'] = $source_id;
+        $this->container['sourceId'] = $sourceId;
 
         return $this;
     }

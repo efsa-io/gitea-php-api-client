@@ -62,11 +62,11 @@ class Hook implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'active' => 'bool',
         'config' => 'array<string,string>',
-        'created_at' => '\DateTime',
+        'createdAt' => '\DateTime',
         'events' => 'string[]',
         'id' => 'int',
         'type' => 'string',
-        'updated_at' => '\DateTime'
+        'updatedAt' => '\DateTime'
     ];
 
     /**
@@ -79,11 +79,11 @@ class Hook implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'active' => null,
         'config' => null,
-        'created_at' => 'date-time',
+        'createdAt' => 'date-time',
         'events' => null,
         'id' => 'int64',
         'type' => null,
-        'updated_at' => 'date-time'
+        'updatedAt' => 'date-time'
     ];
 
     /**
@@ -115,11 +115,11 @@ class Hook implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'active' => 'active',
         'config' => 'config',
-        'created_at' => 'created_at',
+        'createdAt' => 'created_at',
         'events' => 'events',
         'id' => 'id',
         'type' => 'type',
-        'updated_at' => 'updated_at'
+        'updatedAt' => 'updated_at'
     ];
 
     /**
@@ -130,11 +130,11 @@ class Hook implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'active' => 'setActive',
         'config' => 'setConfig',
-        'created_at' => 'setCreatedAt',
+        'createdAt' => 'setCreatedAt',
         'events' => 'setEvents',
         'id' => 'setId',
         'type' => 'setType',
-        'updated_at' => 'setUpdatedAt'
+        'updatedAt' => 'setUpdatedAt'
     ];
 
     /**
@@ -145,11 +145,11 @@ class Hook implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'active' => 'getActive',
         'config' => 'getConfig',
-        'created_at' => 'getCreatedAt',
+        'createdAt' => 'getCreatedAt',
         'events' => 'getEvents',
         'id' => 'getId',
         'type' => 'getType',
-        'updated_at' => 'getUpdatedAt'
+        'updatedAt' => 'getUpdatedAt'
     ];
 
     /**
@@ -211,11 +211,11 @@ class Hook implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['active'] = $data['active'] ?? null;
         $this->container['config'] = $data['config'] ?? null;
-        $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['createdAt'] = $data['createdAt'] ?? null;
         $this->container['events'] = $data['events'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['type'] = $data['type'] ?? null;
-        $this->container['updated_at'] = $data['updated_at'] ?? null;
+        $this->container['updatedAt'] = $data['updatedAt'] ?? null;
     }
 
     /**
@@ -291,25 +291,25 @@ class Hook implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime|null
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $createdAt createdAt
      *
      * @return self
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }
@@ -387,25 +387,25 @@ class Hook implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets updated_at
+     * Gets updatedAt
      *
      * @return \DateTime|null
      */
     public function getUpdatedAt()
     {
-        return $this->container['updated_at'];
+        return $this->container['updatedAt'];
     }
 
     /**
-     * Sets updated_at
+     * Sets updatedAt
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updatedAt updatedAt
      *
      * @return self
      */
-    public function setUpdatedAt($updated_at)
+    public function setUpdatedAt($updatedAt)
     {
-        $this->container['updated_at'] = $updated_at;
+        $this->container['updatedAt'] = $updatedAt;
 
         return $this;
     }

@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description MigrateRepoOptions options for migrating repository&#39;s this is used to interact with api v1
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class MigrateRepoOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "auth_password"
+     * Test attribute "authPassword"
      */
     public function testPropertyAuthPassword()
     {
@@ -89,7 +89,7 @@ class MigrateRepoOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "auth_token"
+     * Test attribute "authToken"
      */
     public function testPropertyAuthToken()
     {
@@ -98,7 +98,7 @@ class MigrateRepoOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "auth_username"
+     * Test attribute "authUsername"
      */
     public function testPropertyAuthUsername()
     {
@@ -107,7 +107,7 @@ class MigrateRepoOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "clone_addr"
+     * Test attribute "cloneAddr"
      */
     public function testPropertyCloneAddr()
     {
@@ -152,7 +152,7 @@ class MigrateRepoOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "lfs_endpoint"
+     * Test attribute "lfsEndpoint"
      */
     public function testPropertyLfsEndpoint()
     {
@@ -179,7 +179,7 @@ class MigrateRepoOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "mirror_interval"
+     * Test attribute "mirrorInterval"
      */
     public function testPropertyMirrorInterval()
     {
@@ -197,7 +197,7 @@ class MigrateRepoOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "pull_requests"
+     * Test attribute "pullRequests"
      */
     public function testPropertyPullRequests()
     {
@@ -215,7 +215,7 @@ class MigrateRepoOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "repo_name"
+     * Test attribute "repoName"
      */
     public function testPropertyRepoName()
     {
@@ -224,7 +224,7 @@ class MigrateRepoOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "repo_owner"
+     * Test attribute "repoOwner"
      */
     public function testPropertyRepoOwner()
     {

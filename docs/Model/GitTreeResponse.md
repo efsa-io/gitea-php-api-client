@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **int** |  | [optional]
 **sha** | **string** |  | [optional]
-**total_count** | **int** |  | [optional]
+**totalCount** | **int** |  | [optional]
 **tree** | [**\Efsa\Client\Gitea\Model\GitEntry[]**](GitEntry.md) |  | [optional]
 **truncated** | **bool** |  | [optional]
 **url** | **string** |  | [optional]

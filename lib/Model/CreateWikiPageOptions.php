@@ -60,7 +60,7 @@ class CreateWikiPageOptions implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'content_base64' => 'string',
+        'contentBase64' => 'string',
         'message' => 'string',
         'title' => 'string'
     ];
@@ -73,7 +73,7 @@ class CreateWikiPageOptions implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'content_base64' => null,
+        'contentBase64' => null,
         'message' => null,
         'title' => null
     ];
@@ -105,7 +105,7 @@ class CreateWikiPageOptions implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'content_base64' => 'content_base64',
+        'contentBase64' => 'content_base64',
         'message' => 'message',
         'title' => 'title'
     ];
@@ -116,7 +116,7 @@ class CreateWikiPageOptions implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'content_base64' => 'setContentBase64',
+        'contentBase64' => 'setContentBase64',
         'message' => 'setMessage',
         'title' => 'setTitle'
     ];
@@ -127,7 +127,7 @@ class CreateWikiPageOptions implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'content_base64' => 'getContentBase64',
+        'contentBase64' => 'getContentBase64',
         'message' => 'getMessage',
         'title' => 'getTitle'
     ];
@@ -189,7 +189,7 @@ class CreateWikiPageOptions implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['content_base64'] = $data['content_base64'] ?? null;
+        $this->container['contentBase64'] = $data['contentBase64'] ?? null;
         $this->container['message'] = $data['message'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
     }
@@ -219,25 +219,25 @@ class CreateWikiPageOptions implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets content_base64
+     * Gets contentBase64
      *
      * @return string|null
      */
     public function getContentBase64()
     {
-        return $this->container['content_base64'];
+        return $this->container['contentBase64'];
     }
 
     /**
-     * Sets content_base64
+     * Sets contentBase64
      *
-     * @param string|null $content_base64 content must be base64 encoded
+     * @param string|null $contentBase64 content must be base64 encoded
      *
      * @return self
      */
-    public function setContentBase64($content_base64)
+    public function setContentBase64($contentBase64)
     {
-        $this->container['content_base64'] = $content_base64;
+        $this->container['contentBase64'] = $contentBase64;
 
         return $this;
     }

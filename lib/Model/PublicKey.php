@@ -60,12 +60,12 @@ class PublicKey implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'created_at' => '\DateTime',
+        'createdAt' => '\DateTime',
         'fingerprint' => 'string',
         'id' => 'int',
         'key' => 'string',
-        'key_type' => 'string',
-        'read_only' => 'bool',
+        'keyType' => 'string',
+        'readOnly' => 'bool',
         'title' => 'string',
         'url' => 'string',
         'user' => '\Efsa\Client\Gitea\Model\User'
@@ -79,12 +79,12 @@ class PublicKey implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'created_at' => 'date-time',
+        'createdAt' => 'date-time',
         'fingerprint' => null,
         'id' => 'int64',
         'key' => null,
-        'key_type' => null,
-        'read_only' => null,
+        'keyType' => null,
+        'readOnly' => null,
         'title' => null,
         'url' => null,
         'user' => null
@@ -117,12 +117,12 @@ class PublicKey implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'created_at' => 'created_at',
+        'createdAt' => 'created_at',
         'fingerprint' => 'fingerprint',
         'id' => 'id',
         'key' => 'key',
-        'key_type' => 'key_type',
-        'read_only' => 'read_only',
+        'keyType' => 'key_type',
+        'readOnly' => 'read_only',
         'title' => 'title',
         'url' => 'url',
         'user' => 'user'
@@ -134,12 +134,12 @@ class PublicKey implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'created_at' => 'setCreatedAt',
+        'createdAt' => 'setCreatedAt',
         'fingerprint' => 'setFingerprint',
         'id' => 'setId',
         'key' => 'setKey',
-        'key_type' => 'setKeyType',
-        'read_only' => 'setReadOnly',
+        'keyType' => 'setKeyType',
+        'readOnly' => 'setReadOnly',
         'title' => 'setTitle',
         'url' => 'setUrl',
         'user' => 'setUser'
@@ -151,12 +151,12 @@ class PublicKey implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'created_at' => 'getCreatedAt',
+        'createdAt' => 'getCreatedAt',
         'fingerprint' => 'getFingerprint',
         'id' => 'getId',
         'key' => 'getKey',
-        'key_type' => 'getKeyType',
-        'read_only' => 'getReadOnly',
+        'keyType' => 'getKeyType',
+        'readOnly' => 'getReadOnly',
         'title' => 'getTitle',
         'url' => 'getUrl',
         'user' => 'getUser'
@@ -219,12 +219,12 @@ class PublicKey implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['createdAt'] = $data['createdAt'] ?? null;
         $this->container['fingerprint'] = $data['fingerprint'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['key'] = $data['key'] ?? null;
-        $this->container['key_type'] = $data['key_type'] ?? null;
-        $this->container['read_only'] = $data['read_only'] ?? null;
+        $this->container['keyType'] = $data['keyType'] ?? null;
+        $this->container['readOnly'] = $data['readOnly'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
         $this->container['user'] = $data['user'] ?? null;
@@ -255,25 +255,25 @@ class PublicKey implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime|null
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $createdAt createdAt
      *
      * @return self
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }
@@ -351,49 +351,49 @@ class PublicKey implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets key_type
+     * Gets keyType
      *
      * @return string|null
      */
     public function getKeyType()
     {
-        return $this->container['key_type'];
+        return $this->container['keyType'];
     }
 
     /**
-     * Sets key_type
+     * Sets keyType
      *
-     * @param string|null $key_type key_type
+     * @param string|null $keyType keyType
      *
      * @return self
      */
-    public function setKeyType($key_type)
+    public function setKeyType($keyType)
     {
-        $this->container['key_type'] = $key_type;
+        $this->container['keyType'] = $keyType;
 
         return $this;
     }
 
     /**
-     * Gets read_only
+     * Gets readOnly
      *
      * @return bool|null
      */
     public function getReadOnly()
     {
-        return $this->container['read_only'];
+        return $this->container['readOnly'];
     }
 
     /**
-     * Sets read_only
+     * Sets readOnly
      *
-     * @param bool|null $read_only read_only
+     * @param bool|null $readOnly readOnly
      *
      * @return self
      */
-    public function setReadOnly($read_only)
+    public function setReadOnly($readOnly)
     {
-        $this->container['read_only'] = $read_only;
+        $this->container['readOnly'] = $readOnly;
 
         return $this;
     }

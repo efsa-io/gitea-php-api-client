@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description OrganizationPermissions list different users permissions on an organization
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class OrganizationPermissionsTest extends TestCase
     }
 
     /**
-     * Test attribute "can_create_repository"
+     * Test attribute "canCreateRepository"
      */
     public function testPropertyCanCreateRepository()
     {
@@ -89,7 +89,7 @@ class OrganizationPermissionsTest extends TestCase
     }
 
     /**
-     * Test attribute "can_read"
+     * Test attribute "canRead"
      */
     public function testPropertyCanRead()
     {
@@ -98,7 +98,7 @@ class OrganizationPermissionsTest extends TestCase
     }
 
     /**
-     * Test attribute "can_write"
+     * Test attribute "canWrite"
      */
     public function testPropertyCanWrite()
     {
@@ -107,7 +107,7 @@ class OrganizationPermissionsTest extends TestCase
     }
 
     /**
-     * Test attribute "is_admin"
+     * Test attribute "isAdmin"
      */
     public function testPropertyIsAdmin()
     {
@@ -116,7 +116,7 @@ class OrganizationPermissionsTest extends TestCase
     }
 
     /**
-     * Test attribute "is_owner"
+     * Test attribute "isOwner"
      */
     public function testPropertyIsOwner()
     {

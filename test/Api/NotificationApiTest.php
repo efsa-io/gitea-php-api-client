@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace \Efsa\Client\Gitea\Test\Api;
+namespace Efsa\Client\Gitea\Test\Api;
 
-use \\Efsa\Client\Gitea\Configuration;
-use \\Efsa\Client\Gitea\ApiException;
-use \\Efsa\Client\Gitea\ObjectSerializer;
+use \Efsa\Client\Gitea\Configuration;
+use \Efsa\Client\Gitea\ApiException;
+use \Efsa\Client\Gitea\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * NotificationApiTest Class Doc Comment
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

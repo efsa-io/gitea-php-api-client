@@ -66,7 +66,7 @@ class CreateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
         'content' => 'string',
         'dates' => '\Efsa\Client\Gitea\Model\CommitDateOptions',
         'message' => 'string',
-        'new_branch' => 'string',
+        'newBranch' => 'string',
         'signoff' => 'bool'
     ];
 
@@ -84,7 +84,7 @@ class CreateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
         'content' => null,
         'dates' => null,
         'message' => null,
-        'new_branch' => null,
+        'newBranch' => null,
         'signoff' => null
     ];
 
@@ -121,7 +121,7 @@ class CreateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
         'content' => 'content',
         'dates' => 'dates',
         'message' => 'message',
-        'new_branch' => 'new_branch',
+        'newBranch' => 'new_branch',
         'signoff' => 'signoff'
     ];
 
@@ -137,7 +137,7 @@ class CreateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
         'content' => 'setContent',
         'dates' => 'setDates',
         'message' => 'setMessage',
-        'new_branch' => 'setNewBranch',
+        'newBranch' => 'setNewBranch',
         'signoff' => 'setSignoff'
     ];
 
@@ -153,7 +153,7 @@ class CreateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
         'content' => 'getContent',
         'dates' => 'getDates',
         'message' => 'getMessage',
-        'new_branch' => 'getNewBranch',
+        'newBranch' => 'getNewBranch',
         'signoff' => 'getSignoff'
     ];
 
@@ -220,7 +220,7 @@ class CreateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
         $this->container['content'] = $data['content'] ?? null;
         $this->container['dates'] = $data['dates'] ?? null;
         $this->container['message'] = $data['message'] ?? null;
-        $this->container['new_branch'] = $data['new_branch'] ?? null;
+        $this->container['newBranch'] = $data['newBranch'] ?? null;
         $this->container['signoff'] = $data['signoff'] ?? null;
     }
 
@@ -396,25 +396,25 @@ class CreateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets new_branch
+     * Gets newBranch
      *
      * @return string|null
      */
     public function getNewBranch()
     {
-        return $this->container['new_branch'];
+        return $this->container['newBranch'];
     }
 
     /**
-     * Sets new_branch
+     * Sets newBranch
      *
-     * @param string|null $new_branch new_branch (optional) will make a new branch from `branch` before creating the file
+     * @param string|null $newBranch new_branch (optional) will make a new branch from `branch` before creating the file
      *
      * @return self
      */
-    public function setNewBranch($new_branch)
+    public function setNewBranch($newBranch)
     {
-        $this->container['new_branch'] = $new_branch;
+        $this->container['newBranch'] = $newBranch;
 
         return $this;
     }

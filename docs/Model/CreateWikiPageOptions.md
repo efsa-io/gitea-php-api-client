@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content_base64** | **string** | content must be base64 encoded | [optional]
+**contentBase64** | **string** | content must be base64 encoded | [optional]
 **message** | **string** | optional commit message summarizing the change | [optional]
 **title** | **string** | page title. leave empty to keep unchanged | [optional]
 

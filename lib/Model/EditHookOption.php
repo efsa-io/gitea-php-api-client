@@ -61,7 +61,7 @@ class EditHookOption implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'active' => 'bool',
-        'branch_filter' => 'string',
+        'branchFilter' => 'string',
         'config' => 'array<string,string>',
         'events' => 'string[]'
     ];
@@ -75,7 +75,7 @@ class EditHookOption implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'active' => null,
-        'branch_filter' => null,
+        'branchFilter' => null,
         'config' => null,
         'events' => null
     ];
@@ -108,7 +108,7 @@ class EditHookOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'active' => 'active',
-        'branch_filter' => 'branch_filter',
+        'branchFilter' => 'branch_filter',
         'config' => 'config',
         'events' => 'events'
     ];
@@ -120,7 +120,7 @@ class EditHookOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'active' => 'setActive',
-        'branch_filter' => 'setBranchFilter',
+        'branchFilter' => 'setBranchFilter',
         'config' => 'setConfig',
         'events' => 'setEvents'
     ];
@@ -132,7 +132,7 @@ class EditHookOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'active' => 'getActive',
-        'branch_filter' => 'getBranchFilter',
+        'branchFilter' => 'getBranchFilter',
         'config' => 'getConfig',
         'events' => 'getEvents'
     ];
@@ -195,7 +195,7 @@ class EditHookOption implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['active'] = $data['active'] ?? null;
-        $this->container['branch_filter'] = $data['branch_filter'] ?? null;
+        $this->container['branchFilter'] = $data['branchFilter'] ?? null;
         $this->container['config'] = $data['config'] ?? null;
         $this->container['events'] = $data['events'] ?? null;
     }
@@ -249,25 +249,25 @@ class EditHookOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets branch_filter
+     * Gets branchFilter
      *
      * @return string|null
      */
     public function getBranchFilter()
     {
-        return $this->container['branch_filter'];
+        return $this->container['branchFilter'];
     }
 
     /**
-     * Sets branch_filter
+     * Sets branchFilter
      *
-     * @param string|null $branch_filter branch_filter
+     * @param string|null $branchFilter branchFilter
      *
      * @return self
      */
-    public function setBranchFilter($branch_filter)
+    public function setBranchFilter($branchFilter)
     {
-        $this->container['branch_filter'] = $branch_filter;
+        $this->container['branchFilter'] = $branchFilter;
 
         return $this;
     }

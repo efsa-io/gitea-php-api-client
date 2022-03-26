@@ -61,9 +61,9 @@ class CreateOrgOption implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'description' => 'string',
-        'full_name' => 'string',
+        'fullName' => 'string',
         'location' => 'string',
-        'repo_admin_change_team_access' => 'bool',
+        'repoAdminChangeTeamAccess' => 'bool',
         'username' => 'string',
         'visibility' => 'string',
         'website' => 'string'
@@ -78,9 +78,9 @@ class CreateOrgOption implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'description' => null,
-        'full_name' => null,
+        'fullName' => null,
         'location' => null,
-        'repo_admin_change_team_access' => null,
+        'repoAdminChangeTeamAccess' => null,
         'username' => null,
         'visibility' => null,
         'website' => null
@@ -114,9 +114,9 @@ class CreateOrgOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'description' => 'description',
-        'full_name' => 'full_name',
+        'fullName' => 'full_name',
         'location' => 'location',
-        'repo_admin_change_team_access' => 'repo_admin_change_team_access',
+        'repoAdminChangeTeamAccess' => 'repo_admin_change_team_access',
         'username' => 'username',
         'visibility' => 'visibility',
         'website' => 'website'
@@ -129,9 +129,9 @@ class CreateOrgOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'description' => 'setDescription',
-        'full_name' => 'setFullName',
+        'fullName' => 'setFullName',
         'location' => 'setLocation',
-        'repo_admin_change_team_access' => 'setRepoAdminChangeTeamAccess',
+        'repoAdminChangeTeamAccess' => 'setRepoAdminChangeTeamAccess',
         'username' => 'setUsername',
         'visibility' => 'setVisibility',
         'website' => 'setWebsite'
@@ -144,9 +144,9 @@ class CreateOrgOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'description' => 'getDescription',
-        'full_name' => 'getFullName',
+        'fullName' => 'getFullName',
         'location' => 'getLocation',
-        'repo_admin_change_team_access' => 'getRepoAdminChangeTeamAccess',
+        'repoAdminChangeTeamAccess' => 'getRepoAdminChangeTeamAccess',
         'username' => 'getUsername',
         'visibility' => 'getVisibility',
         'website' => 'getWebsite'
@@ -227,9 +227,9 @@ class CreateOrgOption implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['description'] = $data['description'] ?? null;
-        $this->container['full_name'] = $data['full_name'] ?? null;
+        $this->container['fullName'] = $data['fullName'] ?? null;
         $this->container['location'] = $data['location'] ?? null;
-        $this->container['repo_admin_change_team_access'] = $data['repo_admin_change_team_access'] ?? null;
+        $this->container['repoAdminChangeTeamAccess'] = $data['repoAdminChangeTeamAccess'] ?? null;
         $this->container['username'] = $data['username'] ?? null;
         $this->container['visibility'] = $data['visibility'] ?? null;
         $this->container['website'] = $data['website'] ?? null;
@@ -296,25 +296,25 @@ class CreateOrgOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets full_name
+     * Gets fullName
      *
      * @return string|null
      */
     public function getFullName()
     {
-        return $this->container['full_name'];
+        return $this->container['fullName'];
     }
 
     /**
-     * Sets full_name
+     * Sets fullName
      *
-     * @param string|null $full_name full_name
+     * @param string|null $fullName fullName
      *
      * @return self
      */
-    public function setFullName($full_name)
+    public function setFullName($fullName)
     {
-        $this->container['full_name'] = $full_name;
+        $this->container['fullName'] = $fullName;
 
         return $this;
     }
@@ -344,25 +344,25 @@ class CreateOrgOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets repo_admin_change_team_access
+     * Gets repoAdminChangeTeamAccess
      *
      * @return bool|null
      */
     public function getRepoAdminChangeTeamAccess()
     {
-        return $this->container['repo_admin_change_team_access'];
+        return $this->container['repoAdminChangeTeamAccess'];
     }
 
     /**
-     * Sets repo_admin_change_team_access
+     * Sets repoAdminChangeTeamAccess
      *
-     * @param bool|null $repo_admin_change_team_access repo_admin_change_team_access
+     * @param bool|null $repoAdminChangeTeamAccess repoAdminChangeTeamAccess
      *
      * @return self
      */
-    public function setRepoAdminChangeTeamAccess($repo_admin_change_team_access)
+    public function setRepoAdminChangeTeamAccess($repoAdminChangeTeamAccess)
     {
-        $this->container['repo_admin_change_team_access'] = $repo_admin_change_team_access;
+        $this->container['repoAdminChangeTeamAccess'] = $repoAdminChangeTeamAccess;
 
         return $this;
     }

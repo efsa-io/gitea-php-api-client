@@ -12030,9 +12030,9 @@ class IssueApi
      * @param  string $milestones comma separated list of milestone names or ids. It uses names and fall back to ids. Fetch only issues that have any of this milestones. Non existent milestones are discarded (optional)
      * @param  \DateTime $since Only show items updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show items updated before the given time. This is a timestamp in RFC 3339 format (optional)
-     * @param  string $created_by Only show items which were created by the the given user (optional)
-     * @param  string $assigned_by Only show items for which the given user is assigned (optional)
-     * @param  string $mentioned_by Only show items in which the given user was mentioned (optional)
+     * @param  string $createdBy Only show items which were created by the the given user (optional)
+     * @param  string $assignedBy Only show items for which the given user is assigned (optional)
+     * @param  string $mentionedBy Only show items in which the given user was mentioned (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
@@ -12040,9 +12040,9 @@ class IssueApi
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\Issue[]
      */
-    public function issueListIssues($owner, $repo, $state = null, $labels = null, $q = null, $type = null, $milestones = null, $since = null, $before = null, $created_by = null, $assigned_by = null, $mentioned_by = null, $page = null, $limit = null)
+    public function issueListIssues($owner, $repo, $state = null, $labels = null, $q = null, $type = null, $milestones = null, $since = null, $before = null, $createdBy = null, $assignedBy = null, $mentionedBy = null, $page = null, $limit = null)
     {
-        list($response) = $this->issueListIssuesWithHttpInfo($owner, $repo, $state, $labels, $q, $type, $milestones, $since, $before, $created_by, $assigned_by, $mentioned_by, $page, $limit);
+        list($response) = $this->issueListIssuesWithHttpInfo($owner, $repo, $state, $labels, $q, $type, $milestones, $since, $before, $createdBy, $assignedBy, $mentionedBy, $page, $limit);
         return $response;
     }
 
@@ -12060,9 +12060,9 @@ class IssueApi
      * @param  string $milestones comma separated list of milestone names or ids. It uses names and fall back to ids. Fetch only issues that have any of this milestones. Non existent milestones are discarded (optional)
      * @param  \DateTime $since Only show items updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show items updated before the given time. This is a timestamp in RFC 3339 format (optional)
-     * @param  string $created_by Only show items which were created by the the given user (optional)
-     * @param  string $assigned_by Only show items for which the given user is assigned (optional)
-     * @param  string $mentioned_by Only show items in which the given user was mentioned (optional)
+     * @param  string $createdBy Only show items which were created by the the given user (optional)
+     * @param  string $assignedBy Only show items for which the given user is assigned (optional)
+     * @param  string $mentionedBy Only show items in which the given user was mentioned (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
@@ -12070,9 +12070,9 @@ class IssueApi
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\Issue[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function issueListIssuesWithHttpInfo($owner, $repo, $state = null, $labels = null, $q = null, $type = null, $milestones = null, $since = null, $before = null, $created_by = null, $assigned_by = null, $mentioned_by = null, $page = null, $limit = null)
+    public function issueListIssuesWithHttpInfo($owner, $repo, $state = null, $labels = null, $q = null, $type = null, $milestones = null, $since = null, $before = null, $createdBy = null, $assignedBy = null, $mentionedBy = null, $page = null, $limit = null)
     {
-        $request = $this->issueListIssuesRequest($owner, $repo, $state, $labels, $q, $type, $milestones, $since, $before, $created_by, $assigned_by, $mentioned_by, $page, $limit);
+        $request = $this->issueListIssuesRequest($owner, $repo, $state, $labels, $q, $type, $milestones, $since, $before, $createdBy, $assignedBy, $mentionedBy, $page, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -12159,18 +12159,18 @@ class IssueApi
      * @param  string $milestones comma separated list of milestone names or ids. It uses names and fall back to ids. Fetch only issues that have any of this milestones. Non existent milestones are discarded (optional)
      * @param  \DateTime $since Only show items updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show items updated before the given time. This is a timestamp in RFC 3339 format (optional)
-     * @param  string $created_by Only show items which were created by the the given user (optional)
-     * @param  string $assigned_by Only show items for which the given user is assigned (optional)
-     * @param  string $mentioned_by Only show items in which the given user was mentioned (optional)
+     * @param  string $createdBy Only show items which were created by the the given user (optional)
+     * @param  string $assignedBy Only show items for which the given user is assigned (optional)
+     * @param  string $mentionedBy Only show items in which the given user was mentioned (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function issueListIssuesAsync($owner, $repo, $state = null, $labels = null, $q = null, $type = null, $milestones = null, $since = null, $before = null, $created_by = null, $assigned_by = null, $mentioned_by = null, $page = null, $limit = null)
+    public function issueListIssuesAsync($owner, $repo, $state = null, $labels = null, $q = null, $type = null, $milestones = null, $since = null, $before = null, $createdBy = null, $assignedBy = null, $mentionedBy = null, $page = null, $limit = null)
     {
-        return $this->issueListIssuesAsyncWithHttpInfo($owner, $repo, $state, $labels, $q, $type, $milestones, $since, $before, $created_by, $assigned_by, $mentioned_by, $page, $limit)
+        return $this->issueListIssuesAsyncWithHttpInfo($owner, $repo, $state, $labels, $q, $type, $milestones, $since, $before, $createdBy, $assignedBy, $mentionedBy, $page, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -12192,19 +12192,19 @@ class IssueApi
      * @param  string $milestones comma separated list of milestone names or ids. It uses names and fall back to ids. Fetch only issues that have any of this milestones. Non existent milestones are discarded (optional)
      * @param  \DateTime $since Only show items updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show items updated before the given time. This is a timestamp in RFC 3339 format (optional)
-     * @param  string $created_by Only show items which were created by the the given user (optional)
-     * @param  string $assigned_by Only show items for which the given user is assigned (optional)
-     * @param  string $mentioned_by Only show items in which the given user was mentioned (optional)
+     * @param  string $createdBy Only show items which were created by the the given user (optional)
+     * @param  string $assignedBy Only show items for which the given user is assigned (optional)
+     * @param  string $mentionedBy Only show items in which the given user was mentioned (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function issueListIssuesAsyncWithHttpInfo($owner, $repo, $state = null, $labels = null, $q = null, $type = null, $milestones = null, $since = null, $before = null, $created_by = null, $assigned_by = null, $mentioned_by = null, $page = null, $limit = null)
+    public function issueListIssuesAsyncWithHttpInfo($owner, $repo, $state = null, $labels = null, $q = null, $type = null, $milestones = null, $since = null, $before = null, $createdBy = null, $assignedBy = null, $mentionedBy = null, $page = null, $limit = null)
     {
         $returnType = '\Efsa\Client\Gitea\Model\Issue[]';
-        $request = $this->issueListIssuesRequest($owner, $repo, $state, $labels, $q, $type, $milestones, $since, $before, $created_by, $assigned_by, $mentioned_by, $page, $limit);
+        $request = $this->issueListIssuesRequest($owner, $repo, $state, $labels, $q, $type, $milestones, $since, $before, $createdBy, $assignedBy, $mentionedBy, $page, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -12251,16 +12251,16 @@ class IssueApi
      * @param  string $milestones comma separated list of milestone names or ids. It uses names and fall back to ids. Fetch only issues that have any of this milestones. Non existent milestones are discarded (optional)
      * @param  \DateTime $since Only show items updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show items updated before the given time. This is a timestamp in RFC 3339 format (optional)
-     * @param  string $created_by Only show items which were created by the the given user (optional)
-     * @param  string $assigned_by Only show items for which the given user is assigned (optional)
-     * @param  string $mentioned_by Only show items in which the given user was mentioned (optional)
+     * @param  string $createdBy Only show items which were created by the the given user (optional)
+     * @param  string $assignedBy Only show items for which the given user is assigned (optional)
+     * @param  string $mentionedBy Only show items in which the given user was mentioned (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function issueListIssuesRequest($owner, $repo, $state = null, $labels = null, $q = null, $type = null, $milestones = null, $since = null, $before = null, $created_by = null, $assigned_by = null, $mentioned_by = null, $page = null, $limit = null)
+    public function issueListIssuesRequest($owner, $repo, $state = null, $labels = null, $q = null, $type = null, $milestones = null, $since = null, $before = null, $createdBy = null, $assignedBy = null, $mentionedBy = null, $page = null, $limit = null)
     {
         // verify the required parameter 'owner' is set
         if ($owner === null || (is_array($owner) && count($owner) === 0)) {
@@ -12332,25 +12332,25 @@ class IssueApi
             $queryParams['before'] = $before;
         }
         // query params
-        if (is_array($created_by)) {
-            $created_by = ObjectSerializer::serializeCollection($created_by, '', true);
+        if (is_array($createdBy)) {
+            $createdBy = ObjectSerializer::serializeCollection($createdBy, '', true);
         }
-        if ($created_by !== null) {
-            $queryParams['created_by'] = $created_by;
-        }
-        // query params
-        if (is_array($assigned_by)) {
-            $assigned_by = ObjectSerializer::serializeCollection($assigned_by, '', true);
-        }
-        if ($assigned_by !== null) {
-            $queryParams['assigned_by'] = $assigned_by;
+        if ($createdBy !== null) {
+            $queryParams['created_by'] = $createdBy;
         }
         // query params
-        if (is_array($mentioned_by)) {
-            $mentioned_by = ObjectSerializer::serializeCollection($mentioned_by, '', true);
+        if (is_array($assignedBy)) {
+            $assignedBy = ObjectSerializer::serializeCollection($assignedBy, '', true);
         }
-        if ($mentioned_by !== null) {
-            $queryParams['mentioned_by'] = $mentioned_by;
+        if ($assignedBy !== null) {
+            $queryParams['assigned_by'] = $assignedBy;
+        }
+        // query params
+        if (is_array($mentionedBy)) {
+            $mentionedBy = ObjectSerializer::serializeCollection($mentionedBy, '', true);
+        }
+        if ($mentionedBy !== null) {
+            $queryParams['mentioned_by'] = $mentionedBy;
         }
         // query params
         if (is_array($page)) {
@@ -14509,14 +14509,14 @@ class IssueApi
      * @param  string $labels comma separated list of labels. Fetch only issues that have any of this labels. Non existent labels are discarded (optional)
      * @param  string $milestones comma separated list of milestone names. Fetch only issues that have any of this milestones. Non existent are discarded (optional)
      * @param  string $q search string (optional)
-     * @param  int $priority_repo_id repository to prioritize in the results (optional)
+     * @param  int $priorityRepoId repository to prioritize in the results (optional)
      * @param  string $type filter by type (issues / pulls) if set (optional)
      * @param  \DateTime $since Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  bool $assigned filter (issues / pulls) assigned to you, default is false (optional)
      * @param  bool $created filter (issues / pulls) created by you, default is false (optional)
      * @param  bool $mentioned filter (issues / pulls) mentioning you, default is false (optional)
-     * @param  bool $review_requested filter pulls requesting your review, default is false (optional)
+     * @param  bool $reviewRequested filter pulls requesting your review, default is false (optional)
      * @param  string $owner filter by owner (optional)
      * @param  string $team filter by team (requires organization owner parameter to be provided) (optional)
      * @param  int $page page number of results to return (1-based) (optional)
@@ -14526,9 +14526,9 @@ class IssueApi
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\Issue[]
      */
-    public function issueSearchIssues($state = null, $labels = null, $milestones = null, $q = null, $priority_repo_id = null, $type = null, $since = null, $before = null, $assigned = null, $created = null, $mentioned = null, $review_requested = null, $owner = null, $team = null, $page = null, $limit = null)
+    public function issueSearchIssues($state = null, $labels = null, $milestones = null, $q = null, $priorityRepoId = null, $type = null, $since = null, $before = null, $assigned = null, $created = null, $mentioned = null, $reviewRequested = null, $owner = null, $team = null, $page = null, $limit = null)
     {
-        list($response) = $this->issueSearchIssuesWithHttpInfo($state, $labels, $milestones, $q, $priority_repo_id, $type, $since, $before, $assigned, $created, $mentioned, $review_requested, $owner, $team, $page, $limit);
+        list($response) = $this->issueSearchIssuesWithHttpInfo($state, $labels, $milestones, $q, $priorityRepoId, $type, $since, $before, $assigned, $created, $mentioned, $reviewRequested, $owner, $team, $page, $limit);
         return $response;
     }
 
@@ -14541,14 +14541,14 @@ class IssueApi
      * @param  string $labels comma separated list of labels. Fetch only issues that have any of this labels. Non existent labels are discarded (optional)
      * @param  string $milestones comma separated list of milestone names. Fetch only issues that have any of this milestones. Non existent are discarded (optional)
      * @param  string $q search string (optional)
-     * @param  int $priority_repo_id repository to prioritize in the results (optional)
+     * @param  int $priorityRepoId repository to prioritize in the results (optional)
      * @param  string $type filter by type (issues / pulls) if set (optional)
      * @param  \DateTime $since Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  bool $assigned filter (issues / pulls) assigned to you, default is false (optional)
      * @param  bool $created filter (issues / pulls) created by you, default is false (optional)
      * @param  bool $mentioned filter (issues / pulls) mentioning you, default is false (optional)
-     * @param  bool $review_requested filter pulls requesting your review, default is false (optional)
+     * @param  bool $reviewRequested filter pulls requesting your review, default is false (optional)
      * @param  string $owner filter by owner (optional)
      * @param  string $team filter by team (requires organization owner parameter to be provided) (optional)
      * @param  int $page page number of results to return (1-based) (optional)
@@ -14558,9 +14558,9 @@ class IssueApi
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\Issue[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function issueSearchIssuesWithHttpInfo($state = null, $labels = null, $milestones = null, $q = null, $priority_repo_id = null, $type = null, $since = null, $before = null, $assigned = null, $created = null, $mentioned = null, $review_requested = null, $owner = null, $team = null, $page = null, $limit = null)
+    public function issueSearchIssuesWithHttpInfo($state = null, $labels = null, $milestones = null, $q = null, $priorityRepoId = null, $type = null, $since = null, $before = null, $assigned = null, $created = null, $mentioned = null, $reviewRequested = null, $owner = null, $team = null, $page = null, $limit = null)
     {
-        $request = $this->issueSearchIssuesRequest($state, $labels, $milestones, $q, $priority_repo_id, $type, $since, $before, $assigned, $created, $mentioned, $review_requested, $owner, $team, $page, $limit);
+        $request = $this->issueSearchIssuesRequest($state, $labels, $milestones, $q, $priorityRepoId, $type, $since, $before, $assigned, $created, $mentioned, $reviewRequested, $owner, $team, $page, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -14642,14 +14642,14 @@ class IssueApi
      * @param  string $labels comma separated list of labels. Fetch only issues that have any of this labels. Non existent labels are discarded (optional)
      * @param  string $milestones comma separated list of milestone names. Fetch only issues that have any of this milestones. Non existent are discarded (optional)
      * @param  string $q search string (optional)
-     * @param  int $priority_repo_id repository to prioritize in the results (optional)
+     * @param  int $priorityRepoId repository to prioritize in the results (optional)
      * @param  string $type filter by type (issues / pulls) if set (optional)
      * @param  \DateTime $since Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  bool $assigned filter (issues / pulls) assigned to you, default is false (optional)
      * @param  bool $created filter (issues / pulls) created by you, default is false (optional)
      * @param  bool $mentioned filter (issues / pulls) mentioning you, default is false (optional)
-     * @param  bool $review_requested filter pulls requesting your review, default is false (optional)
+     * @param  bool $reviewRequested filter pulls requesting your review, default is false (optional)
      * @param  string $owner filter by owner (optional)
      * @param  string $team filter by team (requires organization owner parameter to be provided) (optional)
      * @param  int $page page number of results to return (1-based) (optional)
@@ -14658,9 +14658,9 @@ class IssueApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function issueSearchIssuesAsync($state = null, $labels = null, $milestones = null, $q = null, $priority_repo_id = null, $type = null, $since = null, $before = null, $assigned = null, $created = null, $mentioned = null, $review_requested = null, $owner = null, $team = null, $page = null, $limit = null)
+    public function issueSearchIssuesAsync($state = null, $labels = null, $milestones = null, $q = null, $priorityRepoId = null, $type = null, $since = null, $before = null, $assigned = null, $created = null, $mentioned = null, $reviewRequested = null, $owner = null, $team = null, $page = null, $limit = null)
     {
-        return $this->issueSearchIssuesAsyncWithHttpInfo($state, $labels, $milestones, $q, $priority_repo_id, $type, $since, $before, $assigned, $created, $mentioned, $review_requested, $owner, $team, $page, $limit)
+        return $this->issueSearchIssuesAsyncWithHttpInfo($state, $labels, $milestones, $q, $priorityRepoId, $type, $since, $before, $assigned, $created, $mentioned, $reviewRequested, $owner, $team, $page, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -14677,14 +14677,14 @@ class IssueApi
      * @param  string $labels comma separated list of labels. Fetch only issues that have any of this labels. Non existent labels are discarded (optional)
      * @param  string $milestones comma separated list of milestone names. Fetch only issues that have any of this milestones. Non existent are discarded (optional)
      * @param  string $q search string (optional)
-     * @param  int $priority_repo_id repository to prioritize in the results (optional)
+     * @param  int $priorityRepoId repository to prioritize in the results (optional)
      * @param  string $type filter by type (issues / pulls) if set (optional)
      * @param  \DateTime $since Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  bool $assigned filter (issues / pulls) assigned to you, default is false (optional)
      * @param  bool $created filter (issues / pulls) created by you, default is false (optional)
      * @param  bool $mentioned filter (issues / pulls) mentioning you, default is false (optional)
-     * @param  bool $review_requested filter pulls requesting your review, default is false (optional)
+     * @param  bool $reviewRequested filter pulls requesting your review, default is false (optional)
      * @param  string $owner filter by owner (optional)
      * @param  string $team filter by team (requires organization owner parameter to be provided) (optional)
      * @param  int $page page number of results to return (1-based) (optional)
@@ -14693,10 +14693,10 @@ class IssueApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function issueSearchIssuesAsyncWithHttpInfo($state = null, $labels = null, $milestones = null, $q = null, $priority_repo_id = null, $type = null, $since = null, $before = null, $assigned = null, $created = null, $mentioned = null, $review_requested = null, $owner = null, $team = null, $page = null, $limit = null)
+    public function issueSearchIssuesAsyncWithHttpInfo($state = null, $labels = null, $milestones = null, $q = null, $priorityRepoId = null, $type = null, $since = null, $before = null, $assigned = null, $created = null, $mentioned = null, $reviewRequested = null, $owner = null, $team = null, $page = null, $limit = null)
     {
         $returnType = '\Efsa\Client\Gitea\Model\Issue[]';
-        $request = $this->issueSearchIssuesRequest($state, $labels, $milestones, $q, $priority_repo_id, $type, $since, $before, $assigned, $created, $mentioned, $review_requested, $owner, $team, $page, $limit);
+        $request = $this->issueSearchIssuesRequest($state, $labels, $milestones, $q, $priorityRepoId, $type, $since, $before, $assigned, $created, $mentioned, $reviewRequested, $owner, $team, $page, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -14738,14 +14738,14 @@ class IssueApi
      * @param  string $labels comma separated list of labels. Fetch only issues that have any of this labels. Non existent labels are discarded (optional)
      * @param  string $milestones comma separated list of milestone names. Fetch only issues that have any of this milestones. Non existent are discarded (optional)
      * @param  string $q search string (optional)
-     * @param  int $priority_repo_id repository to prioritize in the results (optional)
+     * @param  int $priorityRepoId repository to prioritize in the results (optional)
      * @param  string $type filter by type (issues / pulls) if set (optional)
      * @param  \DateTime $since Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  bool $assigned filter (issues / pulls) assigned to you, default is false (optional)
      * @param  bool $created filter (issues / pulls) created by you, default is false (optional)
      * @param  bool $mentioned filter (issues / pulls) mentioning you, default is false (optional)
-     * @param  bool $review_requested filter pulls requesting your review, default is false (optional)
+     * @param  bool $reviewRequested filter pulls requesting your review, default is false (optional)
      * @param  string $owner filter by owner (optional)
      * @param  string $team filter by team (requires organization owner parameter to be provided) (optional)
      * @param  int $page page number of results to return (1-based) (optional)
@@ -14754,7 +14754,7 @@ class IssueApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function issueSearchIssuesRequest($state = null, $labels = null, $milestones = null, $q = null, $priority_repo_id = null, $type = null, $since = null, $before = null, $assigned = null, $created = null, $mentioned = null, $review_requested = null, $owner = null, $team = null, $page = null, $limit = null)
+    public function issueSearchIssuesRequest($state = null, $labels = null, $milestones = null, $q = null, $priorityRepoId = null, $type = null, $since = null, $before = null, $assigned = null, $created = null, $mentioned = null, $reviewRequested = null, $owner = null, $team = null, $page = null, $limit = null)
     {
 
         $resourcePath = '/repos/issues/search';
@@ -14793,11 +14793,11 @@ class IssueApi
             $queryParams['q'] = $q;
         }
         // query params
-        if (is_array($priority_repo_id)) {
-            $priority_repo_id = ObjectSerializer::serializeCollection($priority_repo_id, '', true);
+        if (is_array($priorityRepoId)) {
+            $priorityRepoId = ObjectSerializer::serializeCollection($priorityRepoId, '', true);
         }
-        if ($priority_repo_id !== null) {
-            $queryParams['priority_repo_id'] = $priority_repo_id;
+        if ($priorityRepoId !== null) {
+            $queryParams['priority_repo_id'] = $priorityRepoId;
         }
         // query params
         if (is_array($type)) {
@@ -14842,11 +14842,11 @@ class IssueApi
             $queryParams['mentioned'] = $mentioned;
         }
         // query params
-        if (is_array($review_requested)) {
-            $review_requested = ObjectSerializer::serializeCollection($review_requested, '', true);
+        if (is_array($reviewRequested)) {
+            $reviewRequested = ObjectSerializer::serializeCollection($reviewRequested, '', true);
         }
-        if ($review_requested !== null) {
-            $queryParams['review_requested'] = $review_requested;
+        if ($reviewRequested !== null) {
+            $queryParams['review_requested'] = $reviewRequested;
         }
         // query params
         if (is_array($owner)) {

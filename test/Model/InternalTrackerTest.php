@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description InternalTracker represents settings for internal tracker
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class InternalTrackerTest extends TestCase
     }
 
     /**
-     * Test attribute "allow_only_contributors_to_track_time"
+     * Test attribute "allowOnlyContributorsToTrackTime"
      */
     public function testPropertyAllowOnlyContributorsToTrackTime()
     {
@@ -89,7 +89,7 @@ class InternalTrackerTest extends TestCase
     }
 
     /**
-     * Test attribute "enable_issue_dependencies"
+     * Test attribute "enableIssueDependencies"
      */
     public function testPropertyEnableIssueDependencies()
     {
@@ -98,7 +98,7 @@ class InternalTrackerTest extends TestCase
     }
 
     /**
-     * Test attribute "enable_time_tracker"
+     * Test attribute "enableTimeTracker"
      */
     public function testPropertyEnableTimeTracker()
     {

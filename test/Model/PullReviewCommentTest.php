@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description PullReviewComment represents a comment on a pull request review
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -89,7 +89,7 @@ class PullReviewCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "commit_id"
+     * Test attribute "commitId"
      */
     public function testPropertyCommitId()
     {
@@ -98,7 +98,7 @@ class PullReviewCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "createdAt"
      */
     public function testPropertyCreatedAt()
     {
@@ -107,7 +107,7 @@ class PullReviewCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "diff_hunk"
+     * Test attribute "diffHunk"
      */
     public function testPropertyDiffHunk()
     {
@@ -116,7 +116,7 @@ class PullReviewCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "html_url"
+     * Test attribute "htmlUrl"
      */
     public function testPropertyHtmlUrl()
     {
@@ -134,7 +134,7 @@ class PullReviewCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "original_commit_id"
+     * Test attribute "originalCommitId"
      */
     public function testPropertyOriginalCommitId()
     {
@@ -143,7 +143,7 @@ class PullReviewCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "original_position"
+     * Test attribute "originalPosition"
      */
     public function testPropertyOriginalPosition()
     {
@@ -170,7 +170,7 @@ class PullReviewCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "pull_request_review_id"
+     * Test attribute "pullRequestReviewId"
      */
     public function testPropertyPullRequestReviewId()
     {
@@ -179,7 +179,7 @@ class PullReviewCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "pull_request_url"
+     * Test attribute "pullRequestUrl"
      */
     public function testPropertyPullRequestUrl()
     {
@@ -197,7 +197,7 @@ class PullReviewCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "updated_at"
+     * Test attribute "updatedAt"
      */
     public function testPropertyUpdatedAt()
     {

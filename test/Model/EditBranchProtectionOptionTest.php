@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description EditBranchProtectionOption options for editing a branch protection
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "approvals_whitelist_teams"
+     * Test attribute "approvalsWhitelistTeams"
      */
     public function testPropertyApprovalsWhitelistTeams()
     {
@@ -89,7 +89,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "approvals_whitelist_username"
+     * Test attribute "approvalsWhitelistUsername"
      */
     public function testPropertyApprovalsWhitelistUsername()
     {
@@ -98,7 +98,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "block_on_official_review_requests"
+     * Test attribute "blockOnOfficialReviewRequests"
      */
     public function testPropertyBlockOnOfficialReviewRequests()
     {
@@ -107,7 +107,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "block_on_outdated_branch"
+     * Test attribute "blockOnOutdatedBranch"
      */
     public function testPropertyBlockOnOutdatedBranch()
     {
@@ -116,7 +116,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "block_on_rejected_reviews"
+     * Test attribute "blockOnRejectedReviews"
      */
     public function testPropertyBlockOnRejectedReviews()
     {
@@ -125,7 +125,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "dismiss_stale_approvals"
+     * Test attribute "dismissStaleApprovals"
      */
     public function testPropertyDismissStaleApprovals()
     {
@@ -134,7 +134,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "enable_approvals_whitelist"
+     * Test attribute "enableApprovalsWhitelist"
      */
     public function testPropertyEnableApprovalsWhitelist()
     {
@@ -143,7 +143,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "enable_merge_whitelist"
+     * Test attribute "enableMergeWhitelist"
      */
     public function testPropertyEnableMergeWhitelist()
     {
@@ -152,7 +152,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "enable_push"
+     * Test attribute "enablePush"
      */
     public function testPropertyEnablePush()
     {
@@ -161,7 +161,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "enable_push_whitelist"
+     * Test attribute "enablePushWhitelist"
      */
     public function testPropertyEnablePushWhitelist()
     {
@@ -170,7 +170,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "enable_status_check"
+     * Test attribute "enableStatusCheck"
      */
     public function testPropertyEnableStatusCheck()
     {
@@ -179,7 +179,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "merge_whitelist_teams"
+     * Test attribute "mergeWhitelistTeams"
      */
     public function testPropertyMergeWhitelistTeams()
     {
@@ -188,7 +188,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "merge_whitelist_usernames"
+     * Test attribute "mergeWhitelistUsernames"
      */
     public function testPropertyMergeWhitelistUsernames()
     {
@@ -197,7 +197,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "protected_file_patterns"
+     * Test attribute "protectedFilePatterns"
      */
     public function testPropertyProtectedFilePatterns()
     {
@@ -206,7 +206,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "push_whitelist_deploy_keys"
+     * Test attribute "pushWhitelistDeployKeys"
      */
     public function testPropertyPushWhitelistDeployKeys()
     {
@@ -215,7 +215,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "push_whitelist_teams"
+     * Test attribute "pushWhitelistTeams"
      */
     public function testPropertyPushWhitelistTeams()
     {
@@ -224,7 +224,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "push_whitelist_usernames"
+     * Test attribute "pushWhitelistUsernames"
      */
     public function testPropertyPushWhitelistUsernames()
     {
@@ -233,7 +233,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "require_signed_commits"
+     * Test attribute "requireSignedCommits"
      */
     public function testPropertyRequireSignedCommits()
     {
@@ -242,7 +242,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "required_approvals"
+     * Test attribute "requiredApprovals"
      */
     public function testPropertyRequiredApprovals()
     {
@@ -251,7 +251,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "status_check_contexts"
+     * Test attribute "statusCheckContexts"
      */
     public function testPropertyStatusCheckContexts()
     {
@@ -260,7 +260,7 @@ class EditBranchProtectionOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "unprotected_file_patterns"
+     * Test attribute "unprotectedFilePatterns"
      */
     public function testPropertyUnprotectedFilePatterns()
     {

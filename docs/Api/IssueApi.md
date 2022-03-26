@@ -3489,7 +3489,7 @@ Name | Type | Description  | Notes
 ## `issueListIssues()`
 
 ```php
-issueListIssues($owner, $repo, $state, $labels, $q, $type, $milestones, $since, $before, $created_by, $assigned_by, $mentioned_by, $page, $limit): \Efsa\Client\Gitea\Model\Issue[]
+issueListIssues($owner, $repo, $state, $labels, $q, $type, $milestones, $since, $before, $createdBy, $assignedBy, $mentionedBy, $page, $limit): \Efsa\Client\Gitea\Model\Issue[]
 ```
 
 List a repository's issues
@@ -3552,14 +3552,14 @@ $type = 'type_example'; // string | filter by type (issues / pulls) if set
 $milestones = 'milestones_example'; // string | comma separated list of milestone names or ids. It uses names and fall back to ids. Fetch only issues that have any of this milestones. Non existent milestones are discarded
 $since = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only show items updated after the given time. This is a timestamp in RFC 3339 format
 $before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only show items updated before the given time. This is a timestamp in RFC 3339 format
-$created_by = 'created_by_example'; // string | Only show items which were created by the the given user
-$assigned_by = 'assigned_by_example'; // string | Only show items for which the given user is assigned
-$mentioned_by = 'mentioned_by_example'; // string | Only show items in which the given user was mentioned
+$createdBy = 'createdBy_example'; // string | Only show items which were created by the the given user
+$assignedBy = 'assignedBy_example'; // string | Only show items for which the given user is assigned
+$mentionedBy = 'mentionedBy_example'; // string | Only show items in which the given user was mentioned
 $page = 56; // int | page number of results to return (1-based)
 $limit = 56; // int | page size of results
 
 try {
-    $result = $apiInstance->issueListIssues($owner, $repo, $state, $labels, $q, $type, $milestones, $since, $before, $created_by, $assigned_by, $mentioned_by, $page, $limit);
+    $result = $apiInstance->issueListIssues($owner, $repo, $state, $labels, $q, $type, $milestones, $since, $before, $createdBy, $assignedBy, $mentionedBy, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IssueApi->issueListIssues: ', $e->getMessage(), PHP_EOL;
@@ -3579,9 +3579,9 @@ Name | Type | Description  | Notes
  **milestones** | **string**| comma separated list of milestone names or ids. It uses names and fall back to ids. Fetch only issues that have any of this milestones. Non existent milestones are discarded | [optional]
  **since** | **\DateTime**| Only show items updated after the given time. This is a timestamp in RFC 3339 format | [optional]
  **before** | **\DateTime**| Only show items updated before the given time. This is a timestamp in RFC 3339 format | [optional]
- **created_by** | **string**| Only show items which were created by the the given user | [optional]
- **assigned_by** | **string**| Only show items for which the given user is assigned | [optional]
- **mentioned_by** | **string**| Only show items in which the given user was mentioned | [optional]
+ **createdBy** | **string**| Only show items which were created by the the given user | [optional]
+ **assignedBy** | **string**| Only show items for which the given user is assigned | [optional]
+ **mentionedBy** | **string**| Only show items in which the given user was mentioned | [optional]
  **page** | **int**| page number of results to return (1-based) | [optional]
  **limit** | **int**| page size of results | [optional]
 
@@ -4177,7 +4177,7 @@ void (empty response body)
 ## `issueSearchIssues()`
 
 ```php
-issueSearchIssues($state, $labels, $milestones, $q, $priority_repo_id, $type, $since, $before, $assigned, $created, $mentioned, $review_requested, $owner, $team, $page, $limit): \Efsa\Client\Gitea\Model\Issue[]
+issueSearchIssues($state, $labels, $milestones, $q, $priorityRepoId, $type, $since, $before, $assigned, $created, $mentioned, $reviewRequested, $owner, $team, $page, $limit): \Efsa\Client\Gitea\Model\Issue[]
 ```
 
 Search for issues across the repositories that the user has access to
@@ -4235,21 +4235,21 @@ $state = 'state_example'; // string | whether issue is open or closed
 $labels = 'labels_example'; // string | comma separated list of labels. Fetch only issues that have any of this labels. Non existent labels are discarded
 $milestones = 'milestones_example'; // string | comma separated list of milestone names. Fetch only issues that have any of this milestones. Non existent are discarded
 $q = 'q_example'; // string | search string
-$priority_repo_id = 56; // int | repository to prioritize in the results
+$priorityRepoId = 56; // int | repository to prioritize in the results
 $type = 'type_example'; // string | filter by type (issues / pulls) if set
 $since = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only show notifications updated after the given time. This is a timestamp in RFC 3339 format
 $before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only show notifications updated before the given time. This is a timestamp in RFC 3339 format
 $assigned = True; // bool | filter (issues / pulls) assigned to you, default is false
 $created = True; // bool | filter (issues / pulls) created by you, default is false
 $mentioned = True; // bool | filter (issues / pulls) mentioning you, default is false
-$review_requested = True; // bool | filter pulls requesting your review, default is false
+$reviewRequested = True; // bool | filter pulls requesting your review, default is false
 $owner = 'owner_example'; // string | filter by owner
 $team = 'team_example'; // string | filter by team (requires organization owner parameter to be provided)
 $page = 56; // int | page number of results to return (1-based)
 $limit = 56; // int | page size of results
 
 try {
-    $result = $apiInstance->issueSearchIssues($state, $labels, $milestones, $q, $priority_repo_id, $type, $since, $before, $assigned, $created, $mentioned, $review_requested, $owner, $team, $page, $limit);
+    $result = $apiInstance->issueSearchIssues($state, $labels, $milestones, $q, $priorityRepoId, $type, $since, $before, $assigned, $created, $mentioned, $reviewRequested, $owner, $team, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IssueApi->issueSearchIssues: ', $e->getMessage(), PHP_EOL;
@@ -4264,14 +4264,14 @@ Name | Type | Description  | Notes
  **labels** | **string**| comma separated list of labels. Fetch only issues that have any of this labels. Non existent labels are discarded | [optional]
  **milestones** | **string**| comma separated list of milestone names. Fetch only issues that have any of this milestones. Non existent are discarded | [optional]
  **q** | **string**| search string | [optional]
- **priority_repo_id** | **int**| repository to prioritize in the results | [optional]
+ **priorityRepoId** | **int**| repository to prioritize in the results | [optional]
  **type** | **string**| filter by type (issues / pulls) if set | [optional]
  **since** | **\DateTime**| Only show notifications updated after the given time. This is a timestamp in RFC 3339 format | [optional]
  **before** | **\DateTime**| Only show notifications updated before the given time. This is a timestamp in RFC 3339 format | [optional]
  **assigned** | **bool**| filter (issues / pulls) assigned to you, default is false | [optional]
  **created** | **bool**| filter (issues / pulls) created by you, default is false | [optional]
  **mentioned** | **bool**| filter (issues / pulls) mentioning you, default is false | [optional]
- **review_requested** | **bool**| filter pulls requesting your review, default is false | [optional]
+ **reviewRequested** | **bool**| filter pulls requesting your review, default is false | [optional]
  **owner** | **string**| filter by owner | [optional]
  **team** | **string**| filter by team (requires organization owner parameter to be provided) | [optional]
  **page** | **int**| page number of results to return (1-based) | [optional]

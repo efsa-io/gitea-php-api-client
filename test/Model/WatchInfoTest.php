@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description WatchInfo represents an API watch status of one repository
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class WatchInfoTest extends TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "createdAt"
      */
     public function testPropertyCreatedAt()
     {
@@ -107,7 +107,7 @@ class WatchInfoTest extends TestCase
     }
 
     /**
-     * Test attribute "repository_url"
+     * Test attribute "repositoryUrl"
      */
     public function testPropertyRepositoryUrl()
     {

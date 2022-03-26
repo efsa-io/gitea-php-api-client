@@ -65,9 +65,9 @@ class UpdateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
         'committer' => '\Efsa\Client\Gitea\Model\Identity',
         'content' => 'string',
         'dates' => '\Efsa\Client\Gitea\Model\CommitDateOptions',
-        'from_path' => 'string',
+        'fromPath' => 'string',
         'message' => 'string',
-        'new_branch' => 'string',
+        'newBranch' => 'string',
         'sha' => 'string',
         'signoff' => 'bool'
     ];
@@ -85,9 +85,9 @@ class UpdateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
         'committer' => null,
         'content' => null,
         'dates' => null,
-        'from_path' => null,
+        'fromPath' => null,
         'message' => null,
-        'new_branch' => null,
+        'newBranch' => null,
         'sha' => null,
         'signoff' => null
     ];
@@ -124,9 +124,9 @@ class UpdateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
         'committer' => 'committer',
         'content' => 'content',
         'dates' => 'dates',
-        'from_path' => 'from_path',
+        'fromPath' => 'from_path',
         'message' => 'message',
-        'new_branch' => 'new_branch',
+        'newBranch' => 'new_branch',
         'sha' => 'sha',
         'signoff' => 'signoff'
     ];
@@ -142,9 +142,9 @@ class UpdateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
         'committer' => 'setCommitter',
         'content' => 'setContent',
         'dates' => 'setDates',
-        'from_path' => 'setFromPath',
+        'fromPath' => 'setFromPath',
         'message' => 'setMessage',
-        'new_branch' => 'setNewBranch',
+        'newBranch' => 'setNewBranch',
         'sha' => 'setSha',
         'signoff' => 'setSignoff'
     ];
@@ -160,9 +160,9 @@ class UpdateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
         'committer' => 'getCommitter',
         'content' => 'getContent',
         'dates' => 'getDates',
-        'from_path' => 'getFromPath',
+        'fromPath' => 'getFromPath',
         'message' => 'getMessage',
-        'new_branch' => 'getNewBranch',
+        'newBranch' => 'getNewBranch',
         'sha' => 'getSha',
         'signoff' => 'getSignoff'
     ];
@@ -229,9 +229,9 @@ class UpdateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
         $this->container['committer'] = $data['committer'] ?? null;
         $this->container['content'] = $data['content'] ?? null;
         $this->container['dates'] = $data['dates'] ?? null;
-        $this->container['from_path'] = $data['from_path'] ?? null;
+        $this->container['fromPath'] = $data['fromPath'] ?? null;
         $this->container['message'] = $data['message'] ?? null;
-        $this->container['new_branch'] = $data['new_branch'] ?? null;
+        $this->container['newBranch'] = $data['newBranch'] ?? null;
         $this->container['sha'] = $data['sha'] ?? null;
         $this->container['signoff'] = $data['signoff'] ?? null;
     }
@@ -387,25 +387,25 @@ class UpdateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets from_path
+     * Gets fromPath
      *
      * @return string|null
      */
     public function getFromPath()
     {
-        return $this->container['from_path'];
+        return $this->container['fromPath'];
     }
 
     /**
-     * Sets from_path
+     * Sets fromPath
      *
-     * @param string|null $from_path from_path (optional) is the path of the original file which will be moved/renamed to the path in the URL
+     * @param string|null $fromPath from_path (optional) is the path of the original file which will be moved/renamed to the path in the URL
      *
      * @return self
      */
-    public function setFromPath($from_path)
+    public function setFromPath($fromPath)
     {
-        $this->container['from_path'] = $from_path;
+        $this->container['fromPath'] = $fromPath;
 
         return $this;
     }
@@ -435,25 +435,25 @@ class UpdateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets new_branch
+     * Gets newBranch
      *
      * @return string|null
      */
     public function getNewBranch()
     {
-        return $this->container['new_branch'];
+        return $this->container['newBranch'];
     }
 
     /**
-     * Sets new_branch
+     * Sets newBranch
      *
-     * @param string|null $new_branch new_branch (optional) will make a new branch from `branch` before creating the file
+     * @param string|null $newBranch new_branch (optional) will make a new branch from `branch` before creating the file
      *
      * @return self
      */
-    public function setNewBranch($new_branch)
+    public function setNewBranch($newBranch)
     {
-        $this->container['new_branch'] = $new_branch;
+        $this->container['newBranch'] = $newBranch;
 
         return $this;
     }

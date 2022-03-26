@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Team represents a team in an organization
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class TeamTest extends TestCase
     }
 
     /**
-     * Test attribute "can_create_org_repo"
+     * Test attribute "canCreateOrgRepo"
      */
     public function testPropertyCanCreateOrgRepo()
     {
@@ -107,7 +107,7 @@ class TeamTest extends TestCase
     }
 
     /**
-     * Test attribute "includes_all_repositories"
+     * Test attribute "includesAllRepositories"
      */
     public function testPropertyIncludesAllRepositories()
     {
@@ -152,7 +152,7 @@ class TeamTest extends TestCase
     }
 
     /**
-     * Test attribute "units_map"
+     * Test attribute "unitsMap"
      */
     public function testPropertyUnitsMap()
     {

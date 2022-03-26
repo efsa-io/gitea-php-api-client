@@ -1,4 +1,4 @@
-# GiteaApiClient
+# REST client for Gitea
 
 This documentation describes the Gitea API.
 
@@ -35,7 +35,7 @@ Download the files and include `autoload.php`:
 
 ```php
 <?php
-require_once('/path/to/GiteaApiClient/vendor/autoload.php');
+require_once('/path/to/REST client for Gitea/vendor/autoload.php');
 ```
 
 ## Getting Started

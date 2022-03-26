@@ -59,12 +59,12 @@ class OAuth2Application implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'client_id' => 'string',
-        'client_secret' => 'string',
+        'clientId' => 'string',
+        'clientSecret' => 'string',
         'created' => '\DateTime',
         'id' => 'int',
         'name' => 'string',
-        'redirect_uris' => 'string[]'
+        'redirectUris' => 'string[]'
     ];
 
     /**
@@ -75,12 +75,12 @@ class OAuth2Application implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'client_id' => null,
-        'client_secret' => null,
+        'clientId' => null,
+        'clientSecret' => null,
         'created' => 'date-time',
         'id' => 'int64',
         'name' => null,
-        'redirect_uris' => null
+        'redirectUris' => null
     ];
 
     /**
@@ -110,12 +110,12 @@ class OAuth2Application implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'client_id' => 'client_id',
-        'client_secret' => 'client_secret',
+        'clientId' => 'client_id',
+        'clientSecret' => 'client_secret',
         'created' => 'created',
         'id' => 'id',
         'name' => 'name',
-        'redirect_uris' => 'redirect_uris'
+        'redirectUris' => 'redirect_uris'
     ];
 
     /**
@@ -124,12 +124,12 @@ class OAuth2Application implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'client_id' => 'setClientId',
-        'client_secret' => 'setClientSecret',
+        'clientId' => 'setClientId',
+        'clientSecret' => 'setClientSecret',
         'created' => 'setCreated',
         'id' => 'setId',
         'name' => 'setName',
-        'redirect_uris' => 'setRedirectUris'
+        'redirectUris' => 'setRedirectUris'
     ];
 
     /**
@@ -138,12 +138,12 @@ class OAuth2Application implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'client_id' => 'getClientId',
-        'client_secret' => 'getClientSecret',
+        'clientId' => 'getClientId',
+        'clientSecret' => 'getClientSecret',
         'created' => 'getCreated',
         'id' => 'getId',
         'name' => 'getName',
-        'redirect_uris' => 'getRedirectUris'
+        'redirectUris' => 'getRedirectUris'
     ];
 
     /**
@@ -203,12 +203,12 @@ class OAuth2Application implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->container['client_id'] = $data['client_id'] ?? null;
-        $this->container['client_secret'] = $data['client_secret'] ?? null;
+        $this->container['clientId'] = $data['clientId'] ?? null;
+        $this->container['clientSecret'] = $data['clientSecret'] ?? null;
         $this->container['created'] = $data['created'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
-        $this->container['redirect_uris'] = $data['redirect_uris'] ?? null;
+        $this->container['redirectUris'] = $data['redirectUris'] ?? null;
     }
 
     /**
@@ -236,49 +236,49 @@ class OAuth2Application implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets client_id
+     * Gets clientId
      *
      * @return string|null
      */
     public function getClientId()
     {
-        return $this->container['client_id'];
+        return $this->container['clientId'];
     }
 
     /**
-     * Sets client_id
+     * Sets clientId
      *
-     * @param string|null $client_id client_id
+     * @param string|null $clientId clientId
      *
      * @return self
      */
-    public function setClientId($client_id)
+    public function setClientId($clientId)
     {
-        $this->container['client_id'] = $client_id;
+        $this->container['clientId'] = $clientId;
 
         return $this;
     }
 
     /**
-     * Gets client_secret
+     * Gets clientSecret
      *
      * @return string|null
      */
     public function getClientSecret()
     {
-        return $this->container['client_secret'];
+        return $this->container['clientSecret'];
     }
 
     /**
-     * Sets client_secret
+     * Sets clientSecret
      *
-     * @param string|null $client_secret client_secret
+     * @param string|null $clientSecret clientSecret
      *
      * @return self
      */
-    public function setClientSecret($client_secret)
+    public function setClientSecret($clientSecret)
     {
-        $this->container['client_secret'] = $client_secret;
+        $this->container['clientSecret'] = $clientSecret;
 
         return $this;
     }
@@ -356,25 +356,25 @@ class OAuth2Application implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets redirect_uris
+     * Gets redirectUris
      *
      * @return string[]|null
      */
     public function getRedirectUris()
     {
-        return $this->container['redirect_uris'];
+        return $this->container['redirectUris'];
     }
 
     /**
-     * Sets redirect_uris
+     * Sets redirectUris
      *
-     * @param string[]|null $redirect_uris redirect_uris
+     * @param string[]|null $redirectUris redirectUris
      *
      * @return self
      */
-    public function setRedirectUris($redirect_uris)
+    public function setRedirectUris($redirectUris)
     {
-        $this->container['redirect_uris'] = $redirect_uris;
+        $this->container['redirectUris'] = $redirectUris;
 
         return $this;
     }

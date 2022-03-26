@@ -60,9 +60,9 @@ class GeneralUISettings implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'allowed_reactions' => 'string[]',
-        'custom_emojis' => 'string[]',
-        'default_theme' => 'string'
+        'allowedReactions' => 'string[]',
+        'customEmojis' => 'string[]',
+        'defaultTheme' => 'string'
     ];
 
     /**
@@ -73,9 +73,9 @@ class GeneralUISettings implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'allowed_reactions' => null,
-        'custom_emojis' => null,
-        'default_theme' => null
+        'allowedReactions' => null,
+        'customEmojis' => null,
+        'defaultTheme' => null
     ];
 
     /**
@@ -105,9 +105,9 @@ class GeneralUISettings implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'allowed_reactions' => 'allowed_reactions',
-        'custom_emojis' => 'custom_emojis',
-        'default_theme' => 'default_theme'
+        'allowedReactions' => 'allowed_reactions',
+        'customEmojis' => 'custom_emojis',
+        'defaultTheme' => 'default_theme'
     ];
 
     /**
@@ -116,9 +116,9 @@ class GeneralUISettings implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'allowed_reactions' => 'setAllowedReactions',
-        'custom_emojis' => 'setCustomEmojis',
-        'default_theme' => 'setDefaultTheme'
+        'allowedReactions' => 'setAllowedReactions',
+        'customEmojis' => 'setCustomEmojis',
+        'defaultTheme' => 'setDefaultTheme'
     ];
 
     /**
@@ -127,9 +127,9 @@ class GeneralUISettings implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'allowed_reactions' => 'getAllowedReactions',
-        'custom_emojis' => 'getCustomEmojis',
-        'default_theme' => 'getDefaultTheme'
+        'allowedReactions' => 'getAllowedReactions',
+        'customEmojis' => 'getCustomEmojis',
+        'defaultTheme' => 'getDefaultTheme'
     ];
 
     /**
@@ -189,9 +189,9 @@ class GeneralUISettings implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->container['allowed_reactions'] = $data['allowed_reactions'] ?? null;
-        $this->container['custom_emojis'] = $data['custom_emojis'] ?? null;
-        $this->container['default_theme'] = $data['default_theme'] ?? null;
+        $this->container['allowedReactions'] = $data['allowedReactions'] ?? null;
+        $this->container['customEmojis'] = $data['customEmojis'] ?? null;
+        $this->container['defaultTheme'] = $data['defaultTheme'] ?? null;
     }
 
     /**
@@ -219,73 +219,73 @@ class GeneralUISettings implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets allowed_reactions
+     * Gets allowedReactions
      *
      * @return string[]|null
      */
     public function getAllowedReactions()
     {
-        return $this->container['allowed_reactions'];
+        return $this->container['allowedReactions'];
     }
 
     /**
-     * Sets allowed_reactions
+     * Sets allowedReactions
      *
-     * @param string[]|null $allowed_reactions allowed_reactions
+     * @param string[]|null $allowedReactions allowedReactions
      *
      * @return self
      */
-    public function setAllowedReactions($allowed_reactions)
+    public function setAllowedReactions($allowedReactions)
     {
-        $this->container['allowed_reactions'] = $allowed_reactions;
+        $this->container['allowedReactions'] = $allowedReactions;
 
         return $this;
     }
 
     /**
-     * Gets custom_emojis
+     * Gets customEmojis
      *
      * @return string[]|null
      */
     public function getCustomEmojis()
     {
-        return $this->container['custom_emojis'];
+        return $this->container['customEmojis'];
     }
 
     /**
-     * Sets custom_emojis
+     * Sets customEmojis
      *
-     * @param string[]|null $custom_emojis custom_emojis
+     * @param string[]|null $customEmojis customEmojis
      *
      * @return self
      */
-    public function setCustomEmojis($custom_emojis)
+    public function setCustomEmojis($customEmojis)
     {
-        $this->container['custom_emojis'] = $custom_emojis;
+        $this->container['customEmojis'] = $customEmojis;
 
         return $this;
     }
 
     /**
-     * Gets default_theme
+     * Gets defaultTheme
      *
      * @return string|null
      */
     public function getDefaultTheme()
     {
-        return $this->container['default_theme'];
+        return $this->container['defaultTheme'];
     }
 
     /**
-     * Sets default_theme
+     * Sets defaultTheme
      *
-     * @param string|null $default_theme default_theme
+     * @param string|null $defaultTheme defaultTheme
      *
      * @return self
      */
-    public function setDefaultTheme($default_theme)
+    public function setDefaultTheme($defaultTheme)
     {
-        $this->container['default_theme'] = $default_theme;
+        $this->container['defaultTheme'] = $defaultTheme;
 
         return $this;
     }

@@ -61,7 +61,7 @@ class CreateKeyOption implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'key' => 'string',
-        'read_only' => 'bool',
+        'readOnly' => 'bool',
         'title' => 'string'
     ];
 
@@ -74,7 +74,7 @@ class CreateKeyOption implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'key' => null,
-        'read_only' => null,
+        'readOnly' => null,
         'title' => null
     ];
 
@@ -106,7 +106,7 @@ class CreateKeyOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'key' => 'key',
-        'read_only' => 'read_only',
+        'readOnly' => 'read_only',
         'title' => 'title'
     ];
 
@@ -117,7 +117,7 @@ class CreateKeyOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'key' => 'setKey',
-        'read_only' => 'setReadOnly',
+        'readOnly' => 'setReadOnly',
         'title' => 'setTitle'
     ];
 
@@ -128,7 +128,7 @@ class CreateKeyOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'key' => 'getKey',
-        'read_only' => 'getReadOnly',
+        'readOnly' => 'getReadOnly',
         'title' => 'getTitle'
     ];
 
@@ -190,7 +190,7 @@ class CreateKeyOption implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['key'] = $data['key'] ?? null;
-        $this->container['read_only'] = $data['read_only'] ?? null;
+        $this->container['readOnly'] = $data['readOnly'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
     }
 
@@ -249,25 +249,25 @@ class CreateKeyOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets read_only
+     * Gets readOnly
      *
      * @return bool|null
      */
     public function getReadOnly()
     {
-        return $this->container['read_only'];
+        return $this->container['readOnly'];
     }
 
     /**
-     * Sets read_only
+     * Sets readOnly
      *
-     * @param bool|null $read_only Describe if the key has only read access or read/write
+     * @param bool|null $readOnly Describe if the key has only read access or read/write
      *
      * @return self
      */
-    public function setReadOnly($read_only)
+    public function setReadOnly($readOnly)
     {
-        $this->container['read_only'] = $read_only;
+        $this->container['readOnly'] = $readOnly;
 
         return $this;
     }

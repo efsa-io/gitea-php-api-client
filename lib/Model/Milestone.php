@@ -60,16 +60,16 @@ class Milestone implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'closed_at' => '\DateTime',
-        'closed_issues' => 'int',
-        'created_at' => '\DateTime',
+        'closedAt' => '\DateTime',
+        'closedIssues' => 'int',
+        'createdAt' => '\DateTime',
         'description' => 'string',
-        'due_on' => '\DateTime',
+        'dueOn' => '\DateTime',
         'id' => 'int',
-        'open_issues' => 'int',
+        'openIssues' => 'int',
         'state' => 'string',
         'title' => 'string',
-        'updated_at' => '\DateTime'
+        'updatedAt' => '\DateTime'
     ];
 
     /**
@@ -80,16 +80,16 @@ class Milestone implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'closed_at' => 'date-time',
-        'closed_issues' => 'int64',
-        'created_at' => 'date-time',
+        'closedAt' => 'date-time',
+        'closedIssues' => 'int64',
+        'createdAt' => 'date-time',
         'description' => null,
-        'due_on' => 'date-time',
+        'dueOn' => 'date-time',
         'id' => 'int64',
-        'open_issues' => 'int64',
+        'openIssues' => 'int64',
         'state' => null,
         'title' => null,
-        'updated_at' => 'date-time'
+        'updatedAt' => 'date-time'
     ];
 
     /**
@@ -119,16 +119,16 @@ class Milestone implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'closed_at' => 'closed_at',
-        'closed_issues' => 'closed_issues',
-        'created_at' => 'created_at',
+        'closedAt' => 'closed_at',
+        'closedIssues' => 'closed_issues',
+        'createdAt' => 'created_at',
         'description' => 'description',
-        'due_on' => 'due_on',
+        'dueOn' => 'due_on',
         'id' => 'id',
-        'open_issues' => 'open_issues',
+        'openIssues' => 'open_issues',
         'state' => 'state',
         'title' => 'title',
-        'updated_at' => 'updated_at'
+        'updatedAt' => 'updated_at'
     ];
 
     /**
@@ -137,16 +137,16 @@ class Milestone implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'closed_at' => 'setClosedAt',
-        'closed_issues' => 'setClosedIssues',
-        'created_at' => 'setCreatedAt',
+        'closedAt' => 'setClosedAt',
+        'closedIssues' => 'setClosedIssues',
+        'createdAt' => 'setCreatedAt',
         'description' => 'setDescription',
-        'due_on' => 'setDueOn',
+        'dueOn' => 'setDueOn',
         'id' => 'setId',
-        'open_issues' => 'setOpenIssues',
+        'openIssues' => 'setOpenIssues',
         'state' => 'setState',
         'title' => 'setTitle',
-        'updated_at' => 'setUpdatedAt'
+        'updatedAt' => 'setUpdatedAt'
     ];
 
     /**
@@ -155,16 +155,16 @@ class Milestone implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'closed_at' => 'getClosedAt',
-        'closed_issues' => 'getClosedIssues',
-        'created_at' => 'getCreatedAt',
+        'closedAt' => 'getClosedAt',
+        'closedIssues' => 'getClosedIssues',
+        'createdAt' => 'getCreatedAt',
         'description' => 'getDescription',
-        'due_on' => 'getDueOn',
+        'dueOn' => 'getDueOn',
         'id' => 'getId',
-        'open_issues' => 'getOpenIssues',
+        'openIssues' => 'getOpenIssues',
         'state' => 'getState',
         'title' => 'getTitle',
-        'updated_at' => 'getUpdatedAt'
+        'updatedAt' => 'getUpdatedAt'
     ];
 
     /**
@@ -224,16 +224,16 @@ class Milestone implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['closed_at'] = $data['closed_at'] ?? null;
-        $this->container['closed_issues'] = $data['closed_issues'] ?? null;
-        $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['closedAt'] = $data['closedAt'] ?? null;
+        $this->container['closedIssues'] = $data['closedIssues'] ?? null;
+        $this->container['createdAt'] = $data['createdAt'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
-        $this->container['due_on'] = $data['due_on'] ?? null;
+        $this->container['dueOn'] = $data['dueOn'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['open_issues'] = $data['open_issues'] ?? null;
+        $this->container['openIssues'] = $data['openIssues'] ?? null;
         $this->container['state'] = $data['state'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
-        $this->container['updated_at'] = $data['updated_at'] ?? null;
+        $this->container['updatedAt'] = $data['updatedAt'] ?? null;
     }
 
     /**
@@ -261,73 +261,73 @@ class Milestone implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets closed_at
+     * Gets closedAt
      *
      * @return \DateTime|null
      */
     public function getClosedAt()
     {
-        return $this->container['closed_at'];
+        return $this->container['closedAt'];
     }
 
     /**
-     * Sets closed_at
+     * Sets closedAt
      *
-     * @param \DateTime|null $closed_at closed_at
+     * @param \DateTime|null $closedAt closedAt
      *
      * @return self
      */
-    public function setClosedAt($closed_at)
+    public function setClosedAt($closedAt)
     {
-        $this->container['closed_at'] = $closed_at;
+        $this->container['closedAt'] = $closedAt;
 
         return $this;
     }
 
     /**
-     * Gets closed_issues
+     * Gets closedIssues
      *
      * @return int|null
      */
     public function getClosedIssues()
     {
-        return $this->container['closed_issues'];
+        return $this->container['closedIssues'];
     }
 
     /**
-     * Sets closed_issues
+     * Sets closedIssues
      *
-     * @param int|null $closed_issues closed_issues
+     * @param int|null $closedIssues closedIssues
      *
      * @return self
      */
-    public function setClosedIssues($closed_issues)
+    public function setClosedIssues($closedIssues)
     {
-        $this->container['closed_issues'] = $closed_issues;
+        $this->container['closedIssues'] = $closedIssues;
 
         return $this;
     }
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime|null
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $createdAt createdAt
      *
      * @return self
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }
@@ -357,25 +357,25 @@ class Milestone implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets due_on
+     * Gets dueOn
      *
      * @return \DateTime|null
      */
     public function getDueOn()
     {
-        return $this->container['due_on'];
+        return $this->container['dueOn'];
     }
 
     /**
-     * Sets due_on
+     * Sets dueOn
      *
-     * @param \DateTime|null $due_on due_on
+     * @param \DateTime|null $dueOn dueOn
      *
      * @return self
      */
-    public function setDueOn($due_on)
+    public function setDueOn($dueOn)
     {
-        $this->container['due_on'] = $due_on;
+        $this->container['dueOn'] = $dueOn;
 
         return $this;
     }
@@ -405,25 +405,25 @@ class Milestone implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets open_issues
+     * Gets openIssues
      *
      * @return int|null
      */
     public function getOpenIssues()
     {
-        return $this->container['open_issues'];
+        return $this->container['openIssues'];
     }
 
     /**
-     * Sets open_issues
+     * Sets openIssues
      *
-     * @param int|null $open_issues open_issues
+     * @param int|null $openIssues openIssues
      *
      * @return self
      */
-    public function setOpenIssues($open_issues)
+    public function setOpenIssues($openIssues)
     {
-        $this->container['open_issues'] = $open_issues;
+        $this->container['openIssues'] = $openIssues;
 
         return $this;
     }
@@ -477,25 +477,25 @@ class Milestone implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets updated_at
+     * Gets updatedAt
      *
      * @return \DateTime|null
      */
     public function getUpdatedAt()
     {
-        return $this->container['updated_at'];
+        return $this->container['updatedAt'];
     }
 
     /**
-     * Sets updated_at
+     * Sets updatedAt
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updatedAt updatedAt
      *
      * @return self
      */
-    public function setUpdatedAt($updated_at)
+    public function setUpdatedAt($updatedAt)
     {
-        $this->container['updated_at'] = $updated_at;
+        $this->container['updatedAt'] = $updatedAt;
 
         return $this;
     }

@@ -64,8 +64,8 @@ class CreateReleaseOption implements ModelInterface, ArrayAccess, \JsonSerializa
         'draft' => 'bool',
         'name' => 'string',
         'prerelease' => 'bool',
-        'tag_name' => 'string',
-        'target_commitish' => 'string'
+        'tagName' => 'string',
+        'targetCommitish' => 'string'
     ];
 
     /**
@@ -80,8 +80,8 @@ class CreateReleaseOption implements ModelInterface, ArrayAccess, \JsonSerializa
         'draft' => null,
         'name' => null,
         'prerelease' => null,
-        'tag_name' => null,
-        'target_commitish' => null
+        'tagName' => null,
+        'targetCommitish' => null
     ];
 
     /**
@@ -115,8 +115,8 @@ class CreateReleaseOption implements ModelInterface, ArrayAccess, \JsonSerializa
         'draft' => 'draft',
         'name' => 'name',
         'prerelease' => 'prerelease',
-        'tag_name' => 'tag_name',
-        'target_commitish' => 'target_commitish'
+        'tagName' => 'tag_name',
+        'targetCommitish' => 'target_commitish'
     ];
 
     /**
@@ -129,8 +129,8 @@ class CreateReleaseOption implements ModelInterface, ArrayAccess, \JsonSerializa
         'draft' => 'setDraft',
         'name' => 'setName',
         'prerelease' => 'setPrerelease',
-        'tag_name' => 'setTagName',
-        'target_commitish' => 'setTargetCommitish'
+        'tagName' => 'setTagName',
+        'targetCommitish' => 'setTargetCommitish'
     ];
 
     /**
@@ -143,8 +143,8 @@ class CreateReleaseOption implements ModelInterface, ArrayAccess, \JsonSerializa
         'draft' => 'getDraft',
         'name' => 'getName',
         'prerelease' => 'getPrerelease',
-        'tag_name' => 'getTagName',
-        'target_commitish' => 'getTargetCommitish'
+        'tagName' => 'getTagName',
+        'targetCommitish' => 'getTargetCommitish'
     ];
 
     /**
@@ -208,8 +208,8 @@ class CreateReleaseOption implements ModelInterface, ArrayAccess, \JsonSerializa
         $this->container['draft'] = $data['draft'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['prerelease'] = $data['prerelease'] ?? null;
-        $this->container['tag_name'] = $data['tag_name'] ?? null;
-        $this->container['target_commitish'] = $data['target_commitish'] ?? null;
+        $this->container['tagName'] = $data['tagName'] ?? null;
+        $this->container['targetCommitish'] = $data['targetCommitish'] ?? null;
     }
 
     /**
@@ -221,8 +221,8 @@ class CreateReleaseOption implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $invalidProperties = [];
 
-        if ($this->container['tag_name'] === null) {
-            $invalidProperties[] = "'tag_name' can't be null";
+        if ($this->container['tagName'] === null) {
+            $invalidProperties[] = "'tagName' can't be null";
         }
         return $invalidProperties;
     }
@@ -336,49 +336,49 @@ class CreateReleaseOption implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets tag_name
+     * Gets tagName
      *
      * @return string
      */
     public function getTagName()
     {
-        return $this->container['tag_name'];
+        return $this->container['tagName'];
     }
 
     /**
-     * Sets tag_name
+     * Sets tagName
      *
-     * @param string $tag_name tag_name
+     * @param string $tagName tagName
      *
      * @return self
      */
-    public function setTagName($tag_name)
+    public function setTagName($tagName)
     {
-        $this->container['tag_name'] = $tag_name;
+        $this->container['tagName'] = $tagName;
 
         return $this;
     }
 
     /**
-     * Gets target_commitish
+     * Gets targetCommitish
      *
      * @return string|null
      */
     public function getTargetCommitish()
     {
-        return $this->container['target_commitish'];
+        return $this->container['targetCommitish'];
     }
 
     /**
-     * Sets target_commitish
+     * Sets targetCommitish
      *
-     * @param string|null $target_commitish target_commitish
+     * @param string|null $targetCommitish targetCommitish
      *
      * @return self
      */
-    public function setTargetCommitish($target_commitish)
+    public function setTargetCommitish($targetCommitish)
     {
-        $this->container['target_commitish'] = $target_commitish;
+        $this->container['targetCommitish'] = $targetCommitish;
 
         return $this;
     }

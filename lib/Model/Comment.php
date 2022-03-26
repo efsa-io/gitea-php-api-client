@@ -61,14 +61,14 @@ class Comment implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'body' => 'string',
-        'created_at' => '\DateTime',
-        'html_url' => 'string',
+        'createdAt' => '\DateTime',
+        'htmlUrl' => 'string',
         'id' => 'int',
-        'issue_url' => 'string',
-        'original_author' => 'string',
-        'original_author_id' => 'int',
-        'pull_request_url' => 'string',
-        'updated_at' => '\DateTime',
+        'issueUrl' => 'string',
+        'originalAuthor' => 'string',
+        'originalAuthorId' => 'int',
+        'pullRequestUrl' => 'string',
+        'updatedAt' => '\DateTime',
         'user' => '\Efsa\Client\Gitea\Model\User'
     ];
 
@@ -81,14 +81,14 @@ class Comment implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'body' => null,
-        'created_at' => 'date-time',
-        'html_url' => null,
+        'createdAt' => 'date-time',
+        'htmlUrl' => null,
         'id' => 'int64',
-        'issue_url' => null,
-        'original_author' => null,
-        'original_author_id' => 'int64',
-        'pull_request_url' => null,
-        'updated_at' => 'date-time',
+        'issueUrl' => null,
+        'originalAuthor' => null,
+        'originalAuthorId' => 'int64',
+        'pullRequestUrl' => null,
+        'updatedAt' => 'date-time',
         'user' => null
     ];
 
@@ -120,14 +120,14 @@ class Comment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'body' => 'body',
-        'created_at' => 'created_at',
-        'html_url' => 'html_url',
+        'createdAt' => 'created_at',
+        'htmlUrl' => 'html_url',
         'id' => 'id',
-        'issue_url' => 'issue_url',
-        'original_author' => 'original_author',
-        'original_author_id' => 'original_author_id',
-        'pull_request_url' => 'pull_request_url',
-        'updated_at' => 'updated_at',
+        'issueUrl' => 'issue_url',
+        'originalAuthor' => 'original_author',
+        'originalAuthorId' => 'original_author_id',
+        'pullRequestUrl' => 'pull_request_url',
+        'updatedAt' => 'updated_at',
         'user' => 'user'
     ];
 
@@ -138,14 +138,14 @@ class Comment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'body' => 'setBody',
-        'created_at' => 'setCreatedAt',
-        'html_url' => 'setHtmlUrl',
+        'createdAt' => 'setCreatedAt',
+        'htmlUrl' => 'setHtmlUrl',
         'id' => 'setId',
-        'issue_url' => 'setIssueUrl',
-        'original_author' => 'setOriginalAuthor',
-        'original_author_id' => 'setOriginalAuthorId',
-        'pull_request_url' => 'setPullRequestUrl',
-        'updated_at' => 'setUpdatedAt',
+        'issueUrl' => 'setIssueUrl',
+        'originalAuthor' => 'setOriginalAuthor',
+        'originalAuthorId' => 'setOriginalAuthorId',
+        'pullRequestUrl' => 'setPullRequestUrl',
+        'updatedAt' => 'setUpdatedAt',
         'user' => 'setUser'
     ];
 
@@ -156,14 +156,14 @@ class Comment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'body' => 'getBody',
-        'created_at' => 'getCreatedAt',
-        'html_url' => 'getHtmlUrl',
+        'createdAt' => 'getCreatedAt',
+        'htmlUrl' => 'getHtmlUrl',
         'id' => 'getId',
-        'issue_url' => 'getIssueUrl',
-        'original_author' => 'getOriginalAuthor',
-        'original_author_id' => 'getOriginalAuthorId',
-        'pull_request_url' => 'getPullRequestUrl',
-        'updated_at' => 'getUpdatedAt',
+        'issueUrl' => 'getIssueUrl',
+        'originalAuthor' => 'getOriginalAuthor',
+        'originalAuthorId' => 'getOriginalAuthorId',
+        'pullRequestUrl' => 'getPullRequestUrl',
+        'updatedAt' => 'getUpdatedAt',
         'user' => 'getUser'
     ];
 
@@ -225,14 +225,14 @@ class Comment implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['body'] = $data['body'] ?? null;
-        $this->container['created_at'] = $data['created_at'] ?? null;
-        $this->container['html_url'] = $data['html_url'] ?? null;
+        $this->container['createdAt'] = $data['createdAt'] ?? null;
+        $this->container['htmlUrl'] = $data['htmlUrl'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['issue_url'] = $data['issue_url'] ?? null;
-        $this->container['original_author'] = $data['original_author'] ?? null;
-        $this->container['original_author_id'] = $data['original_author_id'] ?? null;
-        $this->container['pull_request_url'] = $data['pull_request_url'] ?? null;
-        $this->container['updated_at'] = $data['updated_at'] ?? null;
+        $this->container['issueUrl'] = $data['issueUrl'] ?? null;
+        $this->container['originalAuthor'] = $data['originalAuthor'] ?? null;
+        $this->container['originalAuthorId'] = $data['originalAuthorId'] ?? null;
+        $this->container['pullRequestUrl'] = $data['pullRequestUrl'] ?? null;
+        $this->container['updatedAt'] = $data['updatedAt'] ?? null;
         $this->container['user'] = $data['user'] ?? null;
     }
 
@@ -285,49 +285,49 @@ class Comment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime|null
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $createdAt createdAt
      *
      * @return self
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }
 
     /**
-     * Gets html_url
+     * Gets htmlUrl
      *
      * @return string|null
      */
     public function getHtmlUrl()
     {
-        return $this->container['html_url'];
+        return $this->container['htmlUrl'];
     }
 
     /**
-     * Sets html_url
+     * Sets htmlUrl
      *
-     * @param string|null $html_url html_url
+     * @param string|null $htmlUrl htmlUrl
      *
      * @return self
      */
-    public function setHtmlUrl($html_url)
+    public function setHtmlUrl($htmlUrl)
     {
-        $this->container['html_url'] = $html_url;
+        $this->container['htmlUrl'] = $htmlUrl;
 
         return $this;
     }
@@ -357,121 +357,121 @@ class Comment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets issue_url
+     * Gets issueUrl
      *
      * @return string|null
      */
     public function getIssueUrl()
     {
-        return $this->container['issue_url'];
+        return $this->container['issueUrl'];
     }
 
     /**
-     * Sets issue_url
+     * Sets issueUrl
      *
-     * @param string|null $issue_url issue_url
+     * @param string|null $issueUrl issueUrl
      *
      * @return self
      */
-    public function setIssueUrl($issue_url)
+    public function setIssueUrl($issueUrl)
     {
-        $this->container['issue_url'] = $issue_url;
+        $this->container['issueUrl'] = $issueUrl;
 
         return $this;
     }
 
     /**
-     * Gets original_author
+     * Gets originalAuthor
      *
      * @return string|null
      */
     public function getOriginalAuthor()
     {
-        return $this->container['original_author'];
+        return $this->container['originalAuthor'];
     }
 
     /**
-     * Sets original_author
+     * Sets originalAuthor
      *
-     * @param string|null $original_author original_author
+     * @param string|null $originalAuthor originalAuthor
      *
      * @return self
      */
-    public function setOriginalAuthor($original_author)
+    public function setOriginalAuthor($originalAuthor)
     {
-        $this->container['original_author'] = $original_author;
+        $this->container['originalAuthor'] = $originalAuthor;
 
         return $this;
     }
 
     /**
-     * Gets original_author_id
+     * Gets originalAuthorId
      *
      * @return int|null
      */
     public function getOriginalAuthorId()
     {
-        return $this->container['original_author_id'];
+        return $this->container['originalAuthorId'];
     }
 
     /**
-     * Sets original_author_id
+     * Sets originalAuthorId
      *
-     * @param int|null $original_author_id original_author_id
+     * @param int|null $originalAuthorId originalAuthorId
      *
      * @return self
      */
-    public function setOriginalAuthorId($original_author_id)
+    public function setOriginalAuthorId($originalAuthorId)
     {
-        $this->container['original_author_id'] = $original_author_id;
+        $this->container['originalAuthorId'] = $originalAuthorId;
 
         return $this;
     }
 
     /**
-     * Gets pull_request_url
+     * Gets pullRequestUrl
      *
      * @return string|null
      */
     public function getPullRequestUrl()
     {
-        return $this->container['pull_request_url'];
+        return $this->container['pullRequestUrl'];
     }
 
     /**
-     * Sets pull_request_url
+     * Sets pullRequestUrl
      *
-     * @param string|null $pull_request_url pull_request_url
+     * @param string|null $pullRequestUrl pullRequestUrl
      *
      * @return self
      */
-    public function setPullRequestUrl($pull_request_url)
+    public function setPullRequestUrl($pullRequestUrl)
     {
-        $this->container['pull_request_url'] = $pull_request_url;
+        $this->container['pullRequestUrl'] = $pullRequestUrl;
 
         return $this;
     }
 
     /**
-     * Gets updated_at
+     * Gets updatedAt
      *
      * @return \DateTime|null
      */
     public function getUpdatedAt()
     {
-        return $this->container['updated_at'];
+        return $this->container['updatedAt'];
     }
 
     /**
-     * Sets updated_at
+     * Sets updatedAt
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updatedAt updatedAt
      *
      * @return self
      */
-    public function setUpdatedAt($updated_at)
+    public function setUpdatedAt($updatedAt)
     {
-        $this->container['updated_at'] = $updated_at;
+        $this->container['updatedAt'] = $updatedAt;
 
         return $this;
     }

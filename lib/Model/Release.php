@@ -63,18 +63,18 @@ class Release implements ModelInterface, ArrayAccess, \JsonSerializable
         'assets' => '\Efsa\Client\Gitea\Model\Attachment[]',
         'author' => '\Efsa\Client\Gitea\Model\User',
         'body' => 'string',
-        'created_at' => '\DateTime',
+        'createdAt' => '\DateTime',
         'draft' => 'bool',
-        'html_url' => 'string',
+        'htmlUrl' => 'string',
         'id' => 'int',
         'name' => 'string',
         'prerelease' => 'bool',
-        'published_at' => '\DateTime',
-        'tag_name' => 'string',
-        'tarball_url' => 'string',
-        'target_commitish' => 'string',
+        'publishedAt' => '\DateTime',
+        'tagName' => 'string',
+        'tarballUrl' => 'string',
+        'targetCommitish' => 'string',
         'url' => 'string',
-        'zipball_url' => 'string'
+        'zipballUrl' => 'string'
     ];
 
     /**
@@ -88,18 +88,18 @@ class Release implements ModelInterface, ArrayAccess, \JsonSerializable
         'assets' => null,
         'author' => null,
         'body' => null,
-        'created_at' => 'date-time',
+        'createdAt' => 'date-time',
         'draft' => null,
-        'html_url' => null,
+        'htmlUrl' => null,
         'id' => 'int64',
         'name' => null,
         'prerelease' => null,
-        'published_at' => 'date-time',
-        'tag_name' => null,
-        'tarball_url' => null,
-        'target_commitish' => null,
+        'publishedAt' => 'date-time',
+        'tagName' => null,
+        'tarballUrl' => null,
+        'targetCommitish' => null,
         'url' => null,
-        'zipball_url' => null
+        'zipballUrl' => null
     ];
 
     /**
@@ -132,18 +132,18 @@ class Release implements ModelInterface, ArrayAccess, \JsonSerializable
         'assets' => 'assets',
         'author' => 'author',
         'body' => 'body',
-        'created_at' => 'created_at',
+        'createdAt' => 'created_at',
         'draft' => 'draft',
-        'html_url' => 'html_url',
+        'htmlUrl' => 'html_url',
         'id' => 'id',
         'name' => 'name',
         'prerelease' => 'prerelease',
-        'published_at' => 'published_at',
-        'tag_name' => 'tag_name',
-        'tarball_url' => 'tarball_url',
-        'target_commitish' => 'target_commitish',
+        'publishedAt' => 'published_at',
+        'tagName' => 'tag_name',
+        'tarballUrl' => 'tarball_url',
+        'targetCommitish' => 'target_commitish',
         'url' => 'url',
-        'zipball_url' => 'zipball_url'
+        'zipballUrl' => 'zipball_url'
     ];
 
     /**
@@ -155,18 +155,18 @@ class Release implements ModelInterface, ArrayAccess, \JsonSerializable
         'assets' => 'setAssets',
         'author' => 'setAuthor',
         'body' => 'setBody',
-        'created_at' => 'setCreatedAt',
+        'createdAt' => 'setCreatedAt',
         'draft' => 'setDraft',
-        'html_url' => 'setHtmlUrl',
+        'htmlUrl' => 'setHtmlUrl',
         'id' => 'setId',
         'name' => 'setName',
         'prerelease' => 'setPrerelease',
-        'published_at' => 'setPublishedAt',
-        'tag_name' => 'setTagName',
-        'tarball_url' => 'setTarballUrl',
-        'target_commitish' => 'setTargetCommitish',
+        'publishedAt' => 'setPublishedAt',
+        'tagName' => 'setTagName',
+        'tarballUrl' => 'setTarballUrl',
+        'targetCommitish' => 'setTargetCommitish',
         'url' => 'setUrl',
-        'zipball_url' => 'setZipballUrl'
+        'zipballUrl' => 'setZipballUrl'
     ];
 
     /**
@@ -178,18 +178,18 @@ class Release implements ModelInterface, ArrayAccess, \JsonSerializable
         'assets' => 'getAssets',
         'author' => 'getAuthor',
         'body' => 'getBody',
-        'created_at' => 'getCreatedAt',
+        'createdAt' => 'getCreatedAt',
         'draft' => 'getDraft',
-        'html_url' => 'getHtmlUrl',
+        'htmlUrl' => 'getHtmlUrl',
         'id' => 'getId',
         'name' => 'getName',
         'prerelease' => 'getPrerelease',
-        'published_at' => 'getPublishedAt',
-        'tag_name' => 'getTagName',
-        'tarball_url' => 'getTarballUrl',
-        'target_commitish' => 'getTargetCommitish',
+        'publishedAt' => 'getPublishedAt',
+        'tagName' => 'getTagName',
+        'tarballUrl' => 'getTarballUrl',
+        'targetCommitish' => 'getTargetCommitish',
         'url' => 'getUrl',
-        'zipball_url' => 'getZipballUrl'
+        'zipballUrl' => 'getZipballUrl'
     ];
 
     /**
@@ -252,18 +252,18 @@ class Release implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['assets'] = $data['assets'] ?? null;
         $this->container['author'] = $data['author'] ?? null;
         $this->container['body'] = $data['body'] ?? null;
-        $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['createdAt'] = $data['createdAt'] ?? null;
         $this->container['draft'] = $data['draft'] ?? null;
-        $this->container['html_url'] = $data['html_url'] ?? null;
+        $this->container['htmlUrl'] = $data['htmlUrl'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['prerelease'] = $data['prerelease'] ?? null;
-        $this->container['published_at'] = $data['published_at'] ?? null;
-        $this->container['tag_name'] = $data['tag_name'] ?? null;
-        $this->container['tarball_url'] = $data['tarball_url'] ?? null;
-        $this->container['target_commitish'] = $data['target_commitish'] ?? null;
+        $this->container['publishedAt'] = $data['publishedAt'] ?? null;
+        $this->container['tagName'] = $data['tagName'] ?? null;
+        $this->container['tarballUrl'] = $data['tarballUrl'] ?? null;
+        $this->container['targetCommitish'] = $data['targetCommitish'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
-        $this->container['zipball_url'] = $data['zipball_url'] ?? null;
+        $this->container['zipballUrl'] = $data['zipballUrl'] ?? null;
     }
 
     /**
@@ -363,25 +363,25 @@ class Release implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime|null
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $createdAt createdAt
      *
      * @return self
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }
@@ -411,25 +411,25 @@ class Release implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets html_url
+     * Gets htmlUrl
      *
      * @return string|null
      */
     public function getHtmlUrl()
     {
-        return $this->container['html_url'];
+        return $this->container['htmlUrl'];
     }
 
     /**
-     * Sets html_url
+     * Sets htmlUrl
      *
-     * @param string|null $html_url html_url
+     * @param string|null $htmlUrl htmlUrl
      *
      * @return self
      */
-    public function setHtmlUrl($html_url)
+    public function setHtmlUrl($htmlUrl)
     {
-        $this->container['html_url'] = $html_url;
+        $this->container['htmlUrl'] = $htmlUrl;
 
         return $this;
     }
@@ -507,97 +507,97 @@ class Release implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets published_at
+     * Gets publishedAt
      *
      * @return \DateTime|null
      */
     public function getPublishedAt()
     {
-        return $this->container['published_at'];
+        return $this->container['publishedAt'];
     }
 
     /**
-     * Sets published_at
+     * Sets publishedAt
      *
-     * @param \DateTime|null $published_at published_at
+     * @param \DateTime|null $publishedAt publishedAt
      *
      * @return self
      */
-    public function setPublishedAt($published_at)
+    public function setPublishedAt($publishedAt)
     {
-        $this->container['published_at'] = $published_at;
+        $this->container['publishedAt'] = $publishedAt;
 
         return $this;
     }
 
     /**
-     * Gets tag_name
+     * Gets tagName
      *
      * @return string|null
      */
     public function getTagName()
     {
-        return $this->container['tag_name'];
+        return $this->container['tagName'];
     }
 
     /**
-     * Sets tag_name
+     * Sets tagName
      *
-     * @param string|null $tag_name tag_name
+     * @param string|null $tagName tagName
      *
      * @return self
      */
-    public function setTagName($tag_name)
+    public function setTagName($tagName)
     {
-        $this->container['tag_name'] = $tag_name;
+        $this->container['tagName'] = $tagName;
 
         return $this;
     }
 
     /**
-     * Gets tarball_url
+     * Gets tarballUrl
      *
      * @return string|null
      */
     public function getTarballUrl()
     {
-        return $this->container['tarball_url'];
+        return $this->container['tarballUrl'];
     }
 
     /**
-     * Sets tarball_url
+     * Sets tarballUrl
      *
-     * @param string|null $tarball_url tarball_url
+     * @param string|null $tarballUrl tarballUrl
      *
      * @return self
      */
-    public function setTarballUrl($tarball_url)
+    public function setTarballUrl($tarballUrl)
     {
-        $this->container['tarball_url'] = $tarball_url;
+        $this->container['tarballUrl'] = $tarballUrl;
 
         return $this;
     }
 
     /**
-     * Gets target_commitish
+     * Gets targetCommitish
      *
      * @return string|null
      */
     public function getTargetCommitish()
     {
-        return $this->container['target_commitish'];
+        return $this->container['targetCommitish'];
     }
 
     /**
-     * Sets target_commitish
+     * Sets targetCommitish
      *
-     * @param string|null $target_commitish target_commitish
+     * @param string|null $targetCommitish targetCommitish
      *
      * @return self
      */
-    public function setTargetCommitish($target_commitish)
+    public function setTargetCommitish($targetCommitish)
     {
-        $this->container['target_commitish'] = $target_commitish;
+        $this->container['targetCommitish'] = $targetCommitish;
 
         return $this;
     }
@@ -627,25 +627,25 @@ class Release implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets zipball_url
+     * Gets zipballUrl
      *
      * @return string|null
      */
     public function getZipballUrl()
     {
-        return $this->container['zipball_url'];
+        return $this->container['zipballUrl'];
     }
 
     /**
-     * Sets zipball_url
+     * Sets zipballUrl
      *
-     * @param string|null $zipball_url zipball_url
+     * @param string|null $zipballUrl zipballUrl
      *
      * @return self
      */
-    public function setZipballUrl($zipball_url)
+    public function setZipballUrl($zipballUrl)
     {
-        $this->container['zipball_url'] = $zipball_url;
+        $this->container['zipballUrl'] = $zipballUrl;
 
         return $this;
     }

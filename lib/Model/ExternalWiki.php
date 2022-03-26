@@ -60,7 +60,7 @@ class ExternalWiki implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'external_wiki_url' => 'string'
+        'externalWikiUrl' => 'string'
     ];
 
     /**
@@ -71,7 +71,7 @@ class ExternalWiki implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'external_wiki_url' => null
+        'externalWikiUrl' => null
     ];
 
     /**
@@ -101,7 +101,7 @@ class ExternalWiki implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'external_wiki_url' => 'external_wiki_url'
+        'externalWikiUrl' => 'external_wiki_url'
     ];
 
     /**
@@ -110,7 +110,7 @@ class ExternalWiki implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'external_wiki_url' => 'setExternalWikiUrl'
+        'externalWikiUrl' => 'setExternalWikiUrl'
     ];
 
     /**
@@ -119,7 +119,7 @@ class ExternalWiki implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'external_wiki_url' => 'getExternalWikiUrl'
+        'externalWikiUrl' => 'getExternalWikiUrl'
     ];
 
     /**
@@ -179,7 +179,7 @@ class ExternalWiki implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['external_wiki_url'] = $data['external_wiki_url'] ?? null;
+        $this->container['externalWikiUrl'] = $data['externalWikiUrl'] ?? null;
     }
 
     /**
@@ -207,25 +207,25 @@ class ExternalWiki implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets external_wiki_url
+     * Gets externalWikiUrl
      *
      * @return string|null
      */
     public function getExternalWikiUrl()
     {
-        return $this->container['external_wiki_url'];
+        return $this->container['externalWikiUrl'];
     }
 
     /**
-     * Sets external_wiki_url
+     * Sets externalWikiUrl
      *
-     * @param string|null $external_wiki_url URL of external wiki.
+     * @param string|null $externalWikiUrl URL of external wiki.
      *
      * @return self
      */
-    public function setExternalWikiUrl($external_wiki_url)
+    public function setExternalWikiUrl($externalWikiUrl)
     {
-        $this->container['external_wiki_url'] = $external_wiki_url;
+        $this->container['externalWikiUrl'] = $externalWikiUrl;
 
         return $this;
     }

@@ -60,53 +60,53 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'allow_merge_commits' => 'bool',
-        'allow_rebase' => 'bool',
-        'allow_rebase_explicit' => 'bool',
-        'allow_squash_merge' => 'bool',
+        'allowMergeCommits' => 'bool',
+        'allowRebase' => 'bool',
+        'allowRebaseExplicit' => 'bool',
+        'allowSquashMerge' => 'bool',
         'archived' => 'bool',
-        'avatar_url' => 'string',
-        'clone_url' => 'string',
-        'created_at' => '\DateTime',
-        'default_branch' => 'string',
-        'default_merge_style' => 'string',
+        'avatarUrl' => 'string',
+        'cloneUrl' => 'string',
+        'createdAt' => '\DateTime',
+        'defaultBranch' => 'string',
+        'defaultMergeStyle' => 'string',
         'description' => 'string',
         'empty' => 'bool',
-        'external_tracker' => '\Efsa\Client\Gitea\Model\ExternalTracker',
-        'external_wiki' => '\Efsa\Client\Gitea\Model\ExternalWiki',
+        'externalTracker' => '\Efsa\Client\Gitea\Model\ExternalTracker',
+        'externalWiki' => '\Efsa\Client\Gitea\Model\ExternalWiki',
         'fork' => 'bool',
-        'forks_count' => 'int',
-        'full_name' => 'string',
-        'has_issues' => 'bool',
-        'has_projects' => 'bool',
-        'has_pull_requests' => 'bool',
-        'has_wiki' => 'bool',
-        'html_url' => 'string',
+        'forksCount' => 'int',
+        'fullName' => 'string',
+        'hasIssues' => 'bool',
+        'hasProjects' => 'bool',
+        'hasPullRequests' => 'bool',
+        'hasWiki' => 'bool',
+        'htmlUrl' => 'string',
         'id' => 'int',
-        'ignore_whitespace_conflicts' => 'bool',
+        'ignoreWhitespaceConflicts' => 'bool',
         'internal' => 'bool',
-        'internal_tracker' => '\Efsa\Client\Gitea\Model\InternalTracker',
+        'internalTracker' => '\Efsa\Client\Gitea\Model\InternalTracker',
         'language' => 'string',
-        'languages_url' => 'string',
+        'languagesUrl' => 'string',
         'mirror' => 'bool',
-        'mirror_interval' => 'string',
-        'mirror_updated' => '\DateTime',
+        'mirrorInterval' => 'string',
+        'mirrorUpdated' => '\DateTime',
         'name' => 'string',
-        'open_issues_count' => 'int',
-        'open_pr_counter' => 'int',
-        'original_url' => 'string',
+        'openIssuesCount' => 'int',
+        'openPrCounter' => 'int',
+        'originalUrl' => 'string',
         'owner' => '\Efsa\Client\Gitea\Model\User',
         'parent' => '\Efsa\Client\Gitea\Model\Repository',
         'permissions' => '\Efsa\Client\Gitea\Model\Permission',
         'private' => 'bool',
-        'release_counter' => 'int',
-        'repo_transfer' => '\Efsa\Client\Gitea\Model\RepoTransfer',
+        'releaseCounter' => 'int',
+        'repoTransfer' => '\Efsa\Client\Gitea\Model\RepoTransfer',
         'size' => 'int',
-        'ssh_url' => 'string',
-        'stars_count' => 'int',
+        'sshUrl' => 'string',
+        'starsCount' => 'int',
         'template' => 'bool',
-        'updated_at' => '\DateTime',
-        'watchers_count' => 'int',
+        'updatedAt' => '\DateTime',
+        'watchersCount' => 'int',
         'website' => 'string'
     ];
 
@@ -118,53 +118,53 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'allow_merge_commits' => null,
-        'allow_rebase' => null,
-        'allow_rebase_explicit' => null,
-        'allow_squash_merge' => null,
+        'allowMergeCommits' => null,
+        'allowRebase' => null,
+        'allowRebaseExplicit' => null,
+        'allowSquashMerge' => null,
         'archived' => null,
-        'avatar_url' => null,
-        'clone_url' => null,
-        'created_at' => 'date-time',
-        'default_branch' => null,
-        'default_merge_style' => null,
+        'avatarUrl' => null,
+        'cloneUrl' => null,
+        'createdAt' => 'date-time',
+        'defaultBranch' => null,
+        'defaultMergeStyle' => null,
         'description' => null,
         'empty' => null,
-        'external_tracker' => null,
-        'external_wiki' => null,
+        'externalTracker' => null,
+        'externalWiki' => null,
         'fork' => null,
-        'forks_count' => 'int64',
-        'full_name' => null,
-        'has_issues' => null,
-        'has_projects' => null,
-        'has_pull_requests' => null,
-        'has_wiki' => null,
-        'html_url' => null,
+        'forksCount' => 'int64',
+        'fullName' => null,
+        'hasIssues' => null,
+        'hasProjects' => null,
+        'hasPullRequests' => null,
+        'hasWiki' => null,
+        'htmlUrl' => null,
         'id' => 'int64',
-        'ignore_whitespace_conflicts' => null,
+        'ignoreWhitespaceConflicts' => null,
         'internal' => null,
-        'internal_tracker' => null,
+        'internalTracker' => null,
         'language' => null,
-        'languages_url' => null,
+        'languagesUrl' => null,
         'mirror' => null,
-        'mirror_interval' => null,
-        'mirror_updated' => 'date-time',
+        'mirrorInterval' => null,
+        'mirrorUpdated' => 'date-time',
         'name' => null,
-        'open_issues_count' => 'int64',
-        'open_pr_counter' => 'int64',
-        'original_url' => null,
+        'openIssuesCount' => 'int64',
+        'openPrCounter' => 'int64',
+        'originalUrl' => null,
         'owner' => null,
         'parent' => null,
         'permissions' => null,
         'private' => null,
-        'release_counter' => 'int64',
-        'repo_transfer' => null,
+        'releaseCounter' => 'int64',
+        'repoTransfer' => null,
         'size' => 'int64',
-        'ssh_url' => null,
-        'stars_count' => 'int64',
+        'sshUrl' => null,
+        'starsCount' => 'int64',
         'template' => null,
-        'updated_at' => 'date-time',
-        'watchers_count' => 'int64',
+        'updatedAt' => 'date-time',
+        'watchersCount' => 'int64',
         'website' => null
     ];
 
@@ -195,53 +195,53 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'allow_merge_commits' => 'allow_merge_commits',
-        'allow_rebase' => 'allow_rebase',
-        'allow_rebase_explicit' => 'allow_rebase_explicit',
-        'allow_squash_merge' => 'allow_squash_merge',
+        'allowMergeCommits' => 'allow_merge_commits',
+        'allowRebase' => 'allow_rebase',
+        'allowRebaseExplicit' => 'allow_rebase_explicit',
+        'allowSquashMerge' => 'allow_squash_merge',
         'archived' => 'archived',
-        'avatar_url' => 'avatar_url',
-        'clone_url' => 'clone_url',
-        'created_at' => 'created_at',
-        'default_branch' => 'default_branch',
-        'default_merge_style' => 'default_merge_style',
+        'avatarUrl' => 'avatar_url',
+        'cloneUrl' => 'clone_url',
+        'createdAt' => 'created_at',
+        'defaultBranch' => 'default_branch',
+        'defaultMergeStyle' => 'default_merge_style',
         'description' => 'description',
         'empty' => 'empty',
-        'external_tracker' => 'external_tracker',
-        'external_wiki' => 'external_wiki',
+        'externalTracker' => 'external_tracker',
+        'externalWiki' => 'external_wiki',
         'fork' => 'fork',
-        'forks_count' => 'forks_count',
-        'full_name' => 'full_name',
-        'has_issues' => 'has_issues',
-        'has_projects' => 'has_projects',
-        'has_pull_requests' => 'has_pull_requests',
-        'has_wiki' => 'has_wiki',
-        'html_url' => 'html_url',
+        'forksCount' => 'forks_count',
+        'fullName' => 'full_name',
+        'hasIssues' => 'has_issues',
+        'hasProjects' => 'has_projects',
+        'hasPullRequests' => 'has_pull_requests',
+        'hasWiki' => 'has_wiki',
+        'htmlUrl' => 'html_url',
         'id' => 'id',
-        'ignore_whitespace_conflicts' => 'ignore_whitespace_conflicts',
+        'ignoreWhitespaceConflicts' => 'ignore_whitespace_conflicts',
         'internal' => 'internal',
-        'internal_tracker' => 'internal_tracker',
+        'internalTracker' => 'internal_tracker',
         'language' => 'language',
-        'languages_url' => 'languages_url',
+        'languagesUrl' => 'languages_url',
         'mirror' => 'mirror',
-        'mirror_interval' => 'mirror_interval',
-        'mirror_updated' => 'mirror_updated',
+        'mirrorInterval' => 'mirror_interval',
+        'mirrorUpdated' => 'mirror_updated',
         'name' => 'name',
-        'open_issues_count' => 'open_issues_count',
-        'open_pr_counter' => 'open_pr_counter',
-        'original_url' => 'original_url',
+        'openIssuesCount' => 'open_issues_count',
+        'openPrCounter' => 'open_pr_counter',
+        'originalUrl' => 'original_url',
         'owner' => 'owner',
         'parent' => 'parent',
         'permissions' => 'permissions',
         'private' => 'private',
-        'release_counter' => 'release_counter',
-        'repo_transfer' => 'repo_transfer',
+        'releaseCounter' => 'release_counter',
+        'repoTransfer' => 'repo_transfer',
         'size' => 'size',
-        'ssh_url' => 'ssh_url',
-        'stars_count' => 'stars_count',
+        'sshUrl' => 'ssh_url',
+        'starsCount' => 'stars_count',
         'template' => 'template',
-        'updated_at' => 'updated_at',
-        'watchers_count' => 'watchers_count',
+        'updatedAt' => 'updated_at',
+        'watchersCount' => 'watchers_count',
         'website' => 'website'
     ];
 
@@ -251,53 +251,53 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'allow_merge_commits' => 'setAllowMergeCommits',
-        'allow_rebase' => 'setAllowRebase',
-        'allow_rebase_explicit' => 'setAllowRebaseExplicit',
-        'allow_squash_merge' => 'setAllowSquashMerge',
+        'allowMergeCommits' => 'setAllowMergeCommits',
+        'allowRebase' => 'setAllowRebase',
+        'allowRebaseExplicit' => 'setAllowRebaseExplicit',
+        'allowSquashMerge' => 'setAllowSquashMerge',
         'archived' => 'setArchived',
-        'avatar_url' => 'setAvatarUrl',
-        'clone_url' => 'setCloneUrl',
-        'created_at' => 'setCreatedAt',
-        'default_branch' => 'setDefaultBranch',
-        'default_merge_style' => 'setDefaultMergeStyle',
+        'avatarUrl' => 'setAvatarUrl',
+        'cloneUrl' => 'setCloneUrl',
+        'createdAt' => 'setCreatedAt',
+        'defaultBranch' => 'setDefaultBranch',
+        'defaultMergeStyle' => 'setDefaultMergeStyle',
         'description' => 'setDescription',
         'empty' => 'setEmpty',
-        'external_tracker' => 'setExternalTracker',
-        'external_wiki' => 'setExternalWiki',
+        'externalTracker' => 'setExternalTracker',
+        'externalWiki' => 'setExternalWiki',
         'fork' => 'setFork',
-        'forks_count' => 'setForksCount',
-        'full_name' => 'setFullName',
-        'has_issues' => 'setHasIssues',
-        'has_projects' => 'setHasProjects',
-        'has_pull_requests' => 'setHasPullRequests',
-        'has_wiki' => 'setHasWiki',
-        'html_url' => 'setHtmlUrl',
+        'forksCount' => 'setForksCount',
+        'fullName' => 'setFullName',
+        'hasIssues' => 'setHasIssues',
+        'hasProjects' => 'setHasProjects',
+        'hasPullRequests' => 'setHasPullRequests',
+        'hasWiki' => 'setHasWiki',
+        'htmlUrl' => 'setHtmlUrl',
         'id' => 'setId',
-        'ignore_whitespace_conflicts' => 'setIgnoreWhitespaceConflicts',
+        'ignoreWhitespaceConflicts' => 'setIgnoreWhitespaceConflicts',
         'internal' => 'setInternal',
-        'internal_tracker' => 'setInternalTracker',
+        'internalTracker' => 'setInternalTracker',
         'language' => 'setLanguage',
-        'languages_url' => 'setLanguagesUrl',
+        'languagesUrl' => 'setLanguagesUrl',
         'mirror' => 'setMirror',
-        'mirror_interval' => 'setMirrorInterval',
-        'mirror_updated' => 'setMirrorUpdated',
+        'mirrorInterval' => 'setMirrorInterval',
+        'mirrorUpdated' => 'setMirrorUpdated',
         'name' => 'setName',
-        'open_issues_count' => 'setOpenIssuesCount',
-        'open_pr_counter' => 'setOpenPrCounter',
-        'original_url' => 'setOriginalUrl',
+        'openIssuesCount' => 'setOpenIssuesCount',
+        'openPrCounter' => 'setOpenPrCounter',
+        'originalUrl' => 'setOriginalUrl',
         'owner' => 'setOwner',
         'parent' => 'setParent',
         'permissions' => 'setPermissions',
         'private' => 'setPrivate',
-        'release_counter' => 'setReleaseCounter',
-        'repo_transfer' => 'setRepoTransfer',
+        'releaseCounter' => 'setReleaseCounter',
+        'repoTransfer' => 'setRepoTransfer',
         'size' => 'setSize',
-        'ssh_url' => 'setSshUrl',
-        'stars_count' => 'setStarsCount',
+        'sshUrl' => 'setSshUrl',
+        'starsCount' => 'setStarsCount',
         'template' => 'setTemplate',
-        'updated_at' => 'setUpdatedAt',
-        'watchers_count' => 'setWatchersCount',
+        'updatedAt' => 'setUpdatedAt',
+        'watchersCount' => 'setWatchersCount',
         'website' => 'setWebsite'
     ];
 
@@ -307,53 +307,53 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'allow_merge_commits' => 'getAllowMergeCommits',
-        'allow_rebase' => 'getAllowRebase',
-        'allow_rebase_explicit' => 'getAllowRebaseExplicit',
-        'allow_squash_merge' => 'getAllowSquashMerge',
+        'allowMergeCommits' => 'getAllowMergeCommits',
+        'allowRebase' => 'getAllowRebase',
+        'allowRebaseExplicit' => 'getAllowRebaseExplicit',
+        'allowSquashMerge' => 'getAllowSquashMerge',
         'archived' => 'getArchived',
-        'avatar_url' => 'getAvatarUrl',
-        'clone_url' => 'getCloneUrl',
-        'created_at' => 'getCreatedAt',
-        'default_branch' => 'getDefaultBranch',
-        'default_merge_style' => 'getDefaultMergeStyle',
+        'avatarUrl' => 'getAvatarUrl',
+        'cloneUrl' => 'getCloneUrl',
+        'createdAt' => 'getCreatedAt',
+        'defaultBranch' => 'getDefaultBranch',
+        'defaultMergeStyle' => 'getDefaultMergeStyle',
         'description' => 'getDescription',
         'empty' => 'getEmpty',
-        'external_tracker' => 'getExternalTracker',
-        'external_wiki' => 'getExternalWiki',
+        'externalTracker' => 'getExternalTracker',
+        'externalWiki' => 'getExternalWiki',
         'fork' => 'getFork',
-        'forks_count' => 'getForksCount',
-        'full_name' => 'getFullName',
-        'has_issues' => 'getHasIssues',
-        'has_projects' => 'getHasProjects',
-        'has_pull_requests' => 'getHasPullRequests',
-        'has_wiki' => 'getHasWiki',
-        'html_url' => 'getHtmlUrl',
+        'forksCount' => 'getForksCount',
+        'fullName' => 'getFullName',
+        'hasIssues' => 'getHasIssues',
+        'hasProjects' => 'getHasProjects',
+        'hasPullRequests' => 'getHasPullRequests',
+        'hasWiki' => 'getHasWiki',
+        'htmlUrl' => 'getHtmlUrl',
         'id' => 'getId',
-        'ignore_whitespace_conflicts' => 'getIgnoreWhitespaceConflicts',
+        'ignoreWhitespaceConflicts' => 'getIgnoreWhitespaceConflicts',
         'internal' => 'getInternal',
-        'internal_tracker' => 'getInternalTracker',
+        'internalTracker' => 'getInternalTracker',
         'language' => 'getLanguage',
-        'languages_url' => 'getLanguagesUrl',
+        'languagesUrl' => 'getLanguagesUrl',
         'mirror' => 'getMirror',
-        'mirror_interval' => 'getMirrorInterval',
-        'mirror_updated' => 'getMirrorUpdated',
+        'mirrorInterval' => 'getMirrorInterval',
+        'mirrorUpdated' => 'getMirrorUpdated',
         'name' => 'getName',
-        'open_issues_count' => 'getOpenIssuesCount',
-        'open_pr_counter' => 'getOpenPrCounter',
-        'original_url' => 'getOriginalUrl',
+        'openIssuesCount' => 'getOpenIssuesCount',
+        'openPrCounter' => 'getOpenPrCounter',
+        'originalUrl' => 'getOriginalUrl',
         'owner' => 'getOwner',
         'parent' => 'getParent',
         'permissions' => 'getPermissions',
         'private' => 'getPrivate',
-        'release_counter' => 'getReleaseCounter',
-        'repo_transfer' => 'getRepoTransfer',
+        'releaseCounter' => 'getReleaseCounter',
+        'repoTransfer' => 'getRepoTransfer',
         'size' => 'getSize',
-        'ssh_url' => 'getSshUrl',
-        'stars_count' => 'getStarsCount',
+        'sshUrl' => 'getSshUrl',
+        'starsCount' => 'getStarsCount',
         'template' => 'getTemplate',
-        'updated_at' => 'getUpdatedAt',
-        'watchers_count' => 'getWatchersCount',
+        'updatedAt' => 'getUpdatedAt',
+        'watchersCount' => 'getWatchersCount',
         'website' => 'getWebsite'
     ];
 
@@ -414,53 +414,53 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['allow_merge_commits'] = $data['allow_merge_commits'] ?? null;
-        $this->container['allow_rebase'] = $data['allow_rebase'] ?? null;
-        $this->container['allow_rebase_explicit'] = $data['allow_rebase_explicit'] ?? null;
-        $this->container['allow_squash_merge'] = $data['allow_squash_merge'] ?? null;
+        $this->container['allowMergeCommits'] = $data['allowMergeCommits'] ?? null;
+        $this->container['allowRebase'] = $data['allowRebase'] ?? null;
+        $this->container['allowRebaseExplicit'] = $data['allowRebaseExplicit'] ?? null;
+        $this->container['allowSquashMerge'] = $data['allowSquashMerge'] ?? null;
         $this->container['archived'] = $data['archived'] ?? null;
-        $this->container['avatar_url'] = $data['avatar_url'] ?? null;
-        $this->container['clone_url'] = $data['clone_url'] ?? null;
-        $this->container['created_at'] = $data['created_at'] ?? null;
-        $this->container['default_branch'] = $data['default_branch'] ?? null;
-        $this->container['default_merge_style'] = $data['default_merge_style'] ?? null;
+        $this->container['avatarUrl'] = $data['avatarUrl'] ?? null;
+        $this->container['cloneUrl'] = $data['cloneUrl'] ?? null;
+        $this->container['createdAt'] = $data['createdAt'] ?? null;
+        $this->container['defaultBranch'] = $data['defaultBranch'] ?? null;
+        $this->container['defaultMergeStyle'] = $data['defaultMergeStyle'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
         $this->container['empty'] = $data['empty'] ?? null;
-        $this->container['external_tracker'] = $data['external_tracker'] ?? null;
-        $this->container['external_wiki'] = $data['external_wiki'] ?? null;
+        $this->container['externalTracker'] = $data['externalTracker'] ?? null;
+        $this->container['externalWiki'] = $data['externalWiki'] ?? null;
         $this->container['fork'] = $data['fork'] ?? null;
-        $this->container['forks_count'] = $data['forks_count'] ?? null;
-        $this->container['full_name'] = $data['full_name'] ?? null;
-        $this->container['has_issues'] = $data['has_issues'] ?? null;
-        $this->container['has_projects'] = $data['has_projects'] ?? null;
-        $this->container['has_pull_requests'] = $data['has_pull_requests'] ?? null;
-        $this->container['has_wiki'] = $data['has_wiki'] ?? null;
-        $this->container['html_url'] = $data['html_url'] ?? null;
+        $this->container['forksCount'] = $data['forksCount'] ?? null;
+        $this->container['fullName'] = $data['fullName'] ?? null;
+        $this->container['hasIssues'] = $data['hasIssues'] ?? null;
+        $this->container['hasProjects'] = $data['hasProjects'] ?? null;
+        $this->container['hasPullRequests'] = $data['hasPullRequests'] ?? null;
+        $this->container['hasWiki'] = $data['hasWiki'] ?? null;
+        $this->container['htmlUrl'] = $data['htmlUrl'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['ignore_whitespace_conflicts'] = $data['ignore_whitespace_conflicts'] ?? null;
+        $this->container['ignoreWhitespaceConflicts'] = $data['ignoreWhitespaceConflicts'] ?? null;
         $this->container['internal'] = $data['internal'] ?? null;
-        $this->container['internal_tracker'] = $data['internal_tracker'] ?? null;
+        $this->container['internalTracker'] = $data['internalTracker'] ?? null;
         $this->container['language'] = $data['language'] ?? null;
-        $this->container['languages_url'] = $data['languages_url'] ?? null;
+        $this->container['languagesUrl'] = $data['languagesUrl'] ?? null;
         $this->container['mirror'] = $data['mirror'] ?? null;
-        $this->container['mirror_interval'] = $data['mirror_interval'] ?? null;
-        $this->container['mirror_updated'] = $data['mirror_updated'] ?? null;
+        $this->container['mirrorInterval'] = $data['mirrorInterval'] ?? null;
+        $this->container['mirrorUpdated'] = $data['mirrorUpdated'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
-        $this->container['open_issues_count'] = $data['open_issues_count'] ?? null;
-        $this->container['open_pr_counter'] = $data['open_pr_counter'] ?? null;
-        $this->container['original_url'] = $data['original_url'] ?? null;
+        $this->container['openIssuesCount'] = $data['openIssuesCount'] ?? null;
+        $this->container['openPrCounter'] = $data['openPrCounter'] ?? null;
+        $this->container['originalUrl'] = $data['originalUrl'] ?? null;
         $this->container['owner'] = $data['owner'] ?? null;
         $this->container['parent'] = $data['parent'] ?? null;
         $this->container['permissions'] = $data['permissions'] ?? null;
         $this->container['private'] = $data['private'] ?? null;
-        $this->container['release_counter'] = $data['release_counter'] ?? null;
-        $this->container['repo_transfer'] = $data['repo_transfer'] ?? null;
+        $this->container['releaseCounter'] = $data['releaseCounter'] ?? null;
+        $this->container['repoTransfer'] = $data['repoTransfer'] ?? null;
         $this->container['size'] = $data['size'] ?? null;
-        $this->container['ssh_url'] = $data['ssh_url'] ?? null;
-        $this->container['stars_count'] = $data['stars_count'] ?? null;
+        $this->container['sshUrl'] = $data['sshUrl'] ?? null;
+        $this->container['starsCount'] = $data['starsCount'] ?? null;
         $this->container['template'] = $data['template'] ?? null;
-        $this->container['updated_at'] = $data['updated_at'] ?? null;
-        $this->container['watchers_count'] = $data['watchers_count'] ?? null;
+        $this->container['updatedAt'] = $data['updatedAt'] ?? null;
+        $this->container['watchersCount'] = $data['watchersCount'] ?? null;
         $this->container['website'] = $data['website'] ?? null;
     }
 
@@ -489,97 +489,97 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets allow_merge_commits
+     * Gets allowMergeCommits
      *
      * @return bool|null
      */
     public function getAllowMergeCommits()
     {
-        return $this->container['allow_merge_commits'];
+        return $this->container['allowMergeCommits'];
     }
 
     /**
-     * Sets allow_merge_commits
+     * Sets allowMergeCommits
      *
-     * @param bool|null $allow_merge_commits allow_merge_commits
+     * @param bool|null $allowMergeCommits allowMergeCommits
      *
      * @return self
      */
-    public function setAllowMergeCommits($allow_merge_commits)
+    public function setAllowMergeCommits($allowMergeCommits)
     {
-        $this->container['allow_merge_commits'] = $allow_merge_commits;
+        $this->container['allowMergeCommits'] = $allowMergeCommits;
 
         return $this;
     }
 
     /**
-     * Gets allow_rebase
+     * Gets allowRebase
      *
      * @return bool|null
      */
     public function getAllowRebase()
     {
-        return $this->container['allow_rebase'];
+        return $this->container['allowRebase'];
     }
 
     /**
-     * Sets allow_rebase
+     * Sets allowRebase
      *
-     * @param bool|null $allow_rebase allow_rebase
+     * @param bool|null $allowRebase allowRebase
      *
      * @return self
      */
-    public function setAllowRebase($allow_rebase)
+    public function setAllowRebase($allowRebase)
     {
-        $this->container['allow_rebase'] = $allow_rebase;
+        $this->container['allowRebase'] = $allowRebase;
 
         return $this;
     }
 
     /**
-     * Gets allow_rebase_explicit
+     * Gets allowRebaseExplicit
      *
      * @return bool|null
      */
     public function getAllowRebaseExplicit()
     {
-        return $this->container['allow_rebase_explicit'];
+        return $this->container['allowRebaseExplicit'];
     }
 
     /**
-     * Sets allow_rebase_explicit
+     * Sets allowRebaseExplicit
      *
-     * @param bool|null $allow_rebase_explicit allow_rebase_explicit
+     * @param bool|null $allowRebaseExplicit allowRebaseExplicit
      *
      * @return self
      */
-    public function setAllowRebaseExplicit($allow_rebase_explicit)
+    public function setAllowRebaseExplicit($allowRebaseExplicit)
     {
-        $this->container['allow_rebase_explicit'] = $allow_rebase_explicit;
+        $this->container['allowRebaseExplicit'] = $allowRebaseExplicit;
 
         return $this;
     }
 
     /**
-     * Gets allow_squash_merge
+     * Gets allowSquashMerge
      *
      * @return bool|null
      */
     public function getAllowSquashMerge()
     {
-        return $this->container['allow_squash_merge'];
+        return $this->container['allowSquashMerge'];
     }
 
     /**
-     * Sets allow_squash_merge
+     * Sets allowSquashMerge
      *
-     * @param bool|null $allow_squash_merge allow_squash_merge
+     * @param bool|null $allowSquashMerge allowSquashMerge
      *
      * @return self
      */
-    public function setAllowSquashMerge($allow_squash_merge)
+    public function setAllowSquashMerge($allowSquashMerge)
     {
-        $this->container['allow_squash_merge'] = $allow_squash_merge;
+        $this->container['allowSquashMerge'] = $allowSquashMerge;
 
         return $this;
     }
@@ -609,121 +609,121 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets avatar_url
+     * Gets avatarUrl
      *
      * @return string|null
      */
     public function getAvatarUrl()
     {
-        return $this->container['avatar_url'];
+        return $this->container['avatarUrl'];
     }
 
     /**
-     * Sets avatar_url
+     * Sets avatarUrl
      *
-     * @param string|null $avatar_url avatar_url
+     * @param string|null $avatarUrl avatarUrl
      *
      * @return self
      */
-    public function setAvatarUrl($avatar_url)
+    public function setAvatarUrl($avatarUrl)
     {
-        $this->container['avatar_url'] = $avatar_url;
+        $this->container['avatarUrl'] = $avatarUrl;
 
         return $this;
     }
 
     /**
-     * Gets clone_url
+     * Gets cloneUrl
      *
      * @return string|null
      */
     public function getCloneUrl()
     {
-        return $this->container['clone_url'];
+        return $this->container['cloneUrl'];
     }
 
     /**
-     * Sets clone_url
+     * Sets cloneUrl
      *
-     * @param string|null $clone_url clone_url
+     * @param string|null $cloneUrl cloneUrl
      *
      * @return self
      */
-    public function setCloneUrl($clone_url)
+    public function setCloneUrl($cloneUrl)
     {
-        $this->container['clone_url'] = $clone_url;
+        $this->container['cloneUrl'] = $cloneUrl;
 
         return $this;
     }
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime|null
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $createdAt createdAt
      *
      * @return self
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }
 
     /**
-     * Gets default_branch
+     * Gets defaultBranch
      *
      * @return string|null
      */
     public function getDefaultBranch()
     {
-        return $this->container['default_branch'];
+        return $this->container['defaultBranch'];
     }
 
     /**
-     * Sets default_branch
+     * Sets defaultBranch
      *
-     * @param string|null $default_branch default_branch
+     * @param string|null $defaultBranch defaultBranch
      *
      * @return self
      */
-    public function setDefaultBranch($default_branch)
+    public function setDefaultBranch($defaultBranch)
     {
-        $this->container['default_branch'] = $default_branch;
+        $this->container['defaultBranch'] = $defaultBranch;
 
         return $this;
     }
 
     /**
-     * Gets default_merge_style
+     * Gets defaultMergeStyle
      *
      * @return string|null
      */
     public function getDefaultMergeStyle()
     {
-        return $this->container['default_merge_style'];
+        return $this->container['defaultMergeStyle'];
     }
 
     /**
-     * Sets default_merge_style
+     * Sets defaultMergeStyle
      *
-     * @param string|null $default_merge_style default_merge_style
+     * @param string|null $defaultMergeStyle defaultMergeStyle
      *
      * @return self
      */
-    public function setDefaultMergeStyle($default_merge_style)
+    public function setDefaultMergeStyle($defaultMergeStyle)
     {
-        $this->container['default_merge_style'] = $default_merge_style;
+        $this->container['defaultMergeStyle'] = $defaultMergeStyle;
 
         return $this;
     }
@@ -777,49 +777,49 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets external_tracker
+     * Gets externalTracker
      *
      * @return \Efsa\Client\Gitea\Model\ExternalTracker|null
      */
     public function getExternalTracker()
     {
-        return $this->container['external_tracker'];
+        return $this->container['externalTracker'];
     }
 
     /**
-     * Sets external_tracker
+     * Sets externalTracker
      *
-     * @param \Efsa\Client\Gitea\Model\ExternalTracker|null $external_tracker external_tracker
+     * @param \Efsa\Client\Gitea\Model\ExternalTracker|null $externalTracker externalTracker
      *
      * @return self
      */
-    public function setExternalTracker($external_tracker)
+    public function setExternalTracker($externalTracker)
     {
-        $this->container['external_tracker'] = $external_tracker;
+        $this->container['externalTracker'] = $externalTracker;
 
         return $this;
     }
 
     /**
-     * Gets external_wiki
+     * Gets externalWiki
      *
      * @return \Efsa\Client\Gitea\Model\ExternalWiki|null
      */
     public function getExternalWiki()
     {
-        return $this->container['external_wiki'];
+        return $this->container['externalWiki'];
     }
 
     /**
-     * Sets external_wiki
+     * Sets externalWiki
      *
-     * @param \Efsa\Client\Gitea\Model\ExternalWiki|null $external_wiki external_wiki
+     * @param \Efsa\Client\Gitea\Model\ExternalWiki|null $externalWiki externalWiki
      *
      * @return self
      */
-    public function setExternalWiki($external_wiki)
+    public function setExternalWiki($externalWiki)
     {
-        $this->container['external_wiki'] = $external_wiki;
+        $this->container['externalWiki'] = $externalWiki;
 
         return $this;
     }
@@ -849,169 +849,169 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets forks_count
+     * Gets forksCount
      *
      * @return int|null
      */
     public function getForksCount()
     {
-        return $this->container['forks_count'];
+        return $this->container['forksCount'];
     }
 
     /**
-     * Sets forks_count
+     * Sets forksCount
      *
-     * @param int|null $forks_count forks_count
+     * @param int|null $forksCount forksCount
      *
      * @return self
      */
-    public function setForksCount($forks_count)
+    public function setForksCount($forksCount)
     {
-        $this->container['forks_count'] = $forks_count;
+        $this->container['forksCount'] = $forksCount;
 
         return $this;
     }
 
     /**
-     * Gets full_name
+     * Gets fullName
      *
      * @return string|null
      */
     public function getFullName()
     {
-        return $this->container['full_name'];
+        return $this->container['fullName'];
     }
 
     /**
-     * Sets full_name
+     * Sets fullName
      *
-     * @param string|null $full_name full_name
+     * @param string|null $fullName fullName
      *
      * @return self
      */
-    public function setFullName($full_name)
+    public function setFullName($fullName)
     {
-        $this->container['full_name'] = $full_name;
+        $this->container['fullName'] = $fullName;
 
         return $this;
     }
 
     /**
-     * Gets has_issues
+     * Gets hasIssues
      *
      * @return bool|null
      */
     public function getHasIssues()
     {
-        return $this->container['has_issues'];
+        return $this->container['hasIssues'];
     }
 
     /**
-     * Sets has_issues
+     * Sets hasIssues
      *
-     * @param bool|null $has_issues has_issues
+     * @param bool|null $hasIssues hasIssues
      *
      * @return self
      */
-    public function setHasIssues($has_issues)
+    public function setHasIssues($hasIssues)
     {
-        $this->container['has_issues'] = $has_issues;
+        $this->container['hasIssues'] = $hasIssues;
 
         return $this;
     }
 
     /**
-     * Gets has_projects
+     * Gets hasProjects
      *
      * @return bool|null
      */
     public function getHasProjects()
     {
-        return $this->container['has_projects'];
+        return $this->container['hasProjects'];
     }
 
     /**
-     * Sets has_projects
+     * Sets hasProjects
      *
-     * @param bool|null $has_projects has_projects
+     * @param bool|null $hasProjects hasProjects
      *
      * @return self
      */
-    public function setHasProjects($has_projects)
+    public function setHasProjects($hasProjects)
     {
-        $this->container['has_projects'] = $has_projects;
+        $this->container['hasProjects'] = $hasProjects;
 
         return $this;
     }
 
     /**
-     * Gets has_pull_requests
+     * Gets hasPullRequests
      *
      * @return bool|null
      */
     public function getHasPullRequests()
     {
-        return $this->container['has_pull_requests'];
+        return $this->container['hasPullRequests'];
     }
 
     /**
-     * Sets has_pull_requests
+     * Sets hasPullRequests
      *
-     * @param bool|null $has_pull_requests has_pull_requests
+     * @param bool|null $hasPullRequests hasPullRequests
      *
      * @return self
      */
-    public function setHasPullRequests($has_pull_requests)
+    public function setHasPullRequests($hasPullRequests)
     {
-        $this->container['has_pull_requests'] = $has_pull_requests;
+        $this->container['hasPullRequests'] = $hasPullRequests;
 
         return $this;
     }
 
     /**
-     * Gets has_wiki
+     * Gets hasWiki
      *
      * @return bool|null
      */
     public function getHasWiki()
     {
-        return $this->container['has_wiki'];
+        return $this->container['hasWiki'];
     }
 
     /**
-     * Sets has_wiki
+     * Sets hasWiki
      *
-     * @param bool|null $has_wiki has_wiki
+     * @param bool|null $hasWiki hasWiki
      *
      * @return self
      */
-    public function setHasWiki($has_wiki)
+    public function setHasWiki($hasWiki)
     {
-        $this->container['has_wiki'] = $has_wiki;
+        $this->container['hasWiki'] = $hasWiki;
 
         return $this;
     }
 
     /**
-     * Gets html_url
+     * Gets htmlUrl
      *
      * @return string|null
      */
     public function getHtmlUrl()
     {
-        return $this->container['html_url'];
+        return $this->container['htmlUrl'];
     }
 
     /**
-     * Sets html_url
+     * Sets htmlUrl
      *
-     * @param string|null $html_url html_url
+     * @param string|null $htmlUrl htmlUrl
      *
      * @return self
      */
-    public function setHtmlUrl($html_url)
+    public function setHtmlUrl($htmlUrl)
     {
-        $this->container['html_url'] = $html_url;
+        $this->container['htmlUrl'] = $htmlUrl;
 
         return $this;
     }
@@ -1041,25 +1041,25 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets ignore_whitespace_conflicts
+     * Gets ignoreWhitespaceConflicts
      *
      * @return bool|null
      */
     public function getIgnoreWhitespaceConflicts()
     {
-        return $this->container['ignore_whitespace_conflicts'];
+        return $this->container['ignoreWhitespaceConflicts'];
     }
 
     /**
-     * Sets ignore_whitespace_conflicts
+     * Sets ignoreWhitespaceConflicts
      *
-     * @param bool|null $ignore_whitespace_conflicts ignore_whitespace_conflicts
+     * @param bool|null $ignoreWhitespaceConflicts ignoreWhitespaceConflicts
      *
      * @return self
      */
-    public function setIgnoreWhitespaceConflicts($ignore_whitespace_conflicts)
+    public function setIgnoreWhitespaceConflicts($ignoreWhitespaceConflicts)
     {
-        $this->container['ignore_whitespace_conflicts'] = $ignore_whitespace_conflicts;
+        $this->container['ignoreWhitespaceConflicts'] = $ignoreWhitespaceConflicts;
 
         return $this;
     }
@@ -1089,25 +1089,25 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets internal_tracker
+     * Gets internalTracker
      *
      * @return \Efsa\Client\Gitea\Model\InternalTracker|null
      */
     public function getInternalTracker()
     {
-        return $this->container['internal_tracker'];
+        return $this->container['internalTracker'];
     }
 
     /**
-     * Sets internal_tracker
+     * Sets internalTracker
      *
-     * @param \Efsa\Client\Gitea\Model\InternalTracker|null $internal_tracker internal_tracker
+     * @param \Efsa\Client\Gitea\Model\InternalTracker|null $internalTracker internalTracker
      *
      * @return self
      */
-    public function setInternalTracker($internal_tracker)
+    public function setInternalTracker($internalTracker)
     {
-        $this->container['internal_tracker'] = $internal_tracker;
+        $this->container['internalTracker'] = $internalTracker;
 
         return $this;
     }
@@ -1137,25 +1137,25 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets languages_url
+     * Gets languagesUrl
      *
      * @return string|null
      */
     public function getLanguagesUrl()
     {
-        return $this->container['languages_url'];
+        return $this->container['languagesUrl'];
     }
 
     /**
-     * Sets languages_url
+     * Sets languagesUrl
      *
-     * @param string|null $languages_url languages_url
+     * @param string|null $languagesUrl languagesUrl
      *
      * @return self
      */
-    public function setLanguagesUrl($languages_url)
+    public function setLanguagesUrl($languagesUrl)
     {
-        $this->container['languages_url'] = $languages_url;
+        $this->container['languagesUrl'] = $languagesUrl;
 
         return $this;
     }
@@ -1185,49 +1185,49 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets mirror_interval
+     * Gets mirrorInterval
      *
      * @return string|null
      */
     public function getMirrorInterval()
     {
-        return $this->container['mirror_interval'];
+        return $this->container['mirrorInterval'];
     }
 
     /**
-     * Sets mirror_interval
+     * Sets mirrorInterval
      *
-     * @param string|null $mirror_interval mirror_interval
+     * @param string|null $mirrorInterval mirrorInterval
      *
      * @return self
      */
-    public function setMirrorInterval($mirror_interval)
+    public function setMirrorInterval($mirrorInterval)
     {
-        $this->container['mirror_interval'] = $mirror_interval;
+        $this->container['mirrorInterval'] = $mirrorInterval;
 
         return $this;
     }
 
     /**
-     * Gets mirror_updated
+     * Gets mirrorUpdated
      *
      * @return \DateTime|null
      */
     public function getMirrorUpdated()
     {
-        return $this->container['mirror_updated'];
+        return $this->container['mirrorUpdated'];
     }
 
     /**
-     * Sets mirror_updated
+     * Sets mirrorUpdated
      *
-     * @param \DateTime|null $mirror_updated mirror_updated
+     * @param \DateTime|null $mirrorUpdated mirrorUpdated
      *
      * @return self
      */
-    public function setMirrorUpdated($mirror_updated)
+    public function setMirrorUpdated($mirrorUpdated)
     {
-        $this->container['mirror_updated'] = $mirror_updated;
+        $this->container['mirrorUpdated'] = $mirrorUpdated;
 
         return $this;
     }
@@ -1257,73 +1257,73 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets open_issues_count
+     * Gets openIssuesCount
      *
      * @return int|null
      */
     public function getOpenIssuesCount()
     {
-        return $this->container['open_issues_count'];
+        return $this->container['openIssuesCount'];
     }
 
     /**
-     * Sets open_issues_count
+     * Sets openIssuesCount
      *
-     * @param int|null $open_issues_count open_issues_count
+     * @param int|null $openIssuesCount openIssuesCount
      *
      * @return self
      */
-    public function setOpenIssuesCount($open_issues_count)
+    public function setOpenIssuesCount($openIssuesCount)
     {
-        $this->container['open_issues_count'] = $open_issues_count;
+        $this->container['openIssuesCount'] = $openIssuesCount;
 
         return $this;
     }
 
     /**
-     * Gets open_pr_counter
+     * Gets openPrCounter
      *
      * @return int|null
      */
     public function getOpenPrCounter()
     {
-        return $this->container['open_pr_counter'];
+        return $this->container['openPrCounter'];
     }
 
     /**
-     * Sets open_pr_counter
+     * Sets openPrCounter
      *
-     * @param int|null $open_pr_counter open_pr_counter
+     * @param int|null $openPrCounter openPrCounter
      *
      * @return self
      */
-    public function setOpenPrCounter($open_pr_counter)
+    public function setOpenPrCounter($openPrCounter)
     {
-        $this->container['open_pr_counter'] = $open_pr_counter;
+        $this->container['openPrCounter'] = $openPrCounter;
 
         return $this;
     }
 
     /**
-     * Gets original_url
+     * Gets originalUrl
      *
      * @return string|null
      */
     public function getOriginalUrl()
     {
-        return $this->container['original_url'];
+        return $this->container['originalUrl'];
     }
 
     /**
-     * Sets original_url
+     * Sets originalUrl
      *
-     * @param string|null $original_url original_url
+     * @param string|null $originalUrl originalUrl
      *
      * @return self
      */
-    public function setOriginalUrl($original_url)
+    public function setOriginalUrl($originalUrl)
     {
-        $this->container['original_url'] = $original_url;
+        $this->container['originalUrl'] = $originalUrl;
 
         return $this;
     }
@@ -1425,49 +1425,49 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets release_counter
+     * Gets releaseCounter
      *
      * @return int|null
      */
     public function getReleaseCounter()
     {
-        return $this->container['release_counter'];
+        return $this->container['releaseCounter'];
     }
 
     /**
-     * Sets release_counter
+     * Sets releaseCounter
      *
-     * @param int|null $release_counter release_counter
+     * @param int|null $releaseCounter releaseCounter
      *
      * @return self
      */
-    public function setReleaseCounter($release_counter)
+    public function setReleaseCounter($releaseCounter)
     {
-        $this->container['release_counter'] = $release_counter;
+        $this->container['releaseCounter'] = $releaseCounter;
 
         return $this;
     }
 
     /**
-     * Gets repo_transfer
+     * Gets repoTransfer
      *
      * @return \Efsa\Client\Gitea\Model\RepoTransfer|null
      */
     public function getRepoTransfer()
     {
-        return $this->container['repo_transfer'];
+        return $this->container['repoTransfer'];
     }
 
     /**
-     * Sets repo_transfer
+     * Sets repoTransfer
      *
-     * @param \Efsa\Client\Gitea\Model\RepoTransfer|null $repo_transfer repo_transfer
+     * @param \Efsa\Client\Gitea\Model\RepoTransfer|null $repoTransfer repoTransfer
      *
      * @return self
      */
-    public function setRepoTransfer($repo_transfer)
+    public function setRepoTransfer($repoTransfer)
     {
-        $this->container['repo_transfer'] = $repo_transfer;
+        $this->container['repoTransfer'] = $repoTransfer;
 
         return $this;
     }
@@ -1497,49 +1497,49 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets ssh_url
+     * Gets sshUrl
      *
      * @return string|null
      */
     public function getSshUrl()
     {
-        return $this->container['ssh_url'];
+        return $this->container['sshUrl'];
     }
 
     /**
-     * Sets ssh_url
+     * Sets sshUrl
      *
-     * @param string|null $ssh_url ssh_url
+     * @param string|null $sshUrl sshUrl
      *
      * @return self
      */
-    public function setSshUrl($ssh_url)
+    public function setSshUrl($sshUrl)
     {
-        $this->container['ssh_url'] = $ssh_url;
+        $this->container['sshUrl'] = $sshUrl;
 
         return $this;
     }
 
     /**
-     * Gets stars_count
+     * Gets starsCount
      *
      * @return int|null
      */
     public function getStarsCount()
     {
-        return $this->container['stars_count'];
+        return $this->container['starsCount'];
     }
 
     /**
-     * Sets stars_count
+     * Sets starsCount
      *
-     * @param int|null $stars_count stars_count
+     * @param int|null $starsCount starsCount
      *
      * @return self
      */
-    public function setStarsCount($stars_count)
+    public function setStarsCount($starsCount)
     {
-        $this->container['stars_count'] = $stars_count;
+        $this->container['starsCount'] = $starsCount;
 
         return $this;
     }
@@ -1569,49 +1569,49 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets updated_at
+     * Gets updatedAt
      *
      * @return \DateTime|null
      */
     public function getUpdatedAt()
     {
-        return $this->container['updated_at'];
+        return $this->container['updatedAt'];
     }
 
     /**
-     * Sets updated_at
+     * Sets updatedAt
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updatedAt updatedAt
      *
      * @return self
      */
-    public function setUpdatedAt($updated_at)
+    public function setUpdatedAt($updatedAt)
     {
-        $this->container['updated_at'] = $updated_at;
+        $this->container['updatedAt'] = $updatedAt;
 
         return $this;
     }
 
     /**
-     * Gets watchers_count
+     * Gets watchersCount
      *
      * @return int|null
      */
     public function getWatchersCount()
     {
-        return $this->container['watchers_count'];
+        return $this->container['watchersCount'];
     }
 
     /**
-     * Sets watchers_count
+     * Sets watchersCount
      *
-     * @param int|null $watchers_count watchers_count
+     * @param int|null $watchersCount watchersCount
      *
      * @return self
      */
-    public function setWatchersCount($watchers_count)
+    public function setWatchersCount($watchersCount)
     {
-        $this->container['watchers_count'] = $watchers_count;
+        $this->container['watchersCount'] = $watchersCount;
 
         return $this;
     }

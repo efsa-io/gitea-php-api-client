@@ -61,33 +61,33 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'assignee' => '\Efsa\Client\Gitea\Model\User',
-        'assignee_team' => '\Efsa\Client\Gitea\Model\Team',
+        'assigneeTeam' => '\Efsa\Client\Gitea\Model\Team',
         'body' => 'string',
-        'created_at' => '\DateTime',
-        'dependent_issue' => '\Efsa\Client\Gitea\Model\Issue',
-        'html_url' => 'string',
+        'createdAt' => '\DateTime',
+        'dependentIssue' => '\Efsa\Client\Gitea\Model\Issue',
+        'htmlUrl' => 'string',
         'id' => 'int',
-        'issue_url' => 'string',
+        'issueUrl' => 'string',
         'label' => '\Efsa\Client\Gitea\Model\Label',
         'milestone' => '\Efsa\Client\Gitea\Model\Milestone',
-        'new_ref' => 'string',
-        'new_title' => 'string',
-        'old_milestone' => '\Efsa\Client\Gitea\Model\Milestone',
-        'old_project_id' => 'int',
-        'old_ref' => 'string',
-        'old_title' => 'string',
-        'project_id' => 'int',
-        'pull_request_url' => 'string',
-        'ref_action' => 'string',
-        'ref_comment' => '\Efsa\Client\Gitea\Model\Comment',
-        'ref_commit_sha' => 'string',
-        'ref_issue' => '\Efsa\Client\Gitea\Model\Issue',
-        'removed_assignee' => 'bool',
-        'resolve_doer' => '\Efsa\Client\Gitea\Model\User',
-        'review_id' => 'int',
-        'tracked_time' => '\Efsa\Client\Gitea\Model\TrackedTime',
+        'newRef' => 'string',
+        'newTitle' => 'string',
+        'oldMilestone' => '\Efsa\Client\Gitea\Model\Milestone',
+        'oldProjectId' => 'int',
+        'oldRef' => 'string',
+        'oldTitle' => 'string',
+        'projectId' => 'int',
+        'pullRequestUrl' => 'string',
+        'refAction' => 'string',
+        'refComment' => '\Efsa\Client\Gitea\Model\Comment',
+        'refCommitSha' => 'string',
+        'refIssue' => '\Efsa\Client\Gitea\Model\Issue',
+        'removedAssignee' => 'bool',
+        'resolveDoer' => '\Efsa\Client\Gitea\Model\User',
+        'reviewId' => 'int',
+        'trackedTime' => '\Efsa\Client\Gitea\Model\TrackedTime',
         'type' => 'string',
-        'updated_at' => '\DateTime',
+        'updatedAt' => '\DateTime',
         'user' => '\Efsa\Client\Gitea\Model\User'
     ];
 
@@ -100,33 +100,33 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'assignee' => null,
-        'assignee_team' => null,
+        'assigneeTeam' => null,
         'body' => null,
-        'created_at' => 'date-time',
-        'dependent_issue' => null,
-        'html_url' => null,
+        'createdAt' => 'date-time',
+        'dependentIssue' => null,
+        'htmlUrl' => null,
         'id' => 'int64',
-        'issue_url' => null,
+        'issueUrl' => null,
         'label' => null,
         'milestone' => null,
-        'new_ref' => null,
-        'new_title' => null,
-        'old_milestone' => null,
-        'old_project_id' => 'int64',
-        'old_ref' => null,
-        'old_title' => null,
-        'project_id' => 'int64',
-        'pull_request_url' => null,
-        'ref_action' => null,
-        'ref_comment' => null,
-        'ref_commit_sha' => null,
-        'ref_issue' => null,
-        'removed_assignee' => null,
-        'resolve_doer' => null,
-        'review_id' => 'int64',
-        'tracked_time' => null,
+        'newRef' => null,
+        'newTitle' => null,
+        'oldMilestone' => null,
+        'oldProjectId' => 'int64',
+        'oldRef' => null,
+        'oldTitle' => null,
+        'projectId' => 'int64',
+        'pullRequestUrl' => null,
+        'refAction' => null,
+        'refComment' => null,
+        'refCommitSha' => null,
+        'refIssue' => null,
+        'removedAssignee' => null,
+        'resolveDoer' => null,
+        'reviewId' => 'int64',
+        'trackedTime' => null,
         'type' => null,
-        'updated_at' => 'date-time',
+        'updatedAt' => 'date-time',
         'user' => null
     ];
 
@@ -158,33 +158,33 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'assignee' => 'assignee',
-        'assignee_team' => 'assignee_team',
+        'assigneeTeam' => 'assignee_team',
         'body' => 'body',
-        'created_at' => 'created_at',
-        'dependent_issue' => 'dependent_issue',
-        'html_url' => 'html_url',
+        'createdAt' => 'created_at',
+        'dependentIssue' => 'dependent_issue',
+        'htmlUrl' => 'html_url',
         'id' => 'id',
-        'issue_url' => 'issue_url',
+        'issueUrl' => 'issue_url',
         'label' => 'label',
         'milestone' => 'milestone',
-        'new_ref' => 'new_ref',
-        'new_title' => 'new_title',
-        'old_milestone' => 'old_milestone',
-        'old_project_id' => 'old_project_id',
-        'old_ref' => 'old_ref',
-        'old_title' => 'old_title',
-        'project_id' => 'project_id',
-        'pull_request_url' => 'pull_request_url',
-        'ref_action' => 'ref_action',
-        'ref_comment' => 'ref_comment',
-        'ref_commit_sha' => 'ref_commit_sha',
-        'ref_issue' => 'ref_issue',
-        'removed_assignee' => 'removed_assignee',
-        'resolve_doer' => 'resolve_doer',
-        'review_id' => 'review_id',
-        'tracked_time' => 'tracked_time',
+        'newRef' => 'new_ref',
+        'newTitle' => 'new_title',
+        'oldMilestone' => 'old_milestone',
+        'oldProjectId' => 'old_project_id',
+        'oldRef' => 'old_ref',
+        'oldTitle' => 'old_title',
+        'projectId' => 'project_id',
+        'pullRequestUrl' => 'pull_request_url',
+        'refAction' => 'ref_action',
+        'refComment' => 'ref_comment',
+        'refCommitSha' => 'ref_commit_sha',
+        'refIssue' => 'ref_issue',
+        'removedAssignee' => 'removed_assignee',
+        'resolveDoer' => 'resolve_doer',
+        'reviewId' => 'review_id',
+        'trackedTime' => 'tracked_time',
         'type' => 'type',
-        'updated_at' => 'updated_at',
+        'updatedAt' => 'updated_at',
         'user' => 'user'
     ];
 
@@ -195,33 +195,33 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'assignee' => 'setAssignee',
-        'assignee_team' => 'setAssigneeTeam',
+        'assigneeTeam' => 'setAssigneeTeam',
         'body' => 'setBody',
-        'created_at' => 'setCreatedAt',
-        'dependent_issue' => 'setDependentIssue',
-        'html_url' => 'setHtmlUrl',
+        'createdAt' => 'setCreatedAt',
+        'dependentIssue' => 'setDependentIssue',
+        'htmlUrl' => 'setHtmlUrl',
         'id' => 'setId',
-        'issue_url' => 'setIssueUrl',
+        'issueUrl' => 'setIssueUrl',
         'label' => 'setLabel',
         'milestone' => 'setMilestone',
-        'new_ref' => 'setNewRef',
-        'new_title' => 'setNewTitle',
-        'old_milestone' => 'setOldMilestone',
-        'old_project_id' => 'setOldProjectId',
-        'old_ref' => 'setOldRef',
-        'old_title' => 'setOldTitle',
-        'project_id' => 'setProjectId',
-        'pull_request_url' => 'setPullRequestUrl',
-        'ref_action' => 'setRefAction',
-        'ref_comment' => 'setRefComment',
-        'ref_commit_sha' => 'setRefCommitSha',
-        'ref_issue' => 'setRefIssue',
-        'removed_assignee' => 'setRemovedAssignee',
-        'resolve_doer' => 'setResolveDoer',
-        'review_id' => 'setReviewId',
-        'tracked_time' => 'setTrackedTime',
+        'newRef' => 'setNewRef',
+        'newTitle' => 'setNewTitle',
+        'oldMilestone' => 'setOldMilestone',
+        'oldProjectId' => 'setOldProjectId',
+        'oldRef' => 'setOldRef',
+        'oldTitle' => 'setOldTitle',
+        'projectId' => 'setProjectId',
+        'pullRequestUrl' => 'setPullRequestUrl',
+        'refAction' => 'setRefAction',
+        'refComment' => 'setRefComment',
+        'refCommitSha' => 'setRefCommitSha',
+        'refIssue' => 'setRefIssue',
+        'removedAssignee' => 'setRemovedAssignee',
+        'resolveDoer' => 'setResolveDoer',
+        'reviewId' => 'setReviewId',
+        'trackedTime' => 'setTrackedTime',
         'type' => 'setType',
-        'updated_at' => 'setUpdatedAt',
+        'updatedAt' => 'setUpdatedAt',
         'user' => 'setUser'
     ];
 
@@ -232,33 +232,33 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'assignee' => 'getAssignee',
-        'assignee_team' => 'getAssigneeTeam',
+        'assigneeTeam' => 'getAssigneeTeam',
         'body' => 'getBody',
-        'created_at' => 'getCreatedAt',
-        'dependent_issue' => 'getDependentIssue',
-        'html_url' => 'getHtmlUrl',
+        'createdAt' => 'getCreatedAt',
+        'dependentIssue' => 'getDependentIssue',
+        'htmlUrl' => 'getHtmlUrl',
         'id' => 'getId',
-        'issue_url' => 'getIssueUrl',
+        'issueUrl' => 'getIssueUrl',
         'label' => 'getLabel',
         'milestone' => 'getMilestone',
-        'new_ref' => 'getNewRef',
-        'new_title' => 'getNewTitle',
-        'old_milestone' => 'getOldMilestone',
-        'old_project_id' => 'getOldProjectId',
-        'old_ref' => 'getOldRef',
-        'old_title' => 'getOldTitle',
-        'project_id' => 'getProjectId',
-        'pull_request_url' => 'getPullRequestUrl',
-        'ref_action' => 'getRefAction',
-        'ref_comment' => 'getRefComment',
-        'ref_commit_sha' => 'getRefCommitSha',
-        'ref_issue' => 'getRefIssue',
-        'removed_assignee' => 'getRemovedAssignee',
-        'resolve_doer' => 'getResolveDoer',
-        'review_id' => 'getReviewId',
-        'tracked_time' => 'getTrackedTime',
+        'newRef' => 'getNewRef',
+        'newTitle' => 'getNewTitle',
+        'oldMilestone' => 'getOldMilestone',
+        'oldProjectId' => 'getOldProjectId',
+        'oldRef' => 'getOldRef',
+        'oldTitle' => 'getOldTitle',
+        'projectId' => 'getProjectId',
+        'pullRequestUrl' => 'getPullRequestUrl',
+        'refAction' => 'getRefAction',
+        'refComment' => 'getRefComment',
+        'refCommitSha' => 'getRefCommitSha',
+        'refIssue' => 'getRefIssue',
+        'removedAssignee' => 'getRemovedAssignee',
+        'resolveDoer' => 'getResolveDoer',
+        'reviewId' => 'getReviewId',
+        'trackedTime' => 'getTrackedTime',
         'type' => 'getType',
-        'updated_at' => 'getUpdatedAt',
+        'updatedAt' => 'getUpdatedAt',
         'user' => 'getUser'
     ];
 
@@ -320,33 +320,33 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['assignee'] = $data['assignee'] ?? null;
-        $this->container['assignee_team'] = $data['assignee_team'] ?? null;
+        $this->container['assigneeTeam'] = $data['assigneeTeam'] ?? null;
         $this->container['body'] = $data['body'] ?? null;
-        $this->container['created_at'] = $data['created_at'] ?? null;
-        $this->container['dependent_issue'] = $data['dependent_issue'] ?? null;
-        $this->container['html_url'] = $data['html_url'] ?? null;
+        $this->container['createdAt'] = $data['createdAt'] ?? null;
+        $this->container['dependentIssue'] = $data['dependentIssue'] ?? null;
+        $this->container['htmlUrl'] = $data['htmlUrl'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['issue_url'] = $data['issue_url'] ?? null;
+        $this->container['issueUrl'] = $data['issueUrl'] ?? null;
         $this->container['label'] = $data['label'] ?? null;
         $this->container['milestone'] = $data['milestone'] ?? null;
-        $this->container['new_ref'] = $data['new_ref'] ?? null;
-        $this->container['new_title'] = $data['new_title'] ?? null;
-        $this->container['old_milestone'] = $data['old_milestone'] ?? null;
-        $this->container['old_project_id'] = $data['old_project_id'] ?? null;
-        $this->container['old_ref'] = $data['old_ref'] ?? null;
-        $this->container['old_title'] = $data['old_title'] ?? null;
-        $this->container['project_id'] = $data['project_id'] ?? null;
-        $this->container['pull_request_url'] = $data['pull_request_url'] ?? null;
-        $this->container['ref_action'] = $data['ref_action'] ?? null;
-        $this->container['ref_comment'] = $data['ref_comment'] ?? null;
-        $this->container['ref_commit_sha'] = $data['ref_commit_sha'] ?? null;
-        $this->container['ref_issue'] = $data['ref_issue'] ?? null;
-        $this->container['removed_assignee'] = $data['removed_assignee'] ?? null;
-        $this->container['resolve_doer'] = $data['resolve_doer'] ?? null;
-        $this->container['review_id'] = $data['review_id'] ?? null;
-        $this->container['tracked_time'] = $data['tracked_time'] ?? null;
+        $this->container['newRef'] = $data['newRef'] ?? null;
+        $this->container['newTitle'] = $data['newTitle'] ?? null;
+        $this->container['oldMilestone'] = $data['oldMilestone'] ?? null;
+        $this->container['oldProjectId'] = $data['oldProjectId'] ?? null;
+        $this->container['oldRef'] = $data['oldRef'] ?? null;
+        $this->container['oldTitle'] = $data['oldTitle'] ?? null;
+        $this->container['projectId'] = $data['projectId'] ?? null;
+        $this->container['pullRequestUrl'] = $data['pullRequestUrl'] ?? null;
+        $this->container['refAction'] = $data['refAction'] ?? null;
+        $this->container['refComment'] = $data['refComment'] ?? null;
+        $this->container['refCommitSha'] = $data['refCommitSha'] ?? null;
+        $this->container['refIssue'] = $data['refIssue'] ?? null;
+        $this->container['removedAssignee'] = $data['removedAssignee'] ?? null;
+        $this->container['resolveDoer'] = $data['resolveDoer'] ?? null;
+        $this->container['reviewId'] = $data['reviewId'] ?? null;
+        $this->container['trackedTime'] = $data['trackedTime'] ?? null;
         $this->container['type'] = $data['type'] ?? null;
-        $this->container['updated_at'] = $data['updated_at'] ?? null;
+        $this->container['updatedAt'] = $data['updatedAt'] ?? null;
         $this->container['user'] = $data['user'] ?? null;
     }
 
@@ -399,25 +399,25 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets assignee_team
+     * Gets assigneeTeam
      *
      * @return \Efsa\Client\Gitea\Model\Team|null
      */
     public function getAssigneeTeam()
     {
-        return $this->container['assignee_team'];
+        return $this->container['assigneeTeam'];
     }
 
     /**
-     * Sets assignee_team
+     * Sets assigneeTeam
      *
-     * @param \Efsa\Client\Gitea\Model\Team|null $assignee_team assignee_team
+     * @param \Efsa\Client\Gitea\Model\Team|null $assigneeTeam assigneeTeam
      *
      * @return self
      */
-    public function setAssigneeTeam($assignee_team)
+    public function setAssigneeTeam($assigneeTeam)
     {
-        $this->container['assignee_team'] = $assignee_team;
+        $this->container['assigneeTeam'] = $assigneeTeam;
 
         return $this;
     }
@@ -447,73 +447,73 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime|null
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $createdAt createdAt
      *
      * @return self
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }
 
     /**
-     * Gets dependent_issue
+     * Gets dependentIssue
      *
      * @return \Efsa\Client\Gitea\Model\Issue|null
      */
     public function getDependentIssue()
     {
-        return $this->container['dependent_issue'];
+        return $this->container['dependentIssue'];
     }
 
     /**
-     * Sets dependent_issue
+     * Sets dependentIssue
      *
-     * @param \Efsa\Client\Gitea\Model\Issue|null $dependent_issue dependent_issue
+     * @param \Efsa\Client\Gitea\Model\Issue|null $dependentIssue dependentIssue
      *
      * @return self
      */
-    public function setDependentIssue($dependent_issue)
+    public function setDependentIssue($dependentIssue)
     {
-        $this->container['dependent_issue'] = $dependent_issue;
+        $this->container['dependentIssue'] = $dependentIssue;
 
         return $this;
     }
 
     /**
-     * Gets html_url
+     * Gets htmlUrl
      *
      * @return string|null
      */
     public function getHtmlUrl()
     {
-        return $this->container['html_url'];
+        return $this->container['htmlUrl'];
     }
 
     /**
-     * Sets html_url
+     * Sets htmlUrl
      *
-     * @param string|null $html_url html_url
+     * @param string|null $htmlUrl htmlUrl
      *
      * @return self
      */
-    public function setHtmlUrl($html_url)
+    public function setHtmlUrl($htmlUrl)
     {
-        $this->container['html_url'] = $html_url;
+        $this->container['htmlUrl'] = $htmlUrl;
 
         return $this;
     }
@@ -543,25 +543,25 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets issue_url
+     * Gets issueUrl
      *
      * @return string|null
      */
     public function getIssueUrl()
     {
-        return $this->container['issue_url'];
+        return $this->container['issueUrl'];
     }
 
     /**
-     * Sets issue_url
+     * Sets issueUrl
      *
-     * @param string|null $issue_url issue_url
+     * @param string|null $issueUrl issueUrl
      *
      * @return self
      */
-    public function setIssueUrl($issue_url)
+    public function setIssueUrl($issueUrl)
     {
-        $this->container['issue_url'] = $issue_url;
+        $this->container['issueUrl'] = $issueUrl;
 
         return $this;
     }
@@ -615,385 +615,385 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets new_ref
+     * Gets newRef
      *
      * @return string|null
      */
     public function getNewRef()
     {
-        return $this->container['new_ref'];
+        return $this->container['newRef'];
     }
 
     /**
-     * Sets new_ref
+     * Sets newRef
      *
-     * @param string|null $new_ref new_ref
+     * @param string|null $newRef newRef
      *
      * @return self
      */
-    public function setNewRef($new_ref)
+    public function setNewRef($newRef)
     {
-        $this->container['new_ref'] = $new_ref;
+        $this->container['newRef'] = $newRef;
 
         return $this;
     }
 
     /**
-     * Gets new_title
+     * Gets newTitle
      *
      * @return string|null
      */
     public function getNewTitle()
     {
-        return $this->container['new_title'];
+        return $this->container['newTitle'];
     }
 
     /**
-     * Sets new_title
+     * Sets newTitle
      *
-     * @param string|null $new_title new_title
+     * @param string|null $newTitle newTitle
      *
      * @return self
      */
-    public function setNewTitle($new_title)
+    public function setNewTitle($newTitle)
     {
-        $this->container['new_title'] = $new_title;
+        $this->container['newTitle'] = $newTitle;
 
         return $this;
     }
 
     /**
-     * Gets old_milestone
+     * Gets oldMilestone
      *
      * @return \Efsa\Client\Gitea\Model\Milestone|null
      */
     public function getOldMilestone()
     {
-        return $this->container['old_milestone'];
+        return $this->container['oldMilestone'];
     }
 
     /**
-     * Sets old_milestone
+     * Sets oldMilestone
      *
-     * @param \Efsa\Client\Gitea\Model\Milestone|null $old_milestone old_milestone
+     * @param \Efsa\Client\Gitea\Model\Milestone|null $oldMilestone oldMilestone
      *
      * @return self
      */
-    public function setOldMilestone($old_milestone)
+    public function setOldMilestone($oldMilestone)
     {
-        $this->container['old_milestone'] = $old_milestone;
+        $this->container['oldMilestone'] = $oldMilestone;
 
         return $this;
     }
 
     /**
-     * Gets old_project_id
+     * Gets oldProjectId
      *
      * @return int|null
      */
     public function getOldProjectId()
     {
-        return $this->container['old_project_id'];
+        return $this->container['oldProjectId'];
     }
 
     /**
-     * Sets old_project_id
+     * Sets oldProjectId
      *
-     * @param int|null $old_project_id old_project_id
+     * @param int|null $oldProjectId oldProjectId
      *
      * @return self
      */
-    public function setOldProjectId($old_project_id)
+    public function setOldProjectId($oldProjectId)
     {
-        $this->container['old_project_id'] = $old_project_id;
+        $this->container['oldProjectId'] = $oldProjectId;
 
         return $this;
     }
 
     /**
-     * Gets old_ref
+     * Gets oldRef
      *
      * @return string|null
      */
     public function getOldRef()
     {
-        return $this->container['old_ref'];
+        return $this->container['oldRef'];
     }
 
     /**
-     * Sets old_ref
+     * Sets oldRef
      *
-     * @param string|null $old_ref old_ref
+     * @param string|null $oldRef oldRef
      *
      * @return self
      */
-    public function setOldRef($old_ref)
+    public function setOldRef($oldRef)
     {
-        $this->container['old_ref'] = $old_ref;
+        $this->container['oldRef'] = $oldRef;
 
         return $this;
     }
 
     /**
-     * Gets old_title
+     * Gets oldTitle
      *
      * @return string|null
      */
     public function getOldTitle()
     {
-        return $this->container['old_title'];
+        return $this->container['oldTitle'];
     }
 
     /**
-     * Sets old_title
+     * Sets oldTitle
      *
-     * @param string|null $old_title old_title
+     * @param string|null $oldTitle oldTitle
      *
      * @return self
      */
-    public function setOldTitle($old_title)
+    public function setOldTitle($oldTitle)
     {
-        $this->container['old_title'] = $old_title;
+        $this->container['oldTitle'] = $oldTitle;
 
         return $this;
     }
 
     /**
-     * Gets project_id
+     * Gets projectId
      *
      * @return int|null
      */
     public function getProjectId()
     {
-        return $this->container['project_id'];
+        return $this->container['projectId'];
     }
 
     /**
-     * Sets project_id
+     * Sets projectId
      *
-     * @param int|null $project_id project_id
+     * @param int|null $projectId projectId
      *
      * @return self
      */
-    public function setProjectId($project_id)
+    public function setProjectId($projectId)
     {
-        $this->container['project_id'] = $project_id;
+        $this->container['projectId'] = $projectId;
 
         return $this;
     }
 
     /**
-     * Gets pull_request_url
+     * Gets pullRequestUrl
      *
      * @return string|null
      */
     public function getPullRequestUrl()
     {
-        return $this->container['pull_request_url'];
+        return $this->container['pullRequestUrl'];
     }
 
     /**
-     * Sets pull_request_url
+     * Sets pullRequestUrl
      *
-     * @param string|null $pull_request_url pull_request_url
+     * @param string|null $pullRequestUrl pullRequestUrl
      *
      * @return self
      */
-    public function setPullRequestUrl($pull_request_url)
+    public function setPullRequestUrl($pullRequestUrl)
     {
-        $this->container['pull_request_url'] = $pull_request_url;
+        $this->container['pullRequestUrl'] = $pullRequestUrl;
 
         return $this;
     }
 
     /**
-     * Gets ref_action
+     * Gets refAction
      *
      * @return string|null
      */
     public function getRefAction()
     {
-        return $this->container['ref_action'];
+        return $this->container['refAction'];
     }
 
     /**
-     * Sets ref_action
+     * Sets refAction
      *
-     * @param string|null $ref_action ref_action
+     * @param string|null $refAction refAction
      *
      * @return self
      */
-    public function setRefAction($ref_action)
+    public function setRefAction($refAction)
     {
-        $this->container['ref_action'] = $ref_action;
+        $this->container['refAction'] = $refAction;
 
         return $this;
     }
 
     /**
-     * Gets ref_comment
+     * Gets refComment
      *
      * @return \Efsa\Client\Gitea\Model\Comment|null
      */
     public function getRefComment()
     {
-        return $this->container['ref_comment'];
+        return $this->container['refComment'];
     }
 
     /**
-     * Sets ref_comment
+     * Sets refComment
      *
-     * @param \Efsa\Client\Gitea\Model\Comment|null $ref_comment ref_comment
+     * @param \Efsa\Client\Gitea\Model\Comment|null $refComment refComment
      *
      * @return self
      */
-    public function setRefComment($ref_comment)
+    public function setRefComment($refComment)
     {
-        $this->container['ref_comment'] = $ref_comment;
+        $this->container['refComment'] = $refComment;
 
         return $this;
     }
 
     /**
-     * Gets ref_commit_sha
+     * Gets refCommitSha
      *
      * @return string|null
      */
     public function getRefCommitSha()
     {
-        return $this->container['ref_commit_sha'];
+        return $this->container['refCommitSha'];
     }
 
     /**
-     * Sets ref_commit_sha
+     * Sets refCommitSha
      *
-     * @param string|null $ref_commit_sha commit SHA where issue/PR was referenced
+     * @param string|null $refCommitSha commit SHA where issue/PR was referenced
      *
      * @return self
      */
-    public function setRefCommitSha($ref_commit_sha)
+    public function setRefCommitSha($refCommitSha)
     {
-        $this->container['ref_commit_sha'] = $ref_commit_sha;
+        $this->container['refCommitSha'] = $refCommitSha;
 
         return $this;
     }
 
     /**
-     * Gets ref_issue
+     * Gets refIssue
      *
      * @return \Efsa\Client\Gitea\Model\Issue|null
      */
     public function getRefIssue()
     {
-        return $this->container['ref_issue'];
+        return $this->container['refIssue'];
     }
 
     /**
-     * Sets ref_issue
+     * Sets refIssue
      *
-     * @param \Efsa\Client\Gitea\Model\Issue|null $ref_issue ref_issue
+     * @param \Efsa\Client\Gitea\Model\Issue|null $refIssue refIssue
      *
      * @return self
      */
-    public function setRefIssue($ref_issue)
+    public function setRefIssue($refIssue)
     {
-        $this->container['ref_issue'] = $ref_issue;
+        $this->container['refIssue'] = $refIssue;
 
         return $this;
     }
 
     /**
-     * Gets removed_assignee
+     * Gets removedAssignee
      *
      * @return bool|null
      */
     public function getRemovedAssignee()
     {
-        return $this->container['removed_assignee'];
+        return $this->container['removedAssignee'];
     }
 
     /**
-     * Sets removed_assignee
+     * Sets removedAssignee
      *
-     * @param bool|null $removed_assignee whether the assignees were removed or added
+     * @param bool|null $removedAssignee whether the assignees were removed or added
      *
      * @return self
      */
-    public function setRemovedAssignee($removed_assignee)
+    public function setRemovedAssignee($removedAssignee)
     {
-        $this->container['removed_assignee'] = $removed_assignee;
+        $this->container['removedAssignee'] = $removedAssignee;
 
         return $this;
     }
 
     /**
-     * Gets resolve_doer
+     * Gets resolveDoer
      *
      * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getResolveDoer()
     {
-        return $this->container['resolve_doer'];
+        return $this->container['resolveDoer'];
     }
 
     /**
-     * Sets resolve_doer
+     * Sets resolveDoer
      *
-     * @param \Efsa\Client\Gitea\Model\User|null $resolve_doer resolve_doer
+     * @param \Efsa\Client\Gitea\Model\User|null $resolveDoer resolveDoer
      *
      * @return self
      */
-    public function setResolveDoer($resolve_doer)
+    public function setResolveDoer($resolveDoer)
     {
-        $this->container['resolve_doer'] = $resolve_doer;
+        $this->container['resolveDoer'] = $resolveDoer;
 
         return $this;
     }
 
     /**
-     * Gets review_id
+     * Gets reviewId
      *
      * @return int|null
      */
     public function getReviewId()
     {
-        return $this->container['review_id'];
+        return $this->container['reviewId'];
     }
 
     /**
-     * Sets review_id
+     * Sets reviewId
      *
-     * @param int|null $review_id review_id
+     * @param int|null $reviewId reviewId
      *
      * @return self
      */
-    public function setReviewId($review_id)
+    public function setReviewId($reviewId)
     {
-        $this->container['review_id'] = $review_id;
+        $this->container['reviewId'] = $reviewId;
 
         return $this;
     }
 
     /**
-     * Gets tracked_time
+     * Gets trackedTime
      *
      * @return \Efsa\Client\Gitea\Model\TrackedTime|null
      */
     public function getTrackedTime()
     {
-        return $this->container['tracked_time'];
+        return $this->container['trackedTime'];
     }
 
     /**
-     * Sets tracked_time
+     * Sets trackedTime
      *
-     * @param \Efsa\Client\Gitea\Model\TrackedTime|null $tracked_time tracked_time
+     * @param \Efsa\Client\Gitea\Model\TrackedTime|null $trackedTime trackedTime
      *
      * @return self
      */
-    public function setTrackedTime($tracked_time)
+    public function setTrackedTime($trackedTime)
     {
-        $this->container['tracked_time'] = $tracked_time;
+        $this->container['trackedTime'] = $trackedTime;
 
         return $this;
     }
@@ -1023,25 +1023,25 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets updated_at
+     * Gets updatedAt
      *
      * @return \DateTime|null
      */
     public function getUpdatedAt()
     {
-        return $this->container['updated_at'];
+        return $this->container['updatedAt'];
     }
 
     /**
-     * Sets updated_at
+     * Sets updatedAt
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updatedAt updatedAt
      *
      * @return self
      */
-    public function setUpdatedAt($updated_at)
+    public function setUpdatedAt($updatedAt)
     {
-        $this->container['updated_at'] = $updated_at;
+        $this->container['updatedAt'] = $updatedAt;
 
         return $this;
     }

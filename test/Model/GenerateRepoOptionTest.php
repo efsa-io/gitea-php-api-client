@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description GenerateRepoOption options when creating repository using a template
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -98,7 +98,7 @@ class GenerateRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "git_content"
+     * Test attribute "gitContent"
      */
     public function testPropertyGitContent()
     {
@@ -107,7 +107,7 @@ class GenerateRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "git_hooks"
+     * Test attribute "gitHooks"
      */
     public function testPropertyGitHooks()
     {

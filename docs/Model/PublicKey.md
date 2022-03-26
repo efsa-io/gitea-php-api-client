@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**created_at** | [**\DateTime**](\DateTime.md) |  | [optional]
+**createdAt** | [**\DateTime**](\DateTime.md) |  | [optional]
 **fingerprint** | **string** |  | [optional]
 **id** | **int** |  | [optional]
 **key** | **string** |  | [optional]
-**key_type** | **string** |  | [optional]
-**read_only** | **bool** |  | [optional]
+**keyType** | **string** |  | [optional]
+**readOnly** | **bool** |  | [optional]
 **title** | **string** |  | [optional]
 **url** | **string** |  | [optional]
 **user** | [**\Efsa\Client\Gitea\Model\User**](User.md) |  | [optional]

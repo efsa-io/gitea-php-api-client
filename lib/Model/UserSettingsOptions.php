@@ -61,10 +61,10 @@ class UserSettingsOptions implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPITypes = [
         'description' => 'string',
-        'diff_view_style' => 'string',
-        'full_name' => 'string',
-        'hide_activity' => 'bool',
-        'hide_email' => 'bool',
+        'diffViewStyle' => 'string',
+        'fullName' => 'string',
+        'hideActivity' => 'bool',
+        'hideEmail' => 'bool',
         'language' => 'string',
         'location' => 'string',
         'theme' => 'string',
@@ -80,10 +80,10 @@ class UserSettingsOptions implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPIFormats = [
         'description' => null,
-        'diff_view_style' => null,
-        'full_name' => null,
-        'hide_activity' => null,
-        'hide_email' => null,
+        'diffViewStyle' => null,
+        'fullName' => null,
+        'hideActivity' => null,
+        'hideEmail' => null,
         'language' => null,
         'location' => null,
         'theme' => null,
@@ -118,10 +118,10 @@ class UserSettingsOptions implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $attributeMap = [
         'description' => 'description',
-        'diff_view_style' => 'diff_view_style',
-        'full_name' => 'full_name',
-        'hide_activity' => 'hide_activity',
-        'hide_email' => 'hide_email',
+        'diffViewStyle' => 'diff_view_style',
+        'fullName' => 'full_name',
+        'hideActivity' => 'hide_activity',
+        'hideEmail' => 'hide_email',
         'language' => 'language',
         'location' => 'location',
         'theme' => 'theme',
@@ -135,10 +135,10 @@ class UserSettingsOptions implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $setters = [
         'description' => 'setDescription',
-        'diff_view_style' => 'setDiffViewStyle',
-        'full_name' => 'setFullName',
-        'hide_activity' => 'setHideActivity',
-        'hide_email' => 'setHideEmail',
+        'diffViewStyle' => 'setDiffViewStyle',
+        'fullName' => 'setFullName',
+        'hideActivity' => 'setHideActivity',
+        'hideEmail' => 'setHideEmail',
         'language' => 'setLanguage',
         'location' => 'setLocation',
         'theme' => 'setTheme',
@@ -152,10 +152,10 @@ class UserSettingsOptions implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $getters = [
         'description' => 'getDescription',
-        'diff_view_style' => 'getDiffViewStyle',
-        'full_name' => 'getFullName',
-        'hide_activity' => 'getHideActivity',
-        'hide_email' => 'getHideEmail',
+        'diffViewStyle' => 'getDiffViewStyle',
+        'fullName' => 'getFullName',
+        'hideActivity' => 'getHideActivity',
+        'hideEmail' => 'getHideEmail',
         'language' => 'getLanguage',
         'location' => 'getLocation',
         'theme' => 'getTheme',
@@ -220,10 +220,10 @@ class UserSettingsOptions implements ModelInterface, ArrayAccess, \JsonSerializa
     public function __construct(array $data = null)
     {
         $this->container['description'] = $data['description'] ?? null;
-        $this->container['diff_view_style'] = $data['diff_view_style'] ?? null;
-        $this->container['full_name'] = $data['full_name'] ?? null;
-        $this->container['hide_activity'] = $data['hide_activity'] ?? null;
-        $this->container['hide_email'] = $data['hide_email'] ?? null;
+        $this->container['diffViewStyle'] = $data['diffViewStyle'] ?? null;
+        $this->container['fullName'] = $data['fullName'] ?? null;
+        $this->container['hideActivity'] = $data['hideActivity'] ?? null;
+        $this->container['hideEmail'] = $data['hideEmail'] ?? null;
         $this->container['language'] = $data['language'] ?? null;
         $this->container['location'] = $data['location'] ?? null;
         $this->container['theme'] = $data['theme'] ?? null;
@@ -279,97 +279,97 @@ class UserSettingsOptions implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets diff_view_style
+     * Gets diffViewStyle
      *
      * @return string|null
      */
     public function getDiffViewStyle()
     {
-        return $this->container['diff_view_style'];
+        return $this->container['diffViewStyle'];
     }
 
     /**
-     * Sets diff_view_style
+     * Sets diffViewStyle
      *
-     * @param string|null $diff_view_style diff_view_style
+     * @param string|null $diffViewStyle diffViewStyle
      *
      * @return self
      */
-    public function setDiffViewStyle($diff_view_style)
+    public function setDiffViewStyle($diffViewStyle)
     {
-        $this->container['diff_view_style'] = $diff_view_style;
+        $this->container['diffViewStyle'] = $diffViewStyle;
 
         return $this;
     }
 
     /**
-     * Gets full_name
+     * Gets fullName
      *
      * @return string|null
      */
     public function getFullName()
     {
-        return $this->container['full_name'];
+        return $this->container['fullName'];
     }
 
     /**
-     * Sets full_name
+     * Sets fullName
      *
-     * @param string|null $full_name full_name
+     * @param string|null $fullName fullName
      *
      * @return self
      */
-    public function setFullName($full_name)
+    public function setFullName($fullName)
     {
-        $this->container['full_name'] = $full_name;
+        $this->container['fullName'] = $fullName;
 
         return $this;
     }
 
     /**
-     * Gets hide_activity
+     * Gets hideActivity
      *
      * @return bool|null
      */
     public function getHideActivity()
     {
-        return $this->container['hide_activity'];
+        return $this->container['hideActivity'];
     }
 
     /**
-     * Sets hide_activity
+     * Sets hideActivity
      *
-     * @param bool|null $hide_activity hide_activity
+     * @param bool|null $hideActivity hideActivity
      *
      * @return self
      */
-    public function setHideActivity($hide_activity)
+    public function setHideActivity($hideActivity)
     {
-        $this->container['hide_activity'] = $hide_activity;
+        $this->container['hideActivity'] = $hideActivity;
 
         return $this;
     }
 
     /**
-     * Gets hide_email
+     * Gets hideEmail
      *
      * @return bool|null
      */
     public function getHideEmail()
     {
-        return $this->container['hide_email'];
+        return $this->container['hideEmail'];
     }
 
     /**
-     * Sets hide_email
+     * Sets hideEmail
      *
-     * @param bool|null $hide_email Privacy
+     * @param bool|null $hideEmail Privacy
      *
      * @return self
      */
-    public function setHideEmail($hide_email)
+    public function setHideEmail($hideEmail)
     {
-        $this->container['hide_email'] = $hide_email;
+        $this->container['hideEmail'] = $hideEmail;
 
         return $this;
     }

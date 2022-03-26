@@ -60,17 +60,17 @@ class GPGKey implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'can_certify' => 'bool',
-        'can_encrypt_comms' => 'bool',
-        'can_encrypt_storage' => 'bool',
-        'can_sign' => 'bool',
-        'created_at' => '\DateTime',
+        'canCertify' => 'bool',
+        'canEncryptComms' => 'bool',
+        'canEncryptStorage' => 'bool',
+        'canSign' => 'bool',
+        'createdAt' => '\DateTime',
         'emails' => '\Efsa\Client\Gitea\Model\GPGKeyEmail[]',
-        'expires_at' => '\DateTime',
+        'expiresAt' => '\DateTime',
         'id' => 'int',
-        'key_id' => 'string',
-        'primary_key_id' => 'string',
-        'public_key' => 'string',
+        'keyId' => 'string',
+        'primaryKeyId' => 'string',
+        'publicKey' => 'string',
         'subkeys' => '\Efsa\Client\Gitea\Model\GPGKey[]',
         'verified' => 'bool'
     ];
@@ -83,17 +83,17 @@ class GPGKey implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'can_certify' => null,
-        'can_encrypt_comms' => null,
-        'can_encrypt_storage' => null,
-        'can_sign' => null,
-        'created_at' => 'date-time',
+        'canCertify' => null,
+        'canEncryptComms' => null,
+        'canEncryptStorage' => null,
+        'canSign' => null,
+        'createdAt' => 'date-time',
         'emails' => null,
-        'expires_at' => 'date-time',
+        'expiresAt' => 'date-time',
         'id' => 'int64',
-        'key_id' => null,
-        'primary_key_id' => null,
-        'public_key' => null,
+        'keyId' => null,
+        'primaryKeyId' => null,
+        'publicKey' => null,
         'subkeys' => null,
         'verified' => null
     ];
@@ -125,17 +125,17 @@ class GPGKey implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'can_certify' => 'can_certify',
-        'can_encrypt_comms' => 'can_encrypt_comms',
-        'can_encrypt_storage' => 'can_encrypt_storage',
-        'can_sign' => 'can_sign',
-        'created_at' => 'created_at',
+        'canCertify' => 'can_certify',
+        'canEncryptComms' => 'can_encrypt_comms',
+        'canEncryptStorage' => 'can_encrypt_storage',
+        'canSign' => 'can_sign',
+        'createdAt' => 'created_at',
         'emails' => 'emails',
-        'expires_at' => 'expires_at',
+        'expiresAt' => 'expires_at',
         'id' => 'id',
-        'key_id' => 'key_id',
-        'primary_key_id' => 'primary_key_id',
-        'public_key' => 'public_key',
+        'keyId' => 'key_id',
+        'primaryKeyId' => 'primary_key_id',
+        'publicKey' => 'public_key',
         'subkeys' => 'subkeys',
         'verified' => 'verified'
     ];
@@ -146,17 +146,17 @@ class GPGKey implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'can_certify' => 'setCanCertify',
-        'can_encrypt_comms' => 'setCanEncryptComms',
-        'can_encrypt_storage' => 'setCanEncryptStorage',
-        'can_sign' => 'setCanSign',
-        'created_at' => 'setCreatedAt',
+        'canCertify' => 'setCanCertify',
+        'canEncryptComms' => 'setCanEncryptComms',
+        'canEncryptStorage' => 'setCanEncryptStorage',
+        'canSign' => 'setCanSign',
+        'createdAt' => 'setCreatedAt',
         'emails' => 'setEmails',
-        'expires_at' => 'setExpiresAt',
+        'expiresAt' => 'setExpiresAt',
         'id' => 'setId',
-        'key_id' => 'setKeyId',
-        'primary_key_id' => 'setPrimaryKeyId',
-        'public_key' => 'setPublicKey',
+        'keyId' => 'setKeyId',
+        'primaryKeyId' => 'setPrimaryKeyId',
+        'publicKey' => 'setPublicKey',
         'subkeys' => 'setSubkeys',
         'verified' => 'setVerified'
     ];
@@ -167,17 +167,17 @@ class GPGKey implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'can_certify' => 'getCanCertify',
-        'can_encrypt_comms' => 'getCanEncryptComms',
-        'can_encrypt_storage' => 'getCanEncryptStorage',
-        'can_sign' => 'getCanSign',
-        'created_at' => 'getCreatedAt',
+        'canCertify' => 'getCanCertify',
+        'canEncryptComms' => 'getCanEncryptComms',
+        'canEncryptStorage' => 'getCanEncryptStorage',
+        'canSign' => 'getCanSign',
+        'createdAt' => 'getCreatedAt',
         'emails' => 'getEmails',
-        'expires_at' => 'getExpiresAt',
+        'expiresAt' => 'getExpiresAt',
         'id' => 'getId',
-        'key_id' => 'getKeyId',
-        'primary_key_id' => 'getPrimaryKeyId',
-        'public_key' => 'getPublicKey',
+        'keyId' => 'getKeyId',
+        'primaryKeyId' => 'getPrimaryKeyId',
+        'publicKey' => 'getPublicKey',
         'subkeys' => 'getSubkeys',
         'verified' => 'getVerified'
     ];
@@ -239,17 +239,17 @@ class GPGKey implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['can_certify'] = $data['can_certify'] ?? null;
-        $this->container['can_encrypt_comms'] = $data['can_encrypt_comms'] ?? null;
-        $this->container['can_encrypt_storage'] = $data['can_encrypt_storage'] ?? null;
-        $this->container['can_sign'] = $data['can_sign'] ?? null;
-        $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['canCertify'] = $data['canCertify'] ?? null;
+        $this->container['canEncryptComms'] = $data['canEncryptComms'] ?? null;
+        $this->container['canEncryptStorage'] = $data['canEncryptStorage'] ?? null;
+        $this->container['canSign'] = $data['canSign'] ?? null;
+        $this->container['createdAt'] = $data['createdAt'] ?? null;
         $this->container['emails'] = $data['emails'] ?? null;
-        $this->container['expires_at'] = $data['expires_at'] ?? null;
+        $this->container['expiresAt'] = $data['expiresAt'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['key_id'] = $data['key_id'] ?? null;
-        $this->container['primary_key_id'] = $data['primary_key_id'] ?? null;
-        $this->container['public_key'] = $data['public_key'] ?? null;
+        $this->container['keyId'] = $data['keyId'] ?? null;
+        $this->container['primaryKeyId'] = $data['primaryKeyId'] ?? null;
+        $this->container['publicKey'] = $data['publicKey'] ?? null;
         $this->container['subkeys'] = $data['subkeys'] ?? null;
         $this->container['verified'] = $data['verified'] ?? null;
     }
@@ -279,121 +279,121 @@ class GPGKey implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets can_certify
+     * Gets canCertify
      *
      * @return bool|null
      */
     public function getCanCertify()
     {
-        return $this->container['can_certify'];
+        return $this->container['canCertify'];
     }
 
     /**
-     * Sets can_certify
+     * Sets canCertify
      *
-     * @param bool|null $can_certify can_certify
+     * @param bool|null $canCertify canCertify
      *
      * @return self
      */
-    public function setCanCertify($can_certify)
+    public function setCanCertify($canCertify)
     {
-        $this->container['can_certify'] = $can_certify;
+        $this->container['canCertify'] = $canCertify;
 
         return $this;
     }
 
     /**
-     * Gets can_encrypt_comms
+     * Gets canEncryptComms
      *
      * @return bool|null
      */
     public function getCanEncryptComms()
     {
-        return $this->container['can_encrypt_comms'];
+        return $this->container['canEncryptComms'];
     }
 
     /**
-     * Sets can_encrypt_comms
+     * Sets canEncryptComms
      *
-     * @param bool|null $can_encrypt_comms can_encrypt_comms
+     * @param bool|null $canEncryptComms canEncryptComms
      *
      * @return self
      */
-    public function setCanEncryptComms($can_encrypt_comms)
+    public function setCanEncryptComms($canEncryptComms)
     {
-        $this->container['can_encrypt_comms'] = $can_encrypt_comms;
+        $this->container['canEncryptComms'] = $canEncryptComms;
 
         return $this;
     }
 
     /**
-     * Gets can_encrypt_storage
+     * Gets canEncryptStorage
      *
      * @return bool|null
      */
     public function getCanEncryptStorage()
     {
-        return $this->container['can_encrypt_storage'];
+        return $this->container['canEncryptStorage'];
     }
 
     /**
-     * Sets can_encrypt_storage
+     * Sets canEncryptStorage
      *
-     * @param bool|null $can_encrypt_storage can_encrypt_storage
+     * @param bool|null $canEncryptStorage canEncryptStorage
      *
      * @return self
      */
-    public function setCanEncryptStorage($can_encrypt_storage)
+    public function setCanEncryptStorage($canEncryptStorage)
     {
-        $this->container['can_encrypt_storage'] = $can_encrypt_storage;
+        $this->container['canEncryptStorage'] = $canEncryptStorage;
 
         return $this;
     }
 
     /**
-     * Gets can_sign
+     * Gets canSign
      *
      * @return bool|null
      */
     public function getCanSign()
     {
-        return $this->container['can_sign'];
+        return $this->container['canSign'];
     }
 
     /**
-     * Sets can_sign
+     * Sets canSign
      *
-     * @param bool|null $can_sign can_sign
+     * @param bool|null $canSign canSign
      *
      * @return self
      */
-    public function setCanSign($can_sign)
+    public function setCanSign($canSign)
     {
-        $this->container['can_sign'] = $can_sign;
+        $this->container['canSign'] = $canSign;
 
         return $this;
     }
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime|null
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $createdAt createdAt
      *
      * @return self
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }
@@ -423,25 +423,25 @@ class GPGKey implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets expires_at
+     * Gets expiresAt
      *
      * @return \DateTime|null
      */
     public function getExpiresAt()
     {
-        return $this->container['expires_at'];
+        return $this->container['expiresAt'];
     }
 
     /**
-     * Sets expires_at
+     * Sets expiresAt
      *
-     * @param \DateTime|null $expires_at expires_at
+     * @param \DateTime|null $expiresAt expiresAt
      *
      * @return self
      */
-    public function setExpiresAt($expires_at)
+    public function setExpiresAt($expiresAt)
     {
-        $this->container['expires_at'] = $expires_at;
+        $this->container['expiresAt'] = $expiresAt;
 
         return $this;
     }
@@ -471,73 +471,73 @@ class GPGKey implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets key_id
+     * Gets keyId
      *
      * @return string|null
      */
     public function getKeyId()
     {
-        return $this->container['key_id'];
+        return $this->container['keyId'];
     }
 
     /**
-     * Sets key_id
+     * Sets keyId
      *
-     * @param string|null $key_id key_id
+     * @param string|null $keyId keyId
      *
      * @return self
      */
-    public function setKeyId($key_id)
+    public function setKeyId($keyId)
     {
-        $this->container['key_id'] = $key_id;
+        $this->container['keyId'] = $keyId;
 
         return $this;
     }
 
     /**
-     * Gets primary_key_id
+     * Gets primaryKeyId
      *
      * @return string|null
      */
     public function getPrimaryKeyId()
     {
-        return $this->container['primary_key_id'];
+        return $this->container['primaryKeyId'];
     }
 
     /**
-     * Sets primary_key_id
+     * Sets primaryKeyId
      *
-     * @param string|null $primary_key_id primary_key_id
+     * @param string|null $primaryKeyId primaryKeyId
      *
      * @return self
      */
-    public function setPrimaryKeyId($primary_key_id)
+    public function setPrimaryKeyId($primaryKeyId)
     {
-        $this->container['primary_key_id'] = $primary_key_id;
+        $this->container['primaryKeyId'] = $primaryKeyId;
 
         return $this;
     }
 
     /**
-     * Gets public_key
+     * Gets publicKey
      *
      * @return string|null
      */
     public function getPublicKey()
     {
-        return $this->container['public_key'];
+        return $this->container['publicKey'];
     }
 
     /**
-     * Sets public_key
+     * Sets publicKey
      *
-     * @param string|null $public_key public_key
+     * @param string|null $publicKey publicKey
      *
      * @return self
      */
-    public function setPublicKey($public_key)
+    public function setPublicKey($publicKey)
     {
-        $this->container['public_key'] = $public_key;
+        $this->container['publicKey'] = $publicKey;
 
         return $this;
     }

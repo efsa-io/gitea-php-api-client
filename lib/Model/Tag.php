@@ -64,8 +64,8 @@ class Tag implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'string',
         'message' => 'string',
         'name' => 'string',
-        'tarball_url' => 'string',
-        'zipball_url' => 'string'
+        'tarballUrl' => 'string',
+        'zipballUrl' => 'string'
     ];
 
     /**
@@ -80,8 +80,8 @@ class Tag implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => null,
         'message' => null,
         'name' => null,
-        'tarball_url' => null,
-        'zipball_url' => null
+        'tarballUrl' => null,
+        'zipballUrl' => null
     ];
 
     /**
@@ -115,8 +115,8 @@ class Tag implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'id',
         'message' => 'message',
         'name' => 'name',
-        'tarball_url' => 'tarball_url',
-        'zipball_url' => 'zipball_url'
+        'tarballUrl' => 'tarball_url',
+        'zipballUrl' => 'zipball_url'
     ];
 
     /**
@@ -129,8 +129,8 @@ class Tag implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'setId',
         'message' => 'setMessage',
         'name' => 'setName',
-        'tarball_url' => 'setTarballUrl',
-        'zipball_url' => 'setZipballUrl'
+        'tarballUrl' => 'setTarballUrl',
+        'zipballUrl' => 'setZipballUrl'
     ];
 
     /**
@@ -143,8 +143,8 @@ class Tag implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'getId',
         'message' => 'getMessage',
         'name' => 'getName',
-        'tarball_url' => 'getTarballUrl',
-        'zipball_url' => 'getZipballUrl'
+        'tarballUrl' => 'getTarballUrl',
+        'zipballUrl' => 'getZipballUrl'
     ];
 
     /**
@@ -208,8 +208,8 @@ class Tag implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['id'] = $data['id'] ?? null;
         $this->container['message'] = $data['message'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
-        $this->container['tarball_url'] = $data['tarball_url'] ?? null;
-        $this->container['zipball_url'] = $data['zipball_url'] ?? null;
+        $this->container['tarballUrl'] = $data['tarballUrl'] ?? null;
+        $this->container['zipballUrl'] = $data['zipballUrl'] ?? null;
     }
 
     /**
@@ -333,49 +333,49 @@ class Tag implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets tarball_url
+     * Gets tarballUrl
      *
      * @return string|null
      */
     public function getTarballUrl()
     {
-        return $this->container['tarball_url'];
+        return $this->container['tarballUrl'];
     }
 
     /**
-     * Sets tarball_url
+     * Sets tarballUrl
      *
-     * @param string|null $tarball_url tarball_url
+     * @param string|null $tarballUrl tarballUrl
      *
      * @return self
      */
-    public function setTarballUrl($tarball_url)
+    public function setTarballUrl($tarballUrl)
     {
-        $this->container['tarball_url'] = $tarball_url;
+        $this->container['tarballUrl'] = $tarballUrl;
 
         return $this;
     }
 
     /**
-     * Gets zipball_url
+     * Gets zipballUrl
      *
      * @return string|null
      */
     public function getZipballUrl()
     {
-        return $this->container['zipball_url'];
+        return $this->container['zipballUrl'];
     }
 
     /**
-     * Sets zipball_url
+     * Sets zipballUrl
      *
-     * @param string|null $zipball_url zipball_url
+     * @param string|null $zipballUrl zipballUrl
      *
      * @return self
      */
-    public function setZipballUrl($zipball_url)
+    public function setZipballUrl($zipballUrl)
     {
-        $this->container['zipball_url'] = $zipball_url;
+        $this->container['zipballUrl'] = $zipballUrl;
 
         return $this;
     }

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **author** | [**\Efsa\Client\Gitea\Model\CommitUser**](CommitUser.md) |  | [optional]
 **committer** | [**\Efsa\Client\Gitea\Model\CommitUser**](CommitUser.md) |  | [optional]
 **created** | [**\DateTime**](\DateTime.md) |  | [optional]
-**html_url** | **string** |  | [optional]
+**htmlUrl** | **string** |  | [optional]
 **message** | **string** |  | [optional]
 **parents** | [**\Efsa\Client\Gitea\Model\CommitMeta[]**](CommitMeta.md) |  | [optional]
 **sha** | **string** |  | [optional]

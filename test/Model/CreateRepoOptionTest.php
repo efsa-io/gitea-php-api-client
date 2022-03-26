@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description CreateRepoOption options when creating repository
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class CreateRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "auto_init"
+     * Test attribute "autoInit"
      */
     public function testPropertyAutoInit()
     {
@@ -89,7 +89,7 @@ class CreateRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "default_branch"
+     * Test attribute "defaultBranch"
      */
     public function testPropertyDefaultBranch()
     {
@@ -116,7 +116,7 @@ class CreateRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "issue_labels"
+     * Test attribute "issueLabels"
      */
     public function testPropertyIssueLabels()
     {
@@ -170,7 +170,7 @@ class CreateRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "trust_model"
+     * Test attribute "trustModel"
      */
     public function testPropertyTrustModel()
     {

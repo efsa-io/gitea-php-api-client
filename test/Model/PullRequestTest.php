@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description PullRequest represents a pull request
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -116,7 +116,7 @@ class PullRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "closed_at"
+     * Test attribute "closedAt"
      */
     public function testPropertyClosedAt()
     {
@@ -134,7 +134,7 @@ class PullRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "createdAt"
      */
     public function testPropertyCreatedAt()
     {
@@ -143,7 +143,7 @@ class PullRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "diff_url"
+     * Test attribute "diffUrl"
      */
     public function testPropertyDiffUrl()
     {
@@ -152,7 +152,7 @@ class PullRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "due_date"
+     * Test attribute "dueDate"
      */
     public function testPropertyDueDate()
     {
@@ -170,7 +170,7 @@ class PullRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "html_url"
+     * Test attribute "htmlUrl"
      */
     public function testPropertyHtmlUrl()
     {
@@ -188,7 +188,7 @@ class PullRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "is_locked"
+     * Test attribute "isLocked"
      */
     public function testPropertyIsLocked()
     {
@@ -206,7 +206,7 @@ class PullRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "merge_base"
+     * Test attribute "mergeBase"
      */
     public function testPropertyMergeBase()
     {
@@ -215,7 +215,7 @@ class PullRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "merge_commit_sha"
+     * Test attribute "mergeCommitSha"
      */
     public function testPropertyMergeCommitSha()
     {
@@ -242,7 +242,7 @@ class PullRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "merged_at"
+     * Test attribute "mergedAt"
      */
     public function testPropertyMergedAt()
     {
@@ -251,7 +251,7 @@ class PullRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "merged_by"
+     * Test attribute "mergedBy"
      */
     public function testPropertyMergedBy()
     {
@@ -278,7 +278,7 @@ class PullRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "patch_url"
+     * Test attribute "patchUrl"
      */
     public function testPropertyPatchUrl()
     {
@@ -305,7 +305,7 @@ class PullRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "updated_at"
+     * Test attribute "updatedAt"
      */
     public function testPropertyUpdatedAt()
     {

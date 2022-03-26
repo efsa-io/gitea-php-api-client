@@ -60,13 +60,13 @@ class WikiPage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'commit_count' => 'int',
-        'content_base64' => 'string',
+        'commitCount' => 'int',
+        'contentBase64' => 'string',
         'footer' => 'string',
-        'html_url' => 'string',
-        'last_commit' => '\Efsa\Client\Gitea\Model\WikiCommit',
+        'htmlUrl' => 'string',
+        'lastCommit' => '\Efsa\Client\Gitea\Model\WikiCommit',
         'sidebar' => 'string',
-        'sub_url' => 'string',
+        'subUrl' => 'string',
         'title' => 'string'
     ];
 
@@ -78,13 +78,13 @@ class WikiPage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'commit_count' => 'int64',
-        'content_base64' => null,
+        'commitCount' => 'int64',
+        'contentBase64' => null,
         'footer' => null,
-        'html_url' => null,
-        'last_commit' => null,
+        'htmlUrl' => null,
+        'lastCommit' => null,
         'sidebar' => null,
-        'sub_url' => null,
+        'subUrl' => null,
         'title' => null
     ];
 
@@ -115,13 +115,13 @@ class WikiPage implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'commit_count' => 'commit_count',
-        'content_base64' => 'content_base64',
+        'commitCount' => 'commit_count',
+        'contentBase64' => 'content_base64',
         'footer' => 'footer',
-        'html_url' => 'html_url',
-        'last_commit' => 'last_commit',
+        'htmlUrl' => 'html_url',
+        'lastCommit' => 'last_commit',
         'sidebar' => 'sidebar',
-        'sub_url' => 'sub_url',
+        'subUrl' => 'sub_url',
         'title' => 'title'
     ];
 
@@ -131,13 +131,13 @@ class WikiPage implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'commit_count' => 'setCommitCount',
-        'content_base64' => 'setContentBase64',
+        'commitCount' => 'setCommitCount',
+        'contentBase64' => 'setContentBase64',
         'footer' => 'setFooter',
-        'html_url' => 'setHtmlUrl',
-        'last_commit' => 'setLastCommit',
+        'htmlUrl' => 'setHtmlUrl',
+        'lastCommit' => 'setLastCommit',
         'sidebar' => 'setSidebar',
-        'sub_url' => 'setSubUrl',
+        'subUrl' => 'setSubUrl',
         'title' => 'setTitle'
     ];
 
@@ -147,13 +147,13 @@ class WikiPage implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'commit_count' => 'getCommitCount',
-        'content_base64' => 'getContentBase64',
+        'commitCount' => 'getCommitCount',
+        'contentBase64' => 'getContentBase64',
         'footer' => 'getFooter',
-        'html_url' => 'getHtmlUrl',
-        'last_commit' => 'getLastCommit',
+        'htmlUrl' => 'getHtmlUrl',
+        'lastCommit' => 'getLastCommit',
         'sidebar' => 'getSidebar',
-        'sub_url' => 'getSubUrl',
+        'subUrl' => 'getSubUrl',
         'title' => 'getTitle'
     ];
 
@@ -214,13 +214,13 @@ class WikiPage implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['commit_count'] = $data['commit_count'] ?? null;
-        $this->container['content_base64'] = $data['content_base64'] ?? null;
+        $this->container['commitCount'] = $data['commitCount'] ?? null;
+        $this->container['contentBase64'] = $data['contentBase64'] ?? null;
         $this->container['footer'] = $data['footer'] ?? null;
-        $this->container['html_url'] = $data['html_url'] ?? null;
-        $this->container['last_commit'] = $data['last_commit'] ?? null;
+        $this->container['htmlUrl'] = $data['htmlUrl'] ?? null;
+        $this->container['lastCommit'] = $data['lastCommit'] ?? null;
         $this->container['sidebar'] = $data['sidebar'] ?? null;
-        $this->container['sub_url'] = $data['sub_url'] ?? null;
+        $this->container['subUrl'] = $data['subUrl'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
     }
 
@@ -249,49 +249,49 @@ class WikiPage implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets commit_count
+     * Gets commitCount
      *
      * @return int|null
      */
     public function getCommitCount()
     {
-        return $this->container['commit_count'];
+        return $this->container['commitCount'];
     }
 
     /**
-     * Sets commit_count
+     * Sets commitCount
      *
-     * @param int|null $commit_count commit_count
+     * @param int|null $commitCount commitCount
      *
      * @return self
      */
-    public function setCommitCount($commit_count)
+    public function setCommitCount($commitCount)
     {
-        $this->container['commit_count'] = $commit_count;
+        $this->container['commitCount'] = $commitCount;
 
         return $this;
     }
 
     /**
-     * Gets content_base64
+     * Gets contentBase64
      *
      * @return string|null
      */
     public function getContentBase64()
     {
-        return $this->container['content_base64'];
+        return $this->container['contentBase64'];
     }
 
     /**
-     * Sets content_base64
+     * Sets contentBase64
      *
-     * @param string|null $content_base64 Page content, base64 encoded
+     * @param string|null $contentBase64 Page content, base64 encoded
      *
      * @return self
      */
-    public function setContentBase64($content_base64)
+    public function setContentBase64($contentBase64)
     {
-        $this->container['content_base64'] = $content_base64;
+        $this->container['contentBase64'] = $contentBase64;
 
         return $this;
     }
@@ -321,49 +321,49 @@ class WikiPage implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets html_url
+     * Gets htmlUrl
      *
      * @return string|null
      */
     public function getHtmlUrl()
     {
-        return $this->container['html_url'];
+        return $this->container['htmlUrl'];
     }
 
     /**
-     * Sets html_url
+     * Sets htmlUrl
      *
-     * @param string|null $html_url html_url
+     * @param string|null $htmlUrl htmlUrl
      *
      * @return self
      */
-    public function setHtmlUrl($html_url)
+    public function setHtmlUrl($htmlUrl)
     {
-        $this->container['html_url'] = $html_url;
+        $this->container['htmlUrl'] = $htmlUrl;
 
         return $this;
     }
 
     /**
-     * Gets last_commit
+     * Gets lastCommit
      *
      * @return \Efsa\Client\Gitea\Model\WikiCommit|null
      */
     public function getLastCommit()
     {
-        return $this->container['last_commit'];
+        return $this->container['lastCommit'];
     }
 
     /**
-     * Sets last_commit
+     * Sets lastCommit
      *
-     * @param \Efsa\Client\Gitea\Model\WikiCommit|null $last_commit last_commit
+     * @param \Efsa\Client\Gitea\Model\WikiCommit|null $lastCommit lastCommit
      *
      * @return self
      */
-    public function setLastCommit($last_commit)
+    public function setLastCommit($lastCommit)
     {
-        $this->container['last_commit'] = $last_commit;
+        $this->container['lastCommit'] = $lastCommit;
 
         return $this;
     }
@@ -393,25 +393,25 @@ class WikiPage implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets sub_url
+     * Gets subUrl
      *
      * @return string|null
      */
     public function getSubUrl()
     {
-        return $this->container['sub_url'];
+        return $this->container['subUrl'];
     }
 
     /**
-     * Sets sub_url
+     * Sets subUrl
      *
-     * @param string|null $sub_url sub_url
+     * @param string|null $subUrl subUrl
      *
      * @return self
      */
-    public function setSubUrl($sub_url)
+    public function setSubUrl($subUrl)
     {
-        $this->container['sub_url'] = $sub_url;
+        $this->container['subUrl'] = $subUrl;
 
         return $this;
     }

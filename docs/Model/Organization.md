@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**avatar_url** | **string** |  | [optional]
+**avatarUrl** | **string** |  | [optional]
 **description** | **string** |  | [optional]
-**full_name** | **string** |  | [optional]
+**fullName** | **string** |  | [optional]
 **id** | **int** |  | [optional]
 **location** | **string** |  | [optional]
-**repo_admin_change_team_access** | **bool** |  | [optional]
+**repoAdminChangeTeamAccess** | **bool** |  | [optional]
 **username** | **string** |  | [optional]
 **visibility** | **string** |  | [optional]
 **website** | **string** |  | [optional]

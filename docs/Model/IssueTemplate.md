@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **about** | **string** |  | [optional]
 **content** | **string** |  | [optional]
-**file_name** | **string** |  | [optional]
+**fileName** | **string** |  | [optional]
 **labels** | **string[]** |  | [optional]
 **name** | **string** |  | [optional]
 **ref** | **string** |  | [optional]

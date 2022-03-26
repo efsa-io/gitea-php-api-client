@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Milestone milestone is a collection of issues on one repository
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class MilestoneTest extends TestCase
     }
 
     /**
-     * Test attribute "closed_at"
+     * Test attribute "closedAt"
      */
     public function testPropertyClosedAt()
     {
@@ -89,7 +89,7 @@ class MilestoneTest extends TestCase
     }
 
     /**
-     * Test attribute "closed_issues"
+     * Test attribute "closedIssues"
      */
     public function testPropertyClosedIssues()
     {
@@ -98,7 +98,7 @@ class MilestoneTest extends TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "createdAt"
      */
     public function testPropertyCreatedAt()
     {
@@ -116,7 +116,7 @@ class MilestoneTest extends TestCase
     }
 
     /**
-     * Test attribute "due_on"
+     * Test attribute "dueOn"
      */
     public function testPropertyDueOn()
     {
@@ -134,7 +134,7 @@ class MilestoneTest extends TestCase
     }
 
     /**
-     * Test attribute "open_issues"
+     * Test attribute "openIssues"
      */
     public function testPropertyOpenIssues()
     {
@@ -161,7 +161,7 @@ class MilestoneTest extends TestCase
     }
 
     /**
-     * Test attribute "updated_at"
+     * Test attribute "updatedAt"
      */
     public function testPropertyUpdatedAt()
     {

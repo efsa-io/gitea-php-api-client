@@ -63,24 +63,24 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
         'assignee' => '\Efsa\Client\Gitea\Model\User',
         'assignees' => '\Efsa\Client\Gitea\Model\User[]',
         'body' => 'string',
-        'closed_at' => '\DateTime',
+        'closedAt' => '\DateTime',
         'comments' => 'int',
-        'created_at' => '\DateTime',
-        'due_date' => '\DateTime',
-        'html_url' => 'string',
+        'createdAt' => '\DateTime',
+        'dueDate' => '\DateTime',
+        'htmlUrl' => 'string',
         'id' => 'int',
-        'is_locked' => 'bool',
+        'isLocked' => 'bool',
         'labels' => '\Efsa\Client\Gitea\Model\Label[]',
         'milestone' => '\Efsa\Client\Gitea\Model\Milestone',
         'number' => 'int',
-        'original_author' => 'string',
-        'original_author_id' => 'int',
-        'pull_request' => '\Efsa\Client\Gitea\Model\PullRequestMeta',
+        'originalAuthor' => 'string',
+        'originalAuthorId' => 'int',
+        'pullRequest' => '\Efsa\Client\Gitea\Model\PullRequestMeta',
         'ref' => 'string',
         'repository' => '\Efsa\Client\Gitea\Model\RepositoryMeta',
         'state' => 'string',
         'title' => 'string',
-        'updated_at' => '\DateTime',
+        'updatedAt' => '\DateTime',
         'url' => 'string',
         'user' => '\Efsa\Client\Gitea\Model\User'
     ];
@@ -96,24 +96,24 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
         'assignee' => null,
         'assignees' => null,
         'body' => null,
-        'closed_at' => 'date-time',
+        'closedAt' => 'date-time',
         'comments' => 'int64',
-        'created_at' => 'date-time',
-        'due_date' => 'date-time',
-        'html_url' => null,
+        'createdAt' => 'date-time',
+        'dueDate' => 'date-time',
+        'htmlUrl' => null,
         'id' => 'int64',
-        'is_locked' => null,
+        'isLocked' => null,
         'labels' => null,
         'milestone' => null,
         'number' => 'int64',
-        'original_author' => null,
-        'original_author_id' => 'int64',
-        'pull_request' => null,
+        'originalAuthor' => null,
+        'originalAuthorId' => 'int64',
+        'pullRequest' => null,
         'ref' => null,
         'repository' => null,
         'state' => null,
         'title' => null,
-        'updated_at' => 'date-time',
+        'updatedAt' => 'date-time',
         'url' => null,
         'user' => null
     ];
@@ -148,24 +148,24 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
         'assignee' => 'assignee',
         'assignees' => 'assignees',
         'body' => 'body',
-        'closed_at' => 'closed_at',
+        'closedAt' => 'closed_at',
         'comments' => 'comments',
-        'created_at' => 'created_at',
-        'due_date' => 'due_date',
-        'html_url' => 'html_url',
+        'createdAt' => 'created_at',
+        'dueDate' => 'due_date',
+        'htmlUrl' => 'html_url',
         'id' => 'id',
-        'is_locked' => 'is_locked',
+        'isLocked' => 'is_locked',
         'labels' => 'labels',
         'milestone' => 'milestone',
         'number' => 'number',
-        'original_author' => 'original_author',
-        'original_author_id' => 'original_author_id',
-        'pull_request' => 'pull_request',
+        'originalAuthor' => 'original_author',
+        'originalAuthorId' => 'original_author_id',
+        'pullRequest' => 'pull_request',
         'ref' => 'ref',
         'repository' => 'repository',
         'state' => 'state',
         'title' => 'title',
-        'updated_at' => 'updated_at',
+        'updatedAt' => 'updated_at',
         'url' => 'url',
         'user' => 'user'
     ];
@@ -179,24 +179,24 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
         'assignee' => 'setAssignee',
         'assignees' => 'setAssignees',
         'body' => 'setBody',
-        'closed_at' => 'setClosedAt',
+        'closedAt' => 'setClosedAt',
         'comments' => 'setComments',
-        'created_at' => 'setCreatedAt',
-        'due_date' => 'setDueDate',
-        'html_url' => 'setHtmlUrl',
+        'createdAt' => 'setCreatedAt',
+        'dueDate' => 'setDueDate',
+        'htmlUrl' => 'setHtmlUrl',
         'id' => 'setId',
-        'is_locked' => 'setIsLocked',
+        'isLocked' => 'setIsLocked',
         'labels' => 'setLabels',
         'milestone' => 'setMilestone',
         'number' => 'setNumber',
-        'original_author' => 'setOriginalAuthor',
-        'original_author_id' => 'setOriginalAuthorId',
-        'pull_request' => 'setPullRequest',
+        'originalAuthor' => 'setOriginalAuthor',
+        'originalAuthorId' => 'setOriginalAuthorId',
+        'pullRequest' => 'setPullRequest',
         'ref' => 'setRef',
         'repository' => 'setRepository',
         'state' => 'setState',
         'title' => 'setTitle',
-        'updated_at' => 'setUpdatedAt',
+        'updatedAt' => 'setUpdatedAt',
         'url' => 'setUrl',
         'user' => 'setUser'
     ];
@@ -210,24 +210,24 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
         'assignee' => 'getAssignee',
         'assignees' => 'getAssignees',
         'body' => 'getBody',
-        'closed_at' => 'getClosedAt',
+        'closedAt' => 'getClosedAt',
         'comments' => 'getComments',
-        'created_at' => 'getCreatedAt',
-        'due_date' => 'getDueDate',
-        'html_url' => 'getHtmlUrl',
+        'createdAt' => 'getCreatedAt',
+        'dueDate' => 'getDueDate',
+        'htmlUrl' => 'getHtmlUrl',
         'id' => 'getId',
-        'is_locked' => 'getIsLocked',
+        'isLocked' => 'getIsLocked',
         'labels' => 'getLabels',
         'milestone' => 'getMilestone',
         'number' => 'getNumber',
-        'original_author' => 'getOriginalAuthor',
-        'original_author_id' => 'getOriginalAuthorId',
-        'pull_request' => 'getPullRequest',
+        'originalAuthor' => 'getOriginalAuthor',
+        'originalAuthorId' => 'getOriginalAuthorId',
+        'pullRequest' => 'getPullRequest',
         'ref' => 'getRef',
         'repository' => 'getRepository',
         'state' => 'getState',
         'title' => 'getTitle',
-        'updated_at' => 'getUpdatedAt',
+        'updatedAt' => 'getUpdatedAt',
         'url' => 'getUrl',
         'user' => 'getUser'
     ];
@@ -292,24 +292,24 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['assignee'] = $data['assignee'] ?? null;
         $this->container['assignees'] = $data['assignees'] ?? null;
         $this->container['body'] = $data['body'] ?? null;
-        $this->container['closed_at'] = $data['closed_at'] ?? null;
+        $this->container['closedAt'] = $data['closedAt'] ?? null;
         $this->container['comments'] = $data['comments'] ?? null;
-        $this->container['created_at'] = $data['created_at'] ?? null;
-        $this->container['due_date'] = $data['due_date'] ?? null;
-        $this->container['html_url'] = $data['html_url'] ?? null;
+        $this->container['createdAt'] = $data['createdAt'] ?? null;
+        $this->container['dueDate'] = $data['dueDate'] ?? null;
+        $this->container['htmlUrl'] = $data['htmlUrl'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['is_locked'] = $data['is_locked'] ?? null;
+        $this->container['isLocked'] = $data['isLocked'] ?? null;
         $this->container['labels'] = $data['labels'] ?? null;
         $this->container['milestone'] = $data['milestone'] ?? null;
         $this->container['number'] = $data['number'] ?? null;
-        $this->container['original_author'] = $data['original_author'] ?? null;
-        $this->container['original_author_id'] = $data['original_author_id'] ?? null;
-        $this->container['pull_request'] = $data['pull_request'] ?? null;
+        $this->container['originalAuthor'] = $data['originalAuthor'] ?? null;
+        $this->container['originalAuthorId'] = $data['originalAuthorId'] ?? null;
+        $this->container['pullRequest'] = $data['pullRequest'] ?? null;
         $this->container['ref'] = $data['ref'] ?? null;
         $this->container['repository'] = $data['repository'] ?? null;
         $this->container['state'] = $data['state'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
-        $this->container['updated_at'] = $data['updated_at'] ?? null;
+        $this->container['updatedAt'] = $data['updatedAt'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
         $this->container['user'] = $data['user'] ?? null;
     }
@@ -411,25 +411,25 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets closed_at
+     * Gets closedAt
      *
      * @return \DateTime|null
      */
     public function getClosedAt()
     {
-        return $this->container['closed_at'];
+        return $this->container['closedAt'];
     }
 
     /**
-     * Sets closed_at
+     * Sets closedAt
      *
-     * @param \DateTime|null $closed_at closed_at
+     * @param \DateTime|null $closedAt closedAt
      *
      * @return self
      */
-    public function setClosedAt($closed_at)
+    public function setClosedAt($closedAt)
     {
-        $this->container['closed_at'] = $closed_at;
+        $this->container['closedAt'] = $closedAt;
 
         return $this;
     }
@@ -459,73 +459,73 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime|null
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $createdAt createdAt
      *
      * @return self
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }
 
     /**
-     * Gets due_date
+     * Gets dueDate
      *
      * @return \DateTime|null
      */
     public function getDueDate()
     {
-        return $this->container['due_date'];
+        return $this->container['dueDate'];
     }
 
     /**
-     * Sets due_date
+     * Sets dueDate
      *
-     * @param \DateTime|null $due_date due_date
+     * @param \DateTime|null $dueDate dueDate
      *
      * @return self
      */
-    public function setDueDate($due_date)
+    public function setDueDate($dueDate)
     {
-        $this->container['due_date'] = $due_date;
+        $this->container['dueDate'] = $dueDate;
 
         return $this;
     }
 
     /**
-     * Gets html_url
+     * Gets htmlUrl
      *
      * @return string|null
      */
     public function getHtmlUrl()
     {
-        return $this->container['html_url'];
+        return $this->container['htmlUrl'];
     }
 
     /**
-     * Sets html_url
+     * Sets htmlUrl
      *
-     * @param string|null $html_url html_url
+     * @param string|null $htmlUrl htmlUrl
      *
      * @return self
      */
-    public function setHtmlUrl($html_url)
+    public function setHtmlUrl($htmlUrl)
     {
-        $this->container['html_url'] = $html_url;
+        $this->container['htmlUrl'] = $htmlUrl;
 
         return $this;
     }
@@ -555,25 +555,25 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets is_locked
+     * Gets isLocked
      *
      * @return bool|null
      */
     public function getIsLocked()
     {
-        return $this->container['is_locked'];
+        return $this->container['isLocked'];
     }
 
     /**
-     * Sets is_locked
+     * Sets isLocked
      *
-     * @param bool|null $is_locked is_locked
+     * @param bool|null $isLocked isLocked
      *
      * @return self
      */
-    public function setIsLocked($is_locked)
+    public function setIsLocked($isLocked)
     {
-        $this->container['is_locked'] = $is_locked;
+        $this->container['isLocked'] = $isLocked;
 
         return $this;
     }
@@ -651,73 +651,73 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets original_author
+     * Gets originalAuthor
      *
      * @return string|null
      */
     public function getOriginalAuthor()
     {
-        return $this->container['original_author'];
+        return $this->container['originalAuthor'];
     }
 
     /**
-     * Sets original_author
+     * Sets originalAuthor
      *
-     * @param string|null $original_author original_author
+     * @param string|null $originalAuthor originalAuthor
      *
      * @return self
      */
-    public function setOriginalAuthor($original_author)
+    public function setOriginalAuthor($originalAuthor)
     {
-        $this->container['original_author'] = $original_author;
+        $this->container['originalAuthor'] = $originalAuthor;
 
         return $this;
     }
 
     /**
-     * Gets original_author_id
+     * Gets originalAuthorId
      *
      * @return int|null
      */
     public function getOriginalAuthorId()
     {
-        return $this->container['original_author_id'];
+        return $this->container['originalAuthorId'];
     }
 
     /**
-     * Sets original_author_id
+     * Sets originalAuthorId
      *
-     * @param int|null $original_author_id original_author_id
+     * @param int|null $originalAuthorId originalAuthorId
      *
      * @return self
      */
-    public function setOriginalAuthorId($original_author_id)
+    public function setOriginalAuthorId($originalAuthorId)
     {
-        $this->container['original_author_id'] = $original_author_id;
+        $this->container['originalAuthorId'] = $originalAuthorId;
 
         return $this;
     }
 
     /**
-     * Gets pull_request
+     * Gets pullRequest
      *
      * @return \Efsa\Client\Gitea\Model\PullRequestMeta|null
      */
     public function getPullRequest()
     {
-        return $this->container['pull_request'];
+        return $this->container['pullRequest'];
     }
 
     /**
-     * Sets pull_request
+     * Sets pullRequest
      *
-     * @param \Efsa\Client\Gitea\Model\PullRequestMeta|null $pull_request pull_request
+     * @param \Efsa\Client\Gitea\Model\PullRequestMeta|null $pullRequest pullRequest
      *
      * @return self
      */
-    public function setPullRequest($pull_request)
+    public function setPullRequest($pullRequest)
     {
-        $this->container['pull_request'] = $pull_request;
+        $this->container['pullRequest'] = $pullRequest;
 
         return $this;
     }
@@ -819,25 +819,25 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets updated_at
+     * Gets updatedAt
      *
      * @return \DateTime|null
      */
     public function getUpdatedAt()
     {
-        return $this->container['updated_at'];
+        return $this->container['updatedAt'];
     }
 
     /**
-     * Sets updated_at
+     * Sets updatedAt
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updatedAt updatedAt
      *
      * @return self
      */
-    public function setUpdatedAt($updated_at)
+    public function setUpdatedAt($updatedAt)
     {
-        $this->container['updated_at'] = $updated_at;
+        $this->container['updatedAt'] = $updatedAt;
 
         return $this;
     }

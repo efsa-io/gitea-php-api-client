@@ -60,17 +60,17 @@ class CreateRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'auto_init' => 'bool',
-        'default_branch' => 'string',
+        'autoInit' => 'bool',
+        'defaultBranch' => 'string',
         'description' => 'string',
         'gitignores' => 'string',
-        'issue_labels' => 'string',
+        'issueLabels' => 'string',
         'license' => 'string',
         'name' => 'string',
         'private' => 'bool',
         'readme' => 'string',
         'template' => 'bool',
-        'trust_model' => 'string'
+        'trustModel' => 'string'
     ];
 
     /**
@@ -81,17 +81,17 @@ class CreateRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'auto_init' => null,
-        'default_branch' => null,
+        'autoInit' => null,
+        'defaultBranch' => null,
         'description' => null,
         'gitignores' => null,
-        'issue_labels' => null,
+        'issueLabels' => null,
         'license' => null,
         'name' => null,
         'private' => null,
         'readme' => null,
         'template' => null,
-        'trust_model' => null
+        'trustModel' => null
     ];
 
     /**
@@ -121,17 +121,17 @@ class CreateRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'auto_init' => 'auto_init',
-        'default_branch' => 'default_branch',
+        'autoInit' => 'auto_init',
+        'defaultBranch' => 'default_branch',
         'description' => 'description',
         'gitignores' => 'gitignores',
-        'issue_labels' => 'issue_labels',
+        'issueLabels' => 'issue_labels',
         'license' => 'license',
         'name' => 'name',
         'private' => 'private',
         'readme' => 'readme',
         'template' => 'template',
-        'trust_model' => 'trust_model'
+        'trustModel' => 'trust_model'
     ];
 
     /**
@@ -140,17 +140,17 @@ class CreateRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'auto_init' => 'setAutoInit',
-        'default_branch' => 'setDefaultBranch',
+        'autoInit' => 'setAutoInit',
+        'defaultBranch' => 'setDefaultBranch',
         'description' => 'setDescription',
         'gitignores' => 'setGitignores',
-        'issue_labels' => 'setIssueLabels',
+        'issueLabels' => 'setIssueLabels',
         'license' => 'setLicense',
         'name' => 'setName',
         'private' => 'setPrivate',
         'readme' => 'setReadme',
         'template' => 'setTemplate',
-        'trust_model' => 'setTrustModel'
+        'trustModel' => 'setTrustModel'
     ];
 
     /**
@@ -159,17 +159,17 @@ class CreateRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'auto_init' => 'getAutoInit',
-        'default_branch' => 'getDefaultBranch',
+        'autoInit' => 'getAutoInit',
+        'defaultBranch' => 'getDefaultBranch',
         'description' => 'getDescription',
         'gitignores' => 'getGitignores',
-        'issue_labels' => 'getIssueLabels',
+        'issueLabels' => 'getIssueLabels',
         'license' => 'getLicense',
         'name' => 'getName',
         'private' => 'getPrivate',
         'readme' => 'getReadme',
         'template' => 'getTemplate',
-        'trust_model' => 'getTrustModel'
+        'trustModel' => 'getTrustModel'
     ];
 
     /**
@@ -248,17 +248,17 @@ class CreateRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['auto_init'] = $data['auto_init'] ?? null;
-        $this->container['default_branch'] = $data['default_branch'] ?? null;
+        $this->container['autoInit'] = $data['autoInit'] ?? null;
+        $this->container['defaultBranch'] = $data['defaultBranch'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
         $this->container['gitignores'] = $data['gitignores'] ?? null;
-        $this->container['issue_labels'] = $data['issue_labels'] ?? null;
+        $this->container['issueLabels'] = $data['issueLabels'] ?? null;
         $this->container['license'] = $data['license'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['private'] = $data['private'] ?? null;
         $this->container['readme'] = $data['readme'] ?? null;
         $this->container['template'] = $data['template'] ?? null;
-        $this->container['trust_model'] = $data['trust_model'] ?? null;
+        $this->container['trustModel'] = $data['trustModel'] ?? null;
     }
 
     /**
@@ -274,10 +274,10 @@ class CreateRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "'name' can't be null";
         }
         $allowedValues = $this->getTrustModelAllowableValues();
-        if (!is_null($this->container['trust_model']) && !in_array($this->container['trust_model'], $allowedValues, true)) {
+        if (!is_null($this->container['trustModel']) && !in_array($this->container['trustModel'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'trust_model', must be one of '%s'",
-                $this->container['trust_model'],
+                "invalid value '%s' for 'trustModel', must be one of '%s'",
+                $this->container['trustModel'],
                 implode("', '", $allowedValues)
             );
         }
@@ -298,49 +298,49 @@ class CreateRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets auto_init
+     * Gets autoInit
      *
      * @return bool|null
      */
     public function getAutoInit()
     {
-        return $this->container['auto_init'];
+        return $this->container['autoInit'];
     }
 
     /**
-     * Sets auto_init
+     * Sets autoInit
      *
-     * @param bool|null $auto_init Whether the repository should be auto-initialized?
+     * @param bool|null $autoInit Whether the repository should be auto-initialized?
      *
      * @return self
      */
-    public function setAutoInit($auto_init)
+    public function setAutoInit($autoInit)
     {
-        $this->container['auto_init'] = $auto_init;
+        $this->container['autoInit'] = $autoInit;
 
         return $this;
     }
 
     /**
-     * Gets default_branch
+     * Gets defaultBranch
      *
      * @return string|null
      */
     public function getDefaultBranch()
     {
-        return $this->container['default_branch'];
+        return $this->container['defaultBranch'];
     }
 
     /**
-     * Sets default_branch
+     * Sets defaultBranch
      *
-     * @param string|null $default_branch DefaultBranch of the repository (used when initializes and in template)
+     * @param string|null $defaultBranch DefaultBranch of the repository (used when initializes and in template)
      *
      * @return self
      */
-    public function setDefaultBranch($default_branch)
+    public function setDefaultBranch($defaultBranch)
     {
-        $this->container['default_branch'] = $default_branch;
+        $this->container['defaultBranch'] = $defaultBranch;
 
         return $this;
     }
@@ -394,25 +394,25 @@ class CreateRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets issue_labels
+     * Gets issueLabels
      *
      * @return string|null
      */
     public function getIssueLabels()
     {
-        return $this->container['issue_labels'];
+        return $this->container['issueLabels'];
     }
 
     /**
-     * Sets issue_labels
+     * Sets issueLabels
      *
-     * @param string|null $issue_labels Label-Set to use
+     * @param string|null $issueLabels Label-Set to use
      *
      * @return self
      */
-    public function setIssueLabels($issue_labels)
+    public function setIssueLabels($issueLabels)
     {
-        $this->container['issue_labels'] = $issue_labels;
+        $this->container['issueLabels'] = $issueLabels;
 
         return $this;
     }
@@ -538,35 +538,35 @@ class CreateRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets trust_model
+     * Gets trustModel
      *
      * @return string|null
      */
     public function getTrustModel()
     {
-        return $this->container['trust_model'];
+        return $this->container['trustModel'];
     }
 
     /**
-     * Sets trust_model
+     * Sets trustModel
      *
-     * @param string|null $trust_model TrustModel of the repository
+     * @param string|null $trustModel TrustModel of the repository
      *
      * @return self
      */
-    public function setTrustModel($trust_model)
+    public function setTrustModel($trustModel)
     {
         $allowedValues = $this->getTrustModelAllowableValues();
-        if (!is_null($trust_model) && !in_array($trust_model, $allowedValues, true)) {
+        if (!is_null($trustModel) && !in_array($trustModel, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'trust_model', must be one of '%s'",
-                    $trust_model,
+                    "Invalid value '%s' for 'trustModel', must be one of '%s'",
+                    $trustModel,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['trust_model'] = $trust_model;
+        $this->container['trustModel'] = $trustModel;
 
         return $this;
     }

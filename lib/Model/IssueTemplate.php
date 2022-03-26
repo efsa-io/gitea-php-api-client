@@ -62,7 +62,7 @@ class IssueTemplate implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'about' => 'string',
         'content' => 'string',
-        'file_name' => 'string',
+        'fileName' => 'string',
         'labels' => 'string[]',
         'name' => 'string',
         'ref' => 'string',
@@ -79,7 +79,7 @@ class IssueTemplate implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'about' => null,
         'content' => null,
-        'file_name' => null,
+        'fileName' => null,
         'labels' => null,
         'name' => null,
         'ref' => null,
@@ -115,7 +115,7 @@ class IssueTemplate implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'about' => 'about',
         'content' => 'content',
-        'file_name' => 'file_name',
+        'fileName' => 'file_name',
         'labels' => 'labels',
         'name' => 'name',
         'ref' => 'ref',
@@ -130,7 +130,7 @@ class IssueTemplate implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'about' => 'setAbout',
         'content' => 'setContent',
-        'file_name' => 'setFileName',
+        'fileName' => 'setFileName',
         'labels' => 'setLabels',
         'name' => 'setName',
         'ref' => 'setRef',
@@ -145,7 +145,7 @@ class IssueTemplate implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'about' => 'getAbout',
         'content' => 'getContent',
-        'file_name' => 'getFileName',
+        'fileName' => 'getFileName',
         'labels' => 'getLabels',
         'name' => 'getName',
         'ref' => 'getRef',
@@ -211,7 +211,7 @@ class IssueTemplate implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['about'] = $data['about'] ?? null;
         $this->container['content'] = $data['content'] ?? null;
-        $this->container['file_name'] = $data['file_name'] ?? null;
+        $this->container['fileName'] = $data['fileName'] ?? null;
         $this->container['labels'] = $data['labels'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['ref'] = $data['ref'] ?? null;
@@ -291,25 +291,25 @@ class IssueTemplate implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets file_name
+     * Gets fileName
      *
      * @return string|null
      */
     public function getFileName()
     {
-        return $this->container['file_name'];
+        return $this->container['fileName'];
     }
 
     /**
-     * Sets file_name
+     * Sets fileName
      *
-     * @param string|null $file_name file_name
+     * @param string|null $fileName fileName
      *
      * @return self
      */
-    public function setFileName($file_name)
+    public function setFileName($fileName)
     {
-        $this->container['file_name'] = $file_name;
+        $this->container['fileName'] = $fileName;
 
         return $this;
     }

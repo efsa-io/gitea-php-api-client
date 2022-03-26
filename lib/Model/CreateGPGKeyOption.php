@@ -60,8 +60,8 @@ class CreateGPGKeyOption implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'armored_public_key' => 'string',
-        'armored_signature' => 'string'
+        'armoredPublicKey' => 'string',
+        'armoredSignature' => 'string'
     ];
 
     /**
@@ -72,8 +72,8 @@ class CreateGPGKeyOption implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'armored_public_key' => null,
-        'armored_signature' => null
+        'armoredPublicKey' => null,
+        'armoredSignature' => null
     ];
 
     /**
@@ -103,8 +103,8 @@ class CreateGPGKeyOption implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'armored_public_key' => 'armored_public_key',
-        'armored_signature' => 'armored_signature'
+        'armoredPublicKey' => 'armored_public_key',
+        'armoredSignature' => 'armored_signature'
     ];
 
     /**
@@ -113,8 +113,8 @@ class CreateGPGKeyOption implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'armored_public_key' => 'setArmoredPublicKey',
-        'armored_signature' => 'setArmoredSignature'
+        'armoredPublicKey' => 'setArmoredPublicKey',
+        'armoredSignature' => 'setArmoredSignature'
     ];
 
     /**
@@ -123,8 +123,8 @@ class CreateGPGKeyOption implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'armored_public_key' => 'getArmoredPublicKey',
-        'armored_signature' => 'getArmoredSignature'
+        'armoredPublicKey' => 'getArmoredPublicKey',
+        'armoredSignature' => 'getArmoredSignature'
     ];
 
     /**
@@ -184,8 +184,8 @@ class CreateGPGKeyOption implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['armored_public_key'] = $data['armored_public_key'] ?? null;
-        $this->container['armored_signature'] = $data['armored_signature'] ?? null;
+        $this->container['armoredPublicKey'] = $data['armoredPublicKey'] ?? null;
+        $this->container['armoredSignature'] = $data['armoredSignature'] ?? null;
     }
 
     /**
@@ -197,8 +197,8 @@ class CreateGPGKeyOption implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $invalidProperties = [];
 
-        if ($this->container['armored_public_key'] === null) {
-            $invalidProperties[] = "'armored_public_key' can't be null";
+        if ($this->container['armoredPublicKey'] === null) {
+            $invalidProperties[] = "'armoredPublicKey' can't be null";
         }
         return $invalidProperties;
     }
@@ -216,49 +216,49 @@ class CreateGPGKeyOption implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets armored_public_key
+     * Gets armoredPublicKey
      *
      * @return string
      */
     public function getArmoredPublicKey()
     {
-        return $this->container['armored_public_key'];
+        return $this->container['armoredPublicKey'];
     }
 
     /**
-     * Sets armored_public_key
+     * Sets armoredPublicKey
      *
-     * @param string $armored_public_key An armored GPG key to add
+     * @param string $armoredPublicKey An armored GPG key to add
      *
      * @return self
      */
-    public function setArmoredPublicKey($armored_public_key)
+    public function setArmoredPublicKey($armoredPublicKey)
     {
-        $this->container['armored_public_key'] = $armored_public_key;
+        $this->container['armoredPublicKey'] = $armoredPublicKey;
 
         return $this;
     }
 
     /**
-     * Gets armored_signature
+     * Gets armoredSignature
      *
      * @return string|null
      */
     public function getArmoredSignature()
     {
-        return $this->container['armored_signature'];
+        return $this->container['armoredSignature'];
     }
 
     /**
-     * Sets armored_signature
+     * Sets armoredSignature
      *
-     * @param string|null $armored_signature armored_signature
+     * @param string|null $armoredSignature armoredSignature
      *
      * @return self
      */
-    public function setArmoredSignature($armored_signature)
+    public function setArmoredSignature($armoredSignature)
     {
-        $this->container['armored_signature'] = $armored_signature;
+        $this->container['armoredSignature'] = $armoredSignature;
 
         return $this;
     }

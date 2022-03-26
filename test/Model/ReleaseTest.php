@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Release represents a repository release
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -107,7 +107,7 @@ class ReleaseTest extends TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "createdAt"
      */
     public function testPropertyCreatedAt()
     {
@@ -125,7 +125,7 @@ class ReleaseTest extends TestCase
     }
 
     /**
-     * Test attribute "html_url"
+     * Test attribute "htmlUrl"
      */
     public function testPropertyHtmlUrl()
     {
@@ -161,7 +161,7 @@ class ReleaseTest extends TestCase
     }
 
     /**
-     * Test attribute "published_at"
+     * Test attribute "publishedAt"
      */
     public function testPropertyPublishedAt()
     {
@@ -170,7 +170,7 @@ class ReleaseTest extends TestCase
     }
 
     /**
-     * Test attribute "tag_name"
+     * Test attribute "tagName"
      */
     public function testPropertyTagName()
     {
@@ -179,7 +179,7 @@ class ReleaseTest extends TestCase
     }
 
     /**
-     * Test attribute "tarball_url"
+     * Test attribute "tarballUrl"
      */
     public function testPropertyTarballUrl()
     {
@@ -188,7 +188,7 @@ class ReleaseTest extends TestCase
     }
 
     /**
-     * Test attribute "target_commitish"
+     * Test attribute "targetCommitish"
      */
     public function testPropertyTargetCommitish()
     {
@@ -206,7 +206,7 @@ class ReleaseTest extends TestCase
     }
 
     /**
-     * Test attribute "zipball_url"
+     * Test attribute "zipballUrl"
      */
     public function testPropertyZipballUrl()
     {

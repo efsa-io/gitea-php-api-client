@@ -63,12 +63,12 @@ class EditIssueOption implements ModelInterface, ArrayAccess, \JsonSerializable
         'assignee' => 'string',
         'assignees' => 'string[]',
         'body' => 'string',
-        'due_date' => '\DateTime',
+        'dueDate' => '\DateTime',
         'milestone' => 'int',
         'ref' => 'string',
         'state' => 'string',
         'title' => 'string',
-        'unset_due_date' => 'bool'
+        'unsetDueDate' => 'bool'
     ];
 
     /**
@@ -82,12 +82,12 @@ class EditIssueOption implements ModelInterface, ArrayAccess, \JsonSerializable
         'assignee' => null,
         'assignees' => null,
         'body' => null,
-        'due_date' => 'date-time',
+        'dueDate' => 'date-time',
         'milestone' => 'int64',
         'ref' => null,
         'state' => null,
         'title' => null,
-        'unset_due_date' => null
+        'unsetDueDate' => null
     ];
 
     /**
@@ -120,12 +120,12 @@ class EditIssueOption implements ModelInterface, ArrayAccess, \JsonSerializable
         'assignee' => 'assignee',
         'assignees' => 'assignees',
         'body' => 'body',
-        'due_date' => 'due_date',
+        'dueDate' => 'due_date',
         'milestone' => 'milestone',
         'ref' => 'ref',
         'state' => 'state',
         'title' => 'title',
-        'unset_due_date' => 'unset_due_date'
+        'unsetDueDate' => 'unset_due_date'
     ];
 
     /**
@@ -137,12 +137,12 @@ class EditIssueOption implements ModelInterface, ArrayAccess, \JsonSerializable
         'assignee' => 'setAssignee',
         'assignees' => 'setAssignees',
         'body' => 'setBody',
-        'due_date' => 'setDueDate',
+        'dueDate' => 'setDueDate',
         'milestone' => 'setMilestone',
         'ref' => 'setRef',
         'state' => 'setState',
         'title' => 'setTitle',
-        'unset_due_date' => 'setUnsetDueDate'
+        'unsetDueDate' => 'setUnsetDueDate'
     ];
 
     /**
@@ -154,12 +154,12 @@ class EditIssueOption implements ModelInterface, ArrayAccess, \JsonSerializable
         'assignee' => 'getAssignee',
         'assignees' => 'getAssignees',
         'body' => 'getBody',
-        'due_date' => 'getDueDate',
+        'dueDate' => 'getDueDate',
         'milestone' => 'getMilestone',
         'ref' => 'getRef',
         'state' => 'getState',
         'title' => 'getTitle',
-        'unset_due_date' => 'getUnsetDueDate'
+        'unsetDueDate' => 'getUnsetDueDate'
     ];
 
     /**
@@ -222,12 +222,12 @@ class EditIssueOption implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['assignee'] = $data['assignee'] ?? null;
         $this->container['assignees'] = $data['assignees'] ?? null;
         $this->container['body'] = $data['body'] ?? null;
-        $this->container['due_date'] = $data['due_date'] ?? null;
+        $this->container['dueDate'] = $data['dueDate'] ?? null;
         $this->container['milestone'] = $data['milestone'] ?? null;
         $this->container['ref'] = $data['ref'] ?? null;
         $this->container['state'] = $data['state'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
-        $this->container['unset_due_date'] = $data['unset_due_date'] ?? null;
+        $this->container['unsetDueDate'] = $data['unsetDueDate'] ?? null;
     }
 
     /**
@@ -327,25 +327,25 @@ class EditIssueOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets due_date
+     * Gets dueDate
      *
      * @return \DateTime|null
      */
     public function getDueDate()
     {
-        return $this->container['due_date'];
+        return $this->container['dueDate'];
     }
 
     /**
-     * Sets due_date
+     * Sets dueDate
      *
-     * @param \DateTime|null $due_date due_date
+     * @param \DateTime|null $dueDate dueDate
      *
      * @return self
      */
-    public function setDueDate($due_date)
+    public function setDueDate($dueDate)
     {
-        $this->container['due_date'] = $due_date;
+        $this->container['dueDate'] = $dueDate;
 
         return $this;
     }
@@ -447,25 +447,25 @@ class EditIssueOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets unset_due_date
+     * Gets unsetDueDate
      *
      * @return bool|null
      */
     public function getUnsetDueDate()
     {
-        return $this->container['unset_due_date'];
+        return $this->container['unsetDueDate'];
     }
 
     /**
-     * Sets unset_due_date
+     * Sets unsetDueDate
      *
-     * @param bool|null $unset_due_date unset_due_date
+     * @param bool|null $unsetDueDate unsetDueDate
      *
      * @return self
      */
-    public function setUnsetDueDate($unset_due_date)
+    public function setUnsetDueDate($unsetDueDate)
     {
-        $this->container['unset_due_date'] = $unset_due_date;
+        $this->container['unsetDueDate'] = $unsetDueDate;
 
         return $this;
     }

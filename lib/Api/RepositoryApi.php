@@ -1054,17 +1054,17 @@ class RepositoryApi
      *
      * Create a repository using a template
      *
-     * @param  string $template_owner name of the template repository owner (required)
-     * @param  string $template_repo name of the template repository (required)
+     * @param  string $templateOwner name of the template repository owner (required)
+     * @param  string $templateRepo name of the template repository (required)
      * @param  \Efsa\Client\Gitea\Model\GenerateRepoOption $body body (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\Repository
      */
-    public function generateRepo($template_owner, $template_repo, $body = null)
+    public function generateRepo($templateOwner, $templateRepo, $body = null)
     {
-        list($response) = $this->generateRepoWithHttpInfo($template_owner, $template_repo, $body);
+        list($response) = $this->generateRepoWithHttpInfo($templateOwner, $templateRepo, $body);
         return $response;
     }
 
@@ -1073,17 +1073,17 @@ class RepositoryApi
      *
      * Create a repository using a template
      *
-     * @param  string $template_owner name of the template repository owner (required)
-     * @param  string $template_repo name of the template repository (required)
+     * @param  string $templateOwner name of the template repository owner (required)
+     * @param  string $templateRepo name of the template repository (required)
      * @param  \Efsa\Client\Gitea\Model\GenerateRepoOption $body (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\Repository, HTTP status code, HTTP response headers (array of strings)
      */
-    public function generateRepoWithHttpInfo($template_owner, $template_repo, $body = null)
+    public function generateRepoWithHttpInfo($templateOwner, $templateRepo, $body = null)
     {
-        $request = $this->generateRepoRequest($template_owner, $template_repo, $body);
+        $request = $this->generateRepoRequest($templateOwner, $templateRepo, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1161,16 +1161,16 @@ class RepositoryApi
      *
      * Create a repository using a template
      *
-     * @param  string $template_owner name of the template repository owner (required)
-     * @param  string $template_repo name of the template repository (required)
+     * @param  string $templateOwner name of the template repository owner (required)
+     * @param  string $templateRepo name of the template repository (required)
      * @param  \Efsa\Client\Gitea\Model\GenerateRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function generateRepoAsync($template_owner, $template_repo, $body = null)
+    public function generateRepoAsync($templateOwner, $templateRepo, $body = null)
     {
-        return $this->generateRepoAsyncWithHttpInfo($template_owner, $template_repo, $body)
+        return $this->generateRepoAsyncWithHttpInfo($templateOwner, $templateRepo, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1183,17 +1183,17 @@ class RepositoryApi
      *
      * Create a repository using a template
      *
-     * @param  string $template_owner name of the template repository owner (required)
-     * @param  string $template_repo name of the template repository (required)
+     * @param  string $templateOwner name of the template repository owner (required)
+     * @param  string $templateRepo name of the template repository (required)
      * @param  \Efsa\Client\Gitea\Model\GenerateRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function generateRepoAsyncWithHttpInfo($template_owner, $template_repo, $body = null)
+    public function generateRepoAsyncWithHttpInfo($templateOwner, $templateRepo, $body = null)
     {
         $returnType = '\Efsa\Client\Gitea\Model\Repository';
-        $request = $this->generateRepoRequest($template_owner, $template_repo, $body);
+        $request = $this->generateRepoRequest($templateOwner, $templateRepo, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1231,25 +1231,25 @@ class RepositoryApi
     /**
      * Create request for operation 'generateRepo'
      *
-     * @param  string $template_owner name of the template repository owner (required)
-     * @param  string $template_repo name of the template repository (required)
+     * @param  string $templateOwner name of the template repository owner (required)
+     * @param  string $templateRepo name of the template repository (required)
      * @param  \Efsa\Client\Gitea\Model\GenerateRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function generateRepoRequest($template_owner, $template_repo, $body = null)
+    public function generateRepoRequest($templateOwner, $templateRepo, $body = null)
     {
-        // verify the required parameter 'template_owner' is set
-        if ($template_owner === null || (is_array($template_owner) && count($template_owner) === 0)) {
+        // verify the required parameter 'templateOwner' is set
+        if ($templateOwner === null || (is_array($templateOwner) && count($templateOwner) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $template_owner when calling generateRepo'
+                'Missing the required parameter $templateOwner when calling generateRepo'
             );
         }
-        // verify the required parameter 'template_repo' is set
-        if ($template_repo === null || (is_array($template_repo) && count($template_repo) === 0)) {
+        // verify the required parameter 'templateRepo' is set
+        if ($templateRepo === null || (is_array($templateRepo) && count($templateRepo) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $template_repo when calling generateRepo'
+                'Missing the required parameter $templateRepo when calling generateRepo'
             );
         }
 
@@ -1263,18 +1263,18 @@ class RepositoryApi
 
 
         // path params
-        if ($template_owner !== null) {
+        if ($templateOwner !== null) {
             $resourcePath = str_replace(
                 '{' . 'template_owner' . '}',
-                ObjectSerializer::toPathValue($template_owner),
+                ObjectSerializer::toPathValue($templateOwner),
                 $resourcePath
             );
         }
         // path params
-        if ($template_repo !== null) {
+        if ($templateRepo !== null) {
             $resourcePath = str_replace(
                 '{' . 'template_repo' . '}',
-                ObjectSerializer::toPathValue($template_repo),
+                ObjectSerializer::toPathValue($templateRepo),
                 $resourcePath
             );
         }
@@ -2059,15 +2059,15 @@ class RepositoryApi
      * @param  string $sha sha of the commit (required)
      * @param  bool $recursive show all directories and files (optional)
      * @param  int $page page number; the &#39;truncated&#39; field in the response will be true if there are still more items after this page, false if the last page (optional)
-     * @param  int $per_page number of items per page (optional)
+     * @param  int $perPage number of items per page (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\GitTreeResponse
      */
-    public function getTree($owner, $repo, $sha, $recursive = null, $page = null, $per_page = null)
+    public function getTree($owner, $repo, $sha, $recursive = null, $page = null, $perPage = null)
     {
-        list($response) = $this->getTreeWithHttpInfo($owner, $repo, $sha, $recursive, $page, $per_page);
+        list($response) = $this->getTreeWithHttpInfo($owner, $repo, $sha, $recursive, $page, $perPage);
         return $response;
     }
 
@@ -2081,15 +2081,15 @@ class RepositoryApi
      * @param  string $sha sha of the commit (required)
      * @param  bool $recursive show all directories and files (optional)
      * @param  int $page page number; the &#39;truncated&#39; field in the response will be true if there are still more items after this page, false if the last page (optional)
-     * @param  int $per_page number of items per page (optional)
+     * @param  int $perPage number of items per page (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\GitTreeResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTreeWithHttpInfo($owner, $repo, $sha, $recursive = null, $page = null, $per_page = null)
+    public function getTreeWithHttpInfo($owner, $repo, $sha, $recursive = null, $page = null, $perPage = null)
     {
-        $request = $this->getTreeRequest($owner, $repo, $sha, $recursive, $page, $per_page);
+        $request = $this->getTreeRequest($owner, $repo, $sha, $recursive, $page, $perPage);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2172,14 +2172,14 @@ class RepositoryApi
      * @param  string $sha sha of the commit (required)
      * @param  bool $recursive show all directories and files (optional)
      * @param  int $page page number; the &#39;truncated&#39; field in the response will be true if there are still more items after this page, false if the last page (optional)
-     * @param  int $per_page number of items per page (optional)
+     * @param  int $perPage number of items per page (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTreeAsync($owner, $repo, $sha, $recursive = null, $page = null, $per_page = null)
+    public function getTreeAsync($owner, $repo, $sha, $recursive = null, $page = null, $perPage = null)
     {
-        return $this->getTreeAsyncWithHttpInfo($owner, $repo, $sha, $recursive, $page, $per_page)
+        return $this->getTreeAsyncWithHttpInfo($owner, $repo, $sha, $recursive, $page, $perPage)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2197,15 +2197,15 @@ class RepositoryApi
      * @param  string $sha sha of the commit (required)
      * @param  bool $recursive show all directories and files (optional)
      * @param  int $page page number; the &#39;truncated&#39; field in the response will be true if there are still more items after this page, false if the last page (optional)
-     * @param  int $per_page number of items per page (optional)
+     * @param  int $perPage number of items per page (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTreeAsyncWithHttpInfo($owner, $repo, $sha, $recursive = null, $page = null, $per_page = null)
+    public function getTreeAsyncWithHttpInfo($owner, $repo, $sha, $recursive = null, $page = null, $perPage = null)
     {
         $returnType = '\Efsa\Client\Gitea\Model\GitTreeResponse';
-        $request = $this->getTreeRequest($owner, $repo, $sha, $recursive, $page, $per_page);
+        $request = $this->getTreeRequest($owner, $repo, $sha, $recursive, $page, $perPage);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2248,12 +2248,12 @@ class RepositoryApi
      * @param  string $sha sha of the commit (required)
      * @param  bool $recursive show all directories and files (optional)
      * @param  int $page page number; the &#39;truncated&#39; field in the response will be true if there are still more items after this page, false if the last page (optional)
-     * @param  int $per_page number of items per page (optional)
+     * @param  int $perPage number of items per page (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getTreeRequest($owner, $repo, $sha, $recursive = null, $page = null, $per_page = null)
+    public function getTreeRequest($owner, $repo, $sha, $recursive = null, $page = null, $perPage = null)
     {
         // verify the required parameter 'owner' is set
         if ($owner === null || (is_array($owner) && count($owner) === 0)) {
@@ -2296,11 +2296,11 @@ class RepositoryApi
             $queryParams['page'] = $page;
         }
         // query params
-        if (is_array($per_page)) {
-            $per_page = ObjectSerializer::serializeCollection($per_page, '', true);
+        if (is_array($perPage)) {
+            $perPage = ObjectSerializer::serializeCollection($perPage, '', true);
         }
-        if ($per_page !== null) {
-            $queryParams['per_page'] = $per_page;
+        if ($perPage !== null) {
+            $queryParams['per_page'] = $perPage;
         }
 
 
@@ -12613,15 +12613,15 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
-     * @param  int $attachment_id id of the attachment to delete (required)
+     * @param  int $attachmentId id of the attachment to delete (required)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function repoDeleteReleaseAttachment($owner, $repo, $id, $attachment_id)
+    public function repoDeleteReleaseAttachment($owner, $repo, $id, $attachmentId)
     {
-        $this->repoDeleteReleaseAttachmentWithHttpInfo($owner, $repo, $id, $attachment_id);
+        $this->repoDeleteReleaseAttachmentWithHttpInfo($owner, $repo, $id, $attachmentId);
     }
 
     /**
@@ -12632,15 +12632,15 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
-     * @param  int $attachment_id id of the attachment to delete (required)
+     * @param  int $attachmentId id of the attachment to delete (required)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function repoDeleteReleaseAttachmentWithHttpInfo($owner, $repo, $id, $attachment_id)
+    public function repoDeleteReleaseAttachmentWithHttpInfo($owner, $repo, $id, $attachmentId)
     {
-        $request = $this->repoDeleteReleaseAttachmentRequest($owner, $repo, $id, $attachment_id);
+        $request = $this->repoDeleteReleaseAttachmentRequest($owner, $repo, $id, $attachmentId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -12687,14 +12687,14 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
-     * @param  int $attachment_id id of the attachment to delete (required)
+     * @param  int $attachmentId id of the attachment to delete (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoDeleteReleaseAttachmentAsync($owner, $repo, $id, $attachment_id)
+    public function repoDeleteReleaseAttachmentAsync($owner, $repo, $id, $attachmentId)
     {
-        return $this->repoDeleteReleaseAttachmentAsyncWithHttpInfo($owner, $repo, $id, $attachment_id)
+        return $this->repoDeleteReleaseAttachmentAsyncWithHttpInfo($owner, $repo, $id, $attachmentId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -12710,15 +12710,15 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
-     * @param  int $attachment_id id of the attachment to delete (required)
+     * @param  int $attachmentId id of the attachment to delete (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoDeleteReleaseAttachmentAsyncWithHttpInfo($owner, $repo, $id, $attachment_id)
+    public function repoDeleteReleaseAttachmentAsyncWithHttpInfo($owner, $repo, $id, $attachmentId)
     {
         $returnType = '';
-        $request = $this->repoDeleteReleaseAttachmentRequest($owner, $repo, $id, $attachment_id);
+        $request = $this->repoDeleteReleaseAttachmentRequest($owner, $repo, $id, $attachmentId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -12749,12 +12749,12 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
-     * @param  int $attachment_id id of the attachment to delete (required)
+     * @param  int $attachmentId id of the attachment to delete (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function repoDeleteReleaseAttachmentRequest($owner, $repo, $id, $attachment_id)
+    public function repoDeleteReleaseAttachmentRequest($owner, $repo, $id, $attachmentId)
     {
         // verify the required parameter 'owner' is set
         if ($owner === null || (is_array($owner) && count($owner) === 0)) {
@@ -12774,10 +12774,10 @@ class RepositoryApi
                 'Missing the required parameter $id when calling repoDeleteReleaseAttachment'
             );
         }
-        // verify the required parameter 'attachment_id' is set
-        if ($attachment_id === null || (is_array($attachment_id) && count($attachment_id) === 0)) {
+        // verify the required parameter 'attachmentId' is set
+        if ($attachmentId === null || (is_array($attachmentId) && count($attachmentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $attachment_id when calling repoDeleteReleaseAttachment'
+                'Missing the required parameter $attachmentId when calling repoDeleteReleaseAttachment'
             );
         }
 
@@ -12815,10 +12815,10 @@ class RepositoryApi
             );
         }
         // path params
-        if ($attachment_id !== null) {
+        if ($attachmentId !== null) {
             $resourcePath = str_replace(
                 '{' . 'attachment_id' . '}',
-                ObjectSerializer::toPathValue($attachment_id),
+                ObjectSerializer::toPathValue($attachmentId),
                 $resourcePath
             );
         }
@@ -14086,15 +14086,15 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function repoDeleteWikiPage($owner, $repo, $page_name)
+    public function repoDeleteWikiPage($owner, $repo, $pageName)
     {
-        $this->repoDeleteWikiPageWithHttpInfo($owner, $repo, $page_name);
+        $this->repoDeleteWikiPageWithHttpInfo($owner, $repo, $pageName);
     }
 
     /**
@@ -14104,15 +14104,15 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function repoDeleteWikiPageWithHttpInfo($owner, $repo, $page_name)
+    public function repoDeleteWikiPageWithHttpInfo($owner, $repo, $pageName)
     {
-        $request = $this->repoDeleteWikiPageRequest($owner, $repo, $page_name);
+        $request = $this->repoDeleteWikiPageRequest($owner, $repo, $pageName);
 
         try {
             $options = $this->createHttpClientOption();
@@ -14158,14 +14158,14 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoDeleteWikiPageAsync($owner, $repo, $page_name)
+    public function repoDeleteWikiPageAsync($owner, $repo, $pageName)
     {
-        return $this->repoDeleteWikiPageAsyncWithHttpInfo($owner, $repo, $page_name)
+        return $this->repoDeleteWikiPageAsyncWithHttpInfo($owner, $repo, $pageName)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -14180,15 +14180,15 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoDeleteWikiPageAsyncWithHttpInfo($owner, $repo, $page_name)
+    public function repoDeleteWikiPageAsyncWithHttpInfo($owner, $repo, $pageName)
     {
         $returnType = '';
-        $request = $this->repoDeleteWikiPageRequest($owner, $repo, $page_name);
+        $request = $this->repoDeleteWikiPageRequest($owner, $repo, $pageName);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -14218,12 +14218,12 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function repoDeleteWikiPageRequest($owner, $repo, $page_name)
+    public function repoDeleteWikiPageRequest($owner, $repo, $pageName)
     {
         // verify the required parameter 'owner' is set
         if ($owner === null || (is_array($owner) && count($owner) === 0)) {
@@ -14237,10 +14237,10 @@ class RepositoryApi
                 'Missing the required parameter $repo when calling repoDeleteWikiPage'
             );
         }
-        // verify the required parameter 'page_name' is set
-        if ($page_name === null || (is_array($page_name) && count($page_name) === 0)) {
+        // verify the required parameter 'pageName' is set
+        if ($pageName === null || (is_array($pageName) && count($pageName) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $page_name when calling repoDeleteWikiPage'
+                'Missing the required parameter $pageName when calling repoDeleteWikiPage'
             );
         }
 
@@ -14270,10 +14270,10 @@ class RepositoryApi
             );
         }
         // path params
-        if ($page_name !== null) {
+        if ($pageName !== null) {
             $resourcePath = str_replace(
                 '{' . 'pageName' . '}',
-                ObjectSerializer::toPathValue($page_name),
+                ObjectSerializer::toPathValue($pageName),
                 $resourcePath
             );
         }
@@ -14750,15 +14750,15 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $sha SHA of the commit to get (required)
-     * @param  string $diff_type whether the output is diff or patch (required)
+     * @param  string $diffType whether the output is diff or patch (required)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
-    public function repoDownloadCommitDiffOrPatch($owner, $repo, $sha, $diff_type)
+    public function repoDownloadCommitDiffOrPatch($owner, $repo, $sha, $diffType)
     {
-        list($response) = $this->repoDownloadCommitDiffOrPatchWithHttpInfo($owner, $repo, $sha, $diff_type);
+        list($response) = $this->repoDownloadCommitDiffOrPatchWithHttpInfo($owner, $repo, $sha, $diffType);
         return $response;
     }
 
@@ -14770,15 +14770,15 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $sha SHA of the commit to get (required)
-     * @param  string $diff_type whether the output is diff or patch (required)
+     * @param  string $diffType whether the output is diff or patch (required)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
-    public function repoDownloadCommitDiffOrPatchWithHttpInfo($owner, $repo, $sha, $diff_type)
+    public function repoDownloadCommitDiffOrPatchWithHttpInfo($owner, $repo, $sha, $diffType)
     {
-        $request = $this->repoDownloadCommitDiffOrPatchRequest($owner, $repo, $sha, $diff_type);
+        $request = $this->repoDownloadCommitDiffOrPatchRequest($owner, $repo, $sha, $diffType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -14859,14 +14859,14 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $sha SHA of the commit to get (required)
-     * @param  string $diff_type whether the output is diff or patch (required)
+     * @param  string $diffType whether the output is diff or patch (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoDownloadCommitDiffOrPatchAsync($owner, $repo, $sha, $diff_type)
+    public function repoDownloadCommitDiffOrPatchAsync($owner, $repo, $sha, $diffType)
     {
-        return $this->repoDownloadCommitDiffOrPatchAsyncWithHttpInfo($owner, $repo, $sha, $diff_type)
+        return $this->repoDownloadCommitDiffOrPatchAsyncWithHttpInfo($owner, $repo, $sha, $diffType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -14882,15 +14882,15 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $sha SHA of the commit to get (required)
-     * @param  string $diff_type whether the output is diff or patch (required)
+     * @param  string $diffType whether the output is diff or patch (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoDownloadCommitDiffOrPatchAsyncWithHttpInfo($owner, $repo, $sha, $diff_type)
+    public function repoDownloadCommitDiffOrPatchAsyncWithHttpInfo($owner, $repo, $sha, $diffType)
     {
         $returnType = 'string';
-        $request = $this->repoDownloadCommitDiffOrPatchRequest($owner, $repo, $sha, $diff_type);
+        $request = $this->repoDownloadCommitDiffOrPatchRequest($owner, $repo, $sha, $diffType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -14931,12 +14931,12 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $sha SHA of the commit to get (required)
-     * @param  string $diff_type whether the output is diff or patch (required)
+     * @param  string $diffType whether the output is diff or patch (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function repoDownloadCommitDiffOrPatchRequest($owner, $repo, $sha, $diff_type)
+    public function repoDownloadCommitDiffOrPatchRequest($owner, $repo, $sha, $diffType)
     {
         // verify the required parameter 'owner' is set
         if ($owner === null || (is_array($owner) && count($owner) === 0)) {
@@ -14956,10 +14956,10 @@ class RepositoryApi
                 'Missing the required parameter $sha when calling repoDownloadCommitDiffOrPatch'
             );
         }
-        // verify the required parameter 'diff_type' is set
-        if ($diff_type === null || (is_array($diff_type) && count($diff_type) === 0)) {
+        // verify the required parameter 'diffType' is set
+        if ($diffType === null || (is_array($diffType) && count($diffType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $diff_type when calling repoDownloadCommitDiffOrPatch'
+                'Missing the required parameter $diffType when calling repoDownloadCommitDiffOrPatch'
             );
         }
 
@@ -14997,10 +14997,10 @@ class RepositoryApi
             );
         }
         // path params
-        if ($diff_type !== null) {
+        if ($diffType !== null) {
             $resourcePath = str_replace(
                 '{' . 'diffType' . '}',
-                ObjectSerializer::toPathValue($diff_type),
+                ObjectSerializer::toPathValue($diffType),
                 $resourcePath
             );
         }
@@ -15105,16 +15105,16 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request to get (required)
-     * @param  string $diff_type whether the output is diff or patch (required)
+     * @param  string $diffType whether the output is diff or patch (required)
      * @param  bool $binary whether to include binary file changes. if true, the diff is applicable with &#x60;git apply&#x60; (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
-    public function repoDownloadPullDiffOrPatch($owner, $repo, $index, $diff_type, $binary = null)
+    public function repoDownloadPullDiffOrPatch($owner, $repo, $index, $diffType, $binary = null)
     {
-        list($response) = $this->repoDownloadPullDiffOrPatchWithHttpInfo($owner, $repo, $index, $diff_type, $binary);
+        list($response) = $this->repoDownloadPullDiffOrPatchWithHttpInfo($owner, $repo, $index, $diffType, $binary);
         return $response;
     }
 
@@ -15126,16 +15126,16 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request to get (required)
-     * @param  string $diff_type whether the output is diff or patch (required)
+     * @param  string $diffType whether the output is diff or patch (required)
      * @param  bool $binary whether to include binary file changes. if true, the diff is applicable with &#x60;git apply&#x60; (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
-    public function repoDownloadPullDiffOrPatchWithHttpInfo($owner, $repo, $index, $diff_type, $binary = null)
+    public function repoDownloadPullDiffOrPatchWithHttpInfo($owner, $repo, $index, $diffType, $binary = null)
     {
-        $request = $this->repoDownloadPullDiffOrPatchRequest($owner, $repo, $index, $diff_type, $binary);
+        $request = $this->repoDownloadPullDiffOrPatchRequest($owner, $repo, $index, $diffType, $binary);
 
         try {
             $options = $this->createHttpClientOption();
@@ -15216,15 +15216,15 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request to get (required)
-     * @param  string $diff_type whether the output is diff or patch (required)
+     * @param  string $diffType whether the output is diff or patch (required)
      * @param  bool $binary whether to include binary file changes. if true, the diff is applicable with &#x60;git apply&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoDownloadPullDiffOrPatchAsync($owner, $repo, $index, $diff_type, $binary = null)
+    public function repoDownloadPullDiffOrPatchAsync($owner, $repo, $index, $diffType, $binary = null)
     {
-        return $this->repoDownloadPullDiffOrPatchAsyncWithHttpInfo($owner, $repo, $index, $diff_type, $binary)
+        return $this->repoDownloadPullDiffOrPatchAsyncWithHttpInfo($owner, $repo, $index, $diffType, $binary)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -15240,16 +15240,16 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request to get (required)
-     * @param  string $diff_type whether the output is diff or patch (required)
+     * @param  string $diffType whether the output is diff or patch (required)
      * @param  bool $binary whether to include binary file changes. if true, the diff is applicable with &#x60;git apply&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoDownloadPullDiffOrPatchAsyncWithHttpInfo($owner, $repo, $index, $diff_type, $binary = null)
+    public function repoDownloadPullDiffOrPatchAsyncWithHttpInfo($owner, $repo, $index, $diffType, $binary = null)
     {
         $returnType = 'string';
-        $request = $this->repoDownloadPullDiffOrPatchRequest($owner, $repo, $index, $diff_type, $binary);
+        $request = $this->repoDownloadPullDiffOrPatchRequest($owner, $repo, $index, $diffType, $binary);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -15290,13 +15290,13 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request to get (required)
-     * @param  string $diff_type whether the output is diff or patch (required)
+     * @param  string $diffType whether the output is diff or patch (required)
      * @param  bool $binary whether to include binary file changes. if true, the diff is applicable with &#x60;git apply&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function repoDownloadPullDiffOrPatchRequest($owner, $repo, $index, $diff_type, $binary = null)
+    public function repoDownloadPullDiffOrPatchRequest($owner, $repo, $index, $diffType, $binary = null)
     {
         // verify the required parameter 'owner' is set
         if ($owner === null || (is_array($owner) && count($owner) === 0)) {
@@ -15316,10 +15316,10 @@ class RepositoryApi
                 'Missing the required parameter $index when calling repoDownloadPullDiffOrPatch'
             );
         }
-        // verify the required parameter 'diff_type' is set
-        if ($diff_type === null || (is_array($diff_type) && count($diff_type) === 0)) {
+        // verify the required parameter 'diffType' is set
+        if ($diffType === null || (is_array($diffType) && count($diffType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $diff_type when calling repoDownloadPullDiffOrPatch'
+                'Missing the required parameter $diffType when calling repoDownloadPullDiffOrPatch'
             );
         }
 
@@ -15364,10 +15364,10 @@ class RepositoryApi
             );
         }
         // path params
-        if ($diff_type !== null) {
+        if ($diffType !== null) {
             $resourcePath = str_replace(
                 '{' . 'diffType' . '}',
-                ObjectSerializer::toPathValue($diff_type),
+                ObjectSerializer::toPathValue($diffType),
                 $resourcePath
             );
         }
@@ -17535,16 +17535,16 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
-     * @param  int $attachment_id id of the attachment to edit (required)
+     * @param  int $attachmentId id of the attachment to edit (required)
      * @param  \Efsa\Client\Gitea\Model\EditAttachmentOptions $body body (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\Attachment
      */
-    public function repoEditReleaseAttachment($owner, $repo, $id, $attachment_id, $body = null)
+    public function repoEditReleaseAttachment($owner, $repo, $id, $attachmentId, $body = null)
     {
-        list($response) = $this->repoEditReleaseAttachmentWithHttpInfo($owner, $repo, $id, $attachment_id, $body);
+        list($response) = $this->repoEditReleaseAttachmentWithHttpInfo($owner, $repo, $id, $attachmentId, $body);
         return $response;
     }
 
@@ -17556,16 +17556,16 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
-     * @param  int $attachment_id id of the attachment to edit (required)
+     * @param  int $attachmentId id of the attachment to edit (required)
      * @param  \Efsa\Client\Gitea\Model\EditAttachmentOptions $body (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\Attachment, HTTP status code, HTTP response headers (array of strings)
      */
-    public function repoEditReleaseAttachmentWithHttpInfo($owner, $repo, $id, $attachment_id, $body = null)
+    public function repoEditReleaseAttachmentWithHttpInfo($owner, $repo, $id, $attachmentId, $body = null)
     {
-        $request = $this->repoEditReleaseAttachmentRequest($owner, $repo, $id, $attachment_id, $body);
+        $request = $this->repoEditReleaseAttachmentRequest($owner, $repo, $id, $attachmentId, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -17646,15 +17646,15 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
-     * @param  int $attachment_id id of the attachment to edit (required)
+     * @param  int $attachmentId id of the attachment to edit (required)
      * @param  \Efsa\Client\Gitea\Model\EditAttachmentOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoEditReleaseAttachmentAsync($owner, $repo, $id, $attachment_id, $body = null)
+    public function repoEditReleaseAttachmentAsync($owner, $repo, $id, $attachmentId, $body = null)
     {
-        return $this->repoEditReleaseAttachmentAsyncWithHttpInfo($owner, $repo, $id, $attachment_id, $body)
+        return $this->repoEditReleaseAttachmentAsyncWithHttpInfo($owner, $repo, $id, $attachmentId, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -17670,16 +17670,16 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
-     * @param  int $attachment_id id of the attachment to edit (required)
+     * @param  int $attachmentId id of the attachment to edit (required)
      * @param  \Efsa\Client\Gitea\Model\EditAttachmentOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoEditReleaseAttachmentAsyncWithHttpInfo($owner, $repo, $id, $attachment_id, $body = null)
+    public function repoEditReleaseAttachmentAsyncWithHttpInfo($owner, $repo, $id, $attachmentId, $body = null)
     {
         $returnType = '\Efsa\Client\Gitea\Model\Attachment';
-        $request = $this->repoEditReleaseAttachmentRequest($owner, $repo, $id, $attachment_id, $body);
+        $request = $this->repoEditReleaseAttachmentRequest($owner, $repo, $id, $attachmentId, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -17720,13 +17720,13 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
-     * @param  int $attachment_id id of the attachment to edit (required)
+     * @param  int $attachmentId id of the attachment to edit (required)
      * @param  \Efsa\Client\Gitea\Model\EditAttachmentOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function repoEditReleaseAttachmentRequest($owner, $repo, $id, $attachment_id, $body = null)
+    public function repoEditReleaseAttachmentRequest($owner, $repo, $id, $attachmentId, $body = null)
     {
         // verify the required parameter 'owner' is set
         if ($owner === null || (is_array($owner) && count($owner) === 0)) {
@@ -17746,10 +17746,10 @@ class RepositoryApi
                 'Missing the required parameter $id when calling repoEditReleaseAttachment'
             );
         }
-        // verify the required parameter 'attachment_id' is set
-        if ($attachment_id === null || (is_array($attachment_id) && count($attachment_id) === 0)) {
+        // verify the required parameter 'attachmentId' is set
+        if ($attachmentId === null || (is_array($attachmentId) && count($attachmentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $attachment_id when calling repoEditReleaseAttachment'
+                'Missing the required parameter $attachmentId when calling repoEditReleaseAttachment'
             );
         }
 
@@ -17787,10 +17787,10 @@ class RepositoryApi
             );
         }
         // path params
-        if ($attachment_id !== null) {
+        if ($attachmentId !== null) {
             $resourcePath = str_replace(
                 '{' . 'attachment_id' . '}',
-                ObjectSerializer::toPathValue($attachment_id),
+                ObjectSerializer::toPathValue($attachmentId),
                 $resourcePath
             );
         }
@@ -17900,16 +17900,16 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      * @param  \Efsa\Client\Gitea\Model\CreateWikiPageOptions $body body (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\WikiPage
      */
-    public function repoEditWikiPage($owner, $repo, $page_name, $body = null)
+    public function repoEditWikiPage($owner, $repo, $pageName, $body = null)
     {
-        list($response) = $this->repoEditWikiPageWithHttpInfo($owner, $repo, $page_name, $body);
+        list($response) = $this->repoEditWikiPageWithHttpInfo($owner, $repo, $pageName, $body);
         return $response;
     }
 
@@ -17920,16 +17920,16 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      * @param  \Efsa\Client\Gitea\Model\CreateWikiPageOptions $body (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\WikiPage, HTTP status code, HTTP response headers (array of strings)
      */
-    public function repoEditWikiPageWithHttpInfo($owner, $repo, $page_name, $body = null)
+    public function repoEditWikiPageWithHttpInfo($owner, $repo, $pageName, $body = null)
     {
-        $request = $this->repoEditWikiPageRequest($owner, $repo, $page_name, $body);
+        $request = $this->repoEditWikiPageRequest($owner, $repo, $pageName, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -18009,15 +18009,15 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      * @param  \Efsa\Client\Gitea\Model\CreateWikiPageOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoEditWikiPageAsync($owner, $repo, $page_name, $body = null)
+    public function repoEditWikiPageAsync($owner, $repo, $pageName, $body = null)
     {
-        return $this->repoEditWikiPageAsyncWithHttpInfo($owner, $repo, $page_name, $body)
+        return $this->repoEditWikiPageAsyncWithHttpInfo($owner, $repo, $pageName, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -18032,16 +18032,16 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      * @param  \Efsa\Client\Gitea\Model\CreateWikiPageOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoEditWikiPageAsyncWithHttpInfo($owner, $repo, $page_name, $body = null)
+    public function repoEditWikiPageAsyncWithHttpInfo($owner, $repo, $pageName, $body = null)
     {
         $returnType = '\Efsa\Client\Gitea\Model\WikiPage';
-        $request = $this->repoEditWikiPageRequest($owner, $repo, $page_name, $body);
+        $request = $this->repoEditWikiPageRequest($owner, $repo, $pageName, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -18081,13 +18081,13 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      * @param  \Efsa\Client\Gitea\Model\CreateWikiPageOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function repoEditWikiPageRequest($owner, $repo, $page_name, $body = null)
+    public function repoEditWikiPageRequest($owner, $repo, $pageName, $body = null)
     {
         // verify the required parameter 'owner' is set
         if ($owner === null || (is_array($owner) && count($owner) === 0)) {
@@ -18101,10 +18101,10 @@ class RepositoryApi
                 'Missing the required parameter $repo when calling repoEditWikiPage'
             );
         }
-        // verify the required parameter 'page_name' is set
-        if ($page_name === null || (is_array($page_name) && count($page_name) === 0)) {
+        // verify the required parameter 'pageName' is set
+        if ($pageName === null || (is_array($pageName) && count($pageName) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $page_name when calling repoEditWikiPage'
+                'Missing the required parameter $pageName when calling repoEditWikiPage'
             );
         }
 
@@ -18134,10 +18134,10 @@ class RepositoryApi
             );
         }
         // path params
-        if ($page_name !== null) {
+        if ($pageName !== null) {
             $resourcePath = str_replace(
                 '{' . 'pageName' . '}',
-                ObjectSerializer::toPathValue($page_name),
+                ObjectSerializer::toPathValue($pageName),
                 $resourcePath
             );
         }
@@ -25879,15 +25879,15 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
-     * @param  int $attachment_id id of the attachment to get (required)
+     * @param  int $attachmentId id of the attachment to get (required)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\Attachment
      */
-    public function repoGetReleaseAttachment($owner, $repo, $id, $attachment_id)
+    public function repoGetReleaseAttachment($owner, $repo, $id, $attachmentId)
     {
-        list($response) = $this->repoGetReleaseAttachmentWithHttpInfo($owner, $repo, $id, $attachment_id);
+        list($response) = $this->repoGetReleaseAttachmentWithHttpInfo($owner, $repo, $id, $attachmentId);
         return $response;
     }
 
@@ -25899,15 +25899,15 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
-     * @param  int $attachment_id id of the attachment to get (required)
+     * @param  int $attachmentId id of the attachment to get (required)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\Attachment, HTTP status code, HTTP response headers (array of strings)
      */
-    public function repoGetReleaseAttachmentWithHttpInfo($owner, $repo, $id, $attachment_id)
+    public function repoGetReleaseAttachmentWithHttpInfo($owner, $repo, $id, $attachmentId)
     {
-        $request = $this->repoGetReleaseAttachmentRequest($owner, $repo, $id, $attachment_id);
+        $request = $this->repoGetReleaseAttachmentRequest($owner, $repo, $id, $attachmentId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -25988,14 +25988,14 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
-     * @param  int $attachment_id id of the attachment to get (required)
+     * @param  int $attachmentId id of the attachment to get (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoGetReleaseAttachmentAsync($owner, $repo, $id, $attachment_id)
+    public function repoGetReleaseAttachmentAsync($owner, $repo, $id, $attachmentId)
     {
-        return $this->repoGetReleaseAttachmentAsyncWithHttpInfo($owner, $repo, $id, $attachment_id)
+        return $this->repoGetReleaseAttachmentAsyncWithHttpInfo($owner, $repo, $id, $attachmentId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -26011,15 +26011,15 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
-     * @param  int $attachment_id id of the attachment to get (required)
+     * @param  int $attachmentId id of the attachment to get (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoGetReleaseAttachmentAsyncWithHttpInfo($owner, $repo, $id, $attachment_id)
+    public function repoGetReleaseAttachmentAsyncWithHttpInfo($owner, $repo, $id, $attachmentId)
     {
         $returnType = '\Efsa\Client\Gitea\Model\Attachment';
-        $request = $this->repoGetReleaseAttachmentRequest($owner, $repo, $id, $attachment_id);
+        $request = $this->repoGetReleaseAttachmentRequest($owner, $repo, $id, $attachmentId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -26060,12 +26060,12 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
-     * @param  int $attachment_id id of the attachment to get (required)
+     * @param  int $attachmentId id of the attachment to get (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function repoGetReleaseAttachmentRequest($owner, $repo, $id, $attachment_id)
+    public function repoGetReleaseAttachmentRequest($owner, $repo, $id, $attachmentId)
     {
         // verify the required parameter 'owner' is set
         if ($owner === null || (is_array($owner) && count($owner) === 0)) {
@@ -26085,10 +26085,10 @@ class RepositoryApi
                 'Missing the required parameter $id when calling repoGetReleaseAttachment'
             );
         }
-        // verify the required parameter 'attachment_id' is set
-        if ($attachment_id === null || (is_array($attachment_id) && count($attachment_id) === 0)) {
+        // verify the required parameter 'attachmentId' is set
+        if ($attachmentId === null || (is_array($attachmentId) && count($attachmentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $attachment_id when calling repoGetReleaseAttachment'
+                'Missing the required parameter $attachmentId when calling repoGetReleaseAttachment'
             );
         }
 
@@ -26126,10 +26126,10 @@ class RepositoryApi
             );
         }
         // path params
-        if ($attachment_id !== null) {
+        if ($attachmentId !== null) {
             $resourcePath = str_replace(
                 '{' . 'attachment_id' . '}',
-                ObjectSerializer::toPathValue($attachment_id),
+                ObjectSerializer::toPathValue($attachmentId),
                 $resourcePath
             );
         }
@@ -27558,15 +27558,15 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\WikiPage
      */
-    public function repoGetWikiPage($owner, $repo, $page_name)
+    public function repoGetWikiPage($owner, $repo, $pageName)
     {
-        list($response) = $this->repoGetWikiPageWithHttpInfo($owner, $repo, $page_name);
+        list($response) = $this->repoGetWikiPageWithHttpInfo($owner, $repo, $pageName);
         return $response;
     }
 
@@ -27577,15 +27577,15 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\WikiPage, HTTP status code, HTTP response headers (array of strings)
      */
-    public function repoGetWikiPageWithHttpInfo($owner, $repo, $page_name)
+    public function repoGetWikiPageWithHttpInfo($owner, $repo, $pageName)
     {
-        $request = $this->repoGetWikiPageRequest($owner, $repo, $page_name);
+        $request = $this->repoGetWikiPageRequest($owner, $repo, $pageName);
 
         try {
             $options = $this->createHttpClientOption();
@@ -27665,14 +27665,14 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoGetWikiPageAsync($owner, $repo, $page_name)
+    public function repoGetWikiPageAsync($owner, $repo, $pageName)
     {
-        return $this->repoGetWikiPageAsyncWithHttpInfo($owner, $repo, $page_name)
+        return $this->repoGetWikiPageAsyncWithHttpInfo($owner, $repo, $pageName)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -27687,15 +27687,15 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoGetWikiPageAsyncWithHttpInfo($owner, $repo, $page_name)
+    public function repoGetWikiPageAsyncWithHttpInfo($owner, $repo, $pageName)
     {
         $returnType = '\Efsa\Client\Gitea\Model\WikiPage';
-        $request = $this->repoGetWikiPageRequest($owner, $repo, $page_name);
+        $request = $this->repoGetWikiPageRequest($owner, $repo, $pageName);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -27735,12 +27735,12 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function repoGetWikiPageRequest($owner, $repo, $page_name)
+    public function repoGetWikiPageRequest($owner, $repo, $pageName)
     {
         // verify the required parameter 'owner' is set
         if ($owner === null || (is_array($owner) && count($owner) === 0)) {
@@ -27754,10 +27754,10 @@ class RepositoryApi
                 'Missing the required parameter $repo when calling repoGetWikiPage'
             );
         }
-        // verify the required parameter 'page_name' is set
-        if ($page_name === null || (is_array($page_name) && count($page_name) === 0)) {
+        // verify the required parameter 'pageName' is set
+        if ($pageName === null || (is_array($pageName) && count($pageName) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $page_name when calling repoGetWikiPage'
+                'Missing the required parameter $pageName when calling repoGetWikiPage'
             );
         }
 
@@ -27787,10 +27787,10 @@ class RepositoryApi
             );
         }
         // path params
-        if ($page_name !== null) {
+        if ($pageName !== null) {
             $resourcePath = str_replace(
                 '{' . 'pageName' . '}',
-                ObjectSerializer::toPathValue($page_name),
+                ObjectSerializer::toPathValue($pageName),
                 $resourcePath
             );
         }
@@ -27894,16 +27894,16 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      * @param  int $page page number of results to return (1-based) (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\WikiCommitList
      */
-    public function repoGetWikiPageRevisions($owner, $repo, $page_name, $page = null)
+    public function repoGetWikiPageRevisions($owner, $repo, $pageName, $page = null)
     {
-        list($response) = $this->repoGetWikiPageRevisionsWithHttpInfo($owner, $repo, $page_name, $page);
+        list($response) = $this->repoGetWikiPageRevisionsWithHttpInfo($owner, $repo, $pageName, $page);
         return $response;
     }
 
@@ -27914,16 +27914,16 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      * @param  int $page page number of results to return (1-based) (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\WikiCommitList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function repoGetWikiPageRevisionsWithHttpInfo($owner, $repo, $page_name, $page = null)
+    public function repoGetWikiPageRevisionsWithHttpInfo($owner, $repo, $pageName, $page = null)
     {
-        $request = $this->repoGetWikiPageRevisionsRequest($owner, $repo, $page_name, $page);
+        $request = $this->repoGetWikiPageRevisionsRequest($owner, $repo, $pageName, $page);
 
         try {
             $options = $this->createHttpClientOption();
@@ -28003,15 +28003,15 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      * @param  int $page page number of results to return (1-based) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoGetWikiPageRevisionsAsync($owner, $repo, $page_name, $page = null)
+    public function repoGetWikiPageRevisionsAsync($owner, $repo, $pageName, $page = null)
     {
-        return $this->repoGetWikiPageRevisionsAsyncWithHttpInfo($owner, $repo, $page_name, $page)
+        return $this->repoGetWikiPageRevisionsAsyncWithHttpInfo($owner, $repo, $pageName, $page)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -28026,16 +28026,16 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      * @param  int $page page number of results to return (1-based) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoGetWikiPageRevisionsAsyncWithHttpInfo($owner, $repo, $page_name, $page = null)
+    public function repoGetWikiPageRevisionsAsyncWithHttpInfo($owner, $repo, $pageName, $page = null)
     {
         $returnType = '\Efsa\Client\Gitea\Model\WikiCommitList';
-        $request = $this->repoGetWikiPageRevisionsRequest($owner, $repo, $page_name, $page);
+        $request = $this->repoGetWikiPageRevisionsRequest($owner, $repo, $pageName, $page);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -28075,13 +28075,13 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  string $page_name name of the page (required)
+     * @param  string $pageName name of the page (required)
      * @param  int $page page number of results to return (1-based) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function repoGetWikiPageRevisionsRequest($owner, $repo, $page_name, $page = null)
+    public function repoGetWikiPageRevisionsRequest($owner, $repo, $pageName, $page = null)
     {
         // verify the required parameter 'owner' is set
         if ($owner === null || (is_array($owner) && count($owner) === 0)) {
@@ -28095,10 +28095,10 @@ class RepositoryApi
                 'Missing the required parameter $repo when calling repoGetWikiPageRevisions'
             );
         }
-        // verify the required parameter 'page_name' is set
-        if ($page_name === null || (is_array($page_name) && count($page_name) === 0)) {
+        // verify the required parameter 'pageName' is set
+        if ($pageName === null || (is_array($pageName) && count($pageName) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $page_name when calling repoGetWikiPageRevisions'
+                'Missing the required parameter $pageName when calling repoGetWikiPageRevisions'
             );
         }
 
@@ -28135,10 +28135,10 @@ class RepositoryApi
             );
         }
         // path params
-        if ($page_name !== null) {
+        if ($pageName !== null) {
             $resourcePath = str_replace(
                 '{' . 'pageName' . '}',
-                ObjectSerializer::toPathValue($page_name),
+                ObjectSerializer::toPathValue($pageName),
                 $resourcePath
             );
         }
@@ -30893,7 +30893,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  int $key_id the key_id to search for (optional)
+     * @param  int $keyId the key_id to search for (optional)
      * @param  string $fingerprint fingerprint of the key (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
@@ -30902,9 +30902,9 @@ class RepositoryApi
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\DeployKey[]
      */
-    public function repoListKeys($owner, $repo, $key_id = null, $fingerprint = null, $page = null, $limit = null)
+    public function repoListKeys($owner, $repo, $keyId = null, $fingerprint = null, $page = null, $limit = null)
     {
-        list($response) = $this->repoListKeysWithHttpInfo($owner, $repo, $key_id, $fingerprint, $page, $limit);
+        list($response) = $this->repoListKeysWithHttpInfo($owner, $repo, $keyId, $fingerprint, $page, $limit);
         return $response;
     }
 
@@ -30915,7 +30915,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  int $key_id the key_id to search for (optional)
+     * @param  int $keyId the key_id to search for (optional)
      * @param  string $fingerprint fingerprint of the key (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
@@ -30924,9 +30924,9 @@ class RepositoryApi
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\DeployKey[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function repoListKeysWithHttpInfo($owner, $repo, $key_id = null, $fingerprint = null, $page = null, $limit = null)
+    public function repoListKeysWithHttpInfo($owner, $repo, $keyId = null, $fingerprint = null, $page = null, $limit = null)
     {
-        $request = $this->repoListKeysRequest($owner, $repo, $key_id, $fingerprint, $page, $limit);
+        $request = $this->repoListKeysRequest($owner, $repo, $keyId, $fingerprint, $page, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -31006,7 +31006,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  int $key_id the key_id to search for (optional)
+     * @param  int $keyId the key_id to search for (optional)
      * @param  string $fingerprint fingerprint of the key (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
@@ -31014,9 +31014,9 @@ class RepositoryApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoListKeysAsync($owner, $repo, $key_id = null, $fingerprint = null, $page = null, $limit = null)
+    public function repoListKeysAsync($owner, $repo, $keyId = null, $fingerprint = null, $page = null, $limit = null)
     {
-        return $this->repoListKeysAsyncWithHttpInfo($owner, $repo, $key_id, $fingerprint, $page, $limit)
+        return $this->repoListKeysAsyncWithHttpInfo($owner, $repo, $keyId, $fingerprint, $page, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -31031,7 +31031,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  int $key_id the key_id to search for (optional)
+     * @param  int $keyId the key_id to search for (optional)
      * @param  string $fingerprint fingerprint of the key (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
@@ -31039,10 +31039,10 @@ class RepositoryApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoListKeysAsyncWithHttpInfo($owner, $repo, $key_id = null, $fingerprint = null, $page = null, $limit = null)
+    public function repoListKeysAsyncWithHttpInfo($owner, $repo, $keyId = null, $fingerprint = null, $page = null, $limit = null)
     {
         $returnType = '\Efsa\Client\Gitea\Model\DeployKey[]';
-        $request = $this->repoListKeysRequest($owner, $repo, $key_id, $fingerprint, $page, $limit);
+        $request = $this->repoListKeysRequest($owner, $repo, $keyId, $fingerprint, $page, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -31082,7 +31082,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  int $key_id the key_id to search for (optional)
+     * @param  int $keyId the key_id to search for (optional)
      * @param  string $fingerprint fingerprint of the key (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
@@ -31090,7 +31090,7 @@ class RepositoryApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function repoListKeysRequest($owner, $repo, $key_id = null, $fingerprint = null, $page = null, $limit = null)
+    public function repoListKeysRequest($owner, $repo, $keyId = null, $fingerprint = null, $page = null, $limit = null)
     {
         // verify the required parameter 'owner' is set
         if ($owner === null || (is_array($owner) && count($owner) === 0)) {
@@ -31113,11 +31113,11 @@ class RepositoryApi
         $multipart = false;
 
         // query params
-        if (is_array($key_id)) {
-            $key_id = ObjectSerializer::serializeCollection($key_id, '', true);
+        if (is_array($keyId)) {
+            $keyId = ObjectSerializer::serializeCollection($keyId, '', true);
         }
-        if ($key_id !== null) {
-            $queryParams['key_id'] = $key_id;
+        if ($keyId !== null) {
+            $queryParams['key_id'] = $keyId;
         }
         // query params
         if (is_array($fingerprint)) {
@@ -32348,8 +32348,8 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  bool $draft filter (exclude / include) drafts, if you dont have repo write access none will show (optional)
-     * @param  bool $pre_release filter (exclude / include) pre-releases (optional)
-     * @param  int $per_page page size of results, deprecated - use limit (optional)
+     * @param  bool $preRelease filter (exclude / include) pre-releases (optional)
+     * @param  int $perPage page size of results, deprecated - use limit (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
@@ -32357,9 +32357,9 @@ class RepositoryApi
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\Release[]
      */
-    public function repoListReleases($owner, $repo, $draft = null, $pre_release = null, $per_page = null, $page = null, $limit = null)
+    public function repoListReleases($owner, $repo, $draft = null, $preRelease = null, $perPage = null, $page = null, $limit = null)
     {
-        list($response) = $this->repoListReleasesWithHttpInfo($owner, $repo, $draft, $pre_release, $per_page, $page, $limit);
+        list($response) = $this->repoListReleasesWithHttpInfo($owner, $repo, $draft, $preRelease, $perPage, $page, $limit);
         return $response;
     }
 
@@ -32371,8 +32371,8 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  bool $draft filter (exclude / include) drafts, if you dont have repo write access none will show (optional)
-     * @param  bool $pre_release filter (exclude / include) pre-releases (optional)
-     * @param  int $per_page page size of results, deprecated - use limit (optional)
+     * @param  bool $preRelease filter (exclude / include) pre-releases (optional)
+     * @param  int $perPage page size of results, deprecated - use limit (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
@@ -32380,9 +32380,9 @@ class RepositoryApi
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\Release[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function repoListReleasesWithHttpInfo($owner, $repo, $draft = null, $pre_release = null, $per_page = null, $page = null, $limit = null)
+    public function repoListReleasesWithHttpInfo($owner, $repo, $draft = null, $preRelease = null, $perPage = null, $page = null, $limit = null)
     {
-        $request = $this->repoListReleasesRequest($owner, $repo, $draft, $pre_release, $per_page, $page, $limit);
+        $request = $this->repoListReleasesRequest($owner, $repo, $draft, $preRelease, $perPage, $page, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -32463,17 +32463,17 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  bool $draft filter (exclude / include) drafts, if you dont have repo write access none will show (optional)
-     * @param  bool $pre_release filter (exclude / include) pre-releases (optional)
-     * @param  int $per_page page size of results, deprecated - use limit (optional)
+     * @param  bool $preRelease filter (exclude / include) pre-releases (optional)
+     * @param  int $perPage page size of results, deprecated - use limit (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoListReleasesAsync($owner, $repo, $draft = null, $pre_release = null, $per_page = null, $page = null, $limit = null)
+    public function repoListReleasesAsync($owner, $repo, $draft = null, $preRelease = null, $perPage = null, $page = null, $limit = null)
     {
-        return $this->repoListReleasesAsyncWithHttpInfo($owner, $repo, $draft, $pre_release, $per_page, $page, $limit)
+        return $this->repoListReleasesAsyncWithHttpInfo($owner, $repo, $draft, $preRelease, $perPage, $page, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -32489,18 +32489,18 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  bool $draft filter (exclude / include) drafts, if you dont have repo write access none will show (optional)
-     * @param  bool $pre_release filter (exclude / include) pre-releases (optional)
-     * @param  int $per_page page size of results, deprecated - use limit (optional)
+     * @param  bool $preRelease filter (exclude / include) pre-releases (optional)
+     * @param  int $perPage page size of results, deprecated - use limit (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoListReleasesAsyncWithHttpInfo($owner, $repo, $draft = null, $pre_release = null, $per_page = null, $page = null, $limit = null)
+    public function repoListReleasesAsyncWithHttpInfo($owner, $repo, $draft = null, $preRelease = null, $perPage = null, $page = null, $limit = null)
     {
         $returnType = '\Efsa\Client\Gitea\Model\Release[]';
-        $request = $this->repoListReleasesRequest($owner, $repo, $draft, $pre_release, $per_page, $page, $limit);
+        $request = $this->repoListReleasesRequest($owner, $repo, $draft, $preRelease, $perPage, $page, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -32541,15 +32541,15 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  bool $draft filter (exclude / include) drafts, if you dont have repo write access none will show (optional)
-     * @param  bool $pre_release filter (exclude / include) pre-releases (optional)
-     * @param  int $per_page page size of results, deprecated - use limit (optional)
+     * @param  bool $preRelease filter (exclude / include) pre-releases (optional)
+     * @param  int $perPage page size of results, deprecated - use limit (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function repoListReleasesRequest($owner, $repo, $draft = null, $pre_release = null, $per_page = null, $page = null, $limit = null)
+    public function repoListReleasesRequest($owner, $repo, $draft = null, $preRelease = null, $perPage = null, $page = null, $limit = null)
     {
         // verify the required parameter 'owner' is set
         if ($owner === null || (is_array($owner) && count($owner) === 0)) {
@@ -32579,18 +32579,18 @@ class RepositoryApi
             $queryParams['draft'] = $draft;
         }
         // query params
-        if (is_array($pre_release)) {
-            $pre_release = ObjectSerializer::serializeCollection($pre_release, '', true);
+        if (is_array($preRelease)) {
+            $preRelease = ObjectSerializer::serializeCollection($preRelease, '', true);
         }
-        if ($pre_release !== null) {
-            $queryParams['pre-release'] = $pre_release;
+        if ($preRelease !== null) {
+            $queryParams['pre-release'] = $preRelease;
         }
         // query params
-        if (is_array($per_page)) {
-            $per_page = ObjectSerializer::serializeCollection($per_page, '', true);
+        if (is_array($perPage)) {
+            $perPage = ObjectSerializer::serializeCollection($perPage, '', true);
         }
-        if ($per_page !== null) {
-            $queryParams['per_page'] = $per_page;
+        if ($perPage !== null) {
+            $queryParams['per_page'] = $perPage;
         }
         // query params
         if (is_array($page)) {
@@ -36328,13 +36328,13 @@ class RepositoryApi
      *
      * @param  string $q keyword (optional)
      * @param  bool $topic Limit search to repositories with keyword as topic (optional)
-     * @param  bool $include_desc include search of keyword within repository description (optional)
+     * @param  bool $includeDesc include search of keyword within repository description (optional)
      * @param  int $uid search only for repos that the user with the given id owns or contributes to (optional)
-     * @param  int $priority_owner_id repo owner to prioritize in the results (optional)
-     * @param  int $team_id search only for repos that belong to the given team id (optional)
-     * @param  int $starred_by search only for repos that the user with the given id has starred (optional)
+     * @param  int $priorityOwnerId repo owner to prioritize in the results (optional)
+     * @param  int $teamId search only for repos that belong to the given team id (optional)
+     * @param  int $starredBy search only for repos that the user with the given id has starred (optional)
      * @param  bool $private include private repositories this user has access to (defaults to true) (optional)
-     * @param  bool $is_private show only pubic, private or all repositories (defaults to all) (optional)
+     * @param  bool $isPrivate show only pubic, private or all repositories (defaults to all) (optional)
      * @param  bool $template include template repositories this user has access to (defaults to true) (optional)
      * @param  bool $archived show only archived, non-archived or all repositories (defaults to all) (optional)
      * @param  string $mode type of repository to search for. Supported values are \&quot;fork\&quot;, \&quot;source\&quot;, \&quot;mirror\&quot; and \&quot;collaborative\&quot; (optional)
@@ -36348,9 +36348,9 @@ class RepositoryApi
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\SearchResults
      */
-    public function repoSearch($q = null, $topic = null, $include_desc = null, $uid = null, $priority_owner_id = null, $team_id = null, $starred_by = null, $private = null, $is_private = null, $template = null, $archived = null, $mode = null, $exclusive = null, $sort = null, $order = null, $page = null, $limit = null)
+    public function repoSearch($q = null, $topic = null, $includeDesc = null, $uid = null, $priorityOwnerId = null, $teamId = null, $starredBy = null, $private = null, $isPrivate = null, $template = null, $archived = null, $mode = null, $exclusive = null, $sort = null, $order = null, $page = null, $limit = null)
     {
-        list($response) = $this->repoSearchWithHttpInfo($q, $topic, $include_desc, $uid, $priority_owner_id, $team_id, $starred_by, $private, $is_private, $template, $archived, $mode, $exclusive, $sort, $order, $page, $limit);
+        list($response) = $this->repoSearchWithHttpInfo($q, $topic, $includeDesc, $uid, $priorityOwnerId, $teamId, $starredBy, $private, $isPrivate, $template, $archived, $mode, $exclusive, $sort, $order, $page, $limit);
         return $response;
     }
 
@@ -36361,13 +36361,13 @@ class RepositoryApi
      *
      * @param  string $q keyword (optional)
      * @param  bool $topic Limit search to repositories with keyword as topic (optional)
-     * @param  bool $include_desc include search of keyword within repository description (optional)
+     * @param  bool $includeDesc include search of keyword within repository description (optional)
      * @param  int $uid search only for repos that the user with the given id owns or contributes to (optional)
-     * @param  int $priority_owner_id repo owner to prioritize in the results (optional)
-     * @param  int $team_id search only for repos that belong to the given team id (optional)
-     * @param  int $starred_by search only for repos that the user with the given id has starred (optional)
+     * @param  int $priorityOwnerId repo owner to prioritize in the results (optional)
+     * @param  int $teamId search only for repos that belong to the given team id (optional)
+     * @param  int $starredBy search only for repos that the user with the given id has starred (optional)
      * @param  bool $private include private repositories this user has access to (defaults to true) (optional)
-     * @param  bool $is_private show only pubic, private or all repositories (defaults to all) (optional)
+     * @param  bool $isPrivate show only pubic, private or all repositories (defaults to all) (optional)
      * @param  bool $template include template repositories this user has access to (defaults to true) (optional)
      * @param  bool $archived show only archived, non-archived or all repositories (defaults to all) (optional)
      * @param  string $mode type of repository to search for. Supported values are \&quot;fork\&quot;, \&quot;source\&quot;, \&quot;mirror\&quot; and \&quot;collaborative\&quot; (optional)
@@ -36381,9 +36381,9 @@ class RepositoryApi
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\SearchResults, HTTP status code, HTTP response headers (array of strings)
      */
-    public function repoSearchWithHttpInfo($q = null, $topic = null, $include_desc = null, $uid = null, $priority_owner_id = null, $team_id = null, $starred_by = null, $private = null, $is_private = null, $template = null, $archived = null, $mode = null, $exclusive = null, $sort = null, $order = null, $page = null, $limit = null)
+    public function repoSearchWithHttpInfo($q = null, $topic = null, $includeDesc = null, $uid = null, $priorityOwnerId = null, $teamId = null, $starredBy = null, $private = null, $isPrivate = null, $template = null, $archived = null, $mode = null, $exclusive = null, $sort = null, $order = null, $page = null, $limit = null)
     {
-        $request = $this->repoSearchRequest($q, $topic, $include_desc, $uid, $priority_owner_id, $team_id, $starred_by, $private, $is_private, $template, $archived, $mode, $exclusive, $sort, $order, $page, $limit);
+        $request = $this->repoSearchRequest($q, $topic, $includeDesc, $uid, $priorityOwnerId, $teamId, $starredBy, $private, $isPrivate, $template, $archived, $mode, $exclusive, $sort, $order, $page, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -36463,13 +36463,13 @@ class RepositoryApi
      *
      * @param  string $q keyword (optional)
      * @param  bool $topic Limit search to repositories with keyword as topic (optional)
-     * @param  bool $include_desc include search of keyword within repository description (optional)
+     * @param  bool $includeDesc include search of keyword within repository description (optional)
      * @param  int $uid search only for repos that the user with the given id owns or contributes to (optional)
-     * @param  int $priority_owner_id repo owner to prioritize in the results (optional)
-     * @param  int $team_id search only for repos that belong to the given team id (optional)
-     * @param  int $starred_by search only for repos that the user with the given id has starred (optional)
+     * @param  int $priorityOwnerId repo owner to prioritize in the results (optional)
+     * @param  int $teamId search only for repos that belong to the given team id (optional)
+     * @param  int $starredBy search only for repos that the user with the given id has starred (optional)
      * @param  bool $private include private repositories this user has access to (defaults to true) (optional)
-     * @param  bool $is_private show only pubic, private or all repositories (defaults to all) (optional)
+     * @param  bool $isPrivate show only pubic, private or all repositories (defaults to all) (optional)
      * @param  bool $template include template repositories this user has access to (defaults to true) (optional)
      * @param  bool $archived show only archived, non-archived or all repositories (defaults to all) (optional)
      * @param  string $mode type of repository to search for. Supported values are \&quot;fork\&quot;, \&quot;source\&quot;, \&quot;mirror\&quot; and \&quot;collaborative\&quot; (optional)
@@ -36482,9 +36482,9 @@ class RepositoryApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoSearchAsync($q = null, $topic = null, $include_desc = null, $uid = null, $priority_owner_id = null, $team_id = null, $starred_by = null, $private = null, $is_private = null, $template = null, $archived = null, $mode = null, $exclusive = null, $sort = null, $order = null, $page = null, $limit = null)
+    public function repoSearchAsync($q = null, $topic = null, $includeDesc = null, $uid = null, $priorityOwnerId = null, $teamId = null, $starredBy = null, $private = null, $isPrivate = null, $template = null, $archived = null, $mode = null, $exclusive = null, $sort = null, $order = null, $page = null, $limit = null)
     {
-        return $this->repoSearchAsyncWithHttpInfo($q, $topic, $include_desc, $uid, $priority_owner_id, $team_id, $starred_by, $private, $is_private, $template, $archived, $mode, $exclusive, $sort, $order, $page, $limit)
+        return $this->repoSearchAsyncWithHttpInfo($q, $topic, $includeDesc, $uid, $priorityOwnerId, $teamId, $starredBy, $private, $isPrivate, $template, $archived, $mode, $exclusive, $sort, $order, $page, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -36499,13 +36499,13 @@ class RepositoryApi
      *
      * @param  string $q keyword (optional)
      * @param  bool $topic Limit search to repositories with keyword as topic (optional)
-     * @param  bool $include_desc include search of keyword within repository description (optional)
+     * @param  bool $includeDesc include search of keyword within repository description (optional)
      * @param  int $uid search only for repos that the user with the given id owns or contributes to (optional)
-     * @param  int $priority_owner_id repo owner to prioritize in the results (optional)
-     * @param  int $team_id search only for repos that belong to the given team id (optional)
-     * @param  int $starred_by search only for repos that the user with the given id has starred (optional)
+     * @param  int $priorityOwnerId repo owner to prioritize in the results (optional)
+     * @param  int $teamId search only for repos that belong to the given team id (optional)
+     * @param  int $starredBy search only for repos that the user with the given id has starred (optional)
      * @param  bool $private include private repositories this user has access to (defaults to true) (optional)
-     * @param  bool $is_private show only pubic, private or all repositories (defaults to all) (optional)
+     * @param  bool $isPrivate show only pubic, private or all repositories (defaults to all) (optional)
      * @param  bool $template include template repositories this user has access to (defaults to true) (optional)
      * @param  bool $archived show only archived, non-archived or all repositories (defaults to all) (optional)
      * @param  string $mode type of repository to search for. Supported values are \&quot;fork\&quot;, \&quot;source\&quot;, \&quot;mirror\&quot; and \&quot;collaborative\&quot; (optional)
@@ -36518,10 +36518,10 @@ class RepositoryApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function repoSearchAsyncWithHttpInfo($q = null, $topic = null, $include_desc = null, $uid = null, $priority_owner_id = null, $team_id = null, $starred_by = null, $private = null, $is_private = null, $template = null, $archived = null, $mode = null, $exclusive = null, $sort = null, $order = null, $page = null, $limit = null)
+    public function repoSearchAsyncWithHttpInfo($q = null, $topic = null, $includeDesc = null, $uid = null, $priorityOwnerId = null, $teamId = null, $starredBy = null, $private = null, $isPrivate = null, $template = null, $archived = null, $mode = null, $exclusive = null, $sort = null, $order = null, $page = null, $limit = null)
     {
         $returnType = '\Efsa\Client\Gitea\Model\SearchResults';
-        $request = $this->repoSearchRequest($q, $topic, $include_desc, $uid, $priority_owner_id, $team_id, $starred_by, $private, $is_private, $template, $archived, $mode, $exclusive, $sort, $order, $page, $limit);
+        $request = $this->repoSearchRequest($q, $topic, $includeDesc, $uid, $priorityOwnerId, $teamId, $starredBy, $private, $isPrivate, $template, $archived, $mode, $exclusive, $sort, $order, $page, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -36561,13 +36561,13 @@ class RepositoryApi
      *
      * @param  string $q keyword (optional)
      * @param  bool $topic Limit search to repositories with keyword as topic (optional)
-     * @param  bool $include_desc include search of keyword within repository description (optional)
+     * @param  bool $includeDesc include search of keyword within repository description (optional)
      * @param  int $uid search only for repos that the user with the given id owns or contributes to (optional)
-     * @param  int $priority_owner_id repo owner to prioritize in the results (optional)
-     * @param  int $team_id search only for repos that belong to the given team id (optional)
-     * @param  int $starred_by search only for repos that the user with the given id has starred (optional)
+     * @param  int $priorityOwnerId repo owner to prioritize in the results (optional)
+     * @param  int $teamId search only for repos that belong to the given team id (optional)
+     * @param  int $starredBy search only for repos that the user with the given id has starred (optional)
      * @param  bool $private include private repositories this user has access to (defaults to true) (optional)
-     * @param  bool $is_private show only pubic, private or all repositories (defaults to all) (optional)
+     * @param  bool $isPrivate show only pubic, private or all repositories (defaults to all) (optional)
      * @param  bool $template include template repositories this user has access to (defaults to true) (optional)
      * @param  bool $archived show only archived, non-archived or all repositories (defaults to all) (optional)
      * @param  string $mode type of repository to search for. Supported values are \&quot;fork\&quot;, \&quot;source\&quot;, \&quot;mirror\&quot; and \&quot;collaborative\&quot; (optional)
@@ -36580,7 +36580,7 @@ class RepositoryApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function repoSearchRequest($q = null, $topic = null, $include_desc = null, $uid = null, $priority_owner_id = null, $team_id = null, $starred_by = null, $private = null, $is_private = null, $template = null, $archived = null, $mode = null, $exclusive = null, $sort = null, $order = null, $page = null, $limit = null)
+    public function repoSearchRequest($q = null, $topic = null, $includeDesc = null, $uid = null, $priorityOwnerId = null, $teamId = null, $starredBy = null, $private = null, $isPrivate = null, $template = null, $archived = null, $mode = null, $exclusive = null, $sort = null, $order = null, $page = null, $limit = null)
     {
 
         $resourcePath = '/repos/search';
@@ -36605,11 +36605,11 @@ class RepositoryApi
             $queryParams['topic'] = $topic;
         }
         // query params
-        if (is_array($include_desc)) {
-            $include_desc = ObjectSerializer::serializeCollection($include_desc, '', true);
+        if (is_array($includeDesc)) {
+            $includeDesc = ObjectSerializer::serializeCollection($includeDesc, '', true);
         }
-        if ($include_desc !== null) {
-            $queryParams['includeDesc'] = $include_desc;
+        if ($includeDesc !== null) {
+            $queryParams['includeDesc'] = $includeDesc;
         }
         // query params
         if (is_array($uid)) {
@@ -36619,25 +36619,25 @@ class RepositoryApi
             $queryParams['uid'] = $uid;
         }
         // query params
-        if (is_array($priority_owner_id)) {
-            $priority_owner_id = ObjectSerializer::serializeCollection($priority_owner_id, '', true);
+        if (is_array($priorityOwnerId)) {
+            $priorityOwnerId = ObjectSerializer::serializeCollection($priorityOwnerId, '', true);
         }
-        if ($priority_owner_id !== null) {
-            $queryParams['priority_owner_id'] = $priority_owner_id;
-        }
-        // query params
-        if (is_array($team_id)) {
-            $team_id = ObjectSerializer::serializeCollection($team_id, '', true);
-        }
-        if ($team_id !== null) {
-            $queryParams['team_id'] = $team_id;
+        if ($priorityOwnerId !== null) {
+            $queryParams['priority_owner_id'] = $priorityOwnerId;
         }
         // query params
-        if (is_array($starred_by)) {
-            $starred_by = ObjectSerializer::serializeCollection($starred_by, '', true);
+        if (is_array($teamId)) {
+            $teamId = ObjectSerializer::serializeCollection($teamId, '', true);
         }
-        if ($starred_by !== null) {
-            $queryParams['starredBy'] = $starred_by;
+        if ($teamId !== null) {
+            $queryParams['team_id'] = $teamId;
+        }
+        // query params
+        if (is_array($starredBy)) {
+            $starredBy = ObjectSerializer::serializeCollection($starredBy, '', true);
+        }
+        if ($starredBy !== null) {
+            $queryParams['starredBy'] = $starredBy;
         }
         // query params
         if (is_array($private)) {
@@ -36647,11 +36647,11 @@ class RepositoryApi
             $queryParams['private'] = $private;
         }
         // query params
-        if (is_array($is_private)) {
-            $is_private = ObjectSerializer::serializeCollection($is_private, '', true);
+        if (is_array($isPrivate)) {
+            $isPrivate = ObjectSerializer::serializeCollection($isPrivate, '', true);
         }
-        if ($is_private !== null) {
-            $queryParams['is_private'] = $is_private;
+        if ($isPrivate !== null) {
+            $queryParams['is_private'] = $isPrivate;
         }
         // query params
         if (is_array($template)) {

@@ -61,7 +61,7 @@ class EditMilestoneOption implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPITypes = [
         'description' => 'string',
-        'due_on' => '\DateTime',
+        'dueOn' => '\DateTime',
         'state' => 'string',
         'title' => 'string'
     ];
@@ -75,7 +75,7 @@ class EditMilestoneOption implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPIFormats = [
         'description' => null,
-        'due_on' => 'date-time',
+        'dueOn' => 'date-time',
         'state' => null,
         'title' => null
     ];
@@ -108,7 +108,7 @@ class EditMilestoneOption implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $attributeMap = [
         'description' => 'description',
-        'due_on' => 'due_on',
+        'dueOn' => 'due_on',
         'state' => 'state',
         'title' => 'title'
     ];
@@ -120,7 +120,7 @@ class EditMilestoneOption implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $setters = [
         'description' => 'setDescription',
-        'due_on' => 'setDueOn',
+        'dueOn' => 'setDueOn',
         'state' => 'setState',
         'title' => 'setTitle'
     ];
@@ -132,7 +132,7 @@ class EditMilestoneOption implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $getters = [
         'description' => 'getDescription',
-        'due_on' => 'getDueOn',
+        'dueOn' => 'getDueOn',
         'state' => 'getState',
         'title' => 'getTitle'
     ];
@@ -195,7 +195,7 @@ class EditMilestoneOption implements ModelInterface, ArrayAccess, \JsonSerializa
     public function __construct(array $data = null)
     {
         $this->container['description'] = $data['description'] ?? null;
-        $this->container['due_on'] = $data['due_on'] ?? null;
+        $this->container['dueOn'] = $data['dueOn'] ?? null;
         $this->container['state'] = $data['state'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
     }
@@ -249,25 +249,25 @@ class EditMilestoneOption implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets due_on
+     * Gets dueOn
      *
      * @return \DateTime|null
      */
     public function getDueOn()
     {
-        return $this->container['due_on'];
+        return $this->container['dueOn'];
     }
 
     /**
-     * Sets due_on
+     * Sets dueOn
      *
-     * @param \DateTime|null $due_on due_on
+     * @param \DateTime|null $dueOn dueOn
      *
      * @return self
      */
-    public function setDueOn($due_on)
+    public function setDueOn($dueOn)
     {
-        $this->container['due_on'] = $due_on;
+        $this->container['dueOn'] = $dueOn;
 
         return $this;
     }

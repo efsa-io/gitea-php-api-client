@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description CreateReleaseOption options when creating a release
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -116,7 +116,7 @@ class CreateReleaseOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "tag_name"
+     * Test attribute "tagName"
      */
     public function testPropertyTagName()
     {
@@ -125,7 +125,7 @@ class CreateReleaseOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "target_commitish"
+     * Test attribute "targetCommitish"
      */
     public function testPropertyTargetCommitish()
     {

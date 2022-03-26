@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **committer** | [**\Efsa\Client\Gitea\Model\User**](User.md) |  | [optional]
 **created** | [**\DateTime**](\DateTime.md) |  | [optional]
 **files** | [**\Efsa\Client\Gitea\Model\CommitAffectedFiles[]**](CommitAffectedFiles.md) |  | [optional]
-**html_url** | **string** |  | [optional]
+**htmlUrl** | **string** |  | [optional]
 **parents** | [**\Efsa\Client\Gitea\Model\CommitMeta[]**](CommitMeta.md) |  | [optional]
 **sha** | **string** |  | [optional]
 **url** | **string** |  | [optional]

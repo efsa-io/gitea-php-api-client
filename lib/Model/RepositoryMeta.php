@@ -60,7 +60,7 @@ class RepositoryMeta implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'full_name' => 'string',
+        'fullName' => 'string',
         'id' => 'int',
         'name' => 'string',
         'owner' => 'string'
@@ -74,7 +74,7 @@ class RepositoryMeta implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'full_name' => null,
+        'fullName' => null,
         'id' => 'int64',
         'name' => null,
         'owner' => null
@@ -107,7 +107,7 @@ class RepositoryMeta implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'full_name' => 'full_name',
+        'fullName' => 'full_name',
         'id' => 'id',
         'name' => 'name',
         'owner' => 'owner'
@@ -119,7 +119,7 @@ class RepositoryMeta implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'full_name' => 'setFullName',
+        'fullName' => 'setFullName',
         'id' => 'setId',
         'name' => 'setName',
         'owner' => 'setOwner'
@@ -131,7 +131,7 @@ class RepositoryMeta implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'full_name' => 'getFullName',
+        'fullName' => 'getFullName',
         'id' => 'getId',
         'name' => 'getName',
         'owner' => 'getOwner'
@@ -194,7 +194,7 @@ class RepositoryMeta implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['full_name'] = $data['full_name'] ?? null;
+        $this->container['fullName'] = $data['fullName'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['owner'] = $data['owner'] ?? null;
@@ -225,25 +225,25 @@ class RepositoryMeta implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets full_name
+     * Gets fullName
      *
      * @return string|null
      */
     public function getFullName()
     {
-        return $this->container['full_name'];
+        return $this->container['fullName'];
     }
 
     /**
-     * Sets full_name
+     * Sets fullName
      *
-     * @param string|null $full_name full_name
+     * @param string|null $fullName fullName
      *
      * @return self
      */
-    public function setFullName($full_name)
+    public function setFullName($fullName)
     {
-        $this->container['full_name'] = $full_name;
+        $this->container['fullName'] = $fullName;
 
         return $this;
     }

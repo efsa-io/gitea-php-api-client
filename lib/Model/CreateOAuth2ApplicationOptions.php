@@ -61,7 +61,7 @@ class CreateOAuth2ApplicationOptions implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPITypes = [
         'name' => 'string',
-        'redirect_uris' => 'string[]'
+        'redirectUris' => 'string[]'
     ];
 
     /**
@@ -73,7 +73,7 @@ class CreateOAuth2ApplicationOptions implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPIFormats = [
         'name' => null,
-        'redirect_uris' => null
+        'redirectUris' => null
     ];
 
     /**
@@ -104,7 +104,7 @@ class CreateOAuth2ApplicationOptions implements ModelInterface, ArrayAccess, \Js
      */
     protected static $attributeMap = [
         'name' => 'name',
-        'redirect_uris' => 'redirect_uris'
+        'redirectUris' => 'redirect_uris'
     ];
 
     /**
@@ -114,7 +114,7 @@ class CreateOAuth2ApplicationOptions implements ModelInterface, ArrayAccess, \Js
      */
     protected static $setters = [
         'name' => 'setName',
-        'redirect_uris' => 'setRedirectUris'
+        'redirectUris' => 'setRedirectUris'
     ];
 
     /**
@@ -124,7 +124,7 @@ class CreateOAuth2ApplicationOptions implements ModelInterface, ArrayAccess, \Js
      */
     protected static $getters = [
         'name' => 'getName',
-        'redirect_uris' => 'getRedirectUris'
+        'redirectUris' => 'getRedirectUris'
     ];
 
     /**
@@ -185,7 +185,7 @@ class CreateOAuth2ApplicationOptions implements ModelInterface, ArrayAccess, \Js
     public function __construct(array $data = null)
     {
         $this->container['name'] = $data['name'] ?? null;
-        $this->container['redirect_uris'] = $data['redirect_uris'] ?? null;
+        $this->container['redirectUris'] = $data['redirectUris'] ?? null;
     }
 
     /**
@@ -237,25 +237,25 @@ class CreateOAuth2ApplicationOptions implements ModelInterface, ArrayAccess, \Js
     }
 
     /**
-     * Gets redirect_uris
+     * Gets redirectUris
      *
      * @return string[]|null
      */
     public function getRedirectUris()
     {
-        return $this->container['redirect_uris'];
+        return $this->container['redirectUris'];
     }
 
     /**
-     * Sets redirect_uris
+     * Sets redirectUris
      *
-     * @param string[]|null $redirect_uris redirect_uris
+     * @param string[]|null $redirectUris redirectUris
      *
      * @return self
      */
-    public function setRedirectUris($redirect_uris)
+    public function setRedirectUris($redirectUris)
     {
-        $this->container['redirect_uris'] = $redirect_uris;
+        $this->container['redirectUris'] = $redirectUris;
 
         return $this;
     }

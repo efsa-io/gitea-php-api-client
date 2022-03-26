@@ -60,7 +60,7 @@ class EditDeadlineOption implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'due_date' => '\DateTime'
+        'dueDate' => '\DateTime'
     ];
 
     /**
@@ -71,7 +71,7 @@ class EditDeadlineOption implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'due_date' => 'date-time'
+        'dueDate' => 'date-time'
     ];
 
     /**
@@ -101,7 +101,7 @@ class EditDeadlineOption implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'due_date' => 'due_date'
+        'dueDate' => 'due_date'
     ];
 
     /**
@@ -110,7 +110,7 @@ class EditDeadlineOption implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'due_date' => 'setDueDate'
+        'dueDate' => 'setDueDate'
     ];
 
     /**
@@ -119,7 +119,7 @@ class EditDeadlineOption implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'due_date' => 'getDueDate'
+        'dueDate' => 'getDueDate'
     ];
 
     /**
@@ -179,7 +179,7 @@ class EditDeadlineOption implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['due_date'] = $data['due_date'] ?? null;
+        $this->container['dueDate'] = $data['dueDate'] ?? null;
     }
 
     /**
@@ -191,8 +191,8 @@ class EditDeadlineOption implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $invalidProperties = [];
 
-        if ($this->container['due_date'] === null) {
-            $invalidProperties[] = "'due_date' can't be null";
+        if ($this->container['dueDate'] === null) {
+            $invalidProperties[] = "'dueDate' can't be null";
         }
         return $invalidProperties;
     }
@@ -210,25 +210,25 @@ class EditDeadlineOption implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets due_date
+     * Gets dueDate
      *
      * @return \DateTime
      */
     public function getDueDate()
     {
-        return $this->container['due_date'];
+        return $this->container['dueDate'];
     }
 
     /**
-     * Sets due_date
+     * Sets dueDate
      *
-     * @param \DateTime $due_date due_date
+     * @param \DateTime $dueDate dueDate
      *
      * @return self
      */
-    public function setDueDate($due_date)
+    public function setDueDate($dueDate)
     {
-        $this->container['due_date'] = $due_date;
+        $this->container['dueDate'] = $dueDate;
 
         return $this;
     }

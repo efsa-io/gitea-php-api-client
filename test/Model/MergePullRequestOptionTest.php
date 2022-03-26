@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description MergePullRequestForm form for merging Pull Request
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -89,16 +89,16 @@ class MergePullRequestOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "merge_commit_id"
+     * Test attribute "mergeCommitID"
      */
-    public function testPropertyMergeCommitId()
+    public function testPropertyMergeCommitID()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "merge_message_field"
+     * Test attribute "mergeMessageField"
      */
     public function testPropertyMergeMessageField()
     {
@@ -107,7 +107,7 @@ class MergePullRequestOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "merge_title_field"
+     * Test attribute "mergeTitleField"
      */
     public function testPropertyMergeTitleField()
     {
@@ -116,7 +116,7 @@ class MergePullRequestOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "delete_branch_after_merge"
+     * Test attribute "deleteBranchAfterMerge"
      */
     public function testPropertyDeleteBranchAfterMerge()
     {
@@ -125,7 +125,7 @@ class MergePullRequestOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "force_merge"
+     * Test attribute "forceMerge"
      */
     public function testPropertyForceMerge()
     {
@@ -134,7 +134,7 @@ class MergePullRequestOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "head_commit_id"
+     * Test attribute "headCommitId"
      */
     public function testPropertyHeadCommitId()
     {

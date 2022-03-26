@@ -60,12 +60,12 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'avatar_url' => 'string',
+        'avatarUrl' => 'string',
         'description' => 'string',
-        'full_name' => 'string',
+        'fullName' => 'string',
         'id' => 'int',
         'location' => 'string',
-        'repo_admin_change_team_access' => 'bool',
+        'repoAdminChangeTeamAccess' => 'bool',
         'username' => 'string',
         'visibility' => 'string',
         'website' => 'string'
@@ -79,12 +79,12 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'avatar_url' => null,
+        'avatarUrl' => null,
         'description' => null,
-        'full_name' => null,
+        'fullName' => null,
         'id' => 'int64',
         'location' => null,
-        'repo_admin_change_team_access' => null,
+        'repoAdminChangeTeamAccess' => null,
         'username' => null,
         'visibility' => null,
         'website' => null
@@ -117,12 +117,12 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'avatar_url' => 'avatar_url',
+        'avatarUrl' => 'avatar_url',
         'description' => 'description',
-        'full_name' => 'full_name',
+        'fullName' => 'full_name',
         'id' => 'id',
         'location' => 'location',
-        'repo_admin_change_team_access' => 'repo_admin_change_team_access',
+        'repoAdminChangeTeamAccess' => 'repo_admin_change_team_access',
         'username' => 'username',
         'visibility' => 'visibility',
         'website' => 'website'
@@ -134,12 +134,12 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'avatar_url' => 'setAvatarUrl',
+        'avatarUrl' => 'setAvatarUrl',
         'description' => 'setDescription',
-        'full_name' => 'setFullName',
+        'fullName' => 'setFullName',
         'id' => 'setId',
         'location' => 'setLocation',
-        'repo_admin_change_team_access' => 'setRepoAdminChangeTeamAccess',
+        'repoAdminChangeTeamAccess' => 'setRepoAdminChangeTeamAccess',
         'username' => 'setUsername',
         'visibility' => 'setVisibility',
         'website' => 'setWebsite'
@@ -151,12 +151,12 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'avatar_url' => 'getAvatarUrl',
+        'avatarUrl' => 'getAvatarUrl',
         'description' => 'getDescription',
-        'full_name' => 'getFullName',
+        'fullName' => 'getFullName',
         'id' => 'getId',
         'location' => 'getLocation',
-        'repo_admin_change_team_access' => 'getRepoAdminChangeTeamAccess',
+        'repoAdminChangeTeamAccess' => 'getRepoAdminChangeTeamAccess',
         'username' => 'getUsername',
         'visibility' => 'getVisibility',
         'website' => 'getWebsite'
@@ -219,12 +219,12 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['avatar_url'] = $data['avatar_url'] ?? null;
+        $this->container['avatarUrl'] = $data['avatarUrl'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
-        $this->container['full_name'] = $data['full_name'] ?? null;
+        $this->container['fullName'] = $data['fullName'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['location'] = $data['location'] ?? null;
-        $this->container['repo_admin_change_team_access'] = $data['repo_admin_change_team_access'] ?? null;
+        $this->container['repoAdminChangeTeamAccess'] = $data['repoAdminChangeTeamAccess'] ?? null;
         $this->container['username'] = $data['username'] ?? null;
         $this->container['visibility'] = $data['visibility'] ?? null;
         $this->container['website'] = $data['website'] ?? null;
@@ -255,25 +255,25 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets avatar_url
+     * Gets avatarUrl
      *
      * @return string|null
      */
     public function getAvatarUrl()
     {
-        return $this->container['avatar_url'];
+        return $this->container['avatarUrl'];
     }
 
     /**
-     * Sets avatar_url
+     * Sets avatarUrl
      *
-     * @param string|null $avatar_url avatar_url
+     * @param string|null $avatarUrl avatarUrl
      *
      * @return self
      */
-    public function setAvatarUrl($avatar_url)
+    public function setAvatarUrl($avatarUrl)
     {
-        $this->container['avatar_url'] = $avatar_url;
+        $this->container['avatarUrl'] = $avatarUrl;
 
         return $this;
     }
@@ -303,25 +303,25 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets full_name
+     * Gets fullName
      *
      * @return string|null
      */
     public function getFullName()
     {
-        return $this->container['full_name'];
+        return $this->container['fullName'];
     }
 
     /**
-     * Sets full_name
+     * Sets fullName
      *
-     * @param string|null $full_name full_name
+     * @param string|null $fullName fullName
      *
      * @return self
      */
-    public function setFullName($full_name)
+    public function setFullName($fullName)
     {
-        $this->container['full_name'] = $full_name;
+        $this->container['fullName'] = $fullName;
 
         return $this;
     }
@@ -375,25 +375,25 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets repo_admin_change_team_access
+     * Gets repoAdminChangeTeamAccess
      *
      * @return bool|null
      */
     public function getRepoAdminChangeTeamAccess()
     {
-        return $this->container['repo_admin_change_team_access'];
+        return $this->container['repoAdminChangeTeamAccess'];
     }
 
     /**
-     * Sets repo_admin_change_team_access
+     * Sets repoAdminChangeTeamAccess
      *
-     * @param bool|null $repo_admin_change_team_access repo_admin_change_team_access
+     * @param bool|null $repoAdminChangeTeamAccess repoAdminChangeTeamAccess
      *
      * @return self
      */
-    public function setRepoAdminChangeTeamAccess($repo_admin_change_team_access)
+    public function setRepoAdminChangeTeamAccess($repoAdminChangeTeamAccess)
     {
-        $this->container['repo_admin_change_team_access'] = $repo_admin_change_team_access;
+        $this->container['repoAdminChangeTeamAccess'] = $repoAdminChangeTeamAccess;
 
         return $this;
     }

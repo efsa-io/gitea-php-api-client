@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description User represents a user
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -89,7 +89,7 @@ class UserTest extends TestCase
     }
 
     /**
-     * Test attribute "avatar_url"
+     * Test attribute "avatarUrl"
      */
     public function testPropertyAvatarUrl()
     {
@@ -125,7 +125,7 @@ class UserTest extends TestCase
     }
 
     /**
-     * Test attribute "followers_count"
+     * Test attribute "followersCount"
      */
     public function testPropertyFollowersCount()
     {
@@ -134,7 +134,7 @@ class UserTest extends TestCase
     }
 
     /**
-     * Test attribute "following_count"
+     * Test attribute "followingCount"
      */
     public function testPropertyFollowingCount()
     {
@@ -143,7 +143,7 @@ class UserTest extends TestCase
     }
 
     /**
-     * Test attribute "full_name"
+     * Test attribute "fullName"
      */
     public function testPropertyFullName()
     {
@@ -161,7 +161,7 @@ class UserTest extends TestCase
     }
 
     /**
-     * Test attribute "is_admin"
+     * Test attribute "isAdmin"
      */
     public function testPropertyIsAdmin()
     {
@@ -179,7 +179,7 @@ class UserTest extends TestCase
     }
 
     /**
-     * Test attribute "last_login"
+     * Test attribute "lastLogin"
      */
     public function testPropertyLastLogin()
     {
@@ -206,7 +206,7 @@ class UserTest extends TestCase
     }
 
     /**
-     * Test attribute "prohibit_login"
+     * Test attribute "prohibitLogin"
      */
     public function testPropertyProhibitLogin()
     {
@@ -224,7 +224,7 @@ class UserTest extends TestCase
     }
 
     /**
-     * Test attribute "starred_repos_count"
+     * Test attribute "starredReposCount"
      */
     public function testPropertyStarredReposCount()
     {

@@ -60,17 +60,17 @@ class ContentsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        '_links' => '\Efsa\Client\Gitea\Model\FileLinksResponse',
+        'links' => '\Efsa\Client\Gitea\Model\FileLinksResponse',
         'content' => 'string',
-        'download_url' => 'string',
+        'downloadUrl' => 'string',
         'encoding' => 'string',
-        'git_url' => 'string',
-        'html_url' => 'string',
+        'gitUrl' => 'string',
+        'htmlUrl' => 'string',
         'name' => 'string',
         'path' => 'string',
         'sha' => 'string',
         'size' => 'int',
-        'submodule_git_url' => 'string',
+        'submoduleGitUrl' => 'string',
         'target' => 'string',
         'type' => 'string',
         'url' => 'string'
@@ -84,17 +84,17 @@ class ContentsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        '_links' => null,
+        'links' => null,
         'content' => null,
-        'download_url' => null,
+        'downloadUrl' => null,
         'encoding' => null,
-        'git_url' => null,
-        'html_url' => null,
+        'gitUrl' => null,
+        'htmlUrl' => null,
         'name' => null,
         'path' => null,
         'sha' => null,
         'size' => 'int64',
-        'submodule_git_url' => null,
+        'submoduleGitUrl' => null,
         'target' => null,
         'type' => null,
         'url' => null
@@ -127,17 +127,17 @@ class ContentsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        '_links' => '_links',
+        'links' => '_links',
         'content' => 'content',
-        'download_url' => 'download_url',
+        'downloadUrl' => 'download_url',
         'encoding' => 'encoding',
-        'git_url' => 'git_url',
-        'html_url' => 'html_url',
+        'gitUrl' => 'git_url',
+        'htmlUrl' => 'html_url',
         'name' => 'name',
         'path' => 'path',
         'sha' => 'sha',
         'size' => 'size',
-        'submodule_git_url' => 'submodule_git_url',
+        'submoduleGitUrl' => 'submodule_git_url',
         'target' => 'target',
         'type' => 'type',
         'url' => 'url'
@@ -149,17 +149,17 @@ class ContentsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        '_links' => 'setLinks',
+        'links' => 'setLinks',
         'content' => 'setContent',
-        'download_url' => 'setDownloadUrl',
+        'downloadUrl' => 'setDownloadUrl',
         'encoding' => 'setEncoding',
-        'git_url' => 'setGitUrl',
-        'html_url' => 'setHtmlUrl',
+        'gitUrl' => 'setGitUrl',
+        'htmlUrl' => 'setHtmlUrl',
         'name' => 'setName',
         'path' => 'setPath',
         'sha' => 'setSha',
         'size' => 'setSize',
-        'submodule_git_url' => 'setSubmoduleGitUrl',
+        'submoduleGitUrl' => 'setSubmoduleGitUrl',
         'target' => 'setTarget',
         'type' => 'setType',
         'url' => 'setUrl'
@@ -171,17 +171,17 @@ class ContentsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        '_links' => 'getLinks',
+        'links' => 'getLinks',
         'content' => 'getContent',
-        'download_url' => 'getDownloadUrl',
+        'downloadUrl' => 'getDownloadUrl',
         'encoding' => 'getEncoding',
-        'git_url' => 'getGitUrl',
-        'html_url' => 'getHtmlUrl',
+        'gitUrl' => 'getGitUrl',
+        'htmlUrl' => 'getHtmlUrl',
         'name' => 'getName',
         'path' => 'getPath',
         'sha' => 'getSha',
         'size' => 'getSize',
-        'submodule_git_url' => 'getSubmoduleGitUrl',
+        'submoduleGitUrl' => 'getSubmoduleGitUrl',
         'target' => 'getTarget',
         'type' => 'getType',
         'url' => 'getUrl'
@@ -244,17 +244,17 @@ class ContentsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['_links'] = $data['_links'] ?? null;
+        $this->container['links'] = $data['links'] ?? null;
         $this->container['content'] = $data['content'] ?? null;
-        $this->container['download_url'] = $data['download_url'] ?? null;
+        $this->container['downloadUrl'] = $data['downloadUrl'] ?? null;
         $this->container['encoding'] = $data['encoding'] ?? null;
-        $this->container['git_url'] = $data['git_url'] ?? null;
-        $this->container['html_url'] = $data['html_url'] ?? null;
+        $this->container['gitUrl'] = $data['gitUrl'] ?? null;
+        $this->container['htmlUrl'] = $data['htmlUrl'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['path'] = $data['path'] ?? null;
         $this->container['sha'] = $data['sha'] ?? null;
         $this->container['size'] = $data['size'] ?? null;
-        $this->container['submodule_git_url'] = $data['submodule_git_url'] ?? null;
+        $this->container['submoduleGitUrl'] = $data['submoduleGitUrl'] ?? null;
         $this->container['target'] = $data['target'] ?? null;
         $this->container['type'] = $data['type'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
@@ -285,25 +285,25 @@ class ContentsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets _links
+     * Gets links
      *
      * @return \Efsa\Client\Gitea\Model\FileLinksResponse|null
      */
     public function getLinks()
     {
-        return $this->container['_links'];
+        return $this->container['links'];
     }
 
     /**
-     * Sets _links
+     * Sets links
      *
-     * @param \Efsa\Client\Gitea\Model\FileLinksResponse|null $_links _links
+     * @param \Efsa\Client\Gitea\Model\FileLinksResponse|null $links links
      *
      * @return self
      */
-    public function setLinks($_links)
+    public function setLinks($links)
     {
-        $this->container['_links'] = $_links;
+        $this->container['links'] = $links;
 
         return $this;
     }
@@ -333,25 +333,25 @@ class ContentsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets download_url
+     * Gets downloadUrl
      *
      * @return string|null
      */
     public function getDownloadUrl()
     {
-        return $this->container['download_url'];
+        return $this->container['downloadUrl'];
     }
 
     /**
-     * Sets download_url
+     * Sets downloadUrl
      *
-     * @param string|null $download_url download_url
+     * @param string|null $downloadUrl downloadUrl
      *
      * @return self
      */
-    public function setDownloadUrl($download_url)
+    public function setDownloadUrl($downloadUrl)
     {
-        $this->container['download_url'] = $download_url;
+        $this->container['downloadUrl'] = $downloadUrl;
 
         return $this;
     }
@@ -381,49 +381,49 @@ class ContentsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets git_url
+     * Gets gitUrl
      *
      * @return string|null
      */
     public function getGitUrl()
     {
-        return $this->container['git_url'];
+        return $this->container['gitUrl'];
     }
 
     /**
-     * Sets git_url
+     * Sets gitUrl
      *
-     * @param string|null $git_url git_url
+     * @param string|null $gitUrl gitUrl
      *
      * @return self
      */
-    public function setGitUrl($git_url)
+    public function setGitUrl($gitUrl)
     {
-        $this->container['git_url'] = $git_url;
+        $this->container['gitUrl'] = $gitUrl;
 
         return $this;
     }
 
     /**
-     * Gets html_url
+     * Gets htmlUrl
      *
      * @return string|null
      */
     public function getHtmlUrl()
     {
-        return $this->container['html_url'];
+        return $this->container['htmlUrl'];
     }
 
     /**
-     * Sets html_url
+     * Sets htmlUrl
      *
-     * @param string|null $html_url html_url
+     * @param string|null $htmlUrl htmlUrl
      *
      * @return self
      */
-    public function setHtmlUrl($html_url)
+    public function setHtmlUrl($htmlUrl)
     {
-        $this->container['html_url'] = $html_url;
+        $this->container['htmlUrl'] = $htmlUrl;
 
         return $this;
     }
@@ -525,25 +525,25 @@ class ContentsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets submodule_git_url
+     * Gets submoduleGitUrl
      *
      * @return string|null
      */
     public function getSubmoduleGitUrl()
     {
-        return $this->container['submodule_git_url'];
+        return $this->container['submoduleGitUrl'];
     }
 
     /**
-     * Sets submodule_git_url
+     * Sets submoduleGitUrl
      *
-     * @param string|null $submodule_git_url `submodule_git_url` is populated when `type` is `submodule`, otherwise null
+     * @param string|null $submoduleGitUrl `submodule_git_url` is populated when `type` is `submodule`, otherwise null
      *
      * @return self
      */
-    public function setSubmoduleGitUrl($submodule_git_url)
+    public function setSubmoduleGitUrl($submoduleGitUrl)
     {
-        $this->container['submodule_git_url'] = $submodule_git_url;
+        $this->container['submoduleGitUrl'] = $submoduleGitUrl;
 
         return $this;
     }

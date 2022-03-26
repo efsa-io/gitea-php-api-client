@@ -5,12 +5,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | **string** |  |
-**full_name** | **string** |  | [optional]
-**login_name** | **string** |  | [optional]
-**must_change_password** | **bool** |  | [optional]
+**fullName** | **string** |  | [optional]
+**loginName** | **string** |  | [optional]
+**mustChangePassword** | **bool** |  | [optional]
 **password** | **string** |  |
-**send_notify** | **bool** |  | [optional]
-**source_id** | **int** |  | [optional]
+**sendNotify** | **bool** |  | [optional]
+**sourceId** | **int** |  | [optional]
 **username** | **string** |  |
 **visibility** | **string** |  | [optional]
 

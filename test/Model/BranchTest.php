@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Branch represents a repository branch
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -89,7 +89,7 @@ class BranchTest extends TestCase
     }
 
     /**
-     * Test attribute "effective_branch_protection_name"
+     * Test attribute "effectiveBranchProtectionName"
      */
     public function testPropertyEffectiveBranchProtectionName()
     {
@@ -98,7 +98,7 @@ class BranchTest extends TestCase
     }
 
     /**
-     * Test attribute "enable_status_check"
+     * Test attribute "enableStatusCheck"
      */
     public function testPropertyEnableStatusCheck()
     {
@@ -125,7 +125,7 @@ class BranchTest extends TestCase
     }
 
     /**
-     * Test attribute "required_approvals"
+     * Test attribute "requiredApprovals"
      */
     public function testPropertyRequiredApprovals()
     {
@@ -134,7 +134,7 @@ class BranchTest extends TestCase
     }
 
     /**
-     * Test attribute "status_check_contexts"
+     * Test attribute "statusCheckContexts"
      */
     public function testPropertyStatusCheckContexts()
     {
@@ -143,7 +143,7 @@ class BranchTest extends TestCase
     }
 
     /**
-     * Test attribute "user_can_merge"
+     * Test attribute "userCanMerge"
      */
     public function testPropertyUserCanMerge()
     {
@@ -152,7 +152,7 @@ class BranchTest extends TestCase
     }
 
     /**
-     * Test attribute "user_can_push"
+     * Test attribute "userCanPush"
      */
     public function testPropertyUserCanPush()
     {

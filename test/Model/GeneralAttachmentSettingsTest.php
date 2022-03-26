@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description GeneralAttachmentSettings contains global Attachment settings exposed by API
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class GeneralAttachmentSettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "allowed_types"
+     * Test attribute "allowedTypes"
      */
     public function testPropertyAllowedTypes()
     {
@@ -98,7 +98,7 @@ class GeneralAttachmentSettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "max_files"
+     * Test attribute "maxFiles"
      */
     public function testPropertyMaxFiles()
     {
@@ -107,7 +107,7 @@ class GeneralAttachmentSettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "max_size"
+     * Test attribute "maxSize"
      */
     public function testPropertyMaxSize()
     {

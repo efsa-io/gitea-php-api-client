@@ -60,10 +60,10 @@ class WatchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'created_at' => '\DateTime',
+        'createdAt' => '\DateTime',
         'ignored' => 'bool',
         'reason' => 'object',
-        'repository_url' => 'string',
+        'repositoryUrl' => 'string',
         'subscribed' => 'bool',
         'url' => 'string'
     ];
@@ -76,10 +76,10 @@ class WatchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'created_at' => 'date-time',
+        'createdAt' => 'date-time',
         'ignored' => null,
         'reason' => null,
-        'repository_url' => null,
+        'repositoryUrl' => null,
         'subscribed' => null,
         'url' => null
     ];
@@ -111,10 +111,10 @@ class WatchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'created_at' => 'created_at',
+        'createdAt' => 'created_at',
         'ignored' => 'ignored',
         'reason' => 'reason',
-        'repository_url' => 'repository_url',
+        'repositoryUrl' => 'repository_url',
         'subscribed' => 'subscribed',
         'url' => 'url'
     ];
@@ -125,10 +125,10 @@ class WatchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'created_at' => 'setCreatedAt',
+        'createdAt' => 'setCreatedAt',
         'ignored' => 'setIgnored',
         'reason' => 'setReason',
-        'repository_url' => 'setRepositoryUrl',
+        'repositoryUrl' => 'setRepositoryUrl',
         'subscribed' => 'setSubscribed',
         'url' => 'setUrl'
     ];
@@ -139,10 +139,10 @@ class WatchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'created_at' => 'getCreatedAt',
+        'createdAt' => 'getCreatedAt',
         'ignored' => 'getIgnored',
         'reason' => 'getReason',
-        'repository_url' => 'getRepositoryUrl',
+        'repositoryUrl' => 'getRepositoryUrl',
         'subscribed' => 'getSubscribed',
         'url' => 'getUrl'
     ];
@@ -204,10 +204,10 @@ class WatchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['createdAt'] = $data['createdAt'] ?? null;
         $this->container['ignored'] = $data['ignored'] ?? null;
         $this->container['reason'] = $data['reason'] ?? null;
-        $this->container['repository_url'] = $data['repository_url'] ?? null;
+        $this->container['repositoryUrl'] = $data['repositoryUrl'] ?? null;
         $this->container['subscribed'] = $data['subscribed'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
     }
@@ -237,25 +237,25 @@ class WatchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime|null
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $createdAt createdAt
      *
      * @return self
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }
@@ -309,25 +309,25 @@ class WatchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets repository_url
+     * Gets repositoryUrl
      *
      * @return string|null
      */
     public function getRepositoryUrl()
     {
-        return $this->container['repository_url'];
+        return $this->container['repositoryUrl'];
     }
 
     /**
-     * Sets repository_url
+     * Sets repositoryUrl
      *
-     * @param string|null $repository_url repository_url
+     * @param string|null $repositoryUrl repositoryUrl
      *
      * @return self
      */
-    public function setRepositoryUrl($repository_url)
+    public function setRepositoryUrl($repositoryUrl)
     {
-        $this->container['repository_url'] = $repository_url;
+        $this->container['repositoryUrl'] = $repositoryUrl;
 
         return $this;
     }

@@ -61,16 +61,16 @@ class PullReview implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'body' => 'string',
-        'comments_count' => 'int',
-        'commit_id' => 'string',
+        'commentsCount' => 'int',
+        'commitId' => 'string',
         'dismissed' => 'bool',
-        'html_url' => 'string',
+        'htmlUrl' => 'string',
         'id' => 'int',
         'official' => 'bool',
-        'pull_request_url' => 'string',
+        'pullRequestUrl' => 'string',
         'stale' => 'bool',
         'state' => 'string',
-        'submitted_at' => '\DateTime',
+        'submittedAt' => '\DateTime',
         'team' => '\Efsa\Client\Gitea\Model\Team',
         'user' => '\Efsa\Client\Gitea\Model\User'
     ];
@@ -84,16 +84,16 @@ class PullReview implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'body' => null,
-        'comments_count' => 'int64',
-        'commit_id' => null,
+        'commentsCount' => 'int64',
+        'commitId' => null,
         'dismissed' => null,
-        'html_url' => null,
+        'htmlUrl' => null,
         'id' => 'int64',
         'official' => null,
-        'pull_request_url' => null,
+        'pullRequestUrl' => null,
         'stale' => null,
         'state' => null,
-        'submitted_at' => 'date-time',
+        'submittedAt' => 'date-time',
         'team' => null,
         'user' => null
     ];
@@ -126,16 +126,16 @@ class PullReview implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'body' => 'body',
-        'comments_count' => 'comments_count',
-        'commit_id' => 'commit_id',
+        'commentsCount' => 'comments_count',
+        'commitId' => 'commit_id',
         'dismissed' => 'dismissed',
-        'html_url' => 'html_url',
+        'htmlUrl' => 'html_url',
         'id' => 'id',
         'official' => 'official',
-        'pull_request_url' => 'pull_request_url',
+        'pullRequestUrl' => 'pull_request_url',
         'stale' => 'stale',
         'state' => 'state',
-        'submitted_at' => 'submitted_at',
+        'submittedAt' => 'submitted_at',
         'team' => 'team',
         'user' => 'user'
     ];
@@ -147,16 +147,16 @@ class PullReview implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'body' => 'setBody',
-        'comments_count' => 'setCommentsCount',
-        'commit_id' => 'setCommitId',
+        'commentsCount' => 'setCommentsCount',
+        'commitId' => 'setCommitId',
         'dismissed' => 'setDismissed',
-        'html_url' => 'setHtmlUrl',
+        'htmlUrl' => 'setHtmlUrl',
         'id' => 'setId',
         'official' => 'setOfficial',
-        'pull_request_url' => 'setPullRequestUrl',
+        'pullRequestUrl' => 'setPullRequestUrl',
         'stale' => 'setStale',
         'state' => 'setState',
-        'submitted_at' => 'setSubmittedAt',
+        'submittedAt' => 'setSubmittedAt',
         'team' => 'setTeam',
         'user' => 'setUser'
     ];
@@ -168,16 +168,16 @@ class PullReview implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'body' => 'getBody',
-        'comments_count' => 'getCommentsCount',
-        'commit_id' => 'getCommitId',
+        'commentsCount' => 'getCommentsCount',
+        'commitId' => 'getCommitId',
         'dismissed' => 'getDismissed',
-        'html_url' => 'getHtmlUrl',
+        'htmlUrl' => 'getHtmlUrl',
         'id' => 'getId',
         'official' => 'getOfficial',
-        'pull_request_url' => 'getPullRequestUrl',
+        'pullRequestUrl' => 'getPullRequestUrl',
         'stale' => 'getStale',
         'state' => 'getState',
-        'submitted_at' => 'getSubmittedAt',
+        'submittedAt' => 'getSubmittedAt',
         'team' => 'getTeam',
         'user' => 'getUser'
     ];
@@ -240,16 +240,16 @@ class PullReview implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['body'] = $data['body'] ?? null;
-        $this->container['comments_count'] = $data['comments_count'] ?? null;
-        $this->container['commit_id'] = $data['commit_id'] ?? null;
+        $this->container['commentsCount'] = $data['commentsCount'] ?? null;
+        $this->container['commitId'] = $data['commitId'] ?? null;
         $this->container['dismissed'] = $data['dismissed'] ?? null;
-        $this->container['html_url'] = $data['html_url'] ?? null;
+        $this->container['htmlUrl'] = $data['htmlUrl'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['official'] = $data['official'] ?? null;
-        $this->container['pull_request_url'] = $data['pull_request_url'] ?? null;
+        $this->container['pullRequestUrl'] = $data['pullRequestUrl'] ?? null;
         $this->container['stale'] = $data['stale'] ?? null;
         $this->container['state'] = $data['state'] ?? null;
-        $this->container['submitted_at'] = $data['submitted_at'] ?? null;
+        $this->container['submittedAt'] = $data['submittedAt'] ?? null;
         $this->container['team'] = $data['team'] ?? null;
         $this->container['user'] = $data['user'] ?? null;
     }
@@ -303,49 +303,49 @@ class PullReview implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets comments_count
+     * Gets commentsCount
      *
      * @return int|null
      */
     public function getCommentsCount()
     {
-        return $this->container['comments_count'];
+        return $this->container['commentsCount'];
     }
 
     /**
-     * Sets comments_count
+     * Sets commentsCount
      *
-     * @param int|null $comments_count comments_count
+     * @param int|null $commentsCount commentsCount
      *
      * @return self
      */
-    public function setCommentsCount($comments_count)
+    public function setCommentsCount($commentsCount)
     {
-        $this->container['comments_count'] = $comments_count;
+        $this->container['commentsCount'] = $commentsCount;
 
         return $this;
     }
 
     /**
-     * Gets commit_id
+     * Gets commitId
      *
      * @return string|null
      */
     public function getCommitId()
     {
-        return $this->container['commit_id'];
+        return $this->container['commitId'];
     }
 
     /**
-     * Sets commit_id
+     * Sets commitId
      *
-     * @param string|null $commit_id commit_id
+     * @param string|null $commitId commitId
      *
      * @return self
      */
-    public function setCommitId($commit_id)
+    public function setCommitId($commitId)
     {
-        $this->container['commit_id'] = $commit_id;
+        $this->container['commitId'] = $commitId;
 
         return $this;
     }
@@ -375,25 +375,25 @@ class PullReview implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets html_url
+     * Gets htmlUrl
      *
      * @return string|null
      */
     public function getHtmlUrl()
     {
-        return $this->container['html_url'];
+        return $this->container['htmlUrl'];
     }
 
     /**
-     * Sets html_url
+     * Sets htmlUrl
      *
-     * @param string|null $html_url html_url
+     * @param string|null $htmlUrl htmlUrl
      *
      * @return self
      */
-    public function setHtmlUrl($html_url)
+    public function setHtmlUrl($htmlUrl)
     {
-        $this->container['html_url'] = $html_url;
+        $this->container['htmlUrl'] = $htmlUrl;
 
         return $this;
     }
@@ -447,25 +447,25 @@ class PullReview implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets pull_request_url
+     * Gets pullRequestUrl
      *
      * @return string|null
      */
     public function getPullRequestUrl()
     {
-        return $this->container['pull_request_url'];
+        return $this->container['pullRequestUrl'];
     }
 
     /**
-     * Sets pull_request_url
+     * Sets pullRequestUrl
      *
-     * @param string|null $pull_request_url pull_request_url
+     * @param string|null $pullRequestUrl pullRequestUrl
      *
      * @return self
      */
-    public function setPullRequestUrl($pull_request_url)
+    public function setPullRequestUrl($pullRequestUrl)
     {
-        $this->container['pull_request_url'] = $pull_request_url;
+        $this->container['pullRequestUrl'] = $pullRequestUrl;
 
         return $this;
     }
@@ -519,25 +519,25 @@ class PullReview implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets submitted_at
+     * Gets submittedAt
      *
      * @return \DateTime|null
      */
     public function getSubmittedAt()
     {
-        return $this->container['submitted_at'];
+        return $this->container['submittedAt'];
     }
 
     /**
-     * Sets submitted_at
+     * Sets submittedAt
      *
-     * @param \DateTime|null $submitted_at submitted_at
+     * @param \DateTime|null $submittedAt submittedAt
      *
      * @return self
      */
-    public function setSubmittedAt($submitted_at)
+    public function setSubmittedAt($submittedAt)
     {
-        $this->container['submitted_at'] = $submitted_at;
+        $this->container['submittedAt'] = $submittedAt;
 
         return $this;
     }

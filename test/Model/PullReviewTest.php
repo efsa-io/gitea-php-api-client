@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description PullReview represents a pull request review
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -89,7 +89,7 @@ class PullReviewTest extends TestCase
     }
 
     /**
-     * Test attribute "comments_count"
+     * Test attribute "commentsCount"
      */
     public function testPropertyCommentsCount()
     {
@@ -98,7 +98,7 @@ class PullReviewTest extends TestCase
     }
 
     /**
-     * Test attribute "commit_id"
+     * Test attribute "commitId"
      */
     public function testPropertyCommitId()
     {
@@ -116,7 +116,7 @@ class PullReviewTest extends TestCase
     }
 
     /**
-     * Test attribute "html_url"
+     * Test attribute "htmlUrl"
      */
     public function testPropertyHtmlUrl()
     {
@@ -143,7 +143,7 @@ class PullReviewTest extends TestCase
     }
 
     /**
-     * Test attribute "pull_request_url"
+     * Test attribute "pullRequestUrl"
      */
     public function testPropertyPullRequestUrl()
     {
@@ -170,7 +170,7 @@ class PullReviewTest extends TestCase
     }
 
     /**
-     * Test attribute "submitted_at"
+     * Test attribute "submittedAt"
      */
     public function testPropertySubmittedAt()
     {

@@ -61,7 +61,7 @@ class CreateTagOption implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'tag_name' => 'string',
+        'tagName' => 'string',
         'target' => 'string'
     ];
 
@@ -74,7 +74,7 @@ class CreateTagOption implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'message' => null,
-        'tag_name' => null,
+        'tagName' => null,
         'target' => null
     ];
 
@@ -106,7 +106,7 @@ class CreateTagOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'message' => 'message',
-        'tag_name' => 'tag_name',
+        'tagName' => 'tag_name',
         'target' => 'target'
     ];
 
@@ -117,7 +117,7 @@ class CreateTagOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'message' => 'setMessage',
-        'tag_name' => 'setTagName',
+        'tagName' => 'setTagName',
         'target' => 'setTarget'
     ];
 
@@ -128,7 +128,7 @@ class CreateTagOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'message' => 'getMessage',
-        'tag_name' => 'getTagName',
+        'tagName' => 'getTagName',
         'target' => 'getTarget'
     ];
 
@@ -190,7 +190,7 @@ class CreateTagOption implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['message'] = $data['message'] ?? null;
-        $this->container['tag_name'] = $data['tag_name'] ?? null;
+        $this->container['tagName'] = $data['tagName'] ?? null;
         $this->container['target'] = $data['target'] ?? null;
     }
 
@@ -203,8 +203,8 @@ class CreateTagOption implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['tag_name'] === null) {
-            $invalidProperties[] = "'tag_name' can't be null";
+        if ($this->container['tagName'] === null) {
+            $invalidProperties[] = "'tagName' can't be null";
         }
         return $invalidProperties;
     }
@@ -246,25 +246,25 @@ class CreateTagOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets tag_name
+     * Gets tagName
      *
      * @return string
      */
     public function getTagName()
     {
-        return $this->container['tag_name'];
+        return $this->container['tagName'];
     }
 
     /**
-     * Sets tag_name
+     * Sets tagName
      *
-     * @param string $tag_name tag_name
+     * @param string $tagName tagName
      *
      * @return self
      */
-    public function setTagName($tag_name)
+    public function setTagName($tagName)
     {
-        $this->container['tag_name'] = $tag_name;
+        $this->container['tagName'] = $tagName;
 
         return $this;
     }

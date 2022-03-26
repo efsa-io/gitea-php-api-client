@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**http_git_disabled** | **bool** |  | [optional]
-**lfs_disabled** | **bool** |  | [optional]
-**migrations_disabled** | **bool** |  | [optional]
-**mirrors_disabled** | **bool** |  | [optional]
-**stars_disabled** | **bool** |  | [optional]
-**time_tracking_disabled** | **bool** |  | [optional]
+**httpGitDisabled** | **bool** |  | [optional]
+**lfsDisabled** | **bool** |  | [optional]
+**migrationsDisabled** | **bool** |  | [optional]
+**mirrorsDisabled** | **bool** |  | [optional]
+**starsDisabled** | **bool** |  | [optional]
+**timeTrackingDisabled** | **bool** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

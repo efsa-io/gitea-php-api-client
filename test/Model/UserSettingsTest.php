@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description UserSettings represents user settings
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -89,7 +89,7 @@ class UserSettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "diff_view_style"
+     * Test attribute "diffViewStyle"
      */
     public function testPropertyDiffViewStyle()
     {
@@ -98,7 +98,7 @@ class UserSettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "full_name"
+     * Test attribute "fullName"
      */
     public function testPropertyFullName()
     {
@@ -107,7 +107,7 @@ class UserSettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "hide_activity"
+     * Test attribute "hideActivity"
      */
     public function testPropertyHideActivity()
     {
@@ -116,7 +116,7 @@ class UserSettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "hide_email"
+     * Test attribute "hideEmail"
      */
     public function testPropertyHideEmail()
     {

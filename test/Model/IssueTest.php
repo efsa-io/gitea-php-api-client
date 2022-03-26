@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Issue represents an issue in a repository
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -107,7 +107,7 @@ class IssueTest extends TestCase
     }
 
     /**
-     * Test attribute "closed_at"
+     * Test attribute "closedAt"
      */
     public function testPropertyClosedAt()
     {
@@ -125,7 +125,7 @@ class IssueTest extends TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "createdAt"
      */
     public function testPropertyCreatedAt()
     {
@@ -134,7 +134,7 @@ class IssueTest extends TestCase
     }
 
     /**
-     * Test attribute "due_date"
+     * Test attribute "dueDate"
      */
     public function testPropertyDueDate()
     {
@@ -143,7 +143,7 @@ class IssueTest extends TestCase
     }
 
     /**
-     * Test attribute "html_url"
+     * Test attribute "htmlUrl"
      */
     public function testPropertyHtmlUrl()
     {
@@ -161,7 +161,7 @@ class IssueTest extends TestCase
     }
 
     /**
-     * Test attribute "is_locked"
+     * Test attribute "isLocked"
      */
     public function testPropertyIsLocked()
     {
@@ -197,7 +197,7 @@ class IssueTest extends TestCase
     }
 
     /**
-     * Test attribute "original_author"
+     * Test attribute "originalAuthor"
      */
     public function testPropertyOriginalAuthor()
     {
@@ -206,7 +206,7 @@ class IssueTest extends TestCase
     }
 
     /**
-     * Test attribute "original_author_id"
+     * Test attribute "originalAuthorId"
      */
     public function testPropertyOriginalAuthorId()
     {
@@ -215,7 +215,7 @@ class IssueTest extends TestCase
     }
 
     /**
-     * Test attribute "pull_request"
+     * Test attribute "pullRequest"
      */
     public function testPropertyPullRequest()
     {
@@ -260,7 +260,7 @@ class IssueTest extends TestCase
     }
 
     /**
-     * Test attribute "updated_at"
+     * Test attribute "updatedAt"
      */
     public function testPropertyUpdatedAt()
     {

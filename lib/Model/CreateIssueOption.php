@@ -64,7 +64,7 @@ class CreateIssueOption implements ModelInterface, ArrayAccess, \JsonSerializabl
         'assignees' => 'string[]',
         'body' => 'string',
         'closed' => 'bool',
-        'due_date' => '\DateTime',
+        'dueDate' => '\DateTime',
         'labels' => 'int[]',
         'milestone' => 'int',
         'ref' => 'string',
@@ -83,7 +83,7 @@ class CreateIssueOption implements ModelInterface, ArrayAccess, \JsonSerializabl
         'assignees' => null,
         'body' => null,
         'closed' => null,
-        'due_date' => 'date-time',
+        'dueDate' => 'date-time',
         'labels' => 'int64',
         'milestone' => 'int64',
         'ref' => null,
@@ -121,7 +121,7 @@ class CreateIssueOption implements ModelInterface, ArrayAccess, \JsonSerializabl
         'assignees' => 'assignees',
         'body' => 'body',
         'closed' => 'closed',
-        'due_date' => 'due_date',
+        'dueDate' => 'due_date',
         'labels' => 'labels',
         'milestone' => 'milestone',
         'ref' => 'ref',
@@ -138,7 +138,7 @@ class CreateIssueOption implements ModelInterface, ArrayAccess, \JsonSerializabl
         'assignees' => 'setAssignees',
         'body' => 'setBody',
         'closed' => 'setClosed',
-        'due_date' => 'setDueDate',
+        'dueDate' => 'setDueDate',
         'labels' => 'setLabels',
         'milestone' => 'setMilestone',
         'ref' => 'setRef',
@@ -155,7 +155,7 @@ class CreateIssueOption implements ModelInterface, ArrayAccess, \JsonSerializabl
         'assignees' => 'getAssignees',
         'body' => 'getBody',
         'closed' => 'getClosed',
-        'due_date' => 'getDueDate',
+        'dueDate' => 'getDueDate',
         'labels' => 'getLabels',
         'milestone' => 'getMilestone',
         'ref' => 'getRef',
@@ -223,7 +223,7 @@ class CreateIssueOption implements ModelInterface, ArrayAccess, \JsonSerializabl
         $this->container['assignees'] = $data['assignees'] ?? null;
         $this->container['body'] = $data['body'] ?? null;
         $this->container['closed'] = $data['closed'] ?? null;
-        $this->container['due_date'] = $data['due_date'] ?? null;
+        $this->container['dueDate'] = $data['dueDate'] ?? null;
         $this->container['labels'] = $data['labels'] ?? null;
         $this->container['milestone'] = $data['milestone'] ?? null;
         $this->container['ref'] = $data['ref'] ?? null;
@@ -354,25 +354,25 @@ class CreateIssueOption implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets due_date
+     * Gets dueDate
      *
      * @return \DateTime|null
      */
     public function getDueDate()
     {
-        return $this->container['due_date'];
+        return $this->container['dueDate'];
     }
 
     /**
-     * Sets due_date
+     * Sets dueDate
      *
-     * @param \DateTime|null $due_date due_date
+     * @param \DateTime|null $dueDate dueDate
      *
      * @return self
      */
-    public function setDueDate($due_date)
+    public function setDueDate($dueDate)
     {
-        $this->container['due_date'] = $due_date;
+        $this->container['dueDate'] = $dueDate;
 
         return $this;
     }

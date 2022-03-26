@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **assignees** | **string[]** |  | [optional]
 **base** | **string** |  | [optional]
 **body** | **string** |  | [optional]
-**due_date** | [**\DateTime**](\DateTime.md) |  | [optional]
+**dueDate** | [**\DateTime**](\DateTime.md) |  | [optional]
 **head** | **string** |  | [optional]
 **labels** | **int[]** |  | [optional]
 **milestone** | **int** |  | [optional]

@@ -63,7 +63,7 @@ class PRBranchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
         'label' => 'string',
         'ref' => 'string',
         'repo' => '\Efsa\Client\Gitea\Model\Repository',
-        'repo_id' => 'int',
+        'repoId' => 'int',
         'sha' => 'string'
     ];
 
@@ -78,7 +78,7 @@ class PRBranchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
         'label' => null,
         'ref' => null,
         'repo' => null,
-        'repo_id' => 'int64',
+        'repoId' => 'int64',
         'sha' => null
     ];
 
@@ -112,7 +112,7 @@ class PRBranchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
         'label' => 'label',
         'ref' => 'ref',
         'repo' => 'repo',
-        'repo_id' => 'repo_id',
+        'repoId' => 'repo_id',
         'sha' => 'sha'
     ];
 
@@ -125,7 +125,7 @@ class PRBranchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
         'label' => 'setLabel',
         'ref' => 'setRef',
         'repo' => 'setRepo',
-        'repo_id' => 'setRepoId',
+        'repoId' => 'setRepoId',
         'sha' => 'setSha'
     ];
 
@@ -138,7 +138,7 @@ class PRBranchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
         'label' => 'getLabel',
         'ref' => 'getRef',
         'repo' => 'getRepo',
-        'repo_id' => 'getRepoId',
+        'repoId' => 'getRepoId',
         'sha' => 'getSha'
     ];
 
@@ -202,7 +202,7 @@ class PRBranchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['label'] = $data['label'] ?? null;
         $this->container['ref'] = $data['ref'] ?? null;
         $this->container['repo'] = $data['repo'] ?? null;
-        $this->container['repo_id'] = $data['repo_id'] ?? null;
+        $this->container['repoId'] = $data['repoId'] ?? null;
         $this->container['sha'] = $data['sha'] ?? null;
     }
 
@@ -303,25 +303,25 @@ class PRBranchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets repo_id
+     * Gets repoId
      *
      * @return int|null
      */
     public function getRepoId()
     {
-        return $this->container['repo_id'];
+        return $this->container['repoId'];
     }
 
     /**
-     * Sets repo_id
+     * Sets repoId
      *
-     * @param int|null $repo_id repo_id
+     * @param int|null $repoId repoId
      *
      * @return self
      */
-    public function setRepoId($repo_id)
+    public function setRepoId($repoId)
     {
-        $this->container['repo_id'] = $repo_id;
+        $this->container['repoId'] = $repoId;
 
         return $this;
     }

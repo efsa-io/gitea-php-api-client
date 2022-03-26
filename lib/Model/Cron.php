@@ -60,7 +60,7 @@ class Cron implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'exec_times' => 'int',
+        'execTimes' => 'int',
         'name' => 'string',
         'next' => '\DateTime',
         'prev' => '\DateTime',
@@ -75,7 +75,7 @@ class Cron implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'exec_times' => 'int64',
+        'execTimes' => 'int64',
         'name' => null,
         'next' => 'date-time',
         'prev' => 'date-time',
@@ -109,7 +109,7 @@ class Cron implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'exec_times' => 'exec_times',
+        'execTimes' => 'exec_times',
         'name' => 'name',
         'next' => 'next',
         'prev' => 'prev',
@@ -122,7 +122,7 @@ class Cron implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'exec_times' => 'setExecTimes',
+        'execTimes' => 'setExecTimes',
         'name' => 'setName',
         'next' => 'setNext',
         'prev' => 'setPrev',
@@ -135,7 +135,7 @@ class Cron implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'exec_times' => 'getExecTimes',
+        'execTimes' => 'getExecTimes',
         'name' => 'getName',
         'next' => 'getNext',
         'prev' => 'getPrev',
@@ -199,7 +199,7 @@ class Cron implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['exec_times'] = $data['exec_times'] ?? null;
+        $this->container['execTimes'] = $data['execTimes'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['next'] = $data['next'] ?? null;
         $this->container['prev'] = $data['prev'] ?? null;
@@ -231,25 +231,25 @@ class Cron implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets exec_times
+     * Gets execTimes
      *
      * @return int|null
      */
     public function getExecTimes()
     {
-        return $this->container['exec_times'];
+        return $this->container['execTimes'];
     }
 
     /**
-     * Sets exec_times
+     * Sets execTimes
      *
-     * @param int|null $exec_times exec_times
+     * @param int|null $execTimes execTimes
      *
      * @return self
      */
-    public function setExecTimes($exec_times)
+    public function setExecTimes($execTimes)
     {
-        $this->container['exec_times'] = $exec_times;
+        $this->container['execTimes'] = $execTimes;
 
         return $this;
     }

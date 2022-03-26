@@ -62,7 +62,7 @@ class FileCommitResponse implements ModelInterface, ArrayAccess, \JsonSerializab
         'author' => '\Efsa\Client\Gitea\Model\CommitUser',
         'committer' => '\Efsa\Client\Gitea\Model\CommitUser',
         'created' => '\DateTime',
-        'html_url' => 'string',
+        'htmlUrl' => 'string',
         'message' => 'string',
         'parents' => '\Efsa\Client\Gitea\Model\CommitMeta[]',
         'sha' => 'string',
@@ -81,7 +81,7 @@ class FileCommitResponse implements ModelInterface, ArrayAccess, \JsonSerializab
         'author' => null,
         'committer' => null,
         'created' => 'date-time',
-        'html_url' => null,
+        'htmlUrl' => null,
         'message' => null,
         'parents' => null,
         'sha' => null,
@@ -119,7 +119,7 @@ class FileCommitResponse implements ModelInterface, ArrayAccess, \JsonSerializab
         'author' => 'author',
         'committer' => 'committer',
         'created' => 'created',
-        'html_url' => 'html_url',
+        'htmlUrl' => 'html_url',
         'message' => 'message',
         'parents' => 'parents',
         'sha' => 'sha',
@@ -136,7 +136,7 @@ class FileCommitResponse implements ModelInterface, ArrayAccess, \JsonSerializab
         'author' => 'setAuthor',
         'committer' => 'setCommitter',
         'created' => 'setCreated',
-        'html_url' => 'setHtmlUrl',
+        'htmlUrl' => 'setHtmlUrl',
         'message' => 'setMessage',
         'parents' => 'setParents',
         'sha' => 'setSha',
@@ -153,7 +153,7 @@ class FileCommitResponse implements ModelInterface, ArrayAccess, \JsonSerializab
         'author' => 'getAuthor',
         'committer' => 'getCommitter',
         'created' => 'getCreated',
-        'html_url' => 'getHtmlUrl',
+        'htmlUrl' => 'getHtmlUrl',
         'message' => 'getMessage',
         'parents' => 'getParents',
         'sha' => 'getSha',
@@ -221,7 +221,7 @@ class FileCommitResponse implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->container['author'] = $data['author'] ?? null;
         $this->container['committer'] = $data['committer'] ?? null;
         $this->container['created'] = $data['created'] ?? null;
-        $this->container['html_url'] = $data['html_url'] ?? null;
+        $this->container['htmlUrl'] = $data['htmlUrl'] ?? null;
         $this->container['message'] = $data['message'] ?? null;
         $this->container['parents'] = $data['parents'] ?? null;
         $this->container['sha'] = $data['sha'] ?? null;
@@ -326,25 +326,25 @@ class FileCommitResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets html_url
+     * Gets htmlUrl
      *
      * @return string|null
      */
     public function getHtmlUrl()
     {
-        return $this->container['html_url'];
+        return $this->container['htmlUrl'];
     }
 
     /**
-     * Sets html_url
+     * Sets htmlUrl
      *
-     * @param string|null $html_url html_url
+     * @param string|null $htmlUrl htmlUrl
      *
      * @return self
      */
-    public function setHtmlUrl($html_url)
+    public function setHtmlUrl($htmlUrl)
     {
-        $this->container['html_url'] = $html_url;
+        $this->container['htmlUrl'] = $htmlUrl;
 
         return $this;
     }

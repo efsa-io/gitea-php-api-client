@@ -61,7 +61,7 @@ class NodeInfo implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'metadata' => 'object',
-        'open_registrations' => 'bool',
+        'openRegistrations' => 'bool',
         'protocols' => 'string[]',
         'services' => '\Efsa\Client\Gitea\Model\NodeInfoServices',
         'software' => '\Efsa\Client\Gitea\Model\NodeInfoSoftware',
@@ -78,7 +78,7 @@ class NodeInfo implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'metadata' => null,
-        'open_registrations' => null,
+        'openRegistrations' => null,
         'protocols' => null,
         'services' => null,
         'software' => null,
@@ -114,7 +114,7 @@ class NodeInfo implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'metadata' => 'metadata',
-        'open_registrations' => 'openRegistrations',
+        'openRegistrations' => 'openRegistrations',
         'protocols' => 'protocols',
         'services' => 'services',
         'software' => 'software',
@@ -129,7 +129,7 @@ class NodeInfo implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'metadata' => 'setMetadata',
-        'open_registrations' => 'setOpenRegistrations',
+        'openRegistrations' => 'setOpenRegistrations',
         'protocols' => 'setProtocols',
         'services' => 'setServices',
         'software' => 'setSoftware',
@@ -144,7 +144,7 @@ class NodeInfo implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'metadata' => 'getMetadata',
-        'open_registrations' => 'getOpenRegistrations',
+        'openRegistrations' => 'getOpenRegistrations',
         'protocols' => 'getProtocols',
         'services' => 'getServices',
         'software' => 'getSoftware',
@@ -210,7 +210,7 @@ class NodeInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['metadata'] = $data['metadata'] ?? null;
-        $this->container['open_registrations'] = $data['open_registrations'] ?? null;
+        $this->container['openRegistrations'] = $data['openRegistrations'] ?? null;
         $this->container['protocols'] = $data['protocols'] ?? null;
         $this->container['services'] = $data['services'] ?? null;
         $this->container['software'] = $data['software'] ?? null;
@@ -267,25 +267,25 @@ class NodeInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets open_registrations
+     * Gets openRegistrations
      *
      * @return bool|null
      */
     public function getOpenRegistrations()
     {
-        return $this->container['open_registrations'];
+        return $this->container['openRegistrations'];
     }
 
     /**
-     * Sets open_registrations
+     * Sets openRegistrations
      *
-     * @param bool|null $open_registrations open_registrations
+     * @param bool|null $openRegistrations openRegistrations
      *
      * @return self
      */
-    public function setOpenRegistrations($open_registrations)
+    public function setOpenRegistrations($openRegistrations)
     {
-        $this->container['open_registrations'] = $open_registrations;
+        $this->container['openRegistrations'] = $openRegistrations;
 
         return $this;
     }

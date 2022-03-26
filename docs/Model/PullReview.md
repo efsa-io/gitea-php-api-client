@@ -5,16 +5,16 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **body** | **string** |  | [optional]
-**comments_count** | **int** |  | [optional]
-**commit_id** | **string** |  | [optional]
+**commentsCount** | **int** |  | [optional]
+**commitId** | **string** |  | [optional]
 **dismissed** | **bool** |  | [optional]
-**html_url** | **string** |  | [optional]
+**htmlUrl** | **string** |  | [optional]
 **id** | **int** |  | [optional]
 **official** | **bool** |  | [optional]
-**pull_request_url** | **string** |  | [optional]
+**pullRequestUrl** | **string** |  | [optional]
 **stale** | **bool** |  | [optional]
 **state** | **string** | ReviewStateType review state type | [optional]
-**submitted_at** | [**\DateTime**](\DateTime.md) |  | [optional]
+**submittedAt** | [**\DateTime**](\DateTime.md) |  | [optional]
 **team** | [**\Efsa\Client\Gitea\Model\Team**](Team.md) |  | [optional]
 **user** | [**\Efsa\Client\Gitea\Model\User**](User.md) |  | [optional]
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**exec_times** | **int** |  | [optional]
+**execTimes** | **int** |  | [optional]
 **name** | **string** |  | [optional]
 **next** | [**\DateTime**](\DateTime.md) |  | [optional]
 **prev** | [**\DateTime**](\DateTime.md) |  | [optional]

@@ -61,22 +61,22 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'active' => 'bool',
-        'avatar_url' => 'string',
+        'avatarUrl' => 'string',
         'created' => '\DateTime',
         'description' => 'string',
         'email' => 'string',
-        'followers_count' => 'int',
-        'following_count' => 'int',
-        'full_name' => 'string',
+        'followersCount' => 'int',
+        'followingCount' => 'int',
+        'fullName' => 'string',
         'id' => 'int',
-        'is_admin' => 'bool',
+        'isAdmin' => 'bool',
         'language' => 'string',
-        'last_login' => '\DateTime',
+        'lastLogin' => '\DateTime',
         'location' => 'string',
         'login' => 'string',
-        'prohibit_login' => 'bool',
+        'prohibitLogin' => 'bool',
         'restricted' => 'bool',
-        'starred_repos_count' => 'int',
+        'starredReposCount' => 'int',
         'visibility' => 'string',
         'website' => 'string'
     ];
@@ -90,22 +90,22 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'active' => null,
-        'avatar_url' => null,
+        'avatarUrl' => null,
         'created' => 'date-time',
         'description' => null,
         'email' => 'email',
-        'followers_count' => 'int64',
-        'following_count' => 'int64',
-        'full_name' => null,
+        'followersCount' => 'int64',
+        'followingCount' => 'int64',
+        'fullName' => null,
         'id' => 'int64',
-        'is_admin' => null,
+        'isAdmin' => null,
         'language' => null,
-        'last_login' => 'date-time',
+        'lastLogin' => 'date-time',
         'location' => null,
         'login' => null,
-        'prohibit_login' => null,
+        'prohibitLogin' => null,
         'restricted' => null,
-        'starred_repos_count' => 'int64',
+        'starredReposCount' => 'int64',
         'visibility' => null,
         'website' => null
     ];
@@ -138,22 +138,22 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'active' => 'active',
-        'avatar_url' => 'avatar_url',
+        'avatarUrl' => 'avatar_url',
         'created' => 'created',
         'description' => 'description',
         'email' => 'email',
-        'followers_count' => 'followers_count',
-        'following_count' => 'following_count',
-        'full_name' => 'full_name',
+        'followersCount' => 'followers_count',
+        'followingCount' => 'following_count',
+        'fullName' => 'full_name',
         'id' => 'id',
-        'is_admin' => 'is_admin',
+        'isAdmin' => 'is_admin',
         'language' => 'language',
-        'last_login' => 'last_login',
+        'lastLogin' => 'last_login',
         'location' => 'location',
         'login' => 'login',
-        'prohibit_login' => 'prohibit_login',
+        'prohibitLogin' => 'prohibit_login',
         'restricted' => 'restricted',
-        'starred_repos_count' => 'starred_repos_count',
+        'starredReposCount' => 'starred_repos_count',
         'visibility' => 'visibility',
         'website' => 'website'
     ];
@@ -165,22 +165,22 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'active' => 'setActive',
-        'avatar_url' => 'setAvatarUrl',
+        'avatarUrl' => 'setAvatarUrl',
         'created' => 'setCreated',
         'description' => 'setDescription',
         'email' => 'setEmail',
-        'followers_count' => 'setFollowersCount',
-        'following_count' => 'setFollowingCount',
-        'full_name' => 'setFullName',
+        'followersCount' => 'setFollowersCount',
+        'followingCount' => 'setFollowingCount',
+        'fullName' => 'setFullName',
         'id' => 'setId',
-        'is_admin' => 'setIsAdmin',
+        'isAdmin' => 'setIsAdmin',
         'language' => 'setLanguage',
-        'last_login' => 'setLastLogin',
+        'lastLogin' => 'setLastLogin',
         'location' => 'setLocation',
         'login' => 'setLogin',
-        'prohibit_login' => 'setProhibitLogin',
+        'prohibitLogin' => 'setProhibitLogin',
         'restricted' => 'setRestricted',
-        'starred_repos_count' => 'setStarredReposCount',
+        'starredReposCount' => 'setStarredReposCount',
         'visibility' => 'setVisibility',
         'website' => 'setWebsite'
     ];
@@ -192,22 +192,22 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'active' => 'getActive',
-        'avatar_url' => 'getAvatarUrl',
+        'avatarUrl' => 'getAvatarUrl',
         'created' => 'getCreated',
         'description' => 'getDescription',
         'email' => 'getEmail',
-        'followers_count' => 'getFollowersCount',
-        'following_count' => 'getFollowingCount',
-        'full_name' => 'getFullName',
+        'followersCount' => 'getFollowersCount',
+        'followingCount' => 'getFollowingCount',
+        'fullName' => 'getFullName',
         'id' => 'getId',
-        'is_admin' => 'getIsAdmin',
+        'isAdmin' => 'getIsAdmin',
         'language' => 'getLanguage',
-        'last_login' => 'getLastLogin',
+        'lastLogin' => 'getLastLogin',
         'location' => 'getLocation',
         'login' => 'getLogin',
-        'prohibit_login' => 'getProhibitLogin',
+        'prohibitLogin' => 'getProhibitLogin',
         'restricted' => 'getRestricted',
-        'starred_repos_count' => 'getStarredReposCount',
+        'starredReposCount' => 'getStarredReposCount',
         'visibility' => 'getVisibility',
         'website' => 'getWebsite'
     ];
@@ -270,22 +270,22 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['active'] = $data['active'] ?? null;
-        $this->container['avatar_url'] = $data['avatar_url'] ?? null;
+        $this->container['avatarUrl'] = $data['avatarUrl'] ?? null;
         $this->container['created'] = $data['created'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
         $this->container['email'] = $data['email'] ?? null;
-        $this->container['followers_count'] = $data['followers_count'] ?? null;
-        $this->container['following_count'] = $data['following_count'] ?? null;
-        $this->container['full_name'] = $data['full_name'] ?? null;
+        $this->container['followersCount'] = $data['followersCount'] ?? null;
+        $this->container['followingCount'] = $data['followingCount'] ?? null;
+        $this->container['fullName'] = $data['fullName'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['is_admin'] = $data['is_admin'] ?? null;
+        $this->container['isAdmin'] = $data['isAdmin'] ?? null;
         $this->container['language'] = $data['language'] ?? null;
-        $this->container['last_login'] = $data['last_login'] ?? null;
+        $this->container['lastLogin'] = $data['lastLogin'] ?? null;
         $this->container['location'] = $data['location'] ?? null;
         $this->container['login'] = $data['login'] ?? null;
-        $this->container['prohibit_login'] = $data['prohibit_login'] ?? null;
+        $this->container['prohibitLogin'] = $data['prohibitLogin'] ?? null;
         $this->container['restricted'] = $data['restricted'] ?? null;
-        $this->container['starred_repos_count'] = $data['starred_repos_count'] ?? null;
+        $this->container['starredReposCount'] = $data['starredReposCount'] ?? null;
         $this->container['visibility'] = $data['visibility'] ?? null;
         $this->container['website'] = $data['website'] ?? null;
     }
@@ -339,25 +339,25 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets avatar_url
+     * Gets avatarUrl
      *
      * @return string|null
      */
     public function getAvatarUrl()
     {
-        return $this->container['avatar_url'];
+        return $this->container['avatarUrl'];
     }
 
     /**
-     * Sets avatar_url
+     * Sets avatarUrl
      *
-     * @param string|null $avatar_url URL to the user's avatar
+     * @param string|null $avatarUrl URL to the user's avatar
      *
      * @return self
      */
-    public function setAvatarUrl($avatar_url)
+    public function setAvatarUrl($avatarUrl)
     {
-        $this->container['avatar_url'] = $avatar_url;
+        $this->container['avatarUrl'] = $avatarUrl;
 
         return $this;
     }
@@ -435,73 +435,73 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets followers_count
+     * Gets followersCount
      *
      * @return int|null
      */
     public function getFollowersCount()
     {
-        return $this->container['followers_count'];
+        return $this->container['followersCount'];
     }
 
     /**
-     * Sets followers_count
+     * Sets followersCount
      *
-     * @param int|null $followers_count user counts
+     * @param int|null $followersCount user counts
      *
      * @return self
      */
-    public function setFollowersCount($followers_count)
+    public function setFollowersCount($followersCount)
     {
-        $this->container['followers_count'] = $followers_count;
+        $this->container['followersCount'] = $followersCount;
 
         return $this;
     }
 
     /**
-     * Gets following_count
+     * Gets followingCount
      *
      * @return int|null
      */
     public function getFollowingCount()
     {
-        return $this->container['following_count'];
+        return $this->container['followingCount'];
     }
 
     /**
-     * Sets following_count
+     * Sets followingCount
      *
-     * @param int|null $following_count following_count
+     * @param int|null $followingCount followingCount
      *
      * @return self
      */
-    public function setFollowingCount($following_count)
+    public function setFollowingCount($followingCount)
     {
-        $this->container['following_count'] = $following_count;
+        $this->container['followingCount'] = $followingCount;
 
         return $this;
     }
 
     /**
-     * Gets full_name
+     * Gets fullName
      *
      * @return string|null
      */
     public function getFullName()
     {
-        return $this->container['full_name'];
+        return $this->container['fullName'];
     }
 
     /**
-     * Sets full_name
+     * Sets fullName
      *
-     * @param string|null $full_name the user's full name
+     * @param string|null $fullName the user's full name
      *
      * @return self
      */
-    public function setFullName($full_name)
+    public function setFullName($fullName)
     {
-        $this->container['full_name'] = $full_name;
+        $this->container['fullName'] = $fullName;
 
         return $this;
     }
@@ -531,25 +531,25 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets is_admin
+     * Gets isAdmin
      *
      * @return bool|null
      */
     public function getIsAdmin()
     {
-        return $this->container['is_admin'];
+        return $this->container['isAdmin'];
     }
 
     /**
-     * Sets is_admin
+     * Sets isAdmin
      *
-     * @param bool|null $is_admin Is the user an administrator
+     * @param bool|null $isAdmin Is the user an administrator
      *
      * @return self
      */
-    public function setIsAdmin($is_admin)
+    public function setIsAdmin($isAdmin)
     {
-        $this->container['is_admin'] = $is_admin;
+        $this->container['isAdmin'] = $isAdmin;
 
         return $this;
     }
@@ -579,25 +579,25 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets last_login
+     * Gets lastLogin
      *
      * @return \DateTime|null
      */
     public function getLastLogin()
     {
-        return $this->container['last_login'];
+        return $this->container['lastLogin'];
     }
 
     /**
-     * Sets last_login
+     * Sets lastLogin
      *
-     * @param \DateTime|null $last_login last_login
+     * @param \DateTime|null $lastLogin lastLogin
      *
      * @return self
      */
-    public function setLastLogin($last_login)
+    public function setLastLogin($lastLogin)
     {
-        $this->container['last_login'] = $last_login;
+        $this->container['lastLogin'] = $lastLogin;
 
         return $this;
     }
@@ -651,25 +651,25 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets prohibit_login
+     * Gets prohibitLogin
      *
      * @return bool|null
      */
     public function getProhibitLogin()
     {
-        return $this->container['prohibit_login'];
+        return $this->container['prohibitLogin'];
     }
 
     /**
-     * Sets prohibit_login
+     * Sets prohibitLogin
      *
-     * @param bool|null $prohibit_login Is user login prohibited
+     * @param bool|null $prohibitLogin Is user login prohibited
      *
      * @return self
      */
-    public function setProhibitLogin($prohibit_login)
+    public function setProhibitLogin($prohibitLogin)
     {
-        $this->container['prohibit_login'] = $prohibit_login;
+        $this->container['prohibitLogin'] = $prohibitLogin;
 
         return $this;
     }
@@ -699,25 +699,25 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets starred_repos_count
+     * Gets starredReposCount
      *
      * @return int|null
      */
     public function getStarredReposCount()
     {
-        return $this->container['starred_repos_count'];
+        return $this->container['starredReposCount'];
     }
 
     /**
-     * Sets starred_repos_count
+     * Sets starredReposCount
      *
-     * @param int|null $starred_repos_count starred_repos_count
+     * @param int|null $starredReposCount starredReposCount
      *
      * @return self
      */
-    public function setStarredReposCount($starred_repos_count)
+    public function setStarredReposCount($starredReposCount)
     {
-        $this->container['starred_repos_count'] = $starred_repos_count;
+        $this->container['starredReposCount'] = $starredReposCount;
 
         return $this;
     }

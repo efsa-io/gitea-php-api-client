@@ -3735,7 +3735,7 @@ void (empty response body)
 ## `teamSearch()`
 
 ```php
-teamSearch($org, $q, $include_desc, $page, $limit): \Efsa\Client\Gitea\Model\InlineResponse200
+teamSearch($org, $q, $includeDesc, $page, $limit): \Efsa\Client\Gitea\Model\InlineResponse200
 ```
 
 Search for teams within an organization
@@ -3791,12 +3791,12 @@ $apiInstance = new Efsa\Client\Gitea\Api\OrganizationApi(
 );
 $org = 'org_example'; // string | name of the organization
 $q = 'q_example'; // string | keywords to search
-$include_desc = True; // bool | include search within team description (defaults to true)
+$includeDesc = True; // bool | include search within team description (defaults to true)
 $page = 56; // int | page number of results to return (1-based)
 $limit = 56; // int | page size of results
 
 try {
-    $result = $apiInstance->teamSearch($org, $q, $include_desc, $page, $limit);
+    $result = $apiInstance->teamSearch($org, $q, $includeDesc, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrganizationApi->teamSearch: ', $e->getMessage(), PHP_EOL;
@@ -3809,7 +3809,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **org** | **string**| name of the organization |
  **q** | **string**| keywords to search | [optional]
- **include_desc** | **bool**| include search within team description (defaults to true) | [optional]
+ **includeDesc** | **bool**| include search within team description (defaults to true) | [optional]
  **page** | **int**| page number of results to return (1-based) | [optional]
  **limit** | **int**| page size of results | [optional]
 

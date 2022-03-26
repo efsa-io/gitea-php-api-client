@@ -60,12 +60,12 @@ class DeployKey implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'created_at' => '\DateTime',
+        'createdAt' => '\DateTime',
         'fingerprint' => 'string',
         'id' => 'int',
         'key' => 'string',
-        'key_id' => 'int',
-        'read_only' => 'bool',
+        'keyId' => 'int',
+        'readOnly' => 'bool',
         'repository' => '\Efsa\Client\Gitea\Model\Repository',
         'title' => 'string',
         'url' => 'string'
@@ -79,12 +79,12 @@ class DeployKey implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'created_at' => 'date-time',
+        'createdAt' => 'date-time',
         'fingerprint' => null,
         'id' => 'int64',
         'key' => null,
-        'key_id' => 'int64',
-        'read_only' => null,
+        'keyId' => 'int64',
+        'readOnly' => null,
         'repository' => null,
         'title' => null,
         'url' => null
@@ -117,12 +117,12 @@ class DeployKey implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'created_at' => 'created_at',
+        'createdAt' => 'created_at',
         'fingerprint' => 'fingerprint',
         'id' => 'id',
         'key' => 'key',
-        'key_id' => 'key_id',
-        'read_only' => 'read_only',
+        'keyId' => 'key_id',
+        'readOnly' => 'read_only',
         'repository' => 'repository',
         'title' => 'title',
         'url' => 'url'
@@ -134,12 +134,12 @@ class DeployKey implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'created_at' => 'setCreatedAt',
+        'createdAt' => 'setCreatedAt',
         'fingerprint' => 'setFingerprint',
         'id' => 'setId',
         'key' => 'setKey',
-        'key_id' => 'setKeyId',
-        'read_only' => 'setReadOnly',
+        'keyId' => 'setKeyId',
+        'readOnly' => 'setReadOnly',
         'repository' => 'setRepository',
         'title' => 'setTitle',
         'url' => 'setUrl'
@@ -151,12 +151,12 @@ class DeployKey implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'created_at' => 'getCreatedAt',
+        'createdAt' => 'getCreatedAt',
         'fingerprint' => 'getFingerprint',
         'id' => 'getId',
         'key' => 'getKey',
-        'key_id' => 'getKeyId',
-        'read_only' => 'getReadOnly',
+        'keyId' => 'getKeyId',
+        'readOnly' => 'getReadOnly',
         'repository' => 'getRepository',
         'title' => 'getTitle',
         'url' => 'getUrl'
@@ -219,12 +219,12 @@ class DeployKey implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['createdAt'] = $data['createdAt'] ?? null;
         $this->container['fingerprint'] = $data['fingerprint'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['key'] = $data['key'] ?? null;
-        $this->container['key_id'] = $data['key_id'] ?? null;
-        $this->container['read_only'] = $data['read_only'] ?? null;
+        $this->container['keyId'] = $data['keyId'] ?? null;
+        $this->container['readOnly'] = $data['readOnly'] ?? null;
         $this->container['repository'] = $data['repository'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
@@ -255,25 +255,25 @@ class DeployKey implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime|null
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $createdAt createdAt
      *
      * @return self
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }
@@ -351,49 +351,49 @@ class DeployKey implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets key_id
+     * Gets keyId
      *
      * @return int|null
      */
     public function getKeyId()
     {
-        return $this->container['key_id'];
+        return $this->container['keyId'];
     }
 
     /**
-     * Sets key_id
+     * Sets keyId
      *
-     * @param int|null $key_id key_id
+     * @param int|null $keyId keyId
      *
      * @return self
      */
-    public function setKeyId($key_id)
+    public function setKeyId($keyId)
     {
-        $this->container['key_id'] = $key_id;
+        $this->container['keyId'] = $keyId;
 
         return $this;
     }
 
     /**
-     * Gets read_only
+     * Gets readOnly
      *
      * @return bool|null
      */
     public function getReadOnly()
     {
-        return $this->container['read_only'];
+        return $this->container['readOnly'];
     }
 
     /**
-     * Sets read_only
+     * Sets readOnly
      *
-     * @param bool|null $read_only read_only
+     * @param bool|null $readOnly readOnly
      *
      * @return self
      */
-    public function setReadOnly($read_only)
+    public function setReadOnly($readOnly)
     {
-        $this->container['read_only'] = $read_only;
+        $this->container['readOnly'] = $readOnly;
 
         return $this;
     }

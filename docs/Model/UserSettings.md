@@ -5,10 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **string** |  | [optional]
-**diff_view_style** | **string** |  | [optional]
-**full_name** | **string** |  | [optional]
-**hide_activity** | **bool** |  | [optional]
-**hide_email** | **bool** | Privacy | [optional]
+**diffViewStyle** | **string** |  | [optional]
+**fullName** | **string** |  | [optional]
+**hideActivity** | **bool** |  | [optional]
+**hideEmail** | **bool** | Privacy | [optional]
 **language** | **string** |  | [optional]
 **location** | **string** |  | [optional]
 **theme** | **string** |  | [optional]

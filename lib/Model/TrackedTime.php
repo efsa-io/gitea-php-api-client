@@ -63,10 +63,10 @@ class TrackedTime implements ModelInterface, ArrayAccess, \JsonSerializable
         'created' => '\DateTime',
         'id' => 'int',
         'issue' => '\Efsa\Client\Gitea\Model\Issue',
-        'issue_id' => 'int',
+        'issueId' => 'int',
         'time' => 'int',
-        'user_id' => 'int',
-        'user_name' => 'string'
+        'userId' => 'int',
+        'userName' => 'string'
     ];
 
     /**
@@ -80,10 +80,10 @@ class TrackedTime implements ModelInterface, ArrayAccess, \JsonSerializable
         'created' => 'date-time',
         'id' => 'int64',
         'issue' => null,
-        'issue_id' => 'int64',
+        'issueId' => 'int64',
         'time' => 'int64',
-        'user_id' => 'int64',
-        'user_name' => null
+        'userId' => 'int64',
+        'userName' => null
     ];
 
     /**
@@ -116,10 +116,10 @@ class TrackedTime implements ModelInterface, ArrayAccess, \JsonSerializable
         'created' => 'created',
         'id' => 'id',
         'issue' => 'issue',
-        'issue_id' => 'issue_id',
+        'issueId' => 'issue_id',
         'time' => 'time',
-        'user_id' => 'user_id',
-        'user_name' => 'user_name'
+        'userId' => 'user_id',
+        'userName' => 'user_name'
     ];
 
     /**
@@ -131,10 +131,10 @@ class TrackedTime implements ModelInterface, ArrayAccess, \JsonSerializable
         'created' => 'setCreated',
         'id' => 'setId',
         'issue' => 'setIssue',
-        'issue_id' => 'setIssueId',
+        'issueId' => 'setIssueId',
         'time' => 'setTime',
-        'user_id' => 'setUserId',
-        'user_name' => 'setUserName'
+        'userId' => 'setUserId',
+        'userName' => 'setUserName'
     ];
 
     /**
@@ -146,10 +146,10 @@ class TrackedTime implements ModelInterface, ArrayAccess, \JsonSerializable
         'created' => 'getCreated',
         'id' => 'getId',
         'issue' => 'getIssue',
-        'issue_id' => 'getIssueId',
+        'issueId' => 'getIssueId',
         'time' => 'getTime',
-        'user_id' => 'getUserId',
-        'user_name' => 'getUserName'
+        'userId' => 'getUserId',
+        'userName' => 'getUserName'
     ];
 
     /**
@@ -212,10 +212,10 @@ class TrackedTime implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['created'] = $data['created'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['issue'] = $data['issue'] ?? null;
-        $this->container['issue_id'] = $data['issue_id'] ?? null;
+        $this->container['issueId'] = $data['issueId'] ?? null;
         $this->container['time'] = $data['time'] ?? null;
-        $this->container['user_id'] = $data['user_id'] ?? null;
-        $this->container['user_name'] = $data['user_name'] ?? null;
+        $this->container['userId'] = $data['userId'] ?? null;
+        $this->container['userName'] = $data['userName'] ?? null;
     }
 
     /**
@@ -315,25 +315,25 @@ class TrackedTime implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets issue_id
+     * Gets issueId
      *
      * @return int|null
      */
     public function getIssueId()
     {
-        return $this->container['issue_id'];
+        return $this->container['issueId'];
     }
 
     /**
-     * Sets issue_id
+     * Sets issueId
      *
-     * @param int|null $issue_id deprecated (only for backwards compatibility)
+     * @param int|null $issueId deprecated (only for backwards compatibility)
      *
      * @return self
      */
-    public function setIssueId($issue_id)
+    public function setIssueId($issueId)
     {
-        $this->container['issue_id'] = $issue_id;
+        $this->container['issueId'] = $issueId;
 
         return $this;
     }
@@ -363,49 +363,49 @@ class TrackedTime implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int|null
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int|null $user_id deprecated (only for backwards compatibility)
+     * @param int|null $userId deprecated (only for backwards compatibility)
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }
 
     /**
-     * Gets user_name
+     * Gets userName
      *
      * @return string|null
      */
     public function getUserName()
     {
-        return $this->container['user_name'];
+        return $this->container['userName'];
     }
 
     /**
-     * Sets user_name
+     * Sets userName
      *
-     * @param string|null $user_name user_name
+     * @param string|null $userName userName
      *
      * @return self
      */
-    public function setUserName($user_name)
+    public function setUserName($userName)
     {
-        $this->container['user_name'] = $user_name;
+        $this->container['userName'] = $userName;
 
         return $this;
     }

@@ -60,9 +60,9 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'browser_download_url' => 'string',
-        'created_at' => '\DateTime',
-        'download_count' => 'int',
+        'browserDownloadUrl' => 'string',
+        'createdAt' => '\DateTime',
+        'downloadCount' => 'int',
         'id' => 'int',
         'name' => 'string',
         'size' => 'int',
@@ -77,9 +77,9 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'browser_download_url' => null,
-        'created_at' => 'date-time',
-        'download_count' => 'int64',
+        'browserDownloadUrl' => null,
+        'createdAt' => 'date-time',
+        'downloadCount' => 'int64',
         'id' => 'int64',
         'name' => null,
         'size' => 'int64',
@@ -113,9 +113,9 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'browser_download_url' => 'browser_download_url',
-        'created_at' => 'created_at',
-        'download_count' => 'download_count',
+        'browserDownloadUrl' => 'browser_download_url',
+        'createdAt' => 'created_at',
+        'downloadCount' => 'download_count',
         'id' => 'id',
         'name' => 'name',
         'size' => 'size',
@@ -128,9 +128,9 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'browser_download_url' => 'setBrowserDownloadUrl',
-        'created_at' => 'setCreatedAt',
-        'download_count' => 'setDownloadCount',
+        'browserDownloadUrl' => 'setBrowserDownloadUrl',
+        'createdAt' => 'setCreatedAt',
+        'downloadCount' => 'setDownloadCount',
         'id' => 'setId',
         'name' => 'setName',
         'size' => 'setSize',
@@ -143,9 +143,9 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'browser_download_url' => 'getBrowserDownloadUrl',
-        'created_at' => 'getCreatedAt',
-        'download_count' => 'getDownloadCount',
+        'browserDownloadUrl' => 'getBrowserDownloadUrl',
+        'createdAt' => 'getCreatedAt',
+        'downloadCount' => 'getDownloadCount',
         'id' => 'getId',
         'name' => 'getName',
         'size' => 'getSize',
@@ -209,9 +209,9 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['browser_download_url'] = $data['browser_download_url'] ?? null;
-        $this->container['created_at'] = $data['created_at'] ?? null;
-        $this->container['download_count'] = $data['download_count'] ?? null;
+        $this->container['browserDownloadUrl'] = $data['browserDownloadUrl'] ?? null;
+        $this->container['createdAt'] = $data['createdAt'] ?? null;
+        $this->container['downloadCount'] = $data['downloadCount'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['size'] = $data['size'] ?? null;
@@ -243,73 +243,73 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets browser_download_url
+     * Gets browserDownloadUrl
      *
      * @return string|null
      */
     public function getBrowserDownloadUrl()
     {
-        return $this->container['browser_download_url'];
+        return $this->container['browserDownloadUrl'];
     }
 
     /**
-     * Sets browser_download_url
+     * Sets browserDownloadUrl
      *
-     * @param string|null $browser_download_url browser_download_url
+     * @param string|null $browserDownloadUrl browserDownloadUrl
      *
      * @return self
      */
-    public function setBrowserDownloadUrl($browser_download_url)
+    public function setBrowserDownloadUrl($browserDownloadUrl)
     {
-        $this->container['browser_download_url'] = $browser_download_url;
+        $this->container['browserDownloadUrl'] = $browserDownloadUrl;
 
         return $this;
     }
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime|null
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $createdAt createdAt
      *
      * @return self
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }
 
     /**
-     * Gets download_count
+     * Gets downloadCount
      *
      * @return int|null
      */
     public function getDownloadCount()
     {
-        return $this->container['download_count'];
+        return $this->container['downloadCount'];
     }
 
     /**
-     * Sets download_count
+     * Sets downloadCount
      *
-     * @param int|null $download_count download_count
+     * @param int|null $downloadCount downloadCount
      *
      * @return self
      */
-    public function setDownloadCount($download_count)
+    public function setDownloadCount($downloadCount)
     {
-        $this->container['download_count'] = $download_count;
+        $this->container['downloadCount'] = $downloadCount;
 
         return $this;
     }

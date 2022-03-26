@@ -60,27 +60,27 @@ class EditRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'allow_manual_merge' => 'bool',
-        'allow_merge_commits' => 'bool',
-        'allow_rebase' => 'bool',
-        'allow_rebase_explicit' => 'bool',
-        'allow_rebase_update' => 'bool',
-        'allow_squash_merge' => 'bool',
+        'allowManualMerge' => 'bool',
+        'allowMergeCommits' => 'bool',
+        'allowRebase' => 'bool',
+        'allowRebaseExplicit' => 'bool',
+        'allowRebaseUpdate' => 'bool',
+        'allowSquashMerge' => 'bool',
         'archived' => 'bool',
-        'autodetect_manual_merge' => 'bool',
-        'default_branch' => 'string',
-        'default_delete_branch_after_merge' => 'bool',
-        'default_merge_style' => 'string',
+        'autodetectManualMerge' => 'bool',
+        'defaultBranch' => 'string',
+        'defaultDeleteBranchAfterMerge' => 'bool',
+        'defaultMergeStyle' => 'string',
         'description' => 'string',
-        'external_tracker' => '\Efsa\Client\Gitea\Model\ExternalTracker',
-        'external_wiki' => '\Efsa\Client\Gitea\Model\ExternalWiki',
-        'has_issues' => 'bool',
-        'has_projects' => 'bool',
-        'has_pull_requests' => 'bool',
-        'has_wiki' => 'bool',
-        'ignore_whitespace_conflicts' => 'bool',
-        'internal_tracker' => '\Efsa\Client\Gitea\Model\InternalTracker',
-        'mirror_interval' => 'string',
+        'externalTracker' => '\Efsa\Client\Gitea\Model\ExternalTracker',
+        'externalWiki' => '\Efsa\Client\Gitea\Model\ExternalWiki',
+        'hasIssues' => 'bool',
+        'hasProjects' => 'bool',
+        'hasPullRequests' => 'bool',
+        'hasWiki' => 'bool',
+        'ignoreWhitespaceConflicts' => 'bool',
+        'internalTracker' => '\Efsa\Client\Gitea\Model\InternalTracker',
+        'mirrorInterval' => 'string',
         'name' => 'string',
         'private' => 'bool',
         'template' => 'bool',
@@ -95,27 +95,27 @@ class EditRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'allow_manual_merge' => null,
-        'allow_merge_commits' => null,
-        'allow_rebase' => null,
-        'allow_rebase_explicit' => null,
-        'allow_rebase_update' => null,
-        'allow_squash_merge' => null,
+        'allowManualMerge' => null,
+        'allowMergeCommits' => null,
+        'allowRebase' => null,
+        'allowRebaseExplicit' => null,
+        'allowRebaseUpdate' => null,
+        'allowSquashMerge' => null,
         'archived' => null,
-        'autodetect_manual_merge' => null,
-        'default_branch' => null,
-        'default_delete_branch_after_merge' => null,
-        'default_merge_style' => null,
+        'autodetectManualMerge' => null,
+        'defaultBranch' => null,
+        'defaultDeleteBranchAfterMerge' => null,
+        'defaultMergeStyle' => null,
         'description' => null,
-        'external_tracker' => null,
-        'external_wiki' => null,
-        'has_issues' => null,
-        'has_projects' => null,
-        'has_pull_requests' => null,
-        'has_wiki' => null,
-        'ignore_whitespace_conflicts' => null,
-        'internal_tracker' => null,
-        'mirror_interval' => null,
+        'externalTracker' => null,
+        'externalWiki' => null,
+        'hasIssues' => null,
+        'hasProjects' => null,
+        'hasPullRequests' => null,
+        'hasWiki' => null,
+        'ignoreWhitespaceConflicts' => null,
+        'internalTracker' => null,
+        'mirrorInterval' => null,
         'name' => null,
         'private' => null,
         'template' => null,
@@ -149,27 +149,27 @@ class EditRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'allow_manual_merge' => 'allow_manual_merge',
-        'allow_merge_commits' => 'allow_merge_commits',
-        'allow_rebase' => 'allow_rebase',
-        'allow_rebase_explicit' => 'allow_rebase_explicit',
-        'allow_rebase_update' => 'allow_rebase_update',
-        'allow_squash_merge' => 'allow_squash_merge',
+        'allowManualMerge' => 'allow_manual_merge',
+        'allowMergeCommits' => 'allow_merge_commits',
+        'allowRebase' => 'allow_rebase',
+        'allowRebaseExplicit' => 'allow_rebase_explicit',
+        'allowRebaseUpdate' => 'allow_rebase_update',
+        'allowSquashMerge' => 'allow_squash_merge',
         'archived' => 'archived',
-        'autodetect_manual_merge' => 'autodetect_manual_merge',
-        'default_branch' => 'default_branch',
-        'default_delete_branch_after_merge' => 'default_delete_branch_after_merge',
-        'default_merge_style' => 'default_merge_style',
+        'autodetectManualMerge' => 'autodetect_manual_merge',
+        'defaultBranch' => 'default_branch',
+        'defaultDeleteBranchAfterMerge' => 'default_delete_branch_after_merge',
+        'defaultMergeStyle' => 'default_merge_style',
         'description' => 'description',
-        'external_tracker' => 'external_tracker',
-        'external_wiki' => 'external_wiki',
-        'has_issues' => 'has_issues',
-        'has_projects' => 'has_projects',
-        'has_pull_requests' => 'has_pull_requests',
-        'has_wiki' => 'has_wiki',
-        'ignore_whitespace_conflicts' => 'ignore_whitespace_conflicts',
-        'internal_tracker' => 'internal_tracker',
-        'mirror_interval' => 'mirror_interval',
+        'externalTracker' => 'external_tracker',
+        'externalWiki' => 'external_wiki',
+        'hasIssues' => 'has_issues',
+        'hasProjects' => 'has_projects',
+        'hasPullRequests' => 'has_pull_requests',
+        'hasWiki' => 'has_wiki',
+        'ignoreWhitespaceConflicts' => 'ignore_whitespace_conflicts',
+        'internalTracker' => 'internal_tracker',
+        'mirrorInterval' => 'mirror_interval',
         'name' => 'name',
         'private' => 'private',
         'template' => 'template',
@@ -182,27 +182,27 @@ class EditRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'allow_manual_merge' => 'setAllowManualMerge',
-        'allow_merge_commits' => 'setAllowMergeCommits',
-        'allow_rebase' => 'setAllowRebase',
-        'allow_rebase_explicit' => 'setAllowRebaseExplicit',
-        'allow_rebase_update' => 'setAllowRebaseUpdate',
-        'allow_squash_merge' => 'setAllowSquashMerge',
+        'allowManualMerge' => 'setAllowManualMerge',
+        'allowMergeCommits' => 'setAllowMergeCommits',
+        'allowRebase' => 'setAllowRebase',
+        'allowRebaseExplicit' => 'setAllowRebaseExplicit',
+        'allowRebaseUpdate' => 'setAllowRebaseUpdate',
+        'allowSquashMerge' => 'setAllowSquashMerge',
         'archived' => 'setArchived',
-        'autodetect_manual_merge' => 'setAutodetectManualMerge',
-        'default_branch' => 'setDefaultBranch',
-        'default_delete_branch_after_merge' => 'setDefaultDeleteBranchAfterMerge',
-        'default_merge_style' => 'setDefaultMergeStyle',
+        'autodetectManualMerge' => 'setAutodetectManualMerge',
+        'defaultBranch' => 'setDefaultBranch',
+        'defaultDeleteBranchAfterMerge' => 'setDefaultDeleteBranchAfterMerge',
+        'defaultMergeStyle' => 'setDefaultMergeStyle',
         'description' => 'setDescription',
-        'external_tracker' => 'setExternalTracker',
-        'external_wiki' => 'setExternalWiki',
-        'has_issues' => 'setHasIssues',
-        'has_projects' => 'setHasProjects',
-        'has_pull_requests' => 'setHasPullRequests',
-        'has_wiki' => 'setHasWiki',
-        'ignore_whitespace_conflicts' => 'setIgnoreWhitespaceConflicts',
-        'internal_tracker' => 'setInternalTracker',
-        'mirror_interval' => 'setMirrorInterval',
+        'externalTracker' => 'setExternalTracker',
+        'externalWiki' => 'setExternalWiki',
+        'hasIssues' => 'setHasIssues',
+        'hasProjects' => 'setHasProjects',
+        'hasPullRequests' => 'setHasPullRequests',
+        'hasWiki' => 'setHasWiki',
+        'ignoreWhitespaceConflicts' => 'setIgnoreWhitespaceConflicts',
+        'internalTracker' => 'setInternalTracker',
+        'mirrorInterval' => 'setMirrorInterval',
         'name' => 'setName',
         'private' => 'setPrivate',
         'template' => 'setTemplate',
@@ -215,27 +215,27 @@ class EditRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'allow_manual_merge' => 'getAllowManualMerge',
-        'allow_merge_commits' => 'getAllowMergeCommits',
-        'allow_rebase' => 'getAllowRebase',
-        'allow_rebase_explicit' => 'getAllowRebaseExplicit',
-        'allow_rebase_update' => 'getAllowRebaseUpdate',
-        'allow_squash_merge' => 'getAllowSquashMerge',
+        'allowManualMerge' => 'getAllowManualMerge',
+        'allowMergeCommits' => 'getAllowMergeCommits',
+        'allowRebase' => 'getAllowRebase',
+        'allowRebaseExplicit' => 'getAllowRebaseExplicit',
+        'allowRebaseUpdate' => 'getAllowRebaseUpdate',
+        'allowSquashMerge' => 'getAllowSquashMerge',
         'archived' => 'getArchived',
-        'autodetect_manual_merge' => 'getAutodetectManualMerge',
-        'default_branch' => 'getDefaultBranch',
-        'default_delete_branch_after_merge' => 'getDefaultDeleteBranchAfterMerge',
-        'default_merge_style' => 'getDefaultMergeStyle',
+        'autodetectManualMerge' => 'getAutodetectManualMerge',
+        'defaultBranch' => 'getDefaultBranch',
+        'defaultDeleteBranchAfterMerge' => 'getDefaultDeleteBranchAfterMerge',
+        'defaultMergeStyle' => 'getDefaultMergeStyle',
         'description' => 'getDescription',
-        'external_tracker' => 'getExternalTracker',
-        'external_wiki' => 'getExternalWiki',
-        'has_issues' => 'getHasIssues',
-        'has_projects' => 'getHasProjects',
-        'has_pull_requests' => 'getHasPullRequests',
-        'has_wiki' => 'getHasWiki',
-        'ignore_whitespace_conflicts' => 'getIgnoreWhitespaceConflicts',
-        'internal_tracker' => 'getInternalTracker',
-        'mirror_interval' => 'getMirrorInterval',
+        'externalTracker' => 'getExternalTracker',
+        'externalWiki' => 'getExternalWiki',
+        'hasIssues' => 'getHasIssues',
+        'hasProjects' => 'getHasProjects',
+        'hasPullRequests' => 'getHasPullRequests',
+        'hasWiki' => 'getHasWiki',
+        'ignoreWhitespaceConflicts' => 'getIgnoreWhitespaceConflicts',
+        'internalTracker' => 'getInternalTracker',
+        'mirrorInterval' => 'getMirrorInterval',
         'name' => 'getName',
         'private' => 'getPrivate',
         'template' => 'getTemplate',
@@ -299,27 +299,27 @@ class EditRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['allow_manual_merge'] = $data['allow_manual_merge'] ?? null;
-        $this->container['allow_merge_commits'] = $data['allow_merge_commits'] ?? null;
-        $this->container['allow_rebase'] = $data['allow_rebase'] ?? null;
-        $this->container['allow_rebase_explicit'] = $data['allow_rebase_explicit'] ?? null;
-        $this->container['allow_rebase_update'] = $data['allow_rebase_update'] ?? null;
-        $this->container['allow_squash_merge'] = $data['allow_squash_merge'] ?? null;
+        $this->container['allowManualMerge'] = $data['allowManualMerge'] ?? null;
+        $this->container['allowMergeCommits'] = $data['allowMergeCommits'] ?? null;
+        $this->container['allowRebase'] = $data['allowRebase'] ?? null;
+        $this->container['allowRebaseExplicit'] = $data['allowRebaseExplicit'] ?? null;
+        $this->container['allowRebaseUpdate'] = $data['allowRebaseUpdate'] ?? null;
+        $this->container['allowSquashMerge'] = $data['allowSquashMerge'] ?? null;
         $this->container['archived'] = $data['archived'] ?? null;
-        $this->container['autodetect_manual_merge'] = $data['autodetect_manual_merge'] ?? null;
-        $this->container['default_branch'] = $data['default_branch'] ?? null;
-        $this->container['default_delete_branch_after_merge'] = $data['default_delete_branch_after_merge'] ?? null;
-        $this->container['default_merge_style'] = $data['default_merge_style'] ?? null;
+        $this->container['autodetectManualMerge'] = $data['autodetectManualMerge'] ?? null;
+        $this->container['defaultBranch'] = $data['defaultBranch'] ?? null;
+        $this->container['defaultDeleteBranchAfterMerge'] = $data['defaultDeleteBranchAfterMerge'] ?? null;
+        $this->container['defaultMergeStyle'] = $data['defaultMergeStyle'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
-        $this->container['external_tracker'] = $data['external_tracker'] ?? null;
-        $this->container['external_wiki'] = $data['external_wiki'] ?? null;
-        $this->container['has_issues'] = $data['has_issues'] ?? null;
-        $this->container['has_projects'] = $data['has_projects'] ?? null;
-        $this->container['has_pull_requests'] = $data['has_pull_requests'] ?? null;
-        $this->container['has_wiki'] = $data['has_wiki'] ?? null;
-        $this->container['ignore_whitespace_conflicts'] = $data['ignore_whitespace_conflicts'] ?? null;
-        $this->container['internal_tracker'] = $data['internal_tracker'] ?? null;
-        $this->container['mirror_interval'] = $data['mirror_interval'] ?? null;
+        $this->container['externalTracker'] = $data['externalTracker'] ?? null;
+        $this->container['externalWiki'] = $data['externalWiki'] ?? null;
+        $this->container['hasIssues'] = $data['hasIssues'] ?? null;
+        $this->container['hasProjects'] = $data['hasProjects'] ?? null;
+        $this->container['hasPullRequests'] = $data['hasPullRequests'] ?? null;
+        $this->container['hasWiki'] = $data['hasWiki'] ?? null;
+        $this->container['ignoreWhitespaceConflicts'] = $data['ignoreWhitespaceConflicts'] ?? null;
+        $this->container['internalTracker'] = $data['internalTracker'] ?? null;
+        $this->container['mirrorInterval'] = $data['mirrorInterval'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['private'] = $data['private'] ?? null;
         $this->container['template'] = $data['template'] ?? null;
@@ -351,145 +351,145 @@ class EditRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets allow_manual_merge
+     * Gets allowManualMerge
      *
      * @return bool|null
      */
     public function getAllowManualMerge()
     {
-        return $this->container['allow_manual_merge'];
+        return $this->container['allowManualMerge'];
     }
 
     /**
-     * Sets allow_manual_merge
+     * Sets allowManualMerge
      *
-     * @param bool|null $allow_manual_merge either `true` to allow mark pr as merged manually, or `false` to prevent it. `has_pull_requests` must be `true`.
+     * @param bool|null $allowManualMerge either `true` to allow mark pr as merged manually, or `false` to prevent it. `has_pull_requests` must be `true`.
      *
      * @return self
      */
-    public function setAllowManualMerge($allow_manual_merge)
+    public function setAllowManualMerge($allowManualMerge)
     {
-        $this->container['allow_manual_merge'] = $allow_manual_merge;
+        $this->container['allowManualMerge'] = $allowManualMerge;
 
         return $this;
     }
 
     /**
-     * Gets allow_merge_commits
+     * Gets allowMergeCommits
      *
      * @return bool|null
      */
     public function getAllowMergeCommits()
     {
-        return $this->container['allow_merge_commits'];
+        return $this->container['allowMergeCommits'];
     }
 
     /**
-     * Sets allow_merge_commits
+     * Sets allowMergeCommits
      *
-     * @param bool|null $allow_merge_commits either `true` to allow merging pull requests with a merge commit, or `false` to prevent merging pull requests with merge commits. `has_pull_requests` must be `true`.
+     * @param bool|null $allowMergeCommits either `true` to allow merging pull requests with a merge commit, or `false` to prevent merging pull requests with merge commits. `has_pull_requests` must be `true`.
      *
      * @return self
      */
-    public function setAllowMergeCommits($allow_merge_commits)
+    public function setAllowMergeCommits($allowMergeCommits)
     {
-        $this->container['allow_merge_commits'] = $allow_merge_commits;
+        $this->container['allowMergeCommits'] = $allowMergeCommits;
 
         return $this;
     }
 
     /**
-     * Gets allow_rebase
+     * Gets allowRebase
      *
      * @return bool|null
      */
     public function getAllowRebase()
     {
-        return $this->container['allow_rebase'];
+        return $this->container['allowRebase'];
     }
 
     /**
-     * Sets allow_rebase
+     * Sets allowRebase
      *
-     * @param bool|null $allow_rebase either `true` to allow rebase-merging pull requests, or `false` to prevent rebase-merging. `has_pull_requests` must be `true`.
+     * @param bool|null $allowRebase either `true` to allow rebase-merging pull requests, or `false` to prevent rebase-merging. `has_pull_requests` must be `true`.
      *
      * @return self
      */
-    public function setAllowRebase($allow_rebase)
+    public function setAllowRebase($allowRebase)
     {
-        $this->container['allow_rebase'] = $allow_rebase;
+        $this->container['allowRebase'] = $allowRebase;
 
         return $this;
     }
 
     /**
-     * Gets allow_rebase_explicit
+     * Gets allowRebaseExplicit
      *
      * @return bool|null
      */
     public function getAllowRebaseExplicit()
     {
-        return $this->container['allow_rebase_explicit'];
+        return $this->container['allowRebaseExplicit'];
     }
 
     /**
-     * Sets allow_rebase_explicit
+     * Sets allowRebaseExplicit
      *
-     * @param bool|null $allow_rebase_explicit either `true` to allow rebase with explicit merge commits (--no-ff), or `false` to prevent rebase with explicit merge commits. `has_pull_requests` must be `true`.
+     * @param bool|null $allowRebaseExplicit either `true` to allow rebase with explicit merge commits (--no-ff), or `false` to prevent rebase with explicit merge commits. `has_pull_requests` must be `true`.
      *
      * @return self
      */
-    public function setAllowRebaseExplicit($allow_rebase_explicit)
+    public function setAllowRebaseExplicit($allowRebaseExplicit)
     {
-        $this->container['allow_rebase_explicit'] = $allow_rebase_explicit;
+        $this->container['allowRebaseExplicit'] = $allowRebaseExplicit;
 
         return $this;
     }
 
     /**
-     * Gets allow_rebase_update
+     * Gets allowRebaseUpdate
      *
      * @return bool|null
      */
     public function getAllowRebaseUpdate()
     {
-        return $this->container['allow_rebase_update'];
+        return $this->container['allowRebaseUpdate'];
     }
 
     /**
-     * Sets allow_rebase_update
+     * Sets allowRebaseUpdate
      *
-     * @param bool|null $allow_rebase_update either `true` to allow updating pull request branch by rebase, or `false` to prevent it. `has_pull_requests` must be `true`.
+     * @param bool|null $allowRebaseUpdate either `true` to allow updating pull request branch by rebase, or `false` to prevent it. `has_pull_requests` must be `true`.
      *
      * @return self
      */
-    public function setAllowRebaseUpdate($allow_rebase_update)
+    public function setAllowRebaseUpdate($allowRebaseUpdate)
     {
-        $this->container['allow_rebase_update'] = $allow_rebase_update;
+        $this->container['allowRebaseUpdate'] = $allowRebaseUpdate;
 
         return $this;
     }
 
     /**
-     * Gets allow_squash_merge
+     * Gets allowSquashMerge
      *
      * @return bool|null
      */
     public function getAllowSquashMerge()
     {
-        return $this->container['allow_squash_merge'];
+        return $this->container['allowSquashMerge'];
     }
 
     /**
-     * Sets allow_squash_merge
+     * Sets allowSquashMerge
      *
-     * @param bool|null $allow_squash_merge either `true` to allow squash-merging pull requests, or `false` to prevent squash-merging. `has_pull_requests` must be `true`.
+     * @param bool|null $allowSquashMerge either `true` to allow squash-merging pull requests, or `false` to prevent squash-merging. `has_pull_requests` must be `true`.
      *
      * @return self
      */
-    public function setAllowSquashMerge($allow_squash_merge)
+    public function setAllowSquashMerge($allowSquashMerge)
     {
-        $this->container['allow_squash_merge'] = $allow_squash_merge;
+        $this->container['allowSquashMerge'] = $allowSquashMerge;
 
         return $this;
     }
@@ -519,97 +519,97 @@ class EditRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets autodetect_manual_merge
+     * Gets autodetectManualMerge
      *
      * @return bool|null
      */
     public function getAutodetectManualMerge()
     {
-        return $this->container['autodetect_manual_merge'];
+        return $this->container['autodetectManualMerge'];
     }
 
     /**
-     * Sets autodetect_manual_merge
+     * Sets autodetectManualMerge
      *
-     * @param bool|null $autodetect_manual_merge either `true` to enable AutodetectManualMerge, or `false` to prevent it. `has_pull_requests` must be `true`, Note: In some special cases, misjudgments can occur.
+     * @param bool|null $autodetectManualMerge either `true` to enable AutodetectManualMerge, or `false` to prevent it. `has_pull_requests` must be `true`, Note: In some special cases, misjudgments can occur.
      *
      * @return self
      */
-    public function setAutodetectManualMerge($autodetect_manual_merge)
+    public function setAutodetectManualMerge($autodetectManualMerge)
     {
-        $this->container['autodetect_manual_merge'] = $autodetect_manual_merge;
+        $this->container['autodetectManualMerge'] = $autodetectManualMerge;
 
         return $this;
     }
 
     /**
-     * Gets default_branch
+     * Gets defaultBranch
      *
      * @return string|null
      */
     public function getDefaultBranch()
     {
-        return $this->container['default_branch'];
+        return $this->container['defaultBranch'];
     }
 
     /**
-     * Sets default_branch
+     * Sets defaultBranch
      *
-     * @param string|null $default_branch sets the default branch for this repository.
+     * @param string|null $defaultBranch sets the default branch for this repository.
      *
      * @return self
      */
-    public function setDefaultBranch($default_branch)
+    public function setDefaultBranch($defaultBranch)
     {
-        $this->container['default_branch'] = $default_branch;
+        $this->container['defaultBranch'] = $defaultBranch;
 
         return $this;
     }
 
     /**
-     * Gets default_delete_branch_after_merge
+     * Gets defaultDeleteBranchAfterMerge
      *
      * @return bool|null
      */
     public function getDefaultDeleteBranchAfterMerge()
     {
-        return $this->container['default_delete_branch_after_merge'];
+        return $this->container['defaultDeleteBranchAfterMerge'];
     }
 
     /**
-     * Sets default_delete_branch_after_merge
+     * Sets defaultDeleteBranchAfterMerge
      *
-     * @param bool|null $default_delete_branch_after_merge set to `true` to delete pr branch after merge by default
+     * @param bool|null $defaultDeleteBranchAfterMerge set to `true` to delete pr branch after merge by default
      *
      * @return self
      */
-    public function setDefaultDeleteBranchAfterMerge($default_delete_branch_after_merge)
+    public function setDefaultDeleteBranchAfterMerge($defaultDeleteBranchAfterMerge)
     {
-        $this->container['default_delete_branch_after_merge'] = $default_delete_branch_after_merge;
+        $this->container['defaultDeleteBranchAfterMerge'] = $defaultDeleteBranchAfterMerge;
 
         return $this;
     }
 
     /**
-     * Gets default_merge_style
+     * Gets defaultMergeStyle
      *
      * @return string|null
      */
     public function getDefaultMergeStyle()
     {
-        return $this->container['default_merge_style'];
+        return $this->container['defaultMergeStyle'];
     }
 
     /**
-     * Sets default_merge_style
+     * Sets defaultMergeStyle
      *
-     * @param string|null $default_merge_style set to a merge style to be used by this repository: \"merge\", \"rebase\", \"rebase-merge\", or \"squash\". `has_pull_requests` must be `true`.
+     * @param string|null $defaultMergeStyle set to a merge style to be used by this repository: \"merge\", \"rebase\", \"rebase-merge\", or \"squash\". `has_pull_requests` must be `true`.
      *
      * @return self
      */
-    public function setDefaultMergeStyle($default_merge_style)
+    public function setDefaultMergeStyle($defaultMergeStyle)
     {
-        $this->container['default_merge_style'] = $default_merge_style;
+        $this->container['defaultMergeStyle'] = $defaultMergeStyle;
 
         return $this;
     }
@@ -639,217 +639,217 @@ class EditRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets external_tracker
+     * Gets externalTracker
      *
      * @return \Efsa\Client\Gitea\Model\ExternalTracker|null
      */
     public function getExternalTracker()
     {
-        return $this->container['external_tracker'];
+        return $this->container['externalTracker'];
     }
 
     /**
-     * Sets external_tracker
+     * Sets externalTracker
      *
-     * @param \Efsa\Client\Gitea\Model\ExternalTracker|null $external_tracker external_tracker
+     * @param \Efsa\Client\Gitea\Model\ExternalTracker|null $externalTracker externalTracker
      *
      * @return self
      */
-    public function setExternalTracker($external_tracker)
+    public function setExternalTracker($externalTracker)
     {
-        $this->container['external_tracker'] = $external_tracker;
+        $this->container['externalTracker'] = $externalTracker;
 
         return $this;
     }
 
     /**
-     * Gets external_wiki
+     * Gets externalWiki
      *
      * @return \Efsa\Client\Gitea\Model\ExternalWiki|null
      */
     public function getExternalWiki()
     {
-        return $this->container['external_wiki'];
+        return $this->container['externalWiki'];
     }
 
     /**
-     * Sets external_wiki
+     * Sets externalWiki
      *
-     * @param \Efsa\Client\Gitea\Model\ExternalWiki|null $external_wiki external_wiki
+     * @param \Efsa\Client\Gitea\Model\ExternalWiki|null $externalWiki externalWiki
      *
      * @return self
      */
-    public function setExternalWiki($external_wiki)
+    public function setExternalWiki($externalWiki)
     {
-        $this->container['external_wiki'] = $external_wiki;
+        $this->container['externalWiki'] = $externalWiki;
 
         return $this;
     }
 
     /**
-     * Gets has_issues
+     * Gets hasIssues
      *
      * @return bool|null
      */
     public function getHasIssues()
     {
-        return $this->container['has_issues'];
+        return $this->container['hasIssues'];
     }
 
     /**
-     * Sets has_issues
+     * Sets hasIssues
      *
-     * @param bool|null $has_issues either `true` to enable issues for this repository or `false` to disable them.
+     * @param bool|null $hasIssues either `true` to enable issues for this repository or `false` to disable them.
      *
      * @return self
      */
-    public function setHasIssues($has_issues)
+    public function setHasIssues($hasIssues)
     {
-        $this->container['has_issues'] = $has_issues;
+        $this->container['hasIssues'] = $hasIssues;
 
         return $this;
     }
 
     /**
-     * Gets has_projects
+     * Gets hasProjects
      *
      * @return bool|null
      */
     public function getHasProjects()
     {
-        return $this->container['has_projects'];
+        return $this->container['hasProjects'];
     }
 
     /**
-     * Sets has_projects
+     * Sets hasProjects
      *
-     * @param bool|null $has_projects either `true` to enable project unit, or `false` to disable them.
+     * @param bool|null $hasProjects either `true` to enable project unit, or `false` to disable them.
      *
      * @return self
      */
-    public function setHasProjects($has_projects)
+    public function setHasProjects($hasProjects)
     {
-        $this->container['has_projects'] = $has_projects;
+        $this->container['hasProjects'] = $hasProjects;
 
         return $this;
     }
 
     /**
-     * Gets has_pull_requests
+     * Gets hasPullRequests
      *
      * @return bool|null
      */
     public function getHasPullRequests()
     {
-        return $this->container['has_pull_requests'];
+        return $this->container['hasPullRequests'];
     }
 
     /**
-     * Sets has_pull_requests
+     * Sets hasPullRequests
      *
-     * @param bool|null $has_pull_requests either `true` to allow pull requests, or `false` to prevent pull request.
+     * @param bool|null $hasPullRequests either `true` to allow pull requests, or `false` to prevent pull request.
      *
      * @return self
      */
-    public function setHasPullRequests($has_pull_requests)
+    public function setHasPullRequests($hasPullRequests)
     {
-        $this->container['has_pull_requests'] = $has_pull_requests;
+        $this->container['hasPullRequests'] = $hasPullRequests;
 
         return $this;
     }
 
     /**
-     * Gets has_wiki
+     * Gets hasWiki
      *
      * @return bool|null
      */
     public function getHasWiki()
     {
-        return $this->container['has_wiki'];
+        return $this->container['hasWiki'];
     }
 
     /**
-     * Sets has_wiki
+     * Sets hasWiki
      *
-     * @param bool|null $has_wiki either `true` to enable the wiki for this repository or `false` to disable it.
+     * @param bool|null $hasWiki either `true` to enable the wiki for this repository or `false` to disable it.
      *
      * @return self
      */
-    public function setHasWiki($has_wiki)
+    public function setHasWiki($hasWiki)
     {
-        $this->container['has_wiki'] = $has_wiki;
+        $this->container['hasWiki'] = $hasWiki;
 
         return $this;
     }
 
     /**
-     * Gets ignore_whitespace_conflicts
+     * Gets ignoreWhitespaceConflicts
      *
      * @return bool|null
      */
     public function getIgnoreWhitespaceConflicts()
     {
-        return $this->container['ignore_whitespace_conflicts'];
+        return $this->container['ignoreWhitespaceConflicts'];
     }
 
     /**
-     * Sets ignore_whitespace_conflicts
+     * Sets ignoreWhitespaceConflicts
      *
-     * @param bool|null $ignore_whitespace_conflicts either `true` to ignore whitespace for conflicts, or `false` to not ignore whitespace. `has_pull_requests` must be `true`.
+     * @param bool|null $ignoreWhitespaceConflicts either `true` to ignore whitespace for conflicts, or `false` to not ignore whitespace. `has_pull_requests` must be `true`.
      *
      * @return self
      */
-    public function setIgnoreWhitespaceConflicts($ignore_whitespace_conflicts)
+    public function setIgnoreWhitespaceConflicts($ignoreWhitespaceConflicts)
     {
-        $this->container['ignore_whitespace_conflicts'] = $ignore_whitespace_conflicts;
+        $this->container['ignoreWhitespaceConflicts'] = $ignoreWhitespaceConflicts;
 
         return $this;
     }
 
     /**
-     * Gets internal_tracker
+     * Gets internalTracker
      *
      * @return \Efsa\Client\Gitea\Model\InternalTracker|null
      */
     public function getInternalTracker()
     {
-        return $this->container['internal_tracker'];
+        return $this->container['internalTracker'];
     }
 
     /**
-     * Sets internal_tracker
+     * Sets internalTracker
      *
-     * @param \Efsa\Client\Gitea\Model\InternalTracker|null $internal_tracker internal_tracker
+     * @param \Efsa\Client\Gitea\Model\InternalTracker|null $internalTracker internalTracker
      *
      * @return self
      */
-    public function setInternalTracker($internal_tracker)
+    public function setInternalTracker($internalTracker)
     {
-        $this->container['internal_tracker'] = $internal_tracker;
+        $this->container['internalTracker'] = $internalTracker;
 
         return $this;
     }
 
     /**
-     * Gets mirror_interval
+     * Gets mirrorInterval
      *
      * @return string|null
      */
     public function getMirrorInterval()
     {
-        return $this->container['mirror_interval'];
+        return $this->container['mirrorInterval'];
     }
 
     /**
-     * Sets mirror_interval
+     * Sets mirrorInterval
      *
-     * @param string|null $mirror_interval set to a string like `8h30m0s` to set the mirror interval time
+     * @param string|null $mirrorInterval set to a string like `8h30m0s` to set the mirror interval time
      *
      * @return self
      */
-    public function setMirrorInterval($mirror_interval)
+    public function setMirrorInterval($mirrorInterval)
     {
-        $this->container['mirror_interval'] = $mirror_interval;
+        $this->container['mirrorInterval'] = $mirrorInterval;
 
         return $this;
     }

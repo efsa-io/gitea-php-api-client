@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **assignees** | **string[]** |  | [optional]
 **body** | **string** |  | [optional]
 **closed** | **bool** |  | [optional]
-**due_date** | [**\DateTime**](\DateTime.md) |  | [optional]
+**dueDate** | [**\DateTime**](\DateTime.md) |  | [optional]
 **labels** | **int[]** | list of label ids | [optional]
 **milestone** | **int** | milestone id | [optional]
 **ref** | **string** |  | [optional]

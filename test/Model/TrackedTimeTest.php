@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description TrackedTime worked time for an issue / pr
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -107,7 +107,7 @@ class TrackedTimeTest extends TestCase
     }
 
     /**
-     * Test attribute "issue_id"
+     * Test attribute "issueId"
      */
     public function testPropertyIssueId()
     {
@@ -125,7 +125,7 @@ class TrackedTimeTest extends TestCase
     }
 
     /**
-     * Test attribute "user_id"
+     * Test attribute "userId"
      */
     public function testPropertyUserId()
     {
@@ -134,7 +134,7 @@ class TrackedTimeTest extends TestCase
     }
 
     /**
-     * Test attribute "user_name"
+     * Test attribute "userName"
      */
     public function testPropertyUserName()
     {

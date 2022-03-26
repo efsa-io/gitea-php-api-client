@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **active** | **bool** |  | [optional]
-**branch_filter** | **string** |  | [optional]
+**branchFilter** | **string** |  | [optional]
 **config** | **array<string,string>** |  | [optional]
 **events** | **string[]** |  | [optional]
 

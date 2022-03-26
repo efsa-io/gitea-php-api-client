@@ -60,27 +60,27 @@ class EditBranchProtectionOption implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'approvals_whitelist_teams' => 'string[]',
-        'approvals_whitelist_username' => 'string[]',
-        'block_on_official_review_requests' => 'bool',
-        'block_on_outdated_branch' => 'bool',
-        'block_on_rejected_reviews' => 'bool',
-        'dismiss_stale_approvals' => 'bool',
-        'enable_approvals_whitelist' => 'bool',
-        'enable_merge_whitelist' => 'bool',
-        'enable_push' => 'bool',
-        'enable_push_whitelist' => 'bool',
-        'enable_status_check' => 'bool',
-        'merge_whitelist_teams' => 'string[]',
-        'merge_whitelist_usernames' => 'string[]',
-        'protected_file_patterns' => 'string',
-        'push_whitelist_deploy_keys' => 'bool',
-        'push_whitelist_teams' => 'string[]',
-        'push_whitelist_usernames' => 'string[]',
-        'require_signed_commits' => 'bool',
-        'required_approvals' => 'int',
-        'status_check_contexts' => 'string[]',
-        'unprotected_file_patterns' => 'string'
+        'approvalsWhitelistTeams' => 'string[]',
+        'approvalsWhitelistUsername' => 'string[]',
+        'blockOnOfficialReviewRequests' => 'bool',
+        'blockOnOutdatedBranch' => 'bool',
+        'blockOnRejectedReviews' => 'bool',
+        'dismissStaleApprovals' => 'bool',
+        'enableApprovalsWhitelist' => 'bool',
+        'enableMergeWhitelist' => 'bool',
+        'enablePush' => 'bool',
+        'enablePushWhitelist' => 'bool',
+        'enableStatusCheck' => 'bool',
+        'mergeWhitelistTeams' => 'string[]',
+        'mergeWhitelistUsernames' => 'string[]',
+        'protectedFilePatterns' => 'string',
+        'pushWhitelistDeployKeys' => 'bool',
+        'pushWhitelistTeams' => 'string[]',
+        'pushWhitelistUsernames' => 'string[]',
+        'requireSignedCommits' => 'bool',
+        'requiredApprovals' => 'int',
+        'statusCheckContexts' => 'string[]',
+        'unprotectedFilePatterns' => 'string'
     ];
 
     /**
@@ -91,27 +91,27 @@ class EditBranchProtectionOption implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'approvals_whitelist_teams' => null,
-        'approvals_whitelist_username' => null,
-        'block_on_official_review_requests' => null,
-        'block_on_outdated_branch' => null,
-        'block_on_rejected_reviews' => null,
-        'dismiss_stale_approvals' => null,
-        'enable_approvals_whitelist' => null,
-        'enable_merge_whitelist' => null,
-        'enable_push' => null,
-        'enable_push_whitelist' => null,
-        'enable_status_check' => null,
-        'merge_whitelist_teams' => null,
-        'merge_whitelist_usernames' => null,
-        'protected_file_patterns' => null,
-        'push_whitelist_deploy_keys' => null,
-        'push_whitelist_teams' => null,
-        'push_whitelist_usernames' => null,
-        'require_signed_commits' => null,
-        'required_approvals' => 'int64',
-        'status_check_contexts' => null,
-        'unprotected_file_patterns' => null
+        'approvalsWhitelistTeams' => null,
+        'approvalsWhitelistUsername' => null,
+        'blockOnOfficialReviewRequests' => null,
+        'blockOnOutdatedBranch' => null,
+        'blockOnRejectedReviews' => null,
+        'dismissStaleApprovals' => null,
+        'enableApprovalsWhitelist' => null,
+        'enableMergeWhitelist' => null,
+        'enablePush' => null,
+        'enablePushWhitelist' => null,
+        'enableStatusCheck' => null,
+        'mergeWhitelistTeams' => null,
+        'mergeWhitelistUsernames' => null,
+        'protectedFilePatterns' => null,
+        'pushWhitelistDeployKeys' => null,
+        'pushWhitelistTeams' => null,
+        'pushWhitelistUsernames' => null,
+        'requireSignedCommits' => null,
+        'requiredApprovals' => 'int64',
+        'statusCheckContexts' => null,
+        'unprotectedFilePatterns' => null
     ];
 
     /**
@@ -141,27 +141,27 @@ class EditBranchProtectionOption implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'approvals_whitelist_teams' => 'approvals_whitelist_teams',
-        'approvals_whitelist_username' => 'approvals_whitelist_username',
-        'block_on_official_review_requests' => 'block_on_official_review_requests',
-        'block_on_outdated_branch' => 'block_on_outdated_branch',
-        'block_on_rejected_reviews' => 'block_on_rejected_reviews',
-        'dismiss_stale_approvals' => 'dismiss_stale_approvals',
-        'enable_approvals_whitelist' => 'enable_approvals_whitelist',
-        'enable_merge_whitelist' => 'enable_merge_whitelist',
-        'enable_push' => 'enable_push',
-        'enable_push_whitelist' => 'enable_push_whitelist',
-        'enable_status_check' => 'enable_status_check',
-        'merge_whitelist_teams' => 'merge_whitelist_teams',
-        'merge_whitelist_usernames' => 'merge_whitelist_usernames',
-        'protected_file_patterns' => 'protected_file_patterns',
-        'push_whitelist_deploy_keys' => 'push_whitelist_deploy_keys',
-        'push_whitelist_teams' => 'push_whitelist_teams',
-        'push_whitelist_usernames' => 'push_whitelist_usernames',
-        'require_signed_commits' => 'require_signed_commits',
-        'required_approvals' => 'required_approvals',
-        'status_check_contexts' => 'status_check_contexts',
-        'unprotected_file_patterns' => 'unprotected_file_patterns'
+        'approvalsWhitelistTeams' => 'approvals_whitelist_teams',
+        'approvalsWhitelistUsername' => 'approvals_whitelist_username',
+        'blockOnOfficialReviewRequests' => 'block_on_official_review_requests',
+        'blockOnOutdatedBranch' => 'block_on_outdated_branch',
+        'blockOnRejectedReviews' => 'block_on_rejected_reviews',
+        'dismissStaleApprovals' => 'dismiss_stale_approvals',
+        'enableApprovalsWhitelist' => 'enable_approvals_whitelist',
+        'enableMergeWhitelist' => 'enable_merge_whitelist',
+        'enablePush' => 'enable_push',
+        'enablePushWhitelist' => 'enable_push_whitelist',
+        'enableStatusCheck' => 'enable_status_check',
+        'mergeWhitelistTeams' => 'merge_whitelist_teams',
+        'mergeWhitelistUsernames' => 'merge_whitelist_usernames',
+        'protectedFilePatterns' => 'protected_file_patterns',
+        'pushWhitelistDeployKeys' => 'push_whitelist_deploy_keys',
+        'pushWhitelistTeams' => 'push_whitelist_teams',
+        'pushWhitelistUsernames' => 'push_whitelist_usernames',
+        'requireSignedCommits' => 'require_signed_commits',
+        'requiredApprovals' => 'required_approvals',
+        'statusCheckContexts' => 'status_check_contexts',
+        'unprotectedFilePatterns' => 'unprotected_file_patterns'
     ];
 
     /**
@@ -170,27 +170,27 @@ class EditBranchProtectionOption implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'approvals_whitelist_teams' => 'setApprovalsWhitelistTeams',
-        'approvals_whitelist_username' => 'setApprovalsWhitelistUsername',
-        'block_on_official_review_requests' => 'setBlockOnOfficialReviewRequests',
-        'block_on_outdated_branch' => 'setBlockOnOutdatedBranch',
-        'block_on_rejected_reviews' => 'setBlockOnRejectedReviews',
-        'dismiss_stale_approvals' => 'setDismissStaleApprovals',
-        'enable_approvals_whitelist' => 'setEnableApprovalsWhitelist',
-        'enable_merge_whitelist' => 'setEnableMergeWhitelist',
-        'enable_push' => 'setEnablePush',
-        'enable_push_whitelist' => 'setEnablePushWhitelist',
-        'enable_status_check' => 'setEnableStatusCheck',
-        'merge_whitelist_teams' => 'setMergeWhitelistTeams',
-        'merge_whitelist_usernames' => 'setMergeWhitelistUsernames',
-        'protected_file_patterns' => 'setProtectedFilePatterns',
-        'push_whitelist_deploy_keys' => 'setPushWhitelistDeployKeys',
-        'push_whitelist_teams' => 'setPushWhitelistTeams',
-        'push_whitelist_usernames' => 'setPushWhitelistUsernames',
-        'require_signed_commits' => 'setRequireSignedCommits',
-        'required_approvals' => 'setRequiredApprovals',
-        'status_check_contexts' => 'setStatusCheckContexts',
-        'unprotected_file_patterns' => 'setUnprotectedFilePatterns'
+        'approvalsWhitelistTeams' => 'setApprovalsWhitelistTeams',
+        'approvalsWhitelistUsername' => 'setApprovalsWhitelistUsername',
+        'blockOnOfficialReviewRequests' => 'setBlockOnOfficialReviewRequests',
+        'blockOnOutdatedBranch' => 'setBlockOnOutdatedBranch',
+        'blockOnRejectedReviews' => 'setBlockOnRejectedReviews',
+        'dismissStaleApprovals' => 'setDismissStaleApprovals',
+        'enableApprovalsWhitelist' => 'setEnableApprovalsWhitelist',
+        'enableMergeWhitelist' => 'setEnableMergeWhitelist',
+        'enablePush' => 'setEnablePush',
+        'enablePushWhitelist' => 'setEnablePushWhitelist',
+        'enableStatusCheck' => 'setEnableStatusCheck',
+        'mergeWhitelistTeams' => 'setMergeWhitelistTeams',
+        'mergeWhitelistUsernames' => 'setMergeWhitelistUsernames',
+        'protectedFilePatterns' => 'setProtectedFilePatterns',
+        'pushWhitelistDeployKeys' => 'setPushWhitelistDeployKeys',
+        'pushWhitelistTeams' => 'setPushWhitelistTeams',
+        'pushWhitelistUsernames' => 'setPushWhitelistUsernames',
+        'requireSignedCommits' => 'setRequireSignedCommits',
+        'requiredApprovals' => 'setRequiredApprovals',
+        'statusCheckContexts' => 'setStatusCheckContexts',
+        'unprotectedFilePatterns' => 'setUnprotectedFilePatterns'
     ];
 
     /**
@@ -199,27 +199,27 @@ class EditBranchProtectionOption implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'approvals_whitelist_teams' => 'getApprovalsWhitelistTeams',
-        'approvals_whitelist_username' => 'getApprovalsWhitelistUsername',
-        'block_on_official_review_requests' => 'getBlockOnOfficialReviewRequests',
-        'block_on_outdated_branch' => 'getBlockOnOutdatedBranch',
-        'block_on_rejected_reviews' => 'getBlockOnRejectedReviews',
-        'dismiss_stale_approvals' => 'getDismissStaleApprovals',
-        'enable_approvals_whitelist' => 'getEnableApprovalsWhitelist',
-        'enable_merge_whitelist' => 'getEnableMergeWhitelist',
-        'enable_push' => 'getEnablePush',
-        'enable_push_whitelist' => 'getEnablePushWhitelist',
-        'enable_status_check' => 'getEnableStatusCheck',
-        'merge_whitelist_teams' => 'getMergeWhitelistTeams',
-        'merge_whitelist_usernames' => 'getMergeWhitelistUsernames',
-        'protected_file_patterns' => 'getProtectedFilePatterns',
-        'push_whitelist_deploy_keys' => 'getPushWhitelistDeployKeys',
-        'push_whitelist_teams' => 'getPushWhitelistTeams',
-        'push_whitelist_usernames' => 'getPushWhitelistUsernames',
-        'require_signed_commits' => 'getRequireSignedCommits',
-        'required_approvals' => 'getRequiredApprovals',
-        'status_check_contexts' => 'getStatusCheckContexts',
-        'unprotected_file_patterns' => 'getUnprotectedFilePatterns'
+        'approvalsWhitelistTeams' => 'getApprovalsWhitelistTeams',
+        'approvalsWhitelistUsername' => 'getApprovalsWhitelistUsername',
+        'blockOnOfficialReviewRequests' => 'getBlockOnOfficialReviewRequests',
+        'blockOnOutdatedBranch' => 'getBlockOnOutdatedBranch',
+        'blockOnRejectedReviews' => 'getBlockOnRejectedReviews',
+        'dismissStaleApprovals' => 'getDismissStaleApprovals',
+        'enableApprovalsWhitelist' => 'getEnableApprovalsWhitelist',
+        'enableMergeWhitelist' => 'getEnableMergeWhitelist',
+        'enablePush' => 'getEnablePush',
+        'enablePushWhitelist' => 'getEnablePushWhitelist',
+        'enableStatusCheck' => 'getEnableStatusCheck',
+        'mergeWhitelistTeams' => 'getMergeWhitelistTeams',
+        'mergeWhitelistUsernames' => 'getMergeWhitelistUsernames',
+        'protectedFilePatterns' => 'getProtectedFilePatterns',
+        'pushWhitelistDeployKeys' => 'getPushWhitelistDeployKeys',
+        'pushWhitelistTeams' => 'getPushWhitelistTeams',
+        'pushWhitelistUsernames' => 'getPushWhitelistUsernames',
+        'requireSignedCommits' => 'getRequireSignedCommits',
+        'requiredApprovals' => 'getRequiredApprovals',
+        'statusCheckContexts' => 'getStatusCheckContexts',
+        'unprotectedFilePatterns' => 'getUnprotectedFilePatterns'
     ];
 
     /**
@@ -279,27 +279,27 @@ class EditBranchProtectionOption implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(array $data = null)
     {
-        $this->container['approvals_whitelist_teams'] = $data['approvals_whitelist_teams'] ?? null;
-        $this->container['approvals_whitelist_username'] = $data['approvals_whitelist_username'] ?? null;
-        $this->container['block_on_official_review_requests'] = $data['block_on_official_review_requests'] ?? null;
-        $this->container['block_on_outdated_branch'] = $data['block_on_outdated_branch'] ?? null;
-        $this->container['block_on_rejected_reviews'] = $data['block_on_rejected_reviews'] ?? null;
-        $this->container['dismiss_stale_approvals'] = $data['dismiss_stale_approvals'] ?? null;
-        $this->container['enable_approvals_whitelist'] = $data['enable_approvals_whitelist'] ?? null;
-        $this->container['enable_merge_whitelist'] = $data['enable_merge_whitelist'] ?? null;
-        $this->container['enable_push'] = $data['enable_push'] ?? null;
-        $this->container['enable_push_whitelist'] = $data['enable_push_whitelist'] ?? null;
-        $this->container['enable_status_check'] = $data['enable_status_check'] ?? null;
-        $this->container['merge_whitelist_teams'] = $data['merge_whitelist_teams'] ?? null;
-        $this->container['merge_whitelist_usernames'] = $data['merge_whitelist_usernames'] ?? null;
-        $this->container['protected_file_patterns'] = $data['protected_file_patterns'] ?? null;
-        $this->container['push_whitelist_deploy_keys'] = $data['push_whitelist_deploy_keys'] ?? null;
-        $this->container['push_whitelist_teams'] = $data['push_whitelist_teams'] ?? null;
-        $this->container['push_whitelist_usernames'] = $data['push_whitelist_usernames'] ?? null;
-        $this->container['require_signed_commits'] = $data['require_signed_commits'] ?? null;
-        $this->container['required_approvals'] = $data['required_approvals'] ?? null;
-        $this->container['status_check_contexts'] = $data['status_check_contexts'] ?? null;
-        $this->container['unprotected_file_patterns'] = $data['unprotected_file_patterns'] ?? null;
+        $this->container['approvalsWhitelistTeams'] = $data['approvalsWhitelistTeams'] ?? null;
+        $this->container['approvalsWhitelistUsername'] = $data['approvalsWhitelistUsername'] ?? null;
+        $this->container['blockOnOfficialReviewRequests'] = $data['blockOnOfficialReviewRequests'] ?? null;
+        $this->container['blockOnOutdatedBranch'] = $data['blockOnOutdatedBranch'] ?? null;
+        $this->container['blockOnRejectedReviews'] = $data['blockOnRejectedReviews'] ?? null;
+        $this->container['dismissStaleApprovals'] = $data['dismissStaleApprovals'] ?? null;
+        $this->container['enableApprovalsWhitelist'] = $data['enableApprovalsWhitelist'] ?? null;
+        $this->container['enableMergeWhitelist'] = $data['enableMergeWhitelist'] ?? null;
+        $this->container['enablePush'] = $data['enablePush'] ?? null;
+        $this->container['enablePushWhitelist'] = $data['enablePushWhitelist'] ?? null;
+        $this->container['enableStatusCheck'] = $data['enableStatusCheck'] ?? null;
+        $this->container['mergeWhitelistTeams'] = $data['mergeWhitelistTeams'] ?? null;
+        $this->container['mergeWhitelistUsernames'] = $data['mergeWhitelistUsernames'] ?? null;
+        $this->container['protectedFilePatterns'] = $data['protectedFilePatterns'] ?? null;
+        $this->container['pushWhitelistDeployKeys'] = $data['pushWhitelistDeployKeys'] ?? null;
+        $this->container['pushWhitelistTeams'] = $data['pushWhitelistTeams'] ?? null;
+        $this->container['pushWhitelistUsernames'] = $data['pushWhitelistUsernames'] ?? null;
+        $this->container['requireSignedCommits'] = $data['requireSignedCommits'] ?? null;
+        $this->container['requiredApprovals'] = $data['requiredApprovals'] ?? null;
+        $this->container['statusCheckContexts'] = $data['statusCheckContexts'] ?? null;
+        $this->container['unprotectedFilePatterns'] = $data['unprotectedFilePatterns'] ?? null;
     }
 
     /**
@@ -327,505 +327,505 @@ class EditBranchProtectionOption implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets approvals_whitelist_teams
+     * Gets approvalsWhitelistTeams
      *
      * @return string[]|null
      */
     public function getApprovalsWhitelistTeams()
     {
-        return $this->container['approvals_whitelist_teams'];
+        return $this->container['approvalsWhitelistTeams'];
     }
 
     /**
-     * Sets approvals_whitelist_teams
+     * Sets approvalsWhitelistTeams
      *
-     * @param string[]|null $approvals_whitelist_teams approvals_whitelist_teams
+     * @param string[]|null $approvalsWhitelistTeams approvalsWhitelistTeams
      *
      * @return self
      */
-    public function setApprovalsWhitelistTeams($approvals_whitelist_teams)
+    public function setApprovalsWhitelistTeams($approvalsWhitelistTeams)
     {
-        $this->container['approvals_whitelist_teams'] = $approvals_whitelist_teams;
+        $this->container['approvalsWhitelistTeams'] = $approvalsWhitelistTeams;
 
         return $this;
     }
 
     /**
-     * Gets approvals_whitelist_username
+     * Gets approvalsWhitelistUsername
      *
      * @return string[]|null
      */
     public function getApprovalsWhitelistUsername()
     {
-        return $this->container['approvals_whitelist_username'];
+        return $this->container['approvalsWhitelistUsername'];
     }
 
     /**
-     * Sets approvals_whitelist_username
+     * Sets approvalsWhitelistUsername
      *
-     * @param string[]|null $approvals_whitelist_username approvals_whitelist_username
+     * @param string[]|null $approvalsWhitelistUsername approvalsWhitelistUsername
      *
      * @return self
      */
-    public function setApprovalsWhitelistUsername($approvals_whitelist_username)
+    public function setApprovalsWhitelistUsername($approvalsWhitelistUsername)
     {
-        $this->container['approvals_whitelist_username'] = $approvals_whitelist_username;
+        $this->container['approvalsWhitelistUsername'] = $approvalsWhitelistUsername;
 
         return $this;
     }
 
     /**
-     * Gets block_on_official_review_requests
+     * Gets blockOnOfficialReviewRequests
      *
      * @return bool|null
      */
     public function getBlockOnOfficialReviewRequests()
     {
-        return $this->container['block_on_official_review_requests'];
+        return $this->container['blockOnOfficialReviewRequests'];
     }
 
     /**
-     * Sets block_on_official_review_requests
+     * Sets blockOnOfficialReviewRequests
      *
-     * @param bool|null $block_on_official_review_requests block_on_official_review_requests
+     * @param bool|null $blockOnOfficialReviewRequests blockOnOfficialReviewRequests
      *
      * @return self
      */
-    public function setBlockOnOfficialReviewRequests($block_on_official_review_requests)
+    public function setBlockOnOfficialReviewRequests($blockOnOfficialReviewRequests)
     {
-        $this->container['block_on_official_review_requests'] = $block_on_official_review_requests;
+        $this->container['blockOnOfficialReviewRequests'] = $blockOnOfficialReviewRequests;
 
         return $this;
     }
 
     /**
-     * Gets block_on_outdated_branch
+     * Gets blockOnOutdatedBranch
      *
      * @return bool|null
      */
     public function getBlockOnOutdatedBranch()
     {
-        return $this->container['block_on_outdated_branch'];
+        return $this->container['blockOnOutdatedBranch'];
     }
 
     /**
-     * Sets block_on_outdated_branch
+     * Sets blockOnOutdatedBranch
      *
-     * @param bool|null $block_on_outdated_branch block_on_outdated_branch
+     * @param bool|null $blockOnOutdatedBranch blockOnOutdatedBranch
      *
      * @return self
      */
-    public function setBlockOnOutdatedBranch($block_on_outdated_branch)
+    public function setBlockOnOutdatedBranch($blockOnOutdatedBranch)
     {
-        $this->container['block_on_outdated_branch'] = $block_on_outdated_branch;
+        $this->container['blockOnOutdatedBranch'] = $blockOnOutdatedBranch;
 
         return $this;
     }
 
     /**
-     * Gets block_on_rejected_reviews
+     * Gets blockOnRejectedReviews
      *
      * @return bool|null
      */
     public function getBlockOnRejectedReviews()
     {
-        return $this->container['block_on_rejected_reviews'];
+        return $this->container['blockOnRejectedReviews'];
     }
 
     /**
-     * Sets block_on_rejected_reviews
+     * Sets blockOnRejectedReviews
      *
-     * @param bool|null $block_on_rejected_reviews block_on_rejected_reviews
+     * @param bool|null $blockOnRejectedReviews blockOnRejectedReviews
      *
      * @return self
      */
-    public function setBlockOnRejectedReviews($block_on_rejected_reviews)
+    public function setBlockOnRejectedReviews($blockOnRejectedReviews)
     {
-        $this->container['block_on_rejected_reviews'] = $block_on_rejected_reviews;
+        $this->container['blockOnRejectedReviews'] = $blockOnRejectedReviews;
 
         return $this;
     }
 
     /**
-     * Gets dismiss_stale_approvals
+     * Gets dismissStaleApprovals
      *
      * @return bool|null
      */
     public function getDismissStaleApprovals()
     {
-        return $this->container['dismiss_stale_approvals'];
+        return $this->container['dismissStaleApprovals'];
     }
 
     /**
-     * Sets dismiss_stale_approvals
+     * Sets dismissStaleApprovals
      *
-     * @param bool|null $dismiss_stale_approvals dismiss_stale_approvals
+     * @param bool|null $dismissStaleApprovals dismissStaleApprovals
      *
      * @return self
      */
-    public function setDismissStaleApprovals($dismiss_stale_approvals)
+    public function setDismissStaleApprovals($dismissStaleApprovals)
     {
-        $this->container['dismiss_stale_approvals'] = $dismiss_stale_approvals;
+        $this->container['dismissStaleApprovals'] = $dismissStaleApprovals;
 
         return $this;
     }
 
     /**
-     * Gets enable_approvals_whitelist
+     * Gets enableApprovalsWhitelist
      *
      * @return bool|null
      */
     public function getEnableApprovalsWhitelist()
     {
-        return $this->container['enable_approvals_whitelist'];
+        return $this->container['enableApprovalsWhitelist'];
     }
 
     /**
-     * Sets enable_approvals_whitelist
+     * Sets enableApprovalsWhitelist
      *
-     * @param bool|null $enable_approvals_whitelist enable_approvals_whitelist
+     * @param bool|null $enableApprovalsWhitelist enableApprovalsWhitelist
      *
      * @return self
      */
-    public function setEnableApprovalsWhitelist($enable_approvals_whitelist)
+    public function setEnableApprovalsWhitelist($enableApprovalsWhitelist)
     {
-        $this->container['enable_approvals_whitelist'] = $enable_approvals_whitelist;
+        $this->container['enableApprovalsWhitelist'] = $enableApprovalsWhitelist;
 
         return $this;
     }
 
     /**
-     * Gets enable_merge_whitelist
+     * Gets enableMergeWhitelist
      *
      * @return bool|null
      */
     public function getEnableMergeWhitelist()
     {
-        return $this->container['enable_merge_whitelist'];
+        return $this->container['enableMergeWhitelist'];
     }
 
     /**
-     * Sets enable_merge_whitelist
+     * Sets enableMergeWhitelist
      *
-     * @param bool|null $enable_merge_whitelist enable_merge_whitelist
+     * @param bool|null $enableMergeWhitelist enableMergeWhitelist
      *
      * @return self
      */
-    public function setEnableMergeWhitelist($enable_merge_whitelist)
+    public function setEnableMergeWhitelist($enableMergeWhitelist)
     {
-        $this->container['enable_merge_whitelist'] = $enable_merge_whitelist;
+        $this->container['enableMergeWhitelist'] = $enableMergeWhitelist;
 
         return $this;
     }
 
     /**
-     * Gets enable_push
+     * Gets enablePush
      *
      * @return bool|null
      */
     public function getEnablePush()
     {
-        return $this->container['enable_push'];
+        return $this->container['enablePush'];
     }
 
     /**
-     * Sets enable_push
+     * Sets enablePush
      *
-     * @param bool|null $enable_push enable_push
+     * @param bool|null $enablePush enablePush
      *
      * @return self
      */
-    public function setEnablePush($enable_push)
+    public function setEnablePush($enablePush)
     {
-        $this->container['enable_push'] = $enable_push;
+        $this->container['enablePush'] = $enablePush;
 
         return $this;
     }
 
     /**
-     * Gets enable_push_whitelist
+     * Gets enablePushWhitelist
      *
      * @return bool|null
      */
     public function getEnablePushWhitelist()
     {
-        return $this->container['enable_push_whitelist'];
+        return $this->container['enablePushWhitelist'];
     }
 
     /**
-     * Sets enable_push_whitelist
+     * Sets enablePushWhitelist
      *
-     * @param bool|null $enable_push_whitelist enable_push_whitelist
+     * @param bool|null $enablePushWhitelist enablePushWhitelist
      *
      * @return self
      */
-    public function setEnablePushWhitelist($enable_push_whitelist)
+    public function setEnablePushWhitelist($enablePushWhitelist)
     {
-        $this->container['enable_push_whitelist'] = $enable_push_whitelist;
+        $this->container['enablePushWhitelist'] = $enablePushWhitelist;
 
         return $this;
     }
 
     /**
-     * Gets enable_status_check
+     * Gets enableStatusCheck
      *
      * @return bool|null
      */
     public function getEnableStatusCheck()
     {
-        return $this->container['enable_status_check'];
+        return $this->container['enableStatusCheck'];
     }
 
     /**
-     * Sets enable_status_check
+     * Sets enableStatusCheck
      *
-     * @param bool|null $enable_status_check enable_status_check
+     * @param bool|null $enableStatusCheck enableStatusCheck
      *
      * @return self
      */
-    public function setEnableStatusCheck($enable_status_check)
+    public function setEnableStatusCheck($enableStatusCheck)
     {
-        $this->container['enable_status_check'] = $enable_status_check;
+        $this->container['enableStatusCheck'] = $enableStatusCheck;
 
         return $this;
     }
 
     /**
-     * Gets merge_whitelist_teams
+     * Gets mergeWhitelistTeams
      *
      * @return string[]|null
      */
     public function getMergeWhitelistTeams()
     {
-        return $this->container['merge_whitelist_teams'];
+        return $this->container['mergeWhitelistTeams'];
     }
 
     /**
-     * Sets merge_whitelist_teams
+     * Sets mergeWhitelistTeams
      *
-     * @param string[]|null $merge_whitelist_teams merge_whitelist_teams
+     * @param string[]|null $mergeWhitelistTeams mergeWhitelistTeams
      *
      * @return self
      */
-    public function setMergeWhitelistTeams($merge_whitelist_teams)
+    public function setMergeWhitelistTeams($mergeWhitelistTeams)
     {
-        $this->container['merge_whitelist_teams'] = $merge_whitelist_teams;
+        $this->container['mergeWhitelistTeams'] = $mergeWhitelistTeams;
 
         return $this;
     }
 
     /**
-     * Gets merge_whitelist_usernames
+     * Gets mergeWhitelistUsernames
      *
      * @return string[]|null
      */
     public function getMergeWhitelistUsernames()
     {
-        return $this->container['merge_whitelist_usernames'];
+        return $this->container['mergeWhitelistUsernames'];
     }
 
     /**
-     * Sets merge_whitelist_usernames
+     * Sets mergeWhitelistUsernames
      *
-     * @param string[]|null $merge_whitelist_usernames merge_whitelist_usernames
+     * @param string[]|null $mergeWhitelistUsernames mergeWhitelistUsernames
      *
      * @return self
      */
-    public function setMergeWhitelistUsernames($merge_whitelist_usernames)
+    public function setMergeWhitelistUsernames($mergeWhitelistUsernames)
     {
-        $this->container['merge_whitelist_usernames'] = $merge_whitelist_usernames;
+        $this->container['mergeWhitelistUsernames'] = $mergeWhitelistUsernames;
 
         return $this;
     }
 
     /**
-     * Gets protected_file_patterns
+     * Gets protectedFilePatterns
      *
      * @return string|null
      */
     public function getProtectedFilePatterns()
     {
-        return $this->container['protected_file_patterns'];
+        return $this->container['protectedFilePatterns'];
     }
 
     /**
-     * Sets protected_file_patterns
+     * Sets protectedFilePatterns
      *
-     * @param string|null $protected_file_patterns protected_file_patterns
+     * @param string|null $protectedFilePatterns protectedFilePatterns
      *
      * @return self
      */
-    public function setProtectedFilePatterns($protected_file_patterns)
+    public function setProtectedFilePatterns($protectedFilePatterns)
     {
-        $this->container['protected_file_patterns'] = $protected_file_patterns;
+        $this->container['protectedFilePatterns'] = $protectedFilePatterns;
 
         return $this;
     }
 
     /**
-     * Gets push_whitelist_deploy_keys
+     * Gets pushWhitelistDeployKeys
      *
      * @return bool|null
      */
     public function getPushWhitelistDeployKeys()
     {
-        return $this->container['push_whitelist_deploy_keys'];
+        return $this->container['pushWhitelistDeployKeys'];
     }
 
     /**
-     * Sets push_whitelist_deploy_keys
+     * Sets pushWhitelistDeployKeys
      *
-     * @param bool|null $push_whitelist_deploy_keys push_whitelist_deploy_keys
+     * @param bool|null $pushWhitelistDeployKeys pushWhitelistDeployKeys
      *
      * @return self
      */
-    public function setPushWhitelistDeployKeys($push_whitelist_deploy_keys)
+    public function setPushWhitelistDeployKeys($pushWhitelistDeployKeys)
     {
-        $this->container['push_whitelist_deploy_keys'] = $push_whitelist_deploy_keys;
+        $this->container['pushWhitelistDeployKeys'] = $pushWhitelistDeployKeys;
 
         return $this;
     }
 
     /**
-     * Gets push_whitelist_teams
+     * Gets pushWhitelistTeams
      *
      * @return string[]|null
      */
     public function getPushWhitelistTeams()
     {
-        return $this->container['push_whitelist_teams'];
+        return $this->container['pushWhitelistTeams'];
     }
 
     /**
-     * Sets push_whitelist_teams
+     * Sets pushWhitelistTeams
      *
-     * @param string[]|null $push_whitelist_teams push_whitelist_teams
+     * @param string[]|null $pushWhitelistTeams pushWhitelistTeams
      *
      * @return self
      */
-    public function setPushWhitelistTeams($push_whitelist_teams)
+    public function setPushWhitelistTeams($pushWhitelistTeams)
     {
-        $this->container['push_whitelist_teams'] = $push_whitelist_teams;
+        $this->container['pushWhitelistTeams'] = $pushWhitelistTeams;
 
         return $this;
     }
 
     /**
-     * Gets push_whitelist_usernames
+     * Gets pushWhitelistUsernames
      *
      * @return string[]|null
      */
     public function getPushWhitelistUsernames()
     {
-        return $this->container['push_whitelist_usernames'];
+        return $this->container['pushWhitelistUsernames'];
     }
 
     /**
-     * Sets push_whitelist_usernames
+     * Sets pushWhitelistUsernames
      *
-     * @param string[]|null $push_whitelist_usernames push_whitelist_usernames
+     * @param string[]|null $pushWhitelistUsernames pushWhitelistUsernames
      *
      * @return self
      */
-    public function setPushWhitelistUsernames($push_whitelist_usernames)
+    public function setPushWhitelistUsernames($pushWhitelistUsernames)
     {
-        $this->container['push_whitelist_usernames'] = $push_whitelist_usernames;
+        $this->container['pushWhitelistUsernames'] = $pushWhitelistUsernames;
 
         return $this;
     }
 
     /**
-     * Gets require_signed_commits
+     * Gets requireSignedCommits
      *
      * @return bool|null
      */
     public function getRequireSignedCommits()
     {
-        return $this->container['require_signed_commits'];
+        return $this->container['requireSignedCommits'];
     }
 
     /**
-     * Sets require_signed_commits
+     * Sets requireSignedCommits
      *
-     * @param bool|null $require_signed_commits require_signed_commits
+     * @param bool|null $requireSignedCommits requireSignedCommits
      *
      * @return self
      */
-    public function setRequireSignedCommits($require_signed_commits)
+    public function setRequireSignedCommits($requireSignedCommits)
     {
-        $this->container['require_signed_commits'] = $require_signed_commits;
+        $this->container['requireSignedCommits'] = $requireSignedCommits;
 
         return $this;
     }
 
     /**
-     * Gets required_approvals
+     * Gets requiredApprovals
      *
      * @return int|null
      */
     public function getRequiredApprovals()
     {
-        return $this->container['required_approvals'];
+        return $this->container['requiredApprovals'];
     }
 
     /**
-     * Sets required_approvals
+     * Sets requiredApprovals
      *
-     * @param int|null $required_approvals required_approvals
+     * @param int|null $requiredApprovals requiredApprovals
      *
      * @return self
      */
-    public function setRequiredApprovals($required_approvals)
+    public function setRequiredApprovals($requiredApprovals)
     {
-        $this->container['required_approvals'] = $required_approvals;
+        $this->container['requiredApprovals'] = $requiredApprovals;
 
         return $this;
     }
 
     /**
-     * Gets status_check_contexts
+     * Gets statusCheckContexts
      *
      * @return string[]|null
      */
     public function getStatusCheckContexts()
     {
-        return $this->container['status_check_contexts'];
+        return $this->container['statusCheckContexts'];
     }
 
     /**
-     * Sets status_check_contexts
+     * Sets statusCheckContexts
      *
-     * @param string[]|null $status_check_contexts status_check_contexts
+     * @param string[]|null $statusCheckContexts statusCheckContexts
      *
      * @return self
      */
-    public function setStatusCheckContexts($status_check_contexts)
+    public function setStatusCheckContexts($statusCheckContexts)
     {
-        $this->container['status_check_contexts'] = $status_check_contexts;
+        $this->container['statusCheckContexts'] = $statusCheckContexts;
 
         return $this;
     }
 
     /**
-     * Gets unprotected_file_patterns
+     * Gets unprotectedFilePatterns
      *
      * @return string|null
      */
     public function getUnprotectedFilePatterns()
     {
-        return $this->container['unprotected_file_patterns'];
+        return $this->container['unprotectedFilePatterns'];
     }
 
     /**
-     * Sets unprotected_file_patterns
+     * Sets unprotectedFilePatterns
      *
-     * @param string|null $unprotected_file_patterns unprotected_file_patterns
+     * @param string|null $unprotectedFilePatterns unprotectedFilePatterns
      *
      * @return self
      */
-    public function setUnprotectedFilePatterns($unprotected_file_patterns)
+    public function setUnprotectedFilePatterns($unprotectedFilePatterns)
     {
-        $this->container['unprotected_file_patterns'] = $unprotected_file_patterns;
+        $this->container['unprotectedFilePatterns'] = $unprotectedFilePatterns;
 
         return $this;
     }

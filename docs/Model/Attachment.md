@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**browser_download_url** | **string** |  | [optional]
-**created_at** | [**\DateTime**](\DateTime.md) |  | [optional]
-**download_count** | **int** |  | [optional]
+**browserDownloadUrl** | **string** |  | [optional]
+**createdAt** | [**\DateTime**](\DateTime.md) |  | [optional]
+**downloadCount** | **int** |  | [optional]
 **id** | **int** |  | [optional]
 **name** | **string** |  | [optional]
 **size** | **int** |  | [optional]

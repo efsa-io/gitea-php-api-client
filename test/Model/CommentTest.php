@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Comment represents a comment on a commit or issue
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -89,7 +89,7 @@ class CommentTest extends TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "createdAt"
      */
     public function testPropertyCreatedAt()
     {
@@ -98,7 +98,7 @@ class CommentTest extends TestCase
     }
 
     /**
-     * Test attribute "html_url"
+     * Test attribute "htmlUrl"
      */
     public function testPropertyHtmlUrl()
     {
@@ -116,7 +116,7 @@ class CommentTest extends TestCase
     }
 
     /**
-     * Test attribute "issue_url"
+     * Test attribute "issueUrl"
      */
     public function testPropertyIssueUrl()
     {
@@ -125,7 +125,7 @@ class CommentTest extends TestCase
     }
 
     /**
-     * Test attribute "original_author"
+     * Test attribute "originalAuthor"
      */
     public function testPropertyOriginalAuthor()
     {
@@ -134,7 +134,7 @@ class CommentTest extends TestCase
     }
 
     /**
-     * Test attribute "original_author_id"
+     * Test attribute "originalAuthorId"
      */
     public function testPropertyOriginalAuthorId()
     {
@@ -143,7 +143,7 @@ class CommentTest extends TestCase
     }
 
     /**
-     * Test attribute "pull_request_url"
+     * Test attribute "pullRequestUrl"
      */
     public function testPropertyPullRequestUrl()
     {
@@ -152,7 +152,7 @@ class CommentTest extends TestCase
     }
 
     /**
-     * Test attribute "updated_at"
+     * Test attribute "updatedAt"
      */
     public function testPropertyUpdatedAt()
     {

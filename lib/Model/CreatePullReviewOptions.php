@@ -62,7 +62,7 @@ class CreatePullReviewOptions implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $openAPITypes = [
         'body' => 'string',
         'comments' => '\Efsa\Client\Gitea\Model\CreatePullReviewComment[]',
-        'commit_id' => 'string',
+        'commitId' => 'string',
         'event' => 'string'
     ];
 
@@ -76,7 +76,7 @@ class CreatePullReviewOptions implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $openAPIFormats = [
         'body' => null,
         'comments' => null,
-        'commit_id' => null,
+        'commitId' => null,
         'event' => null
     ];
 
@@ -109,7 +109,7 @@ class CreatePullReviewOptions implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $attributeMap = [
         'body' => 'body',
         'comments' => 'comments',
-        'commit_id' => 'commit_id',
+        'commitId' => 'commit_id',
         'event' => 'event'
     ];
 
@@ -121,7 +121,7 @@ class CreatePullReviewOptions implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $setters = [
         'body' => 'setBody',
         'comments' => 'setComments',
-        'commit_id' => 'setCommitId',
+        'commitId' => 'setCommitId',
         'event' => 'setEvent'
     ];
 
@@ -133,7 +133,7 @@ class CreatePullReviewOptions implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $getters = [
         'body' => 'getBody',
         'comments' => 'getComments',
-        'commit_id' => 'getCommitId',
+        'commitId' => 'getCommitId',
         'event' => 'getEvent'
     ];
 
@@ -196,7 +196,7 @@ class CreatePullReviewOptions implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $this->container['body'] = $data['body'] ?? null;
         $this->container['comments'] = $data['comments'] ?? null;
-        $this->container['commit_id'] = $data['commit_id'] ?? null;
+        $this->container['commitId'] = $data['commitId'] ?? null;
         $this->container['event'] = $data['event'] ?? null;
     }
 
@@ -273,25 +273,25 @@ class CreatePullReviewOptions implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets commit_id
+     * Gets commitId
      *
      * @return string|null
      */
     public function getCommitId()
     {
-        return $this->container['commit_id'];
+        return $this->container['commitId'];
     }
 
     /**
-     * Sets commit_id
+     * Sets commitId
      *
-     * @param string|null $commit_id commit_id
+     * @param string|null $commitId commitId
      *
      * @return self
      */
-    public function setCommitId($commit_id)
+    public function setCommitId($commitId)
     {
-        $this->container['commit_id'] = $commit_id;
+        $this->container['commitId'] = $commitId;
 
         return $this;
     }

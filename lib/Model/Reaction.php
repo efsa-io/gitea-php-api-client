@@ -61,7 +61,7 @@ class Reaction implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'content' => 'string',
-        'created_at' => '\DateTime',
+        'createdAt' => '\DateTime',
         'user' => '\Efsa\Client\Gitea\Model\User'
     ];
 
@@ -74,7 +74,7 @@ class Reaction implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'content' => null,
-        'created_at' => 'date-time',
+        'createdAt' => 'date-time',
         'user' => null
     ];
 
@@ -106,7 +106,7 @@ class Reaction implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'content' => 'content',
-        'created_at' => 'created_at',
+        'createdAt' => 'created_at',
         'user' => 'user'
     ];
 
@@ -117,7 +117,7 @@ class Reaction implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'content' => 'setContent',
-        'created_at' => 'setCreatedAt',
+        'createdAt' => 'setCreatedAt',
         'user' => 'setUser'
     ];
 
@@ -128,7 +128,7 @@ class Reaction implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'content' => 'getContent',
-        'created_at' => 'getCreatedAt',
+        'createdAt' => 'getCreatedAt',
         'user' => 'getUser'
     ];
 
@@ -190,7 +190,7 @@ class Reaction implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['content'] = $data['content'] ?? null;
-        $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['createdAt'] = $data['createdAt'] ?? null;
         $this->container['user'] = $data['user'] ?? null;
     }
 
@@ -243,25 +243,25 @@ class Reaction implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime|null
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $createdAt createdAt
      *
      * @return self
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }

@@ -60,9 +60,9 @@ class InternalTracker implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'allow_only_contributors_to_track_time' => 'bool',
-        'enable_issue_dependencies' => 'bool',
-        'enable_time_tracker' => 'bool'
+        'allowOnlyContributorsToTrackTime' => 'bool',
+        'enableIssueDependencies' => 'bool',
+        'enableTimeTracker' => 'bool'
     ];
 
     /**
@@ -73,9 +73,9 @@ class InternalTracker implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'allow_only_contributors_to_track_time' => null,
-        'enable_issue_dependencies' => null,
-        'enable_time_tracker' => null
+        'allowOnlyContributorsToTrackTime' => null,
+        'enableIssueDependencies' => null,
+        'enableTimeTracker' => null
     ];
 
     /**
@@ -105,9 +105,9 @@ class InternalTracker implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'allow_only_contributors_to_track_time' => 'allow_only_contributors_to_track_time',
-        'enable_issue_dependencies' => 'enable_issue_dependencies',
-        'enable_time_tracker' => 'enable_time_tracker'
+        'allowOnlyContributorsToTrackTime' => 'allow_only_contributors_to_track_time',
+        'enableIssueDependencies' => 'enable_issue_dependencies',
+        'enableTimeTracker' => 'enable_time_tracker'
     ];
 
     /**
@@ -116,9 +116,9 @@ class InternalTracker implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'allow_only_contributors_to_track_time' => 'setAllowOnlyContributorsToTrackTime',
-        'enable_issue_dependencies' => 'setEnableIssueDependencies',
-        'enable_time_tracker' => 'setEnableTimeTracker'
+        'allowOnlyContributorsToTrackTime' => 'setAllowOnlyContributorsToTrackTime',
+        'enableIssueDependencies' => 'setEnableIssueDependencies',
+        'enableTimeTracker' => 'setEnableTimeTracker'
     ];
 
     /**
@@ -127,9 +127,9 @@ class InternalTracker implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'allow_only_contributors_to_track_time' => 'getAllowOnlyContributorsToTrackTime',
-        'enable_issue_dependencies' => 'getEnableIssueDependencies',
-        'enable_time_tracker' => 'getEnableTimeTracker'
+        'allowOnlyContributorsToTrackTime' => 'getAllowOnlyContributorsToTrackTime',
+        'enableIssueDependencies' => 'getEnableIssueDependencies',
+        'enableTimeTracker' => 'getEnableTimeTracker'
     ];
 
     /**
@@ -189,9 +189,9 @@ class InternalTracker implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['allow_only_contributors_to_track_time'] = $data['allow_only_contributors_to_track_time'] ?? null;
-        $this->container['enable_issue_dependencies'] = $data['enable_issue_dependencies'] ?? null;
-        $this->container['enable_time_tracker'] = $data['enable_time_tracker'] ?? null;
+        $this->container['allowOnlyContributorsToTrackTime'] = $data['allowOnlyContributorsToTrackTime'] ?? null;
+        $this->container['enableIssueDependencies'] = $data['enableIssueDependencies'] ?? null;
+        $this->container['enableTimeTracker'] = $data['enableTimeTracker'] ?? null;
     }
 
     /**
@@ -219,73 +219,73 @@ class InternalTracker implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets allow_only_contributors_to_track_time
+     * Gets allowOnlyContributorsToTrackTime
      *
      * @return bool|null
      */
     public function getAllowOnlyContributorsToTrackTime()
     {
-        return $this->container['allow_only_contributors_to_track_time'];
+        return $this->container['allowOnlyContributorsToTrackTime'];
     }
 
     /**
-     * Sets allow_only_contributors_to_track_time
+     * Sets allowOnlyContributorsToTrackTime
      *
-     * @param bool|null $allow_only_contributors_to_track_time Let only contributors track time (Built-in issue tracker)
+     * @param bool|null $allowOnlyContributorsToTrackTime Let only contributors track time (Built-in issue tracker)
      *
      * @return self
      */
-    public function setAllowOnlyContributorsToTrackTime($allow_only_contributors_to_track_time)
+    public function setAllowOnlyContributorsToTrackTime($allowOnlyContributorsToTrackTime)
     {
-        $this->container['allow_only_contributors_to_track_time'] = $allow_only_contributors_to_track_time;
+        $this->container['allowOnlyContributorsToTrackTime'] = $allowOnlyContributorsToTrackTime;
 
         return $this;
     }
 
     /**
-     * Gets enable_issue_dependencies
+     * Gets enableIssueDependencies
      *
      * @return bool|null
      */
     public function getEnableIssueDependencies()
     {
-        return $this->container['enable_issue_dependencies'];
+        return $this->container['enableIssueDependencies'];
     }
 
     /**
-     * Sets enable_issue_dependencies
+     * Sets enableIssueDependencies
      *
-     * @param bool|null $enable_issue_dependencies Enable dependencies for issues and pull requests (Built-in issue tracker)
+     * @param bool|null $enableIssueDependencies Enable dependencies for issues and pull requests (Built-in issue tracker)
      *
      * @return self
      */
-    public function setEnableIssueDependencies($enable_issue_dependencies)
+    public function setEnableIssueDependencies($enableIssueDependencies)
     {
-        $this->container['enable_issue_dependencies'] = $enable_issue_dependencies;
+        $this->container['enableIssueDependencies'] = $enableIssueDependencies;
 
         return $this;
     }
 
     /**
-     * Gets enable_time_tracker
+     * Gets enableTimeTracker
      *
      * @return bool|null
      */
     public function getEnableTimeTracker()
     {
-        return $this->container['enable_time_tracker'];
+        return $this->container['enableTimeTracker'];
     }
 
     /**
-     * Sets enable_time_tracker
+     * Sets enableTimeTracker
      *
-     * @param bool|null $enable_time_tracker Enable time tracking (Built-in issue tracker)
+     * @param bool|null $enableTimeTracker Enable time tracking (Built-in issue tracker)
      *
      * @return self
      */
-    public function setEnableTimeTracker($enable_time_tracker)
+    public function setEnableTimeTracker($enableTimeTracker)
     {
-        $this->container['enable_time_tracker'] = $enable_time_tracker;
+        $this->container['enableTimeTracker'] = $enableTimeTracker;
 
         return $this;
     }

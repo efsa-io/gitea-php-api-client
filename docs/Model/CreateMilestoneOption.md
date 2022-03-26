@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **string** |  | [optional]
-**due_on** | [**\DateTime**](\DateTime.md) |  | [optional]
+**dueOn** | [**\DateTime**](\DateTime.md) |  | [optional]
 **state** | **string** |  | [optional]
 **title** | **string** |  | [optional]
 

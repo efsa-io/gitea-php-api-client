@@ -60,10 +60,10 @@ class GeneralAttachmentSettings implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'allowed_types' => 'string',
+        'allowedTypes' => 'string',
         'enabled' => 'bool',
-        'max_files' => 'int',
-        'max_size' => 'int'
+        'maxFiles' => 'int',
+        'maxSize' => 'int'
     ];
 
     /**
@@ -74,10 +74,10 @@ class GeneralAttachmentSettings implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'allowed_types' => null,
+        'allowedTypes' => null,
         'enabled' => null,
-        'max_files' => 'int64',
-        'max_size' => 'int64'
+        'maxFiles' => 'int64',
+        'maxSize' => 'int64'
     ];
 
     /**
@@ -107,10 +107,10 @@ class GeneralAttachmentSettings implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'allowed_types' => 'allowed_types',
+        'allowedTypes' => 'allowed_types',
         'enabled' => 'enabled',
-        'max_files' => 'max_files',
-        'max_size' => 'max_size'
+        'maxFiles' => 'max_files',
+        'maxSize' => 'max_size'
     ];
 
     /**
@@ -119,10 +119,10 @@ class GeneralAttachmentSettings implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'allowed_types' => 'setAllowedTypes',
+        'allowedTypes' => 'setAllowedTypes',
         'enabled' => 'setEnabled',
-        'max_files' => 'setMaxFiles',
-        'max_size' => 'setMaxSize'
+        'maxFiles' => 'setMaxFiles',
+        'maxSize' => 'setMaxSize'
     ];
 
     /**
@@ -131,10 +131,10 @@ class GeneralAttachmentSettings implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'allowed_types' => 'getAllowedTypes',
+        'allowedTypes' => 'getAllowedTypes',
         'enabled' => 'getEnabled',
-        'max_files' => 'getMaxFiles',
-        'max_size' => 'getMaxSize'
+        'maxFiles' => 'getMaxFiles',
+        'maxSize' => 'getMaxSize'
     ];
 
     /**
@@ -194,10 +194,10 @@ class GeneralAttachmentSettings implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->container['allowed_types'] = $data['allowed_types'] ?? null;
+        $this->container['allowedTypes'] = $data['allowedTypes'] ?? null;
         $this->container['enabled'] = $data['enabled'] ?? null;
-        $this->container['max_files'] = $data['max_files'] ?? null;
-        $this->container['max_size'] = $data['max_size'] ?? null;
+        $this->container['maxFiles'] = $data['maxFiles'] ?? null;
+        $this->container['maxSize'] = $data['maxSize'] ?? null;
     }
 
     /**
@@ -225,25 +225,25 @@ class GeneralAttachmentSettings implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets allowed_types
+     * Gets allowedTypes
      *
      * @return string|null
      */
     public function getAllowedTypes()
     {
-        return $this->container['allowed_types'];
+        return $this->container['allowedTypes'];
     }
 
     /**
-     * Sets allowed_types
+     * Sets allowedTypes
      *
-     * @param string|null $allowed_types allowed_types
+     * @param string|null $allowedTypes allowedTypes
      *
      * @return self
      */
-    public function setAllowedTypes($allowed_types)
+    public function setAllowedTypes($allowedTypes)
     {
-        $this->container['allowed_types'] = $allowed_types;
+        $this->container['allowedTypes'] = $allowedTypes;
 
         return $this;
     }
@@ -273,49 +273,49 @@ class GeneralAttachmentSettings implements ModelInterface, ArrayAccess, \JsonSer
     }
 
     /**
-     * Gets max_files
+     * Gets maxFiles
      *
      * @return int|null
      */
     public function getMaxFiles()
     {
-        return $this->container['max_files'];
+        return $this->container['maxFiles'];
     }
 
     /**
-     * Sets max_files
+     * Sets maxFiles
      *
-     * @param int|null $max_files max_files
+     * @param int|null $maxFiles maxFiles
      *
      * @return self
      */
-    public function setMaxFiles($max_files)
+    public function setMaxFiles($maxFiles)
     {
-        $this->container['max_files'] = $max_files;
+        $this->container['maxFiles'] = $maxFiles;
 
         return $this;
     }
 
     /**
-     * Gets max_size
+     * Gets maxSize
      *
      * @return int|null
      */
     public function getMaxSize()
     {
-        return $this->container['max_size'];
+        return $this->container['maxSize'];
     }
 
     /**
-     * Sets max_size
+     * Sets maxSize
      *
-     * @param int|null $max_size max_size
+     * @param int|null $maxSize maxSize
      *
      * @return self
      */
-    public function setMaxSize($max_size)
+    public function setMaxSize($maxSize)
     {
-        $this->container['max_size'] = $max_size;
+        $this->container['maxSize'] = $maxSize;
 
         return $this;
     }

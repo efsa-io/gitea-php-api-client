@@ -64,7 +64,7 @@ class CreatePullRequestOption implements ModelInterface, ArrayAccess, \JsonSeria
         'assignees' => 'string[]',
         'base' => 'string',
         'body' => 'string',
-        'due_date' => '\DateTime',
+        'dueDate' => '\DateTime',
         'head' => 'string',
         'labels' => 'int[]',
         'milestone' => 'int',
@@ -83,7 +83,7 @@ class CreatePullRequestOption implements ModelInterface, ArrayAccess, \JsonSeria
         'assignees' => null,
         'base' => null,
         'body' => null,
-        'due_date' => 'date-time',
+        'dueDate' => 'date-time',
         'head' => null,
         'labels' => 'int64',
         'milestone' => 'int64',
@@ -121,7 +121,7 @@ class CreatePullRequestOption implements ModelInterface, ArrayAccess, \JsonSeria
         'assignees' => 'assignees',
         'base' => 'base',
         'body' => 'body',
-        'due_date' => 'due_date',
+        'dueDate' => 'due_date',
         'head' => 'head',
         'labels' => 'labels',
         'milestone' => 'milestone',
@@ -138,7 +138,7 @@ class CreatePullRequestOption implements ModelInterface, ArrayAccess, \JsonSeria
         'assignees' => 'setAssignees',
         'base' => 'setBase',
         'body' => 'setBody',
-        'due_date' => 'setDueDate',
+        'dueDate' => 'setDueDate',
         'head' => 'setHead',
         'labels' => 'setLabels',
         'milestone' => 'setMilestone',
@@ -155,7 +155,7 @@ class CreatePullRequestOption implements ModelInterface, ArrayAccess, \JsonSeria
         'assignees' => 'getAssignees',
         'base' => 'getBase',
         'body' => 'getBody',
-        'due_date' => 'getDueDate',
+        'dueDate' => 'getDueDate',
         'head' => 'getHead',
         'labels' => 'getLabels',
         'milestone' => 'getMilestone',
@@ -223,7 +223,7 @@ class CreatePullRequestOption implements ModelInterface, ArrayAccess, \JsonSeria
         $this->container['assignees'] = $data['assignees'] ?? null;
         $this->container['base'] = $data['base'] ?? null;
         $this->container['body'] = $data['body'] ?? null;
-        $this->container['due_date'] = $data['due_date'] ?? null;
+        $this->container['dueDate'] = $data['dueDate'] ?? null;
         $this->container['head'] = $data['head'] ?? null;
         $this->container['labels'] = $data['labels'] ?? null;
         $this->container['milestone'] = $data['milestone'] ?? null;
@@ -351,25 +351,25 @@ class CreatePullRequestOption implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets due_date
+     * Gets dueDate
      *
      * @return \DateTime|null
      */
     public function getDueDate()
     {
-        return $this->container['due_date'];
+        return $this->container['dueDate'];
     }
 
     /**
-     * Sets due_date
+     * Sets dueDate
      *
-     * @param \DateTime|null $due_date due_date
+     * @param \DateTime|null $dueDate dueDate
      *
      * @return self
      */
-    public function setDueDate($due_date)
+    public function setDueDate($dueDate)
     {
-        $this->container['due_date'] = $due_date;
+        $this->container['dueDate'] = $dueDate;
 
         return $this;
     }

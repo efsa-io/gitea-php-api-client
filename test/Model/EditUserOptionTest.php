@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description EditUserOption edit user options
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -98,7 +98,7 @@ class EditUserOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "allow_create_organization"
+     * Test attribute "allowCreateOrganization"
      */
     public function testPropertyAllowCreateOrganization()
     {
@@ -107,7 +107,7 @@ class EditUserOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "allow_git_hook"
+     * Test attribute "allowGitHook"
      */
     public function testPropertyAllowGitHook()
     {
@@ -116,7 +116,7 @@ class EditUserOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "allow_import_local"
+     * Test attribute "allowImportLocal"
      */
     public function testPropertyAllowImportLocal()
     {
@@ -143,7 +143,7 @@ class EditUserOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "full_name"
+     * Test attribute "fullName"
      */
     public function testPropertyFullName()
     {
@@ -161,7 +161,7 @@ class EditUserOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "login_name"
+     * Test attribute "loginName"
      */
     public function testPropertyLoginName()
     {
@@ -170,7 +170,7 @@ class EditUserOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "max_repo_creation"
+     * Test attribute "maxRepoCreation"
      */
     public function testPropertyMaxRepoCreation()
     {
@@ -179,7 +179,7 @@ class EditUserOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "must_change_password"
+     * Test attribute "mustChangePassword"
      */
     public function testPropertyMustChangePassword()
     {
@@ -197,7 +197,7 @@ class EditUserOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "prohibit_login"
+     * Test attribute "prohibitLogin"
      */
     public function testPropertyProhibitLogin()
     {
@@ -215,7 +215,7 @@ class EditUserOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "source_id"
+     * Test attribute "sourceId"
      */
     public function testPropertySourceId()
     {

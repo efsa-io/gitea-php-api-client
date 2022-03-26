@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **metadata** | **object** |  | [optional]
-**open_registrations** | **bool** |  | [optional]
+**openRegistrations** | **bool** |  | [optional]
 **protocols** | **string[]** |  | [optional]
 **services** | [**\Efsa\Client\Gitea\Model\NodeInfoServices**](NodeInfoServices.md) |  | [optional]
 **software** | [**\Efsa\Client\Gitea\Model\NodeInfoSoftware**](NodeInfoSoftware.md) |  | [optional]

@@ -12152,7 +12152,7 @@ class OrganizationApi
      *
      * @param  string $org name of the organization (required)
      * @param  string $q keywords to search (optional)
-     * @param  bool $include_desc include search within team description (defaults to true) (optional)
+     * @param  bool $includeDesc include search within team description (defaults to true) (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
@@ -12160,9 +12160,9 @@ class OrganizationApi
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\InlineResponse200
      */
-    public function teamSearch($org, $q = null, $include_desc = null, $page = null, $limit = null)
+    public function teamSearch($org, $q = null, $includeDesc = null, $page = null, $limit = null)
     {
-        list($response) = $this->teamSearchWithHttpInfo($org, $q, $include_desc, $page, $limit);
+        list($response) = $this->teamSearchWithHttpInfo($org, $q, $includeDesc, $page, $limit);
         return $response;
     }
 
@@ -12173,7 +12173,7 @@ class OrganizationApi
      *
      * @param  string $org name of the organization (required)
      * @param  string $q keywords to search (optional)
-     * @param  bool $include_desc include search within team description (defaults to true) (optional)
+     * @param  bool $includeDesc include search within team description (defaults to true) (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
@@ -12181,9 +12181,9 @@ class OrganizationApi
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
-    public function teamSearchWithHttpInfo($org, $q = null, $include_desc = null, $page = null, $limit = null)
+    public function teamSearchWithHttpInfo($org, $q = null, $includeDesc = null, $page = null, $limit = null)
     {
-        $request = $this->teamSearchRequest($org, $q, $include_desc, $page, $limit);
+        $request = $this->teamSearchRequest($org, $q, $includeDesc, $page, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -12263,16 +12263,16 @@ class OrganizationApi
      *
      * @param  string $org name of the organization (required)
      * @param  string $q keywords to search (optional)
-     * @param  bool $include_desc include search within team description (defaults to true) (optional)
+     * @param  bool $includeDesc include search within team description (defaults to true) (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function teamSearchAsync($org, $q = null, $include_desc = null, $page = null, $limit = null)
+    public function teamSearchAsync($org, $q = null, $includeDesc = null, $page = null, $limit = null)
     {
-        return $this->teamSearchAsyncWithHttpInfo($org, $q, $include_desc, $page, $limit)
+        return $this->teamSearchAsyncWithHttpInfo($org, $q, $includeDesc, $page, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -12287,17 +12287,17 @@ class OrganizationApi
      *
      * @param  string $org name of the organization (required)
      * @param  string $q keywords to search (optional)
-     * @param  bool $include_desc include search within team description (defaults to true) (optional)
+     * @param  bool $includeDesc include search within team description (defaults to true) (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function teamSearchAsyncWithHttpInfo($org, $q = null, $include_desc = null, $page = null, $limit = null)
+    public function teamSearchAsyncWithHttpInfo($org, $q = null, $includeDesc = null, $page = null, $limit = null)
     {
         $returnType = '\Efsa\Client\Gitea\Model\InlineResponse200';
-        $request = $this->teamSearchRequest($org, $q, $include_desc, $page, $limit);
+        $request = $this->teamSearchRequest($org, $q, $includeDesc, $page, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -12337,14 +12337,14 @@ class OrganizationApi
      *
      * @param  string $org name of the organization (required)
      * @param  string $q keywords to search (optional)
-     * @param  bool $include_desc include search within team description (defaults to true) (optional)
+     * @param  bool $includeDesc include search within team description (defaults to true) (optional)
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function teamSearchRequest($org, $q = null, $include_desc = null, $page = null, $limit = null)
+    public function teamSearchRequest($org, $q = null, $includeDesc = null, $page = null, $limit = null)
     {
         // verify the required parameter 'org' is set
         if ($org === null || (is_array($org) && count($org) === 0)) {
@@ -12368,11 +12368,11 @@ class OrganizationApi
             $queryParams['q'] = $q;
         }
         // query params
-        if (is_array($include_desc)) {
-            $include_desc = ObjectSerializer::serializeCollection($include_desc, '', true);
+        if (is_array($includeDesc)) {
+            $includeDesc = ObjectSerializer::serializeCollection($includeDesc, '', true);
         }
-        if ($include_desc !== null) {
-            $queryParams['include_desc'] = $include_desc;
+        if ($includeDesc !== null) {
+            $queryParams['include_desc'] = $includeDesc;
         }
         // query params
         if (is_array($page)) {

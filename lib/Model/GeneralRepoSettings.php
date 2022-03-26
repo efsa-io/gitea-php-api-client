@@ -60,12 +60,12 @@ class GeneralRepoSettings implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'http_git_disabled' => 'bool',
-        'lfs_disabled' => 'bool',
-        'migrations_disabled' => 'bool',
-        'mirrors_disabled' => 'bool',
-        'stars_disabled' => 'bool',
-        'time_tracking_disabled' => 'bool'
+        'httpGitDisabled' => 'bool',
+        'lfsDisabled' => 'bool',
+        'migrationsDisabled' => 'bool',
+        'mirrorsDisabled' => 'bool',
+        'starsDisabled' => 'bool',
+        'timeTrackingDisabled' => 'bool'
     ];
 
     /**
@@ -76,12 +76,12 @@ class GeneralRepoSettings implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'http_git_disabled' => null,
-        'lfs_disabled' => null,
-        'migrations_disabled' => null,
-        'mirrors_disabled' => null,
-        'stars_disabled' => null,
-        'time_tracking_disabled' => null
+        'httpGitDisabled' => null,
+        'lfsDisabled' => null,
+        'migrationsDisabled' => null,
+        'mirrorsDisabled' => null,
+        'starsDisabled' => null,
+        'timeTrackingDisabled' => null
     ];
 
     /**
@@ -111,12 +111,12 @@ class GeneralRepoSettings implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'http_git_disabled' => 'http_git_disabled',
-        'lfs_disabled' => 'lfs_disabled',
-        'migrations_disabled' => 'migrations_disabled',
-        'mirrors_disabled' => 'mirrors_disabled',
-        'stars_disabled' => 'stars_disabled',
-        'time_tracking_disabled' => 'time_tracking_disabled'
+        'httpGitDisabled' => 'http_git_disabled',
+        'lfsDisabled' => 'lfs_disabled',
+        'migrationsDisabled' => 'migrations_disabled',
+        'mirrorsDisabled' => 'mirrors_disabled',
+        'starsDisabled' => 'stars_disabled',
+        'timeTrackingDisabled' => 'time_tracking_disabled'
     ];
 
     /**
@@ -125,12 +125,12 @@ class GeneralRepoSettings implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'http_git_disabled' => 'setHttpGitDisabled',
-        'lfs_disabled' => 'setLfsDisabled',
-        'migrations_disabled' => 'setMigrationsDisabled',
-        'mirrors_disabled' => 'setMirrorsDisabled',
-        'stars_disabled' => 'setStarsDisabled',
-        'time_tracking_disabled' => 'setTimeTrackingDisabled'
+        'httpGitDisabled' => 'setHttpGitDisabled',
+        'lfsDisabled' => 'setLfsDisabled',
+        'migrationsDisabled' => 'setMigrationsDisabled',
+        'mirrorsDisabled' => 'setMirrorsDisabled',
+        'starsDisabled' => 'setStarsDisabled',
+        'timeTrackingDisabled' => 'setTimeTrackingDisabled'
     ];
 
     /**
@@ -139,12 +139,12 @@ class GeneralRepoSettings implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'http_git_disabled' => 'getHttpGitDisabled',
-        'lfs_disabled' => 'getLfsDisabled',
-        'migrations_disabled' => 'getMigrationsDisabled',
-        'mirrors_disabled' => 'getMirrorsDisabled',
-        'stars_disabled' => 'getStarsDisabled',
-        'time_tracking_disabled' => 'getTimeTrackingDisabled'
+        'httpGitDisabled' => 'getHttpGitDisabled',
+        'lfsDisabled' => 'getLfsDisabled',
+        'migrationsDisabled' => 'getMigrationsDisabled',
+        'mirrorsDisabled' => 'getMirrorsDisabled',
+        'starsDisabled' => 'getStarsDisabled',
+        'timeTrackingDisabled' => 'getTimeTrackingDisabled'
     ];
 
     /**
@@ -204,12 +204,12 @@ class GeneralRepoSettings implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['http_git_disabled'] = $data['http_git_disabled'] ?? null;
-        $this->container['lfs_disabled'] = $data['lfs_disabled'] ?? null;
-        $this->container['migrations_disabled'] = $data['migrations_disabled'] ?? null;
-        $this->container['mirrors_disabled'] = $data['mirrors_disabled'] ?? null;
-        $this->container['stars_disabled'] = $data['stars_disabled'] ?? null;
-        $this->container['time_tracking_disabled'] = $data['time_tracking_disabled'] ?? null;
+        $this->container['httpGitDisabled'] = $data['httpGitDisabled'] ?? null;
+        $this->container['lfsDisabled'] = $data['lfsDisabled'] ?? null;
+        $this->container['migrationsDisabled'] = $data['migrationsDisabled'] ?? null;
+        $this->container['mirrorsDisabled'] = $data['mirrorsDisabled'] ?? null;
+        $this->container['starsDisabled'] = $data['starsDisabled'] ?? null;
+        $this->container['timeTrackingDisabled'] = $data['timeTrackingDisabled'] ?? null;
     }
 
     /**
@@ -237,145 +237,145 @@ class GeneralRepoSettings implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets http_git_disabled
+     * Gets httpGitDisabled
      *
      * @return bool|null
      */
     public function getHttpGitDisabled()
     {
-        return $this->container['http_git_disabled'];
+        return $this->container['httpGitDisabled'];
     }
 
     /**
-     * Sets http_git_disabled
+     * Sets httpGitDisabled
      *
-     * @param bool|null $http_git_disabled http_git_disabled
+     * @param bool|null $httpGitDisabled httpGitDisabled
      *
      * @return self
      */
-    public function setHttpGitDisabled($http_git_disabled)
+    public function setHttpGitDisabled($httpGitDisabled)
     {
-        $this->container['http_git_disabled'] = $http_git_disabled;
+        $this->container['httpGitDisabled'] = $httpGitDisabled;
 
         return $this;
     }
 
     /**
-     * Gets lfs_disabled
+     * Gets lfsDisabled
      *
      * @return bool|null
      */
     public function getLfsDisabled()
     {
-        return $this->container['lfs_disabled'];
+        return $this->container['lfsDisabled'];
     }
 
     /**
-     * Sets lfs_disabled
+     * Sets lfsDisabled
      *
-     * @param bool|null $lfs_disabled lfs_disabled
+     * @param bool|null $lfsDisabled lfsDisabled
      *
      * @return self
      */
-    public function setLfsDisabled($lfs_disabled)
+    public function setLfsDisabled($lfsDisabled)
     {
-        $this->container['lfs_disabled'] = $lfs_disabled;
+        $this->container['lfsDisabled'] = $lfsDisabled;
 
         return $this;
     }
 
     /**
-     * Gets migrations_disabled
+     * Gets migrationsDisabled
      *
      * @return bool|null
      */
     public function getMigrationsDisabled()
     {
-        return $this->container['migrations_disabled'];
+        return $this->container['migrationsDisabled'];
     }
 
     /**
-     * Sets migrations_disabled
+     * Sets migrationsDisabled
      *
-     * @param bool|null $migrations_disabled migrations_disabled
+     * @param bool|null $migrationsDisabled migrationsDisabled
      *
      * @return self
      */
-    public function setMigrationsDisabled($migrations_disabled)
+    public function setMigrationsDisabled($migrationsDisabled)
     {
-        $this->container['migrations_disabled'] = $migrations_disabled;
+        $this->container['migrationsDisabled'] = $migrationsDisabled;
 
         return $this;
     }
 
     /**
-     * Gets mirrors_disabled
+     * Gets mirrorsDisabled
      *
      * @return bool|null
      */
     public function getMirrorsDisabled()
     {
-        return $this->container['mirrors_disabled'];
+        return $this->container['mirrorsDisabled'];
     }
 
     /**
-     * Sets mirrors_disabled
+     * Sets mirrorsDisabled
      *
-     * @param bool|null $mirrors_disabled mirrors_disabled
+     * @param bool|null $mirrorsDisabled mirrorsDisabled
      *
      * @return self
      */
-    public function setMirrorsDisabled($mirrors_disabled)
+    public function setMirrorsDisabled($mirrorsDisabled)
     {
-        $this->container['mirrors_disabled'] = $mirrors_disabled;
+        $this->container['mirrorsDisabled'] = $mirrorsDisabled;
 
         return $this;
     }
 
     /**
-     * Gets stars_disabled
+     * Gets starsDisabled
      *
      * @return bool|null
      */
     public function getStarsDisabled()
     {
-        return $this->container['stars_disabled'];
+        return $this->container['starsDisabled'];
     }
 
     /**
-     * Sets stars_disabled
+     * Sets starsDisabled
      *
-     * @param bool|null $stars_disabled stars_disabled
+     * @param bool|null $starsDisabled starsDisabled
      *
      * @return self
      */
-    public function setStarsDisabled($stars_disabled)
+    public function setStarsDisabled($starsDisabled)
     {
-        $this->container['stars_disabled'] = $stars_disabled;
+        $this->container['starsDisabled'] = $starsDisabled;
 
         return $this;
     }
 
     /**
-     * Gets time_tracking_disabled
+     * Gets timeTrackingDisabled
      *
      * @return bool|null
      */
     public function getTimeTrackingDisabled()
     {
-        return $this->container['time_tracking_disabled'];
+        return $this->container['timeTrackingDisabled'];
     }
 
     /**
-     * Sets time_tracking_disabled
+     * Sets timeTrackingDisabled
      *
-     * @param bool|null $time_tracking_disabled time_tracking_disabled
+     * @param bool|null $timeTrackingDisabled timeTrackingDisabled
      *
      * @return self
      */
-    public function setTimeTrackingDisabled($time_tracking_disabled)
+    public function setTimeTrackingDisabled($timeTrackingDisabled)
     {
-        $this->container['time_tracking_disabled'] = $time_tracking_disabled;
+        $this->container['timeTrackingDisabled'] = $timeTrackingDisabled;
 
         return $this;
     }

@@ -60,8 +60,8 @@ class CreateBranchRepoOption implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'new_branch_name' => 'string',
-        'old_branch_name' => 'string'
+        'newBranchName' => 'string',
+        'oldBranchName' => 'string'
     ];
 
     /**
@@ -72,8 +72,8 @@ class CreateBranchRepoOption implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'new_branch_name' => null,
-        'old_branch_name' => null
+        'newBranchName' => null,
+        'oldBranchName' => null
     ];
 
     /**
@@ -103,8 +103,8 @@ class CreateBranchRepoOption implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'new_branch_name' => 'new_branch_name',
-        'old_branch_name' => 'old_branch_name'
+        'newBranchName' => 'new_branch_name',
+        'oldBranchName' => 'old_branch_name'
     ];
 
     /**
@@ -113,8 +113,8 @@ class CreateBranchRepoOption implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'new_branch_name' => 'setNewBranchName',
-        'old_branch_name' => 'setOldBranchName'
+        'newBranchName' => 'setNewBranchName',
+        'oldBranchName' => 'setOldBranchName'
     ];
 
     /**
@@ -123,8 +123,8 @@ class CreateBranchRepoOption implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'new_branch_name' => 'getNewBranchName',
-        'old_branch_name' => 'getOldBranchName'
+        'newBranchName' => 'getNewBranchName',
+        'oldBranchName' => 'getOldBranchName'
     ];
 
     /**
@@ -184,8 +184,8 @@ class CreateBranchRepoOption implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['new_branch_name'] = $data['new_branch_name'] ?? null;
-        $this->container['old_branch_name'] = $data['old_branch_name'] ?? null;
+        $this->container['newBranchName'] = $data['newBranchName'] ?? null;
+        $this->container['oldBranchName'] = $data['oldBranchName'] ?? null;
     }
 
     /**
@@ -197,8 +197,8 @@ class CreateBranchRepoOption implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
-        if ($this->container['new_branch_name'] === null) {
-            $invalidProperties[] = "'new_branch_name' can't be null";
+        if ($this->container['newBranchName'] === null) {
+            $invalidProperties[] = "'newBranchName' can't be null";
         }
         return $invalidProperties;
     }
@@ -216,49 +216,49 @@ class CreateBranchRepoOption implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets new_branch_name
+     * Gets newBranchName
      *
      * @return string
      */
     public function getNewBranchName()
     {
-        return $this->container['new_branch_name'];
+        return $this->container['newBranchName'];
     }
 
     /**
-     * Sets new_branch_name
+     * Sets newBranchName
      *
-     * @param string $new_branch_name Name of the branch to create
+     * @param string $newBranchName Name of the branch to create
      *
      * @return self
      */
-    public function setNewBranchName($new_branch_name)
+    public function setNewBranchName($newBranchName)
     {
-        $this->container['new_branch_name'] = $new_branch_name;
+        $this->container['newBranchName'] = $newBranchName;
 
         return $this;
     }
 
     /**
-     * Gets old_branch_name
+     * Gets oldBranchName
      *
      * @return string|null
      */
     public function getOldBranchName()
     {
-        return $this->container['old_branch_name'];
+        return $this->container['oldBranchName'];
     }
 
     /**
-     * Sets old_branch_name
+     * Sets oldBranchName
      *
-     * @param string|null $old_branch_name Name of the old branch to create from
+     * @param string|null $oldBranchName Name of the old branch to create from
      *
      * @return self
      */
-    public function setOldBranchName($old_branch_name)
+    public function setOldBranchName($oldBranchName)
     {
-        $this->container['old_branch_name'] = $old_branch_name;
+        $this->container['oldBranchName'] = $oldBranchName;
 
         return $this;
     }

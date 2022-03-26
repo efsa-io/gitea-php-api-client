@@ -60,13 +60,13 @@ class CreateTeamOption implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'can_create_org_repo' => 'bool',
+        'canCreateOrgRepo' => 'bool',
         'description' => 'string',
-        'includes_all_repositories' => 'bool',
+        'includesAllRepositories' => 'bool',
         'name' => 'string',
         'permission' => 'string',
         'units' => 'string[]',
-        'units_map' => 'array<string,string>'
+        'unitsMap' => 'array<string,string>'
     ];
 
     /**
@@ -77,13 +77,13 @@ class CreateTeamOption implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'can_create_org_repo' => null,
+        'canCreateOrgRepo' => null,
         'description' => null,
-        'includes_all_repositories' => null,
+        'includesAllRepositories' => null,
         'name' => null,
         'permission' => null,
         'units' => null,
-        'units_map' => null
+        'unitsMap' => null
     ];
 
     /**
@@ -113,13 +113,13 @@ class CreateTeamOption implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'can_create_org_repo' => 'can_create_org_repo',
+        'canCreateOrgRepo' => 'can_create_org_repo',
         'description' => 'description',
-        'includes_all_repositories' => 'includes_all_repositories',
+        'includesAllRepositories' => 'includes_all_repositories',
         'name' => 'name',
         'permission' => 'permission',
         'units' => 'units',
-        'units_map' => 'units_map'
+        'unitsMap' => 'units_map'
     ];
 
     /**
@@ -128,13 +128,13 @@ class CreateTeamOption implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'can_create_org_repo' => 'setCanCreateOrgRepo',
+        'canCreateOrgRepo' => 'setCanCreateOrgRepo',
         'description' => 'setDescription',
-        'includes_all_repositories' => 'setIncludesAllRepositories',
+        'includesAllRepositories' => 'setIncludesAllRepositories',
         'name' => 'setName',
         'permission' => 'setPermission',
         'units' => 'setUnits',
-        'units_map' => 'setUnitsMap'
+        'unitsMap' => 'setUnitsMap'
     ];
 
     /**
@@ -143,13 +143,13 @@ class CreateTeamOption implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'can_create_org_repo' => 'getCanCreateOrgRepo',
+        'canCreateOrgRepo' => 'getCanCreateOrgRepo',
         'description' => 'getDescription',
-        'includes_all_repositories' => 'getIncludesAllRepositories',
+        'includesAllRepositories' => 'getIncludesAllRepositories',
         'name' => 'getName',
         'permission' => 'getPermission',
         'units' => 'getUnits',
-        'units_map' => 'getUnitsMap'
+        'unitsMap' => 'getUnitsMap'
     ];
 
     /**
@@ -226,13 +226,13 @@ class CreateTeamOption implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['can_create_org_repo'] = $data['can_create_org_repo'] ?? null;
+        $this->container['canCreateOrgRepo'] = $data['canCreateOrgRepo'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
-        $this->container['includes_all_repositories'] = $data['includes_all_repositories'] ?? null;
+        $this->container['includesAllRepositories'] = $data['includesAllRepositories'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['permission'] = $data['permission'] ?? null;
         $this->container['units'] = $data['units'] ?? null;
-        $this->container['units_map'] = $data['units_map'] ?? null;
+        $this->container['unitsMap'] = $data['unitsMap'] ?? null;
     }
 
     /**
@@ -272,25 +272,25 @@ class CreateTeamOption implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets can_create_org_repo
+     * Gets canCreateOrgRepo
      *
      * @return bool|null
      */
     public function getCanCreateOrgRepo()
     {
-        return $this->container['can_create_org_repo'];
+        return $this->container['canCreateOrgRepo'];
     }
 
     /**
-     * Sets can_create_org_repo
+     * Sets canCreateOrgRepo
      *
-     * @param bool|null $can_create_org_repo can_create_org_repo
+     * @param bool|null $canCreateOrgRepo canCreateOrgRepo
      *
      * @return self
      */
-    public function setCanCreateOrgRepo($can_create_org_repo)
+    public function setCanCreateOrgRepo($canCreateOrgRepo)
     {
-        $this->container['can_create_org_repo'] = $can_create_org_repo;
+        $this->container['canCreateOrgRepo'] = $canCreateOrgRepo;
 
         return $this;
     }
@@ -320,25 +320,25 @@ class CreateTeamOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets includes_all_repositories
+     * Gets includesAllRepositories
      *
      * @return bool|null
      */
     public function getIncludesAllRepositories()
     {
-        return $this->container['includes_all_repositories'];
+        return $this->container['includesAllRepositories'];
     }
 
     /**
-     * Sets includes_all_repositories
+     * Sets includesAllRepositories
      *
-     * @param bool|null $includes_all_repositories includes_all_repositories
+     * @param bool|null $includesAllRepositories includesAllRepositories
      *
      * @return self
      */
-    public function setIncludesAllRepositories($includes_all_repositories)
+    public function setIncludesAllRepositories($includesAllRepositories)
     {
-        $this->container['includes_all_repositories'] = $includes_all_repositories;
+        $this->container['includesAllRepositories'] = $includesAllRepositories;
 
         return $this;
     }
@@ -426,25 +426,25 @@ class CreateTeamOption implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets units_map
+     * Gets unitsMap
      *
      * @return array<string,string>|null
      */
     public function getUnitsMap()
     {
-        return $this->container['units_map'];
+        return $this->container['unitsMap'];
     }
 
     /**
-     * Sets units_map
+     * Sets unitsMap
      *
-     * @param array<string,string>|null $units_map units_map
+     * @param array<string,string>|null $unitsMap unitsMap
      *
      * @return self
      */
-    public function setUnitsMap($units_map)
+    public function setUnitsMap($unitsMap)
     {
-        $this->container['units_map'] = $units_map;
+        $this->container['unitsMap'] = $unitsMap;
 
         return $this;
     }

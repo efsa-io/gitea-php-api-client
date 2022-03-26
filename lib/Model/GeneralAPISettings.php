@@ -60,10 +60,10 @@ class GeneralAPISettings implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'default_git_trees_per_page' => 'int',
-        'default_max_blob_size' => 'int',
-        'default_paging_num' => 'int',
-        'max_response_items' => 'int'
+        'defaultGitTreesPerPage' => 'int',
+        'defaultMaxBlobSize' => 'int',
+        'defaultPagingNum' => 'int',
+        'maxResponseItems' => 'int'
     ];
 
     /**
@@ -74,10 +74,10 @@ class GeneralAPISettings implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'default_git_trees_per_page' => 'int64',
-        'default_max_blob_size' => 'int64',
-        'default_paging_num' => 'int64',
-        'max_response_items' => 'int64'
+        'defaultGitTreesPerPage' => 'int64',
+        'defaultMaxBlobSize' => 'int64',
+        'defaultPagingNum' => 'int64',
+        'maxResponseItems' => 'int64'
     ];
 
     /**
@@ -107,10 +107,10 @@ class GeneralAPISettings implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'default_git_trees_per_page' => 'default_git_trees_per_page',
-        'default_max_blob_size' => 'default_max_blob_size',
-        'default_paging_num' => 'default_paging_num',
-        'max_response_items' => 'max_response_items'
+        'defaultGitTreesPerPage' => 'default_git_trees_per_page',
+        'defaultMaxBlobSize' => 'default_max_blob_size',
+        'defaultPagingNum' => 'default_paging_num',
+        'maxResponseItems' => 'max_response_items'
     ];
 
     /**
@@ -119,10 +119,10 @@ class GeneralAPISettings implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'default_git_trees_per_page' => 'setDefaultGitTreesPerPage',
-        'default_max_blob_size' => 'setDefaultMaxBlobSize',
-        'default_paging_num' => 'setDefaultPagingNum',
-        'max_response_items' => 'setMaxResponseItems'
+        'defaultGitTreesPerPage' => 'setDefaultGitTreesPerPage',
+        'defaultMaxBlobSize' => 'setDefaultMaxBlobSize',
+        'defaultPagingNum' => 'setDefaultPagingNum',
+        'maxResponseItems' => 'setMaxResponseItems'
     ];
 
     /**
@@ -131,10 +131,10 @@ class GeneralAPISettings implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'default_git_trees_per_page' => 'getDefaultGitTreesPerPage',
-        'default_max_blob_size' => 'getDefaultMaxBlobSize',
-        'default_paging_num' => 'getDefaultPagingNum',
-        'max_response_items' => 'getMaxResponseItems'
+        'defaultGitTreesPerPage' => 'getDefaultGitTreesPerPage',
+        'defaultMaxBlobSize' => 'getDefaultMaxBlobSize',
+        'defaultPagingNum' => 'getDefaultPagingNum',
+        'maxResponseItems' => 'getMaxResponseItems'
     ];
 
     /**
@@ -194,10 +194,10 @@ class GeneralAPISettings implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['default_git_trees_per_page'] = $data['default_git_trees_per_page'] ?? null;
-        $this->container['default_max_blob_size'] = $data['default_max_blob_size'] ?? null;
-        $this->container['default_paging_num'] = $data['default_paging_num'] ?? null;
-        $this->container['max_response_items'] = $data['max_response_items'] ?? null;
+        $this->container['defaultGitTreesPerPage'] = $data['defaultGitTreesPerPage'] ?? null;
+        $this->container['defaultMaxBlobSize'] = $data['defaultMaxBlobSize'] ?? null;
+        $this->container['defaultPagingNum'] = $data['defaultPagingNum'] ?? null;
+        $this->container['maxResponseItems'] = $data['maxResponseItems'] ?? null;
     }
 
     /**
@@ -225,97 +225,97 @@ class GeneralAPISettings implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets default_git_trees_per_page
+     * Gets defaultGitTreesPerPage
      *
      * @return int|null
      */
     public function getDefaultGitTreesPerPage()
     {
-        return $this->container['default_git_trees_per_page'];
+        return $this->container['defaultGitTreesPerPage'];
     }
 
     /**
-     * Sets default_git_trees_per_page
+     * Sets defaultGitTreesPerPage
      *
-     * @param int|null $default_git_trees_per_page default_git_trees_per_page
+     * @param int|null $defaultGitTreesPerPage defaultGitTreesPerPage
      *
      * @return self
      */
-    public function setDefaultGitTreesPerPage($default_git_trees_per_page)
+    public function setDefaultGitTreesPerPage($defaultGitTreesPerPage)
     {
-        $this->container['default_git_trees_per_page'] = $default_git_trees_per_page;
+        $this->container['defaultGitTreesPerPage'] = $defaultGitTreesPerPage;
 
         return $this;
     }
 
     /**
-     * Gets default_max_blob_size
+     * Gets defaultMaxBlobSize
      *
      * @return int|null
      */
     public function getDefaultMaxBlobSize()
     {
-        return $this->container['default_max_blob_size'];
+        return $this->container['defaultMaxBlobSize'];
     }
 
     /**
-     * Sets default_max_blob_size
+     * Sets defaultMaxBlobSize
      *
-     * @param int|null $default_max_blob_size default_max_blob_size
+     * @param int|null $defaultMaxBlobSize defaultMaxBlobSize
      *
      * @return self
      */
-    public function setDefaultMaxBlobSize($default_max_blob_size)
+    public function setDefaultMaxBlobSize($defaultMaxBlobSize)
     {
-        $this->container['default_max_blob_size'] = $default_max_blob_size;
+        $this->container['defaultMaxBlobSize'] = $defaultMaxBlobSize;
 
         return $this;
     }
 
     /**
-     * Gets default_paging_num
+     * Gets defaultPagingNum
      *
      * @return int|null
      */
     public function getDefaultPagingNum()
     {
-        return $this->container['default_paging_num'];
+        return $this->container['defaultPagingNum'];
     }
 
     /**
-     * Sets default_paging_num
+     * Sets defaultPagingNum
      *
-     * @param int|null $default_paging_num default_paging_num
+     * @param int|null $defaultPagingNum defaultPagingNum
      *
      * @return self
      */
-    public function setDefaultPagingNum($default_paging_num)
+    public function setDefaultPagingNum($defaultPagingNum)
     {
-        $this->container['default_paging_num'] = $default_paging_num;
+        $this->container['defaultPagingNum'] = $defaultPagingNum;
 
         return $this;
     }
 
     /**
-     * Gets max_response_items
+     * Gets maxResponseItems
      *
      * @return int|null
      */
     public function getMaxResponseItems()
     {
-        return $this->container['max_response_items'];
+        return $this->container['maxResponseItems'];
     }
 
     /**
-     * Sets max_response_items
+     * Sets maxResponseItems
      *
-     * @param int|null $max_response_items max_response_items
+     * @param int|null $maxResponseItems maxResponseItems
      *
      * @return self
      */
-    public function setMaxResponseItems($max_response_items)
+    public function setMaxResponseItems($maxResponseItems)
     {
-        $this->container['max_response_items'] = $max_response_items;
+        $this->container['maxResponseItems'] = $maxResponseItems;
 
         return $this;
     }

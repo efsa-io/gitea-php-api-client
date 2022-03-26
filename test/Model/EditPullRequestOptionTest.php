@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description EditPullRequestOption options when modify pull request
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -116,7 +116,7 @@ class EditPullRequestOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "due_date"
+     * Test attribute "dueDate"
      */
     public function testPropertyDueDate()
     {
@@ -161,7 +161,7 @@ class EditPullRequestOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "unset_due_date"
+     * Test attribute "unsetDueDate"
      */
     public function testPropertyUnsetDueDate()
     {

@@ -60,9 +60,9 @@ class NotificationSubject implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'html_url' => 'string',
-        'latest_comment_html_url' => 'string',
-        'latest_comment_url' => 'string',
+        'htmlUrl' => 'string',
+        'latestCommentHtmlUrl' => 'string',
+        'latestCommentUrl' => 'string',
         'state' => 'string',
         'title' => 'string',
         'type' => 'string',
@@ -77,9 +77,9 @@ class NotificationSubject implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'html_url' => null,
-        'latest_comment_html_url' => null,
-        'latest_comment_url' => null,
+        'htmlUrl' => null,
+        'latestCommentHtmlUrl' => null,
+        'latestCommentUrl' => null,
         'state' => null,
         'title' => null,
         'type' => null,
@@ -113,9 +113,9 @@ class NotificationSubject implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'html_url' => 'html_url',
-        'latest_comment_html_url' => 'latest_comment_html_url',
-        'latest_comment_url' => 'latest_comment_url',
+        'htmlUrl' => 'html_url',
+        'latestCommentHtmlUrl' => 'latest_comment_html_url',
+        'latestCommentUrl' => 'latest_comment_url',
         'state' => 'state',
         'title' => 'title',
         'type' => 'type',
@@ -128,9 +128,9 @@ class NotificationSubject implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'html_url' => 'setHtmlUrl',
-        'latest_comment_html_url' => 'setLatestCommentHtmlUrl',
-        'latest_comment_url' => 'setLatestCommentUrl',
+        'htmlUrl' => 'setHtmlUrl',
+        'latestCommentHtmlUrl' => 'setLatestCommentHtmlUrl',
+        'latestCommentUrl' => 'setLatestCommentUrl',
         'state' => 'setState',
         'title' => 'setTitle',
         'type' => 'setType',
@@ -143,9 +143,9 @@ class NotificationSubject implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'html_url' => 'getHtmlUrl',
-        'latest_comment_html_url' => 'getLatestCommentHtmlUrl',
-        'latest_comment_url' => 'getLatestCommentUrl',
+        'htmlUrl' => 'getHtmlUrl',
+        'latestCommentHtmlUrl' => 'getLatestCommentHtmlUrl',
+        'latestCommentUrl' => 'getLatestCommentUrl',
         'state' => 'getState',
         'title' => 'getTitle',
         'type' => 'getType',
@@ -209,9 +209,9 @@ class NotificationSubject implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['html_url'] = $data['html_url'] ?? null;
-        $this->container['latest_comment_html_url'] = $data['latest_comment_html_url'] ?? null;
-        $this->container['latest_comment_url'] = $data['latest_comment_url'] ?? null;
+        $this->container['htmlUrl'] = $data['htmlUrl'] ?? null;
+        $this->container['latestCommentHtmlUrl'] = $data['latestCommentHtmlUrl'] ?? null;
+        $this->container['latestCommentUrl'] = $data['latestCommentUrl'] ?? null;
         $this->container['state'] = $data['state'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
         $this->container['type'] = $data['type'] ?? null;
@@ -243,73 +243,73 @@ class NotificationSubject implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets html_url
+     * Gets htmlUrl
      *
      * @return string|null
      */
     public function getHtmlUrl()
     {
-        return $this->container['html_url'];
+        return $this->container['htmlUrl'];
     }
 
     /**
-     * Sets html_url
+     * Sets htmlUrl
      *
-     * @param string|null $html_url html_url
+     * @param string|null $htmlUrl htmlUrl
      *
      * @return self
      */
-    public function setHtmlUrl($html_url)
+    public function setHtmlUrl($htmlUrl)
     {
-        $this->container['html_url'] = $html_url;
+        $this->container['htmlUrl'] = $htmlUrl;
 
         return $this;
     }
 
     /**
-     * Gets latest_comment_html_url
+     * Gets latestCommentHtmlUrl
      *
      * @return string|null
      */
     public function getLatestCommentHtmlUrl()
     {
-        return $this->container['latest_comment_html_url'];
+        return $this->container['latestCommentHtmlUrl'];
     }
 
     /**
-     * Sets latest_comment_html_url
+     * Sets latestCommentHtmlUrl
      *
-     * @param string|null $latest_comment_html_url latest_comment_html_url
+     * @param string|null $latestCommentHtmlUrl latestCommentHtmlUrl
      *
      * @return self
      */
-    public function setLatestCommentHtmlUrl($latest_comment_html_url)
+    public function setLatestCommentHtmlUrl($latestCommentHtmlUrl)
     {
-        $this->container['latest_comment_html_url'] = $latest_comment_html_url;
+        $this->container['latestCommentHtmlUrl'] = $latestCommentHtmlUrl;
 
         return $this;
     }
 
     /**
-     * Gets latest_comment_url
+     * Gets latestCommentUrl
      *
      * @return string|null
      */
     public function getLatestCommentUrl()
     {
-        return $this->container['latest_comment_url'];
+        return $this->container['latestCommentUrl'];
     }
 
     /**
-     * Sets latest_comment_url
+     * Sets latestCommentUrl
      *
-     * @param string|null $latest_comment_url latest_comment_url
+     * @param string|null $latestCommentUrl latestCommentUrl
      *
      * @return self
      */
-    public function setLatestCommentUrl($latest_comment_url)
+    public function setLatestCommentUrl($latestCommentUrl)
     {
-        $this->container['latest_comment_url'] = $latest_comment_url;
+        $this->container['latestCommentUrl'] = $latestCommentUrl;
 
         return $this;
     }

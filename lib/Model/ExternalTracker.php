@@ -60,9 +60,9 @@ class ExternalTracker implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'external_tracker_format' => 'string',
-        'external_tracker_style' => 'string',
-        'external_tracker_url' => 'string'
+        'externalTrackerFormat' => 'string',
+        'externalTrackerStyle' => 'string',
+        'externalTrackerUrl' => 'string'
     ];
 
     /**
@@ -73,9 +73,9 @@ class ExternalTracker implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'external_tracker_format' => null,
-        'external_tracker_style' => null,
-        'external_tracker_url' => null
+        'externalTrackerFormat' => null,
+        'externalTrackerStyle' => null,
+        'externalTrackerUrl' => null
     ];
 
     /**
@@ -105,9 +105,9 @@ class ExternalTracker implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'external_tracker_format' => 'external_tracker_format',
-        'external_tracker_style' => 'external_tracker_style',
-        'external_tracker_url' => 'external_tracker_url'
+        'externalTrackerFormat' => 'external_tracker_format',
+        'externalTrackerStyle' => 'external_tracker_style',
+        'externalTrackerUrl' => 'external_tracker_url'
     ];
 
     /**
@@ -116,9 +116,9 @@ class ExternalTracker implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'external_tracker_format' => 'setExternalTrackerFormat',
-        'external_tracker_style' => 'setExternalTrackerStyle',
-        'external_tracker_url' => 'setExternalTrackerUrl'
+        'externalTrackerFormat' => 'setExternalTrackerFormat',
+        'externalTrackerStyle' => 'setExternalTrackerStyle',
+        'externalTrackerUrl' => 'setExternalTrackerUrl'
     ];
 
     /**
@@ -127,9 +127,9 @@ class ExternalTracker implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'external_tracker_format' => 'getExternalTrackerFormat',
-        'external_tracker_style' => 'getExternalTrackerStyle',
-        'external_tracker_url' => 'getExternalTrackerUrl'
+        'externalTrackerFormat' => 'getExternalTrackerFormat',
+        'externalTrackerStyle' => 'getExternalTrackerStyle',
+        'externalTrackerUrl' => 'getExternalTrackerUrl'
     ];
 
     /**
@@ -189,9 +189,9 @@ class ExternalTracker implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['external_tracker_format'] = $data['external_tracker_format'] ?? null;
-        $this->container['external_tracker_style'] = $data['external_tracker_style'] ?? null;
-        $this->container['external_tracker_url'] = $data['external_tracker_url'] ?? null;
+        $this->container['externalTrackerFormat'] = $data['externalTrackerFormat'] ?? null;
+        $this->container['externalTrackerStyle'] = $data['externalTrackerStyle'] ?? null;
+        $this->container['externalTrackerUrl'] = $data['externalTrackerUrl'] ?? null;
     }
 
     /**
@@ -219,73 +219,73 @@ class ExternalTracker implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets external_tracker_format
+     * Gets externalTrackerFormat
      *
      * @return string|null
      */
     public function getExternalTrackerFormat()
     {
-        return $this->container['external_tracker_format'];
+        return $this->container['externalTrackerFormat'];
     }
 
     /**
-     * Sets external_tracker_format
+     * Sets externalTrackerFormat
      *
-     * @param string|null $external_tracker_format External Issue Tracker URL Format. Use the placeholders {user}, {repo} and {index} for the username, repository name and issue index.
+     * @param string|null $externalTrackerFormat External Issue Tracker URL Format. Use the placeholders {user}, {repo} and {index} for the username, repository name and issue index.
      *
      * @return self
      */
-    public function setExternalTrackerFormat($external_tracker_format)
+    public function setExternalTrackerFormat($externalTrackerFormat)
     {
-        $this->container['external_tracker_format'] = $external_tracker_format;
+        $this->container['externalTrackerFormat'] = $externalTrackerFormat;
 
         return $this;
     }
 
     /**
-     * Gets external_tracker_style
+     * Gets externalTrackerStyle
      *
      * @return string|null
      */
     public function getExternalTrackerStyle()
     {
-        return $this->container['external_tracker_style'];
+        return $this->container['externalTrackerStyle'];
     }
 
     /**
-     * Sets external_tracker_style
+     * Sets externalTrackerStyle
      *
-     * @param string|null $external_tracker_style External Issue Tracker Number Format, either `numeric` or `alphanumeric`
+     * @param string|null $externalTrackerStyle External Issue Tracker Number Format, either `numeric` or `alphanumeric`
      *
      * @return self
      */
-    public function setExternalTrackerStyle($external_tracker_style)
+    public function setExternalTrackerStyle($externalTrackerStyle)
     {
-        $this->container['external_tracker_style'] = $external_tracker_style;
+        $this->container['externalTrackerStyle'] = $externalTrackerStyle;
 
         return $this;
     }
 
     /**
-     * Gets external_tracker_url
+     * Gets externalTrackerUrl
      *
      * @return string|null
      */
     public function getExternalTrackerUrl()
     {
-        return $this->container['external_tracker_url'];
+        return $this->container['externalTrackerUrl'];
     }
 
     /**
-     * Sets external_tracker_url
+     * Sets externalTrackerUrl
      *
-     * @param string|null $external_tracker_url URL of external issue tracker.
+     * @param string|null $externalTrackerUrl URL of external issue tracker.
      *
      * @return self
      */
-    public function setExternalTrackerUrl($external_tracker_url)
+    public function setExternalTrackerUrl($externalTrackerUrl)
     {
-        $this->container['external_tracker_url'] = $external_tracker_url;
+        $this->container['externalTrackerUrl'] = $externalTrackerUrl;
 
         return $this;
     }

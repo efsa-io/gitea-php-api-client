@@ -60,23 +60,23 @@ class MigrateRepoOptions implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'auth_password' => 'string',
-        'auth_token' => 'string',
-        'auth_username' => 'string',
-        'clone_addr' => 'string',
+        'authPassword' => 'string',
+        'authToken' => 'string',
+        'authUsername' => 'string',
+        'cloneAddr' => 'string',
         'description' => 'string',
         'issues' => 'bool',
         'labels' => 'bool',
         'lfs' => 'bool',
-        'lfs_endpoint' => 'string',
+        'lfsEndpoint' => 'string',
         'milestones' => 'bool',
         'mirror' => 'bool',
-        'mirror_interval' => 'string',
+        'mirrorInterval' => 'string',
         'private' => 'bool',
-        'pull_requests' => 'bool',
+        'pullRequests' => 'bool',
         'releases' => 'bool',
-        'repo_name' => 'string',
-        'repo_owner' => 'string',
+        'repoName' => 'string',
+        'repoOwner' => 'string',
         'service' => 'string',
         'uid' => 'int',
         'wiki' => 'bool'
@@ -90,23 +90,23 @@ class MigrateRepoOptions implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'auth_password' => null,
-        'auth_token' => null,
-        'auth_username' => null,
-        'clone_addr' => null,
+        'authPassword' => null,
+        'authToken' => null,
+        'authUsername' => null,
+        'cloneAddr' => null,
         'description' => null,
         'issues' => null,
         'labels' => null,
         'lfs' => null,
-        'lfs_endpoint' => null,
+        'lfsEndpoint' => null,
         'milestones' => null,
         'mirror' => null,
-        'mirror_interval' => null,
+        'mirrorInterval' => null,
         'private' => null,
-        'pull_requests' => null,
+        'pullRequests' => null,
         'releases' => null,
-        'repo_name' => null,
-        'repo_owner' => null,
+        'repoName' => null,
+        'repoOwner' => null,
         'service' => null,
         'uid' => 'int64',
         'wiki' => null
@@ -139,23 +139,23 @@ class MigrateRepoOptions implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'auth_password' => 'auth_password',
-        'auth_token' => 'auth_token',
-        'auth_username' => 'auth_username',
-        'clone_addr' => 'clone_addr',
+        'authPassword' => 'auth_password',
+        'authToken' => 'auth_token',
+        'authUsername' => 'auth_username',
+        'cloneAddr' => 'clone_addr',
         'description' => 'description',
         'issues' => 'issues',
         'labels' => 'labels',
         'lfs' => 'lfs',
-        'lfs_endpoint' => 'lfs_endpoint',
+        'lfsEndpoint' => 'lfs_endpoint',
         'milestones' => 'milestones',
         'mirror' => 'mirror',
-        'mirror_interval' => 'mirror_interval',
+        'mirrorInterval' => 'mirror_interval',
         'private' => 'private',
-        'pull_requests' => 'pull_requests',
+        'pullRequests' => 'pull_requests',
         'releases' => 'releases',
-        'repo_name' => 'repo_name',
-        'repo_owner' => 'repo_owner',
+        'repoName' => 'repo_name',
+        'repoOwner' => 'repo_owner',
         'service' => 'service',
         'uid' => 'uid',
         'wiki' => 'wiki'
@@ -167,23 +167,23 @@ class MigrateRepoOptions implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'auth_password' => 'setAuthPassword',
-        'auth_token' => 'setAuthToken',
-        'auth_username' => 'setAuthUsername',
-        'clone_addr' => 'setCloneAddr',
+        'authPassword' => 'setAuthPassword',
+        'authToken' => 'setAuthToken',
+        'authUsername' => 'setAuthUsername',
+        'cloneAddr' => 'setCloneAddr',
         'description' => 'setDescription',
         'issues' => 'setIssues',
         'labels' => 'setLabels',
         'lfs' => 'setLfs',
-        'lfs_endpoint' => 'setLfsEndpoint',
+        'lfsEndpoint' => 'setLfsEndpoint',
         'milestones' => 'setMilestones',
         'mirror' => 'setMirror',
-        'mirror_interval' => 'setMirrorInterval',
+        'mirrorInterval' => 'setMirrorInterval',
         'private' => 'setPrivate',
-        'pull_requests' => 'setPullRequests',
+        'pullRequests' => 'setPullRequests',
         'releases' => 'setReleases',
-        'repo_name' => 'setRepoName',
-        'repo_owner' => 'setRepoOwner',
+        'repoName' => 'setRepoName',
+        'repoOwner' => 'setRepoOwner',
         'service' => 'setService',
         'uid' => 'setUid',
         'wiki' => 'setWiki'
@@ -195,23 +195,23 @@ class MigrateRepoOptions implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'auth_password' => 'getAuthPassword',
-        'auth_token' => 'getAuthToken',
-        'auth_username' => 'getAuthUsername',
-        'clone_addr' => 'getCloneAddr',
+        'authPassword' => 'getAuthPassword',
+        'authToken' => 'getAuthToken',
+        'authUsername' => 'getAuthUsername',
+        'cloneAddr' => 'getCloneAddr',
         'description' => 'getDescription',
         'issues' => 'getIssues',
         'labels' => 'getLabels',
         'lfs' => 'getLfs',
-        'lfs_endpoint' => 'getLfsEndpoint',
+        'lfsEndpoint' => 'getLfsEndpoint',
         'milestones' => 'getMilestones',
         'mirror' => 'getMirror',
-        'mirror_interval' => 'getMirrorInterval',
+        'mirrorInterval' => 'getMirrorInterval',
         'private' => 'getPrivate',
-        'pull_requests' => 'getPullRequests',
+        'pullRequests' => 'getPullRequests',
         'releases' => 'getReleases',
-        'repo_name' => 'getRepoName',
-        'repo_owner' => 'getRepoOwner',
+        'repoName' => 'getRepoName',
+        'repoOwner' => 'getRepoOwner',
         'service' => 'getService',
         'uid' => 'getUid',
         'wiki' => 'getWiki'
@@ -293,23 +293,23 @@ class MigrateRepoOptions implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['auth_password'] = $data['auth_password'] ?? null;
-        $this->container['auth_token'] = $data['auth_token'] ?? null;
-        $this->container['auth_username'] = $data['auth_username'] ?? null;
-        $this->container['clone_addr'] = $data['clone_addr'] ?? null;
+        $this->container['authPassword'] = $data['authPassword'] ?? null;
+        $this->container['authToken'] = $data['authToken'] ?? null;
+        $this->container['authUsername'] = $data['authUsername'] ?? null;
+        $this->container['cloneAddr'] = $data['cloneAddr'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
         $this->container['issues'] = $data['issues'] ?? null;
         $this->container['labels'] = $data['labels'] ?? null;
         $this->container['lfs'] = $data['lfs'] ?? null;
-        $this->container['lfs_endpoint'] = $data['lfs_endpoint'] ?? null;
+        $this->container['lfsEndpoint'] = $data['lfsEndpoint'] ?? null;
         $this->container['milestones'] = $data['milestones'] ?? null;
         $this->container['mirror'] = $data['mirror'] ?? null;
-        $this->container['mirror_interval'] = $data['mirror_interval'] ?? null;
+        $this->container['mirrorInterval'] = $data['mirrorInterval'] ?? null;
         $this->container['private'] = $data['private'] ?? null;
-        $this->container['pull_requests'] = $data['pull_requests'] ?? null;
+        $this->container['pullRequests'] = $data['pullRequests'] ?? null;
         $this->container['releases'] = $data['releases'] ?? null;
-        $this->container['repo_name'] = $data['repo_name'] ?? null;
-        $this->container['repo_owner'] = $data['repo_owner'] ?? null;
+        $this->container['repoName'] = $data['repoName'] ?? null;
+        $this->container['repoOwner'] = $data['repoOwner'] ?? null;
         $this->container['service'] = $data['service'] ?? null;
         $this->container['uid'] = $data['uid'] ?? null;
         $this->container['wiki'] = $data['wiki'] ?? null;
@@ -324,11 +324,11 @@ class MigrateRepoOptions implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $invalidProperties = [];
 
-        if ($this->container['clone_addr'] === null) {
-            $invalidProperties[] = "'clone_addr' can't be null";
+        if ($this->container['cloneAddr'] === null) {
+            $invalidProperties[] = "'cloneAddr' can't be null";
         }
-        if ($this->container['repo_name'] === null) {
-            $invalidProperties[] = "'repo_name' can't be null";
+        if ($this->container['repoName'] === null) {
+            $invalidProperties[] = "'repoName' can't be null";
         }
         $allowedValues = $this->getServiceAllowableValues();
         if (!is_null($this->container['service']) && !in_array($this->container['service'], $allowedValues, true)) {
@@ -355,97 +355,97 @@ class MigrateRepoOptions implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets auth_password
+     * Gets authPassword
      *
      * @return string|null
      */
     public function getAuthPassword()
     {
-        return $this->container['auth_password'];
+        return $this->container['authPassword'];
     }
 
     /**
-     * Sets auth_password
+     * Sets authPassword
      *
-     * @param string|null $auth_password auth_password
+     * @param string|null $authPassword authPassword
      *
      * @return self
      */
-    public function setAuthPassword($auth_password)
+    public function setAuthPassword($authPassword)
     {
-        $this->container['auth_password'] = $auth_password;
+        $this->container['authPassword'] = $authPassword;
 
         return $this;
     }
 
     /**
-     * Gets auth_token
+     * Gets authToken
      *
      * @return string|null
      */
     public function getAuthToken()
     {
-        return $this->container['auth_token'];
+        return $this->container['authToken'];
     }
 
     /**
-     * Sets auth_token
+     * Sets authToken
      *
-     * @param string|null $auth_token auth_token
+     * @param string|null $authToken authToken
      *
      * @return self
      */
-    public function setAuthToken($auth_token)
+    public function setAuthToken($authToken)
     {
-        $this->container['auth_token'] = $auth_token;
+        $this->container['authToken'] = $authToken;
 
         return $this;
     }
 
     /**
-     * Gets auth_username
+     * Gets authUsername
      *
      * @return string|null
      */
     public function getAuthUsername()
     {
-        return $this->container['auth_username'];
+        return $this->container['authUsername'];
     }
 
     /**
-     * Sets auth_username
+     * Sets authUsername
      *
-     * @param string|null $auth_username auth_username
+     * @param string|null $authUsername authUsername
      *
      * @return self
      */
-    public function setAuthUsername($auth_username)
+    public function setAuthUsername($authUsername)
     {
-        $this->container['auth_username'] = $auth_username;
+        $this->container['authUsername'] = $authUsername;
 
         return $this;
     }
 
     /**
-     * Gets clone_addr
+     * Gets cloneAddr
      *
      * @return string
      */
     public function getCloneAddr()
     {
-        return $this->container['clone_addr'];
+        return $this->container['cloneAddr'];
     }
 
     /**
-     * Sets clone_addr
+     * Sets cloneAddr
      *
-     * @param string $clone_addr clone_addr
+     * @param string $cloneAddr cloneAddr
      *
      * @return self
      */
-    public function setCloneAddr($clone_addr)
+    public function setCloneAddr($cloneAddr)
     {
-        $this->container['clone_addr'] = $clone_addr;
+        $this->container['cloneAddr'] = $cloneAddr;
 
         return $this;
     }
@@ -547,25 +547,25 @@ class MigrateRepoOptions implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets lfs_endpoint
+     * Gets lfsEndpoint
      *
      * @return string|null
      */
     public function getLfsEndpoint()
     {
-        return $this->container['lfs_endpoint'];
+        return $this->container['lfsEndpoint'];
     }
 
     /**
-     * Sets lfs_endpoint
+     * Sets lfsEndpoint
      *
-     * @param string|null $lfs_endpoint lfs_endpoint
+     * @param string|null $lfsEndpoint lfsEndpoint
      *
      * @return self
      */
-    public function setLfsEndpoint($lfs_endpoint)
+    public function setLfsEndpoint($lfsEndpoint)
     {
-        $this->container['lfs_endpoint'] = $lfs_endpoint;
+        $this->container['lfsEndpoint'] = $lfsEndpoint;
 
         return $this;
     }
@@ -619,25 +619,25 @@ class MigrateRepoOptions implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets mirror_interval
+     * Gets mirrorInterval
      *
      * @return string|null
      */
     public function getMirrorInterval()
     {
-        return $this->container['mirror_interval'];
+        return $this->container['mirrorInterval'];
     }
 
     /**
-     * Sets mirror_interval
+     * Sets mirrorInterval
      *
-     * @param string|null $mirror_interval mirror_interval
+     * @param string|null $mirrorInterval mirrorInterval
      *
      * @return self
      */
-    public function setMirrorInterval($mirror_interval)
+    public function setMirrorInterval($mirrorInterval)
     {
-        $this->container['mirror_interval'] = $mirror_interval;
+        $this->container['mirrorInterval'] = $mirrorInterval;
 
         return $this;
     }
@@ -667,25 +667,25 @@ class MigrateRepoOptions implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets pull_requests
+     * Gets pullRequests
      *
      * @return bool|null
      */
     public function getPullRequests()
     {
-        return $this->container['pull_requests'];
+        return $this->container['pullRequests'];
     }
 
     /**
-     * Sets pull_requests
+     * Sets pullRequests
      *
-     * @param bool|null $pull_requests pull_requests
+     * @param bool|null $pullRequests pullRequests
      *
      * @return self
      */
-    public function setPullRequests($pull_requests)
+    public function setPullRequests($pullRequests)
     {
-        $this->container['pull_requests'] = $pull_requests;
+        $this->container['pullRequests'] = $pullRequests;
 
         return $this;
     }
@@ -715,49 +715,49 @@ class MigrateRepoOptions implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets repo_name
+     * Gets repoName
      *
      * @return string
      */
     public function getRepoName()
     {
-        return $this->container['repo_name'];
+        return $this->container['repoName'];
     }
 
     /**
-     * Sets repo_name
+     * Sets repoName
      *
-     * @param string $repo_name repo_name
+     * @param string $repoName repoName
      *
      * @return self
      */
-    public function setRepoName($repo_name)
+    public function setRepoName($repoName)
     {
-        $this->container['repo_name'] = $repo_name;
+        $this->container['repoName'] = $repoName;
 
         return $this;
     }
 
     /**
-     * Gets repo_owner
+     * Gets repoOwner
      *
      * @return string|null
      */
     public function getRepoOwner()
     {
-        return $this->container['repo_owner'];
+        return $this->container['repoOwner'];
     }
 
     /**
-     * Sets repo_owner
+     * Sets repoOwner
      *
-     * @param string|null $repo_owner Name of User or Organisation who will own Repo after migration
+     * @param string|null $repoOwner Name of User or Organisation who will own Repo after migration
      *
      * @return self
      */
-    public function setRepoOwner($repo_owner)
+    public function setRepoOwner($repoOwner)
     {
-        $this->container['repo_owner'] = $repo_owner;
+        $this->container['repoOwner'] = $repoOwner;
 
         return $this;
     }

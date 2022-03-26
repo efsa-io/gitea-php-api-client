@@ -120,8 +120,8 @@ class NotificationApi
      * List users&#39;s notification threads
      *
      * @param  bool $all If true, show notifications marked as read. Default value is false (optional)
-     * @param  string[] $status_types Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned. (optional)
-     * @param  string[] $subject_type filter notifications by subject type (optional)
+     * @param  string[] $statusTypes Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned. (optional)
+     * @param  string[] $subjectType filter notifications by subject type (optional)
      * @param  \DateTime $since Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  int $page page number of results to return (1-based) (optional)
@@ -131,9 +131,9 @@ class NotificationApi
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\NotificationThread[]
      */
-    public function notifyGetList($all = null, $status_types = null, $subject_type = null, $since = null, $before = null, $page = null, $limit = null)
+    public function notifyGetList($all = null, $statusTypes = null, $subjectType = null, $since = null, $before = null, $page = null, $limit = null)
     {
-        list($response) = $this->notifyGetListWithHttpInfo($all, $status_types, $subject_type, $since, $before, $page, $limit);
+        list($response) = $this->notifyGetListWithHttpInfo($all, $statusTypes, $subjectType, $since, $before, $page, $limit);
         return $response;
     }
 
@@ -143,8 +143,8 @@ class NotificationApi
      * List users&#39;s notification threads
      *
      * @param  bool $all If true, show notifications marked as read. Default value is false (optional)
-     * @param  string[] $status_types Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned. (optional)
-     * @param  string[] $subject_type filter notifications by subject type (optional)
+     * @param  string[] $statusTypes Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned. (optional)
+     * @param  string[] $subjectType filter notifications by subject type (optional)
      * @param  \DateTime $since Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  int $page page number of results to return (1-based) (optional)
@@ -154,9 +154,9 @@ class NotificationApi
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\NotificationThread[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function notifyGetListWithHttpInfo($all = null, $status_types = null, $subject_type = null, $since = null, $before = null, $page = null, $limit = null)
+    public function notifyGetListWithHttpInfo($all = null, $statusTypes = null, $subjectType = null, $since = null, $before = null, $page = null, $limit = null)
     {
-        $request = $this->notifyGetListRequest($all, $status_types, $subject_type, $since, $before, $page, $limit);
+        $request = $this->notifyGetListRequest($all, $statusTypes, $subjectType, $since, $before, $page, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -235,8 +235,8 @@ class NotificationApi
      * List users&#39;s notification threads
      *
      * @param  bool $all If true, show notifications marked as read. Default value is false (optional)
-     * @param  string[] $status_types Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned. (optional)
-     * @param  string[] $subject_type filter notifications by subject type (optional)
+     * @param  string[] $statusTypes Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned. (optional)
+     * @param  string[] $subjectType filter notifications by subject type (optional)
      * @param  \DateTime $since Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  int $page page number of results to return (1-based) (optional)
@@ -245,9 +245,9 @@ class NotificationApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function notifyGetListAsync($all = null, $status_types = null, $subject_type = null, $since = null, $before = null, $page = null, $limit = null)
+    public function notifyGetListAsync($all = null, $statusTypes = null, $subjectType = null, $since = null, $before = null, $page = null, $limit = null)
     {
-        return $this->notifyGetListAsyncWithHttpInfo($all, $status_types, $subject_type, $since, $before, $page, $limit)
+        return $this->notifyGetListAsyncWithHttpInfo($all, $statusTypes, $subjectType, $since, $before, $page, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -261,8 +261,8 @@ class NotificationApi
      * List users&#39;s notification threads
      *
      * @param  bool $all If true, show notifications marked as read. Default value is false (optional)
-     * @param  string[] $status_types Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned. (optional)
-     * @param  string[] $subject_type filter notifications by subject type (optional)
+     * @param  string[] $statusTypes Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned. (optional)
+     * @param  string[] $subjectType filter notifications by subject type (optional)
      * @param  \DateTime $since Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  int $page page number of results to return (1-based) (optional)
@@ -271,10 +271,10 @@ class NotificationApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function notifyGetListAsyncWithHttpInfo($all = null, $status_types = null, $subject_type = null, $since = null, $before = null, $page = null, $limit = null)
+    public function notifyGetListAsyncWithHttpInfo($all = null, $statusTypes = null, $subjectType = null, $since = null, $before = null, $page = null, $limit = null)
     {
         $returnType = '\Efsa\Client\Gitea\Model\NotificationThread[]';
-        $request = $this->notifyGetListRequest($all, $status_types, $subject_type, $since, $before, $page, $limit);
+        $request = $this->notifyGetListRequest($all, $statusTypes, $subjectType, $since, $before, $page, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -313,8 +313,8 @@ class NotificationApi
      * Create request for operation 'notifyGetList'
      *
      * @param  bool $all If true, show notifications marked as read. Default value is false (optional)
-     * @param  string[] $status_types Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned. (optional)
-     * @param  string[] $subject_type filter notifications by subject type (optional)
+     * @param  string[] $statusTypes Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned. (optional)
+     * @param  string[] $subjectType filter notifications by subject type (optional)
      * @param  \DateTime $since Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  int $page page number of results to return (1-based) (optional)
@@ -323,7 +323,7 @@ class NotificationApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function notifyGetListRequest($all = null, $status_types = null, $subject_type = null, $since = null, $before = null, $page = null, $limit = null)
+    public function notifyGetListRequest($all = null, $statusTypes = null, $subjectType = null, $since = null, $before = null, $page = null, $limit = null)
     {
 
         $resourcePath = '/notifications';
@@ -341,25 +341,25 @@ class NotificationApi
             $queryParams['all'] = $all;
         }
         // query params
-        if ($status_types !== null) {
-            if('form' === 'form' && is_array($status_types)) {
-                foreach($status_types as $key => $value) {
+        if ($statusTypes !== null) {
+            if('form' === 'form' && is_array($statusTypes)) {
+                foreach($statusTypes as $key => $value) {
                     $queryParams[$key] = $value;
                 }
             }
             else {
-                $queryParams['status-types'] = $status_types;
+                $queryParams['status-types'] = $statusTypes;
             }
         }
         // query params
-        if ($subject_type !== null) {
-            if('form' === 'form' && is_array($subject_type)) {
-                foreach($subject_type as $key => $value) {
+        if ($subjectType !== null) {
+            if('form' === 'form' && is_array($subjectType)) {
+                foreach($subjectType as $key => $value) {
                     $queryParams[$key] = $value;
                 }
             }
             else {
-                $queryParams['subject-type'] = $subject_type;
+                $queryParams['subject-type'] = $subjectType;
             }
         }
         // query params
@@ -493,8 +493,8 @@ class NotificationApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  bool $all If true, show notifications marked as read. Default value is false (optional)
-     * @param  string[] $status_types Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned (optional)
-     * @param  string[] $subject_type filter notifications by subject type (optional)
+     * @param  string[] $statusTypes Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned (optional)
+     * @param  string[] $subjectType filter notifications by subject type (optional)
      * @param  \DateTime $since Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  int $page page number of results to return (1-based) (optional)
@@ -504,9 +504,9 @@ class NotificationApi
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\NotificationThread[]
      */
-    public function notifyGetRepoList($owner, $repo, $all = null, $status_types = null, $subject_type = null, $since = null, $before = null, $page = null, $limit = null)
+    public function notifyGetRepoList($owner, $repo, $all = null, $statusTypes = null, $subjectType = null, $since = null, $before = null, $page = null, $limit = null)
     {
-        list($response) = $this->notifyGetRepoListWithHttpInfo($owner, $repo, $all, $status_types, $subject_type, $since, $before, $page, $limit);
+        list($response) = $this->notifyGetRepoListWithHttpInfo($owner, $repo, $all, $statusTypes, $subjectType, $since, $before, $page, $limit);
         return $response;
     }
 
@@ -518,8 +518,8 @@ class NotificationApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  bool $all If true, show notifications marked as read. Default value is false (optional)
-     * @param  string[] $status_types Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned (optional)
-     * @param  string[] $subject_type filter notifications by subject type (optional)
+     * @param  string[] $statusTypes Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned (optional)
+     * @param  string[] $subjectType filter notifications by subject type (optional)
      * @param  \DateTime $since Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  int $page page number of results to return (1-based) (optional)
@@ -529,9 +529,9 @@ class NotificationApi
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\NotificationThread[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function notifyGetRepoListWithHttpInfo($owner, $repo, $all = null, $status_types = null, $subject_type = null, $since = null, $before = null, $page = null, $limit = null)
+    public function notifyGetRepoListWithHttpInfo($owner, $repo, $all = null, $statusTypes = null, $subjectType = null, $since = null, $before = null, $page = null, $limit = null)
     {
-        $request = $this->notifyGetRepoListRequest($owner, $repo, $all, $status_types, $subject_type, $since, $before, $page, $limit);
+        $request = $this->notifyGetRepoListRequest($owner, $repo, $all, $statusTypes, $subjectType, $since, $before, $page, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -612,8 +612,8 @@ class NotificationApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  bool $all If true, show notifications marked as read. Default value is false (optional)
-     * @param  string[] $status_types Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned (optional)
-     * @param  string[] $subject_type filter notifications by subject type (optional)
+     * @param  string[] $statusTypes Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned (optional)
+     * @param  string[] $subjectType filter notifications by subject type (optional)
      * @param  \DateTime $since Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  int $page page number of results to return (1-based) (optional)
@@ -622,9 +622,9 @@ class NotificationApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function notifyGetRepoListAsync($owner, $repo, $all = null, $status_types = null, $subject_type = null, $since = null, $before = null, $page = null, $limit = null)
+    public function notifyGetRepoListAsync($owner, $repo, $all = null, $statusTypes = null, $subjectType = null, $since = null, $before = null, $page = null, $limit = null)
     {
-        return $this->notifyGetRepoListAsyncWithHttpInfo($owner, $repo, $all, $status_types, $subject_type, $since, $before, $page, $limit)
+        return $this->notifyGetRepoListAsyncWithHttpInfo($owner, $repo, $all, $statusTypes, $subjectType, $since, $before, $page, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -640,8 +640,8 @@ class NotificationApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  bool $all If true, show notifications marked as read. Default value is false (optional)
-     * @param  string[] $status_types Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned (optional)
-     * @param  string[] $subject_type filter notifications by subject type (optional)
+     * @param  string[] $statusTypes Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned (optional)
+     * @param  string[] $subjectType filter notifications by subject type (optional)
      * @param  \DateTime $since Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  int $page page number of results to return (1-based) (optional)
@@ -650,10 +650,10 @@ class NotificationApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function notifyGetRepoListAsyncWithHttpInfo($owner, $repo, $all = null, $status_types = null, $subject_type = null, $since = null, $before = null, $page = null, $limit = null)
+    public function notifyGetRepoListAsyncWithHttpInfo($owner, $repo, $all = null, $statusTypes = null, $subjectType = null, $since = null, $before = null, $page = null, $limit = null)
     {
         $returnType = '\Efsa\Client\Gitea\Model\NotificationThread[]';
-        $request = $this->notifyGetRepoListRequest($owner, $repo, $all, $status_types, $subject_type, $since, $before, $page, $limit);
+        $request = $this->notifyGetRepoListRequest($owner, $repo, $all, $statusTypes, $subjectType, $since, $before, $page, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -694,8 +694,8 @@ class NotificationApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  bool $all If true, show notifications marked as read. Default value is false (optional)
-     * @param  string[] $status_types Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned (optional)
-     * @param  string[] $subject_type filter notifications by subject type (optional)
+     * @param  string[] $statusTypes Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned (optional)
+     * @param  string[] $subjectType filter notifications by subject type (optional)
      * @param  \DateTime $since Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  \DateTime $before Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
      * @param  int $page page number of results to return (1-based) (optional)
@@ -704,7 +704,7 @@ class NotificationApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function notifyGetRepoListRequest($owner, $repo, $all = null, $status_types = null, $subject_type = null, $since = null, $before = null, $page = null, $limit = null)
+    public function notifyGetRepoListRequest($owner, $repo, $all = null, $statusTypes = null, $subjectType = null, $since = null, $before = null, $page = null, $limit = null)
     {
         // verify the required parameter 'owner' is set
         if ($owner === null || (is_array($owner) && count($owner) === 0)) {
@@ -734,25 +734,25 @@ class NotificationApi
             $queryParams['all'] = $all;
         }
         // query params
-        if ($status_types !== null) {
-            if('form' === 'form' && is_array($status_types)) {
-                foreach($status_types as $key => $value) {
+        if ($statusTypes !== null) {
+            if('form' === 'form' && is_array($statusTypes)) {
+                foreach($statusTypes as $key => $value) {
                     $queryParams[$key] = $value;
                 }
             }
             else {
-                $queryParams['status-types'] = $status_types;
+                $queryParams['status-types'] = $statusTypes;
             }
         }
         // query params
-        if ($subject_type !== null) {
-            if('form' === 'form' && is_array($subject_type)) {
-                foreach($subject_type as $key => $value) {
+        if ($subjectType !== null) {
+            if('form' === 'form' && is_array($subjectType)) {
+                foreach($subjectType as $key => $value) {
                     $queryParams[$key] = $value;
                 }
             }
             else {
-                $queryParams['subject-type'] = $subject_type;
+                $queryParams['subject-type'] = $subjectType;
             }
         }
         // query params
@@ -1476,18 +1476,18 @@ class NotificationApi
      *
      * Mark notification threads as read, pinned or unread
      *
-     * @param  \DateTime $last_read_at Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
+     * @param  \DateTime $lastReadAt Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
      * @param  string $all If true, mark all notifications on this repo. Default value is false (optional)
-     * @param  string[] $status_types Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
-     * @param  string $to_status Status to mark notifications as, Defaults to read. (optional)
+     * @param  string[] $statusTypes Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
+     * @param  string $toStatus Status to mark notifications as, Defaults to read. (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\NotificationThread[]
      */
-    public function notifyReadList($last_read_at = null, $all = null, $status_types = null, $to_status = null)
+    public function notifyReadList($lastReadAt = null, $all = null, $statusTypes = null, $toStatus = null)
     {
-        list($response) = $this->notifyReadListWithHttpInfo($last_read_at, $all, $status_types, $to_status);
+        list($response) = $this->notifyReadListWithHttpInfo($lastReadAt, $all, $statusTypes, $toStatus);
         return $response;
     }
 
@@ -1496,18 +1496,18 @@ class NotificationApi
      *
      * Mark notification threads as read, pinned or unread
      *
-     * @param  \DateTime $last_read_at Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
+     * @param  \DateTime $lastReadAt Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
      * @param  string $all If true, mark all notifications on this repo. Default value is false (optional)
-     * @param  string[] $status_types Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
-     * @param  string $to_status Status to mark notifications as, Defaults to read. (optional)
+     * @param  string[] $statusTypes Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
+     * @param  string $toStatus Status to mark notifications as, Defaults to read. (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\NotificationThread[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function notifyReadListWithHttpInfo($last_read_at = null, $all = null, $status_types = null, $to_status = null)
+    public function notifyReadListWithHttpInfo($lastReadAt = null, $all = null, $statusTypes = null, $toStatus = null)
     {
-        $request = $this->notifyReadListRequest($last_read_at, $all, $status_types, $to_status);
+        $request = $this->notifyReadListRequest($lastReadAt, $all, $statusTypes, $toStatus);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1585,17 +1585,17 @@ class NotificationApi
      *
      * Mark notification threads as read, pinned or unread
      *
-     * @param  \DateTime $last_read_at Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
+     * @param  \DateTime $lastReadAt Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
      * @param  string $all If true, mark all notifications on this repo. Default value is false (optional)
-     * @param  string[] $status_types Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
-     * @param  string $to_status Status to mark notifications as, Defaults to read. (optional)
+     * @param  string[] $statusTypes Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
+     * @param  string $toStatus Status to mark notifications as, Defaults to read. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function notifyReadListAsync($last_read_at = null, $all = null, $status_types = null, $to_status = null)
+    public function notifyReadListAsync($lastReadAt = null, $all = null, $statusTypes = null, $toStatus = null)
     {
-        return $this->notifyReadListAsyncWithHttpInfo($last_read_at, $all, $status_types, $to_status)
+        return $this->notifyReadListAsyncWithHttpInfo($lastReadAt, $all, $statusTypes, $toStatus)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1608,18 +1608,18 @@ class NotificationApi
      *
      * Mark notification threads as read, pinned or unread
      *
-     * @param  \DateTime $last_read_at Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
+     * @param  \DateTime $lastReadAt Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
      * @param  string $all If true, mark all notifications on this repo. Default value is false (optional)
-     * @param  string[] $status_types Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
-     * @param  string $to_status Status to mark notifications as, Defaults to read. (optional)
+     * @param  string[] $statusTypes Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
+     * @param  string $toStatus Status to mark notifications as, Defaults to read. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function notifyReadListAsyncWithHttpInfo($last_read_at = null, $all = null, $status_types = null, $to_status = null)
+    public function notifyReadListAsyncWithHttpInfo($lastReadAt = null, $all = null, $statusTypes = null, $toStatus = null)
     {
         $returnType = '\Efsa\Client\Gitea\Model\NotificationThread[]';
-        $request = $this->notifyReadListRequest($last_read_at, $all, $status_types, $to_status);
+        $request = $this->notifyReadListRequest($lastReadAt, $all, $statusTypes, $toStatus);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1657,15 +1657,15 @@ class NotificationApi
     /**
      * Create request for operation 'notifyReadList'
      *
-     * @param  \DateTime $last_read_at Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
+     * @param  \DateTime $lastReadAt Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
      * @param  string $all If true, mark all notifications on this repo. Default value is false (optional)
-     * @param  string[] $status_types Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
-     * @param  string $to_status Status to mark notifications as, Defaults to read. (optional)
+     * @param  string[] $statusTypes Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
+     * @param  string $toStatus Status to mark notifications as, Defaults to read. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function notifyReadListRequest($last_read_at = null, $all = null, $status_types = null, $to_status = null)
+    public function notifyReadListRequest($lastReadAt = null, $all = null, $statusTypes = null, $toStatus = null)
     {
 
         $resourcePath = '/notifications';
@@ -1676,11 +1676,11 @@ class NotificationApi
         $multipart = false;
 
         // query params
-        if (is_array($last_read_at)) {
-            $last_read_at = ObjectSerializer::serializeCollection($last_read_at, '', true);
+        if (is_array($lastReadAt)) {
+            $lastReadAt = ObjectSerializer::serializeCollection($lastReadAt, '', true);
         }
-        if ($last_read_at !== null) {
-            $queryParams['last_read_at'] = $last_read_at;
+        if ($lastReadAt !== null) {
+            $queryParams['last_read_at'] = $lastReadAt;
         }
         // query params
         if (is_array($all)) {
@@ -1690,22 +1690,22 @@ class NotificationApi
             $queryParams['all'] = $all;
         }
         // query params
-        if ($status_types !== null) {
-            if('form' === 'form' && is_array($status_types)) {
-                foreach($status_types as $key => $value) {
+        if ($statusTypes !== null) {
+            if('form' === 'form' && is_array($statusTypes)) {
+                foreach($statusTypes as $key => $value) {
                     $queryParams[$key] = $value;
                 }
             }
             else {
-                $queryParams['status-types'] = $status_types;
+                $queryParams['status-types'] = $statusTypes;
             }
         }
         // query params
-        if (is_array($to_status)) {
-            $to_status = ObjectSerializer::serializeCollection($to_status, '', true);
+        if (is_array($toStatus)) {
+            $toStatus = ObjectSerializer::serializeCollection($toStatus, '', true);
         }
-        if ($to_status !== null) {
-            $queryParams['to-status'] = $to_status;
+        if ($toStatus !== null) {
+            $queryParams['to-status'] = $toStatus;
         }
 
 
@@ -1810,17 +1810,17 @@ class NotificationApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $all If true, mark all notifications on this repo. Default value is false (optional)
-     * @param  string[] $status_types Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
-     * @param  string $to_status Status to mark notifications as. Defaults to read. (optional)
-     * @param  \DateTime $last_read_at Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
+     * @param  string[] $statusTypes Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
+     * @param  string $toStatus Status to mark notifications as. Defaults to read. (optional)
+     * @param  \DateTime $lastReadAt Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\NotificationThread[]
      */
-    public function notifyReadRepoList($owner, $repo, $all = null, $status_types = null, $to_status = null, $last_read_at = null)
+    public function notifyReadRepoList($owner, $repo, $all = null, $statusTypes = null, $toStatus = null, $lastReadAt = null)
     {
-        list($response) = $this->notifyReadRepoListWithHttpInfo($owner, $repo, $all, $status_types, $to_status, $last_read_at);
+        list($response) = $this->notifyReadRepoListWithHttpInfo($owner, $repo, $all, $statusTypes, $toStatus, $lastReadAt);
         return $response;
     }
 
@@ -1832,17 +1832,17 @@ class NotificationApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $all If true, mark all notifications on this repo. Default value is false (optional)
-     * @param  string[] $status_types Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
-     * @param  string $to_status Status to mark notifications as. Defaults to read. (optional)
-     * @param  \DateTime $last_read_at Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
+     * @param  string[] $statusTypes Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
+     * @param  string $toStatus Status to mark notifications as. Defaults to read. (optional)
+     * @param  \DateTime $lastReadAt Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\NotificationThread[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function notifyReadRepoListWithHttpInfo($owner, $repo, $all = null, $status_types = null, $to_status = null, $last_read_at = null)
+    public function notifyReadRepoListWithHttpInfo($owner, $repo, $all = null, $statusTypes = null, $toStatus = null, $lastReadAt = null)
     {
-        $request = $this->notifyReadRepoListRequest($owner, $repo, $all, $status_types, $to_status, $last_read_at);
+        $request = $this->notifyReadRepoListRequest($owner, $repo, $all, $statusTypes, $toStatus, $lastReadAt);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1923,16 +1923,16 @@ class NotificationApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $all If true, mark all notifications on this repo. Default value is false (optional)
-     * @param  string[] $status_types Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
-     * @param  string $to_status Status to mark notifications as. Defaults to read. (optional)
-     * @param  \DateTime $last_read_at Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
+     * @param  string[] $statusTypes Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
+     * @param  string $toStatus Status to mark notifications as. Defaults to read. (optional)
+     * @param  \DateTime $lastReadAt Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function notifyReadRepoListAsync($owner, $repo, $all = null, $status_types = null, $to_status = null, $last_read_at = null)
+    public function notifyReadRepoListAsync($owner, $repo, $all = null, $statusTypes = null, $toStatus = null, $lastReadAt = null)
     {
-        return $this->notifyReadRepoListAsyncWithHttpInfo($owner, $repo, $all, $status_types, $to_status, $last_read_at)
+        return $this->notifyReadRepoListAsyncWithHttpInfo($owner, $repo, $all, $statusTypes, $toStatus, $lastReadAt)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1948,17 +1948,17 @@ class NotificationApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $all If true, mark all notifications on this repo. Default value is false (optional)
-     * @param  string[] $status_types Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
-     * @param  string $to_status Status to mark notifications as. Defaults to read. (optional)
-     * @param  \DateTime $last_read_at Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
+     * @param  string[] $statusTypes Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
+     * @param  string $toStatus Status to mark notifications as. Defaults to read. (optional)
+     * @param  \DateTime $lastReadAt Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function notifyReadRepoListAsyncWithHttpInfo($owner, $repo, $all = null, $status_types = null, $to_status = null, $last_read_at = null)
+    public function notifyReadRepoListAsyncWithHttpInfo($owner, $repo, $all = null, $statusTypes = null, $toStatus = null, $lastReadAt = null)
     {
         $returnType = '\Efsa\Client\Gitea\Model\NotificationThread[]';
-        $request = $this->notifyReadRepoListRequest($owner, $repo, $all, $status_types, $to_status, $last_read_at);
+        $request = $this->notifyReadRepoListRequest($owner, $repo, $all, $statusTypes, $toStatus, $lastReadAt);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1999,14 +1999,14 @@ class NotificationApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $all If true, mark all notifications on this repo. Default value is false (optional)
-     * @param  string[] $status_types Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
-     * @param  string $to_status Status to mark notifications as. Defaults to read. (optional)
-     * @param  \DateTime $last_read_at Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
+     * @param  string[] $statusTypes Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
+     * @param  string $toStatus Status to mark notifications as. Defaults to read. (optional)
+     * @param  \DateTime $lastReadAt Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function notifyReadRepoListRequest($owner, $repo, $all = null, $status_types = null, $to_status = null, $last_read_at = null)
+    public function notifyReadRepoListRequest($owner, $repo, $all = null, $statusTypes = null, $toStatus = null, $lastReadAt = null)
     {
         // verify the required parameter 'owner' is set
         if ($owner === null || (is_array($owner) && count($owner) === 0)) {
@@ -2036,29 +2036,29 @@ class NotificationApi
             $queryParams['all'] = $all;
         }
         // query params
-        if ($status_types !== null) {
-            if('form' === 'form' && is_array($status_types)) {
-                foreach($status_types as $key => $value) {
+        if ($statusTypes !== null) {
+            if('form' === 'form' && is_array($statusTypes)) {
+                foreach($statusTypes as $key => $value) {
                     $queryParams[$key] = $value;
                 }
             }
             else {
-                $queryParams['status-types'] = $status_types;
+                $queryParams['status-types'] = $statusTypes;
             }
         }
         // query params
-        if (is_array($to_status)) {
-            $to_status = ObjectSerializer::serializeCollection($to_status, '', true);
+        if (is_array($toStatus)) {
+            $toStatus = ObjectSerializer::serializeCollection($toStatus, '', true);
         }
-        if ($to_status !== null) {
-            $queryParams['to-status'] = $to_status;
+        if ($toStatus !== null) {
+            $queryParams['to-status'] = $toStatus;
         }
         // query params
-        if (is_array($last_read_at)) {
-            $last_read_at = ObjectSerializer::serializeCollection($last_read_at, '', true);
+        if (is_array($lastReadAt)) {
+            $lastReadAt = ObjectSerializer::serializeCollection($lastReadAt, '', true);
         }
-        if ($last_read_at !== null) {
-            $queryParams['last_read_at'] = $last_read_at;
+        if ($lastReadAt !== null) {
+            $queryParams['last_read_at'] = $lastReadAt;
         }
 
 
@@ -2177,15 +2177,15 @@ class NotificationApi
      * Mark notification thread as read by ID
      *
      * @param  string $id id of notification thread (required)
-     * @param  string $to_status Status to mark notifications as (optional, default to 'read')
+     * @param  string $toStatus Status to mark notifications as (optional, default to 'read')
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\NotificationThread
      */
-    public function notifyReadThread($id, $to_status = 'read')
+    public function notifyReadThread($id, $toStatus = 'read')
     {
-        list($response) = $this->notifyReadThreadWithHttpInfo($id, $to_status);
+        list($response) = $this->notifyReadThreadWithHttpInfo($id, $toStatus);
         return $response;
     }
 
@@ -2195,15 +2195,15 @@ class NotificationApi
      * Mark notification thread as read by ID
      *
      * @param  string $id id of notification thread (required)
-     * @param  string $to_status Status to mark notifications as (optional, default to 'read')
+     * @param  string $toStatus Status to mark notifications as (optional, default to 'read')
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\NotificationThread, HTTP status code, HTTP response headers (array of strings)
      */
-    public function notifyReadThreadWithHttpInfo($id, $to_status = 'read')
+    public function notifyReadThreadWithHttpInfo($id, $toStatus = 'read')
     {
-        $request = $this->notifyReadThreadRequest($id, $to_status);
+        $request = $this->notifyReadThreadRequest($id, $toStatus);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2282,14 +2282,14 @@ class NotificationApi
      * Mark notification thread as read by ID
      *
      * @param  string $id id of notification thread (required)
-     * @param  string $to_status Status to mark notifications as (optional, default to 'read')
+     * @param  string $toStatus Status to mark notifications as (optional, default to 'read')
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function notifyReadThreadAsync($id, $to_status = 'read')
+    public function notifyReadThreadAsync($id, $toStatus = 'read')
     {
-        return $this->notifyReadThreadAsyncWithHttpInfo($id, $to_status)
+        return $this->notifyReadThreadAsyncWithHttpInfo($id, $toStatus)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2303,15 +2303,15 @@ class NotificationApi
      * Mark notification thread as read by ID
      *
      * @param  string $id id of notification thread (required)
-     * @param  string $to_status Status to mark notifications as (optional, default to 'read')
+     * @param  string $toStatus Status to mark notifications as (optional, default to 'read')
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function notifyReadThreadAsyncWithHttpInfo($id, $to_status = 'read')
+    public function notifyReadThreadAsyncWithHttpInfo($id, $toStatus = 'read')
     {
         $returnType = '\Efsa\Client\Gitea\Model\NotificationThread';
-        $request = $this->notifyReadThreadRequest($id, $to_status);
+        $request = $this->notifyReadThreadRequest($id, $toStatus);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2350,12 +2350,12 @@ class NotificationApi
      * Create request for operation 'notifyReadThread'
      *
      * @param  string $id id of notification thread (required)
-     * @param  string $to_status Status to mark notifications as (optional, default to 'read')
+     * @param  string $toStatus Status to mark notifications as (optional, default to 'read')
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function notifyReadThreadRequest($id, $to_status = 'read')
+    public function notifyReadThreadRequest($id, $toStatus = 'read')
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
@@ -2372,11 +2372,11 @@ class NotificationApi
         $multipart = false;
 
         // query params
-        if (is_array($to_status)) {
-            $to_status = ObjectSerializer::serializeCollection($to_status, '', true);
+        if (is_array($toStatus)) {
+            $toStatus = ObjectSerializer::serializeCollection($toStatus, '', true);
         }
-        if ($to_status !== null) {
-            $queryParams['to-status'] = $to_status;
+        if ($toStatus !== null) {
+            $queryParams['to-status'] = $toStatus;
         }
 
 

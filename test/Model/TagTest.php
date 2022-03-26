@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Tag represents a repository tag
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -116,7 +116,7 @@ class TagTest extends TestCase
     }
 
     /**
-     * Test attribute "tarball_url"
+     * Test attribute "tarballUrl"
      */
     public function testPropertyTarballUrl()
     {
@@ -125,7 +125,7 @@ class TagTest extends TestCase
     }
 
     /**
-     * Test attribute "zipball_url"
+     * Test attribute "zipballUrl"
      */
     public function testPropertyZipballUrl()
     {

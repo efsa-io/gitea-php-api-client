@@ -2116,15 +2116,15 @@ class UserApi
      * Create an access token
      *
      * @param  string $username username of user (required)
-     * @param  \Efsa\Client\Gitea\Model\CreateAccessTokenOption $user_create_token user_create_token (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateAccessTokenOption $userCreateToken userCreateToken (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Efsa\Client\Gitea\Model\AccessToken
      */
-    public function userCreateToken($username, $user_create_token = null)
+    public function userCreateToken($username, $userCreateToken = null)
     {
-        list($response) = $this->userCreateTokenWithHttpInfo($username, $user_create_token);
+        list($response) = $this->userCreateTokenWithHttpInfo($username, $userCreateToken);
         return $response;
     }
 
@@ -2134,15 +2134,15 @@ class UserApi
      * Create an access token
      *
      * @param  string $username username of user (required)
-     * @param  \Efsa\Client\Gitea\Model\CreateAccessTokenOption $user_create_token (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateAccessTokenOption $userCreateToken (optional)
      *
      * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Efsa\Client\Gitea\Model\AccessToken, HTTP status code, HTTP response headers (array of strings)
      */
-    public function userCreateTokenWithHttpInfo($username, $user_create_token = null)
+    public function userCreateTokenWithHttpInfo($username, $userCreateToken = null)
     {
-        $request = $this->userCreateTokenRequest($username, $user_create_token);
+        $request = $this->userCreateTokenRequest($username, $userCreateToken);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2221,14 +2221,14 @@ class UserApi
      * Create an access token
      *
      * @param  string $username username of user (required)
-     * @param  \Efsa\Client\Gitea\Model\CreateAccessTokenOption $user_create_token (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateAccessTokenOption $userCreateToken (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function userCreateTokenAsync($username, $user_create_token = null)
+    public function userCreateTokenAsync($username, $userCreateToken = null)
     {
-        return $this->userCreateTokenAsyncWithHttpInfo($username, $user_create_token)
+        return $this->userCreateTokenAsyncWithHttpInfo($username, $userCreateToken)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2242,15 +2242,15 @@ class UserApi
      * Create an access token
      *
      * @param  string $username username of user (required)
-     * @param  \Efsa\Client\Gitea\Model\CreateAccessTokenOption $user_create_token (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateAccessTokenOption $userCreateToken (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function userCreateTokenAsyncWithHttpInfo($username, $user_create_token = null)
+    public function userCreateTokenAsyncWithHttpInfo($username, $userCreateToken = null)
     {
         $returnType = '\Efsa\Client\Gitea\Model\AccessToken';
-        $request = $this->userCreateTokenRequest($username, $user_create_token);
+        $request = $this->userCreateTokenRequest($username, $userCreateToken);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2289,12 +2289,12 @@ class UserApi
      * Create request for operation 'userCreateToken'
      *
      * @param  string $username username of user (required)
-     * @param  \Efsa\Client\Gitea\Model\CreateAccessTokenOption $user_create_token (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateAccessTokenOption $userCreateToken (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function userCreateTokenRequest($username, $user_create_token = null)
+    public function userCreateTokenRequest($username, $userCreateToken = null)
     {
         // verify the required parameter 'username' is set
         if ($username === null || (is_array($username) && count($username) === 0)) {
@@ -2334,11 +2334,11 @@ class UserApi
         }
 
         // for model (json/xml)
-        if (isset($user_create_token)) {
+        if (isset($userCreateToken)) {
             if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($user_create_token));
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($userCreateToken));
             } else {
-                $httpBody = $user_create_token;
+                $httpBody = $userCreateToken;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

@@ -60,8 +60,8 @@ class NodeInfoUsage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'local_comments' => 'int',
-        'local_posts' => 'int',
+        'localComments' => 'int',
+        'localPosts' => 'int',
         'users' => '\Efsa\Client\Gitea\Model\NodeInfoUsageUsers'
     ];
 
@@ -73,8 +73,8 @@ class NodeInfoUsage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'local_comments' => 'int64',
-        'local_posts' => 'int64',
+        'localComments' => 'int64',
+        'localPosts' => 'int64',
         'users' => null
     ];
 
@@ -105,8 +105,8 @@ class NodeInfoUsage implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'local_comments' => 'localComments',
-        'local_posts' => 'localPosts',
+        'localComments' => 'localComments',
+        'localPosts' => 'localPosts',
         'users' => 'users'
     ];
 
@@ -116,8 +116,8 @@ class NodeInfoUsage implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'local_comments' => 'setLocalComments',
-        'local_posts' => 'setLocalPosts',
+        'localComments' => 'setLocalComments',
+        'localPosts' => 'setLocalPosts',
         'users' => 'setUsers'
     ];
 
@@ -127,8 +127,8 @@ class NodeInfoUsage implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'local_comments' => 'getLocalComments',
-        'local_posts' => 'getLocalPosts',
+        'localComments' => 'getLocalComments',
+        'localPosts' => 'getLocalPosts',
         'users' => 'getUsers'
     ];
 
@@ -189,8 +189,8 @@ class NodeInfoUsage implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['local_comments'] = $data['local_comments'] ?? null;
-        $this->container['local_posts'] = $data['local_posts'] ?? null;
+        $this->container['localComments'] = $data['localComments'] ?? null;
+        $this->container['localPosts'] = $data['localPosts'] ?? null;
         $this->container['users'] = $data['users'] ?? null;
     }
 
@@ -219,49 +219,49 @@ class NodeInfoUsage implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets local_comments
+     * Gets localComments
      *
      * @return int|null
      */
     public function getLocalComments()
     {
-        return $this->container['local_comments'];
+        return $this->container['localComments'];
     }
 
     /**
-     * Sets local_comments
+     * Sets localComments
      *
-     * @param int|null $local_comments local_comments
+     * @param int|null $localComments localComments
      *
      * @return self
      */
-    public function setLocalComments($local_comments)
+    public function setLocalComments($localComments)
     {
-        $this->container['local_comments'] = $local_comments;
+        $this->container['localComments'] = $localComments;
 
         return $this;
     }
 
     /**
-     * Gets local_posts
+     * Gets localPosts
      *
      * @return int|null
      */
     public function getLocalPosts()
     {
-        return $this->container['local_posts'];
+        return $this->container['localPosts'];
     }
 
     /**
-     * Sets local_posts
+     * Sets localPosts
      *
-     * @param int|null $local_posts local_posts
+     * @param int|null $localPosts localPosts
      *
      * @return self
      */
-    public function setLocalPosts($local_posts)
+    public function setLocalPosts($localPosts)
     {
-        $this->container['local_posts'] = $local_posts;
+        $this->container['localPosts'] = $localPosts;
 
         return $this;
     }

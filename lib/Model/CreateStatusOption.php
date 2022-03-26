@@ -63,7 +63,7 @@ class CreateStatusOption implements ModelInterface, ArrayAccess, \JsonSerializab
         'context' => 'string',
         'description' => 'string',
         'state' => 'string',
-        'target_url' => 'string'
+        'targetUrl' => 'string'
     ];
 
     /**
@@ -77,7 +77,7 @@ class CreateStatusOption implements ModelInterface, ArrayAccess, \JsonSerializab
         'context' => null,
         'description' => null,
         'state' => null,
-        'target_url' => null
+        'targetUrl' => null
     ];
 
     /**
@@ -110,7 +110,7 @@ class CreateStatusOption implements ModelInterface, ArrayAccess, \JsonSerializab
         'context' => 'context',
         'description' => 'description',
         'state' => 'state',
-        'target_url' => 'target_url'
+        'targetUrl' => 'target_url'
     ];
 
     /**
@@ -122,7 +122,7 @@ class CreateStatusOption implements ModelInterface, ArrayAccess, \JsonSerializab
         'context' => 'setContext',
         'description' => 'setDescription',
         'state' => 'setState',
-        'target_url' => 'setTargetUrl'
+        'targetUrl' => 'setTargetUrl'
     ];
 
     /**
@@ -134,7 +134,7 @@ class CreateStatusOption implements ModelInterface, ArrayAccess, \JsonSerializab
         'context' => 'getContext',
         'description' => 'getDescription',
         'state' => 'getState',
-        'target_url' => 'getTargetUrl'
+        'targetUrl' => 'getTargetUrl'
     ];
 
     /**
@@ -197,7 +197,7 @@ class CreateStatusOption implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->container['context'] = $data['context'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
         $this->container['state'] = $data['state'] ?? null;
-        $this->container['target_url'] = $data['target_url'] ?? null;
+        $this->container['targetUrl'] = $data['targetUrl'] ?? null;
     }
 
     /**
@@ -297,25 +297,25 @@ class CreateStatusOption implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets target_url
+     * Gets targetUrl
      *
      * @return string|null
      */
     public function getTargetUrl()
     {
-        return $this->container['target_url'];
+        return $this->container['targetUrl'];
     }
 
     /**
-     * Sets target_url
+     * Sets targetUrl
      *
-     * @param string|null $target_url target_url
+     * @param string|null $targetUrl targetUrl
      *
      * @return self
      */
-    public function setTargetUrl($target_url)
+    public function setTargetUrl($targetUrl)
     {
-        $this->container['target_url'] = $target_url;
+        $this->container['targetUrl'] = $targetUrl;
 
         return $this;
     }

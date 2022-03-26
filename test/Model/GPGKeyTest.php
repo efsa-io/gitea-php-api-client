@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description GPGKey a user GPG key to sign commit and tag in repository
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class GPGKeyTest extends TestCase
     }
 
     /**
-     * Test attribute "can_certify"
+     * Test attribute "canCertify"
      */
     public function testPropertyCanCertify()
     {
@@ -89,7 +89,7 @@ class GPGKeyTest extends TestCase
     }
 
     /**
-     * Test attribute "can_encrypt_comms"
+     * Test attribute "canEncryptComms"
      */
     public function testPropertyCanEncryptComms()
     {
@@ -98,7 +98,7 @@ class GPGKeyTest extends TestCase
     }
 
     /**
-     * Test attribute "can_encrypt_storage"
+     * Test attribute "canEncryptStorage"
      */
     public function testPropertyCanEncryptStorage()
     {
@@ -107,7 +107,7 @@ class GPGKeyTest extends TestCase
     }
 
     /**
-     * Test attribute "can_sign"
+     * Test attribute "canSign"
      */
     public function testPropertyCanSign()
     {
@@ -116,7 +116,7 @@ class GPGKeyTest extends TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "createdAt"
      */
     public function testPropertyCreatedAt()
     {
@@ -134,7 +134,7 @@ class GPGKeyTest extends TestCase
     }
 
     /**
-     * Test attribute "expires_at"
+     * Test attribute "expiresAt"
      */
     public function testPropertyExpiresAt()
     {
@@ -152,7 +152,7 @@ class GPGKeyTest extends TestCase
     }
 
     /**
-     * Test attribute "key_id"
+     * Test attribute "keyId"
      */
     public function testPropertyKeyId()
     {
@@ -161,7 +161,7 @@ class GPGKeyTest extends TestCase
     }
 
     /**
-     * Test attribute "primary_key_id"
+     * Test attribute "primaryKeyId"
      */
     public function testPropertyPrimaryKeyId()
     {
@@ -170,7 +170,7 @@ class GPGKeyTest extends TestCase
     }
 
     /**
-     * Test attribute "public_key"
+     * Test attribute "publicKey"
      */
     public function testPropertyPublicKey()
     {

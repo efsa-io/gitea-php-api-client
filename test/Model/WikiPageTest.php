@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description WikiPage a wiki page
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class WikiPageTest extends TestCase
     }
 
     /**
-     * Test attribute "commit_count"
+     * Test attribute "commitCount"
      */
     public function testPropertyCommitCount()
     {
@@ -89,7 +89,7 @@ class WikiPageTest extends TestCase
     }
 
     /**
-     * Test attribute "content_base64"
+     * Test attribute "contentBase64"
      */
     public function testPropertyContentBase64()
     {
@@ -107,7 +107,7 @@ class WikiPageTest extends TestCase
     }
 
     /**
-     * Test attribute "html_url"
+     * Test attribute "htmlUrl"
      */
     public function testPropertyHtmlUrl()
     {
@@ -116,7 +116,7 @@ class WikiPageTest extends TestCase
     }
 
     /**
-     * Test attribute "last_commit"
+     * Test attribute "lastCommit"
      */
     public function testPropertyLastCommit()
     {
@@ -134,7 +134,7 @@ class WikiPageTest extends TestCase
     }
 
     /**
-     * Test attribute "sub_url"
+     * Test attribute "subUrl"
      */
     public function testPropertySubUrl()
     {

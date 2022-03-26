@@ -64,7 +64,7 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
         'committer' => '\Efsa\Client\Gitea\Model\User',
         'created' => '\DateTime',
         'files' => '\Efsa\Client\Gitea\Model\CommitAffectedFiles[]',
-        'html_url' => 'string',
+        'htmlUrl' => 'string',
         'parents' => '\Efsa\Client\Gitea\Model\CommitMeta[]',
         'sha' => 'string',
         'url' => 'string'
@@ -83,7 +83,7 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
         'committer' => null,
         'created' => 'date-time',
         'files' => null,
-        'html_url' => null,
+        'htmlUrl' => null,
         'parents' => null,
         'sha' => null,
         'url' => null
@@ -121,7 +121,7 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
         'committer' => 'committer',
         'created' => 'created',
         'files' => 'files',
-        'html_url' => 'html_url',
+        'htmlUrl' => 'html_url',
         'parents' => 'parents',
         'sha' => 'sha',
         'url' => 'url'
@@ -138,7 +138,7 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
         'committer' => 'setCommitter',
         'created' => 'setCreated',
         'files' => 'setFiles',
-        'html_url' => 'setHtmlUrl',
+        'htmlUrl' => 'setHtmlUrl',
         'parents' => 'setParents',
         'sha' => 'setSha',
         'url' => 'setUrl'
@@ -155,7 +155,7 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
         'committer' => 'getCommitter',
         'created' => 'getCreated',
         'files' => 'getFiles',
-        'html_url' => 'getHtmlUrl',
+        'htmlUrl' => 'getHtmlUrl',
         'parents' => 'getParents',
         'sha' => 'getSha',
         'url' => 'getUrl'
@@ -223,7 +223,7 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['committer'] = $data['committer'] ?? null;
         $this->container['created'] = $data['created'] ?? null;
         $this->container['files'] = $data['files'] ?? null;
-        $this->container['html_url'] = $data['html_url'] ?? null;
+        $this->container['htmlUrl'] = $data['htmlUrl'] ?? null;
         $this->container['parents'] = $data['parents'] ?? null;
         $this->container['sha'] = $data['sha'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
@@ -374,25 +374,25 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets html_url
+     * Gets htmlUrl
      *
      * @return string|null
      */
     public function getHtmlUrl()
     {
-        return $this->container['html_url'];
+        return $this->container['htmlUrl'];
     }
 
     /**
-     * Sets html_url
+     * Sets htmlUrl
      *
-     * @param string|null $html_url html_url
+     * @param string|null $htmlUrl htmlUrl
      *
      * @return self
      */
-    public function setHtmlUrl($html_url)
+    public function setHtmlUrl($htmlUrl)
     {
-        $this->container['html_url'] = $html_url;
+        $this->container['htmlUrl'] = $htmlUrl;
 
         return $this;
     }

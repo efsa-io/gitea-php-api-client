@@ -61,12 +61,12 @@ class MergePullRequestOption implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'do' => 'string',
-        'merge_commit_id' => 'string',
-        'merge_message_field' => 'string',
-        'merge_title_field' => 'string',
-        'delete_branch_after_merge' => 'bool',
-        'force_merge' => 'bool',
-        'head_commit_id' => 'string'
+        'mergeCommitID' => 'string',
+        'mergeMessageField' => 'string',
+        'mergeTitleField' => 'string',
+        'deleteBranchAfterMerge' => 'bool',
+        'forceMerge' => 'bool',
+        'headCommitId' => 'string'
     ];
 
     /**
@@ -78,12 +78,12 @@ class MergePullRequestOption implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPIFormats = [
         'do' => null,
-        'merge_commit_id' => null,
-        'merge_message_field' => null,
-        'merge_title_field' => null,
-        'delete_branch_after_merge' => null,
-        'force_merge' => null,
-        'head_commit_id' => null
+        'mergeCommitID' => null,
+        'mergeMessageField' => null,
+        'mergeTitleField' => null,
+        'deleteBranchAfterMerge' => null,
+        'forceMerge' => null,
+        'headCommitId' => null
     ];
 
     /**
@@ -114,12 +114,12 @@ class MergePullRequestOption implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $attributeMap = [
         'do' => 'Do',
-        'merge_commit_id' => 'MergeCommitID',
-        'merge_message_field' => 'MergeMessageField',
-        'merge_title_field' => 'MergeTitleField',
-        'delete_branch_after_merge' => 'delete_branch_after_merge',
-        'force_merge' => 'force_merge',
-        'head_commit_id' => 'head_commit_id'
+        'mergeCommitID' => 'MergeCommitID',
+        'mergeMessageField' => 'MergeMessageField',
+        'mergeTitleField' => 'MergeTitleField',
+        'deleteBranchAfterMerge' => 'delete_branch_after_merge',
+        'forceMerge' => 'force_merge',
+        'headCommitId' => 'head_commit_id'
     ];
 
     /**
@@ -129,12 +129,12 @@ class MergePullRequestOption implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $setters = [
         'do' => 'setDo',
-        'merge_commit_id' => 'setMergeCommitId',
-        'merge_message_field' => 'setMergeMessageField',
-        'merge_title_field' => 'setMergeTitleField',
-        'delete_branch_after_merge' => 'setDeleteBranchAfterMerge',
-        'force_merge' => 'setForceMerge',
-        'head_commit_id' => 'setHeadCommitId'
+        'mergeCommitID' => 'setMergeCommitID',
+        'mergeMessageField' => 'setMergeMessageField',
+        'mergeTitleField' => 'setMergeTitleField',
+        'deleteBranchAfterMerge' => 'setDeleteBranchAfterMerge',
+        'forceMerge' => 'setForceMerge',
+        'headCommitId' => 'setHeadCommitId'
     ];
 
     /**
@@ -144,12 +144,12 @@ class MergePullRequestOption implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $getters = [
         'do' => 'getDo',
-        'merge_commit_id' => 'getMergeCommitId',
-        'merge_message_field' => 'getMergeMessageField',
-        'merge_title_field' => 'getMergeTitleField',
-        'delete_branch_after_merge' => 'getDeleteBranchAfterMerge',
-        'force_merge' => 'getForceMerge',
-        'head_commit_id' => 'getHeadCommitId'
+        'mergeCommitID' => 'getMergeCommitID',
+        'mergeMessageField' => 'getMergeMessageField',
+        'mergeTitleField' => 'getMergeTitleField',
+        'deleteBranchAfterMerge' => 'getDeleteBranchAfterMerge',
+        'forceMerge' => 'getForceMerge',
+        'headCommitId' => 'getHeadCommitId'
     ];
 
     /**
@@ -231,12 +231,12 @@ class MergePullRequestOption implements ModelInterface, ArrayAccess, \JsonSerial
     public function __construct(array $data = null)
     {
         $this->container['do'] = $data['do'] ?? null;
-        $this->container['merge_commit_id'] = $data['merge_commit_id'] ?? null;
-        $this->container['merge_message_field'] = $data['merge_message_field'] ?? null;
-        $this->container['merge_title_field'] = $data['merge_title_field'] ?? null;
-        $this->container['delete_branch_after_merge'] = $data['delete_branch_after_merge'] ?? null;
-        $this->container['force_merge'] = $data['force_merge'] ?? null;
-        $this->container['head_commit_id'] = $data['head_commit_id'] ?? null;
+        $this->container['mergeCommitID'] = $data['mergeCommitID'] ?? null;
+        $this->container['mergeMessageField'] = $data['mergeMessageField'] ?? null;
+        $this->container['mergeTitleField'] = $data['mergeTitleField'] ?? null;
+        $this->container['deleteBranchAfterMerge'] = $data['deleteBranchAfterMerge'] ?? null;
+        $this->container['forceMerge'] = $data['forceMerge'] ?? null;
+        $this->container['headCommitId'] = $data['headCommitId'] ?? null;
     }
 
     /**
@@ -310,145 +310,145 @@ class MergePullRequestOption implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets merge_commit_id
+     * Gets mergeCommitID
      *
      * @return string|null
      */
-    public function getMergeCommitId()
+    public function getMergeCommitID()
     {
-        return $this->container['merge_commit_id'];
+        return $this->container['mergeCommitID'];
     }
 
     /**
-     * Sets merge_commit_id
+     * Sets mergeCommitID
      *
-     * @param string|null $merge_commit_id merge_commit_id
+     * @param string|null $mergeCommitID mergeCommitID
      *
      * @return self
      */
-    public function setMergeCommitId($merge_commit_id)
+    public function setMergeCommitID($mergeCommitID)
     {
-        $this->container['merge_commit_id'] = $merge_commit_id;
+        $this->container['mergeCommitID'] = $mergeCommitID;
 
         return $this;
     }
 
     /**
-     * Gets merge_message_field
+     * Gets mergeMessageField
      *
      * @return string|null
      */
     public function getMergeMessageField()
     {
-        return $this->container['merge_message_field'];
+        return $this->container['mergeMessageField'];
     }
 
     /**
-     * Sets merge_message_field
+     * Sets mergeMessageField
      *
-     * @param string|null $merge_message_field merge_message_field
+     * @param string|null $mergeMessageField mergeMessageField
      *
      * @return self
      */
-    public function setMergeMessageField($merge_message_field)
+    public function setMergeMessageField($mergeMessageField)
     {
-        $this->container['merge_message_field'] = $merge_message_field;
+        $this->container['mergeMessageField'] = $mergeMessageField;
 
         return $this;
     }
 
     /**
-     * Gets merge_title_field
+     * Gets mergeTitleField
      *
      * @return string|null
      */
     public function getMergeTitleField()
     {
-        return $this->container['merge_title_field'];
+        return $this->container['mergeTitleField'];
     }
 
     /**
-     * Sets merge_title_field
+     * Sets mergeTitleField
      *
-     * @param string|null $merge_title_field merge_title_field
+     * @param string|null $mergeTitleField mergeTitleField
      *
      * @return self
      */
-    public function setMergeTitleField($merge_title_field)
+    public function setMergeTitleField($mergeTitleField)
     {
-        $this->container['merge_title_field'] = $merge_title_field;
+        $this->container['mergeTitleField'] = $mergeTitleField;
 
         return $this;
     }
 
     /**
-     * Gets delete_branch_after_merge
+     * Gets deleteBranchAfterMerge
      *
      * @return bool|null
      */
     public function getDeleteBranchAfterMerge()
     {
-        return $this->container['delete_branch_after_merge'];
+        return $this->container['deleteBranchAfterMerge'];
     }
 
     /**
-     * Sets delete_branch_after_merge
+     * Sets deleteBranchAfterMerge
      *
-     * @param bool|null $delete_branch_after_merge delete_branch_after_merge
+     * @param bool|null $deleteBranchAfterMerge deleteBranchAfterMerge
      *
      * @return self
      */
-    public function setDeleteBranchAfterMerge($delete_branch_after_merge)
+    public function setDeleteBranchAfterMerge($deleteBranchAfterMerge)
     {
-        $this->container['delete_branch_after_merge'] = $delete_branch_after_merge;
+        $this->container['deleteBranchAfterMerge'] = $deleteBranchAfterMerge;
 
         return $this;
     }
 
     /**
-     * Gets force_merge
+     * Gets forceMerge
      *
      * @return bool|null
      */
     public function getForceMerge()
     {
-        return $this->container['force_merge'];
+        return $this->container['forceMerge'];
     }
 
     /**
-     * Sets force_merge
+     * Sets forceMerge
      *
-     * @param bool|null $force_merge force_merge
+     * @param bool|null $forceMerge forceMerge
      *
      * @return self
      */
-    public function setForceMerge($force_merge)
+    public function setForceMerge($forceMerge)
     {
-        $this->container['force_merge'] = $force_merge;
+        $this->container['forceMerge'] = $forceMerge;
 
         return $this;
     }
 
     /**
-     * Gets head_commit_id
+     * Gets headCommitId
      *
      * @return string|null
      */
     public function getHeadCommitId()
     {
-        return $this->container['head_commit_id'];
+        return $this->container['headCommitId'];
     }
 
     /**
-     * Sets head_commit_id
+     * Sets headCommitId
      *
-     * @param string|null $head_commit_id head_commit_id
+     * @param string|null $headCommitId headCommitId
      *
      * @return self
      */
-    public function setHeadCommitId($head_commit_id)
+    public function setHeadCommitId($headCommitId)
     {
-        $this->container['head_commit_id'] = $head_commit_id;
+        $this->container['headCommitId'] = $headCommitId;
 
         return $this;
     }

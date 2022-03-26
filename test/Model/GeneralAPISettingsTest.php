@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description GeneralAPISettings contains global api settings exposed by it
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class GeneralAPISettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "default_git_trees_per_page"
+     * Test attribute "defaultGitTreesPerPage"
      */
     public function testPropertyDefaultGitTreesPerPage()
     {
@@ -89,7 +89,7 @@ class GeneralAPISettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "default_max_blob_size"
+     * Test attribute "defaultMaxBlobSize"
      */
     public function testPropertyDefaultMaxBlobSize()
     {
@@ -98,7 +98,7 @@ class GeneralAPISettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "default_paging_num"
+     * Test attribute "defaultPagingNum"
      */
     public function testPropertyDefaultPagingNum()
     {
@@ -107,7 +107,7 @@ class GeneralAPISettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "max_response_items"
+     * Test attribute "maxResponseItems"
      */
     public function testPropertyMaxResponseItems()
     {

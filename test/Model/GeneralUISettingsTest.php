@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description GeneralUISettings contains global ui settings exposed by API
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class GeneralUISettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "allowed_reactions"
+     * Test attribute "allowedReactions"
      */
     public function testPropertyAllowedReactions()
     {
@@ -89,7 +89,7 @@ class GeneralUISettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "custom_emojis"
+     * Test attribute "customEmojis"
      */
     public function testPropertyCustomEmojis()
     {
@@ -98,7 +98,7 @@ class GeneralUISettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "default_theme"
+     * Test attribute "defaultTheme"
      */
     public function testPropertyDefaultTheme()
     {

@@ -16,7 +16,7 @@ Method | HTTP request | Description
 ## `notifyGetList()`
 
 ```php
-notifyGetList($all, $status_types, $subject_type, $since, $before, $page, $limit): \Efsa\Client\Gitea\Model\NotificationThread[]
+notifyGetList($all, $statusTypes, $subjectType, $since, $before, $page, $limit): \Efsa\Client\Gitea\Model\NotificationThread[]
 ```
 
 List users's notification threads
@@ -71,15 +71,15 @@ $apiInstance = new Efsa\Client\Gitea\Api\NotificationApi(
     $config
 );
 $all = True; // bool | If true, show notifications marked as read. Default value is false
-$status_types = array('status_types_example'); // string[] | Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread & pinned.
-$subject_type = array('subject_type_example'); // string[] | filter notifications by subject type
+$statusTypes = array('statusTypes_example'); // string[] | Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread & pinned.
+$subjectType = array('subjectType_example'); // string[] | filter notifications by subject type
 $since = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only show notifications updated after the given time. This is a timestamp in RFC 3339 format
 $before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only show notifications updated before the given time. This is a timestamp in RFC 3339 format
 $page = 56; // int | page number of results to return (1-based)
 $limit = 56; // int | page size of results
 
 try {
-    $result = $apiInstance->notifyGetList($all, $status_types, $subject_type, $since, $before, $page, $limit);
+    $result = $apiInstance->notifyGetList($all, $statusTypes, $subjectType, $since, $before, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificationApi->notifyGetList: ', $e->getMessage(), PHP_EOL;
@@ -91,8 +91,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **all** | **bool**| If true, show notifications marked as read. Default value is false | [optional]
- **status_types** | [**string[]**](../Model/string.md)| Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned. | [optional]
- **subject_type** | [**string[]**](../Model/string.md)| filter notifications by subject type | [optional]
+ **statusTypes** | [**string[]**](../Model/string.md)| Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned. | [optional]
+ **subjectType** | [**string[]**](../Model/string.md)| filter notifications by subject type | [optional]
  **since** | **\DateTime**| Only show notifications updated after the given time. This is a timestamp in RFC 3339 format | [optional]
  **before** | **\DateTime**| Only show notifications updated before the given time. This is a timestamp in RFC 3339 format | [optional]
  **page** | **int**| page number of results to return (1-based) | [optional]
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 ## `notifyGetRepoList()`
 
 ```php
-notifyGetRepoList($owner, $repo, $all, $status_types, $subject_type, $since, $before, $page, $limit): \Efsa\Client\Gitea\Model\NotificationThread[]
+notifyGetRepoList($owner, $repo, $all, $statusTypes, $subjectType, $since, $before, $page, $limit): \Efsa\Client\Gitea\Model\NotificationThread[]
 ```
 
 List users's notification threads on a specific repo
@@ -175,15 +175,15 @@ $apiInstance = new Efsa\Client\Gitea\Api\NotificationApi(
 $owner = 'owner_example'; // string | owner of the repo
 $repo = 'repo_example'; // string | name of the repo
 $all = True; // bool | If true, show notifications marked as read. Default value is false
-$status_types = array('status_types_example'); // string[] | Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread & pinned
-$subject_type = array('subject_type_example'); // string[] | filter notifications by subject type
+$statusTypes = array('statusTypes_example'); // string[] | Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread & pinned
+$subjectType = array('subjectType_example'); // string[] | filter notifications by subject type
 $since = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only show notifications updated after the given time. This is a timestamp in RFC 3339 format
 $before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only show notifications updated before the given time. This is a timestamp in RFC 3339 format
 $page = 56; // int | page number of results to return (1-based)
 $limit = 56; // int | page size of results
 
 try {
-    $result = $apiInstance->notifyGetRepoList($owner, $repo, $all, $status_types, $subject_type, $since, $before, $page, $limit);
+    $result = $apiInstance->notifyGetRepoList($owner, $repo, $all, $statusTypes, $subjectType, $since, $before, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificationApi->notifyGetRepoList: ', $e->getMessage(), PHP_EOL;
@@ -197,8 +197,8 @@ Name | Type | Description  | Notes
  **owner** | **string**| owner of the repo |
  **repo** | **string**| name of the repo |
  **all** | **bool**| If true, show notifications marked as read. Default value is false | [optional]
- **status_types** | [**string[]**](../Model/string.md)| Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned | [optional]
- **subject_type** | [**string[]**](../Model/string.md)| filter notifications by subject type | [optional]
+ **statusTypes** | [**string[]**](../Model/string.md)| Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned | [optional]
+ **subjectType** | [**string[]**](../Model/string.md)| filter notifications by subject type | [optional]
  **since** | **\DateTime**| Only show notifications updated after the given time. This is a timestamp in RFC 3339 format | [optional]
  **before** | **\DateTime**| Only show notifications updated before the given time. This is a timestamp in RFC 3339 format | [optional]
  **page** | **int**| page number of results to return (1-based) | [optional]
@@ -401,7 +401,7 @@ This endpoint does not need any parameter.
 ## `notifyReadList()`
 
 ```php
-notifyReadList($last_read_at, $all, $status_types, $to_status): \Efsa\Client\Gitea\Model\NotificationThread[]
+notifyReadList($lastReadAt, $all, $statusTypes, $toStatus): \Efsa\Client\Gitea\Model\NotificationThread[]
 ```
 
 Mark notification threads as read, pinned or unread
@@ -455,13 +455,13 @@ $apiInstance = new Efsa\Client\Gitea\Api\NotificationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$last_read_at = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Describes the last point that notifications were checked. Anything updated since this time will not be updated.
+$lastReadAt = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Describes the last point that notifications were checked. Anything updated since this time will not be updated.
 $all = 'all_example'; // string | If true, mark all notifications on this repo. Default value is false
-$status_types = array('status_types_example'); // string[] | Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread.
-$to_status = 'to_status_example'; // string | Status to mark notifications as, Defaults to read.
+$statusTypes = array('statusTypes_example'); // string[] | Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread.
+$toStatus = 'toStatus_example'; // string | Status to mark notifications as, Defaults to read.
 
 try {
-    $result = $apiInstance->notifyReadList($last_read_at, $all, $status_types, $to_status);
+    $result = $apiInstance->notifyReadList($lastReadAt, $all, $statusTypes, $toStatus);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificationApi->notifyReadList: ', $e->getMessage(), PHP_EOL;
@@ -472,10 +472,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **last_read_at** | **\DateTime**| Describes the last point that notifications were checked. Anything updated since this time will not be updated. | [optional]
+ **lastReadAt** | **\DateTime**| Describes the last point that notifications were checked. Anything updated since this time will not be updated. | [optional]
  **all** | **string**| If true, mark all notifications on this repo. Default value is false | [optional]
- **status_types** | [**string[]**](../Model/string.md)| Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. | [optional]
- **to_status** | **string**| Status to mark notifications as, Defaults to read. | [optional]
+ **statusTypes** | [**string[]**](../Model/string.md)| Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. | [optional]
+ **toStatus** | **string**| Status to mark notifications as, Defaults to read. | [optional]
 
 ### Return type
 
@@ -497,7 +497,7 @@ Name | Type | Description  | Notes
 ## `notifyReadRepoList()`
 
 ```php
-notifyReadRepoList($owner, $repo, $all, $status_types, $to_status, $last_read_at): \Efsa\Client\Gitea\Model\NotificationThread[]
+notifyReadRepoList($owner, $repo, $all, $statusTypes, $toStatus, $lastReadAt): \Efsa\Client\Gitea\Model\NotificationThread[]
 ```
 
 Mark notification threads as read, pinned or unread on a specific repo
@@ -554,12 +554,12 @@ $apiInstance = new Efsa\Client\Gitea\Api\NotificationApi(
 $owner = 'owner_example'; // string | owner of the repo
 $repo = 'repo_example'; // string | name of the repo
 $all = 'all_example'; // string | If true, mark all notifications on this repo. Default value is false
-$status_types = array('status_types_example'); // string[] | Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread.
-$to_status = 'to_status_example'; // string | Status to mark notifications as. Defaults to read.
-$last_read_at = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Describes the last point that notifications were checked. Anything updated since this time will not be updated.
+$statusTypes = array('statusTypes_example'); // string[] | Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread.
+$toStatus = 'toStatus_example'; // string | Status to mark notifications as. Defaults to read.
+$lastReadAt = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Describes the last point that notifications were checked. Anything updated since this time will not be updated.
 
 try {
-    $result = $apiInstance->notifyReadRepoList($owner, $repo, $all, $status_types, $to_status, $last_read_at);
+    $result = $apiInstance->notifyReadRepoList($owner, $repo, $all, $statusTypes, $toStatus, $lastReadAt);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificationApi->notifyReadRepoList: ', $e->getMessage(), PHP_EOL;
@@ -573,9 +573,9 @@ Name | Type | Description  | Notes
  **owner** | **string**| owner of the repo |
  **repo** | **string**| name of the repo |
  **all** | **string**| If true, mark all notifications on this repo. Default value is false | [optional]
- **status_types** | [**string[]**](../Model/string.md)| Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. | [optional]
- **to_status** | **string**| Status to mark notifications as. Defaults to read. | [optional]
- **last_read_at** | **\DateTime**| Describes the last point that notifications were checked. Anything updated since this time will not be updated. | [optional]
+ **statusTypes** | [**string[]**](../Model/string.md)| Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. | [optional]
+ **toStatus** | **string**| Status to mark notifications as. Defaults to read. | [optional]
+ **lastReadAt** | **\DateTime**| Describes the last point that notifications were checked. Anything updated since this time will not be updated. | [optional]
 
 ### Return type
 
@@ -597,7 +597,7 @@ Name | Type | Description  | Notes
 ## `notifyReadThread()`
 
 ```php
-notifyReadThread($id, $to_status): \Efsa\Client\Gitea\Model\NotificationThread
+notifyReadThread($id, $toStatus): \Efsa\Client\Gitea\Model\NotificationThread
 ```
 
 Mark notification thread as read by ID
@@ -652,10 +652,10 @@ $apiInstance = new Efsa\Client\Gitea\Api\NotificationApi(
     $config
 );
 $id = 'id_example'; // string | id of notification thread
-$to_status = 'read'; // string | Status to mark notifications as
+$toStatus = 'read'; // string | Status to mark notifications as
 
 try {
-    $result = $apiInstance->notifyReadThread($id, $to_status);
+    $result = $apiInstance->notifyReadThread($id, $toStatus);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificationApi->notifyReadThread: ', $e->getMessage(), PHP_EOL;
@@ -667,7 +667,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| id of notification thread |
- **to_status** | **string**| Status to mark notifications as | [optional] [default to &#39;read&#39;]
+ **toStatus** | **string**| Status to mark notifications as | [optional] [default to &#39;read&#39;]
 
 ### Return type
 

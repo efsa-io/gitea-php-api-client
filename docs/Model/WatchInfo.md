@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**created_at** | [**\DateTime**](\DateTime.md) |  | [optional]
+**createdAt** | [**\DateTime**](\DateTime.md) |  | [optional]
 **ignored** | **bool** |  | [optional]
 **reason** | **object** |  | [optional]
-**repository_url** | **string** |  | [optional]
+**repositoryUrl** | **string** |  | [optional]
 **subscribed** | **bool** |  | [optional]
 **url** | **string** |  | [optional]
 

@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Repository represents a repository
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "allow_merge_commits"
+     * Test attribute "allowMergeCommits"
      */
     public function testPropertyAllowMergeCommits()
     {
@@ -89,7 +89,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "allow_rebase"
+     * Test attribute "allowRebase"
      */
     public function testPropertyAllowRebase()
     {
@@ -98,7 +98,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "allow_rebase_explicit"
+     * Test attribute "allowRebaseExplicit"
      */
     public function testPropertyAllowRebaseExplicit()
     {
@@ -107,7 +107,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "allow_squash_merge"
+     * Test attribute "allowSquashMerge"
      */
     public function testPropertyAllowSquashMerge()
     {
@@ -125,7 +125,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "avatar_url"
+     * Test attribute "avatarUrl"
      */
     public function testPropertyAvatarUrl()
     {
@@ -134,7 +134,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "clone_url"
+     * Test attribute "cloneUrl"
      */
     public function testPropertyCloneUrl()
     {
@@ -143,7 +143,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "createdAt"
      */
     public function testPropertyCreatedAt()
     {
@@ -152,7 +152,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "default_branch"
+     * Test attribute "defaultBranch"
      */
     public function testPropertyDefaultBranch()
     {
@@ -161,7 +161,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "default_merge_style"
+     * Test attribute "defaultMergeStyle"
      */
     public function testPropertyDefaultMergeStyle()
     {
@@ -188,7 +188,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "external_tracker"
+     * Test attribute "externalTracker"
      */
     public function testPropertyExternalTracker()
     {
@@ -197,7 +197,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "external_wiki"
+     * Test attribute "externalWiki"
      */
     public function testPropertyExternalWiki()
     {
@@ -215,7 +215,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "forks_count"
+     * Test attribute "forksCount"
      */
     public function testPropertyForksCount()
     {
@@ -224,7 +224,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "full_name"
+     * Test attribute "fullName"
      */
     public function testPropertyFullName()
     {
@@ -233,7 +233,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "has_issues"
+     * Test attribute "hasIssues"
      */
     public function testPropertyHasIssues()
     {
@@ -242,7 +242,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "has_projects"
+     * Test attribute "hasProjects"
      */
     public function testPropertyHasProjects()
     {
@@ -251,7 +251,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "has_pull_requests"
+     * Test attribute "hasPullRequests"
      */
     public function testPropertyHasPullRequests()
     {
@@ -260,7 +260,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "has_wiki"
+     * Test attribute "hasWiki"
      */
     public function testPropertyHasWiki()
     {
@@ -269,7 +269,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "html_url"
+     * Test attribute "htmlUrl"
      */
     public function testPropertyHtmlUrl()
     {
@@ -287,7 +287,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "ignore_whitespace_conflicts"
+     * Test attribute "ignoreWhitespaceConflicts"
      */
     public function testPropertyIgnoreWhitespaceConflicts()
     {
@@ -305,7 +305,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "internal_tracker"
+     * Test attribute "internalTracker"
      */
     public function testPropertyInternalTracker()
     {
@@ -323,7 +323,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "languages_url"
+     * Test attribute "languagesUrl"
      */
     public function testPropertyLanguagesUrl()
     {
@@ -341,7 +341,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "mirror_interval"
+     * Test attribute "mirrorInterval"
      */
     public function testPropertyMirrorInterval()
     {
@@ -350,7 +350,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "mirror_updated"
+     * Test attribute "mirrorUpdated"
      */
     public function testPropertyMirrorUpdated()
     {
@@ -368,7 +368,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "open_issues_count"
+     * Test attribute "openIssuesCount"
      */
     public function testPropertyOpenIssuesCount()
     {
@@ -377,7 +377,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "open_pr_counter"
+     * Test attribute "openPrCounter"
      */
     public function testPropertyOpenPrCounter()
     {
@@ -386,7 +386,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "original_url"
+     * Test attribute "originalUrl"
      */
     public function testPropertyOriginalUrl()
     {
@@ -431,7 +431,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "release_counter"
+     * Test attribute "releaseCounter"
      */
     public function testPropertyReleaseCounter()
     {
@@ -440,7 +440,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "repo_transfer"
+     * Test attribute "repoTransfer"
      */
     public function testPropertyRepoTransfer()
     {
@@ -458,7 +458,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "ssh_url"
+     * Test attribute "sshUrl"
      */
     public function testPropertySshUrl()
     {
@@ -467,7 +467,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "stars_count"
+     * Test attribute "starsCount"
      */
     public function testPropertyStarsCount()
     {
@@ -485,7 +485,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "updated_at"
+     * Test attribute "updatedAt"
      */
     public function testPropertyUpdatedAt()
     {
@@ -494,7 +494,7 @@ class RepositoryTest extends TestCase
     }
 
     /**
-     * Test attribute "watchers_count"
+     * Test attribute "watchersCount"
      */
     public function testPropertyWatchersCount()
     {

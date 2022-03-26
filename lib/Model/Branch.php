@@ -61,14 +61,14 @@ class Branch implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'commit' => '\Efsa\Client\Gitea\Model\PayloadCommit',
-        'effective_branch_protection_name' => 'string',
-        'enable_status_check' => 'bool',
+        'effectiveBranchProtectionName' => 'string',
+        'enableStatusCheck' => 'bool',
         'name' => 'string',
         'protected' => 'bool',
-        'required_approvals' => 'int',
-        'status_check_contexts' => 'string[]',
-        'user_can_merge' => 'bool',
-        'user_can_push' => 'bool'
+        'requiredApprovals' => 'int',
+        'statusCheckContexts' => 'string[]',
+        'userCanMerge' => 'bool',
+        'userCanPush' => 'bool'
     ];
 
     /**
@@ -80,14 +80,14 @@ class Branch implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'commit' => null,
-        'effective_branch_protection_name' => null,
-        'enable_status_check' => null,
+        'effectiveBranchProtectionName' => null,
+        'enableStatusCheck' => null,
         'name' => null,
         'protected' => null,
-        'required_approvals' => 'int64',
-        'status_check_contexts' => null,
-        'user_can_merge' => null,
-        'user_can_push' => null
+        'requiredApprovals' => 'int64',
+        'statusCheckContexts' => null,
+        'userCanMerge' => null,
+        'userCanPush' => null
     ];
 
     /**
@@ -118,14 +118,14 @@ class Branch implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'commit' => 'commit',
-        'effective_branch_protection_name' => 'effective_branch_protection_name',
-        'enable_status_check' => 'enable_status_check',
+        'effectiveBranchProtectionName' => 'effective_branch_protection_name',
+        'enableStatusCheck' => 'enable_status_check',
         'name' => 'name',
         'protected' => 'protected',
-        'required_approvals' => 'required_approvals',
-        'status_check_contexts' => 'status_check_contexts',
-        'user_can_merge' => 'user_can_merge',
-        'user_can_push' => 'user_can_push'
+        'requiredApprovals' => 'required_approvals',
+        'statusCheckContexts' => 'status_check_contexts',
+        'userCanMerge' => 'user_can_merge',
+        'userCanPush' => 'user_can_push'
     ];
 
     /**
@@ -135,14 +135,14 @@ class Branch implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'commit' => 'setCommit',
-        'effective_branch_protection_name' => 'setEffectiveBranchProtectionName',
-        'enable_status_check' => 'setEnableStatusCheck',
+        'effectiveBranchProtectionName' => 'setEffectiveBranchProtectionName',
+        'enableStatusCheck' => 'setEnableStatusCheck',
         'name' => 'setName',
         'protected' => 'setProtected',
-        'required_approvals' => 'setRequiredApprovals',
-        'status_check_contexts' => 'setStatusCheckContexts',
-        'user_can_merge' => 'setUserCanMerge',
-        'user_can_push' => 'setUserCanPush'
+        'requiredApprovals' => 'setRequiredApprovals',
+        'statusCheckContexts' => 'setStatusCheckContexts',
+        'userCanMerge' => 'setUserCanMerge',
+        'userCanPush' => 'setUserCanPush'
     ];
 
     /**
@@ -152,14 +152,14 @@ class Branch implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'commit' => 'getCommit',
-        'effective_branch_protection_name' => 'getEffectiveBranchProtectionName',
-        'enable_status_check' => 'getEnableStatusCheck',
+        'effectiveBranchProtectionName' => 'getEffectiveBranchProtectionName',
+        'enableStatusCheck' => 'getEnableStatusCheck',
         'name' => 'getName',
         'protected' => 'getProtected',
-        'required_approvals' => 'getRequiredApprovals',
-        'status_check_contexts' => 'getStatusCheckContexts',
-        'user_can_merge' => 'getUserCanMerge',
-        'user_can_push' => 'getUserCanPush'
+        'requiredApprovals' => 'getRequiredApprovals',
+        'statusCheckContexts' => 'getStatusCheckContexts',
+        'userCanMerge' => 'getUserCanMerge',
+        'userCanPush' => 'getUserCanPush'
     ];
 
     /**
@@ -220,14 +220,14 @@ class Branch implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['commit'] = $data['commit'] ?? null;
-        $this->container['effective_branch_protection_name'] = $data['effective_branch_protection_name'] ?? null;
-        $this->container['enable_status_check'] = $data['enable_status_check'] ?? null;
+        $this->container['effectiveBranchProtectionName'] = $data['effectiveBranchProtectionName'] ?? null;
+        $this->container['enableStatusCheck'] = $data['enableStatusCheck'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['protected'] = $data['protected'] ?? null;
-        $this->container['required_approvals'] = $data['required_approvals'] ?? null;
-        $this->container['status_check_contexts'] = $data['status_check_contexts'] ?? null;
-        $this->container['user_can_merge'] = $data['user_can_merge'] ?? null;
-        $this->container['user_can_push'] = $data['user_can_push'] ?? null;
+        $this->container['requiredApprovals'] = $data['requiredApprovals'] ?? null;
+        $this->container['statusCheckContexts'] = $data['statusCheckContexts'] ?? null;
+        $this->container['userCanMerge'] = $data['userCanMerge'] ?? null;
+        $this->container['userCanPush'] = $data['userCanPush'] ?? null;
     }
 
     /**
@@ -279,49 +279,49 @@ class Branch implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets effective_branch_protection_name
+     * Gets effectiveBranchProtectionName
      *
      * @return string|null
      */
     public function getEffectiveBranchProtectionName()
     {
-        return $this->container['effective_branch_protection_name'];
+        return $this->container['effectiveBranchProtectionName'];
     }
 
     /**
-     * Sets effective_branch_protection_name
+     * Sets effectiveBranchProtectionName
      *
-     * @param string|null $effective_branch_protection_name effective_branch_protection_name
+     * @param string|null $effectiveBranchProtectionName effectiveBranchProtectionName
      *
      * @return self
      */
-    public function setEffectiveBranchProtectionName($effective_branch_protection_name)
+    public function setEffectiveBranchProtectionName($effectiveBranchProtectionName)
     {
-        $this->container['effective_branch_protection_name'] = $effective_branch_protection_name;
+        $this->container['effectiveBranchProtectionName'] = $effectiveBranchProtectionName;
 
         return $this;
     }
 
     /**
-     * Gets enable_status_check
+     * Gets enableStatusCheck
      *
      * @return bool|null
      */
     public function getEnableStatusCheck()
     {
-        return $this->container['enable_status_check'];
+        return $this->container['enableStatusCheck'];
     }
 
     /**
-     * Sets enable_status_check
+     * Sets enableStatusCheck
      *
-     * @param bool|null $enable_status_check enable_status_check
+     * @param bool|null $enableStatusCheck enableStatusCheck
      *
      * @return self
      */
-    public function setEnableStatusCheck($enable_status_check)
+    public function setEnableStatusCheck($enableStatusCheck)
     {
-        $this->container['enable_status_check'] = $enable_status_check;
+        $this->container['enableStatusCheck'] = $enableStatusCheck;
 
         return $this;
     }
@@ -375,97 +375,97 @@ class Branch implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets required_approvals
+     * Gets requiredApprovals
      *
      * @return int|null
      */
     public function getRequiredApprovals()
     {
-        return $this->container['required_approvals'];
+        return $this->container['requiredApprovals'];
     }
 
     /**
-     * Sets required_approvals
+     * Sets requiredApprovals
      *
-     * @param int|null $required_approvals required_approvals
+     * @param int|null $requiredApprovals requiredApprovals
      *
      * @return self
      */
-    public function setRequiredApprovals($required_approvals)
+    public function setRequiredApprovals($requiredApprovals)
     {
-        $this->container['required_approvals'] = $required_approvals;
+        $this->container['requiredApprovals'] = $requiredApprovals;
 
         return $this;
     }
 
     /**
-     * Gets status_check_contexts
+     * Gets statusCheckContexts
      *
      * @return string[]|null
      */
     public function getStatusCheckContexts()
     {
-        return $this->container['status_check_contexts'];
+        return $this->container['statusCheckContexts'];
     }
 
     /**
-     * Sets status_check_contexts
+     * Sets statusCheckContexts
      *
-     * @param string[]|null $status_check_contexts status_check_contexts
+     * @param string[]|null $statusCheckContexts statusCheckContexts
      *
      * @return self
      */
-    public function setStatusCheckContexts($status_check_contexts)
+    public function setStatusCheckContexts($statusCheckContexts)
     {
-        $this->container['status_check_contexts'] = $status_check_contexts;
+        $this->container['statusCheckContexts'] = $statusCheckContexts;
 
         return $this;
     }
 
     /**
-     * Gets user_can_merge
+     * Gets userCanMerge
      *
      * @return bool|null
      */
     public function getUserCanMerge()
     {
-        return $this->container['user_can_merge'];
+        return $this->container['userCanMerge'];
     }
 
     /**
-     * Sets user_can_merge
+     * Sets userCanMerge
      *
-     * @param bool|null $user_can_merge user_can_merge
+     * @param bool|null $userCanMerge userCanMerge
      *
      * @return self
      */
-    public function setUserCanMerge($user_can_merge)
+    public function setUserCanMerge($userCanMerge)
     {
-        $this->container['user_can_merge'] = $user_can_merge;
+        $this->container['userCanMerge'] = $userCanMerge;
 
         return $this;
     }
 
     /**
-     * Gets user_can_push
+     * Gets userCanPush
      *
      * @return bool|null
      */
     public function getUserCanPush()
     {
-        return $this->container['user_can_push'];
+        return $this->container['userCanPush'];
     }
 
     /**
-     * Sets user_can_push
+     * Sets userCanPush
      *
-     * @param bool|null $user_can_push user_can_push
+     * @param bool|null $userCanPush userCanPush
      *
      * @return self
      */
-    public function setUserCanPush($user_can_push)
+    public function setUserCanPush($userCanPush)
     {
-        $this->container['user_can_push'] = $user_can_push;
+        $this->container['userCanPush'] = $userCanPush;
 
         return $this;
     }

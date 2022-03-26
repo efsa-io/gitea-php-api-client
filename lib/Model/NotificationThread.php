@@ -65,7 +65,7 @@ class NotificationThread implements ModelInterface, ArrayAccess, \JsonSerializab
         'repository' => '\Efsa\Client\Gitea\Model\Repository',
         'subject' => '\Efsa\Client\Gitea\Model\NotificationSubject',
         'unread' => 'bool',
-        'updated_at' => '\DateTime',
+        'updatedAt' => '\DateTime',
         'url' => 'string'
     ];
 
@@ -82,7 +82,7 @@ class NotificationThread implements ModelInterface, ArrayAccess, \JsonSerializab
         'repository' => null,
         'subject' => null,
         'unread' => null,
-        'updated_at' => 'date-time',
+        'updatedAt' => 'date-time',
         'url' => null
     ];
 
@@ -118,7 +118,7 @@ class NotificationThread implements ModelInterface, ArrayAccess, \JsonSerializab
         'repository' => 'repository',
         'subject' => 'subject',
         'unread' => 'unread',
-        'updated_at' => 'updated_at',
+        'updatedAt' => 'updated_at',
         'url' => 'url'
     ];
 
@@ -133,7 +133,7 @@ class NotificationThread implements ModelInterface, ArrayAccess, \JsonSerializab
         'repository' => 'setRepository',
         'subject' => 'setSubject',
         'unread' => 'setUnread',
-        'updated_at' => 'setUpdatedAt',
+        'updatedAt' => 'setUpdatedAt',
         'url' => 'setUrl'
     ];
 
@@ -148,7 +148,7 @@ class NotificationThread implements ModelInterface, ArrayAccess, \JsonSerializab
         'repository' => 'getRepository',
         'subject' => 'getSubject',
         'unread' => 'getUnread',
-        'updated_at' => 'getUpdatedAt',
+        'updatedAt' => 'getUpdatedAt',
         'url' => 'getUrl'
     ];
 
@@ -214,7 +214,7 @@ class NotificationThread implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->container['repository'] = $data['repository'] ?? null;
         $this->container['subject'] = $data['subject'] ?? null;
         $this->container['unread'] = $data['unread'] ?? null;
-        $this->container['updated_at'] = $data['updated_at'] ?? null;
+        $this->container['updatedAt'] = $data['updatedAt'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
     }
 
@@ -363,25 +363,25 @@ class NotificationThread implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets updated_at
+     * Gets updatedAt
      *
      * @return \DateTime|null
      */
     public function getUpdatedAt()
     {
-        return $this->container['updated_at'];
+        return $this->container['updatedAt'];
     }
 
     /**
-     * Sets updated_at
+     * Sets updatedAt
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updatedAt updatedAt
      *
      * @return self
      */
-    public function setUpdatedAt($updated_at)
+    public function setUpdatedAt($updatedAt)
     {
-        $this->container['updated_at'] = $updated_at;
+        $this->container['updatedAt'] = $updatedAt;
 
         return $this;
     }

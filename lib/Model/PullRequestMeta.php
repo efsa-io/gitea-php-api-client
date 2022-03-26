@@ -61,7 +61,7 @@ class PullRequestMeta implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'merged' => 'bool',
-        'merged_at' => '\DateTime'
+        'mergedAt' => '\DateTime'
     ];
 
     /**
@@ -73,7 +73,7 @@ class PullRequestMeta implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'merged' => null,
-        'merged_at' => 'date-time'
+        'mergedAt' => 'date-time'
     ];
 
     /**
@@ -104,7 +104,7 @@ class PullRequestMeta implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'merged' => 'merged',
-        'merged_at' => 'merged_at'
+        'mergedAt' => 'merged_at'
     ];
 
     /**
@@ -114,7 +114,7 @@ class PullRequestMeta implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'merged' => 'setMerged',
-        'merged_at' => 'setMergedAt'
+        'mergedAt' => 'setMergedAt'
     ];
 
     /**
@@ -124,7 +124,7 @@ class PullRequestMeta implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'merged' => 'getMerged',
-        'merged_at' => 'getMergedAt'
+        'mergedAt' => 'getMergedAt'
     ];
 
     /**
@@ -185,7 +185,7 @@ class PullRequestMeta implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['merged'] = $data['merged'] ?? null;
-        $this->container['merged_at'] = $data['merged_at'] ?? null;
+        $this->container['mergedAt'] = $data['mergedAt'] ?? null;
     }
 
     /**
@@ -237,25 +237,25 @@ class PullRequestMeta implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets merged_at
+     * Gets mergedAt
      *
      * @return \DateTime|null
      */
     public function getMergedAt()
     {
-        return $this->container['merged_at'];
+        return $this->container['mergedAt'];
     }
 
     /**
-     * Sets merged_at
+     * Sets mergedAt
      *
-     * @param \DateTime|null $merged_at merged_at
+     * @param \DateTime|null $mergedAt mergedAt
      *
      * @return self
      */
-    public function setMergedAt($merged_at)
+    public function setMergedAt($mergedAt)
     {
-        $this->container['merged_at'] = $merged_at;
+        $this->container['mergedAt'] = $mergedAt;
 
         return $this;
     }

@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description ExternalTracker represents settings for external tracker
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class ExternalTrackerTest extends TestCase
     }
 
     /**
-     * Test attribute "external_tracker_format"
+     * Test attribute "externalTrackerFormat"
      */
     public function testPropertyExternalTrackerFormat()
     {
@@ -89,7 +89,7 @@ class ExternalTrackerTest extends TestCase
     }
 
     /**
-     * Test attribute "external_tracker_style"
+     * Test attribute "externalTrackerStyle"
      */
     public function testPropertyExternalTrackerStyle()
     {
@@ -98,7 +98,7 @@ class ExternalTrackerTest extends TestCase
     }
 
     /**
-     * Test attribute "external_tracker_url"
+     * Test attribute "externalTrackerUrl"
      */
     public function testPropertyExternalTrackerUrl()
     {

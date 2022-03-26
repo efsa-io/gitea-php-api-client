@@ -62,8 +62,8 @@ class TopicResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'created' => '\DateTime',
         'id' => 'int',
-        'repo_count' => 'int',
-        'topic_name' => 'string',
+        'repoCount' => 'int',
+        'topicName' => 'string',
         'updated' => '\DateTime'
     ];
 
@@ -77,8 +77,8 @@ class TopicResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'created' => 'date-time',
         'id' => 'int64',
-        'repo_count' => 'int64',
-        'topic_name' => null,
+        'repoCount' => 'int64',
+        'topicName' => null,
         'updated' => 'date-time'
     ];
 
@@ -111,8 +111,8 @@ class TopicResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'created' => 'created',
         'id' => 'id',
-        'repo_count' => 'repo_count',
-        'topic_name' => 'topic_name',
+        'repoCount' => 'repo_count',
+        'topicName' => 'topic_name',
         'updated' => 'updated'
     ];
 
@@ -124,8 +124,8 @@ class TopicResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'created' => 'setCreated',
         'id' => 'setId',
-        'repo_count' => 'setRepoCount',
-        'topic_name' => 'setTopicName',
+        'repoCount' => 'setRepoCount',
+        'topicName' => 'setTopicName',
         'updated' => 'setUpdated'
     ];
 
@@ -137,8 +137,8 @@ class TopicResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'created' => 'getCreated',
         'id' => 'getId',
-        'repo_count' => 'getRepoCount',
-        'topic_name' => 'getTopicName',
+        'repoCount' => 'getRepoCount',
+        'topicName' => 'getTopicName',
         'updated' => 'getUpdated'
     ];
 
@@ -201,8 +201,8 @@ class TopicResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['created'] = $data['created'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['repo_count'] = $data['repo_count'] ?? null;
-        $this->container['topic_name'] = $data['topic_name'] ?? null;
+        $this->container['repoCount'] = $data['repoCount'] ?? null;
+        $this->container['topicName'] = $data['topicName'] ?? null;
         $this->container['updated'] = $data['updated'] ?? null;
     }
 
@@ -279,49 +279,49 @@ class TopicResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets repo_count
+     * Gets repoCount
      *
      * @return int|null
      */
     public function getRepoCount()
     {
-        return $this->container['repo_count'];
+        return $this->container['repoCount'];
     }
 
     /**
-     * Sets repo_count
+     * Sets repoCount
      *
-     * @param int|null $repo_count repo_count
+     * @param int|null $repoCount repoCount
      *
      * @return self
      */
-    public function setRepoCount($repo_count)
+    public function setRepoCount($repoCount)
     {
-        $this->container['repo_count'] = $repo_count;
+        $this->container['repoCount'] = $repoCount;
 
         return $this;
     }
 
     /**
-     * Gets topic_name
+     * Gets topicName
      *
      * @return string|null
      */
     public function getTopicName()
     {
-        return $this->container['topic_name'];
+        return $this->container['topicName'];
     }
 
     /**
-     * Sets topic_name
+     * Sets topicName
      *
-     * @param string|null $topic_name topic_name
+     * @param string|null $topicName topicName
      *
      * @return self
      */
-    public function setTopicName($topic_name)
+    public function setTopicName($topicName)
     {
-        $this->container['topic_name'] = $topic_name;
+        $this->container['topicName'] = $topicName;
 
         return $this;
     }

@@ -61,7 +61,7 @@ class GitHook implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'content' => 'string',
-        'is_active' => 'bool',
+        'isActive' => 'bool',
         'name' => 'string'
     ];
 
@@ -74,7 +74,7 @@ class GitHook implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'content' => null,
-        'is_active' => null,
+        'isActive' => null,
         'name' => null
     ];
 
@@ -106,7 +106,7 @@ class GitHook implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'content' => 'content',
-        'is_active' => 'is_active',
+        'isActive' => 'is_active',
         'name' => 'name'
     ];
 
@@ -117,7 +117,7 @@ class GitHook implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'content' => 'setContent',
-        'is_active' => 'setIsActive',
+        'isActive' => 'setIsActive',
         'name' => 'setName'
     ];
 
@@ -128,7 +128,7 @@ class GitHook implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'content' => 'getContent',
-        'is_active' => 'getIsActive',
+        'isActive' => 'getIsActive',
         'name' => 'getName'
     ];
 
@@ -190,7 +190,7 @@ class GitHook implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['content'] = $data['content'] ?? null;
-        $this->container['is_active'] = $data['is_active'] ?? null;
+        $this->container['isActive'] = $data['isActive'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
     }
 
@@ -243,25 +243,25 @@ class GitHook implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets is_active
+     * Gets isActive
      *
      * @return bool|null
      */
     public function getIsActive()
     {
-        return $this->container['is_active'];
+        return $this->container['isActive'];
     }
 
     /**
-     * Sets is_active
+     * Sets isActive
      *
-     * @param bool|null $is_active is_active
+     * @param bool|null $isActive isActive
      *
      * @return self
      */
-    public function setIsActive($is_active)
+    public function setIsActive($isActive)
     {
-        $this->container['is_active'] = $is_active;
+        $this->container['isActive'] = $isActive;
 
         return $this;
     }

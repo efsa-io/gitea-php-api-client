@@ -410,7 +410,7 @@ Name | Type | Description  | Notes
 ## `generateRepo()`
 
 ```php
-generateRepo($template_owner, $template_repo, $body): \Efsa\Client\Gitea\Model\Repository
+generateRepo($templateOwner, $templateRepo, $body): \Efsa\Client\Gitea\Model\Repository
 ```
 
 Create a repository using a template
@@ -464,12 +464,12 @@ $apiInstance = new Efsa\Client\Gitea\Api\RepositoryApi(
     new GuzzleHttp\Client(),
     $config
 );
-$template_owner = 'template_owner_example'; // string | name of the template repository owner
-$template_repo = 'template_repo_example'; // string | name of the template repository
+$templateOwner = 'templateOwner_example'; // string | name of the template repository owner
+$templateRepo = 'templateRepo_example'; // string | name of the template repository
 $body = new \Efsa\Client\Gitea\Model\GenerateRepoOption(); // \Efsa\Client\Gitea\Model\GenerateRepoOption
 
 try {
-    $result = $apiInstance->generateRepo($template_owner, $template_repo, $body);
+    $result = $apiInstance->generateRepo($templateOwner, $templateRepo, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoryApi->generateRepo: ', $e->getMessage(), PHP_EOL;
@@ -480,8 +480,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **template_owner** | **string**| name of the template repository owner |
- **template_repo** | **string**| name of the template repository |
+ **templateOwner** | **string**| name of the template repository owner |
+ **templateRepo** | **string**| name of the template repository |
  **body** | [**\Efsa\Client\Gitea\Model\GenerateRepoOption**](../Model/GenerateRepoOption.md)|  | [optional]
 
 ### Return type
@@ -692,7 +692,7 @@ Name | Type | Description  | Notes
 ## `getTree()`
 
 ```php
-getTree($owner, $repo, $sha, $recursive, $page, $per_page): \Efsa\Client\Gitea\Model\GitTreeResponse
+getTree($owner, $repo, $sha, $recursive, $page, $perPage): \Efsa\Client\Gitea\Model\GitTreeResponse
 ```
 
 Gets the tree of a repository.
@@ -751,10 +751,10 @@ $repo = 'repo_example'; // string | name of the repo
 $sha = 'sha_example'; // string | sha of the commit
 $recursive = True; // bool | show all directories and files
 $page = 56; // int | page number; the 'truncated' field in the response will be true if there are still more items after this page, false if the last page
-$per_page = 56; // int | number of items per page
+$perPage = 56; // int | number of items per page
 
 try {
-    $result = $apiInstance->getTree($owner, $repo, $sha, $recursive, $page, $per_page);
+    $result = $apiInstance->getTree($owner, $repo, $sha, $recursive, $page, $perPage);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoryApi->getTree: ', $e->getMessage(), PHP_EOL;
@@ -770,7 +770,7 @@ Name | Type | Description  | Notes
  **sha** | **string**| sha of the commit |
  **recursive** | **bool**| show all directories and files | [optional]
  **page** | **int**| page number; the &#39;truncated&#39; field in the response will be true if there are still more items after this page, false if the last page | [optional]
- **per_page** | **int**| number of items per page | [optional]
+ **perPage** | **int**| number of items per page | [optional]
 
 ### Return type
 
@@ -3804,7 +3804,7 @@ void (empty response body)
 ## `repoDeleteReleaseAttachment()`
 
 ```php
-repoDeleteReleaseAttachment($owner, $repo, $id, $attachment_id)
+repoDeleteReleaseAttachment($owner, $repo, $id, $attachmentId)
 ```
 
 Delete a release attachment
@@ -3861,10 +3861,10 @@ $apiInstance = new Efsa\Client\Gitea\Api\RepositoryApi(
 $owner = 'owner_example'; // string | owner of the repo
 $repo = 'repo_example'; // string | name of the repo
 $id = 56; // int | id of the release
-$attachment_id = 56; // int | id of the attachment to delete
+$attachmentId = 56; // int | id of the attachment to delete
 
 try {
-    $apiInstance->repoDeleteReleaseAttachment($owner, $repo, $id, $attachment_id);
+    $apiInstance->repoDeleteReleaseAttachment($owner, $repo, $id, $attachmentId);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoryApi->repoDeleteReleaseAttachment: ', $e->getMessage(), PHP_EOL;
 }
@@ -3877,7 +3877,7 @@ Name | Type | Description  | Notes
  **owner** | **string**| owner of the repo |
  **repo** | **string**| name of the repo |
  **id** | **int**| id of the release |
- **attachment_id** | **int**| id of the attachment to delete |
+ **attachmentId** | **int**| id of the attachment to delete |
 
 ### Return type
 
@@ -4271,7 +4271,7 @@ void (empty response body)
 ## `repoDeleteWikiPage()`
 
 ```php
-repoDeleteWikiPage($owner, $repo, $page_name)
+repoDeleteWikiPage($owner, $repo, $pageName)
 ```
 
 Delete a wiki page
@@ -4327,10 +4327,10 @@ $apiInstance = new Efsa\Client\Gitea\Api\RepositoryApi(
 );
 $owner = 'owner_example'; // string | owner of the repo
 $repo = 'repo_example'; // string | name of the repo
-$page_name = 'page_name_example'; // string | name of the page
+$pageName = 'pageName_example'; // string | name of the page
 
 try {
-    $apiInstance->repoDeleteWikiPage($owner, $repo, $page_name);
+    $apiInstance->repoDeleteWikiPage($owner, $repo, $pageName);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoryApi->repoDeleteWikiPage: ', $e->getMessage(), PHP_EOL;
 }
@@ -4342,7 +4342,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **owner** | **string**| owner of the repo |
  **repo** | **string**| name of the repo |
- **page_name** | **string**| name of the page |
+ **pageName** | **string**| name of the page |
 
 ### Return type
 
@@ -4462,7 +4462,7 @@ Name | Type | Description  | Notes
 ## `repoDownloadCommitDiffOrPatch()`
 
 ```php
-repoDownloadCommitDiffOrPatch($owner, $repo, $sha, $diff_type): string
+repoDownloadCommitDiffOrPatch($owner, $repo, $sha, $diffType): string
 ```
 
 Get a commit's diff or patch
@@ -4519,10 +4519,10 @@ $apiInstance = new Efsa\Client\Gitea\Api\RepositoryApi(
 $owner = 'owner_example'; // string | owner of the repo
 $repo = 'repo_example'; // string | name of the repo
 $sha = 'sha_example'; // string | SHA of the commit to get
-$diff_type = 'diff_type_example'; // string | whether the output is diff or patch
+$diffType = 'diffType_example'; // string | whether the output is diff or patch
 
 try {
-    $result = $apiInstance->repoDownloadCommitDiffOrPatch($owner, $repo, $sha, $diff_type);
+    $result = $apiInstance->repoDownloadCommitDiffOrPatch($owner, $repo, $sha, $diffType);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoryApi->repoDownloadCommitDiffOrPatch: ', $e->getMessage(), PHP_EOL;
@@ -4536,7 +4536,7 @@ Name | Type | Description  | Notes
  **owner** | **string**| owner of the repo |
  **repo** | **string**| name of the repo |
  **sha** | **string**| SHA of the commit to get |
- **diff_type** | **string**| whether the output is diff or patch |
+ **diffType** | **string**| whether the output is diff or patch |
 
 ### Return type
 
@@ -4558,7 +4558,7 @@ Name | Type | Description  | Notes
 ## `repoDownloadPullDiffOrPatch()`
 
 ```php
-repoDownloadPullDiffOrPatch($owner, $repo, $index, $diff_type, $binary): string
+repoDownloadPullDiffOrPatch($owner, $repo, $index, $diffType, $binary): string
 ```
 
 Get a pull request diff or patch
@@ -4615,11 +4615,11 @@ $apiInstance = new Efsa\Client\Gitea\Api\RepositoryApi(
 $owner = 'owner_example'; // string | owner of the repo
 $repo = 'repo_example'; // string | name of the repo
 $index = 56; // int | index of the pull request to get
-$diff_type = 'diff_type_example'; // string | whether the output is diff or patch
+$diffType = 'diffType_example'; // string | whether the output is diff or patch
 $binary = True; // bool | whether to include binary file changes. if true, the diff is applicable with `git apply`
 
 try {
-    $result = $apiInstance->repoDownloadPullDiffOrPatch($owner, $repo, $index, $diff_type, $binary);
+    $result = $apiInstance->repoDownloadPullDiffOrPatch($owner, $repo, $index, $diffType, $binary);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoryApi->repoDownloadPullDiffOrPatch: ', $e->getMessage(), PHP_EOL;
@@ -4633,7 +4633,7 @@ Name | Type | Description  | Notes
  **owner** | **string**| owner of the repo |
  **repo** | **string**| name of the repo |
  **index** | **int**| index of the pull request to get |
- **diff_type** | **string**| whether the output is diff or patch |
+ **diffType** | **string**| whether the output is diff or patch |
  **binary** | **bool**| whether to include binary file changes. if true, the diff is applicable with &#x60;git apply&#x60; | [optional]
 
 ### Return type
@@ -5230,7 +5230,7 @@ Name | Type | Description  | Notes
 ## `repoEditReleaseAttachment()`
 
 ```php
-repoEditReleaseAttachment($owner, $repo, $id, $attachment_id, $body): \Efsa\Client\Gitea\Model\Attachment
+repoEditReleaseAttachment($owner, $repo, $id, $attachmentId, $body): \Efsa\Client\Gitea\Model\Attachment
 ```
 
 Edit a release attachment
@@ -5287,11 +5287,11 @@ $apiInstance = new Efsa\Client\Gitea\Api\RepositoryApi(
 $owner = 'owner_example'; // string | owner of the repo
 $repo = 'repo_example'; // string | name of the repo
 $id = 56; // int | id of the release
-$attachment_id = 56; // int | id of the attachment to edit
+$attachmentId = 56; // int | id of the attachment to edit
 $body = new \Efsa\Client\Gitea\Model\EditAttachmentOptions(); // \Efsa\Client\Gitea\Model\EditAttachmentOptions
 
 try {
-    $result = $apiInstance->repoEditReleaseAttachment($owner, $repo, $id, $attachment_id, $body);
+    $result = $apiInstance->repoEditReleaseAttachment($owner, $repo, $id, $attachmentId, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoryApi->repoEditReleaseAttachment: ', $e->getMessage(), PHP_EOL;
@@ -5305,7 +5305,7 @@ Name | Type | Description  | Notes
  **owner** | **string**| owner of the repo |
  **repo** | **string**| name of the repo |
  **id** | **int**| id of the release |
- **attachment_id** | **int**| id of the attachment to edit |
+ **attachmentId** | **int**| id of the attachment to edit |
  **body** | [**\Efsa\Client\Gitea\Model\EditAttachmentOptions**](../Model/EditAttachmentOptions.md)|  | [optional]
 
 ### Return type
@@ -5328,7 +5328,7 @@ Name | Type | Description  | Notes
 ## `repoEditWikiPage()`
 
 ```php
-repoEditWikiPage($owner, $repo, $page_name, $body): \Efsa\Client\Gitea\Model\WikiPage
+repoEditWikiPage($owner, $repo, $pageName, $body): \Efsa\Client\Gitea\Model\WikiPage
 ```
 
 Edit a wiki page
@@ -5384,11 +5384,11 @@ $apiInstance = new Efsa\Client\Gitea\Api\RepositoryApi(
 );
 $owner = 'owner_example'; // string | owner of the repo
 $repo = 'repo_example'; // string | name of the repo
-$page_name = 'page_name_example'; // string | name of the page
+$pageName = 'pageName_example'; // string | name of the page
 $body = new \Efsa\Client\Gitea\Model\CreateWikiPageOptions(); // \Efsa\Client\Gitea\Model\CreateWikiPageOptions
 
 try {
-    $result = $apiInstance->repoEditWikiPage($owner, $repo, $page_name, $body);
+    $result = $apiInstance->repoEditWikiPage($owner, $repo, $pageName, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoryApi->repoEditWikiPage: ', $e->getMessage(), PHP_EOL;
@@ -5401,7 +5401,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **owner** | **string**| owner of the repo |
  **repo** | **string**| name of the repo |
- **page_name** | **string**| name of the page |
+ **pageName** | **string**| name of the page |
  **body** | [**\Efsa\Client\Gitea\Model\CreateWikiPageOptions**](../Model/CreateWikiPageOptions.md)|  | [optional]
 
 ### Return type
@@ -7593,7 +7593,7 @@ Name | Type | Description  | Notes
 ## `repoGetReleaseAttachment()`
 
 ```php
-repoGetReleaseAttachment($owner, $repo, $id, $attachment_id): \Efsa\Client\Gitea\Model\Attachment
+repoGetReleaseAttachment($owner, $repo, $id, $attachmentId): \Efsa\Client\Gitea\Model\Attachment
 ```
 
 Get a release attachment
@@ -7650,10 +7650,10 @@ $apiInstance = new Efsa\Client\Gitea\Api\RepositoryApi(
 $owner = 'owner_example'; // string | owner of the repo
 $repo = 'repo_example'; // string | name of the repo
 $id = 56; // int | id of the release
-$attachment_id = 56; // int | id of the attachment to get
+$attachmentId = 56; // int | id of the attachment to get
 
 try {
-    $result = $apiInstance->repoGetReleaseAttachment($owner, $repo, $id, $attachment_id);
+    $result = $apiInstance->repoGetReleaseAttachment($owner, $repo, $id, $attachmentId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoryApi->repoGetReleaseAttachment: ', $e->getMessage(), PHP_EOL;
@@ -7667,7 +7667,7 @@ Name | Type | Description  | Notes
  **owner** | **string**| owner of the repo |
  **repo** | **string**| name of the repo |
  **id** | **int**| id of the release |
- **attachment_id** | **int**| id of the attachment to get |
+ **attachmentId** | **int**| id of the attachment to get |
 
 ### Return type
 
@@ -8063,7 +8063,7 @@ Name | Type | Description  | Notes
 ## `repoGetWikiPage()`
 
 ```php
-repoGetWikiPage($owner, $repo, $page_name): \Efsa\Client\Gitea\Model\WikiPage
+repoGetWikiPage($owner, $repo, $pageName): \Efsa\Client\Gitea\Model\WikiPage
 ```
 
 Get a wiki page
@@ -8119,10 +8119,10 @@ $apiInstance = new Efsa\Client\Gitea\Api\RepositoryApi(
 );
 $owner = 'owner_example'; // string | owner of the repo
 $repo = 'repo_example'; // string | name of the repo
-$page_name = 'page_name_example'; // string | name of the page
+$pageName = 'pageName_example'; // string | name of the page
 
 try {
-    $result = $apiInstance->repoGetWikiPage($owner, $repo, $page_name);
+    $result = $apiInstance->repoGetWikiPage($owner, $repo, $pageName);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoryApi->repoGetWikiPage: ', $e->getMessage(), PHP_EOL;
@@ -8135,7 +8135,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **owner** | **string**| owner of the repo |
  **repo** | **string**| name of the repo |
- **page_name** | **string**| name of the page |
+ **pageName** | **string**| name of the page |
 
 ### Return type
 
@@ -8157,7 +8157,7 @@ Name | Type | Description  | Notes
 ## `repoGetWikiPageRevisions()`
 
 ```php
-repoGetWikiPageRevisions($owner, $repo, $page_name, $page): \Efsa\Client\Gitea\Model\WikiCommitList
+repoGetWikiPageRevisions($owner, $repo, $pageName, $page): \Efsa\Client\Gitea\Model\WikiCommitList
 ```
 
 Get revisions of a wiki page
@@ -8213,11 +8213,11 @@ $apiInstance = new Efsa\Client\Gitea\Api\RepositoryApi(
 );
 $owner = 'owner_example'; // string | owner of the repo
 $repo = 'repo_example'; // string | name of the repo
-$page_name = 'page_name_example'; // string | name of the page
+$pageName = 'pageName_example'; // string | name of the page
 $page = 56; // int | page number of results to return (1-based)
 
 try {
-    $result = $apiInstance->repoGetWikiPageRevisions($owner, $repo, $page_name, $page);
+    $result = $apiInstance->repoGetWikiPageRevisions($owner, $repo, $pageName, $page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoryApi->repoGetWikiPageRevisions: ', $e->getMessage(), PHP_EOL;
@@ -8230,7 +8230,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **owner** | **string**| owner of the repo |
  **repo** | **string**| name of the repo |
- **page_name** | **string**| name of the page |
+ **pageName** | **string**| name of the page |
  **page** | **int**| page number of results to return (1-based) | [optional]
 
 ### Return type
@@ -9007,7 +9007,7 @@ Name | Type | Description  | Notes
 ## `repoListKeys()`
 
 ```php
-repoListKeys($owner, $repo, $key_id, $fingerprint, $page, $limit): \Efsa\Client\Gitea\Model\DeployKey[]
+repoListKeys($owner, $repo, $keyId, $fingerprint, $page, $limit): \Efsa\Client\Gitea\Model\DeployKey[]
 ```
 
 List a repository's keys
@@ -9063,13 +9063,13 @@ $apiInstance = new Efsa\Client\Gitea\Api\RepositoryApi(
 );
 $owner = 'owner_example'; // string | owner of the repo
 $repo = 'repo_example'; // string | name of the repo
-$key_id = 56; // int | the key_id to search for
+$keyId = 56; // int | the key_id to search for
 $fingerprint = 'fingerprint_example'; // string | fingerprint of the key
 $page = 56; // int | page number of results to return (1-based)
 $limit = 56; // int | page size of results
 
 try {
-    $result = $apiInstance->repoListKeys($owner, $repo, $key_id, $fingerprint, $page, $limit);
+    $result = $apiInstance->repoListKeys($owner, $repo, $keyId, $fingerprint, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoryApi->repoListKeys: ', $e->getMessage(), PHP_EOL;
@@ -9082,7 +9082,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **owner** | **string**| owner of the repo |
  **repo** | **string**| name of the repo |
- **key_id** | **int**| the key_id to search for | [optional]
+ **keyId** | **int**| the key_id to search for | [optional]
  **fingerprint** | **string**| fingerprint of the key | [optional]
  **page** | **int**| page number of results to return (1-based) | [optional]
  **limit** | **int**| page size of results | [optional]
@@ -9403,7 +9403,7 @@ Name | Type | Description  | Notes
 ## `repoListReleases()`
 
 ```php
-repoListReleases($owner, $repo, $draft, $pre_release, $per_page, $page, $limit): \Efsa\Client\Gitea\Model\Release[]
+repoListReleases($owner, $repo, $draft, $preRelease, $perPage, $page, $limit): \Efsa\Client\Gitea\Model\Release[]
 ```
 
 List a repo's releases
@@ -9460,13 +9460,13 @@ $apiInstance = new Efsa\Client\Gitea\Api\RepositoryApi(
 $owner = 'owner_example'; // string | owner of the repo
 $repo = 'repo_example'; // string | name of the repo
 $draft = True; // bool | filter (exclude / include) drafts, if you dont have repo write access none will show
-$pre_release = True; // bool | filter (exclude / include) pre-releases
-$per_page = 56; // int | page size of results, deprecated - use limit
+$preRelease = True; // bool | filter (exclude / include) pre-releases
+$perPage = 56; // int | page size of results, deprecated - use limit
 $page = 56; // int | page number of results to return (1-based)
 $limit = 56; // int | page size of results
 
 try {
-    $result = $apiInstance->repoListReleases($owner, $repo, $draft, $pre_release, $per_page, $page, $limit);
+    $result = $apiInstance->repoListReleases($owner, $repo, $draft, $preRelease, $perPage, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoryApi->repoListReleases: ', $e->getMessage(), PHP_EOL;
@@ -9480,8 +9480,8 @@ Name | Type | Description  | Notes
  **owner** | **string**| owner of the repo |
  **repo** | **string**| name of the repo |
  **draft** | **bool**| filter (exclude / include) drafts, if you dont have repo write access none will show | [optional]
- **pre_release** | **bool**| filter (exclude / include) pre-releases | [optional]
- **per_page** | **int**| page size of results, deprecated - use limit | [optional]
+ **preRelease** | **bool**| filter (exclude / include) pre-releases | [optional]
+ **perPage** | **int**| page size of results, deprecated - use limit | [optional]
  **page** | **int**| page number of results to return (1-based) | [optional]
  **limit** | **int**| page size of results | [optional]
 
@@ -10554,7 +10554,7 @@ void (empty response body)
 ## `repoSearch()`
 
 ```php
-repoSearch($q, $topic, $include_desc, $uid, $priority_owner_id, $team_id, $starred_by, $private, $is_private, $template, $archived, $mode, $exclusive, $sort, $order, $page, $limit): \Efsa\Client\Gitea\Model\SearchResults
+repoSearch($q, $topic, $includeDesc, $uid, $priorityOwnerId, $teamId, $starredBy, $private, $isPrivate, $template, $archived, $mode, $exclusive, $sort, $order, $page, $limit): \Efsa\Client\Gitea\Model\SearchResults
 ```
 
 Search for repositories
@@ -10610,13 +10610,13 @@ $apiInstance = new Efsa\Client\Gitea\Api\RepositoryApi(
 );
 $q = 'q_example'; // string | keyword
 $topic = True; // bool | Limit search to repositories with keyword as topic
-$include_desc = True; // bool | include search of keyword within repository description
+$includeDesc = True; // bool | include search of keyword within repository description
 $uid = 56; // int | search only for repos that the user with the given id owns or contributes to
-$priority_owner_id = 56; // int | repo owner to prioritize in the results
-$team_id = 56; // int | search only for repos that belong to the given team id
-$starred_by = 56; // int | search only for repos that the user with the given id has starred
+$priorityOwnerId = 56; // int | repo owner to prioritize in the results
+$teamId = 56; // int | search only for repos that belong to the given team id
+$starredBy = 56; // int | search only for repos that the user with the given id has starred
 $private = True; // bool | include private repositories this user has access to (defaults to true)
-$is_private = True; // bool | show only pubic, private or all repositories (defaults to all)
+$isPrivate = True; // bool | show only pubic, private or all repositories (defaults to all)
 $template = True; // bool | include template repositories this user has access to (defaults to true)
 $archived = True; // bool | show only archived, non-archived or all repositories (defaults to all)
 $mode = 'mode_example'; // string | type of repository to search for. Supported values are \"fork\", \"source\", \"mirror\" and \"collaborative\"
@@ -10627,7 +10627,7 @@ $page = 56; // int | page number of results to return (1-based)
 $limit = 56; // int | page size of results
 
 try {
-    $result = $apiInstance->repoSearch($q, $topic, $include_desc, $uid, $priority_owner_id, $team_id, $starred_by, $private, $is_private, $template, $archived, $mode, $exclusive, $sort, $order, $page, $limit);
+    $result = $apiInstance->repoSearch($q, $topic, $includeDesc, $uid, $priorityOwnerId, $teamId, $starredBy, $private, $isPrivate, $template, $archived, $mode, $exclusive, $sort, $order, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoryApi->repoSearch: ', $e->getMessage(), PHP_EOL;
@@ -10640,13 +10640,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **q** | **string**| keyword | [optional]
  **topic** | **bool**| Limit search to repositories with keyword as topic | [optional]
- **include_desc** | **bool**| include search of keyword within repository description | [optional]
+ **includeDesc** | **bool**| include search of keyword within repository description | [optional]
  **uid** | **int**| search only for repos that the user with the given id owns or contributes to | [optional]
- **priority_owner_id** | **int**| repo owner to prioritize in the results | [optional]
- **team_id** | **int**| search only for repos that belong to the given team id | [optional]
- **starred_by** | **int**| search only for repos that the user with the given id has starred | [optional]
+ **priorityOwnerId** | **int**| repo owner to prioritize in the results | [optional]
+ **teamId** | **int**| search only for repos that belong to the given team id | [optional]
+ **starredBy** | **int**| search only for repos that the user with the given id has starred | [optional]
  **private** | **bool**| include private repositories this user has access to (defaults to true) | [optional]
- **is_private** | **bool**| show only pubic, private or all repositories (defaults to all) | [optional]
+ **isPrivate** | **bool**| show only pubic, private or all repositories (defaults to all) | [optional]
  **template** | **bool**| include template repositories this user has access to (defaults to true) | [optional]
  **archived** | **bool**| show only archived, non-archived or all repositories (defaults to all) | [optional]
  **mode** | **string**| type of repository to search for. Supported values are \&quot;fork\&quot;, \&quot;source\&quot;, \&quot;mirror\&quot; and \&quot;collaborative\&quot; | [optional]

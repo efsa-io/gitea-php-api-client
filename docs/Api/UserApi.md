@@ -684,7 +684,7 @@ Name | Type | Description  | Notes
 ## `userCreateToken()`
 
 ```php
-userCreateToken($username, $user_create_token): \Efsa\Client\Gitea\Model\AccessToken
+userCreateToken($username, $userCreateToken): \Efsa\Client\Gitea\Model\AccessToken
 ```
 
 Create an access token
@@ -739,10 +739,10 @@ $apiInstance = new Efsa\Client\Gitea\Api\UserApi(
     $config
 );
 $username = 'username_example'; // string | username of user
-$user_create_token = new \Efsa\Client\Gitea\Model\CreateAccessTokenOption(); // \Efsa\Client\Gitea\Model\CreateAccessTokenOption
+$userCreateToken = new \Efsa\Client\Gitea\Model\CreateAccessTokenOption(); // \Efsa\Client\Gitea\Model\CreateAccessTokenOption
 
 try {
-    $result = $apiInstance->userCreateToken($username, $user_create_token);
+    $result = $apiInstance->userCreateToken($username, $userCreateToken);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->userCreateToken: ', $e->getMessage(), PHP_EOL;
@@ -754,7 +754,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **string**| username of user |
- **user_create_token** | [**\Efsa\Client\Gitea\Model\CreateAccessTokenOption**](../Model/CreateAccessTokenOption.md)|  | [optional]
+ **userCreateToken** | [**\Efsa\Client\Gitea\Model\CreateAccessTokenOption**](../Model/CreateAccessTokenOption.md)|  | [optional]
 
 ### Return type
 

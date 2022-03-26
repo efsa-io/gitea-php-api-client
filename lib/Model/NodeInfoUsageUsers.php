@@ -60,8 +60,8 @@ class NodeInfoUsageUsers implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'active_halfyear' => 'int',
-        'active_month' => 'int',
+        'activeHalfyear' => 'int',
+        'activeMonth' => 'int',
         'total' => 'int'
     ];
 
@@ -73,8 +73,8 @@ class NodeInfoUsageUsers implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'active_halfyear' => 'int64',
-        'active_month' => 'int64',
+        'activeHalfyear' => 'int64',
+        'activeMonth' => 'int64',
         'total' => 'int64'
     ];
 
@@ -105,8 +105,8 @@ class NodeInfoUsageUsers implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'active_halfyear' => 'activeHalfyear',
-        'active_month' => 'activeMonth',
+        'activeHalfyear' => 'activeHalfyear',
+        'activeMonth' => 'activeMonth',
         'total' => 'total'
     ];
 
@@ -116,8 +116,8 @@ class NodeInfoUsageUsers implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'active_halfyear' => 'setActiveHalfyear',
-        'active_month' => 'setActiveMonth',
+        'activeHalfyear' => 'setActiveHalfyear',
+        'activeMonth' => 'setActiveMonth',
         'total' => 'setTotal'
     ];
 
@@ -127,8 +127,8 @@ class NodeInfoUsageUsers implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'active_halfyear' => 'getActiveHalfyear',
-        'active_month' => 'getActiveMonth',
+        'activeHalfyear' => 'getActiveHalfyear',
+        'activeMonth' => 'getActiveMonth',
         'total' => 'getTotal'
     ];
 
@@ -189,8 +189,8 @@ class NodeInfoUsageUsers implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['active_halfyear'] = $data['active_halfyear'] ?? null;
-        $this->container['active_month'] = $data['active_month'] ?? null;
+        $this->container['activeHalfyear'] = $data['activeHalfyear'] ?? null;
+        $this->container['activeMonth'] = $data['activeMonth'] ?? null;
         $this->container['total'] = $data['total'] ?? null;
     }
 
@@ -219,49 +219,49 @@ class NodeInfoUsageUsers implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets active_halfyear
+     * Gets activeHalfyear
      *
      * @return int|null
      */
     public function getActiveHalfyear()
     {
-        return $this->container['active_halfyear'];
+        return $this->container['activeHalfyear'];
     }
 
     /**
-     * Sets active_halfyear
+     * Sets activeHalfyear
      *
-     * @param int|null $active_halfyear active_halfyear
+     * @param int|null $activeHalfyear activeHalfyear
      *
      * @return self
      */
-    public function setActiveHalfyear($active_halfyear)
+    public function setActiveHalfyear($activeHalfyear)
     {
-        $this->container['active_halfyear'] = $active_halfyear;
+        $this->container['activeHalfyear'] = $activeHalfyear;
 
         return $this;
     }
 
     /**
-     * Gets active_month
+     * Gets activeMonth
      *
      * @return int|null
      */
     public function getActiveMonth()
     {
-        return $this->container['active_month'];
+        return $this->container['activeMonth'];
     }
 
     /**
-     * Sets active_month
+     * Sets activeMonth
      *
-     * @param int|null $active_month active_month
+     * @param int|null $activeMonth activeMonth
      *
      * @return self
      */
-    public function setActiveMonth($active_month)
+    public function setActiveMonth($activeMonth)
     {
-        $this->container['active_month'] = $active_month;
+        $this->container['activeMonth'] = $activeMonth;
 
         return $this;
     }

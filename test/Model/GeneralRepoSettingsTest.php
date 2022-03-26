@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description GeneralRepoSettings contains global repository settings exposed by API
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class GeneralRepoSettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "http_git_disabled"
+     * Test attribute "httpGitDisabled"
      */
     public function testPropertyHttpGitDisabled()
     {
@@ -89,7 +89,7 @@ class GeneralRepoSettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "lfs_disabled"
+     * Test attribute "lfsDisabled"
      */
     public function testPropertyLfsDisabled()
     {
@@ -98,7 +98,7 @@ class GeneralRepoSettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "migrations_disabled"
+     * Test attribute "migrationsDisabled"
      */
     public function testPropertyMigrationsDisabled()
     {
@@ -107,7 +107,7 @@ class GeneralRepoSettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "mirrors_disabled"
+     * Test attribute "mirrorsDisabled"
      */
     public function testPropertyMirrorsDisabled()
     {
@@ -116,7 +116,7 @@ class GeneralRepoSettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "stars_disabled"
+     * Test attribute "starsDisabled"
      */
     public function testPropertyStarsDisabled()
     {
@@ -125,7 +125,7 @@ class GeneralRepoSettingsTest extends TestCase
     }
 
     /**
-     * Test attribute "time_tracking_disabled"
+     * Test attribute "timeTrackingDisabled"
      */
     public function testPropertyTimeTrackingDisabled()
     {

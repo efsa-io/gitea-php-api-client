@@ -60,9 +60,9 @@ class WikiPageMetaData implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'html_url' => 'string',
-        'last_commit' => '\Efsa\Client\Gitea\Model\WikiCommit',
-        'sub_url' => 'string',
+        'htmlUrl' => 'string',
+        'lastCommit' => '\Efsa\Client\Gitea\Model\WikiCommit',
+        'subUrl' => 'string',
         'title' => 'string'
     ];
 
@@ -74,9 +74,9 @@ class WikiPageMetaData implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'html_url' => null,
-        'last_commit' => null,
-        'sub_url' => null,
+        'htmlUrl' => null,
+        'lastCommit' => null,
+        'subUrl' => null,
         'title' => null
     ];
 
@@ -107,9 +107,9 @@ class WikiPageMetaData implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'html_url' => 'html_url',
-        'last_commit' => 'last_commit',
-        'sub_url' => 'sub_url',
+        'htmlUrl' => 'html_url',
+        'lastCommit' => 'last_commit',
+        'subUrl' => 'sub_url',
         'title' => 'title'
     ];
 
@@ -119,9 +119,9 @@ class WikiPageMetaData implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'html_url' => 'setHtmlUrl',
-        'last_commit' => 'setLastCommit',
-        'sub_url' => 'setSubUrl',
+        'htmlUrl' => 'setHtmlUrl',
+        'lastCommit' => 'setLastCommit',
+        'subUrl' => 'setSubUrl',
         'title' => 'setTitle'
     ];
 
@@ -131,9 +131,9 @@ class WikiPageMetaData implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'html_url' => 'getHtmlUrl',
-        'last_commit' => 'getLastCommit',
-        'sub_url' => 'getSubUrl',
+        'htmlUrl' => 'getHtmlUrl',
+        'lastCommit' => 'getLastCommit',
+        'subUrl' => 'getSubUrl',
         'title' => 'getTitle'
     ];
 
@@ -194,9 +194,9 @@ class WikiPageMetaData implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['html_url'] = $data['html_url'] ?? null;
-        $this->container['last_commit'] = $data['last_commit'] ?? null;
-        $this->container['sub_url'] = $data['sub_url'] ?? null;
+        $this->container['htmlUrl'] = $data['htmlUrl'] ?? null;
+        $this->container['lastCommit'] = $data['lastCommit'] ?? null;
+        $this->container['subUrl'] = $data['subUrl'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
     }
 
@@ -225,73 +225,73 @@ class WikiPageMetaData implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets html_url
+     * Gets htmlUrl
      *
      * @return string|null
      */
     public function getHtmlUrl()
     {
-        return $this->container['html_url'];
+        return $this->container['htmlUrl'];
     }
 
     /**
-     * Sets html_url
+     * Sets htmlUrl
      *
-     * @param string|null $html_url html_url
+     * @param string|null $htmlUrl htmlUrl
      *
      * @return self
      */
-    public function setHtmlUrl($html_url)
+    public function setHtmlUrl($htmlUrl)
     {
-        $this->container['html_url'] = $html_url;
+        $this->container['htmlUrl'] = $htmlUrl;
 
         return $this;
     }
 
     /**
-     * Gets last_commit
+     * Gets lastCommit
      *
      * @return \Efsa\Client\Gitea\Model\WikiCommit|null
      */
     public function getLastCommit()
     {
-        return $this->container['last_commit'];
+        return $this->container['lastCommit'];
     }
 
     /**
-     * Sets last_commit
+     * Sets lastCommit
      *
-     * @param \Efsa\Client\Gitea\Model\WikiCommit|null $last_commit last_commit
+     * @param \Efsa\Client\Gitea\Model\WikiCommit|null $lastCommit lastCommit
      *
      * @return self
      */
-    public function setLastCommit($last_commit)
+    public function setLastCommit($lastCommit)
     {
-        $this->container['last_commit'] = $last_commit;
+        $this->container['lastCommit'] = $lastCommit;
 
         return $this;
     }
 
     /**
-     * Gets sub_url
+     * Gets subUrl
      *
      * @return string|null
      */
     public function getSubUrl()
     {
-        return $this->container['sub_url'];
+        return $this->container['subUrl'];
     }
 
     /**
-     * Sets sub_url
+     * Sets subUrl
      *
-     * @param string|null $sub_url sub_url
+     * @param string|null $subUrl subUrl
      *
      * @return self
      */
-    public function setSubUrl($sub_url)
+    public function setSubUrl($subUrl)
     {
-        $this->container['sub_url'] = $sub_url;
+        $this->container['subUrl'] = $subUrl;
 
         return $this;
     }

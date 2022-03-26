@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description EditRepoOption options when editing a repository&#39;s properties
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "allow_manual_merge"
+     * Test attribute "allowManualMerge"
      */
     public function testPropertyAllowManualMerge()
     {
@@ -89,7 +89,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "allow_merge_commits"
+     * Test attribute "allowMergeCommits"
      */
     public function testPropertyAllowMergeCommits()
     {
@@ -98,7 +98,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "allow_rebase"
+     * Test attribute "allowRebase"
      */
     public function testPropertyAllowRebase()
     {
@@ -107,7 +107,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "allow_rebase_explicit"
+     * Test attribute "allowRebaseExplicit"
      */
     public function testPropertyAllowRebaseExplicit()
     {
@@ -116,7 +116,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "allow_rebase_update"
+     * Test attribute "allowRebaseUpdate"
      */
     public function testPropertyAllowRebaseUpdate()
     {
@@ -125,7 +125,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "allow_squash_merge"
+     * Test attribute "allowSquashMerge"
      */
     public function testPropertyAllowSquashMerge()
     {
@@ -143,7 +143,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "autodetect_manual_merge"
+     * Test attribute "autodetectManualMerge"
      */
     public function testPropertyAutodetectManualMerge()
     {
@@ -152,7 +152,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "default_branch"
+     * Test attribute "defaultBranch"
      */
     public function testPropertyDefaultBranch()
     {
@@ -161,7 +161,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "default_delete_branch_after_merge"
+     * Test attribute "defaultDeleteBranchAfterMerge"
      */
     public function testPropertyDefaultDeleteBranchAfterMerge()
     {
@@ -170,7 +170,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "default_merge_style"
+     * Test attribute "defaultMergeStyle"
      */
     public function testPropertyDefaultMergeStyle()
     {
@@ -188,7 +188,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "external_tracker"
+     * Test attribute "externalTracker"
      */
     public function testPropertyExternalTracker()
     {
@@ -197,7 +197,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "external_wiki"
+     * Test attribute "externalWiki"
      */
     public function testPropertyExternalWiki()
     {
@@ -206,7 +206,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "has_issues"
+     * Test attribute "hasIssues"
      */
     public function testPropertyHasIssues()
     {
@@ -215,7 +215,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "has_projects"
+     * Test attribute "hasProjects"
      */
     public function testPropertyHasProjects()
     {
@@ -224,7 +224,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "has_pull_requests"
+     * Test attribute "hasPullRequests"
      */
     public function testPropertyHasPullRequests()
     {
@@ -233,7 +233,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "has_wiki"
+     * Test attribute "hasWiki"
      */
     public function testPropertyHasWiki()
     {
@@ -242,7 +242,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "ignore_whitespace_conflicts"
+     * Test attribute "ignoreWhitespaceConflicts"
      */
     public function testPropertyIgnoreWhitespaceConflicts()
     {
@@ -251,7 +251,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "internal_tracker"
+     * Test attribute "internalTracker"
      */
     public function testPropertyInternalTracker()
     {
@@ -260,7 +260,7 @@ class EditRepoOptionTest extends TestCase
     }
 
     /**
-     * Test attribute "mirror_interval"
+     * Test attribute "mirrorInterval"
      */
     public function testPropertyMirrorInterval()
     {

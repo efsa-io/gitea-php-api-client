@@ -4,22 +4,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**auth_password** | **string** |  | [optional]
-**auth_token** | **string** |  | [optional]
-**auth_username** | **string** |  | [optional]
-**clone_addr** | **string** |  |
+**authPassword** | **string** |  | [optional]
+**authToken** | **string** |  | [optional]
+**authUsername** | **string** |  | [optional]
+**cloneAddr** | **string** |  |
 **description** | **string** |  | [optional]
 **issues** | **bool** |  | [optional]
 **labels** | **bool** |  | [optional]
 **lfs** | **bool** |  | [optional]
-**lfs_endpoint** | **string** |  | [optional]
+**lfsEndpoint** | **string** |  | [optional]
 **milestones** | **bool** |  | [optional]
 **mirror** | **bool** |  | [optional]
-**mirror_interval** | **string** |  | [optional]
+**mirrorInterval** | **string** |  | [optional]
 **private** | **bool** |  | [optional]
-**pull_requests** | **bool** |  | [optional]
+**pullRequests** | **bool** |  | [optional]
 **releases** | **bool** |  | [optional]
-**repo_name** | **string** |  |
+**repoName** | **string** |  |
 **service** | **int** | GitServiceType represents a git service | [optional]
 **uid** | **int** |  |
 **wiki** | **bool** |  | [optional]

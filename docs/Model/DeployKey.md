@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**created_at** | [**\DateTime**](\DateTime.md) |  | [optional]
+**createdAt** | [**\DateTime**](\DateTime.md) |  | [optional]
 **fingerprint** | **string** |  | [optional]
 **id** | **int** |  | [optional]
 **key** | **string** |  | [optional]
-**key_id** | **int** |  | [optional]
-**read_only** | **bool** |  | [optional]
+**keyId** | **int** |  | [optional]
+**readOnly** | **bool** |  | [optional]
 **repository** | [**\Efsa\Client\Gitea\Model\Repository**](Repository.md) |  | [optional]
 **title** | **string** |  | [optional]
 **url** | **string** |  | [optional]

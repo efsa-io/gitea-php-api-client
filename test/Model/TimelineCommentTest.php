@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  \Efsa\Client\Gitea
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace \Efsa\Client\Gitea\Test\Model;
+namespace Efsa\Client\Gitea\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description TimelineComment represents a timeline comment (comment of any type) on a commit or issue
- * @package     \Efsa\Client\Gitea
+ * @package     Efsa\Client\Gitea
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -89,7 +89,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "assignee_team"
+     * Test attribute "assigneeTeam"
      */
     public function testPropertyAssigneeTeam()
     {
@@ -107,7 +107,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "createdAt"
      */
     public function testPropertyCreatedAt()
     {
@@ -116,7 +116,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "dependent_issue"
+     * Test attribute "dependentIssue"
      */
     public function testPropertyDependentIssue()
     {
@@ -125,7 +125,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "html_url"
+     * Test attribute "htmlUrl"
      */
     public function testPropertyHtmlUrl()
     {
@@ -143,7 +143,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "issue_url"
+     * Test attribute "issueUrl"
      */
     public function testPropertyIssueUrl()
     {
@@ -170,7 +170,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "new_ref"
+     * Test attribute "newRef"
      */
     public function testPropertyNewRef()
     {
@@ -179,7 +179,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "new_title"
+     * Test attribute "newTitle"
      */
     public function testPropertyNewTitle()
     {
@@ -188,7 +188,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "old_milestone"
+     * Test attribute "oldMilestone"
      */
     public function testPropertyOldMilestone()
     {
@@ -197,7 +197,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "old_project_id"
+     * Test attribute "oldProjectId"
      */
     public function testPropertyOldProjectId()
     {
@@ -206,7 +206,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "old_ref"
+     * Test attribute "oldRef"
      */
     public function testPropertyOldRef()
     {
@@ -215,7 +215,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "old_title"
+     * Test attribute "oldTitle"
      */
     public function testPropertyOldTitle()
     {
@@ -224,7 +224,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "project_id"
+     * Test attribute "projectId"
      */
     public function testPropertyProjectId()
     {
@@ -233,7 +233,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "pull_request_url"
+     * Test attribute "pullRequestUrl"
      */
     public function testPropertyPullRequestUrl()
     {
@@ -242,7 +242,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "ref_action"
+     * Test attribute "refAction"
      */
     public function testPropertyRefAction()
     {
@@ -251,7 +251,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "ref_comment"
+     * Test attribute "refComment"
      */
     public function testPropertyRefComment()
     {
@@ -260,7 +260,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "ref_commit_sha"
+     * Test attribute "refCommitSha"
      */
     public function testPropertyRefCommitSha()
     {
@@ -269,7 +269,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "ref_issue"
+     * Test attribute "refIssue"
      */
     public function testPropertyRefIssue()
     {
@@ -278,7 +278,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "removed_assignee"
+     * Test attribute "removedAssignee"
      */
     public function testPropertyRemovedAssignee()
     {
@@ -287,7 +287,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "resolve_doer"
+     * Test attribute "resolveDoer"
      */
     public function testPropertyResolveDoer()
     {
@@ -296,7 +296,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "review_id"
+     * Test attribute "reviewId"
      */
     public function testPropertyReviewId()
     {
@@ -305,7 +305,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "tracked_time"
+     * Test attribute "trackedTime"
      */
     public function testPropertyTrackedTime()
     {
@@ -323,7 +323,7 @@ class TimelineCommentTest extends TestCase
     }
 
     /**
-     * Test attribute "updated_at"
+     * Test attribute "updatedAt"
      */
     public function testPropertyUpdatedAt()
     {

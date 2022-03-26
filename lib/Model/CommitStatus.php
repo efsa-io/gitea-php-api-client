@@ -61,13 +61,13 @@ class CommitStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'context' => 'string',
-        'created_at' => '\DateTime',
+        'createdAt' => '\DateTime',
         'creator' => '\Efsa\Client\Gitea\Model\User',
         'description' => 'string',
         'id' => 'int',
         'status' => 'string',
-        'target_url' => 'string',
-        'updated_at' => '\DateTime',
+        'targetUrl' => 'string',
+        'updatedAt' => '\DateTime',
         'url' => 'string'
     ];
 
@@ -80,13 +80,13 @@ class CommitStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'context' => null,
-        'created_at' => 'date-time',
+        'createdAt' => 'date-time',
         'creator' => null,
         'description' => null,
         'id' => 'int64',
         'status' => null,
-        'target_url' => null,
-        'updated_at' => 'date-time',
+        'targetUrl' => null,
+        'updatedAt' => 'date-time',
         'url' => null
     ];
 
@@ -118,13 +118,13 @@ class CommitStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'context' => 'context',
-        'created_at' => 'created_at',
+        'createdAt' => 'created_at',
         'creator' => 'creator',
         'description' => 'description',
         'id' => 'id',
         'status' => 'status',
-        'target_url' => 'target_url',
-        'updated_at' => 'updated_at',
+        'targetUrl' => 'target_url',
+        'updatedAt' => 'updated_at',
         'url' => 'url'
     ];
 
@@ -135,13 +135,13 @@ class CommitStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'context' => 'setContext',
-        'created_at' => 'setCreatedAt',
+        'createdAt' => 'setCreatedAt',
         'creator' => 'setCreator',
         'description' => 'setDescription',
         'id' => 'setId',
         'status' => 'setStatus',
-        'target_url' => 'setTargetUrl',
-        'updated_at' => 'setUpdatedAt',
+        'targetUrl' => 'setTargetUrl',
+        'updatedAt' => 'setUpdatedAt',
         'url' => 'setUrl'
     ];
 
@@ -152,13 +152,13 @@ class CommitStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'context' => 'getContext',
-        'created_at' => 'getCreatedAt',
+        'createdAt' => 'getCreatedAt',
         'creator' => 'getCreator',
         'description' => 'getDescription',
         'id' => 'getId',
         'status' => 'getStatus',
-        'target_url' => 'getTargetUrl',
-        'updated_at' => 'getUpdatedAt',
+        'targetUrl' => 'getTargetUrl',
+        'updatedAt' => 'getUpdatedAt',
         'url' => 'getUrl'
     ];
 
@@ -220,13 +220,13 @@ class CommitStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['context'] = $data['context'] ?? null;
-        $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['createdAt'] = $data['createdAt'] ?? null;
         $this->container['creator'] = $data['creator'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
-        $this->container['target_url'] = $data['target_url'] ?? null;
-        $this->container['updated_at'] = $data['updated_at'] ?? null;
+        $this->container['targetUrl'] = $data['targetUrl'] ?? null;
+        $this->container['updatedAt'] = $data['updatedAt'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
     }
 
@@ -279,25 +279,25 @@ class CommitStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime|null
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $createdAt createdAt
      *
      * @return self
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }
@@ -399,49 +399,49 @@ class CommitStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets target_url
+     * Gets targetUrl
      *
      * @return string|null
      */
     public function getTargetUrl()
     {
-        return $this->container['target_url'];
+        return $this->container['targetUrl'];
     }
 
     /**
-     * Sets target_url
+     * Sets targetUrl
      *
-     * @param string|null $target_url target_url
+     * @param string|null $targetUrl targetUrl
      *
      * @return self
      */
-    public function setTargetUrl($target_url)
+    public function setTargetUrl($targetUrl)
     {
-        $this->container['target_url'] = $target_url;
+        $this->container['targetUrl'] = $targetUrl;
 
         return $this;
     }
 
     /**
-     * Gets updated_at
+     * Gets updatedAt
      *
      * @return \DateTime|null
      */
     public function getUpdatedAt()
     {
-        return $this->container['updated_at'];
+        return $this->container['updatedAt'];
     }
 
     /**
-     * Sets updated_at
+     * Sets updatedAt
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updatedAt updatedAt
      *
      * @return self
      */
-    public function setUpdatedAt($updated_at)
+    public function setUpdatedAt($updatedAt)
     {
-        $this->container['updated_at'] = $updated_at;
+        $this->container['updatedAt'] = $updatedAt;
 
         return $this;
     }

@@ -61,7 +61,7 @@ class PullReviewRequestOptions implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static $openAPITypes = [
         'reviewers' => 'string[]',
-        'team_reviewers' => 'string[]'
+        'teamReviewers' => 'string[]'
     ];
 
     /**
@@ -73,7 +73,7 @@ class PullReviewRequestOptions implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static $openAPIFormats = [
         'reviewers' => null,
-        'team_reviewers' => null
+        'teamReviewers' => null
     ];
 
     /**
@@ -104,7 +104,7 @@ class PullReviewRequestOptions implements ModelInterface, ArrayAccess, \JsonSeri
      */
     protected static $attributeMap = [
         'reviewers' => 'reviewers',
-        'team_reviewers' => 'team_reviewers'
+        'teamReviewers' => 'team_reviewers'
     ];
 
     /**
@@ -114,7 +114,7 @@ class PullReviewRequestOptions implements ModelInterface, ArrayAccess, \JsonSeri
      */
     protected static $setters = [
         'reviewers' => 'setReviewers',
-        'team_reviewers' => 'setTeamReviewers'
+        'teamReviewers' => 'setTeamReviewers'
     ];
 
     /**
@@ -124,7 +124,7 @@ class PullReviewRequestOptions implements ModelInterface, ArrayAccess, \JsonSeri
      */
     protected static $getters = [
         'reviewers' => 'getReviewers',
-        'team_reviewers' => 'getTeamReviewers'
+        'teamReviewers' => 'getTeamReviewers'
     ];
 
     /**
@@ -185,7 +185,7 @@ class PullReviewRequestOptions implements ModelInterface, ArrayAccess, \JsonSeri
     public function __construct(array $data = null)
     {
         $this->container['reviewers'] = $data['reviewers'] ?? null;
-        $this->container['team_reviewers'] = $data['team_reviewers'] ?? null;
+        $this->container['teamReviewers'] = $data['teamReviewers'] ?? null;
     }
 
     /**
@@ -237,25 +237,25 @@ class PullReviewRequestOptions implements ModelInterface, ArrayAccess, \JsonSeri
     }
 
     /**
-     * Gets team_reviewers
+     * Gets teamReviewers
      *
      * @return string[]|null
      */
     public function getTeamReviewers()
     {
-        return $this->container['team_reviewers'];
+        return $this->container['teamReviewers'];
     }
 
     /**
-     * Sets team_reviewers
+     * Sets teamReviewers
      *
-     * @param string[]|null $team_reviewers team_reviewers
+     * @param string[]|null $teamReviewers teamReviewers
      *
      * @return self
      */
-    public function setTeamReviewers($team_reviewers)
+    public function setTeamReviewers($teamReviewers)
     {
-        $this->container['team_reviewers'] = $team_reviewers;
+        $this->container['teamReviewers'] = $teamReviewers;
 
         return $this;
     }

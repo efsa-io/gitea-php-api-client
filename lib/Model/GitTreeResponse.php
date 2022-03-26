@@ -62,7 +62,7 @@ class GitTreeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'page' => 'int',
         'sha' => 'string',
-        'total_count' => 'int',
+        'totalCount' => 'int',
         'tree' => '\Efsa\Client\Gitea\Model\GitEntry[]',
         'truncated' => 'bool',
         'url' => 'string'
@@ -78,7 +78,7 @@ class GitTreeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'page' => 'int64',
         'sha' => null,
-        'total_count' => 'int64',
+        'totalCount' => 'int64',
         'tree' => null,
         'truncated' => null,
         'url' => null
@@ -113,7 +113,7 @@ class GitTreeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'page' => 'page',
         'sha' => 'sha',
-        'total_count' => 'total_count',
+        'totalCount' => 'total_count',
         'tree' => 'tree',
         'truncated' => 'truncated',
         'url' => 'url'
@@ -127,7 +127,7 @@ class GitTreeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'page' => 'setPage',
         'sha' => 'setSha',
-        'total_count' => 'setTotalCount',
+        'totalCount' => 'setTotalCount',
         'tree' => 'setTree',
         'truncated' => 'setTruncated',
         'url' => 'setUrl'
@@ -141,7 +141,7 @@ class GitTreeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'page' => 'getPage',
         'sha' => 'getSha',
-        'total_count' => 'getTotalCount',
+        'totalCount' => 'getTotalCount',
         'tree' => 'getTree',
         'truncated' => 'getTruncated',
         'url' => 'getUrl'
@@ -206,7 +206,7 @@ class GitTreeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['page'] = $data['page'] ?? null;
         $this->container['sha'] = $data['sha'] ?? null;
-        $this->container['total_count'] = $data['total_count'] ?? null;
+        $this->container['totalCount'] = $data['totalCount'] ?? null;
         $this->container['tree'] = $data['tree'] ?? null;
         $this->container['truncated'] = $data['truncated'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
@@ -285,25 +285,25 @@ class GitTreeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets total_count
+     * Gets totalCount
      *
      * @return int|null
      */
     public function getTotalCount()
     {
-        return $this->container['total_count'];
+        return $this->container['totalCount'];
     }
 
     /**
-     * Sets total_count
+     * Sets totalCount
      *
-     * @param int|null $total_count total_count
+     * @param int|null $totalCount totalCount
      *
      * @return self
      */
-    public function setTotalCount($total_count)
+    public function setTotalCount($totalCount)
     {
-        $this->container['total_count'] = $total_count;
+        $this->container['totalCount'] = $totalCount;
 
         return $this;
     }

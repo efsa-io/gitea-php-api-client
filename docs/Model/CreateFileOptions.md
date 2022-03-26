@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **content** | **string** | content must be base64 encoded |
 **dates** | [**\Efsa\Client\Gitea\Model\CommitDateOptions**](CommitDateOptions.md) |  | [optional]
 **message** | **string** | message (optional) for the commit of this file. if not supplied, a default message will be used | [optional]
-**new_branch** | **string** | new_branch (optional) will make a new branch from &#x60;branch&#x60; before creating the file | [optional]
+**newBranch** | **string** | new_branch (optional) will make a new branch from &#x60;branch&#x60; before creating the file | [optional]
 **signoff** | **bool** | Add a Signed-off-by trailer by the committer at the end of the commit log message. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

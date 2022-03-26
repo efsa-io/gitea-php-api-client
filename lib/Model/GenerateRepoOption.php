@@ -62,8 +62,8 @@ class GenerateRepoOption implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $openAPITypes = [
         'avatar' => 'bool',
         'description' => 'string',
-        'git_content' => 'bool',
-        'git_hooks' => 'bool',
+        'gitContent' => 'bool',
+        'gitHooks' => 'bool',
         'labels' => 'bool',
         'name' => 'string',
         'owner' => 'string',
@@ -82,8 +82,8 @@ class GenerateRepoOption implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $openAPIFormats = [
         'avatar' => null,
         'description' => null,
-        'git_content' => null,
-        'git_hooks' => null,
+        'gitContent' => null,
+        'gitHooks' => null,
         'labels' => null,
         'name' => null,
         'owner' => null,
@@ -121,8 +121,8 @@ class GenerateRepoOption implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $attributeMap = [
         'avatar' => 'avatar',
         'description' => 'description',
-        'git_content' => 'git_content',
-        'git_hooks' => 'git_hooks',
+        'gitContent' => 'git_content',
+        'gitHooks' => 'git_hooks',
         'labels' => 'labels',
         'name' => 'name',
         'owner' => 'owner',
@@ -139,8 +139,8 @@ class GenerateRepoOption implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $setters = [
         'avatar' => 'setAvatar',
         'description' => 'setDescription',
-        'git_content' => 'setGitContent',
-        'git_hooks' => 'setGitHooks',
+        'gitContent' => 'setGitContent',
+        'gitHooks' => 'setGitHooks',
         'labels' => 'setLabels',
         'name' => 'setName',
         'owner' => 'setOwner',
@@ -157,8 +157,8 @@ class GenerateRepoOption implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $getters = [
         'avatar' => 'getAvatar',
         'description' => 'getDescription',
-        'git_content' => 'getGitContent',
-        'git_hooks' => 'getGitHooks',
+        'gitContent' => 'getGitContent',
+        'gitHooks' => 'getGitHooks',
         'labels' => 'getLabels',
         'name' => 'getName',
         'owner' => 'getOwner',
@@ -226,8 +226,8 @@ class GenerateRepoOption implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $this->container['avatar'] = $data['avatar'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
-        $this->container['git_content'] = $data['git_content'] ?? null;
-        $this->container['git_hooks'] = $data['git_hooks'] ?? null;
+        $this->container['gitContent'] = $data['gitContent'] ?? null;
+        $this->container['gitHooks'] = $data['gitHooks'] ?? null;
         $this->container['labels'] = $data['labels'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['owner'] = $data['owner'] ?? null;
@@ -315,49 +315,49 @@ class GenerateRepoOption implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets git_content
+     * Gets gitContent
      *
      * @return bool|null
      */
     public function getGitContent()
     {
-        return $this->container['git_content'];
+        return $this->container['gitContent'];
     }
 
     /**
-     * Sets git_content
+     * Sets gitContent
      *
-     * @param bool|null $git_content include git content of default branch in template repo
+     * @param bool|null $gitContent include git content of default branch in template repo
      *
      * @return self
      */
-    public function setGitContent($git_content)
+    public function setGitContent($gitContent)
     {
-        $this->container['git_content'] = $git_content;
+        $this->container['gitContent'] = $gitContent;
 
         return $this;
     }
 
     /**
-     * Gets git_hooks
+     * Gets gitHooks
      *
      * @return bool|null
      */
     public function getGitHooks()
     {
-        return $this->container['git_hooks'];
+        return $this->container['gitHooks'];
     }
 
     /**
-     * Sets git_hooks
+     * Sets gitHooks
      *
-     * @param bool|null $git_hooks include git hooks in template repo
+     * @param bool|null $gitHooks include git hooks in template repo
      *
      * @return self
      */
-    public function setGitHooks($git_hooks)
+    public function setGitHooks($gitHooks)
     {
-        $this->container['git_hooks'] = $git_hooks;
+        $this->container['gitHooks'] = $gitHooks;
 
         return $this;
     }
