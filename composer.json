@@ -1,5 +1,6 @@
 {
     "name": "efsa-io/gitea-php-api-client",
+    "version": "1.0.0",
     "description": "This documentation describes the Gitea API.",
     "keywords": [
         "openapitools",
