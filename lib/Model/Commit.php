@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * Commit Class Doc Comment
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -59,13 +59,13 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'author' => '\Efsa\Client\Model\User',
-        'commit' => '\Efsa\Client\Model\RepoCommit',
-        'committer' => '\Efsa\Client\Model\User',
+        'author' => '\Efsa\Client\Gitea\Model\User',
+        'commit' => '\Efsa\Client\Gitea\Model\RepoCommit',
+        'committer' => '\Efsa\Client\Gitea\Model\User',
         'created' => '\DateTime',
-        'files' => '\Efsa\Client\Model\CommitAffectedFiles[]',
+        'files' => '\Efsa\Client\Gitea\Model\CommitAffectedFiles[]',
         'html_url' => 'string',
-        'parents' => '\Efsa\Client\Model\CommitMeta[]',
+        'parents' => '\Efsa\Client\Gitea\Model\CommitMeta[]',
         'sha' => 'string',
         'url' => 'string'
     ];
@@ -256,7 +256,7 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets author
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getAuthor()
     {
@@ -266,7 +266,7 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets author
      *
-     * @param \Efsa\Client\Model\User|null $author author
+     * @param \Efsa\Client\Gitea\Model\User|null $author author
      *
      * @return self
      */
@@ -280,7 +280,7 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets commit
      *
-     * @return \Efsa\Client\Model\RepoCommit|null
+     * @return \Efsa\Client\Gitea\Model\RepoCommit|null
      */
     public function getCommit()
     {
@@ -290,7 +290,7 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets commit
      *
-     * @param \Efsa\Client\Model\RepoCommit|null $commit commit
+     * @param \Efsa\Client\Gitea\Model\RepoCommit|null $commit commit
      *
      * @return self
      */
@@ -304,7 +304,7 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets committer
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getCommitter()
     {
@@ -314,7 +314,7 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets committer
      *
-     * @param \Efsa\Client\Model\User|null $committer committer
+     * @param \Efsa\Client\Gitea\Model\User|null $committer committer
      *
      * @return self
      */
@@ -352,7 +352,7 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets files
      *
-     * @return \Efsa\Client\Model\CommitAffectedFiles[]|null
+     * @return \Efsa\Client\Gitea\Model\CommitAffectedFiles[]|null
      */
     public function getFiles()
     {
@@ -362,7 +362,7 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets files
      *
-     * @param \Efsa\Client\Model\CommitAffectedFiles[]|null $files files
+     * @param \Efsa\Client\Gitea\Model\CommitAffectedFiles[]|null $files files
      *
      * @return self
      */
@@ -400,7 +400,7 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets parents
      *
-     * @return \Efsa\Client\Model\CommitMeta[]|null
+     * @return \Efsa\Client\Gitea\Model\CommitMeta[]|null
      */
     public function getParents()
     {
@@ -410,7 +410,7 @@ class Commit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets parents
      *
-     * @param \Efsa\Client\Model\CommitMeta[]|null $parents parents
+     * @param \Efsa\Client\Gitea\Model\CommitMeta[]|null $parents parents
      *
      * @return self
      */

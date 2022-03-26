@@ -1,4 +1,4 @@
-# Efsa\Client\SettingsApi
+# Efsa\Client\Gitea\SettingsApi
 
 All URIs are relative to http://localhost/api/v1.
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 ## `getGeneralAPISettings()`
 
 ```php
-getGeneralAPISettings(): \Efsa\Client\Model\GeneralAPISettings
+getGeneralAPISettings(): \Efsa\Client\Gitea\Model\GeneralAPISettings
 ```
 
 Get instance's global settings for api
@@ -26,42 +26,42 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: AccessToken
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
 // Configure API key authorization: AuthorizationHeaderToken
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure HTTP basic authorization: BasicAuth
-$config = Efsa\Client\Configuration::getDefaultConfiguration()
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: SudoHeader
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('Sudo', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('Sudo', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Sudo', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Sudo', 'Bearer');
 
 // Configure API key authorization: SudoParam
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('sudo', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('sudo', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sudo', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sudo', 'Bearer');
 
 // Configure API key authorization: TOTPHeader
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('X-GITEA-OTP', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('X-GITEA-OTP', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-GITEA-OTP', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-GITEA-OTP', 'Bearer');
 
 // Configure API key authorization: Token
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 
 
-$apiInstance = new Efsa\Client\Api\SettingsApi(
+$apiInstance = new Efsa\Client\Gitea\Api\SettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -82,7 +82,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Efsa\Client\Model\GeneralAPISettings**](../Model/GeneralAPISettings.md)
+[**\Efsa\Client\Gitea\Model\GeneralAPISettings**](../Model/GeneralAPISettings.md)
 
 ### Authorization
 
@@ -100,7 +100,7 @@ This endpoint does not need any parameter.
 ## `getGeneralAttachmentSettings()`
 
 ```php
-getGeneralAttachmentSettings(): \Efsa\Client\Model\GeneralAttachmentSettings
+getGeneralAttachmentSettings(): \Efsa\Client\Gitea\Model\GeneralAttachmentSettings
 ```
 
 Get instance's global settings for Attachment
@@ -113,42 +113,42 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: AccessToken
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
 // Configure API key authorization: AuthorizationHeaderToken
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure HTTP basic authorization: BasicAuth
-$config = Efsa\Client\Configuration::getDefaultConfiguration()
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: SudoHeader
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('Sudo', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('Sudo', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Sudo', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Sudo', 'Bearer');
 
 // Configure API key authorization: SudoParam
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('sudo', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('sudo', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sudo', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sudo', 'Bearer');
 
 // Configure API key authorization: TOTPHeader
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('X-GITEA-OTP', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('X-GITEA-OTP', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-GITEA-OTP', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-GITEA-OTP', 'Bearer');
 
 // Configure API key authorization: Token
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 
 
-$apiInstance = new Efsa\Client\Api\SettingsApi(
+$apiInstance = new Efsa\Client\Gitea\Api\SettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -169,7 +169,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Efsa\Client\Model\GeneralAttachmentSettings**](../Model/GeneralAttachmentSettings.md)
+[**\Efsa\Client\Gitea\Model\GeneralAttachmentSettings**](../Model/GeneralAttachmentSettings.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ This endpoint does not need any parameter.
 ## `getGeneralRepositorySettings()`
 
 ```php
-getGeneralRepositorySettings(): \Efsa\Client\Model\GeneralRepoSettings
+getGeneralRepositorySettings(): \Efsa\Client\Gitea\Model\GeneralRepoSettings
 ```
 
 Get instance's global settings for repositories
@@ -200,42 +200,42 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: AccessToken
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
 // Configure API key authorization: AuthorizationHeaderToken
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure HTTP basic authorization: BasicAuth
-$config = Efsa\Client\Configuration::getDefaultConfiguration()
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: SudoHeader
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('Sudo', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('Sudo', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Sudo', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Sudo', 'Bearer');
 
 // Configure API key authorization: SudoParam
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('sudo', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('sudo', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sudo', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sudo', 'Bearer');
 
 // Configure API key authorization: TOTPHeader
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('X-GITEA-OTP', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('X-GITEA-OTP', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-GITEA-OTP', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-GITEA-OTP', 'Bearer');
 
 // Configure API key authorization: Token
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 
 
-$apiInstance = new Efsa\Client\Api\SettingsApi(
+$apiInstance = new Efsa\Client\Gitea\Api\SettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -256,7 +256,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Efsa\Client\Model\GeneralRepoSettings**](../Model/GeneralRepoSettings.md)
+[**\Efsa\Client\Gitea\Model\GeneralRepoSettings**](../Model/GeneralRepoSettings.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ This endpoint does not need any parameter.
 ## `getGeneralUISettings()`
 
 ```php
-getGeneralUISettings(): \Efsa\Client\Model\GeneralUISettings
+getGeneralUISettings(): \Efsa\Client\Gitea\Model\GeneralUISettings
 ```
 
 Get instance's global settings for ui
@@ -287,42 +287,42 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: AccessToken
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'Bearer');
 
 // Configure API key authorization: AuthorizationHeaderToken
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure HTTP basic authorization: BasicAuth
-$config = Efsa\Client\Configuration::getDefaultConfiguration()
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: SudoHeader
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('Sudo', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('Sudo', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Sudo', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Sudo', 'Bearer');
 
 // Configure API key authorization: SudoParam
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('sudo', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('sudo', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sudo', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sudo', 'Bearer');
 
 // Configure API key authorization: TOTPHeader
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('X-GITEA-OTP', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('X-GITEA-OTP', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-GITEA-OTP', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-GITEA-OTP', 'Bearer');
 
 // Configure API key authorization: Token
-$config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+$config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Efsa\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// $config = Efsa\Client\Gitea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 
 
-$apiInstance = new Efsa\Client\Api\SettingsApi(
+$apiInstance = new Efsa\Client\Gitea\Api\SettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -343,7 +343,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Efsa\Client\Model\GeneralUISettings**](../Model/GeneralUISettings.md)
+[**\Efsa\Client\Gitea\Model\GeneralUISettings**](../Model/GeneralUISettings.md)
 
 ### Authorization
 

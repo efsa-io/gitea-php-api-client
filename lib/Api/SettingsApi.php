@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Gitea;
+namespace Efsa\Client\Gitea\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Efsa\Client\ApiException;
-use Efsa\Client\Configuration;
-use Efsa\Client\HeaderSelector;
-use Efsa\Client\ObjectSerializer;
+use Efsa\Client\Gitea\ApiException;
+use Efsa\Client\Gitea\Configuration;
+use Efsa\Client\Gitea\HeaderSelector;
+use Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * SettingsApi Class Doc Comment
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -120,9 +120,9 @@ class SettingsApi
      * Get instance&#39;s global settings for api
      *
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\GeneralAPISettings
+     * @return \Efsa\Client\Gitea\Model\GeneralAPISettings
      */
     public function getGeneralAPISettings()
     {
@@ -136,9 +136,9 @@ class SettingsApi
      * Get instance&#39;s global settings for api
      *
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\GeneralAPISettings, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\GeneralAPISettings, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGeneralAPISettingsWithHttpInfo()
     {
@@ -174,20 +174,20 @@ class SettingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\GeneralAPISettings' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\GeneralAPISettings' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\GeneralAPISettings', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\GeneralAPISettings', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\GeneralAPISettings';
+            $returnType = '\Efsa\Client\Gitea\Model\GeneralAPISettings';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -205,7 +205,7 @@ class SettingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\GeneralAPISettings',
+                        '\Efsa\Client\Gitea\Model\GeneralAPISettings',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -245,7 +245,7 @@ class SettingsApi
      */
     public function getGeneralAPISettingsAsyncWithHttpInfo()
     {
-        $returnType = '\Efsa\Client\Model\GeneralAPISettings';
+        $returnType = '\Efsa\Client\Gitea\Model\GeneralAPISettings';
         $request = $this->getGeneralAPISettingsRequest();
 
         return $this->client
@@ -399,9 +399,9 @@ class SettingsApi
      * Get instance&#39;s global settings for Attachment
      *
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\GeneralAttachmentSettings
+     * @return \Efsa\Client\Gitea\Model\GeneralAttachmentSettings
      */
     public function getGeneralAttachmentSettings()
     {
@@ -415,9 +415,9 @@ class SettingsApi
      * Get instance&#39;s global settings for Attachment
      *
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\GeneralAttachmentSettings, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\GeneralAttachmentSettings, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGeneralAttachmentSettingsWithHttpInfo()
     {
@@ -453,20 +453,20 @@ class SettingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\GeneralAttachmentSettings' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\GeneralAttachmentSettings' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\GeneralAttachmentSettings', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\GeneralAttachmentSettings', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\GeneralAttachmentSettings';
+            $returnType = '\Efsa\Client\Gitea\Model\GeneralAttachmentSettings';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -484,7 +484,7 @@ class SettingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\GeneralAttachmentSettings',
+                        '\Efsa\Client\Gitea\Model\GeneralAttachmentSettings',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -524,7 +524,7 @@ class SettingsApi
      */
     public function getGeneralAttachmentSettingsAsyncWithHttpInfo()
     {
-        $returnType = '\Efsa\Client\Model\GeneralAttachmentSettings';
+        $returnType = '\Efsa\Client\Gitea\Model\GeneralAttachmentSettings';
         $request = $this->getGeneralAttachmentSettingsRequest();
 
         return $this->client
@@ -678,9 +678,9 @@ class SettingsApi
      * Get instance&#39;s global settings for repositories
      *
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\GeneralRepoSettings
+     * @return \Efsa\Client\Gitea\Model\GeneralRepoSettings
      */
     public function getGeneralRepositorySettings()
     {
@@ -694,9 +694,9 @@ class SettingsApi
      * Get instance&#39;s global settings for repositories
      *
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\GeneralRepoSettings, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\GeneralRepoSettings, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGeneralRepositorySettingsWithHttpInfo()
     {
@@ -732,20 +732,20 @@ class SettingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\GeneralRepoSettings' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\GeneralRepoSettings' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\GeneralRepoSettings', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\GeneralRepoSettings', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\GeneralRepoSettings';
+            $returnType = '\Efsa\Client\Gitea\Model\GeneralRepoSettings';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -763,7 +763,7 @@ class SettingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\GeneralRepoSettings',
+                        '\Efsa\Client\Gitea\Model\GeneralRepoSettings',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -803,7 +803,7 @@ class SettingsApi
      */
     public function getGeneralRepositorySettingsAsyncWithHttpInfo()
     {
-        $returnType = '\Efsa\Client\Model\GeneralRepoSettings';
+        $returnType = '\Efsa\Client\Gitea\Model\GeneralRepoSettings';
         $request = $this->getGeneralRepositorySettingsRequest();
 
         return $this->client
@@ -957,9 +957,9 @@ class SettingsApi
      * Get instance&#39;s global settings for ui
      *
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\GeneralUISettings
+     * @return \Efsa\Client\Gitea\Model\GeneralUISettings
      */
     public function getGeneralUISettings()
     {
@@ -973,9 +973,9 @@ class SettingsApi
      * Get instance&#39;s global settings for ui
      *
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\GeneralUISettings, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\GeneralUISettings, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGeneralUISettingsWithHttpInfo()
     {
@@ -1011,20 +1011,20 @@ class SettingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\GeneralUISettings' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\GeneralUISettings' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\GeneralUISettings', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\GeneralUISettings', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\GeneralUISettings';
+            $returnType = '\Efsa\Client\Gitea\Model\GeneralUISettings';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1042,7 +1042,7 @@ class SettingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\GeneralUISettings',
+                        '\Efsa\Client\Gitea\Model\GeneralUISettings',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1082,7 +1082,7 @@ class SettingsApi
      */
     public function getGeneralUISettingsAsyncWithHttpInfo()
     {
-        $returnType = '\Efsa\Client\Model\GeneralUISettings';
+        $returnType = '\Efsa\Client\Gitea\Model\GeneralUISettings';
         $request = $this->getGeneralUISettingsRequest();
 
         return $this->client

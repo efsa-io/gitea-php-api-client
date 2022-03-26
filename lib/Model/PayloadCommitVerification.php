@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * PayloadCommitVerification Class Doc Comment
  *
  * @category Class
  * @description PayloadCommitVerification represents the GPG verification of a commit
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -63,7 +63,7 @@ class PayloadCommitVerification implements ModelInterface, ArrayAccess, \JsonSer
         'payload' => 'string',
         'reason' => 'string',
         'signature' => 'string',
-        'signer' => '\Efsa\Client\Model\PayloadUser',
+        'signer' => '\Efsa\Client\Gitea\Model\PayloadUser',
         'verified' => 'bool'
     ];
 
@@ -305,7 +305,7 @@ class PayloadCommitVerification implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets signer
      *
-     * @return \Efsa\Client\Model\PayloadUser|null
+     * @return \Efsa\Client\Gitea\Model\PayloadUser|null
      */
     public function getSigner()
     {
@@ -315,7 +315,7 @@ class PayloadCommitVerification implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets signer
      *
-     * @param \Efsa\Client\Model\PayloadUser|null $signer signer
+     * @param \Efsa\Client\Gitea\Model\PayloadUser|null $signer signer
      *
      * @return self
      */

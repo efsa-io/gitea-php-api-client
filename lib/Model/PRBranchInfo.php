@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * PRBranchInfo Class Doc Comment
  *
  * @category Class
  * @description PRBranchInfo information about a branch
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -62,7 +62,7 @@ class PRBranchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'label' => 'string',
         'ref' => 'string',
-        'repo' => '\Efsa\Client\Model\Repository',
+        'repo' => '\Efsa\Client\Gitea\Model\Repository',
         'repo_id' => 'int',
         'sha' => 'string'
     ];
@@ -281,7 +281,7 @@ class PRBranchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets repo
      *
-     * @return \Efsa\Client\Model\Repository|null
+     * @return \Efsa\Client\Gitea\Model\Repository|null
      */
     public function getRepo()
     {
@@ -291,7 +291,7 @@ class PRBranchInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets repo
      *
-     * @param \Efsa\Client\Model\Repository|null $repo repo
+     * @param \Efsa\Client\Gitea\Model\Repository|null $repo repo
      *
      * @return self
      */

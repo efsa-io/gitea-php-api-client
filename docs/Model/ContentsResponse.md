@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_links** | [**\Efsa\Client\Model\FileLinksResponse**](FileLinksResponse.md) |  | [optional]
+**_links** | [**\Efsa\Client\Gitea\Model\FileLinksResponse**](FileLinksResponse.md) |  | [optional]
 **content** | **string** | &#x60;content&#x60; is populated when &#x60;type&#x60; is &#x60;file&#x60;, otherwise null | [optional]
 **download_url** | **string** |  | [optional]
 **encoding** | **string** | &#x60;encoding&#x60; is populated when &#x60;type&#x60; is &#x60;file&#x60;, otherwise null | [optional]

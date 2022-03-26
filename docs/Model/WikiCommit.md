@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**author** | [**\Efsa\Client\Model\CommitUser**](CommitUser.md) |  | [optional]
-**commiter** | [**\Efsa\Client\Model\CommitUser**](CommitUser.md) |  | [optional]
+**author** | [**\Efsa\Client\Gitea\Model\CommitUser**](CommitUser.md) |  | [optional]
+**commiter** | [**\Efsa\Client\Gitea\Model\CommitUser**](CommitUser.md) |  | [optional]
 **message** | **string** |  | [optional]
 **sha** | **string** |  | [optional]
 

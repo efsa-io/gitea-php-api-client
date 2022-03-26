@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **content_base64** | **string** | Page content, base64 encoded | [optional]
 **footer** | **string** |  | [optional]
 **html_url** | **string** |  | [optional]
-**last_commit** | [**\Efsa\Client\Model\WikiCommit**](WikiCommit.md) |  | [optional]
+**last_commit** | [**\Efsa\Client\Gitea\Model\WikiCommit**](WikiCommit.md) |  | [optional]
 **sidebar** | **string** |  | [optional]
 **sub_url** | **string** |  | [optional]
 **title** | **string** |  | [optional]

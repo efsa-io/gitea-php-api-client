@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * AnnotatedTag Class Doc Comment
  *
  * @category Class
  * @description AnnotatedTag represents an annotated tag
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -61,12 +61,12 @@ class AnnotatedTag implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'object' => '\Efsa\Client\Model\AnnotatedTagObject',
+        'object' => '\Efsa\Client\Gitea\Model\AnnotatedTagObject',
         'sha' => 'string',
         'tag' => 'string',
-        'tagger' => '\Efsa\Client\Model\CommitUser',
+        'tagger' => '\Efsa\Client\Gitea\Model\CommitUser',
         'url' => 'string',
-        'verification' => '\Efsa\Client\Model\PayloadCommitVerification'
+        'verification' => '\Efsa\Client\Gitea\Model\PayloadCommitVerification'
     ];
 
     /**
@@ -269,7 +269,7 @@ class AnnotatedTag implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets object
      *
-     * @return \Efsa\Client\Model\AnnotatedTagObject|null
+     * @return \Efsa\Client\Gitea\Model\AnnotatedTagObject|null
      */
     public function getObject()
     {
@@ -279,7 +279,7 @@ class AnnotatedTag implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets object
      *
-     * @param \Efsa\Client\Model\AnnotatedTagObject|null $object object
+     * @param \Efsa\Client\Gitea\Model\AnnotatedTagObject|null $object object
      *
      * @return self
      */
@@ -341,7 +341,7 @@ class AnnotatedTag implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tagger
      *
-     * @return \Efsa\Client\Model\CommitUser|null
+     * @return \Efsa\Client\Gitea\Model\CommitUser|null
      */
     public function getTagger()
     {
@@ -351,7 +351,7 @@ class AnnotatedTag implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tagger
      *
-     * @param \Efsa\Client\Model\CommitUser|null $tagger tagger
+     * @param \Efsa\Client\Gitea\Model\CommitUser|null $tagger tagger
      *
      * @return self
      */
@@ -389,7 +389,7 @@ class AnnotatedTag implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets verification
      *
-     * @return \Efsa\Client\Model\PayloadCommitVerification|null
+     * @return \Efsa\Client\Gitea\Model\PayloadCommitVerification|null
      */
     public function getVerification()
     {
@@ -399,7 +399,7 @@ class AnnotatedTag implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets verification
      *
-     * @param \Efsa\Client\Model\PayloadCommitVerification|null $verification verification
+     * @param \Efsa\Client\Gitea\Model\PayloadCommitVerification|null $verification verification
      *
      * @return self
      */

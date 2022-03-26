@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * CreateBranchRepoOption Class Doc Comment
  *
  * @category Class
  * @description CreateBranchRepoOption options when creating a branch in a repository
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>

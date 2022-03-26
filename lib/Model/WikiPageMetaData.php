@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * WikiPageMetaData Class Doc Comment
  *
  * @category Class
  * @description WikiPageMetaData wiki page meta information
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -61,7 +61,7 @@ class WikiPageMetaData implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'html_url' => 'string',
-        'last_commit' => '\Efsa\Client\Model\WikiCommit',
+        'last_commit' => '\Efsa\Client\Gitea\Model\WikiCommit',
         'sub_url' => 'string',
         'title' => 'string'
     ];
@@ -251,7 +251,7 @@ class WikiPageMetaData implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets last_commit
      *
-     * @return \Efsa\Client\Model\WikiCommit|null
+     * @return \Efsa\Client\Gitea\Model\WikiCommit|null
      */
     public function getLastCommit()
     {
@@ -261,7 +261,7 @@ class WikiPageMetaData implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets last_commit
      *
-     * @param \Efsa\Client\Model\WikiCommit|null $last_commit last_commit
+     * @param \Efsa\Client\Gitea\Model\WikiCommit|null $last_commit last_commit
      *
      * @return self
      */

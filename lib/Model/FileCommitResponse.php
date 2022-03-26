@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * FileCommitResponse Class Doc Comment
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -59,14 +59,14 @@ class FileCommitResponse implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'author' => '\Efsa\Client\Model\CommitUser',
-        'committer' => '\Efsa\Client\Model\CommitUser',
+        'author' => '\Efsa\Client\Gitea\Model\CommitUser',
+        'committer' => '\Efsa\Client\Gitea\Model\CommitUser',
         'created' => '\DateTime',
         'html_url' => 'string',
         'message' => 'string',
-        'parents' => '\Efsa\Client\Model\CommitMeta[]',
+        'parents' => '\Efsa\Client\Gitea\Model\CommitMeta[]',
         'sha' => 'string',
-        'tree' => '\Efsa\Client\Model\CommitMeta',
+        'tree' => '\Efsa\Client\Gitea\Model\CommitMeta',
         'url' => 'string'
     ];
 
@@ -256,7 +256,7 @@ class FileCommitResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets author
      *
-     * @return \Efsa\Client\Model\CommitUser|null
+     * @return \Efsa\Client\Gitea\Model\CommitUser|null
      */
     public function getAuthor()
     {
@@ -266,7 +266,7 @@ class FileCommitResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets author
      *
-     * @param \Efsa\Client\Model\CommitUser|null $author author
+     * @param \Efsa\Client\Gitea\Model\CommitUser|null $author author
      *
      * @return self
      */
@@ -280,7 +280,7 @@ class FileCommitResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets committer
      *
-     * @return \Efsa\Client\Model\CommitUser|null
+     * @return \Efsa\Client\Gitea\Model\CommitUser|null
      */
     public function getCommitter()
     {
@@ -290,7 +290,7 @@ class FileCommitResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets committer
      *
-     * @param \Efsa\Client\Model\CommitUser|null $committer committer
+     * @param \Efsa\Client\Gitea\Model\CommitUser|null $committer committer
      *
      * @return self
      */
@@ -376,7 +376,7 @@ class FileCommitResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets parents
      *
-     * @return \Efsa\Client\Model\CommitMeta[]|null
+     * @return \Efsa\Client\Gitea\Model\CommitMeta[]|null
      */
     public function getParents()
     {
@@ -386,7 +386,7 @@ class FileCommitResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets parents
      *
-     * @param \Efsa\Client\Model\CommitMeta[]|null $parents parents
+     * @param \Efsa\Client\Gitea\Model\CommitMeta[]|null $parents parents
      *
      * @return self
      */
@@ -424,7 +424,7 @@ class FileCommitResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets tree
      *
-     * @return \Efsa\Client\Model\CommitMeta|null
+     * @return \Efsa\Client\Gitea\Model\CommitMeta|null
      */
     public function getTree()
     {
@@ -434,7 +434,7 @@ class FileCommitResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets tree
      *
-     * @param \Efsa\Client\Model\CommitMeta|null $tree tree
+     * @param \Efsa\Client\Gitea\Model\CommitMeta|null $tree tree
      *
      * @return self
      */

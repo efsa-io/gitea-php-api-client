@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Gitea;
+namespace Efsa\Client\Gitea\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Efsa\Client\ApiException;
-use Efsa\Client\Configuration;
-use Efsa\Client\HeaderSelector;
-use Efsa\Client\ObjectSerializer;
+use Efsa\Client\Gitea\ApiException;
+use Efsa\Client\Gitea\Configuration;
+use Efsa\Client\Gitea\HeaderSelector;
+use Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * MiscellaneousApi Class Doc Comment
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -120,9 +120,9 @@ class MiscellaneousApi
      * Returns the nodeinfo of the Gitea application
      *
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\NodeInfo
+     * @return \Efsa\Client\Gitea\Model\NodeInfo
      */
     public function getNodeInfo()
     {
@@ -136,9 +136,9 @@ class MiscellaneousApi
      * Returns the nodeinfo of the Gitea application
      *
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\NodeInfo, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\NodeInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function getNodeInfoWithHttpInfo()
     {
@@ -174,20 +174,20 @@ class MiscellaneousApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\NodeInfo' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\NodeInfo' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\NodeInfo', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\NodeInfo', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\NodeInfo';
+            $returnType = '\Efsa\Client\Gitea\Model\NodeInfo';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -205,7 +205,7 @@ class MiscellaneousApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\NodeInfo',
+                        '\Efsa\Client\Gitea\Model\NodeInfo',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -245,7 +245,7 @@ class MiscellaneousApi
      */
     public function getNodeInfoAsyncWithHttpInfo()
     {
-        $returnType = '\Efsa\Client\Model\NodeInfo';
+        $returnType = '\Efsa\Client\Gitea\Model\NodeInfo';
         $request = $this->getNodeInfoRequest();
 
         return $this->client
@@ -399,7 +399,7 @@ class MiscellaneousApi
      * Get default signing-key.gpg
      *
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -415,7 +415,7 @@ class MiscellaneousApi
      * Get default signing-key.gpg
      *
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -678,9 +678,9 @@ class MiscellaneousApi
      * Returns the version of the Gitea application
      *
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\ServerVersion
+     * @return \Efsa\Client\Gitea\Model\ServerVersion
      */
     public function getVersion()
     {
@@ -694,9 +694,9 @@ class MiscellaneousApi
      * Returns the version of the Gitea application
      *
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\ServerVersion, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\ServerVersion, HTTP status code, HTTP response headers (array of strings)
      */
     public function getVersionWithHttpInfo()
     {
@@ -732,20 +732,20 @@ class MiscellaneousApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\ServerVersion' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\ServerVersion' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\ServerVersion', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\ServerVersion', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\ServerVersion';
+            $returnType = '\Efsa\Client\Gitea\Model\ServerVersion';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -763,7 +763,7 @@ class MiscellaneousApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\ServerVersion',
+                        '\Efsa\Client\Gitea\Model\ServerVersion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -803,7 +803,7 @@ class MiscellaneousApi
      */
     public function getVersionAsyncWithHttpInfo()
     {
-        $returnType = '\Efsa\Client\Model\ServerVersion';
+        $returnType = '\Efsa\Client\Gitea\Model\ServerVersion';
         $request = $this->getVersionRequest();
 
         return $this->client
@@ -956,9 +956,9 @@ class MiscellaneousApi
      *
      * Render a markdown document as HTML
      *
-     * @param  \Efsa\Client\Model\MarkdownOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\MarkdownOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -973,9 +973,9 @@ class MiscellaneousApi
      *
      * Render a markdown document as HTML
      *
-     * @param  \Efsa\Client\Model\MarkdownOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\MarkdownOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1059,7 +1059,7 @@ class MiscellaneousApi
      *
      * Render a markdown document as HTML
      *
-     * @param  \Efsa\Client\Model\MarkdownOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\MarkdownOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1079,7 +1079,7 @@ class MiscellaneousApi
      *
      * Render a markdown document as HTML
      *
-     * @param  \Efsa\Client\Model\MarkdownOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\MarkdownOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1125,7 +1125,7 @@ class MiscellaneousApi
     /**
      * Create request for operation 'renderMarkdown'
      *
-     * @param  \Efsa\Client\Model\MarkdownOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\MarkdownOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1248,7 +1248,7 @@ class MiscellaneousApi
      *
      * @param  string $body Request body to render (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -1265,7 +1265,7 @@ class MiscellaneousApi
      *
      * @param  string $body Request body to render (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */

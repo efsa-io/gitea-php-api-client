@@ -30,9 +30,9 @@
         "friendsofphp/php-cs-fixer": "^2.12"
     },
     "autoload": {
-        "psr-4": { "Efsa\\Client\\" : "lib/" }
+        "psr-4": { "Efsa\\Client\\Gitea\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Efsa\\Client\\Test\\" : "test/" }
+        "psr-4": { "Efsa\\Client\\Gitea\\Test\\" : "test/" }
     }
 }

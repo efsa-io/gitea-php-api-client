@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * PayloadCommit Class Doc Comment
  *
  * @category Class
  * @description PayloadCommit represents a commit
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -61,15 +61,15 @@ class PayloadCommit implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'added' => 'string[]',
-        'author' => '\Efsa\Client\Model\PayloadUser',
-        'committer' => '\Efsa\Client\Model\PayloadUser',
+        'author' => '\Efsa\Client\Gitea\Model\PayloadUser',
+        'committer' => '\Efsa\Client\Gitea\Model\PayloadUser',
         'id' => 'string',
         'message' => 'string',
         'modified' => 'string[]',
         'removed' => 'string[]',
         'timestamp' => '\DateTime',
         'url' => 'string',
-        'verification' => '\Efsa\Client\Model\PayloadCommitVerification'
+        'verification' => '\Efsa\Client\Gitea\Model\PayloadCommitVerification'
     ];
 
     /**
@@ -287,7 +287,7 @@ class PayloadCommit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets author
      *
-     * @return \Efsa\Client\Model\PayloadUser|null
+     * @return \Efsa\Client\Gitea\Model\PayloadUser|null
      */
     public function getAuthor()
     {
@@ -297,7 +297,7 @@ class PayloadCommit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets author
      *
-     * @param \Efsa\Client\Model\PayloadUser|null $author author
+     * @param \Efsa\Client\Gitea\Model\PayloadUser|null $author author
      *
      * @return self
      */
@@ -311,7 +311,7 @@ class PayloadCommit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets committer
      *
-     * @return \Efsa\Client\Model\PayloadUser|null
+     * @return \Efsa\Client\Gitea\Model\PayloadUser|null
      */
     public function getCommitter()
     {
@@ -321,7 +321,7 @@ class PayloadCommit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets committer
      *
-     * @param \Efsa\Client\Model\PayloadUser|null $committer committer
+     * @param \Efsa\Client\Gitea\Model\PayloadUser|null $committer committer
      *
      * @return self
      */
@@ -479,7 +479,7 @@ class PayloadCommit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets verification
      *
-     * @return \Efsa\Client\Model\PayloadCommitVerification|null
+     * @return \Efsa\Client\Gitea\Model\PayloadCommitVerification|null
      */
     public function getVerification()
     {
@@ -489,7 +489,7 @@ class PayloadCommit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets verification
      *
-     * @param \Efsa\Client\Model\PayloadCommitVerification|null $verification verification
+     * @param \Efsa\Client\Gitea\Model\PayloadCommitVerification|null $verification verification
      *
      * @return self
      */

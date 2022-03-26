@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * Release Class Doc Comment
  *
  * @category Class
  * @description Release represents a repository release
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,8 +60,8 @@ class Release implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'assets' => '\Efsa\Client\Model\Attachment[]',
-        'author' => '\Efsa\Client\Model\User',
+        'assets' => '\Efsa\Client\Gitea\Model\Attachment[]',
+        'author' => '\Efsa\Client\Gitea\Model\User',
         'body' => 'string',
         'created_at' => '\DateTime',
         'draft' => 'bool',
@@ -293,7 +293,7 @@ class Release implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets assets
      *
-     * @return \Efsa\Client\Model\Attachment[]|null
+     * @return \Efsa\Client\Gitea\Model\Attachment[]|null
      */
     public function getAssets()
     {
@@ -303,7 +303,7 @@ class Release implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets assets
      *
-     * @param \Efsa\Client\Model\Attachment[]|null $assets assets
+     * @param \Efsa\Client\Gitea\Model\Attachment[]|null $assets assets
      *
      * @return self
      */
@@ -317,7 +317,7 @@ class Release implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets author
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getAuthor()
     {
@@ -327,7 +327,7 @@ class Release implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets author
      *
-     * @param \Efsa\Client\Model\User|null $author author
+     * @param \Efsa\Client\Gitea\Model\User|null $author author
      *
      * @return self
      */

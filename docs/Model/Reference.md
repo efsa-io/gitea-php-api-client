@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**object** | [**\Efsa\Client\Model\GitObject**](GitObject.md) |  | [optional]
+**object** | [**\Efsa\Client\Gitea\Model\GitObject**](GitObject.md) |  | [optional]
 **ref** | **string** |  | [optional]
 **url** | **string** |  | [optional]
 

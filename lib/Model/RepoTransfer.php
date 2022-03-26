@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * RepoTransfer Class Doc Comment
  *
  * @category Class
  * @description RepoTransfer represents a pending repo transfer
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,9 +60,9 @@ class RepoTransfer implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'doer' => '\Efsa\Client\Model\User',
-        'recipient' => '\Efsa\Client\Model\User',
-        'teams' => '\Efsa\Client\Model\Team[]'
+        'doer' => '\Efsa\Client\Gitea\Model\User',
+        'recipient' => '\Efsa\Client\Gitea\Model\User',
+        'teams' => '\Efsa\Client\Gitea\Model\Team[]'
     ];
 
     /**
@@ -221,7 +221,7 @@ class RepoTransfer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets doer
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getDoer()
     {
@@ -231,7 +231,7 @@ class RepoTransfer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets doer
      *
-     * @param \Efsa\Client\Model\User|null $doer doer
+     * @param \Efsa\Client\Gitea\Model\User|null $doer doer
      *
      * @return self
      */
@@ -245,7 +245,7 @@ class RepoTransfer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets recipient
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getRecipient()
     {
@@ -255,7 +255,7 @@ class RepoTransfer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets recipient
      *
-     * @param \Efsa\Client\Model\User|null $recipient recipient
+     * @param \Efsa\Client\Gitea\Model\User|null $recipient recipient
      *
      * @return self
      */
@@ -269,7 +269,7 @@ class RepoTransfer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets teams
      *
-     * @return \Efsa\Client\Model\Team[]|null
+     * @return \Efsa\Client\Gitea\Model\Team[]|null
      */
     public function getTeams()
     {
@@ -279,7 +279,7 @@ class RepoTransfer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets teams
      *
-     * @param \Efsa\Client\Model\Team[]|null $teams teams
+     * @param \Efsa\Client\Gitea\Model\Team[]|null $teams teams
      *
      * @return self
      */

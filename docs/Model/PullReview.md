@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **stale** | **bool** |  | [optional]
 **state** | **string** | ReviewStateType review state type | [optional]
 **submitted_at** | [**\DateTime**](\DateTime.md) |  | [optional]
-**team** | [**\Efsa\Client\Model\Team**](Team.md) |  | [optional]
-**user** | [**\Efsa\Client\Model\User**](User.md) |  | [optional]
+**team** | [**\Efsa\Client\Gitea\Model\Team**](Team.md) |  | [optional]
+**user** | [**\Efsa\Client\Gitea\Model\User**](User.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

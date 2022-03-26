@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * Tag Class Doc Comment
  *
  * @category Class
  * @description Tag represents a repository tag
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,7 +60,7 @@ class Tag implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'commit' => '\Efsa\Client\Model\CommitMeta',
+        'commit' => '\Efsa\Client\Gitea\Model\CommitMeta',
         'id' => 'string',
         'message' => 'string',
         'name' => 'string',
@@ -239,7 +239,7 @@ class Tag implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets commit
      *
-     * @return \Efsa\Client\Model\CommitMeta|null
+     * @return \Efsa\Client\Gitea\Model\CommitMeta|null
      */
     public function getCommit()
     {
@@ -249,7 +249,7 @@ class Tag implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets commit
      *
-     * @param \Efsa\Client\Model\CommitMeta|null $commit commit
+     * @param \Efsa\Client\Gitea\Model\CommitMeta|null $commit commit
      *
      * @return self
      */

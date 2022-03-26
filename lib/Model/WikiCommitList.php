@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * WikiCommitList Class Doc Comment
  *
  * @category Class
  * @description WikiCommitList commit/revision list
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,7 +60,7 @@ class WikiCommitList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'commits' => '\Efsa\Client\Model\WikiCommit[]',
+        'commits' => '\Efsa\Client\Gitea\Model\WikiCommit[]',
         'count' => 'int'
     ];
 
@@ -215,7 +215,7 @@ class WikiCommitList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets commits
      *
-     * @return \Efsa\Client\Model\WikiCommit[]|null
+     * @return \Efsa\Client\Gitea\Model\WikiCommit[]|null
      */
     public function getCommits()
     {
@@ -225,7 +225,7 @@ class WikiCommitList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets commits
      *
-     * @param \Efsa\Client\Model\WikiCommit[]|null $commits commits
+     * @param \Efsa\Client\Gitea\Model\WikiCommit[]|null $commits commits
      *
      * @return self
      */

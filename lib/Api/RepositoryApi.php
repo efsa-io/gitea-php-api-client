@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Gitea;
+namespace Efsa\Client\Gitea\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Efsa\Client\ApiException;
-use Efsa\Client\Configuration;
-use Efsa\Client\HeaderSelector;
-use Efsa\Client\ObjectSerializer;
+use Efsa\Client\Gitea\ApiException;
+use Efsa\Client\Gitea\Configuration;
+use Efsa\Client\Gitea\HeaderSelector;
+use Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * RepositoryApi Class Doc Comment
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -122,9 +122,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo to transfer (required)
      * @param  string $repo name of the repo to transfer (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Repository
+     * @return \Efsa\Client\Gitea\Model\Repository
      */
     public function acceptRepoTransfer($owner, $repo)
     {
@@ -140,9 +140,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo to transfer (required)
      * @param  string $repo name of the repo to transfer (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Repository, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Repository, HTTP status code, HTTP response headers (array of strings)
      */
     public function acceptRepoTransferWithHttpInfo($owner, $repo)
     {
@@ -178,20 +178,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 202:
-                    if ('\Efsa\Client\Model\Repository' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Repository' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Repository', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Repository', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Repository';
+            $returnType = '\Efsa\Client\Gitea\Model\Repository';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -209,7 +209,7 @@ class RepositoryApi
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Repository',
+                        '\Efsa\Client\Gitea\Model\Repository',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -253,7 +253,7 @@ class RepositoryApi
      */
     public function acceptRepoTransferAsyncWithHttpInfo($owner, $repo)
     {
-        $returnType = '\Efsa\Client\Model\Repository';
+        $returnType = '\Efsa\Client\Gitea\Model\Repository';
         $request = $this->acceptRepoTransferRequest($owner, $repo);
 
         return $this->client
@@ -436,11 +436,11 @@ class RepositoryApi
      *
      * Create a repository
      *
-     * @param  \Efsa\Client\Model\CreateRepoOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Repository
+     * @return \Efsa\Client\Gitea\Model\Repository
      */
     public function createCurrentUserRepo($body = null)
     {
@@ -453,11 +453,11 @@ class RepositoryApi
      *
      * Create a repository
      *
-     * @param  \Efsa\Client\Model\CreateRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Repository, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Repository, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCurrentUserRepoWithHttpInfo($body = null)
     {
@@ -493,20 +493,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Repository' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Repository' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Repository', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Repository', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Repository';
+            $returnType = '\Efsa\Client\Gitea\Model\Repository';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -524,7 +524,7 @@ class RepositoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Repository',
+                        '\Efsa\Client\Gitea\Model\Repository',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -539,7 +539,7 @@ class RepositoryApi
      *
      * Create a repository
      *
-     * @param  \Efsa\Client\Model\CreateRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -559,14 +559,14 @@ class RepositoryApi
      *
      * Create a repository
      *
-     * @param  \Efsa\Client\Model\CreateRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createCurrentUserRepoAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Efsa\Client\Model\Repository';
+        $returnType = '\Efsa\Client\Gitea\Model\Repository';
         $request = $this->createCurrentUserRepoRequest($body);
 
         return $this->client
@@ -605,7 +605,7 @@ class RepositoryApi
     /**
      * Create request for operation 'createCurrentUserRepo'
      *
-     * @param  \Efsa\Client\Model\CreateRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -728,11 +728,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo to fork (required)
      * @param  string $repo name of the repo to fork (required)
-     * @param  \Efsa\Client\Model\CreateForkOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateForkOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Repository
+     * @return \Efsa\Client\Gitea\Model\Repository
      */
     public function createFork($owner, $repo, $body = null)
     {
@@ -747,11 +747,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo to fork (required)
      * @param  string $repo name of the repo to fork (required)
-     * @param  \Efsa\Client\Model\CreateForkOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateForkOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Repository, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Repository, HTTP status code, HTTP response headers (array of strings)
      */
     public function createForkWithHttpInfo($owner, $repo, $body = null)
     {
@@ -787,20 +787,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 202:
-                    if ('\Efsa\Client\Model\Repository' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Repository' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Repository', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Repository', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Repository';
+            $returnType = '\Efsa\Client\Gitea\Model\Repository';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -818,7 +818,7 @@ class RepositoryApi
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Repository',
+                        '\Efsa\Client\Gitea\Model\Repository',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -835,7 +835,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo to fork (required)
      * @param  string $repo name of the repo to fork (required)
-     * @param  \Efsa\Client\Model\CreateForkOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateForkOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -857,14 +857,14 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo to fork (required)
      * @param  string $repo name of the repo to fork (required)
-     * @param  \Efsa\Client\Model\CreateForkOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateForkOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createForkAsyncWithHttpInfo($owner, $repo, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Repository';
+        $returnType = '\Efsa\Client\Gitea\Model\Repository';
         $request = $this->createForkRequest($owner, $repo, $body);
 
         return $this->client
@@ -905,7 +905,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo to fork (required)
      * @param  string $repo name of the repo to fork (required)
-     * @param  \Efsa\Client\Model\CreateForkOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateForkOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1056,11 +1056,11 @@ class RepositoryApi
      *
      * @param  string $template_owner name of the template repository owner (required)
      * @param  string $template_repo name of the template repository (required)
-     * @param  \Efsa\Client\Model\GenerateRepoOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\GenerateRepoOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Repository
+     * @return \Efsa\Client\Gitea\Model\Repository
      */
     public function generateRepo($template_owner, $template_repo, $body = null)
     {
@@ -1075,11 +1075,11 @@ class RepositoryApi
      *
      * @param  string $template_owner name of the template repository owner (required)
      * @param  string $template_repo name of the template repository (required)
-     * @param  \Efsa\Client\Model\GenerateRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\GenerateRepoOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Repository, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Repository, HTTP status code, HTTP response headers (array of strings)
      */
     public function generateRepoWithHttpInfo($template_owner, $template_repo, $body = null)
     {
@@ -1115,20 +1115,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Repository' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Repository' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Repository', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Repository', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Repository';
+            $returnType = '\Efsa\Client\Gitea\Model\Repository';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1146,7 +1146,7 @@ class RepositoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Repository',
+                        '\Efsa\Client\Gitea\Model\Repository',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1163,7 +1163,7 @@ class RepositoryApi
      *
      * @param  string $template_owner name of the template repository owner (required)
      * @param  string $template_repo name of the template repository (required)
-     * @param  \Efsa\Client\Model\GenerateRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\GenerateRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1185,14 +1185,14 @@ class RepositoryApi
      *
      * @param  string $template_owner name of the template repository owner (required)
      * @param  string $template_repo name of the template repository (required)
-     * @param  \Efsa\Client\Model\GenerateRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\GenerateRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function generateRepoAsyncWithHttpInfo($template_owner, $template_repo, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Repository';
+        $returnType = '\Efsa\Client\Gitea\Model\Repository';
         $request = $this->generateRepoRequest($template_owner, $template_repo, $body);
 
         return $this->client
@@ -1233,7 +1233,7 @@ class RepositoryApi
      *
      * @param  string $template_owner name of the template repository owner (required)
      * @param  string $template_repo name of the template repository (required)
-     * @param  \Efsa\Client\Model\GenerateRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\GenerateRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1386,9 +1386,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $sha sha of the tag. The Git tags API only supports annotated tag objects, not lightweight tags. (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\AnnotatedTag
+     * @return \Efsa\Client\Gitea\Model\AnnotatedTag
      */
     public function getAnnotatedTag($owner, $repo, $sha)
     {
@@ -1405,9 +1405,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $sha sha of the tag. The Git tags API only supports annotated tag objects, not lightweight tags. (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\AnnotatedTag, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\AnnotatedTag, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAnnotatedTagWithHttpInfo($owner, $repo, $sha)
     {
@@ -1443,20 +1443,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\AnnotatedTag' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\AnnotatedTag' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\AnnotatedTag', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\AnnotatedTag', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\AnnotatedTag';
+            $returnType = '\Efsa\Client\Gitea\Model\AnnotatedTag';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1474,7 +1474,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\AnnotatedTag',
+                        '\Efsa\Client\Gitea\Model\AnnotatedTag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1520,7 +1520,7 @@ class RepositoryApi
      */
     public function getAnnotatedTagAsyncWithHttpInfo($owner, $repo, $sha)
     {
-        $returnType = '\Efsa\Client\Model\AnnotatedTag';
+        $returnType = '\Efsa\Client\Gitea\Model\AnnotatedTag';
         $request = $this->getAnnotatedTagRequest($owner, $repo, $sha);
 
         return $this->client
@@ -1722,9 +1722,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $sha sha of the commit (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\GitBlobResponse
+     * @return \Efsa\Client\Gitea\Model\GitBlobResponse
      */
     public function getBlob($owner, $repo, $sha)
     {
@@ -1741,9 +1741,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $sha sha of the commit (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\GitBlobResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\GitBlobResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBlobWithHttpInfo($owner, $repo, $sha)
     {
@@ -1779,20 +1779,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\GitBlobResponse' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\GitBlobResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\GitBlobResponse', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\GitBlobResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\GitBlobResponse';
+            $returnType = '\Efsa\Client\Gitea\Model\GitBlobResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1810,7 +1810,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\GitBlobResponse',
+                        '\Efsa\Client\Gitea\Model\GitBlobResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1856,7 +1856,7 @@ class RepositoryApi
      */
     public function getBlobAsyncWithHttpInfo($owner, $repo, $sha)
     {
-        $returnType = '\Efsa\Client\Model\GitBlobResponse';
+        $returnType = '\Efsa\Client\Gitea\Model\GitBlobResponse';
         $request = $this->getBlobRequest($owner, $repo, $sha);
 
         return $this->client
@@ -2061,9 +2061,9 @@ class RepositoryApi
      * @param  int $page page number; the &#39;truncated&#39; field in the response will be true if there are still more items after this page, false if the last page (optional)
      * @param  int $per_page number of items per page (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\GitTreeResponse
+     * @return \Efsa\Client\Gitea\Model\GitTreeResponse
      */
     public function getTree($owner, $repo, $sha, $recursive = null, $page = null, $per_page = null)
     {
@@ -2083,9 +2083,9 @@ class RepositoryApi
      * @param  int $page page number; the &#39;truncated&#39; field in the response will be true if there are still more items after this page, false if the last page (optional)
      * @param  int $per_page number of items per page (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\GitTreeResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\GitTreeResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTreeWithHttpInfo($owner, $repo, $sha, $recursive = null, $page = null, $per_page = null)
     {
@@ -2121,20 +2121,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\GitTreeResponse' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\GitTreeResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\GitTreeResponse', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\GitTreeResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\GitTreeResponse';
+            $returnType = '\Efsa\Client\Gitea\Model\GitTreeResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2152,7 +2152,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\GitTreeResponse',
+                        '\Efsa\Client\Gitea\Model\GitTreeResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2204,7 +2204,7 @@ class RepositoryApi
      */
     public function getTreeAsyncWithHttpInfo($owner, $repo, $sha, $recursive = null, $page = null, $per_page = null)
     {
-        $returnType = '\Efsa\Client\Model\GitTreeResponse';
+        $returnType = '\Efsa\Client\Gitea\Model\GitTreeResponse';
         $request = $this->getTreeRequest($owner, $repo, $sha, $recursive, $page, $per_page);
 
         return $this->client
@@ -2431,9 +2431,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Repository[]
+     * @return \Efsa\Client\Gitea\Model\Repository[]
      */
     public function listForks($owner, $repo, $page = null, $limit = null)
     {
@@ -2451,9 +2451,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Repository[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Repository[], HTTP status code, HTTP response headers (array of strings)
      */
     public function listForksWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
@@ -2489,20 +2489,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Repository[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Repository[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Repository[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Repository[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Repository[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Repository[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2520,7 +2520,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Repository[]',
+                        '\Efsa\Client\Gitea\Model\Repository[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2568,7 +2568,7 @@ class RepositoryApi
      */
     public function listForksAsyncWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Repository[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Repository[]';
         $request = $this->listForksRequest($owner, $repo, $page, $limit);
 
         return $this->client
@@ -2770,9 +2770,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo to transfer (required)
      * @param  string $repo name of the repo to transfer (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Repository
+     * @return \Efsa\Client\Gitea\Model\Repository
      */
     public function rejectRepoTransfer($owner, $repo)
     {
@@ -2788,9 +2788,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo to transfer (required)
      * @param  string $repo name of the repo to transfer (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Repository, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Repository, HTTP status code, HTTP response headers (array of strings)
      */
     public function rejectRepoTransferWithHttpInfo($owner, $repo)
     {
@@ -2826,20 +2826,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Repository' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Repository' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Repository', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Repository', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Repository';
+            $returnType = '\Efsa\Client\Gitea\Model\Repository';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2857,7 +2857,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Repository',
+                        '\Efsa\Client\Gitea\Model\Repository',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2901,7 +2901,7 @@ class RepositoryApi
      */
     public function rejectRepoTransferAsyncWithHttpInfo($owner, $repo)
     {
-        $returnType = '\Efsa\Client\Model\Repository';
+        $returnType = '\Efsa\Client\Gitea\Model\Repository';
         $request = $this->rejectRepoTransferRequest($owner, $repo);
 
         return $this->client
@@ -3087,9 +3087,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $collaborator username of the collaborator to add (required)
-     * @param  \Efsa\Client\Model\AddCollaboratorOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\AddCollaboratorOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3106,9 +3106,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $collaborator username of the collaborator to add (required)
-     * @param  \Efsa\Client\Model\AddCollaboratorOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\AddCollaboratorOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3161,7 +3161,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $collaborator username of the collaborator to add (required)
-     * @param  \Efsa\Client\Model\AddCollaboratorOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\AddCollaboratorOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3184,7 +3184,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $collaborator username of the collaborator to add (required)
-     * @param  \Efsa\Client\Model\AddCollaboratorOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\AddCollaboratorOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3223,7 +3223,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $collaborator username of the collaborator to add (required)
-     * @param  \Efsa\Client\Model\AddCollaboratorOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\AddCollaboratorOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3390,7 +3390,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $team team name (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3408,7 +3408,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $team team name (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3681,7 +3681,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $topic name of the topic to add (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3699,7 +3699,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $topic name of the topic to add (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3970,11 +3970,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\UpdateFileOptions $body body (required)
+     * @param  \Efsa\Client\Gitea\Model\UpdateFileOptions $body body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\FileResponse
+     * @return \Efsa\Client\Gitea\Model\FileResponse
      */
     public function repoApplyDiffPatch($owner, $repo, $body)
     {
@@ -3989,11 +3989,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\UpdateFileOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\UpdateFileOptions $body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\FileResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\FileResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoApplyDiffPatchWithHttpInfo($owner, $repo, $body)
     {
@@ -4029,20 +4029,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\FileResponse' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\FileResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\FileResponse', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\FileResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\FileResponse';
+            $returnType = '\Efsa\Client\Gitea\Model\FileResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4060,7 +4060,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\FileResponse',
+                        '\Efsa\Client\Gitea\Model\FileResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4077,7 +4077,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\UpdateFileOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\UpdateFileOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4099,14 +4099,14 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\UpdateFileOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\UpdateFileOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoApplyDiffPatchAsyncWithHttpInfo($owner, $repo, $body)
     {
-        $returnType = '\Efsa\Client\Model\FileResponse';
+        $returnType = '\Efsa\Client\Gitea\Model\FileResponse';
         $request = $this->repoApplyDiffPatchRequest($owner, $repo, $body);
 
         return $this->client
@@ -4147,7 +4147,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\UpdateFileOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\UpdateFileOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4306,7 +4306,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $collaborator username of the collaborator (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4324,7 +4324,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $collaborator username of the collaborator (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4597,9 +4597,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $team team name (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Team
+     * @return \Efsa\Client\Gitea\Model\Team
      */
     public function repoCheckTeam($owner, $repo, $team)
     {
@@ -4616,9 +4616,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $team team name (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Team, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Team, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoCheckTeamWithHttpInfo($owner, $repo, $team)
     {
@@ -4654,20 +4654,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Team' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Team' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Team', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Team', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Team';
+            $returnType = '\Efsa\Client\Gitea\Model\Team';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4685,7 +4685,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Team',
+                        '\Efsa\Client\Gitea\Model\Team',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4731,7 +4731,7 @@ class RepositoryApi
      */
     public function repoCheckTeamAsyncWithHttpInfo($owner, $repo, $team)
     {
-        $returnType = '\Efsa\Client\Model\Team';
+        $returnType = '\Efsa\Client\Gitea\Model\Team';
         $request = $this->repoCheckTeamRequest($owner, $repo, $team);
 
         return $this->client
@@ -4931,11 +4931,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateBranchRepoOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateBranchRepoOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Branch
+     * @return \Efsa\Client\Gitea\Model\Branch
      */
     public function repoCreateBranch($owner, $repo, $body = null)
     {
@@ -4950,11 +4950,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateBranchRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateBranchRepoOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Branch, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Branch, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoCreateBranchWithHttpInfo($owner, $repo, $body = null)
     {
@@ -4990,20 +4990,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Branch' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Branch' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Branch', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Branch', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Branch';
+            $returnType = '\Efsa\Client\Gitea\Model\Branch';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5021,7 +5021,7 @@ class RepositoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Branch',
+                        '\Efsa\Client\Gitea\Model\Branch',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5038,7 +5038,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateBranchRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateBranchRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5060,14 +5060,14 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateBranchRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateBranchRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoCreateBranchAsyncWithHttpInfo($owner, $repo, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Branch';
+        $returnType = '\Efsa\Client\Gitea\Model\Branch';
         $request = $this->repoCreateBranchRequest($owner, $repo, $body);
 
         return $this->client
@@ -5108,7 +5108,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateBranchRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateBranchRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5259,11 +5259,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateBranchProtectionOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateBranchProtectionOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\BranchProtection
+     * @return \Efsa\Client\Gitea\Model\BranchProtection
      */
     public function repoCreateBranchProtection($owner, $repo, $body = null)
     {
@@ -5278,11 +5278,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateBranchProtectionOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateBranchProtectionOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\BranchProtection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\BranchProtection, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoCreateBranchProtectionWithHttpInfo($owner, $repo, $body = null)
     {
@@ -5318,20 +5318,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\BranchProtection' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\BranchProtection' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\BranchProtection', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\BranchProtection', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\BranchProtection';
+            $returnType = '\Efsa\Client\Gitea\Model\BranchProtection';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5349,7 +5349,7 @@ class RepositoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\BranchProtection',
+                        '\Efsa\Client\Gitea\Model\BranchProtection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5366,7 +5366,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateBranchProtectionOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateBranchProtectionOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5388,14 +5388,14 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateBranchProtectionOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateBranchProtectionOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoCreateBranchProtectionAsyncWithHttpInfo($owner, $repo, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\BranchProtection';
+        $returnType = '\Efsa\Client\Gitea\Model\BranchProtection';
         $request = $this->repoCreateBranchProtectionRequest($owner, $repo, $body);
 
         return $this->client
@@ -5436,7 +5436,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateBranchProtectionOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateBranchProtectionOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5588,11 +5588,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $filepath path of the file to create (required)
-     * @param  \Efsa\Client\Model\CreateFileOptions $body body (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateFileOptions $body body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\FileResponse
+     * @return \Efsa\Client\Gitea\Model\FileResponse
      */
     public function repoCreateFile($owner, $repo, $filepath, $body)
     {
@@ -5608,11 +5608,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $filepath path of the file to create (required)
-     * @param  \Efsa\Client\Model\CreateFileOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateFileOptions $body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\FileResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\FileResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoCreateFileWithHttpInfo($owner, $repo, $filepath, $body)
     {
@@ -5648,20 +5648,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\FileResponse' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\FileResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\FileResponse', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\FileResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\FileResponse';
+            $returnType = '\Efsa\Client\Gitea\Model\FileResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5679,7 +5679,7 @@ class RepositoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\FileResponse',
+                        '\Efsa\Client\Gitea\Model\FileResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5697,7 +5697,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $filepath path of the file to create (required)
-     * @param  \Efsa\Client\Model\CreateFileOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateFileOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5720,14 +5720,14 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $filepath path of the file to create (required)
-     * @param  \Efsa\Client\Model\CreateFileOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateFileOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoCreateFileAsyncWithHttpInfo($owner, $repo, $filepath, $body)
     {
-        $returnType = '\Efsa\Client\Model\FileResponse';
+        $returnType = '\Efsa\Client\Gitea\Model\FileResponse';
         $request = $this->repoCreateFileRequest($owner, $repo, $filepath, $body);
 
         return $this->client
@@ -5769,7 +5769,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $filepath path of the file to create (required)
-     * @param  \Efsa\Client\Model\CreateFileOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateFileOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5940,11 +5940,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateHookOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateHookOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Hook
+     * @return \Efsa\Client\Gitea\Model\Hook
      */
     public function repoCreateHook($owner, $repo, $body = null)
     {
@@ -5959,11 +5959,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateHookOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateHookOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Hook, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Hook, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoCreateHookWithHttpInfo($owner, $repo, $body = null)
     {
@@ -5999,20 +5999,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Hook' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Hook' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Hook', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Hook', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Hook';
+            $returnType = '\Efsa\Client\Gitea\Model\Hook';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6030,7 +6030,7 @@ class RepositoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Hook',
+                        '\Efsa\Client\Gitea\Model\Hook',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6047,7 +6047,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateHookOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateHookOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6069,14 +6069,14 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateHookOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateHookOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoCreateHookAsyncWithHttpInfo($owner, $repo, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Hook';
+        $returnType = '\Efsa\Client\Gitea\Model\Hook';
         $request = $this->repoCreateHookRequest($owner, $repo, $body);
 
         return $this->client
@@ -6117,7 +6117,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateHookOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateHookOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6268,11 +6268,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateKeyOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateKeyOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\DeployKey
+     * @return \Efsa\Client\Gitea\Model\DeployKey
      */
     public function repoCreateKey($owner, $repo, $body = null)
     {
@@ -6287,11 +6287,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateKeyOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateKeyOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\DeployKey, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\DeployKey, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoCreateKeyWithHttpInfo($owner, $repo, $body = null)
     {
@@ -6327,20 +6327,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\DeployKey' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\DeployKey' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\DeployKey', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\DeployKey', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\DeployKey';
+            $returnType = '\Efsa\Client\Gitea\Model\DeployKey';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6358,7 +6358,7 @@ class RepositoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\DeployKey',
+                        '\Efsa\Client\Gitea\Model\DeployKey',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6375,7 +6375,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateKeyOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateKeyOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6397,14 +6397,14 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateKeyOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateKeyOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoCreateKeyAsyncWithHttpInfo($owner, $repo, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\DeployKey';
+        $returnType = '\Efsa\Client\Gitea\Model\DeployKey';
         $request = $this->repoCreateKeyRequest($owner, $repo, $body);
 
         return $this->client
@@ -6445,7 +6445,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateKeyOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateKeyOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6596,11 +6596,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreatePullRequestOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreatePullRequestOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\PullRequest
+     * @return \Efsa\Client\Gitea\Model\PullRequest
      */
     public function repoCreatePullRequest($owner, $repo, $body = null)
     {
@@ -6615,11 +6615,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreatePullRequestOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreatePullRequestOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\PullRequest, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\PullRequest, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoCreatePullRequestWithHttpInfo($owner, $repo, $body = null)
     {
@@ -6655,20 +6655,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\PullRequest' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\PullRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\PullRequest', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\PullRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\PullRequest';
+            $returnType = '\Efsa\Client\Gitea\Model\PullRequest';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6686,7 +6686,7 @@ class RepositoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\PullRequest',
+                        '\Efsa\Client\Gitea\Model\PullRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6703,7 +6703,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreatePullRequestOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreatePullRequestOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6725,14 +6725,14 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreatePullRequestOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreatePullRequestOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoCreatePullRequestAsyncWithHttpInfo($owner, $repo, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\PullRequest';
+        $returnType = '\Efsa\Client\Gitea\Model\PullRequest';
         $request = $this->repoCreatePullRequestRequest($owner, $repo, $body);
 
         return $this->client
@@ -6773,7 +6773,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreatePullRequestOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreatePullRequestOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6925,11 +6925,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
-     * @param  \Efsa\Client\Model\CreatePullReviewOptions $body body (required)
+     * @param  \Efsa\Client\Gitea\Model\CreatePullReviewOptions $body body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\PullReview
+     * @return \Efsa\Client\Gitea\Model\PullReview
      */
     public function repoCreatePullReview($owner, $repo, $index, $body)
     {
@@ -6945,11 +6945,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
-     * @param  \Efsa\Client\Model\CreatePullReviewOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\CreatePullReviewOptions $body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\PullReview, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\PullReview, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoCreatePullReviewWithHttpInfo($owner, $repo, $index, $body)
     {
@@ -6985,20 +6985,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\PullReview' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\PullReview' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\PullReview', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\PullReview', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\PullReview';
+            $returnType = '\Efsa\Client\Gitea\Model\PullReview';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7016,7 +7016,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\PullReview',
+                        '\Efsa\Client\Gitea\Model\PullReview',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7034,7 +7034,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
-     * @param  \Efsa\Client\Model\CreatePullReviewOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\CreatePullReviewOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7057,14 +7057,14 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
-     * @param  \Efsa\Client\Model\CreatePullReviewOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\CreatePullReviewOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoCreatePullReviewAsyncWithHttpInfo($owner, $repo, $index, $body)
     {
-        $returnType = '\Efsa\Client\Model\PullReview';
+        $returnType = '\Efsa\Client\Gitea\Model\PullReview';
         $request = $this->repoCreatePullReviewRequest($owner, $repo, $index, $body);
 
         return $this->client
@@ -7106,7 +7106,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
-     * @param  \Efsa\Client\Model\CreatePullReviewOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\CreatePullReviewOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7278,11 +7278,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
-     * @param  \Efsa\Client\Model\PullReviewRequestOptions $body body (required)
+     * @param  \Efsa\Client\Gitea\Model\PullReviewRequestOptions $body body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\PullReview[]
+     * @return \Efsa\Client\Gitea\Model\PullReview[]
      */
     public function repoCreatePullReviewRequests($owner, $repo, $index, $body)
     {
@@ -7298,11 +7298,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
-     * @param  \Efsa\Client\Model\PullReviewRequestOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\PullReviewRequestOptions $body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\PullReview[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\PullReview[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoCreatePullReviewRequestsWithHttpInfo($owner, $repo, $index, $body)
     {
@@ -7338,20 +7338,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\PullReview[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\PullReview[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\PullReview[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\PullReview[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\PullReview[]';
+            $returnType = '\Efsa\Client\Gitea\Model\PullReview[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7369,7 +7369,7 @@ class RepositoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\PullReview[]',
+                        '\Efsa\Client\Gitea\Model\PullReview[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7387,7 +7387,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
-     * @param  \Efsa\Client\Model\PullReviewRequestOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\PullReviewRequestOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7410,14 +7410,14 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
-     * @param  \Efsa\Client\Model\PullReviewRequestOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\PullReviewRequestOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoCreatePullReviewRequestsAsyncWithHttpInfo($owner, $repo, $index, $body)
     {
-        $returnType = '\Efsa\Client\Model\PullReview[]';
+        $returnType = '\Efsa\Client\Gitea\Model\PullReview[]';
         $request = $this->repoCreatePullReviewRequestsRequest($owner, $repo, $index, $body);
 
         return $this->client
@@ -7459,7 +7459,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
-     * @param  \Efsa\Client\Model\PullReviewRequestOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\PullReviewRequestOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7630,11 +7630,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateReleaseOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateReleaseOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Release
+     * @return \Efsa\Client\Gitea\Model\Release
      */
     public function repoCreateRelease($owner, $repo, $body = null)
     {
@@ -7649,11 +7649,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateReleaseOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateReleaseOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Release, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Release, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoCreateReleaseWithHttpInfo($owner, $repo, $body = null)
     {
@@ -7689,20 +7689,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Release' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Release' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Release', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Release', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Release';
+            $returnType = '\Efsa\Client\Gitea\Model\Release';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7720,7 +7720,7 @@ class RepositoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Release',
+                        '\Efsa\Client\Gitea\Model\Release',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7737,7 +7737,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateReleaseOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateReleaseOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7759,14 +7759,14 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateReleaseOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateReleaseOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoCreateReleaseAsyncWithHttpInfo($owner, $repo, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Release';
+        $returnType = '\Efsa\Client\Gitea\Model\Release';
         $request = $this->repoCreateReleaseRequest($owner, $repo, $body);
 
         return $this->client
@@ -7807,7 +7807,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateReleaseOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateReleaseOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7962,9 +7962,9 @@ class RepositoryApi
      * @param  \SplFileObject $attachment attachment to upload (required)
      * @param  string $name name of the attachment (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Attachment
+     * @return \Efsa\Client\Gitea\Model\Attachment
      */
     public function repoCreateReleaseAttachment($owner, $repo, $id, $attachment, $name = null)
     {
@@ -7983,9 +7983,9 @@ class RepositoryApi
      * @param  \SplFileObject $attachment attachment to upload (required)
      * @param  string $name name of the attachment (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Attachment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Attachment, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoCreateReleaseAttachmentWithHttpInfo($owner, $repo, $id, $attachment, $name = null)
     {
@@ -8021,20 +8021,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Attachment' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Attachment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Attachment', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Attachment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Attachment';
+            $returnType = '\Efsa\Client\Gitea\Model\Attachment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8052,7 +8052,7 @@ class RepositoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Attachment',
+                        '\Efsa\Client\Gitea\Model\Attachment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8102,7 +8102,7 @@ class RepositoryApi
      */
     public function repoCreateReleaseAttachmentAsyncWithHttpInfo($owner, $repo, $id, $attachment, $name = null)
     {
-        $returnType = '\Efsa\Client\Model\Attachment';
+        $returnType = '\Efsa\Client\Gitea\Model\Attachment';
         $request = $this->repoCreateReleaseAttachmentRequest($owner, $repo, $id, $attachment, $name);
 
         return $this->client
@@ -8330,11 +8330,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $sha sha of the commit (required)
-     * @param  \Efsa\Client\Model\CreateStatusOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateStatusOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\CommitStatus
+     * @return \Efsa\Client\Gitea\Model\CommitStatus
      */
     public function repoCreateStatus($owner, $repo, $sha, $body = null)
     {
@@ -8350,11 +8350,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $sha sha of the commit (required)
-     * @param  \Efsa\Client\Model\CreateStatusOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateStatusOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\CommitStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\CommitStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoCreateStatusWithHttpInfo($owner, $repo, $sha, $body = null)
     {
@@ -8390,20 +8390,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\CommitStatus' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\CommitStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\CommitStatus', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\CommitStatus', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\CommitStatus';
+            $returnType = '\Efsa\Client\Gitea\Model\CommitStatus';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8421,7 +8421,7 @@ class RepositoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\CommitStatus',
+                        '\Efsa\Client\Gitea\Model\CommitStatus',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8439,7 +8439,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $sha sha of the commit (required)
-     * @param  \Efsa\Client\Model\CreateStatusOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateStatusOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8462,14 +8462,14 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $sha sha of the commit (required)
-     * @param  \Efsa\Client\Model\CreateStatusOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateStatusOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoCreateStatusAsyncWithHttpInfo($owner, $repo, $sha, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\CommitStatus';
+        $returnType = '\Efsa\Client\Gitea\Model\CommitStatus';
         $request = $this->repoCreateStatusRequest($owner, $repo, $sha, $body);
 
         return $this->client
@@ -8511,7 +8511,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $sha sha of the commit (required)
-     * @param  \Efsa\Client\Model\CreateStatusOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateStatusOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -8676,11 +8676,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateTagOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateTagOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Tag
+     * @return \Efsa\Client\Gitea\Model\Tag
      */
     public function repoCreateTag($owner, $repo, $body = null)
     {
@@ -8695,11 +8695,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateTagOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateTagOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Tag, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoCreateTagWithHttpInfo($owner, $repo, $body = null)
     {
@@ -8735,20 +8735,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Tag' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Tag' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Tag', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Tag', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Tag';
+            $returnType = '\Efsa\Client\Gitea\Model\Tag';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8766,7 +8766,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Tag',
+                        '\Efsa\Client\Gitea\Model\Tag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8783,7 +8783,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateTagOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateTagOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8805,14 +8805,14 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateTagOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateTagOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoCreateTagAsyncWithHttpInfo($owner, $repo, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Tag';
+        $returnType = '\Efsa\Client\Gitea\Model\Tag';
         $request = $this->repoCreateTagRequest($owner, $repo, $body);
 
         return $this->client
@@ -8853,7 +8853,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateTagOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateTagOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -9004,11 +9004,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateWikiPageOptions $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateWikiPageOptions $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\WikiPage
+     * @return \Efsa\Client\Gitea\Model\WikiPage
      */
     public function repoCreateWikiPage($owner, $repo, $body = null)
     {
@@ -9023,11 +9023,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateWikiPageOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateWikiPageOptions $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\WikiPage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\WikiPage, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoCreateWikiPageWithHttpInfo($owner, $repo, $body = null)
     {
@@ -9063,20 +9063,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\WikiPage' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\WikiPage' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\WikiPage', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\WikiPage', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\WikiPage';
+            $returnType = '\Efsa\Client\Gitea\Model\WikiPage';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9094,7 +9094,7 @@ class RepositoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\WikiPage',
+                        '\Efsa\Client\Gitea\Model\WikiPage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9111,7 +9111,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateWikiPageOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateWikiPageOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9133,14 +9133,14 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateWikiPageOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateWikiPageOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoCreateWikiPageAsyncWithHttpInfo($owner, $repo, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\WikiPage';
+        $returnType = '\Efsa\Client\Gitea\Model\WikiPage';
         $request = $this->repoCreateWikiPageRequest($owner, $repo, $body);
 
         return $this->client
@@ -9181,7 +9181,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateWikiPageOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateWikiPageOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -9333,7 +9333,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo to delete (required)
      * @param  string $repo name of the repo to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -9350,7 +9350,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo to delete (required)
      * @param  string $repo name of the repo to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9606,7 +9606,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $branch branch to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -9624,7 +9624,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $branch branch to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9897,7 +9897,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $name name of protected branch (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -9915,7 +9915,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $name name of protected branch (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10188,7 +10188,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $collaborator username of the collaborator to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -10206,7 +10206,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $collaborator username of the collaborator to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10478,11 +10478,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $filepath path of the file to delete (required)
-     * @param  \Efsa\Client\Model\DeleteFileOptions $body body (required)
+     * @param  \Efsa\Client\Gitea\Model\DeleteFileOptions $body body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\FileDeleteResponse
+     * @return \Efsa\Client\Gitea\Model\FileDeleteResponse
      */
     public function repoDeleteFile($owner, $repo, $filepath, $body)
     {
@@ -10498,11 +10498,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $filepath path of the file to delete (required)
-     * @param  \Efsa\Client\Model\DeleteFileOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\DeleteFileOptions $body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\FileDeleteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\FileDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoDeleteFileWithHttpInfo($owner, $repo, $filepath, $body)
     {
@@ -10538,20 +10538,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\FileDeleteResponse' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\FileDeleteResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\FileDeleteResponse', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\FileDeleteResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\FileDeleteResponse';
+            $returnType = '\Efsa\Client\Gitea\Model\FileDeleteResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10569,7 +10569,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\FileDeleteResponse',
+                        '\Efsa\Client\Gitea\Model\FileDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10587,7 +10587,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $filepath path of the file to delete (required)
-     * @param  \Efsa\Client\Model\DeleteFileOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\DeleteFileOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -10610,14 +10610,14 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $filepath path of the file to delete (required)
-     * @param  \Efsa\Client\Model\DeleteFileOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\DeleteFileOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoDeleteFileAsyncWithHttpInfo($owner, $repo, $filepath, $body)
     {
-        $returnType = '\Efsa\Client\Model\FileDeleteResponse';
+        $returnType = '\Efsa\Client\Gitea\Model\FileDeleteResponse';
         $request = $this->repoDeleteFileRequest($owner, $repo, $filepath, $body);
 
         return $this->client
@@ -10659,7 +10659,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $filepath path of the file to delete (required)
-     * @param  \Efsa\Client\Model\DeleteFileOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\DeleteFileOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -10832,7 +10832,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $id id of the hook to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -10850,7 +10850,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $id id of the hook to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -11123,7 +11123,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the hook to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -11141,7 +11141,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the hook to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -11414,7 +11414,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the key to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -11432,7 +11432,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the key to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -11706,7 +11706,7 @@ class RepositoryApi
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -11725,7 +11725,7 @@ class RepositoryApi
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -12014,9 +12014,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
-     * @param  \Efsa\Client\Model\PullReviewRequestOptions $body body (required)
+     * @param  \Efsa\Client\Gitea\Model\PullReviewRequestOptions $body body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -12033,9 +12033,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
-     * @param  \Efsa\Client\Model\PullReviewRequestOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\PullReviewRequestOptions $body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -12088,7 +12088,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
-     * @param  \Efsa\Client\Model\PullReviewRequestOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\PullReviewRequestOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -12111,7 +12111,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
-     * @param  \Efsa\Client\Model\PullReviewRequestOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\PullReviewRequestOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -12150,7 +12150,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
-     * @param  \Efsa\Client\Model\PullReviewRequestOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\PullReviewRequestOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -12323,7 +12323,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -12341,7 +12341,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -12615,7 +12615,7 @@ class RepositoryApi
      * @param  int $id id of the release (required)
      * @param  int $attachment_id id of the attachment to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -12634,7 +12634,7 @@ class RepositoryApi
      * @param  int $id id of the release (required)
      * @param  int $attachment_id id of the attachment to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -12924,7 +12924,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $tag tag name of the release to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -12942,7 +12942,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $tag tag name of the release to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -13215,7 +13215,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $tag name of tag to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -13233,7 +13233,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $tag name of tag to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -13506,7 +13506,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $team team name (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -13524,7 +13524,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $team team name (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -13797,7 +13797,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $topic name of the topic to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -13815,7 +13815,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $topic name of the topic to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -14088,7 +14088,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $page_name name of the page (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -14106,7 +14106,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $page_name name of the page (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -14379,11 +14379,11 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
-     * @param  \Efsa\Client\Model\DismissPullReviewOptions $body body (required)
+     * @param  \Efsa\Client\Gitea\Model\DismissPullReviewOptions $body body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\PullReview
+     * @return \Efsa\Client\Gitea\Model\PullReview
      */
     public function repoDismissPullReview($owner, $repo, $index, $id, $body)
     {
@@ -14400,11 +14400,11 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
-     * @param  \Efsa\Client\Model\DismissPullReviewOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\DismissPullReviewOptions $body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\PullReview, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\PullReview, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoDismissPullReviewWithHttpInfo($owner, $repo, $index, $id, $body)
     {
@@ -14440,20 +14440,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\PullReview' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\PullReview' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\PullReview', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\PullReview', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\PullReview';
+            $returnType = '\Efsa\Client\Gitea\Model\PullReview';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -14471,7 +14471,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\PullReview',
+                        '\Efsa\Client\Gitea\Model\PullReview',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14490,7 +14490,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
-     * @param  \Efsa\Client\Model\DismissPullReviewOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\DismissPullReviewOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -14514,14 +14514,14 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
-     * @param  \Efsa\Client\Model\DismissPullReviewOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\DismissPullReviewOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoDismissPullReviewAsyncWithHttpInfo($owner, $repo, $index, $id, $body)
     {
-        $returnType = '\Efsa\Client\Model\PullReview';
+        $returnType = '\Efsa\Client\Gitea\Model\PullReview';
         $request = $this->repoDismissPullReviewRequest($owner, $repo, $index, $id, $body);
 
         return $this->client
@@ -14564,7 +14564,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
-     * @param  \Efsa\Client\Model\DismissPullReviewOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\DismissPullReviewOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -14752,7 +14752,7 @@ class RepositoryApi
      * @param  string $sha SHA of the commit to get (required)
      * @param  string $diff_type whether the output is diff or patch (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -14772,7 +14772,7 @@ class RepositoryApi
      * @param  string $sha SHA of the commit to get (required)
      * @param  string $diff_type whether the output is diff or patch (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -15108,7 +15108,7 @@ class RepositoryApi
      * @param  string $diff_type whether the output is diff or patch (required)
      * @param  bool $binary whether to include binary file changes. if true, the diff is applicable with &#x60;git apply&#x60; (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -15129,7 +15129,7 @@ class RepositoryApi
      * @param  string $diff_type whether the output is diff or patch (required)
      * @param  bool $binary whether to include binary file changes. if true, the diff is applicable with &#x60;git apply&#x60; (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -15471,11 +15471,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo to edit (required)
      * @param  string $repo name of the repo to edit (required)
-     * @param  \Efsa\Client\Model\EditRepoOption $body Properties of a repo that you can edit (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditRepoOption $body Properties of a repo that you can edit (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Repository
+     * @return \Efsa\Client\Gitea\Model\Repository
      */
     public function repoEdit($owner, $repo, $body = null)
     {
@@ -15490,11 +15490,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo to edit (required)
      * @param  string $repo name of the repo to edit (required)
-     * @param  \Efsa\Client\Model\EditRepoOption $body Properties of a repo that you can edit (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditRepoOption $body Properties of a repo that you can edit (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Repository, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Repository, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoEditWithHttpInfo($owner, $repo, $body = null)
     {
@@ -15530,20 +15530,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Repository' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Repository' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Repository', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Repository', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Repository';
+            $returnType = '\Efsa\Client\Gitea\Model\Repository';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -15561,7 +15561,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Repository',
+                        '\Efsa\Client\Gitea\Model\Repository',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15578,7 +15578,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo to edit (required)
      * @param  string $repo name of the repo to edit (required)
-     * @param  \Efsa\Client\Model\EditRepoOption $body Properties of a repo that you can edit (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditRepoOption $body Properties of a repo that you can edit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -15600,14 +15600,14 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo to edit (required)
      * @param  string $repo name of the repo to edit (required)
-     * @param  \Efsa\Client\Model\EditRepoOption $body Properties of a repo that you can edit (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditRepoOption $body Properties of a repo that you can edit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoEditAsyncWithHttpInfo($owner, $repo, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Repository';
+        $returnType = '\Efsa\Client\Gitea\Model\Repository';
         $request = $this->repoEditRequest($owner, $repo, $body);
 
         return $this->client
@@ -15648,7 +15648,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo to edit (required)
      * @param  string $repo name of the repo to edit (required)
-     * @param  \Efsa\Client\Model\EditRepoOption $body Properties of a repo that you can edit (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditRepoOption $body Properties of a repo that you can edit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -15800,11 +15800,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $name name of protected branch (required)
-     * @param  \Efsa\Client\Model\EditBranchProtectionOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditBranchProtectionOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\BranchProtection
+     * @return \Efsa\Client\Gitea\Model\BranchProtection
      */
     public function repoEditBranchProtection($owner, $repo, $name, $body = null)
     {
@@ -15820,11 +15820,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $name name of protected branch (required)
-     * @param  \Efsa\Client\Model\EditBranchProtectionOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditBranchProtectionOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\BranchProtection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\BranchProtection, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoEditBranchProtectionWithHttpInfo($owner, $repo, $name, $body = null)
     {
@@ -15860,20 +15860,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\BranchProtection' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\BranchProtection' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\BranchProtection', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\BranchProtection', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\BranchProtection';
+            $returnType = '\Efsa\Client\Gitea\Model\BranchProtection';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -15891,7 +15891,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\BranchProtection',
+                        '\Efsa\Client\Gitea\Model\BranchProtection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15909,7 +15909,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $name name of protected branch (required)
-     * @param  \Efsa\Client\Model\EditBranchProtectionOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditBranchProtectionOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -15932,14 +15932,14 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $name name of protected branch (required)
-     * @param  \Efsa\Client\Model\EditBranchProtectionOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditBranchProtectionOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoEditBranchProtectionAsyncWithHttpInfo($owner, $repo, $name, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\BranchProtection';
+        $returnType = '\Efsa\Client\Gitea\Model\BranchProtection';
         $request = $this->repoEditBranchProtectionRequest($owner, $repo, $name, $body);
 
         return $this->client
@@ -15981,7 +15981,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $name name of protected branch (required)
-     * @param  \Efsa\Client\Model\EditBranchProtectionOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditBranchProtectionOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -16147,11 +16147,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $id id of the hook to get (required)
-     * @param  \Efsa\Client\Model\EditGitHookOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditGitHookOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\GitHook
+     * @return \Efsa\Client\Gitea\Model\GitHook
      */
     public function repoEditGitHook($owner, $repo, $id, $body = null)
     {
@@ -16167,11 +16167,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $id id of the hook to get (required)
-     * @param  \Efsa\Client\Model\EditGitHookOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditGitHookOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\GitHook, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\GitHook, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoEditGitHookWithHttpInfo($owner, $repo, $id, $body = null)
     {
@@ -16207,20 +16207,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\GitHook' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\GitHook' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\GitHook', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\GitHook', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\GitHook';
+            $returnType = '\Efsa\Client\Gitea\Model\GitHook';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -16238,7 +16238,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\GitHook',
+                        '\Efsa\Client\Gitea\Model\GitHook',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16256,7 +16256,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $id id of the hook to get (required)
-     * @param  \Efsa\Client\Model\EditGitHookOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditGitHookOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -16279,14 +16279,14 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $id id of the hook to get (required)
-     * @param  \Efsa\Client\Model\EditGitHookOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditGitHookOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoEditGitHookAsyncWithHttpInfo($owner, $repo, $id, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\GitHook';
+        $returnType = '\Efsa\Client\Gitea\Model\GitHook';
         $request = $this->repoEditGitHookRequest($owner, $repo, $id, $body);
 
         return $this->client
@@ -16328,7 +16328,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $id id of the hook to get (required)
-     * @param  \Efsa\Client\Model\EditGitHookOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditGitHookOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -16494,11 +16494,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id index of the hook (required)
-     * @param  \Efsa\Client\Model\EditHookOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditHookOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Hook
+     * @return \Efsa\Client\Gitea\Model\Hook
      */
     public function repoEditHook($owner, $repo, $id, $body = null)
     {
@@ -16514,11 +16514,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id index of the hook (required)
-     * @param  \Efsa\Client\Model\EditHookOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditHookOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Hook, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Hook, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoEditHookWithHttpInfo($owner, $repo, $id, $body = null)
     {
@@ -16554,20 +16554,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Hook' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Hook' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Hook', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Hook', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Hook';
+            $returnType = '\Efsa\Client\Gitea\Model\Hook';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -16585,7 +16585,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Hook',
+                        '\Efsa\Client\Gitea\Model\Hook',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16603,7 +16603,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id index of the hook (required)
-     * @param  \Efsa\Client\Model\EditHookOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditHookOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -16626,14 +16626,14 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id index of the hook (required)
-     * @param  \Efsa\Client\Model\EditHookOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditHookOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoEditHookAsyncWithHttpInfo($owner, $repo, $id, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Hook';
+        $returnType = '\Efsa\Client\Gitea\Model\Hook';
         $request = $this->repoEditHookRequest($owner, $repo, $id, $body);
 
         return $this->client
@@ -16675,7 +16675,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id index of the hook (required)
-     * @param  \Efsa\Client\Model\EditHookOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditHookOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -16841,11 +16841,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request to edit (required)
-     * @param  \Efsa\Client\Model\EditPullRequestOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditPullRequestOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\PullRequest
+     * @return \Efsa\Client\Gitea\Model\PullRequest
      */
     public function repoEditPullRequest($owner, $repo, $index, $body = null)
     {
@@ -16861,11 +16861,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request to edit (required)
-     * @param  \Efsa\Client\Model\EditPullRequestOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditPullRequestOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\PullRequest, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\PullRequest, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoEditPullRequestWithHttpInfo($owner, $repo, $index, $body = null)
     {
@@ -16901,20 +16901,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\PullRequest' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\PullRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\PullRequest', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\PullRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\PullRequest';
+            $returnType = '\Efsa\Client\Gitea\Model\PullRequest';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -16932,7 +16932,7 @@ class RepositoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\PullRequest',
+                        '\Efsa\Client\Gitea\Model\PullRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16950,7 +16950,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request to edit (required)
-     * @param  \Efsa\Client\Model\EditPullRequestOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditPullRequestOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -16973,14 +16973,14 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request to edit (required)
-     * @param  \Efsa\Client\Model\EditPullRequestOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditPullRequestOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoEditPullRequestAsyncWithHttpInfo($owner, $repo, $index, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\PullRequest';
+        $returnType = '\Efsa\Client\Gitea\Model\PullRequest';
         $request = $this->repoEditPullRequestRequest($owner, $repo, $index, $body);
 
         return $this->client
@@ -17022,7 +17022,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request to edit (required)
-     * @param  \Efsa\Client\Model\EditPullRequestOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditPullRequestOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -17188,11 +17188,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release to edit (required)
-     * @param  \Efsa\Client\Model\EditReleaseOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReleaseOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Release
+     * @return \Efsa\Client\Gitea\Model\Release
      */
     public function repoEditRelease($owner, $repo, $id, $body = null)
     {
@@ -17208,11 +17208,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release to edit (required)
-     * @param  \Efsa\Client\Model\EditReleaseOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReleaseOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Release, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Release, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoEditReleaseWithHttpInfo($owner, $repo, $id, $body = null)
     {
@@ -17248,20 +17248,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Release' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Release' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Release', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Release', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Release';
+            $returnType = '\Efsa\Client\Gitea\Model\Release';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -17279,7 +17279,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Release',
+                        '\Efsa\Client\Gitea\Model\Release',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17297,7 +17297,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release to edit (required)
-     * @param  \Efsa\Client\Model\EditReleaseOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReleaseOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -17320,14 +17320,14 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release to edit (required)
-     * @param  \Efsa\Client\Model\EditReleaseOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReleaseOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoEditReleaseAsyncWithHttpInfo($owner, $repo, $id, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Release';
+        $returnType = '\Efsa\Client\Gitea\Model\Release';
         $request = $this->repoEditReleaseRequest($owner, $repo, $id, $body);
 
         return $this->client
@@ -17369,7 +17369,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release to edit (required)
-     * @param  \Efsa\Client\Model\EditReleaseOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReleaseOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -17536,11 +17536,11 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
      * @param  int $attachment_id id of the attachment to edit (required)
-     * @param  \Efsa\Client\Model\EditAttachmentOptions $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditAttachmentOptions $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Attachment
+     * @return \Efsa\Client\Gitea\Model\Attachment
      */
     public function repoEditReleaseAttachment($owner, $repo, $id, $attachment_id, $body = null)
     {
@@ -17557,11 +17557,11 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
      * @param  int $attachment_id id of the attachment to edit (required)
-     * @param  \Efsa\Client\Model\EditAttachmentOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditAttachmentOptions $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Attachment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Attachment, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoEditReleaseAttachmentWithHttpInfo($owner, $repo, $id, $attachment_id, $body = null)
     {
@@ -17597,20 +17597,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Attachment' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Attachment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Attachment', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Attachment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Attachment';
+            $returnType = '\Efsa\Client\Gitea\Model\Attachment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -17628,7 +17628,7 @@ class RepositoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Attachment',
+                        '\Efsa\Client\Gitea\Model\Attachment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17647,7 +17647,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
      * @param  int $attachment_id id of the attachment to edit (required)
-     * @param  \Efsa\Client\Model\EditAttachmentOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditAttachmentOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -17671,14 +17671,14 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
      * @param  int $attachment_id id of the attachment to edit (required)
-     * @param  \Efsa\Client\Model\EditAttachmentOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditAttachmentOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoEditReleaseAttachmentAsyncWithHttpInfo($owner, $repo, $id, $attachment_id, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Attachment';
+        $returnType = '\Efsa\Client\Gitea\Model\Attachment';
         $request = $this->repoEditReleaseAttachmentRequest($owner, $repo, $id, $attachment_id, $body);
 
         return $this->client
@@ -17721,7 +17721,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
      * @param  int $attachment_id id of the attachment to edit (required)
-     * @param  \Efsa\Client\Model\EditAttachmentOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditAttachmentOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -17901,11 +17901,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $page_name name of the page (required)
-     * @param  \Efsa\Client\Model\CreateWikiPageOptions $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateWikiPageOptions $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\WikiPage
+     * @return \Efsa\Client\Gitea\Model\WikiPage
      */
     public function repoEditWikiPage($owner, $repo, $page_name, $body = null)
     {
@@ -17921,11 +17921,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $page_name name of the page (required)
-     * @param  \Efsa\Client\Model\CreateWikiPageOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateWikiPageOptions $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\WikiPage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\WikiPage, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoEditWikiPageWithHttpInfo($owner, $repo, $page_name, $body = null)
     {
@@ -17961,20 +17961,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\WikiPage' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\WikiPage' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\WikiPage', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\WikiPage', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\WikiPage';
+            $returnType = '\Efsa\Client\Gitea\Model\WikiPage';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -17992,7 +17992,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\WikiPage',
+                        '\Efsa\Client\Gitea\Model\WikiPage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18010,7 +18010,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $page_name name of the page (required)
-     * @param  \Efsa\Client\Model\CreateWikiPageOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateWikiPageOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -18033,14 +18033,14 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $page_name name of the page (required)
-     * @param  \Efsa\Client\Model\CreateWikiPageOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateWikiPageOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoEditWikiPageAsyncWithHttpInfo($owner, $repo, $page_name, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\WikiPage';
+        $returnType = '\Efsa\Client\Gitea\Model\WikiPage';
         $request = $this->repoEditWikiPageRequest($owner, $repo, $page_name, $body);
 
         return $this->client
@@ -18082,7 +18082,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $page_name name of the page (required)
-     * @param  \Efsa\Client\Model\CreateWikiPageOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateWikiPageOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -18248,9 +18248,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Repository
+     * @return \Efsa\Client\Gitea\Model\Repository
      */
     public function repoGet($owner, $repo)
     {
@@ -18266,9 +18266,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Repository, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Repository, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetWithHttpInfo($owner, $repo)
     {
@@ -18304,20 +18304,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Repository' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Repository' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Repository', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Repository', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Repository';
+            $returnType = '\Efsa\Client\Gitea\Model\Repository';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -18335,7 +18335,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Repository',
+                        '\Efsa\Client\Gitea\Model\Repository',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18379,7 +18379,7 @@ class RepositoryApi
      */
     public function repoGetAsyncWithHttpInfo($owner, $repo)
     {
-        $returnType = '\Efsa\Client\Model\Repository';
+        $returnType = '\Efsa\Client\Gitea\Model\Repository';
         $request = $this->repoGetRequest($owner, $repo);
 
         return $this->client
@@ -18569,9 +18569,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (ignored if used with &#39;path&#39;) (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Commit[]|\Efsa\Client\Model\APIError
+     * @return \Efsa\Client\Gitea\Model\Commit[]|\Efsa\Client\Gitea\Model\APIError
      */
     public function repoGetAllCommits($owner, $repo, $sha = null, $path = null, $page = null, $limit = null)
     {
@@ -18591,9 +18591,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (ignored if used with &#39;path&#39;) (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Commit[]|\Efsa\Client\Model\APIError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Commit[]|\Efsa\Client\Gitea\Model\APIError, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetAllCommitsWithHttpInfo($owner, $repo, $sha = null, $path = null, $page = null, $limit = null)
     {
@@ -18629,32 +18629,32 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Commit[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Commit[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Commit[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Commit[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 409:
-                    if ('\Efsa\Client\Model\APIError' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\APIError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\APIError', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\APIError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Commit[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Commit[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -18672,7 +18672,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Commit[]',
+                        '\Efsa\Client\Gitea\Model\Commit[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18680,7 +18680,7 @@ class RepositoryApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\APIError',
+                        '\Efsa\Client\Gitea\Model\APIError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18732,7 +18732,7 @@ class RepositoryApi
      */
     public function repoGetAllCommitsAsyncWithHttpInfo($owner, $repo, $sha = null, $path = null, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Commit[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Commit[]';
         $request = $this->repoGetAllCommitsRequest($owner, $repo, $sha, $path, $page, $limit);
 
         return $this->client
@@ -18951,7 +18951,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $archive the git reference for download with attached archive format (e.g. master.zip) (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -18969,7 +18969,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $archive the git reference for download with attached archive format (e.g. master.zip) (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -19241,9 +19241,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\User[]
+     * @return \Efsa\Client\Gitea\Model\User[]
      */
     public function repoGetAssignees($owner, $repo)
     {
@@ -19259,9 +19259,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\User[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\User[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetAssigneesWithHttpInfo($owner, $repo)
     {
@@ -19297,20 +19297,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\User[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\User[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\User[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\User[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\User[]';
+            $returnType = '\Efsa\Client\Gitea\Model\User[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -19328,7 +19328,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\User[]',
+                        '\Efsa\Client\Gitea\Model\User[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19372,7 +19372,7 @@ class RepositoryApi
      */
     public function repoGetAssigneesAsyncWithHttpInfo($owner, $repo)
     {
-        $returnType = '\Efsa\Client\Model\User[]';
+        $returnType = '\Efsa\Client\Gitea\Model\User[]';
         $request = $this->repoGetAssigneesRequest($owner, $repo);
 
         return $this->client
@@ -19559,9 +19559,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $branch branch to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Branch
+     * @return \Efsa\Client\Gitea\Model\Branch
      */
     public function repoGetBranch($owner, $repo, $branch)
     {
@@ -19578,9 +19578,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $branch branch to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Branch, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Branch, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetBranchWithHttpInfo($owner, $repo, $branch)
     {
@@ -19616,20 +19616,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Branch' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Branch' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Branch', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Branch', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Branch';
+            $returnType = '\Efsa\Client\Gitea\Model\Branch';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -19647,7 +19647,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Branch',
+                        '\Efsa\Client\Gitea\Model\Branch',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19693,7 +19693,7 @@ class RepositoryApi
      */
     public function repoGetBranchAsyncWithHttpInfo($owner, $repo, $branch)
     {
-        $returnType = '\Efsa\Client\Model\Branch';
+        $returnType = '\Efsa\Client\Gitea\Model\Branch';
         $request = $this->repoGetBranchRequest($owner, $repo, $branch);
 
         return $this->client
@@ -19895,9 +19895,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $name name of protected branch (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\BranchProtection
+     * @return \Efsa\Client\Gitea\Model\BranchProtection
      */
     public function repoGetBranchProtection($owner, $repo, $name)
     {
@@ -19914,9 +19914,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $name name of protected branch (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\BranchProtection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\BranchProtection, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetBranchProtectionWithHttpInfo($owner, $repo, $name)
     {
@@ -19952,20 +19952,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\BranchProtection' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\BranchProtection' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\BranchProtection', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\BranchProtection', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\BranchProtection';
+            $returnType = '\Efsa\Client\Gitea\Model\BranchProtection';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -19983,7 +19983,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\BranchProtection',
+                        '\Efsa\Client\Gitea\Model\BranchProtection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20029,7 +20029,7 @@ class RepositoryApi
      */
     public function repoGetBranchProtectionAsyncWithHttpInfo($owner, $repo, $name)
     {
-        $returnType = '\Efsa\Client\Model\BranchProtection';
+        $returnType = '\Efsa\Client\Gitea\Model\BranchProtection';
         $request = $this->repoGetBranchProtectionRequest($owner, $repo, $name);
 
         return $this->client
@@ -20229,9 +20229,9 @@ class RepositoryApi
      *
      * @param  int $id id of the repo to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Repository
+     * @return \Efsa\Client\Gitea\Model\Repository
      */
     public function repoGetByID($id)
     {
@@ -20246,9 +20246,9 @@ class RepositoryApi
      *
      * @param  int $id id of the repo to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Repository, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Repository, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetByIDWithHttpInfo($id)
     {
@@ -20284,20 +20284,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Repository' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Repository' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Repository', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Repository', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Repository';
+            $returnType = '\Efsa\Client\Gitea\Model\Repository';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -20315,7 +20315,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Repository',
+                        '\Efsa\Client\Gitea\Model\Repository',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20357,7 +20357,7 @@ class RepositoryApi
      */
     public function repoGetByIDAsyncWithHttpInfo($id)
     {
-        $returnType = '\Efsa\Client\Model\Repository';
+        $returnType = '\Efsa\Client\Gitea\Model\Repository';
         $request = $this->repoGetByIDRequest($id);
 
         return $this->client
@@ -20531,9 +20531,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\CombinedStatus
+     * @return \Efsa\Client\Gitea\Model\CombinedStatus
      */
     public function repoGetCombinedStatusByRef($owner, $repo, $ref, $page = null, $limit = null)
     {
@@ -20552,9 +20552,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\CombinedStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\CombinedStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetCombinedStatusByRefWithHttpInfo($owner, $repo, $ref, $page = null, $limit = null)
     {
@@ -20590,20 +20590,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\CombinedStatus' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\CombinedStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\CombinedStatus', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\CombinedStatus', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\CombinedStatus';
+            $returnType = '\Efsa\Client\Gitea\Model\CombinedStatus';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -20621,7 +20621,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\CombinedStatus',
+                        '\Efsa\Client\Gitea\Model\CombinedStatus',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20671,7 +20671,7 @@ class RepositoryApi
      */
     public function repoGetCombinedStatusByRefAsyncWithHttpInfo($owner, $repo, $ref, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\CombinedStatus';
+        $returnType = '\Efsa\Client\Gitea\Model\CombinedStatus';
         $request = $this->repoGetCombinedStatusByRefRequest($owner, $repo, $ref, $page, $limit);
 
         return $this->client
@@ -20890,9 +20890,9 @@ class RepositoryApi
      * @param  string $filepath path of the dir, file, symlink or submodule in the repo (required)
      * @param  string $ref The name of the commit/branch/tag. Default the repository’s default branch (usually master) (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\ContentsResponse
+     * @return \Efsa\Client\Gitea\Model\ContentsResponse
      */
     public function repoGetContents($owner, $repo, $filepath, $ref = null)
     {
@@ -20910,9 +20910,9 @@ class RepositoryApi
      * @param  string $filepath path of the dir, file, symlink or submodule in the repo (required)
      * @param  string $ref The name of the commit/branch/tag. Default the repository’s default branch (usually master) (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\ContentsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\ContentsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetContentsWithHttpInfo($owner, $repo, $filepath, $ref = null)
     {
@@ -20948,20 +20948,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\ContentsResponse' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\ContentsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\ContentsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\ContentsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\ContentsResponse';
+            $returnType = '\Efsa\Client\Gitea\Model\ContentsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -20979,7 +20979,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\ContentsResponse',
+                        '\Efsa\Client\Gitea\Model\ContentsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -21027,7 +21027,7 @@ class RepositoryApi
      */
     public function repoGetContentsAsyncWithHttpInfo($owner, $repo, $filepath, $ref = null)
     {
-        $returnType = '\Efsa\Client\Model\ContentsResponse';
+        $returnType = '\Efsa\Client\Gitea\Model\ContentsResponse';
         $request = $this->repoGetContentsRequest($owner, $repo, $filepath, $ref);
 
         return $this->client
@@ -21237,9 +21237,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $ref The name of the commit/branch/tag. Default the repository’s default branch (usually master) (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\ContentsResponse[]
+     * @return \Efsa\Client\Gitea\Model\ContentsResponse[]
      */
     public function repoGetContentsList($owner, $repo, $ref = null)
     {
@@ -21256,9 +21256,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $ref The name of the commit/branch/tag. Default the repository’s default branch (usually master) (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\ContentsResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\ContentsResponse[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetContentsListWithHttpInfo($owner, $repo, $ref = null)
     {
@@ -21294,20 +21294,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\ContentsResponse[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\ContentsResponse[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\ContentsResponse[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\ContentsResponse[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\ContentsResponse[]';
+            $returnType = '\Efsa\Client\Gitea\Model\ContentsResponse[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -21325,7 +21325,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\ContentsResponse[]',
+                        '\Efsa\Client\Gitea\Model\ContentsResponse[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -21371,7 +21371,7 @@ class RepositoryApi
      */
     public function repoGetContentsListAsyncWithHttpInfo($owner, $repo, $ref = null)
     {
-        $returnType = '\Efsa\Client\Model\ContentsResponse[]';
+        $returnType = '\Efsa\Client\Gitea\Model\ContentsResponse[]';
         $request = $this->repoGetContentsListRequest($owner, $repo, $ref);
 
         return $this->client
@@ -21566,7 +21566,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $filepath filepath of file to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -21584,7 +21584,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $filepath filepath of file to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -21857,9 +21857,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $id id of the hook to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\GitHook
+     * @return \Efsa\Client\Gitea\Model\GitHook
      */
     public function repoGetGitHook($owner, $repo, $id)
     {
@@ -21876,9 +21876,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $id id of the hook to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\GitHook, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\GitHook, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetGitHookWithHttpInfo($owner, $repo, $id)
     {
@@ -21914,20 +21914,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\GitHook' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\GitHook' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\GitHook', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\GitHook', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\GitHook';
+            $returnType = '\Efsa\Client\Gitea\Model\GitHook';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -21945,7 +21945,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\GitHook',
+                        '\Efsa\Client\Gitea\Model\GitHook',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -21991,7 +21991,7 @@ class RepositoryApi
      */
     public function repoGetGitHookAsyncWithHttpInfo($owner, $repo, $id)
     {
-        $returnType = '\Efsa\Client\Model\GitHook';
+        $returnType = '\Efsa\Client\Gitea\Model\GitHook';
         $request = $this->repoGetGitHookRequest($owner, $repo, $id);
 
         return $this->client
@@ -22193,9 +22193,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the hook to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Hook
+     * @return \Efsa\Client\Gitea\Model\Hook
      */
     public function repoGetHook($owner, $repo, $id)
     {
@@ -22212,9 +22212,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the hook to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Hook, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Hook, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetHookWithHttpInfo($owner, $repo, $id)
     {
@@ -22250,20 +22250,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Hook' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Hook' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Hook', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Hook', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Hook';
+            $returnType = '\Efsa\Client\Gitea\Model\Hook';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -22281,7 +22281,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Hook',
+                        '\Efsa\Client\Gitea\Model\Hook',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22327,7 +22327,7 @@ class RepositoryApi
      */
     public function repoGetHookAsyncWithHttpInfo($owner, $repo, $id)
     {
-        $returnType = '\Efsa\Client\Model\Hook';
+        $returnType = '\Efsa\Client\Gitea\Model\Hook';
         $request = $this->repoGetHookRequest($owner, $repo, $id);
 
         return $this->client
@@ -22528,9 +22528,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\IssueTemplate[]
+     * @return \Efsa\Client\Gitea\Model\IssueTemplate[]
      */
     public function repoGetIssueTemplates($owner, $repo)
     {
@@ -22546,9 +22546,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\IssueTemplate[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\IssueTemplate[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetIssueTemplatesWithHttpInfo($owner, $repo)
     {
@@ -22584,20 +22584,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\IssueTemplate[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\IssueTemplate[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\IssueTemplate[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\IssueTemplate[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\IssueTemplate[]';
+            $returnType = '\Efsa\Client\Gitea\Model\IssueTemplate[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -22615,7 +22615,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\IssueTemplate[]',
+                        '\Efsa\Client\Gitea\Model\IssueTemplate[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22659,7 +22659,7 @@ class RepositoryApi
      */
     public function repoGetIssueTemplatesAsyncWithHttpInfo($owner, $repo)
     {
-        $returnType = '\Efsa\Client\Model\IssueTemplate[]';
+        $returnType = '\Efsa\Client\Gitea\Model\IssueTemplate[]';
         $request = $this->repoGetIssueTemplatesRequest($owner, $repo);
 
         return $this->client
@@ -22846,9 +22846,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the key to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\DeployKey
+     * @return \Efsa\Client\Gitea\Model\DeployKey
      */
     public function repoGetKey($owner, $repo, $id)
     {
@@ -22865,9 +22865,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the key to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\DeployKey, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\DeployKey, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetKeyWithHttpInfo($owner, $repo, $id)
     {
@@ -22903,20 +22903,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\DeployKey' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\DeployKey' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\DeployKey', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\DeployKey', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\DeployKey';
+            $returnType = '\Efsa\Client\Gitea\Model\DeployKey';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -22934,7 +22934,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\DeployKey',
+                        '\Efsa\Client\Gitea\Model\DeployKey',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22980,7 +22980,7 @@ class RepositoryApi
      */
     public function repoGetKeyAsyncWithHttpInfo($owner, $repo, $id)
     {
-        $returnType = '\Efsa\Client\Model\DeployKey';
+        $returnType = '\Efsa\Client\Gitea\Model\DeployKey';
         $request = $this->repoGetKeyRequest($owner, $repo, $id);
 
         return $this->client
@@ -23181,7 +23181,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array<string,int>
      */
@@ -23199,7 +23199,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of array<string,int>, HTTP status code, HTTP response headers (array of strings)
      */
@@ -23499,9 +23499,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $sha a git ref or commit sha (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Note
+     * @return \Efsa\Client\Gitea\Model\Note
      */
     public function repoGetNote($owner, $repo, $sha)
     {
@@ -23518,9 +23518,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $sha a git ref or commit sha (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Note, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Note, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetNoteWithHttpInfo($owner, $repo, $sha)
     {
@@ -23556,20 +23556,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Note' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Note' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Note', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Note', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Note';
+            $returnType = '\Efsa\Client\Gitea\Model\Note';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -23587,7 +23587,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Note',
+                        '\Efsa\Client\Gitea\Model\Note',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23633,7 +23633,7 @@ class RepositoryApi
      */
     public function repoGetNoteAsyncWithHttpInfo($owner, $repo, $sha)
     {
-        $returnType = '\Efsa\Client\Model\Note';
+        $returnType = '\Efsa\Client\Gitea\Model\Note';
         $request = $this->repoGetNoteRequest($owner, $repo, $sha);
 
         return $this->client
@@ -23835,9 +23835,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\PullRequest
+     * @return \Efsa\Client\Gitea\Model\PullRequest
      */
     public function repoGetPullRequest($owner, $repo, $index)
     {
@@ -23854,9 +23854,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\PullRequest, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\PullRequest, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetPullRequestWithHttpInfo($owner, $repo, $index)
     {
@@ -23892,20 +23892,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\PullRequest' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\PullRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\PullRequest', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\PullRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\PullRequest';
+            $returnType = '\Efsa\Client\Gitea\Model\PullRequest';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -23923,7 +23923,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\PullRequest',
+                        '\Efsa\Client\Gitea\Model\PullRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23969,7 +23969,7 @@ class RepositoryApi
      */
     public function repoGetPullRequestAsyncWithHttpInfo($owner, $repo, $index)
     {
-        $returnType = '\Efsa\Client\Model\PullRequest';
+        $returnType = '\Efsa\Client\Gitea\Model\PullRequest';
         $request = $this->repoGetPullRequestRequest($owner, $repo, $index);
 
         return $this->client
@@ -24173,9 +24173,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Commit[]
+     * @return \Efsa\Client\Gitea\Model\Commit[]
      */
     public function repoGetPullRequestCommits($owner, $repo, $index, $page = null, $limit = null)
     {
@@ -24194,9 +24194,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Commit[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Commit[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetPullRequestCommitsWithHttpInfo($owner, $repo, $index, $page = null, $limit = null)
     {
@@ -24232,20 +24232,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Commit[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Commit[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Commit[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Commit[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Commit[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Commit[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -24263,7 +24263,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Commit[]',
+                        '\Efsa\Client\Gitea\Model\Commit[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -24313,7 +24313,7 @@ class RepositoryApi
      */
     public function repoGetPullRequestCommitsAsyncWithHttpInfo($owner, $repo, $index, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Commit[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Commit[]';
         $request = $this->repoGetPullRequestCommitsRequest($owner, $repo, $index, $page, $limit);
 
         return $this->client
@@ -24532,9 +24532,9 @@ class RepositoryApi
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\PullReview
+     * @return \Efsa\Client\Gitea\Model\PullReview
      */
     public function repoGetPullReview($owner, $repo, $index, $id)
     {
@@ -24552,9 +24552,9 @@ class RepositoryApi
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\PullReview, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\PullReview, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetPullReviewWithHttpInfo($owner, $repo, $index, $id)
     {
@@ -24590,20 +24590,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\PullReview' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\PullReview' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\PullReview', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\PullReview', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\PullReview';
+            $returnType = '\Efsa\Client\Gitea\Model\PullReview';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -24621,7 +24621,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\PullReview',
+                        '\Efsa\Client\Gitea\Model\PullReview',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -24669,7 +24669,7 @@ class RepositoryApi
      */
     public function repoGetPullReviewAsyncWithHttpInfo($owner, $repo, $index, $id)
     {
-        $returnType = '\Efsa\Client\Model\PullReview';
+        $returnType = '\Efsa\Client\Gitea\Model\PullReview';
         $request = $this->repoGetPullReviewRequest($owner, $repo, $index, $id);
 
         return $this->client
@@ -24887,9 +24887,9 @@ class RepositoryApi
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\PullReviewComment[]
+     * @return \Efsa\Client\Gitea\Model\PullReviewComment[]
      */
     public function repoGetPullReviewComments($owner, $repo, $index, $id)
     {
@@ -24907,9 +24907,9 @@ class RepositoryApi
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\PullReviewComment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\PullReviewComment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetPullReviewCommentsWithHttpInfo($owner, $repo, $index, $id)
     {
@@ -24945,20 +24945,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\PullReviewComment[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\PullReviewComment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\PullReviewComment[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\PullReviewComment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\PullReviewComment[]';
+            $returnType = '\Efsa\Client\Gitea\Model\PullReviewComment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -24976,7 +24976,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\PullReviewComment[]',
+                        '\Efsa\Client\Gitea\Model\PullReviewComment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -25024,7 +25024,7 @@ class RepositoryApi
      */
     public function repoGetPullReviewCommentsAsyncWithHttpInfo($owner, $repo, $index, $id)
     {
-        $returnType = '\Efsa\Client\Model\PullReviewComment[]';
+        $returnType = '\Efsa\Client\Gitea\Model\PullReviewComment[]';
         $request = $this->repoGetPullReviewCommentsRequest($owner, $repo, $index, $id);
 
         return $this->client
@@ -25242,7 +25242,7 @@ class RepositoryApi
      * @param  string $filepath filepath of the file to get (required)
      * @param  string $ref The name of the commit/branch/tag. Default the repository’s default branch (usually master) (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -25261,7 +25261,7 @@ class RepositoryApi
      * @param  string $filepath filepath of the file to get (required)
      * @param  string $ref The name of the commit/branch/tag. Default the repository’s default branch (usually master) (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -25544,9 +25544,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Release
+     * @return \Efsa\Client\Gitea\Model\Release
      */
     public function repoGetRelease($owner, $repo, $id)
     {
@@ -25563,9 +25563,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Release, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Release, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetReleaseWithHttpInfo($owner, $repo, $id)
     {
@@ -25601,20 +25601,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Release' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Release' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Release', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Release', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Release';
+            $returnType = '\Efsa\Client\Gitea\Model\Release';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -25632,7 +25632,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Release',
+                        '\Efsa\Client\Gitea\Model\Release',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -25678,7 +25678,7 @@ class RepositoryApi
      */
     public function repoGetReleaseAsyncWithHttpInfo($owner, $repo, $id)
     {
-        $returnType = '\Efsa\Client\Model\Release';
+        $returnType = '\Efsa\Client\Gitea\Model\Release';
         $request = $this->repoGetReleaseRequest($owner, $repo, $id);
 
         return $this->client
@@ -25881,9 +25881,9 @@ class RepositoryApi
      * @param  int $id id of the release (required)
      * @param  int $attachment_id id of the attachment to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Attachment
+     * @return \Efsa\Client\Gitea\Model\Attachment
      */
     public function repoGetReleaseAttachment($owner, $repo, $id, $attachment_id)
     {
@@ -25901,9 +25901,9 @@ class RepositoryApi
      * @param  int $id id of the release (required)
      * @param  int $attachment_id id of the attachment to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Attachment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Attachment, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetReleaseAttachmentWithHttpInfo($owner, $repo, $id, $attachment_id)
     {
@@ -25939,20 +25939,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Attachment' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Attachment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Attachment', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Attachment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Attachment';
+            $returnType = '\Efsa\Client\Gitea\Model\Attachment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -25970,7 +25970,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Attachment',
+                        '\Efsa\Client\Gitea\Model\Attachment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -26018,7 +26018,7 @@ class RepositoryApi
      */
     public function repoGetReleaseAttachmentAsyncWithHttpInfo($owner, $repo, $id, $attachment_id)
     {
-        $returnType = '\Efsa\Client\Model\Attachment';
+        $returnType = '\Efsa\Client\Gitea\Model\Attachment';
         $request = $this->repoGetReleaseAttachmentRequest($owner, $repo, $id, $attachment_id);
 
         return $this->client
@@ -26235,9 +26235,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $tag tag name of the release to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Release
+     * @return \Efsa\Client\Gitea\Model\Release
      */
     public function repoGetReleaseByTag($owner, $repo, $tag)
     {
@@ -26254,9 +26254,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $tag tag name of the release to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Release, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Release, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetReleaseByTagWithHttpInfo($owner, $repo, $tag)
     {
@@ -26292,20 +26292,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Release' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Release' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Release', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Release', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Release';
+            $returnType = '\Efsa\Client\Gitea\Model\Release';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -26323,7 +26323,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Release',
+                        '\Efsa\Client\Gitea\Model\Release',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -26369,7 +26369,7 @@ class RepositoryApi
      */
     public function repoGetReleaseByTagAsyncWithHttpInfo($owner, $repo, $tag)
     {
-        $returnType = '\Efsa\Client\Model\Release';
+        $returnType = '\Efsa\Client\Gitea\Model\Release';
         $request = $this->repoGetReleaseByTagRequest($owner, $repo, $tag);
 
         return $this->client
@@ -26570,9 +26570,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\User[]
+     * @return \Efsa\Client\Gitea\Model\User[]
      */
     public function repoGetReviewers($owner, $repo)
     {
@@ -26588,9 +26588,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\User[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\User[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetReviewersWithHttpInfo($owner, $repo)
     {
@@ -26626,20 +26626,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\User[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\User[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\User[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\User[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\User[]';
+            $returnType = '\Efsa\Client\Gitea\Model\User[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -26657,7 +26657,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\User[]',
+                        '\Efsa\Client\Gitea\Model\User[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -26701,7 +26701,7 @@ class RepositoryApi
      */
     public function repoGetReviewersAsyncWithHttpInfo($owner, $repo)
     {
-        $returnType = '\Efsa\Client\Model\User[]';
+        $returnType = '\Efsa\Client\Gitea\Model\User[]';
         $request = $this->repoGetReviewersRequest($owner, $repo);
 
         return $this->client
@@ -26888,9 +26888,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $sha a git ref or commit sha (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Commit
+     * @return \Efsa\Client\Gitea\Model\Commit
      */
     public function repoGetSingleCommit($owner, $repo, $sha)
     {
@@ -26907,9 +26907,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $sha a git ref or commit sha (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Commit, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Commit, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetSingleCommitWithHttpInfo($owner, $repo, $sha)
     {
@@ -26945,20 +26945,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Commit' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Commit' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Commit', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Commit', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Commit';
+            $returnType = '\Efsa\Client\Gitea\Model\Commit';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -26976,7 +26976,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Commit',
+                        '\Efsa\Client\Gitea\Model\Commit',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -27022,7 +27022,7 @@ class RepositoryApi
      */
     public function repoGetSingleCommitAsyncWithHttpInfo($owner, $repo, $sha)
     {
-        $returnType = '\Efsa\Client\Model\Commit';
+        $returnType = '\Efsa\Client\Gitea\Model\Commit';
         $request = $this->repoGetSingleCommitRequest($owner, $repo, $sha);
 
         return $this->client
@@ -27224,9 +27224,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $tag name of tag (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Tag
+     * @return \Efsa\Client\Gitea\Model\Tag
      */
     public function repoGetTag($owner, $repo, $tag)
     {
@@ -27243,9 +27243,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $tag name of tag (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Tag, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetTagWithHttpInfo($owner, $repo, $tag)
     {
@@ -27281,20 +27281,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Tag' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Tag' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Tag', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Tag', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Tag';
+            $returnType = '\Efsa\Client\Gitea\Model\Tag';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -27312,7 +27312,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Tag',
+                        '\Efsa\Client\Gitea\Model\Tag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -27358,7 +27358,7 @@ class RepositoryApi
      */
     public function repoGetTagAsyncWithHttpInfo($owner, $repo, $tag)
     {
-        $returnType = '\Efsa\Client\Model\Tag';
+        $returnType = '\Efsa\Client\Gitea\Model\Tag';
         $request = $this->repoGetTagRequest($owner, $repo, $tag);
 
         return $this->client
@@ -27560,9 +27560,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $page_name name of the page (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\WikiPage
+     * @return \Efsa\Client\Gitea\Model\WikiPage
      */
     public function repoGetWikiPage($owner, $repo, $page_name)
     {
@@ -27579,9 +27579,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $page_name name of the page (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\WikiPage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\WikiPage, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetWikiPageWithHttpInfo($owner, $repo, $page_name)
     {
@@ -27617,20 +27617,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\WikiPage' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\WikiPage' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\WikiPage', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\WikiPage', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\WikiPage';
+            $returnType = '\Efsa\Client\Gitea\Model\WikiPage';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -27648,7 +27648,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\WikiPage',
+                        '\Efsa\Client\Gitea\Model\WikiPage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -27694,7 +27694,7 @@ class RepositoryApi
      */
     public function repoGetWikiPageAsyncWithHttpInfo($owner, $repo, $page_name)
     {
-        $returnType = '\Efsa\Client\Model\WikiPage';
+        $returnType = '\Efsa\Client\Gitea\Model\WikiPage';
         $request = $this->repoGetWikiPageRequest($owner, $repo, $page_name);
 
         return $this->client
@@ -27897,9 +27897,9 @@ class RepositoryApi
      * @param  string $page_name name of the page (required)
      * @param  int $page page number of results to return (1-based) (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\WikiCommitList
+     * @return \Efsa\Client\Gitea\Model\WikiCommitList
      */
     public function repoGetWikiPageRevisions($owner, $repo, $page_name, $page = null)
     {
@@ -27917,9 +27917,9 @@ class RepositoryApi
      * @param  string $page_name name of the page (required)
      * @param  int $page page number of results to return (1-based) (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\WikiCommitList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\WikiCommitList, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetWikiPageRevisionsWithHttpInfo($owner, $repo, $page_name, $page = null)
     {
@@ -27955,20 +27955,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\WikiCommitList' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\WikiCommitList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\WikiCommitList', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\WikiCommitList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\WikiCommitList';
+            $returnType = '\Efsa\Client\Gitea\Model\WikiCommitList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -27986,7 +27986,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\WikiCommitList',
+                        '\Efsa\Client\Gitea\Model\WikiCommitList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -28034,7 +28034,7 @@ class RepositoryApi
      */
     public function repoGetWikiPageRevisionsAsyncWithHttpInfo($owner, $repo, $page_name, $page = null)
     {
-        $returnType = '\Efsa\Client\Model\WikiCommitList';
+        $returnType = '\Efsa\Client\Gitea\Model\WikiCommitList';
         $request = $this->repoGetWikiPageRevisionsRequest($owner, $repo, $page_name, $page);
 
         return $this->client
@@ -28245,9 +28245,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\WikiPageMetaData[]
+     * @return \Efsa\Client\Gitea\Model\WikiPageMetaData[]
      */
     public function repoGetWikiPages($owner, $repo, $page = null, $limit = null)
     {
@@ -28265,9 +28265,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\WikiPageMetaData[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\WikiPageMetaData[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoGetWikiPagesWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
@@ -28303,20 +28303,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\WikiPageMetaData[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\WikiPageMetaData[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\WikiPageMetaData[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\WikiPageMetaData[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\WikiPageMetaData[]';
+            $returnType = '\Efsa\Client\Gitea\Model\WikiPageMetaData[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -28334,7 +28334,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\WikiPageMetaData[]',
+                        '\Efsa\Client\Gitea\Model\WikiPageMetaData[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -28382,7 +28382,7 @@ class RepositoryApi
      */
     public function repoGetWikiPagesAsyncWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\WikiPageMetaData[]';
+        $returnType = '\Efsa\Client\Gitea\Model\WikiPageMetaData[]';
         $request = $this->repoGetWikiPagesRequest($owner, $repo, $page, $limit);
 
         return $this->client
@@ -28584,9 +28584,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Reference[]
+     * @return \Efsa\Client\Gitea\Model\Reference[]
      */
     public function repoListAllGitRefs($owner, $repo)
     {
@@ -28602,9 +28602,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Reference[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Reference[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListAllGitRefsWithHttpInfo($owner, $repo)
     {
@@ -28640,20 +28640,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Reference[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Reference[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Reference[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Reference[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Reference[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Reference[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -28671,7 +28671,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Reference[]',
+                        '\Efsa\Client\Gitea\Model\Reference[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -28715,7 +28715,7 @@ class RepositoryApi
      */
     public function repoListAllGitRefsAsyncWithHttpInfo($owner, $repo)
     {
-        $returnType = '\Efsa\Client\Model\Reference[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Reference[]';
         $request = $this->repoListAllGitRefsRequest($owner, $repo);
 
         return $this->client
@@ -28901,9 +28901,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\BranchProtection[]
+     * @return \Efsa\Client\Gitea\Model\BranchProtection[]
      */
     public function repoListBranchProtection($owner, $repo)
     {
@@ -28919,9 +28919,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\BranchProtection[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\BranchProtection[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListBranchProtectionWithHttpInfo($owner, $repo)
     {
@@ -28957,20 +28957,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\BranchProtection[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\BranchProtection[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\BranchProtection[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\BranchProtection[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\BranchProtection[]';
+            $returnType = '\Efsa\Client\Gitea\Model\BranchProtection[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -28988,7 +28988,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\BranchProtection[]',
+                        '\Efsa\Client\Gitea\Model\BranchProtection[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29032,7 +29032,7 @@ class RepositoryApi
      */
     public function repoListBranchProtectionAsyncWithHttpInfo($owner, $repo)
     {
-        $returnType = '\Efsa\Client\Model\BranchProtection[]';
+        $returnType = '\Efsa\Client\Gitea\Model\BranchProtection[]';
         $request = $this->repoListBranchProtectionRequest($owner, $repo);
 
         return $this->client
@@ -29220,9 +29220,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Branch[]
+     * @return \Efsa\Client\Gitea\Model\Branch[]
      */
     public function repoListBranches($owner, $repo, $page = null, $limit = null)
     {
@@ -29240,9 +29240,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Branch[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Branch[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListBranchesWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
@@ -29278,20 +29278,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Branch[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Branch[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Branch[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Branch[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Branch[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Branch[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -29309,7 +29309,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Branch[]',
+                        '\Efsa\Client\Gitea\Model\Branch[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29357,7 +29357,7 @@ class RepositoryApi
      */
     public function repoListBranchesAsyncWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Branch[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Branch[]';
         $request = $this->repoListBranchesRequest($owner, $repo, $page, $limit);
 
         return $this->client
@@ -29561,9 +29561,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\User[]
+     * @return \Efsa\Client\Gitea\Model\User[]
      */
     public function repoListCollaborators($owner, $repo, $page = null, $limit = null)
     {
@@ -29581,9 +29581,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\User[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\User[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListCollaboratorsWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
@@ -29619,20 +29619,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\User[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\User[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\User[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\User[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\User[]';
+            $returnType = '\Efsa\Client\Gitea\Model\User[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -29650,7 +29650,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\User[]',
+                        '\Efsa\Client\Gitea\Model\User[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29698,7 +29698,7 @@ class RepositoryApi
      */
     public function repoListCollaboratorsAsyncWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\User[]';
+        $returnType = '\Efsa\Client\Gitea\Model\User[]';
         $request = $this->repoListCollaboratorsRequest($owner, $repo, $page, $limit);
 
         return $this->client
@@ -29900,9 +29900,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\GitHook[]
+     * @return \Efsa\Client\Gitea\Model\GitHook[]
      */
     public function repoListGitHooks($owner, $repo)
     {
@@ -29918,9 +29918,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\GitHook[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\GitHook[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListGitHooksWithHttpInfo($owner, $repo)
     {
@@ -29956,20 +29956,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\GitHook[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\GitHook[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\GitHook[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\GitHook[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\GitHook[]';
+            $returnType = '\Efsa\Client\Gitea\Model\GitHook[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -29987,7 +29987,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\GitHook[]',
+                        '\Efsa\Client\Gitea\Model\GitHook[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -30031,7 +30031,7 @@ class RepositoryApi
      */
     public function repoListGitHooksAsyncWithHttpInfo($owner, $repo)
     {
-        $returnType = '\Efsa\Client\Model\GitHook[]';
+        $returnType = '\Efsa\Client\Gitea\Model\GitHook[]';
         $request = $this->repoListGitHooksRequest($owner, $repo);
 
         return $this->client
@@ -30218,9 +30218,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $ref part or full name of the ref (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Reference[]
+     * @return \Efsa\Client\Gitea\Model\Reference[]
      */
     public function repoListGitRefs($owner, $repo, $ref)
     {
@@ -30237,9 +30237,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $ref part or full name of the ref (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Reference[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Reference[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListGitRefsWithHttpInfo($owner, $repo, $ref)
     {
@@ -30275,20 +30275,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Reference[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Reference[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Reference[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Reference[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Reference[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Reference[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -30306,7 +30306,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Reference[]',
+                        '\Efsa\Client\Gitea\Model\Reference[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -30352,7 +30352,7 @@ class RepositoryApi
      */
     public function repoListGitRefsAsyncWithHttpInfo($owner, $repo, $ref)
     {
-        $returnType = '\Efsa\Client\Model\Reference[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Reference[]';
         $request = $this->repoListGitRefsRequest($owner, $repo, $ref);
 
         return $this->client
@@ -30555,9 +30555,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Hook[]
+     * @return \Efsa\Client\Gitea\Model\Hook[]
      */
     public function repoListHooks($owner, $repo, $page = null, $limit = null)
     {
@@ -30575,9 +30575,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Hook[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Hook[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListHooksWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
@@ -30613,20 +30613,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Hook[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Hook[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Hook[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Hook[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Hook[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Hook[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -30644,7 +30644,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Hook[]',
+                        '\Efsa\Client\Gitea\Model\Hook[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -30692,7 +30692,7 @@ class RepositoryApi
      */
     public function repoListHooksAsyncWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Hook[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Hook[]';
         $request = $this->repoListHooksRequest($owner, $repo, $page, $limit);
 
         return $this->client
@@ -30898,9 +30898,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\DeployKey[]
+     * @return \Efsa\Client\Gitea\Model\DeployKey[]
      */
     public function repoListKeys($owner, $repo, $key_id = null, $fingerprint = null, $page = null, $limit = null)
     {
@@ -30920,9 +30920,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\DeployKey[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\DeployKey[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListKeysWithHttpInfo($owner, $repo, $key_id = null, $fingerprint = null, $page = null, $limit = null)
     {
@@ -30958,20 +30958,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\DeployKey[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\DeployKey[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\DeployKey[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\DeployKey[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\DeployKey[]';
+            $returnType = '\Efsa\Client\Gitea\Model\DeployKey[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -30989,7 +30989,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\DeployKey[]',
+                        '\Efsa\Client\Gitea\Model\DeployKey[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -31041,7 +31041,7 @@ class RepositoryApi
      */
     public function repoListKeysAsyncWithHttpInfo($owner, $repo, $key_id = null, $fingerprint = null, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\DeployKey[]';
+        $returnType = '\Efsa\Client\Gitea\Model\DeployKey[]';
         $request = $this->repoListKeysRequest($owner, $repo, $key_id, $fingerprint, $page, $limit);
 
         return $this->client
@@ -31265,9 +31265,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\PullRequest[]
+     * @return \Efsa\Client\Gitea\Model\PullRequest[]
      */
     public function repoListPullRequests($owner, $repo, $state = null, $sort = null, $milestone = null, $labels = null, $page = null, $limit = null)
     {
@@ -31289,9 +31289,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\PullRequest[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\PullRequest[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListPullRequestsWithHttpInfo($owner, $repo, $state = null, $sort = null, $milestone = null, $labels = null, $page = null, $limit = null)
     {
@@ -31327,20 +31327,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\PullRequest[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\PullRequest[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\PullRequest[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\PullRequest[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\PullRequest[]';
+            $returnType = '\Efsa\Client\Gitea\Model\PullRequest[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -31358,7 +31358,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\PullRequest[]',
+                        '\Efsa\Client\Gitea\Model\PullRequest[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -31414,7 +31414,7 @@ class RepositoryApi
      */
     public function repoListPullRequestsAsyncWithHttpInfo($owner, $repo, $state = null, $sort = null, $milestone = null, $labels = null, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\PullRequest[]';
+        $returnType = '\Efsa\Client\Gitea\Model\PullRequest[]';
         $request = $this->repoListPullRequestsRequest($owner, $repo, $state, $sort, $milestone, $labels, $page, $limit);
 
         return $this->client
@@ -31655,9 +31655,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\PullReview[]
+     * @return \Efsa\Client\Gitea\Model\PullReview[]
      */
     public function repoListPullReviews($owner, $repo, $index, $page = null, $limit = null)
     {
@@ -31676,9 +31676,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\PullReview[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\PullReview[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListPullReviewsWithHttpInfo($owner, $repo, $index, $page = null, $limit = null)
     {
@@ -31714,20 +31714,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\PullReview[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\PullReview[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\PullReview[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\PullReview[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\PullReview[]';
+            $returnType = '\Efsa\Client\Gitea\Model\PullReview[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -31745,7 +31745,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\PullReview[]',
+                        '\Efsa\Client\Gitea\Model\PullReview[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -31795,7 +31795,7 @@ class RepositoryApi
      */
     public function repoListPullReviewsAsyncWithHttpInfo($owner, $repo, $index, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\PullReview[]';
+        $returnType = '\Efsa\Client\Gitea\Model\PullReview[]';
         $request = $this->repoListPullReviewsRequest($owner, $repo, $index, $page, $limit);
 
         return $this->client
@@ -32013,9 +32013,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Attachment[]
+     * @return \Efsa\Client\Gitea\Model\Attachment[]
      */
     public function repoListReleaseAttachments($owner, $repo, $id)
     {
@@ -32032,9 +32032,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the release (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Attachment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Attachment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListReleaseAttachmentsWithHttpInfo($owner, $repo, $id)
     {
@@ -32070,20 +32070,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Attachment[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Attachment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Attachment[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Attachment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Attachment[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Attachment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -32101,7 +32101,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Attachment[]',
+                        '\Efsa\Client\Gitea\Model\Attachment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -32147,7 +32147,7 @@ class RepositoryApi
      */
     public function repoListReleaseAttachmentsAsyncWithHttpInfo($owner, $repo, $id)
     {
-        $returnType = '\Efsa\Client\Model\Attachment[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Attachment[]';
         $request = $this->repoListReleaseAttachmentsRequest($owner, $repo, $id);
 
         return $this->client
@@ -32353,9 +32353,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Release[]
+     * @return \Efsa\Client\Gitea\Model\Release[]
      */
     public function repoListReleases($owner, $repo, $draft = null, $pre_release = null, $per_page = null, $page = null, $limit = null)
     {
@@ -32376,9 +32376,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Release[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Release[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListReleasesWithHttpInfo($owner, $repo, $draft = null, $pre_release = null, $per_page = null, $page = null, $limit = null)
     {
@@ -32414,20 +32414,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Release[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Release[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Release[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Release[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Release[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Release[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -32445,7 +32445,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Release[]',
+                        '\Efsa\Client\Gitea\Model\Release[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -32499,7 +32499,7 @@ class RepositoryApi
      */
     public function repoListReleasesAsyncWithHttpInfo($owner, $repo, $draft = null, $pre_release = null, $per_page = null, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Release[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Release[]';
         $request = $this->repoListReleasesRequest($owner, $repo, $draft, $pre_release, $per_page, $page, $limit);
 
         return $this->client
@@ -32727,9 +32727,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\User[]
+     * @return \Efsa\Client\Gitea\Model\User[]
      */
     public function repoListStargazers($owner, $repo, $page = null, $limit = null)
     {
@@ -32747,9 +32747,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\User[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\User[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListStargazersWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
@@ -32785,20 +32785,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\User[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\User[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\User[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\User[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\User[]';
+            $returnType = '\Efsa\Client\Gitea\Model\User[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -32816,7 +32816,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\User[]',
+                        '\Efsa\Client\Gitea\Model\User[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -32864,7 +32864,7 @@ class RepositoryApi
      */
     public function repoListStargazersAsyncWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\User[]';
+        $returnType = '\Efsa\Client\Gitea\Model\User[]';
         $request = $this->repoListStargazersRequest($owner, $repo, $page, $limit);
 
         return $this->client
@@ -33071,9 +33071,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\CommitStatus[]
+     * @return \Efsa\Client\Gitea\Model\CommitStatus[]
      */
     public function repoListStatuses($owner, $repo, $sha, $sort = null, $state = null, $page = null, $limit = null)
     {
@@ -33094,9 +33094,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\CommitStatus[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\CommitStatus[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListStatusesWithHttpInfo($owner, $repo, $sha, $sort = null, $state = null, $page = null, $limit = null)
     {
@@ -33132,20 +33132,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\CommitStatus[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\CommitStatus[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\CommitStatus[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\CommitStatus[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\CommitStatus[]';
+            $returnType = '\Efsa\Client\Gitea\Model\CommitStatus[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -33163,7 +33163,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\CommitStatus[]',
+                        '\Efsa\Client\Gitea\Model\CommitStatus[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -33217,7 +33217,7 @@ class RepositoryApi
      */
     public function repoListStatusesAsyncWithHttpInfo($owner, $repo, $sha, $sort = null, $state = null, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\CommitStatus[]';
+        $returnType = '\Efsa\Client\Gitea\Model\CommitStatus[]';
         $request = $this->repoListStatusesRequest($owner, $repo, $sha, $sort, $state, $page, $limit);
 
         return $this->client
@@ -33455,9 +33455,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\CommitStatus[]
+     * @return \Efsa\Client\Gitea\Model\CommitStatus[]
      */
     public function repoListStatusesByRef($owner, $repo, $ref, $sort = null, $state = null, $page = null, $limit = null)
     {
@@ -33478,9 +33478,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\CommitStatus[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\CommitStatus[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListStatusesByRefWithHttpInfo($owner, $repo, $ref, $sort = null, $state = null, $page = null, $limit = null)
     {
@@ -33516,20 +33516,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\CommitStatus[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\CommitStatus[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\CommitStatus[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\CommitStatus[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\CommitStatus[]';
+            $returnType = '\Efsa\Client\Gitea\Model\CommitStatus[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -33547,7 +33547,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\CommitStatus[]',
+                        '\Efsa\Client\Gitea\Model\CommitStatus[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -33601,7 +33601,7 @@ class RepositoryApi
      */
     public function repoListStatusesByRefAsyncWithHttpInfo($owner, $repo, $ref, $sort = null, $state = null, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\CommitStatus[]';
+        $returnType = '\Efsa\Client\Gitea\Model\CommitStatus[]';
         $request = $this->repoListStatusesByRefRequest($owner, $repo, $ref, $sort, $state, $page, $limit);
 
         return $this->client
@@ -33836,9 +33836,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\User[]
+     * @return \Efsa\Client\Gitea\Model\User[]
      */
     public function repoListSubscribers($owner, $repo, $page = null, $limit = null)
     {
@@ -33856,9 +33856,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\User[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\User[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListSubscribersWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
@@ -33894,20 +33894,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\User[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\User[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\User[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\User[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\User[]';
+            $returnType = '\Efsa\Client\Gitea\Model\User[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -33925,7 +33925,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\User[]',
+                        '\Efsa\Client\Gitea\Model\User[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -33973,7 +33973,7 @@ class RepositoryApi
      */
     public function repoListSubscribersAsyncWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\User[]';
+        $returnType = '\Efsa\Client\Gitea\Model\User[]';
         $request = $this->repoListSubscribersRequest($owner, $repo, $page, $limit);
 
         return $this->client
@@ -34177,9 +34177,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results, default maximum page size is 50 (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Tag[]
+     * @return \Efsa\Client\Gitea\Model\Tag[]
      */
     public function repoListTags($owner, $repo, $page = null, $limit = null)
     {
@@ -34197,9 +34197,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results, default maximum page size is 50 (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Tag[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Tag[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListTagsWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
@@ -34235,20 +34235,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Tag[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Tag[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Tag[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Tag[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Tag[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Tag[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -34266,7 +34266,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Tag[]',
+                        '\Efsa\Client\Gitea\Model\Tag[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -34314,7 +34314,7 @@ class RepositoryApi
      */
     public function repoListTagsAsyncWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Tag[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Tag[]';
         $request = $this->repoListTagsRequest($owner, $repo, $page, $limit);
 
         return $this->client
@@ -34516,9 +34516,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Team[]
+     * @return \Efsa\Client\Gitea\Model\Team[]
      */
     public function repoListTeams($owner, $repo)
     {
@@ -34534,9 +34534,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Team[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Team[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListTeamsWithHttpInfo($owner, $repo)
     {
@@ -34572,20 +34572,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Team[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Team[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Team[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Team[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Team[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Team[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -34603,7 +34603,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Team[]',
+                        '\Efsa\Client\Gitea\Model\Team[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -34647,7 +34647,7 @@ class RepositoryApi
      */
     public function repoListTeamsAsyncWithHttpInfo($owner, $repo)
     {
-        $returnType = '\Efsa\Client\Model\Team[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Team[]';
         $request = $this->repoListTeamsRequest($owner, $repo);
 
         return $this->client
@@ -34835,9 +34835,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\TopicName
+     * @return \Efsa\Client\Gitea\Model\TopicName
      */
     public function repoListTopics($owner, $repo, $page = null, $limit = null)
     {
@@ -34855,9 +34855,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\TopicName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\TopicName, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoListTopicsWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
@@ -34893,20 +34893,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\TopicName' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\TopicName' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\TopicName', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\TopicName', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\TopicName';
+            $returnType = '\Efsa\Client\Gitea\Model\TopicName';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -34924,7 +34924,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\TopicName',
+                        '\Efsa\Client\Gitea\Model\TopicName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -34972,7 +34972,7 @@ class RepositoryApi
      */
     public function repoListTopicsAsyncWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\TopicName';
+        $returnType = '\Efsa\Client\Gitea\Model\TopicName';
         $request = $this->repoListTopicsRequest($owner, $repo, $page, $limit);
 
         return $this->client
@@ -35174,9 +35174,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request to merge (required)
-     * @param  \Efsa\Client\Model\MergePullRequestOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\MergePullRequestOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -35193,9 +35193,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request to merge (required)
-     * @param  \Efsa\Client\Model\MergePullRequestOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\MergePullRequestOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -35248,7 +35248,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request to merge (required)
-     * @param  \Efsa\Client\Model\MergePullRequestOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\MergePullRequestOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -35271,7 +35271,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request to merge (required)
-     * @param  \Efsa\Client\Model\MergePullRequestOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\MergePullRequestOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -35310,7 +35310,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request to merge (required)
-     * @param  \Efsa\Client\Model\MergePullRequestOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\MergePullRequestOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -35473,11 +35473,11 @@ class RepositoryApi
      *
      * Migrate a remote git repository
      *
-     * @param  \Efsa\Client\Model\MigrateRepoOptions $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\MigrateRepoOptions $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Repository
+     * @return \Efsa\Client\Gitea\Model\Repository
      */
     public function repoMigrate($body = null)
     {
@@ -35490,11 +35490,11 @@ class RepositoryApi
      *
      * Migrate a remote git repository
      *
-     * @param  \Efsa\Client\Model\MigrateRepoOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\MigrateRepoOptions $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Repository, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Repository, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoMigrateWithHttpInfo($body = null)
     {
@@ -35530,20 +35530,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Repository' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Repository' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Repository', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Repository', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Repository';
+            $returnType = '\Efsa\Client\Gitea\Model\Repository';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -35561,7 +35561,7 @@ class RepositoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Repository',
+                        '\Efsa\Client\Gitea\Model\Repository',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -35576,7 +35576,7 @@ class RepositoryApi
      *
      * Migrate a remote git repository
      *
-     * @param  \Efsa\Client\Model\MigrateRepoOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\MigrateRepoOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -35596,14 +35596,14 @@ class RepositoryApi
      *
      * Migrate a remote git repository
      *
-     * @param  \Efsa\Client\Model\MigrateRepoOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\MigrateRepoOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoMigrateAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Efsa\Client\Model\Repository';
+        $returnType = '\Efsa\Client\Gitea\Model\Repository';
         $request = $this->repoMigrateRequest($body);
 
         return $this->client
@@ -35642,7 +35642,7 @@ class RepositoryApi
     /**
      * Create request for operation 'repoMigrate'
      *
-     * @param  \Efsa\Client\Model\MigrateRepoOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\MigrateRepoOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -35766,7 +35766,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo to sync (required)
      * @param  string $repo name of the repo to sync (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -35783,7 +35783,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo to sync (required)
      * @param  string $repo name of the repo to sync (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -36039,7 +36039,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -36057,7 +36057,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -36344,9 +36344,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\SearchResults
+     * @return \Efsa\Client\Gitea\Model\SearchResults
      */
     public function repoSearch($q = null, $topic = null, $include_desc = null, $uid = null, $priority_owner_id = null, $team_id = null, $starred_by = null, $private = null, $is_private = null, $template = null, $archived = null, $mode = null, $exclusive = null, $sort = null, $order = null, $page = null, $limit = null)
     {
@@ -36377,9 +36377,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\SearchResults, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\SearchResults, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoSearchWithHttpInfo($q = null, $topic = null, $include_desc = null, $uid = null, $priority_owner_id = null, $team_id = null, $starred_by = null, $private = null, $is_private = null, $template = null, $archived = null, $mode = null, $exclusive = null, $sort = null, $order = null, $page = null, $limit = null)
     {
@@ -36415,20 +36415,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\SearchResults' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\SearchResults' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\SearchResults', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\SearchResults', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\SearchResults';
+            $returnType = '\Efsa\Client\Gitea\Model\SearchResults';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -36446,7 +36446,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\SearchResults',
+                        '\Efsa\Client\Gitea\Model\SearchResults',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -36520,7 +36520,7 @@ class RepositoryApi
      */
     public function repoSearchAsyncWithHttpInfo($q = null, $topic = null, $include_desc = null, $uid = null, $priority_owner_id = null, $team_id = null, $starred_by = null, $private = null, $is_private = null, $template = null, $archived = null, $mode = null, $exclusive = null, $sort = null, $order = null, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\SearchResults';
+        $returnType = '\Efsa\Client\Gitea\Model\SearchResults';
         $request = $this->repoSearchRequest($q, $topic, $include_desc, $uid, $priority_owner_id, $team_id, $starred_by, $private, $is_private, $template, $archived, $mode, $exclusive, $sort, $order, $page, $limit);
 
         return $this->client
@@ -36812,7 +36812,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -36830,7 +36830,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -37130,11 +37130,11 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
-     * @param  \Efsa\Client\Model\SubmitPullReviewOptions $body body (required)
+     * @param  \Efsa\Client\Gitea\Model\SubmitPullReviewOptions $body body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\PullReview
+     * @return \Efsa\Client\Gitea\Model\PullReview
      */
     public function repoSubmitPullReview($owner, $repo, $index, $id, $body)
     {
@@ -37151,11 +37151,11 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
-     * @param  \Efsa\Client\Model\SubmitPullReviewOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\SubmitPullReviewOptions $body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\PullReview, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\PullReview, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoSubmitPullReviewWithHttpInfo($owner, $repo, $index, $id, $body)
     {
@@ -37191,20 +37191,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\PullReview' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\PullReview' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\PullReview', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\PullReview', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\PullReview';
+            $returnType = '\Efsa\Client\Gitea\Model\PullReview';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -37222,7 +37222,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\PullReview',
+                        '\Efsa\Client\Gitea\Model\PullReview',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -37241,7 +37241,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
-     * @param  \Efsa\Client\Model\SubmitPullReviewOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\SubmitPullReviewOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -37265,14 +37265,14 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
-     * @param  \Efsa\Client\Model\SubmitPullReviewOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\SubmitPullReviewOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoSubmitPullReviewAsyncWithHttpInfo($owner, $repo, $index, $id, $body)
     {
-        $returnType = '\Efsa\Client\Model\PullReview';
+        $returnType = '\Efsa\Client\Gitea\Model\PullReview';
         $request = $this->repoSubmitPullReviewRequest($owner, $repo, $index, $id, $body);
 
         return $this->client
@@ -37315,7 +37315,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
-     * @param  \Efsa\Client\Model\SubmitPullReviewOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\SubmitPullReviewOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -37502,7 +37502,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the hook to test (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -37520,7 +37520,7 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the hook to test (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -37797,9 +37797,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\TrackedTime[]
+     * @return \Efsa\Client\Gitea\Model\TrackedTime[]
      */
     public function repoTrackedTimes($owner, $repo, $user = null, $since = null, $before = null, $page = null, $limit = null)
     {
@@ -37820,9 +37820,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\TrackedTime[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\TrackedTime[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repoTrackedTimesWithHttpInfo($owner, $repo, $user = null, $since = null, $before = null, $page = null, $limit = null)
     {
@@ -37858,20 +37858,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\TrackedTime[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\TrackedTime[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\TrackedTime[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\TrackedTime[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\TrackedTime[]';
+            $returnType = '\Efsa\Client\Gitea\Model\TrackedTime[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -37889,7 +37889,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\TrackedTime[]',
+                        '\Efsa\Client\Gitea\Model\TrackedTime[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -37943,7 +37943,7 @@ class RepositoryApi
      */
     public function repoTrackedTimesAsyncWithHttpInfo($owner, $repo, $user = null, $since = null, $before = null, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\TrackedTime[]';
+        $returnType = '\Efsa\Client\Gitea\Model\TrackedTime[]';
         $request = $this->repoTrackedTimesRequest($owner, $repo, $user, $since, $before, $page, $limit);
 
         return $this->client
@@ -38168,11 +38168,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo to transfer (required)
      * @param  string $repo name of the repo to transfer (required)
-     * @param  \Efsa\Client\Model\TransferRepoOption $body Transfer Options (required)
+     * @param  \Efsa\Client\Gitea\Model\TransferRepoOption $body Transfer Options (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Repository
+     * @return \Efsa\Client\Gitea\Model\Repository
      */
     public function repoTransfer($owner, $repo, $body)
     {
@@ -38187,11 +38187,11 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo to transfer (required)
      * @param  string $repo name of the repo to transfer (required)
-     * @param  \Efsa\Client\Model\TransferRepoOption $body Transfer Options (required)
+     * @param  \Efsa\Client\Gitea\Model\TransferRepoOption $body Transfer Options (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Repository, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Repository, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoTransferWithHttpInfo($owner, $repo, $body)
     {
@@ -38227,20 +38227,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 202:
-                    if ('\Efsa\Client\Model\Repository' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Repository' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Repository', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Repository', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Repository';
+            $returnType = '\Efsa\Client\Gitea\Model\Repository';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -38258,7 +38258,7 @@ class RepositoryApi
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Repository',
+                        '\Efsa\Client\Gitea\Model\Repository',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -38275,7 +38275,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo to transfer (required)
      * @param  string $repo name of the repo to transfer (required)
-     * @param  \Efsa\Client\Model\TransferRepoOption $body Transfer Options (required)
+     * @param  \Efsa\Client\Gitea\Model\TransferRepoOption $body Transfer Options (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -38297,14 +38297,14 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo to transfer (required)
      * @param  string $repo name of the repo to transfer (required)
-     * @param  \Efsa\Client\Model\TransferRepoOption $body Transfer Options (required)
+     * @param  \Efsa\Client\Gitea\Model\TransferRepoOption $body Transfer Options (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoTransferAsyncWithHttpInfo($owner, $repo, $body)
     {
-        $returnType = '\Efsa\Client\Model\Repository';
+        $returnType = '\Efsa\Client\Gitea\Model\Repository';
         $request = $this->repoTransferRequest($owner, $repo, $body);
 
         return $this->client
@@ -38345,7 +38345,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo to transfer (required)
      * @param  string $repo name of the repo to transfer (required)
-     * @param  \Efsa\Client\Model\TransferRepoOption $body Transfer Options (required)
+     * @param  \Efsa\Client\Gitea\Model\TransferRepoOption $body Transfer Options (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -38505,9 +38505,9 @@ class RepositoryApi
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\PullReview
+     * @return \Efsa\Client\Gitea\Model\PullReview
      */
     public function repoUnDismissPullReview($owner, $repo, $index, $id)
     {
@@ -38525,9 +38525,9 @@ class RepositoryApi
      * @param  int $index index of the pull request (required)
      * @param  int $id id of the review (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\PullReview, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\PullReview, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoUnDismissPullReviewWithHttpInfo($owner, $repo, $index, $id)
     {
@@ -38563,20 +38563,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\PullReview' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\PullReview' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\PullReview', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\PullReview', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\PullReview';
+            $returnType = '\Efsa\Client\Gitea\Model\PullReview';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -38594,7 +38594,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\PullReview',
+                        '\Efsa\Client\Gitea\Model\PullReview',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -38642,7 +38642,7 @@ class RepositoryApi
      */
     public function repoUnDismissPullReviewAsyncWithHttpInfo($owner, $repo, $index, $id)
     {
-        $returnType = '\Efsa\Client\Model\PullReview';
+        $returnType = '\Efsa\Client\Gitea\Model\PullReview';
         $request = $this->repoUnDismissPullReviewRequest($owner, $repo, $index, $id);
 
         return $this->client
@@ -38858,11 +38858,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $filepath path of the file to update (required)
-     * @param  \Efsa\Client\Model\UpdateFileOptions $body body (required)
+     * @param  \Efsa\Client\Gitea\Model\UpdateFileOptions $body body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\FileResponse
+     * @return \Efsa\Client\Gitea\Model\FileResponse
      */
     public function repoUpdateFile($owner, $repo, $filepath, $body)
     {
@@ -38878,11 +38878,11 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $filepath path of the file to update (required)
-     * @param  \Efsa\Client\Model\UpdateFileOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\UpdateFileOptions $body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\FileResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\FileResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function repoUpdateFileWithHttpInfo($owner, $repo, $filepath, $body)
     {
@@ -38918,20 +38918,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\FileResponse' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\FileResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\FileResponse', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\FileResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\FileResponse';
+            $returnType = '\Efsa\Client\Gitea\Model\FileResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -38949,7 +38949,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\FileResponse',
+                        '\Efsa\Client\Gitea\Model\FileResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -38967,7 +38967,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $filepath path of the file to update (required)
-     * @param  \Efsa\Client\Model\UpdateFileOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\UpdateFileOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -38990,14 +38990,14 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $filepath path of the file to update (required)
-     * @param  \Efsa\Client\Model\UpdateFileOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\UpdateFileOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function repoUpdateFileAsyncWithHttpInfo($owner, $repo, $filepath, $body)
     {
-        $returnType = '\Efsa\Client\Model\FileResponse';
+        $returnType = '\Efsa\Client\Gitea\Model\FileResponse';
         $request = $this->repoUpdateFileRequest($owner, $repo, $filepath, $body);
 
         return $this->client
@@ -39039,7 +39039,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $filepath path of the file to update (required)
-     * @param  \Efsa\Client\Model\UpdateFileOptions $body (required)
+     * @param  \Efsa\Client\Gitea\Model\UpdateFileOptions $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -39213,7 +39213,7 @@ class RepositoryApi
      * @param  int $index index of the pull request to get (required)
      * @param  string $style how to update pull request (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -39232,7 +39232,7 @@ class RepositoryApi
      * @param  int $index index of the pull request to get (required)
      * @param  string $style how to update pull request (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -39513,9 +39513,9 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\RepoTopicOptions $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\RepoTopicOptions $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -39531,9 +39531,9 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\RepoTopicOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\RepoTopicOptions $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -39585,7 +39585,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\RepoTopicOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\RepoTopicOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -39607,7 +39607,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\RepoTopicOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\RepoTopicOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -39645,7 +39645,7 @@ class RepositoryApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\RepoTopicOptions $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\RepoTopicOptions $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -39798,9 +39798,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\TopicResponse[]
+     * @return \Efsa\Client\Gitea\Model\TopicResponse[]
      */
     public function topicSearch($q, $page = null, $limit = null)
     {
@@ -39817,9 +39817,9 @@ class RepositoryApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\TopicResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\TopicResponse[], HTTP status code, HTTP response headers (array of strings)
      */
     public function topicSearchWithHttpInfo($q, $page = null, $limit = null)
     {
@@ -39855,20 +39855,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\TopicResponse[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\TopicResponse[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\TopicResponse[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\TopicResponse[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\TopicResponse[]';
+            $returnType = '\Efsa\Client\Gitea\Model\TopicResponse[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -39886,7 +39886,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\TopicResponse[]',
+                        '\Efsa\Client\Gitea\Model\TopicResponse[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -39932,7 +39932,7 @@ class RepositoryApi
      */
     public function topicSearchAsyncWithHttpInfo($q, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\TopicResponse[]';
+        $returnType = '\Efsa\Client\Gitea\Model\TopicResponse[]';
         $request = $this->topicSearchRequest($q, $page, $limit);
 
         return $this->client
@@ -40118,9 +40118,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\WatchInfo
+     * @return \Efsa\Client\Gitea\Model\WatchInfo
      */
     public function userCurrentCheckSubscription($owner, $repo)
     {
@@ -40136,9 +40136,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\WatchInfo, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\WatchInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function userCurrentCheckSubscriptionWithHttpInfo($owner, $repo)
     {
@@ -40174,20 +40174,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\WatchInfo' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\WatchInfo' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\WatchInfo', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\WatchInfo', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\WatchInfo';
+            $returnType = '\Efsa\Client\Gitea\Model\WatchInfo';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -40205,7 +40205,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\WatchInfo',
+                        '\Efsa\Client\Gitea\Model\WatchInfo',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -40249,7 +40249,7 @@ class RepositoryApi
      */
     public function userCurrentCheckSubscriptionAsyncWithHttpInfo($owner, $repo)
     {
-        $returnType = '\Efsa\Client\Model\WatchInfo';
+        $returnType = '\Efsa\Client\Gitea\Model\WatchInfo';
         $request = $this->userCurrentCheckSubscriptionRequest($owner, $repo);
 
         return $this->client
@@ -40435,7 +40435,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -40452,7 +40452,7 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -40707,9 +40707,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\WatchInfo
+     * @return \Efsa\Client\Gitea\Model\WatchInfo
      */
     public function userCurrentPutSubscription($owner, $repo)
     {
@@ -40725,9 +40725,9 @@ class RepositoryApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\WatchInfo, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\WatchInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function userCurrentPutSubscriptionWithHttpInfo($owner, $repo)
     {
@@ -40763,20 +40763,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\WatchInfo' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\WatchInfo' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\WatchInfo', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\WatchInfo', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\WatchInfo';
+            $returnType = '\Efsa\Client\Gitea\Model\WatchInfo';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -40794,7 +40794,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\WatchInfo',
+                        '\Efsa\Client\Gitea\Model\WatchInfo',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -40838,7 +40838,7 @@ class RepositoryApi
      */
     public function userCurrentPutSubscriptionAsyncWithHttpInfo($owner, $repo)
     {
-        $returnType = '\Efsa\Client\Model\WatchInfo';
+        $returnType = '\Efsa\Client\Gitea\Model\WatchInfo';
         $request = $this->userCurrentPutSubscriptionRequest($owner, $repo);
 
         return $this->client
@@ -41025,9 +41025,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $user username of user (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\TrackedTime[]
+     * @return \Efsa\Client\Gitea\Model\TrackedTime[]
      */
     public function userTrackedTimes($owner, $repo, $user)
     {
@@ -41044,9 +41044,9 @@ class RepositoryApi
      * @param  string $repo name of the repo (required)
      * @param  string $user username of user (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\TrackedTime[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\TrackedTime[], HTTP status code, HTTP response headers (array of strings)
      */
     public function userTrackedTimesWithHttpInfo($owner, $repo, $user)
     {
@@ -41082,20 +41082,20 @@ class RepositoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\TrackedTime[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\TrackedTime[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\TrackedTime[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\TrackedTime[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\TrackedTime[]';
+            $returnType = '\Efsa\Client\Gitea\Model\TrackedTime[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -41113,7 +41113,7 @@ class RepositoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\TrackedTime[]',
+                        '\Efsa\Client\Gitea\Model\TrackedTime[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -41159,7 +41159,7 @@ class RepositoryApi
      */
     public function userTrackedTimesAsyncWithHttpInfo($owner, $repo, $user)
     {
-        $returnType = '\Efsa\Client\Model\TrackedTime[]';
+        $returnType = '\Efsa\Client\Gitea\Model\TrackedTime[]';
         $request = $this->userTrackedTimesRequest($owner, $repo, $user);
 
         return $this->client

@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * NotificationThread Class Doc Comment
  *
  * @category Class
  * @description NotificationThread expose Notification on API
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -62,8 +62,8 @@ class NotificationThread implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $openAPITypes = [
         'id' => 'int',
         'pinned' => 'bool',
-        'repository' => '\Efsa\Client\Model\Repository',
-        'subject' => '\Efsa\Client\Model\NotificationSubject',
+        'repository' => '\Efsa\Client\Gitea\Model\Repository',
+        'subject' => '\Efsa\Client\Gitea\Model\NotificationSubject',
         'unread' => 'bool',
         'updated_at' => '\DateTime',
         'url' => 'string'
@@ -293,7 +293,7 @@ class NotificationThread implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets repository
      *
-     * @return \Efsa\Client\Model\Repository|null
+     * @return \Efsa\Client\Gitea\Model\Repository|null
      */
     public function getRepository()
     {
@@ -303,7 +303,7 @@ class NotificationThread implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets repository
      *
-     * @param \Efsa\Client\Model\Repository|null $repository repository
+     * @param \Efsa\Client\Gitea\Model\Repository|null $repository repository
      *
      * @return self
      */
@@ -317,7 +317,7 @@ class NotificationThread implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets subject
      *
-     * @return \Efsa\Client\Model\NotificationSubject|null
+     * @return \Efsa\Client\Gitea\Model\NotificationSubject|null
      */
     public function getSubject()
     {
@@ -327,7 +327,7 @@ class NotificationThread implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets subject
      *
-     * @param \Efsa\Client\Model\NotificationSubject|null $subject subject
+     * @param \Efsa\Client\Gitea\Model\NotificationSubject|null $subject subject
      *
      * @return self
      */

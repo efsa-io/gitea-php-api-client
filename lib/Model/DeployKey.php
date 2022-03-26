@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * DeployKey Class Doc Comment
  *
  * @category Class
  * @description DeployKey a deploy key
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -66,7 +66,7 @@ class DeployKey implements ModelInterface, ArrayAccess, \JsonSerializable
         'key' => 'string',
         'key_id' => 'int',
         'read_only' => 'bool',
-        'repository' => '\Efsa\Client\Model\Repository',
+        'repository' => '\Efsa\Client\Gitea\Model\Repository',
         'title' => 'string',
         'url' => 'string'
     ];
@@ -401,7 +401,7 @@ class DeployKey implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets repository
      *
-     * @return \Efsa\Client\Model\Repository|null
+     * @return \Efsa\Client\Gitea\Model\Repository|null
      */
     public function getRepository()
     {
@@ -411,7 +411,7 @@ class DeployKey implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets repository
      *
-     * @param \Efsa\Client\Model\Repository|null $repository repository
+     * @param \Efsa\Client\Gitea\Model\Repository|null $repository repository
      *
      * @return self
      */

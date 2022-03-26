@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * PullReview Class Doc Comment
  *
  * @category Class
  * @description PullReview represents a pull request review
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -71,8 +71,8 @@ class PullReview implements ModelInterface, ArrayAccess, \JsonSerializable
         'stale' => 'bool',
         'state' => 'string',
         'submitted_at' => '\DateTime',
-        'team' => '\Efsa\Client\Model\Team',
-        'user' => '\Efsa\Client\Model\User'
+        'team' => '\Efsa\Client\Gitea\Model\Team',
+        'user' => '\Efsa\Client\Gitea\Model\User'
     ];
 
     /**
@@ -545,7 +545,7 @@ class PullReview implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets team
      *
-     * @return \Efsa\Client\Model\Team|null
+     * @return \Efsa\Client\Gitea\Model\Team|null
      */
     public function getTeam()
     {
@@ -555,7 +555,7 @@ class PullReview implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets team
      *
-     * @param \Efsa\Client\Model\Team|null $team team
+     * @param \Efsa\Client\Gitea\Model\Team|null $team team
      *
      * @return self
      */
@@ -569,7 +569,7 @@ class PullReview implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets user
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getUser()
     {
@@ -579,7 +579,7 @@ class PullReview implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets user
      *
-     * @param \Efsa\Client\Model\User|null $user user
+     * @param \Efsa\Client\Gitea\Model\User|null $user user
      *
      * @return self
      */

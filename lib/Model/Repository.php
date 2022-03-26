@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * Repository Class Doc Comment
  *
  * @category Class
  * @description Repository represents a repository
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -72,8 +72,8 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
         'default_merge_style' => 'string',
         'description' => 'string',
         'empty' => 'bool',
-        'external_tracker' => '\Efsa\Client\Model\ExternalTracker',
-        'external_wiki' => '\Efsa\Client\Model\ExternalWiki',
+        'external_tracker' => '\Efsa\Client\Gitea\Model\ExternalTracker',
+        'external_wiki' => '\Efsa\Client\Gitea\Model\ExternalWiki',
         'fork' => 'bool',
         'forks_count' => 'int',
         'full_name' => 'string',
@@ -85,7 +85,7 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'int',
         'ignore_whitespace_conflicts' => 'bool',
         'internal' => 'bool',
-        'internal_tracker' => '\Efsa\Client\Model\InternalTracker',
+        'internal_tracker' => '\Efsa\Client\Gitea\Model\InternalTracker',
         'language' => 'string',
         'languages_url' => 'string',
         'mirror' => 'bool',
@@ -95,12 +95,12 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
         'open_issues_count' => 'int',
         'open_pr_counter' => 'int',
         'original_url' => 'string',
-        'owner' => '\Efsa\Client\Model\User',
-        'parent' => '\Efsa\Client\Model\Repository',
-        'permissions' => '\Efsa\Client\Model\Permission',
+        'owner' => '\Efsa\Client\Gitea\Model\User',
+        'parent' => '\Efsa\Client\Gitea\Model\Repository',
+        'permissions' => '\Efsa\Client\Gitea\Model\Permission',
         'private' => 'bool',
         'release_counter' => 'int',
-        'repo_transfer' => '\Efsa\Client\Model\RepoTransfer',
+        'repo_transfer' => '\Efsa\Client\Gitea\Model\RepoTransfer',
         'size' => 'int',
         'ssh_url' => 'string',
         'stars_count' => 'int',
@@ -779,7 +779,7 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets external_tracker
      *
-     * @return \Efsa\Client\Model\ExternalTracker|null
+     * @return \Efsa\Client\Gitea\Model\ExternalTracker|null
      */
     public function getExternalTracker()
     {
@@ -789,7 +789,7 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets external_tracker
      *
-     * @param \Efsa\Client\Model\ExternalTracker|null $external_tracker external_tracker
+     * @param \Efsa\Client\Gitea\Model\ExternalTracker|null $external_tracker external_tracker
      *
      * @return self
      */
@@ -803,7 +803,7 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets external_wiki
      *
-     * @return \Efsa\Client\Model\ExternalWiki|null
+     * @return \Efsa\Client\Gitea\Model\ExternalWiki|null
      */
     public function getExternalWiki()
     {
@@ -813,7 +813,7 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets external_wiki
      *
-     * @param \Efsa\Client\Model\ExternalWiki|null $external_wiki external_wiki
+     * @param \Efsa\Client\Gitea\Model\ExternalWiki|null $external_wiki external_wiki
      *
      * @return self
      */
@@ -1091,7 +1091,7 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets internal_tracker
      *
-     * @return \Efsa\Client\Model\InternalTracker|null
+     * @return \Efsa\Client\Gitea\Model\InternalTracker|null
      */
     public function getInternalTracker()
     {
@@ -1101,7 +1101,7 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets internal_tracker
      *
-     * @param \Efsa\Client\Model\InternalTracker|null $internal_tracker internal_tracker
+     * @param \Efsa\Client\Gitea\Model\InternalTracker|null $internal_tracker internal_tracker
      *
      * @return self
      */
@@ -1331,7 +1331,7 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets owner
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getOwner()
     {
@@ -1341,7 +1341,7 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets owner
      *
-     * @param \Efsa\Client\Model\User|null $owner owner
+     * @param \Efsa\Client\Gitea\Model\User|null $owner owner
      *
      * @return self
      */
@@ -1355,7 +1355,7 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets parent
      *
-     * @return \Efsa\Client\Model\Repository|null
+     * @return \Efsa\Client\Gitea\Model\Repository|null
      */
     public function getParent()
     {
@@ -1365,7 +1365,7 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets parent
      *
-     * @param \Efsa\Client\Model\Repository|null $parent parent
+     * @param \Efsa\Client\Gitea\Model\Repository|null $parent parent
      *
      * @return self
      */
@@ -1379,7 +1379,7 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets permissions
      *
-     * @return \Efsa\Client\Model\Permission|null
+     * @return \Efsa\Client\Gitea\Model\Permission|null
      */
     public function getPermissions()
     {
@@ -1389,7 +1389,7 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets permissions
      *
-     * @param \Efsa\Client\Model\Permission|null $permissions permissions
+     * @param \Efsa\Client\Gitea\Model\Permission|null $permissions permissions
      *
      * @return self
      */
@@ -1451,7 +1451,7 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets repo_transfer
      *
-     * @return \Efsa\Client\Model\RepoTransfer|null
+     * @return \Efsa\Client\Gitea\Model\RepoTransfer|null
      */
     public function getRepoTransfer()
     {
@@ -1461,7 +1461,7 @@ class Repository implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets repo_transfer
      *
-     * @param \Efsa\Client\Model\RepoTransfer|null $repo_transfer repo_transfer
+     * @param \Efsa\Client\Gitea\Model\RepoTransfer|null $repo_transfer repo_transfer
      *
      * @return self
      */

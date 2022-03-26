@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client\Model
+ * @package  Efsa\Client\Gitea\Model
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,12 +26,12 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package Efsa\Client\Model
+ * @package Efsa\Client\Gitea\Model
  * @author  OpenAPI Generator team
  */
 interface ModelInterface

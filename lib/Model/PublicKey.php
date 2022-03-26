@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * PublicKey Class Doc Comment
  *
  * @category Class
  * @description PublicKey publickey is a user key to push code to repository
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -68,7 +68,7 @@ class PublicKey implements ModelInterface, ArrayAccess, \JsonSerializable
         'read_only' => 'bool',
         'title' => 'string',
         'url' => 'string',
-        'user' => '\Efsa\Client\Model\User'
+        'user' => '\Efsa\Client\Gitea\Model\User'
     ];
 
     /**
@@ -449,7 +449,7 @@ class PublicKey implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets user
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getUser()
     {
@@ -459,7 +459,7 @@ class PublicKey implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets user
      *
-     * @param \Efsa\Client\Model\User|null $user user
+     * @param \Efsa\Client\Gitea\Model\User|null $user user
      *
      * @return self
      */

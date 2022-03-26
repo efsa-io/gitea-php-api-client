@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * TrackedTime Class Doc Comment
  *
  * @category Class
  * @description TrackedTime worked time for an issue / pr
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -62,7 +62,7 @@ class TrackedTime implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'created' => '\DateTime',
         'id' => 'int',
-        'issue' => '\Efsa\Client\Model\Issue',
+        'issue' => '\Efsa\Client\Gitea\Model\Issue',
         'issue_id' => 'int',
         'time' => 'int',
         'user_id' => 'int',
@@ -293,7 +293,7 @@ class TrackedTime implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets issue
      *
-     * @return \Efsa\Client\Model\Issue|null
+     * @return \Efsa\Client\Gitea\Model\Issue|null
      */
     public function getIssue()
     {
@@ -303,7 +303,7 @@ class TrackedTime implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets issue
      *
-     * @param \Efsa\Client\Model\Issue|null $issue issue
+     * @param \Efsa\Client\Gitea\Model\Issue|null $issue issue
      *
      * @return self
      */

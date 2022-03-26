@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * Note Class Doc Comment
  *
  * @category Class
  * @description Note contains information related to a git note
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,7 +60,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'commit' => '\Efsa\Client\Model\Commit',
+        'commit' => '\Efsa\Client\Gitea\Model\Commit',
         'message' => 'string'
     ];
 
@@ -215,7 +215,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets commit
      *
-     * @return \Efsa\Client\Model\Commit|null
+     * @return \Efsa\Client\Gitea\Model\Commit|null
      */
     public function getCommit()
     {
@@ -225,7 +225,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets commit
      *
-     * @param \Efsa\Client\Model\Commit|null $commit commit
+     * @param \Efsa\Client\Gitea\Model\Commit|null $commit commit
      *
      * @return self
      */

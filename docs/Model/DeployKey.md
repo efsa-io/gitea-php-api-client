@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **key** | **string** |  | [optional]
 **key_id** | **int** |  | [optional]
 **read_only** | **bool** |  | [optional]
-**repository** | [**\Efsa\Client\Model\Repository**](Repository.md) |  | [optional]
+**repository** | [**\Efsa\Client\Gitea\Model\Repository**](Repository.md) |  | [optional]
 **title** | **string** |  | [optional]
 **url** | **string** |  | [optional]
 

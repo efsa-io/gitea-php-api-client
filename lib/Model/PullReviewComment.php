@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * PullReviewComment Class Doc Comment
  *
  * @category Class
  * @description PullReviewComment represents a comment on a pull request review
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -72,9 +72,9 @@ class PullReviewComment implements ModelInterface, ArrayAccess, \JsonSerializabl
         'position' => 'int',
         'pull_request_review_id' => 'int',
         'pull_request_url' => 'string',
-        'resolver' => '\Efsa\Client\Model\User',
+        'resolver' => '\Efsa\Client\Gitea\Model\User',
         'updated_at' => '\DateTime',
-        'user' => '\Efsa\Client\Model\User'
+        'user' => '\Efsa\Client\Gitea\Model\User'
     ];
 
     /**
@@ -581,7 +581,7 @@ class PullReviewComment implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets resolver
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getResolver()
     {
@@ -591,7 +591,7 @@ class PullReviewComment implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets resolver
      *
-     * @param \Efsa\Client\Model\User|null $resolver resolver
+     * @param \Efsa\Client\Gitea\Model\User|null $resolver resolver
      *
      * @return self
      */
@@ -629,7 +629,7 @@ class PullReviewComment implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets user
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getUser()
     {
@@ -639,7 +639,7 @@ class PullReviewComment implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets user
      *
-     * @param \Efsa\Client\Model\User|null $user user
+     * @param \Efsa\Client\Gitea\Model\User|null $user user
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * NodeInfoUsage Class Doc Comment
  *
  * @category Class
  * @description NodeInfoUsage contains usage statistics for this server
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -62,7 +62,7 @@ class NodeInfoUsage implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'local_comments' => 'int',
         'local_posts' => 'int',
-        'users' => '\Efsa\Client\Model\NodeInfoUsageUsers'
+        'users' => '\Efsa\Client\Gitea\Model\NodeInfoUsageUsers'
     ];
 
     /**
@@ -269,7 +269,7 @@ class NodeInfoUsage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets users
      *
-     * @return \Efsa\Client\Model\NodeInfoUsageUsers|null
+     * @return \Efsa\Client\Gitea\Model\NodeInfoUsageUsers|null
      */
     public function getUsers()
     {
@@ -279,7 +279,7 @@ class NodeInfoUsage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets users
      *
-     * @param \Efsa\Client\Model\NodeInfoUsageUsers|null $users users
+     * @param \Efsa\Client\Gitea\Model\NodeInfoUsageUsers|null $users users
      *
      * @return self
      */

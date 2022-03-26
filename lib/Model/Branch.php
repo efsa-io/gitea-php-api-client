@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * Branch Class Doc Comment
  *
  * @category Class
  * @description Branch represents a repository branch
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,7 +60,7 @@ class Branch implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'commit' => '\Efsa\Client\Model\PayloadCommit',
+        'commit' => '\Efsa\Client\Gitea\Model\PayloadCommit',
         'effective_branch_protection_name' => 'string',
         'enable_status_check' => 'bool',
         'name' => 'string',
@@ -257,7 +257,7 @@ class Branch implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets commit
      *
-     * @return \Efsa\Client\Model\PayloadCommit|null
+     * @return \Efsa\Client\Gitea\Model\PayloadCommit|null
      */
     public function getCommit()
     {
@@ -267,7 +267,7 @@ class Branch implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets commit
      *
-     * @param \Efsa\Client\Model\PayloadCommit|null $commit commit
+     * @param \Efsa\Client\Gitea\Model\PayloadCommit|null $commit commit
      *
      * @return self
      */

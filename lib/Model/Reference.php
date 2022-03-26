@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * Reference Class Doc Comment
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -59,7 +59,7 @@ class Reference implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'object' => '\Efsa\Client\Model\GitObject',
+        'object' => '\Efsa\Client\Gitea\Model\GitObject',
         'ref' => 'string',
         'url' => 'string'
     ];
@@ -220,7 +220,7 @@ class Reference implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets object
      *
-     * @return \Efsa\Client\Model\GitObject|null
+     * @return \Efsa\Client\Gitea\Model\GitObject|null
      */
     public function getObject()
     {
@@ -230,7 +230,7 @@ class Reference implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets object
      *
-     * @param \Efsa\Client\Model\GitObject|null $object object
+     * @param \Efsa\Client\Gitea\Model\GitObject|null $object object
      *
      * @return self
      */

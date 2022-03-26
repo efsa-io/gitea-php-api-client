@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Gitea;
+namespace Efsa\Client\Gitea\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Efsa\Client\ApiException;
-use Efsa\Client\Configuration;
-use Efsa\Client\HeaderSelector;
-use Efsa\Client\ObjectSerializer;
+use Efsa\Client\Gitea\ApiException;
+use Efsa\Client\Gitea\Configuration;
+use Efsa\Client\Gitea\HeaderSelector;
+use Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * NotificationApi Class Doc Comment
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -127,9 +127,9 @@ class NotificationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\NotificationThread[]
+     * @return \Efsa\Client\Gitea\Model\NotificationThread[]
      */
     public function notifyGetList($all = null, $status_types = null, $subject_type = null, $since = null, $before = null, $page = null, $limit = null)
     {
@@ -150,9 +150,9 @@ class NotificationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\NotificationThread[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\NotificationThread[], HTTP status code, HTTP response headers (array of strings)
      */
     public function notifyGetListWithHttpInfo($all = null, $status_types = null, $subject_type = null, $since = null, $before = null, $page = null, $limit = null)
     {
@@ -188,20 +188,20 @@ class NotificationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\NotificationThread[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\NotificationThread[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\NotificationThread[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\NotificationThread[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\NotificationThread[]';
+            $returnType = '\Efsa\Client\Gitea\Model\NotificationThread[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -219,7 +219,7 @@ class NotificationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\NotificationThread[]',
+                        '\Efsa\Client\Gitea\Model\NotificationThread[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -273,7 +273,7 @@ class NotificationApi
      */
     public function notifyGetListAsyncWithHttpInfo($all = null, $status_types = null, $subject_type = null, $since = null, $before = null, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\NotificationThread[]';
+        $returnType = '\Efsa\Client\Gitea\Model\NotificationThread[]';
         $request = $this->notifyGetListRequest($all, $status_types, $subject_type, $since, $before, $page, $limit);
 
         return $this->client
@@ -500,9 +500,9 @@ class NotificationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\NotificationThread[]
+     * @return \Efsa\Client\Gitea\Model\NotificationThread[]
      */
     public function notifyGetRepoList($owner, $repo, $all = null, $status_types = null, $subject_type = null, $since = null, $before = null, $page = null, $limit = null)
     {
@@ -525,9 +525,9 @@ class NotificationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\NotificationThread[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\NotificationThread[], HTTP status code, HTTP response headers (array of strings)
      */
     public function notifyGetRepoListWithHttpInfo($owner, $repo, $all = null, $status_types = null, $subject_type = null, $since = null, $before = null, $page = null, $limit = null)
     {
@@ -563,20 +563,20 @@ class NotificationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\NotificationThread[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\NotificationThread[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\NotificationThread[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\NotificationThread[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\NotificationThread[]';
+            $returnType = '\Efsa\Client\Gitea\Model\NotificationThread[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -594,7 +594,7 @@ class NotificationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\NotificationThread[]',
+                        '\Efsa\Client\Gitea\Model\NotificationThread[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -652,7 +652,7 @@ class NotificationApi
      */
     public function notifyGetRepoListAsyncWithHttpInfo($owner, $repo, $all = null, $status_types = null, $subject_type = null, $since = null, $before = null, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\NotificationThread[]';
+        $returnType = '\Efsa\Client\Gitea\Model\NotificationThread[]';
         $request = $this->notifyGetRepoListRequest($owner, $repo, $all, $status_types, $subject_type, $since, $before, $page, $limit);
 
         return $this->client
@@ -901,9 +901,9 @@ class NotificationApi
      *
      * @param  string $id id of notification thread (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\NotificationThread
+     * @return \Efsa\Client\Gitea\Model\NotificationThread
      */
     public function notifyGetThread($id)
     {
@@ -918,9 +918,9 @@ class NotificationApi
      *
      * @param  string $id id of notification thread (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\NotificationThread, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\NotificationThread, HTTP status code, HTTP response headers (array of strings)
      */
     public function notifyGetThreadWithHttpInfo($id)
     {
@@ -956,20 +956,20 @@ class NotificationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\NotificationThread' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\NotificationThread' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\NotificationThread', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\NotificationThread', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\NotificationThread';
+            $returnType = '\Efsa\Client\Gitea\Model\NotificationThread';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -987,7 +987,7 @@ class NotificationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\NotificationThread',
+                        '\Efsa\Client\Gitea\Model\NotificationThread',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1029,7 +1029,7 @@ class NotificationApi
      */
     public function notifyGetThreadAsyncWithHttpInfo($id)
     {
-        $returnType = '\Efsa\Client\Model\NotificationThread';
+        $returnType = '\Efsa\Client\Gitea\Model\NotificationThread';
         $request = $this->notifyGetThreadRequest($id);
 
         return $this->client
@@ -1198,9 +1198,9 @@ class NotificationApi
      * Check if unread notifications exist
      *
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\NotificationCount
+     * @return \Efsa\Client\Gitea\Model\NotificationCount
      */
     public function notifyNewAvailable()
     {
@@ -1214,9 +1214,9 @@ class NotificationApi
      * Check if unread notifications exist
      *
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\NotificationCount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\NotificationCount, HTTP status code, HTTP response headers (array of strings)
      */
     public function notifyNewAvailableWithHttpInfo()
     {
@@ -1252,20 +1252,20 @@ class NotificationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\NotificationCount' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\NotificationCount' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\NotificationCount', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\NotificationCount', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\NotificationCount';
+            $returnType = '\Efsa\Client\Gitea\Model\NotificationCount';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1283,7 +1283,7 @@ class NotificationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\NotificationCount',
+                        '\Efsa\Client\Gitea\Model\NotificationCount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1323,7 +1323,7 @@ class NotificationApi
      */
     public function notifyNewAvailableAsyncWithHttpInfo()
     {
-        $returnType = '\Efsa\Client\Model\NotificationCount';
+        $returnType = '\Efsa\Client\Gitea\Model\NotificationCount';
         $request = $this->notifyNewAvailableRequest();
 
         return $this->client
@@ -1481,9 +1481,9 @@ class NotificationApi
      * @param  string[] $status_types Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
      * @param  string $to_status Status to mark notifications as, Defaults to read. (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\NotificationThread[]
+     * @return \Efsa\Client\Gitea\Model\NotificationThread[]
      */
     public function notifyReadList($last_read_at = null, $all = null, $status_types = null, $to_status = null)
     {
@@ -1501,9 +1501,9 @@ class NotificationApi
      * @param  string[] $status_types Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
      * @param  string $to_status Status to mark notifications as, Defaults to read. (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\NotificationThread[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\NotificationThread[], HTTP status code, HTTP response headers (array of strings)
      */
     public function notifyReadListWithHttpInfo($last_read_at = null, $all = null, $status_types = null, $to_status = null)
     {
@@ -1539,20 +1539,20 @@ class NotificationApi
 
             switch($statusCode) {
                 case 205:
-                    if ('\Efsa\Client\Model\NotificationThread[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\NotificationThread[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\NotificationThread[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\NotificationThread[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\NotificationThread[]';
+            $returnType = '\Efsa\Client\Gitea\Model\NotificationThread[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1570,7 +1570,7 @@ class NotificationApi
                 case 205:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\NotificationThread[]',
+                        '\Efsa\Client\Gitea\Model\NotificationThread[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1618,7 +1618,7 @@ class NotificationApi
      */
     public function notifyReadListAsyncWithHttpInfo($last_read_at = null, $all = null, $status_types = null, $to_status = null)
     {
-        $returnType = '\Efsa\Client\Model\NotificationThread[]';
+        $returnType = '\Efsa\Client\Gitea\Model\NotificationThread[]';
         $request = $this->notifyReadListRequest($last_read_at, $all, $status_types, $to_status);
 
         return $this->client
@@ -1814,9 +1814,9 @@ class NotificationApi
      * @param  string $to_status Status to mark notifications as. Defaults to read. (optional)
      * @param  \DateTime $last_read_at Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\NotificationThread[]
+     * @return \Efsa\Client\Gitea\Model\NotificationThread[]
      */
     public function notifyReadRepoList($owner, $repo, $all = null, $status_types = null, $to_status = null, $last_read_at = null)
     {
@@ -1836,9 +1836,9 @@ class NotificationApi
      * @param  string $to_status Status to mark notifications as. Defaults to read. (optional)
      * @param  \DateTime $last_read_at Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\NotificationThread[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\NotificationThread[], HTTP status code, HTTP response headers (array of strings)
      */
     public function notifyReadRepoListWithHttpInfo($owner, $repo, $all = null, $status_types = null, $to_status = null, $last_read_at = null)
     {
@@ -1874,20 +1874,20 @@ class NotificationApi
 
             switch($statusCode) {
                 case 205:
-                    if ('\Efsa\Client\Model\NotificationThread[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\NotificationThread[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\NotificationThread[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\NotificationThread[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\NotificationThread[]';
+            $returnType = '\Efsa\Client\Gitea\Model\NotificationThread[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1905,7 +1905,7 @@ class NotificationApi
                 case 205:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\NotificationThread[]',
+                        '\Efsa\Client\Gitea\Model\NotificationThread[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1957,7 +1957,7 @@ class NotificationApi
      */
     public function notifyReadRepoListAsyncWithHttpInfo($owner, $repo, $all = null, $status_types = null, $to_status = null, $last_read_at = null)
     {
-        $returnType = '\Efsa\Client\Model\NotificationThread[]';
+        $returnType = '\Efsa\Client\Gitea\Model\NotificationThread[]';
         $request = $this->notifyReadRepoListRequest($owner, $repo, $all, $status_types, $to_status, $last_read_at);
 
         return $this->client
@@ -2179,9 +2179,9 @@ class NotificationApi
      * @param  string $id id of notification thread (required)
      * @param  string $to_status Status to mark notifications as (optional, default to 'read')
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\NotificationThread
+     * @return \Efsa\Client\Gitea\Model\NotificationThread
      */
     public function notifyReadThread($id, $to_status = 'read')
     {
@@ -2197,9 +2197,9 @@ class NotificationApi
      * @param  string $id id of notification thread (required)
      * @param  string $to_status Status to mark notifications as (optional, default to 'read')
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\NotificationThread, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\NotificationThread, HTTP status code, HTTP response headers (array of strings)
      */
     public function notifyReadThreadWithHttpInfo($id, $to_status = 'read')
     {
@@ -2235,20 +2235,20 @@ class NotificationApi
 
             switch($statusCode) {
                 case 205:
-                    if ('\Efsa\Client\Model\NotificationThread' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\NotificationThread' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\NotificationThread', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\NotificationThread', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\NotificationThread';
+            $returnType = '\Efsa\Client\Gitea\Model\NotificationThread';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2266,7 +2266,7 @@ class NotificationApi
                 case 205:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\NotificationThread',
+                        '\Efsa\Client\Gitea\Model\NotificationThread',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2310,7 +2310,7 @@ class NotificationApi
      */
     public function notifyReadThreadAsyncWithHttpInfo($id, $to_status = 'read')
     {
-        $returnType = '\Efsa\Client\Model\NotificationThread';
+        $returnType = '\Efsa\Client\Gitea\Model\NotificationThread';
         $request = $this->notifyReadThreadRequest($id, $to_status);
 
         return $this->client

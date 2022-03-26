@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * Issue Class Doc Comment
  *
  * @category Class
  * @description Issue represents an issue in a repository
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,8 +60,8 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'assignee' => '\Efsa\Client\Model\User',
-        'assignees' => '\Efsa\Client\Model\User[]',
+        'assignee' => '\Efsa\Client\Gitea\Model\User',
+        'assignees' => '\Efsa\Client\Gitea\Model\User[]',
         'body' => 'string',
         'closed_at' => '\DateTime',
         'comments' => 'int',
@@ -70,19 +70,19 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
         'html_url' => 'string',
         'id' => 'int',
         'is_locked' => 'bool',
-        'labels' => '\Efsa\Client\Model\Label[]',
-        'milestone' => '\Efsa\Client\Model\Milestone',
+        'labels' => '\Efsa\Client\Gitea\Model\Label[]',
+        'milestone' => '\Efsa\Client\Gitea\Model\Milestone',
         'number' => 'int',
         'original_author' => 'string',
         'original_author_id' => 'int',
-        'pull_request' => '\Efsa\Client\Model\PullRequestMeta',
+        'pull_request' => '\Efsa\Client\Gitea\Model\PullRequestMeta',
         'ref' => 'string',
-        'repository' => '\Efsa\Client\Model\RepositoryMeta',
+        'repository' => '\Efsa\Client\Gitea\Model\RepositoryMeta',
         'state' => 'string',
         'title' => 'string',
         'updated_at' => '\DateTime',
         'url' => 'string',
-        'user' => '\Efsa\Client\Model\User'
+        'user' => '\Efsa\Client\Gitea\Model\User'
     ];
 
     /**
@@ -341,7 +341,7 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets assignee
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getAssignee()
     {
@@ -351,7 +351,7 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets assignee
      *
-     * @param \Efsa\Client\Model\User|null $assignee assignee
+     * @param \Efsa\Client\Gitea\Model\User|null $assignee assignee
      *
      * @return self
      */
@@ -365,7 +365,7 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets assignees
      *
-     * @return \Efsa\Client\Model\User[]|null
+     * @return \Efsa\Client\Gitea\Model\User[]|null
      */
     public function getAssignees()
     {
@@ -375,7 +375,7 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets assignees
      *
-     * @param \Efsa\Client\Model\User[]|null $assignees assignees
+     * @param \Efsa\Client\Gitea\Model\User[]|null $assignees assignees
      *
      * @return self
      */
@@ -581,7 +581,7 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets labels
      *
-     * @return \Efsa\Client\Model\Label[]|null
+     * @return \Efsa\Client\Gitea\Model\Label[]|null
      */
     public function getLabels()
     {
@@ -591,7 +591,7 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets labels
      *
-     * @param \Efsa\Client\Model\Label[]|null $labels labels
+     * @param \Efsa\Client\Gitea\Model\Label[]|null $labels labels
      *
      * @return self
      */
@@ -605,7 +605,7 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets milestone
      *
-     * @return \Efsa\Client\Model\Milestone|null
+     * @return \Efsa\Client\Gitea\Model\Milestone|null
      */
     public function getMilestone()
     {
@@ -615,7 +615,7 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets milestone
      *
-     * @param \Efsa\Client\Model\Milestone|null $milestone milestone
+     * @param \Efsa\Client\Gitea\Model\Milestone|null $milestone milestone
      *
      * @return self
      */
@@ -701,7 +701,7 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets pull_request
      *
-     * @return \Efsa\Client\Model\PullRequestMeta|null
+     * @return \Efsa\Client\Gitea\Model\PullRequestMeta|null
      */
     public function getPullRequest()
     {
@@ -711,7 +711,7 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets pull_request
      *
-     * @param \Efsa\Client\Model\PullRequestMeta|null $pull_request pull_request
+     * @param \Efsa\Client\Gitea\Model\PullRequestMeta|null $pull_request pull_request
      *
      * @return self
      */
@@ -749,7 +749,7 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets repository
      *
-     * @return \Efsa\Client\Model\RepositoryMeta|null
+     * @return \Efsa\Client\Gitea\Model\RepositoryMeta|null
      */
     public function getRepository()
     {
@@ -759,7 +759,7 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets repository
      *
-     * @param \Efsa\Client\Model\RepositoryMeta|null $repository repository
+     * @param \Efsa\Client\Gitea\Model\RepositoryMeta|null $repository repository
      *
      * @return self
      */
@@ -869,7 +869,7 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets user
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getUser()
     {
@@ -879,7 +879,7 @@ class Issue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets user
      *
-     * @param \Efsa\Client\Model\User|null $user user
+     * @param \Efsa\Client\Gitea\Model\User|null $user user
      *
      * @return self
      */

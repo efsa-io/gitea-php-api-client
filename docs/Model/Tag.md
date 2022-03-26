@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**commit** | [**\Efsa\Client\Model\CommitMeta**](CommitMeta.md) |  | [optional]
+**commit** | [**\Efsa\Client\Gitea\Model\CommitMeta**](CommitMeta.md) |  | [optional]
 **id** | **string** |  | [optional]
 **message** | **string** |  | [optional]
 **name** | **string** |  | [optional]

@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * ContentsResponse Class Doc Comment
  *
  * @category Class
  * @description ContentsResponse contains information about a repo&#39;s entry&#39;s (dir, file, symlink, submodule) metadata and content
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,7 +60,7 @@ class ContentsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        '_links' => '\Efsa\Client\Model\FileLinksResponse',
+        '_links' => '\Efsa\Client\Gitea\Model\FileLinksResponse',
         'content' => 'string',
         'download_url' => 'string',
         'encoding' => 'string',
@@ -287,7 +287,7 @@ class ContentsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets _links
      *
-     * @return \Efsa\Client\Model\FileLinksResponse|null
+     * @return \Efsa\Client\Gitea\Model\FileLinksResponse|null
      */
     public function getLinks()
     {
@@ -297,7 +297,7 @@ class ContentsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets _links
      *
-     * @param \Efsa\Client\Model\FileLinksResponse|null $_links _links
+     * @param \Efsa\Client\Gitea\Model\FileLinksResponse|null $_links _links
      *
      * @return self
      */

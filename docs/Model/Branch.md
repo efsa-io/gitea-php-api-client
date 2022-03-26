@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**commit** | [**\Efsa\Client\Model\PayloadCommit**](PayloadCommit.md) |  | [optional]
+**commit** | [**\Efsa\Client\Gitea\Model\PayloadCommit**](PayloadCommit.md) |  | [optional]
 **effective_branch_protection_name** | **string** |  | [optional]
 **enable_status_check** | **bool** |  | [optional]
 **name** | **string** |  | [optional]

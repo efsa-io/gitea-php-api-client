@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * PullRequest Class Doc Comment
  *
  * @category Class
  * @description PullRequest represents a pull request
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,34 +60,34 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'assignee' => '\Efsa\Client\Model\User',
-        'assignees' => '\Efsa\Client\Model\User[]',
-        'base' => '\Efsa\Client\Model\PRBranchInfo',
+        'assignee' => '\Efsa\Client\Gitea\Model\User',
+        'assignees' => '\Efsa\Client\Gitea\Model\User[]',
+        'base' => '\Efsa\Client\Gitea\Model\PRBranchInfo',
         'body' => 'string',
         'closed_at' => '\DateTime',
         'comments' => 'int',
         'created_at' => '\DateTime',
         'diff_url' => 'string',
         'due_date' => '\DateTime',
-        'head' => '\Efsa\Client\Model\PRBranchInfo',
+        'head' => '\Efsa\Client\Gitea\Model\PRBranchInfo',
         'html_url' => 'string',
         'id' => 'int',
         'is_locked' => 'bool',
-        'labels' => '\Efsa\Client\Model\Label[]',
+        'labels' => '\Efsa\Client\Gitea\Model\Label[]',
         'merge_base' => 'string',
         'merge_commit_sha' => 'string',
         'mergeable' => 'bool',
         'merged' => 'bool',
         'merged_at' => '\DateTime',
-        'merged_by' => '\Efsa\Client\Model\User',
-        'milestone' => '\Efsa\Client\Model\Milestone',
+        'merged_by' => '\Efsa\Client\Gitea\Model\User',
+        'milestone' => '\Efsa\Client\Gitea\Model\Milestone',
         'number' => 'int',
         'patch_url' => 'string',
         'state' => 'string',
         'title' => 'string',
         'updated_at' => '\DateTime',
         'url' => 'string',
-        'user' => '\Efsa\Client\Model\User'
+        'user' => '\Efsa\Client\Gitea\Model\User'
     ];
 
     /**
@@ -371,7 +371,7 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets assignee
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getAssignee()
     {
@@ -381,7 +381,7 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets assignee
      *
-     * @param \Efsa\Client\Model\User|null $assignee assignee
+     * @param \Efsa\Client\Gitea\Model\User|null $assignee assignee
      *
      * @return self
      */
@@ -395,7 +395,7 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets assignees
      *
-     * @return \Efsa\Client\Model\User[]|null
+     * @return \Efsa\Client\Gitea\Model\User[]|null
      */
     public function getAssignees()
     {
@@ -405,7 +405,7 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets assignees
      *
-     * @param \Efsa\Client\Model\User[]|null $assignees assignees
+     * @param \Efsa\Client\Gitea\Model\User[]|null $assignees assignees
      *
      * @return self
      */
@@ -419,7 +419,7 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets base
      *
-     * @return \Efsa\Client\Model\PRBranchInfo|null
+     * @return \Efsa\Client\Gitea\Model\PRBranchInfo|null
      */
     public function getBase()
     {
@@ -429,7 +429,7 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets base
      *
-     * @param \Efsa\Client\Model\PRBranchInfo|null $base base
+     * @param \Efsa\Client\Gitea\Model\PRBranchInfo|null $base base
      *
      * @return self
      */
@@ -587,7 +587,7 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets head
      *
-     * @return \Efsa\Client\Model\PRBranchInfo|null
+     * @return \Efsa\Client\Gitea\Model\PRBranchInfo|null
      */
     public function getHead()
     {
@@ -597,7 +597,7 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets head
      *
-     * @param \Efsa\Client\Model\PRBranchInfo|null $head head
+     * @param \Efsa\Client\Gitea\Model\PRBranchInfo|null $head head
      *
      * @return self
      */
@@ -683,7 +683,7 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets labels
      *
-     * @return \Efsa\Client\Model\Label[]|null
+     * @return \Efsa\Client\Gitea\Model\Label[]|null
      */
     public function getLabels()
     {
@@ -693,7 +693,7 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets labels
      *
-     * @param \Efsa\Client\Model\Label[]|null $labels labels
+     * @param \Efsa\Client\Gitea\Model\Label[]|null $labels labels
      *
      * @return self
      */
@@ -827,7 +827,7 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets merged_by
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getMergedBy()
     {
@@ -837,7 +837,7 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets merged_by
      *
-     * @param \Efsa\Client\Model\User|null $merged_by merged_by
+     * @param \Efsa\Client\Gitea\Model\User|null $merged_by merged_by
      *
      * @return self
      */
@@ -851,7 +851,7 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets milestone
      *
-     * @return \Efsa\Client\Model\Milestone|null
+     * @return \Efsa\Client\Gitea\Model\Milestone|null
      */
     public function getMilestone()
     {
@@ -861,7 +861,7 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets milestone
      *
-     * @param \Efsa\Client\Model\Milestone|null $milestone milestone
+     * @param \Efsa\Client\Gitea\Model\Milestone|null $milestone milestone
      *
      * @return self
      */
@@ -1019,7 +1019,7 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets user
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getUser()
     {
@@ -1029,7 +1029,7 @@ class PullRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets user
      *
-     * @param \Efsa\Client\Model\User|null $user user
+     * @param \Efsa\Client\Gitea\Model\User|null $user user
      *
      * @return self
      */

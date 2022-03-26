@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional]
 **includes_all_repositories** | **bool** |  | [optional]
 **name** | **string** |  | [optional]
-**organization** | [**\Efsa\Client\Model\Organization**](Organization.md) |  | [optional]
+**organization** | [**\Efsa\Client\Gitea\Model\Organization**](Organization.md) |  | [optional]
 **permission** | **string** |  | [optional]
 **units** | **string[]** |  | [optional]
 **units_map** | **array<string,string>** |  | [optional]

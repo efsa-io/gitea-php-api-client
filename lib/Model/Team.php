@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * Team Class Doc Comment
  *
  * @category Class
  * @description Team represents a team in an organization
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -65,7 +65,7 @@ class Team implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'int',
         'includes_all_repositories' => 'bool',
         'name' => 'string',
-        'organization' => '\Efsa\Client\Model\Organization',
+        'organization' => '\Efsa\Client\Gitea\Model\Organization',
         'permission' => 'string',
         'units' => 'string[]',
         'units_map' => 'array<string,string>'
@@ -407,7 +407,7 @@ class Team implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets organization
      *
-     * @return \Efsa\Client\Model\Organization|null
+     * @return \Efsa\Client\Gitea\Model\Organization|null
      */
     public function getOrganization()
     {
@@ -417,7 +417,7 @@ class Team implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets organization
      *
-     * @param \Efsa\Client\Model\Organization|null $organization organization
+     * @param \Efsa\Client\Gitea\Model\Organization|null $organization organization
      *
      * @return self
      */

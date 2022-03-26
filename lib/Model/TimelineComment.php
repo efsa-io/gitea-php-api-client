@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * TimelineComment Class Doc Comment
  *
  * @category Class
  * @description TimelineComment represents a timeline comment (comment of any type) on a commit or issue
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,35 +60,35 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'assignee' => '\Efsa\Client\Model\User',
-        'assignee_team' => '\Efsa\Client\Model\Team',
+        'assignee' => '\Efsa\Client\Gitea\Model\User',
+        'assignee_team' => '\Efsa\Client\Gitea\Model\Team',
         'body' => 'string',
         'created_at' => '\DateTime',
-        'dependent_issue' => '\Efsa\Client\Model\Issue',
+        'dependent_issue' => '\Efsa\Client\Gitea\Model\Issue',
         'html_url' => 'string',
         'id' => 'int',
         'issue_url' => 'string',
-        'label' => '\Efsa\Client\Model\Label',
-        'milestone' => '\Efsa\Client\Model\Milestone',
+        'label' => '\Efsa\Client\Gitea\Model\Label',
+        'milestone' => '\Efsa\Client\Gitea\Model\Milestone',
         'new_ref' => 'string',
         'new_title' => 'string',
-        'old_milestone' => '\Efsa\Client\Model\Milestone',
+        'old_milestone' => '\Efsa\Client\Gitea\Model\Milestone',
         'old_project_id' => 'int',
         'old_ref' => 'string',
         'old_title' => 'string',
         'project_id' => 'int',
         'pull_request_url' => 'string',
         'ref_action' => 'string',
-        'ref_comment' => '\Efsa\Client\Model\Comment',
+        'ref_comment' => '\Efsa\Client\Gitea\Model\Comment',
         'ref_commit_sha' => 'string',
-        'ref_issue' => '\Efsa\Client\Model\Issue',
+        'ref_issue' => '\Efsa\Client\Gitea\Model\Issue',
         'removed_assignee' => 'bool',
-        'resolve_doer' => '\Efsa\Client\Model\User',
+        'resolve_doer' => '\Efsa\Client\Gitea\Model\User',
         'review_id' => 'int',
-        'tracked_time' => '\Efsa\Client\Model\TrackedTime',
+        'tracked_time' => '\Efsa\Client\Gitea\Model\TrackedTime',
         'type' => 'string',
         'updated_at' => '\DateTime',
-        'user' => '\Efsa\Client\Model\User'
+        'user' => '\Efsa\Client\Gitea\Model\User'
     ];
 
     /**
@@ -377,7 +377,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets assignee
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getAssignee()
     {
@@ -387,7 +387,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets assignee
      *
-     * @param \Efsa\Client\Model\User|null $assignee assignee
+     * @param \Efsa\Client\Gitea\Model\User|null $assignee assignee
      *
      * @return self
      */
@@ -401,7 +401,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets assignee_team
      *
-     * @return \Efsa\Client\Model\Team|null
+     * @return \Efsa\Client\Gitea\Model\Team|null
      */
     public function getAssigneeTeam()
     {
@@ -411,7 +411,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets assignee_team
      *
-     * @param \Efsa\Client\Model\Team|null $assignee_team assignee_team
+     * @param \Efsa\Client\Gitea\Model\Team|null $assignee_team assignee_team
      *
      * @return self
      */
@@ -473,7 +473,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets dependent_issue
      *
-     * @return \Efsa\Client\Model\Issue|null
+     * @return \Efsa\Client\Gitea\Model\Issue|null
      */
     public function getDependentIssue()
     {
@@ -483,7 +483,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets dependent_issue
      *
-     * @param \Efsa\Client\Model\Issue|null $dependent_issue dependent_issue
+     * @param \Efsa\Client\Gitea\Model\Issue|null $dependent_issue dependent_issue
      *
      * @return self
      */
@@ -569,7 +569,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets label
      *
-     * @return \Efsa\Client\Model\Label|null
+     * @return \Efsa\Client\Gitea\Model\Label|null
      */
     public function getLabel()
     {
@@ -579,7 +579,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets label
      *
-     * @param \Efsa\Client\Model\Label|null $label label
+     * @param \Efsa\Client\Gitea\Model\Label|null $label label
      *
      * @return self
      */
@@ -593,7 +593,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets milestone
      *
-     * @return \Efsa\Client\Model\Milestone|null
+     * @return \Efsa\Client\Gitea\Model\Milestone|null
      */
     public function getMilestone()
     {
@@ -603,7 +603,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets milestone
      *
-     * @param \Efsa\Client\Model\Milestone|null $milestone milestone
+     * @param \Efsa\Client\Gitea\Model\Milestone|null $milestone milestone
      *
      * @return self
      */
@@ -665,7 +665,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets old_milestone
      *
-     * @return \Efsa\Client\Model\Milestone|null
+     * @return \Efsa\Client\Gitea\Model\Milestone|null
      */
     public function getOldMilestone()
     {
@@ -675,7 +675,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets old_milestone
      *
-     * @param \Efsa\Client\Model\Milestone|null $old_milestone old_milestone
+     * @param \Efsa\Client\Gitea\Model\Milestone|null $old_milestone old_milestone
      *
      * @return self
      */
@@ -833,7 +833,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets ref_comment
      *
-     * @return \Efsa\Client\Model\Comment|null
+     * @return \Efsa\Client\Gitea\Model\Comment|null
      */
     public function getRefComment()
     {
@@ -843,7 +843,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets ref_comment
      *
-     * @param \Efsa\Client\Model\Comment|null $ref_comment ref_comment
+     * @param \Efsa\Client\Gitea\Model\Comment|null $ref_comment ref_comment
      *
      * @return self
      */
@@ -881,7 +881,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets ref_issue
      *
-     * @return \Efsa\Client\Model\Issue|null
+     * @return \Efsa\Client\Gitea\Model\Issue|null
      */
     public function getRefIssue()
     {
@@ -891,7 +891,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets ref_issue
      *
-     * @param \Efsa\Client\Model\Issue|null $ref_issue ref_issue
+     * @param \Efsa\Client\Gitea\Model\Issue|null $ref_issue ref_issue
      *
      * @return self
      */
@@ -929,7 +929,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets resolve_doer
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getResolveDoer()
     {
@@ -939,7 +939,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets resolve_doer
      *
-     * @param \Efsa\Client\Model\User|null $resolve_doer resolve_doer
+     * @param \Efsa\Client\Gitea\Model\User|null $resolve_doer resolve_doer
      *
      * @return self
      */
@@ -977,7 +977,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tracked_time
      *
-     * @return \Efsa\Client\Model\TrackedTime|null
+     * @return \Efsa\Client\Gitea\Model\TrackedTime|null
      */
     public function getTrackedTime()
     {
@@ -987,7 +987,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tracked_time
      *
-     * @param \Efsa\Client\Model\TrackedTime|null $tracked_time tracked_time
+     * @param \Efsa\Client\Gitea\Model\TrackedTime|null $tracked_time tracked_time
      *
      * @return self
      */
@@ -1049,7 +1049,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets user
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getUser()
     {
@@ -1059,7 +1059,7 @@ class TimelineComment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets user
      *
-     * @param \Efsa\Client\Model\User|null $user user
+     * @param \Efsa\Client\Gitea\Model\User|null $user user
      *
      * @return self
      */

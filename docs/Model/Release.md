@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**assets** | [**\Efsa\Client\Model\Attachment[]**](Attachment.md) |  | [optional]
-**author** | [**\Efsa\Client\Model\User**](User.md) |  | [optional]
+**assets** | [**\Efsa\Client\Gitea\Model\Attachment[]**](Attachment.md) |  | [optional]
+**author** | [**\Efsa\Client\Gitea\Model\User**](User.md) |  | [optional]
 **body** | **string** |  | [optional]
 **created_at** | [**\DateTime**](\DateTime.md) |  | [optional]
 **draft** | **bool** |  | [optional]

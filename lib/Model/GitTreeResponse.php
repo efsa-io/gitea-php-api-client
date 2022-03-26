@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * GitTreeResponse Class Doc Comment
  *
  * @category Class
  * @description GitTreeResponse returns a git tree
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -63,7 +63,7 @@ class GitTreeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'page' => 'int',
         'sha' => 'string',
         'total_count' => 'int',
-        'tree' => '\Efsa\Client\Model\GitEntry[]',
+        'tree' => '\Efsa\Client\Gitea\Model\GitEntry[]',
         'truncated' => 'bool',
         'url' => 'string'
     ];
@@ -311,7 +311,7 @@ class GitTreeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tree
      *
-     * @return \Efsa\Client\Model\GitEntry[]|null
+     * @return \Efsa\Client\Gitea\Model\GitEntry[]|null
      */
     public function getTree()
     {
@@ -321,7 +321,7 @@ class GitTreeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tree
      *
-     * @param \Efsa\Client\Model\GitEntry[]|null $tree tree
+     * @param \Efsa\Client\Gitea\Model\GitEntry[]|null $tree tree
      *
      * @return self
      */

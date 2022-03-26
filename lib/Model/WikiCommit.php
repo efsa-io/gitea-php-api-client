@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * WikiCommit Class Doc Comment
  *
  * @category Class
  * @description WikiCommit page commit/revision
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,8 +60,8 @@ class WikiCommit implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'author' => '\Efsa\Client\Model\CommitUser',
-        'commiter' => '\Efsa\Client\Model\CommitUser',
+        'author' => '\Efsa\Client\Gitea\Model\CommitUser',
+        'commiter' => '\Efsa\Client\Gitea\Model\CommitUser',
         'message' => 'string',
         'sha' => 'string'
     ];
@@ -227,7 +227,7 @@ class WikiCommit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets author
      *
-     * @return \Efsa\Client\Model\CommitUser|null
+     * @return \Efsa\Client\Gitea\Model\CommitUser|null
      */
     public function getAuthor()
     {
@@ -237,7 +237,7 @@ class WikiCommit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets author
      *
-     * @param \Efsa\Client\Model\CommitUser|null $author author
+     * @param \Efsa\Client\Gitea\Model\CommitUser|null $author author
      *
      * @return self
      */
@@ -251,7 +251,7 @@ class WikiCommit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets commiter
      *
-     * @return \Efsa\Client\Model\CommitUser|null
+     * @return \Efsa\Client\Gitea\Model\CommitUser|null
      */
     public function getCommiter()
     {
@@ -261,7 +261,7 @@ class WikiCommit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets commiter
      *
-     * @param \Efsa\Client\Model\CommitUser|null $commiter commiter
+     * @param \Efsa\Client\Gitea\Model\CommitUser|null $commiter commiter
      *
      * @return self
      */

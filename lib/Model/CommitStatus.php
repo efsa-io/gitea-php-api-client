@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * CommitStatus Class Doc Comment
  *
  * @category Class
  * @description CommitStatus holds a single status of a single Commit
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -62,7 +62,7 @@ class CommitStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'context' => 'string',
         'created_at' => '\DateTime',
-        'creator' => '\Efsa\Client\Model\User',
+        'creator' => '\Efsa\Client\Gitea\Model\User',
         'description' => 'string',
         'id' => 'int',
         'status' => 'string',
@@ -305,7 +305,7 @@ class CommitStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets creator
      *
-     * @return \Efsa\Client\Model\User|null
+     * @return \Efsa\Client\Gitea\Model\User|null
      */
     public function getCreator()
     {
@@ -315,7 +315,7 @@ class CommitStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets creator
      *
-     * @param \Efsa\Client\Model\User|null $creator creator
+     * @param \Efsa\Client\Gitea\Model\User|null $creator creator
      *
      * @return self
      */

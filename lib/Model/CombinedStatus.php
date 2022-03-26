@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * CombinedStatus Class Doc Comment
  *
  * @category Class
  * @description CombinedStatus holds the combined state of several statuses for a single commit
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -61,10 +61,10 @@ class CombinedStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'commit_url' => 'string',
-        'repository' => '\Efsa\Client\Model\Repository',
+        'repository' => '\Efsa\Client\Gitea\Model\Repository',
         'sha' => 'string',
         'state' => 'string',
-        'statuses' => '\Efsa\Client\Model\CommitStatus[]',
+        'statuses' => '\Efsa\Client\Gitea\Model\CommitStatus[]',
         'total_count' => 'int',
         'url' => 'string'
     ];
@@ -269,7 +269,7 @@ class CombinedStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets repository
      *
-     * @return \Efsa\Client\Model\Repository|null
+     * @return \Efsa\Client\Gitea\Model\Repository|null
      */
     public function getRepository()
     {
@@ -279,7 +279,7 @@ class CombinedStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets repository
      *
-     * @param \Efsa\Client\Model\Repository|null $repository repository
+     * @param \Efsa\Client\Gitea\Model\Repository|null $repository repository
      *
      * @return self
      */
@@ -341,7 +341,7 @@ class CombinedStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets statuses
      *
-     * @return \Efsa\Client\Model\CommitStatus[]|null
+     * @return \Efsa\Client\Gitea\Model\CommitStatus[]|null
      */
     public function getStatuses()
     {
@@ -351,7 +351,7 @@ class CombinedStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets statuses
      *
-     * @param \Efsa\Client\Model\CommitStatus[]|null $statuses statuses
+     * @param \Efsa\Client\Gitea\Model\CommitStatus[]|null $statuses statuses
      *
      * @return self
      */

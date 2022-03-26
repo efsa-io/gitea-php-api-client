@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * NodeInfo Class Doc Comment
  *
  * @category Class
  * @description NodeInfo contains standardized way of exposing metadata about a server running one of the distributed social networks
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -63,9 +63,9 @@ class NodeInfo implements ModelInterface, ArrayAccess, \JsonSerializable
         'metadata' => 'object',
         'open_registrations' => 'bool',
         'protocols' => 'string[]',
-        'services' => '\Efsa\Client\Model\NodeInfoServices',
-        'software' => '\Efsa\Client\Model\NodeInfoSoftware',
-        'usage' => '\Efsa\Client\Model\NodeInfoUsage',
+        'services' => '\Efsa\Client\Gitea\Model\NodeInfoServices',
+        'software' => '\Efsa\Client\Gitea\Model\NodeInfoSoftware',
+        'usage' => '\Efsa\Client\Gitea\Model\NodeInfoUsage',
         'version' => 'string'
     ];
 
@@ -317,7 +317,7 @@ class NodeInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets services
      *
-     * @return \Efsa\Client\Model\NodeInfoServices|null
+     * @return \Efsa\Client\Gitea\Model\NodeInfoServices|null
      */
     public function getServices()
     {
@@ -327,7 +327,7 @@ class NodeInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets services
      *
-     * @param \Efsa\Client\Model\NodeInfoServices|null $services services
+     * @param \Efsa\Client\Gitea\Model\NodeInfoServices|null $services services
      *
      * @return self
      */
@@ -341,7 +341,7 @@ class NodeInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets software
      *
-     * @return \Efsa\Client\Model\NodeInfoSoftware|null
+     * @return \Efsa\Client\Gitea\Model\NodeInfoSoftware|null
      */
     public function getSoftware()
     {
@@ -351,7 +351,7 @@ class NodeInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets software
      *
-     * @param \Efsa\Client\Model\NodeInfoSoftware|null $software software
+     * @param \Efsa\Client\Gitea\Model\NodeInfoSoftware|null $software software
      *
      * @return self
      */
@@ -365,7 +365,7 @@ class NodeInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets usage
      *
-     * @return \Efsa\Client\Model\NodeInfoUsage|null
+     * @return \Efsa\Client\Gitea\Model\NodeInfoUsage|null
      */
     public function getUsage()
     {
@@ -375,7 +375,7 @@ class NodeInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets usage
      *
-     * @param \Efsa\Client\Model\NodeInfoUsage|null $usage usage
+     * @param \Efsa\Client\Gitea\Model\NodeInfoUsage|null $usage usage
      *
      * @return self
      */

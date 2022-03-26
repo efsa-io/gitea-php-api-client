@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * FileDeleteResponse Class Doc Comment
  *
  * @category Class
  * @description FileDeleteResponse contains information about a repo&#39;s file that was deleted
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,9 +60,9 @@ class FileDeleteResponse implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'commit' => '\Efsa\Client\Model\FileCommitResponse',
+        'commit' => '\Efsa\Client\Gitea\Model\FileCommitResponse',
         'content' => 'object',
-        'verification' => '\Efsa\Client\Model\PayloadCommitVerification'
+        'verification' => '\Efsa\Client\Gitea\Model\PayloadCommitVerification'
     ];
 
     /**
@@ -221,7 +221,7 @@ class FileDeleteResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets commit
      *
-     * @return \Efsa\Client\Model\FileCommitResponse|null
+     * @return \Efsa\Client\Gitea\Model\FileCommitResponse|null
      */
     public function getCommit()
     {
@@ -231,7 +231,7 @@ class FileDeleteResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets commit
      *
-     * @param \Efsa\Client\Model\FileCommitResponse|null $commit commit
+     * @param \Efsa\Client\Gitea\Model\FileCommitResponse|null $commit commit
      *
      * @return self
      */
@@ -269,7 +269,7 @@ class FileDeleteResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets verification
      *
-     * @return \Efsa\Client\Model\PayloadCommitVerification|null
+     * @return \Efsa\Client\Gitea\Model\PayloadCommitVerification|null
      */
     public function getVerification()
     {
@@ -279,7 +279,7 @@ class FileDeleteResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets verification
      *
-     * @param \Efsa\Client\Model\PayloadCommitVerification|null $verification verification
+     * @param \Efsa\Client\Gitea\Model\PayloadCommitVerification|null $verification verification
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * CreatePullReviewOptions Class Doc Comment
  *
  * @category Class
  * @description CreatePullReviewOptions are options to create a pull review
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -61,7 +61,7 @@ class CreatePullReviewOptions implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPITypes = [
         'body' => 'string',
-        'comments' => '\Efsa\Client\Model\CreatePullReviewComment[]',
+        'comments' => '\Efsa\Client\Gitea\Model\CreatePullReviewComment[]',
         'commit_id' => 'string',
         'event' => 'string'
     ];
@@ -251,7 +251,7 @@ class CreatePullReviewOptions implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets comments
      *
-     * @return \Efsa\Client\Model\CreatePullReviewComment[]|null
+     * @return \Efsa\Client\Gitea\Model\CreatePullReviewComment[]|null
      */
     public function getComments()
     {
@@ -261,7 +261,7 @@ class CreatePullReviewOptions implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets comments
      *
-     * @param \Efsa\Client\Model\CreatePullReviewComment[]|null $comments comments
+     * @param \Efsa\Client\Gitea\Model\CreatePullReviewComment[]|null $comments comments
      *
      * @return self
      */

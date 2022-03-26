@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * FileResponse Class Doc Comment
  *
  * @category Class
  * @description FileResponse contains information about a repo&#39;s file
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,9 +60,9 @@ class FileResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'commit' => '\Efsa\Client\Model\FileCommitResponse',
-        'content' => '\Efsa\Client\Model\ContentsResponse',
-        'verification' => '\Efsa\Client\Model\PayloadCommitVerification'
+        'commit' => '\Efsa\Client\Gitea\Model\FileCommitResponse',
+        'content' => '\Efsa\Client\Gitea\Model\ContentsResponse',
+        'verification' => '\Efsa\Client\Gitea\Model\PayloadCommitVerification'
     ];
 
     /**
@@ -221,7 +221,7 @@ class FileResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets commit
      *
-     * @return \Efsa\Client\Model\FileCommitResponse|null
+     * @return \Efsa\Client\Gitea\Model\FileCommitResponse|null
      */
     public function getCommit()
     {
@@ -231,7 +231,7 @@ class FileResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets commit
      *
-     * @param \Efsa\Client\Model\FileCommitResponse|null $commit commit
+     * @param \Efsa\Client\Gitea\Model\FileCommitResponse|null $commit commit
      *
      * @return self
      */
@@ -245,7 +245,7 @@ class FileResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets content
      *
-     * @return \Efsa\Client\Model\ContentsResponse|null
+     * @return \Efsa\Client\Gitea\Model\ContentsResponse|null
      */
     public function getContent()
     {
@@ -255,7 +255,7 @@ class FileResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets content
      *
-     * @param \Efsa\Client\Model\ContentsResponse|null $content content
+     * @param \Efsa\Client\Gitea\Model\ContentsResponse|null $content content
      *
      * @return self
      */
@@ -269,7 +269,7 @@ class FileResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets verification
      *
-     * @return \Efsa\Client\Model\PayloadCommitVerification|null
+     * @return \Efsa\Client\Gitea\Model\PayloadCommitVerification|null
      */
     public function getVerification()
     {
@@ -279,7 +279,7 @@ class FileResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets verification
      *
-     * @param \Efsa\Client\Model\PayloadCommitVerification|null $verification verification
+     * @param \Efsa\Client\Gitea\Model\PayloadCommitVerification|null $verification verification
      *
      * @return self
      */

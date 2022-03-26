@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * EditRepoOption Class Doc Comment
  *
  * @category Class
  * @description EditRepoOption options when editing a repository&#39;s properties
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -72,14 +72,14 @@ class EditRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
         'default_delete_branch_after_merge' => 'bool',
         'default_merge_style' => 'string',
         'description' => 'string',
-        'external_tracker' => '\Efsa\Client\Model\ExternalTracker',
-        'external_wiki' => '\Efsa\Client\Model\ExternalWiki',
+        'external_tracker' => '\Efsa\Client\Gitea\Model\ExternalTracker',
+        'external_wiki' => '\Efsa\Client\Gitea\Model\ExternalWiki',
         'has_issues' => 'bool',
         'has_projects' => 'bool',
         'has_pull_requests' => 'bool',
         'has_wiki' => 'bool',
         'ignore_whitespace_conflicts' => 'bool',
-        'internal_tracker' => '\Efsa\Client\Model\InternalTracker',
+        'internal_tracker' => '\Efsa\Client\Gitea\Model\InternalTracker',
         'mirror_interval' => 'string',
         'name' => 'string',
         'private' => 'bool',
@@ -641,7 +641,7 @@ class EditRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets external_tracker
      *
-     * @return \Efsa\Client\Model\ExternalTracker|null
+     * @return \Efsa\Client\Gitea\Model\ExternalTracker|null
      */
     public function getExternalTracker()
     {
@@ -651,7 +651,7 @@ class EditRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets external_tracker
      *
-     * @param \Efsa\Client\Model\ExternalTracker|null $external_tracker external_tracker
+     * @param \Efsa\Client\Gitea\Model\ExternalTracker|null $external_tracker external_tracker
      *
      * @return self
      */
@@ -665,7 +665,7 @@ class EditRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets external_wiki
      *
-     * @return \Efsa\Client\Model\ExternalWiki|null
+     * @return \Efsa\Client\Gitea\Model\ExternalWiki|null
      */
     public function getExternalWiki()
     {
@@ -675,7 +675,7 @@ class EditRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets external_wiki
      *
-     * @param \Efsa\Client\Model\ExternalWiki|null $external_wiki external_wiki
+     * @param \Efsa\Client\Gitea\Model\ExternalWiki|null $external_wiki external_wiki
      *
      * @return self
      */
@@ -809,7 +809,7 @@ class EditRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets internal_tracker
      *
-     * @return \Efsa\Client\Model\InternalTracker|null
+     * @return \Efsa\Client\Gitea\Model\InternalTracker|null
      */
     public function getInternalTracker()
     {
@@ -819,7 +819,7 @@ class EditRepoOption implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets internal_tracker
      *
-     * @param \Efsa\Client\Model\InternalTracker|null $internal_tracker internal_tracker
+     * @param \Efsa\Client\Gitea\Model\InternalTracker|null $internal_tracker internal_tracker
      *
      * @return self
      */

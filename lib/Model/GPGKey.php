@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * GPGKey Class Doc Comment
  *
  * @category Class
  * @description GPGKey a user GPG key to sign commit and tag in repository
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -65,13 +65,13 @@ class GPGKey implements ModelInterface, ArrayAccess, \JsonSerializable
         'can_encrypt_storage' => 'bool',
         'can_sign' => 'bool',
         'created_at' => '\DateTime',
-        'emails' => '\Efsa\Client\Model\GPGKeyEmail[]',
+        'emails' => '\Efsa\Client\Gitea\Model\GPGKeyEmail[]',
         'expires_at' => '\DateTime',
         'id' => 'int',
         'key_id' => 'string',
         'primary_key_id' => 'string',
         'public_key' => 'string',
-        'subkeys' => '\Efsa\Client\Model\GPGKey[]',
+        'subkeys' => '\Efsa\Client\Gitea\Model\GPGKey[]',
         'verified' => 'bool'
     ];
 
@@ -401,7 +401,7 @@ class GPGKey implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets emails
      *
-     * @return \Efsa\Client\Model\GPGKeyEmail[]|null
+     * @return \Efsa\Client\Gitea\Model\GPGKeyEmail[]|null
      */
     public function getEmails()
     {
@@ -411,7 +411,7 @@ class GPGKey implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets emails
      *
-     * @param \Efsa\Client\Model\GPGKeyEmail[]|null $emails emails
+     * @param \Efsa\Client\Gitea\Model\GPGKeyEmail[]|null $emails emails
      *
      * @return self
      */
@@ -545,7 +545,7 @@ class GPGKey implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets subkeys
      *
-     * @return \Efsa\Client\Model\GPGKey[]|null
+     * @return \Efsa\Client\Gitea\Model\GPGKey[]|null
      */
     public function getSubkeys()
     {
@@ -555,7 +555,7 @@ class GPGKey implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets subkeys
      *
-     * @param \Efsa\Client\Model\GPGKey[]|null $subkeys subkeys
+     * @param \Efsa\Client\Gitea\Model\GPGKey[]|null $subkeys subkeys
      *
      * @return self
      */

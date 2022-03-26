@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * RepoCommit Class Doc Comment
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -59,10 +59,10 @@ class RepoCommit implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'author' => '\Efsa\Client\Model\CommitUser',
-        'committer' => '\Efsa\Client\Model\CommitUser',
+        'author' => '\Efsa\Client\Gitea\Model\CommitUser',
+        'committer' => '\Efsa\Client\Gitea\Model\CommitUser',
         'message' => 'string',
-        'tree' => '\Efsa\Client\Model\CommitMeta',
+        'tree' => '\Efsa\Client\Gitea\Model\CommitMeta',
         'url' => 'string'
     ];
 
@@ -232,7 +232,7 @@ class RepoCommit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets author
      *
-     * @return \Efsa\Client\Model\CommitUser|null
+     * @return \Efsa\Client\Gitea\Model\CommitUser|null
      */
     public function getAuthor()
     {
@@ -242,7 +242,7 @@ class RepoCommit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets author
      *
-     * @param \Efsa\Client\Model\CommitUser|null $author author
+     * @param \Efsa\Client\Gitea\Model\CommitUser|null $author author
      *
      * @return self
      */
@@ -256,7 +256,7 @@ class RepoCommit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets committer
      *
-     * @return \Efsa\Client\Model\CommitUser|null
+     * @return \Efsa\Client\Gitea\Model\CommitUser|null
      */
     public function getCommitter()
     {
@@ -266,7 +266,7 @@ class RepoCommit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets committer
      *
-     * @param \Efsa\Client\Model\CommitUser|null $committer committer
+     * @param \Efsa\Client\Gitea\Model\CommitUser|null $committer committer
      *
      * @return self
      */
@@ -304,7 +304,7 @@ class RepoCommit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tree
      *
-     * @return \Efsa\Client\Model\CommitMeta|null
+     * @return \Efsa\Client\Gitea\Model\CommitMeta|null
      */
     public function getTree()
     {
@@ -314,7 +314,7 @@ class RepoCommit implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tree
      *
-     * @param \Efsa\Client\Model\CommitMeta|null $tree tree
+     * @param \Efsa\Client\Gitea\Model\CommitMeta|null $tree tree
      *
      * @return self
      */

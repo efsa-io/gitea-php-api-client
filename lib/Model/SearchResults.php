@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * SearchResults Class Doc Comment
  *
  * @category Class
  * @description SearchResults results of a successful search
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,7 +60,7 @@ class SearchResults implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Efsa\Client\Model\Repository[]',
+        'data' => '\Efsa\Client\Gitea\Model\Repository[]',
         'ok' => 'bool'
     ];
 
@@ -215,7 +215,7 @@ class SearchResults implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets data
      *
-     * @return \Efsa\Client\Model\Repository[]|null
+     * @return \Efsa\Client\Gitea\Model\Repository[]|null
      */
     public function getData()
     {
@@ -225,7 +225,7 @@ class SearchResults implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets data
      *
-     * @param \Efsa\Client\Model\Repository[]|null $data data
+     * @param \Efsa\Client\Gitea\Model\Repository[]|null $data data
      *
      * @return self
      */

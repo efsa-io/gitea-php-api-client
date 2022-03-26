@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **html_url** | **string** |  | [optional]
-**last_commit** | [**\Efsa\Client\Model\WikiCommit**](WikiCommit.md) |  | [optional]
+**last_commit** | [**\Efsa\Client\Gitea\Model\WikiCommit**](WikiCommit.md) |  | [optional]
 **sub_url** | **string** |  | [optional]
 **title** | **string** |  | [optional]
 

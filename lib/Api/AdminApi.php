@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Gitea;
+namespace Efsa\Client\Gitea\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Efsa\Client\ApiException;
-use Efsa\Client\Configuration;
-use Efsa\Client\HeaderSelector;
-use Efsa\Client\ObjectSerializer;
+use Efsa\Client\Gitea\ApiException;
+use Efsa\Client\Gitea\Configuration;
+use Efsa\Client\Gitea\HeaderSelector;
+use Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * AdminApi Class Doc Comment
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -122,7 +122,7 @@ class AdminApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -139,7 +139,7 @@ class AdminApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -392,11 +392,11 @@ class AdminApi
      * Create an organization
      *
      * @param  string $username username of the user that will own the created organization (required)
-     * @param  \Efsa\Client\Model\CreateOrgOption $organization organization (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateOrgOption $organization organization (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Organization
+     * @return \Efsa\Client\Gitea\Model\Organization
      */
     public function adminCreateOrg($username, $organization)
     {
@@ -410,11 +410,11 @@ class AdminApi
      * Create an organization
      *
      * @param  string $username username of the user that will own the created organization (required)
-     * @param  \Efsa\Client\Model\CreateOrgOption $organization (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateOrgOption $organization (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Organization, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Organization, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminCreateOrgWithHttpInfo($username, $organization)
     {
@@ -450,20 +450,20 @@ class AdminApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Organization' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Organization' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Organization', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Organization', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Organization';
+            $returnType = '\Efsa\Client\Gitea\Model\Organization';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -481,7 +481,7 @@ class AdminApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Organization',
+                        '\Efsa\Client\Gitea\Model\Organization',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -497,7 +497,7 @@ class AdminApi
      * Create an organization
      *
      * @param  string $username username of the user that will own the created organization (required)
-     * @param  \Efsa\Client\Model\CreateOrgOption $organization (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateOrgOption $organization (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -518,14 +518,14 @@ class AdminApi
      * Create an organization
      *
      * @param  string $username username of the user that will own the created organization (required)
-     * @param  \Efsa\Client\Model\CreateOrgOption $organization (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateOrgOption $organization (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function adminCreateOrgAsyncWithHttpInfo($username, $organization)
     {
-        $returnType = '\Efsa\Client\Model\Organization';
+        $returnType = '\Efsa\Client\Gitea\Model\Organization';
         $request = $this->adminCreateOrgRequest($username, $organization);
 
         return $this->client
@@ -565,7 +565,7 @@ class AdminApi
      * Create request for operation 'adminCreateOrg'
      *
      * @param  string $username username of the user that will own the created organization (required)
-     * @param  \Efsa\Client\Model\CreateOrgOption $organization (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateOrgOption $organization (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -707,11 +707,11 @@ class AdminApi
      * Add a public key on behalf of a user
      *
      * @param  string $username username of the user (required)
-     * @param  \Efsa\Client\Model\CreateKeyOption $key key (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateKeyOption $key key (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\PublicKey
+     * @return \Efsa\Client\Gitea\Model\PublicKey
      */
     public function adminCreatePublicKey($username, $key = null)
     {
@@ -725,11 +725,11 @@ class AdminApi
      * Add a public key on behalf of a user
      *
      * @param  string $username username of the user (required)
-     * @param  \Efsa\Client\Model\CreateKeyOption $key (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateKeyOption $key (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\PublicKey, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\PublicKey, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminCreatePublicKeyWithHttpInfo($username, $key = null)
     {
@@ -765,20 +765,20 @@ class AdminApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\PublicKey' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\PublicKey' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\PublicKey', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\PublicKey', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\PublicKey';
+            $returnType = '\Efsa\Client\Gitea\Model\PublicKey';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -796,7 +796,7 @@ class AdminApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\PublicKey',
+                        '\Efsa\Client\Gitea\Model\PublicKey',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -812,7 +812,7 @@ class AdminApi
      * Add a public key on behalf of a user
      *
      * @param  string $username username of the user (required)
-     * @param  \Efsa\Client\Model\CreateKeyOption $key (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateKeyOption $key (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -833,14 +833,14 @@ class AdminApi
      * Add a public key on behalf of a user
      *
      * @param  string $username username of the user (required)
-     * @param  \Efsa\Client\Model\CreateKeyOption $key (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateKeyOption $key (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function adminCreatePublicKeyAsyncWithHttpInfo($username, $key = null)
     {
-        $returnType = '\Efsa\Client\Model\PublicKey';
+        $returnType = '\Efsa\Client\Gitea\Model\PublicKey';
         $request = $this->adminCreatePublicKeyRequest($username, $key);
 
         return $this->client
@@ -880,7 +880,7 @@ class AdminApi
      * Create request for operation 'adminCreatePublicKey'
      *
      * @param  string $username username of the user (required)
-     * @param  \Efsa\Client\Model\CreateKeyOption $key (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateKeyOption $key (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1016,11 +1016,11 @@ class AdminApi
      * Create a repository on behalf of a user
      *
      * @param  string $username username of the user. This user will own the created repository (required)
-     * @param  \Efsa\Client\Model\CreateRepoOption $repository repository (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $repository repository (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Repository
+     * @return \Efsa\Client\Gitea\Model\Repository
      */
     public function adminCreateRepo($username, $repository)
     {
@@ -1034,11 +1034,11 @@ class AdminApi
      * Create a repository on behalf of a user
      *
      * @param  string $username username of the user. This user will own the created repository (required)
-     * @param  \Efsa\Client\Model\CreateRepoOption $repository (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $repository (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Repository, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Repository, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminCreateRepoWithHttpInfo($username, $repository)
     {
@@ -1074,20 +1074,20 @@ class AdminApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Repository' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Repository' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Repository', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Repository', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Repository';
+            $returnType = '\Efsa\Client\Gitea\Model\Repository';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1105,7 +1105,7 @@ class AdminApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Repository',
+                        '\Efsa\Client\Gitea\Model\Repository',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1121,7 +1121,7 @@ class AdminApi
      * Create a repository on behalf of a user
      *
      * @param  string $username username of the user. This user will own the created repository (required)
-     * @param  \Efsa\Client\Model\CreateRepoOption $repository (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $repository (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1142,14 +1142,14 @@ class AdminApi
      * Create a repository on behalf of a user
      *
      * @param  string $username username of the user. This user will own the created repository (required)
-     * @param  \Efsa\Client\Model\CreateRepoOption $repository (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $repository (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function adminCreateRepoAsyncWithHttpInfo($username, $repository)
     {
-        $returnType = '\Efsa\Client\Model\Repository';
+        $returnType = '\Efsa\Client\Gitea\Model\Repository';
         $request = $this->adminCreateRepoRequest($username, $repository);
 
         return $this->client
@@ -1189,7 +1189,7 @@ class AdminApi
      * Create request for operation 'adminCreateRepo'
      *
      * @param  string $username username of the user. This user will own the created repository (required)
-     * @param  \Efsa\Client\Model\CreateRepoOption $repository (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $repository (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1330,11 +1330,11 @@ class AdminApi
      *
      * Create a user
      *
-     * @param  \Efsa\Client\Model\CreateUserOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateUserOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\User
+     * @return \Efsa\Client\Gitea\Model\User
      */
     public function adminCreateUser($body = null)
     {
@@ -1347,11 +1347,11 @@ class AdminApi
      *
      * Create a user
      *
-     * @param  \Efsa\Client\Model\CreateUserOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateUserOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\User, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\User, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminCreateUserWithHttpInfo($body = null)
     {
@@ -1387,20 +1387,20 @@ class AdminApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\User' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\User' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\User', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\User', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\User';
+            $returnType = '\Efsa\Client\Gitea\Model\User';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1418,7 +1418,7 @@ class AdminApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\User',
+                        '\Efsa\Client\Gitea\Model\User',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1433,7 +1433,7 @@ class AdminApi
      *
      * Create a user
      *
-     * @param  \Efsa\Client\Model\CreateUserOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateUserOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1453,14 +1453,14 @@ class AdminApi
      *
      * Create a user
      *
-     * @param  \Efsa\Client\Model\CreateUserOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateUserOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function adminCreateUserAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Efsa\Client\Model\User';
+        $returnType = '\Efsa\Client\Gitea\Model\User';
         $request = $this->adminCreateUserRequest($body);
 
         return $this->client
@@ -1499,7 +1499,7 @@ class AdminApi
     /**
      * Create request for operation 'adminCreateUser'
      *
-     * @param  \Efsa\Client\Model\CreateUserOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateUserOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1623,9 +1623,9 @@ class AdminApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Cron[]
+     * @return \Efsa\Client\Gitea\Model\Cron[]
      */
     public function adminCronList($page = null, $limit = null)
     {
@@ -1641,9 +1641,9 @@ class AdminApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Cron[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Cron[], HTTP status code, HTTP response headers (array of strings)
      */
     public function adminCronListWithHttpInfo($page = null, $limit = null)
     {
@@ -1679,20 +1679,20 @@ class AdminApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Cron[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Cron[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Cron[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Cron[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Cron[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Cron[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1710,7 +1710,7 @@ class AdminApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Cron[]',
+                        '\Efsa\Client\Gitea\Model\Cron[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1754,7 +1754,7 @@ class AdminApi
      */
     public function adminCronListAsyncWithHttpInfo($page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Cron[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Cron[]';
         $request = $this->adminCronListRequest($page, $limit);
 
         return $this->client
@@ -1925,7 +1925,7 @@ class AdminApi
      *
      * @param  string $task task to run (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1941,7 +1941,7 @@ class AdminApi
      *
      * @param  string $task task to run (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2179,7 +2179,7 @@ class AdminApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2196,7 +2196,7 @@ class AdminApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2450,7 +2450,7 @@ class AdminApi
      *
      * @param  string $username username of user to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2466,7 +2466,7 @@ class AdminApi
      *
      * @param  string $username username of user to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2704,7 +2704,7 @@ class AdminApi
      * @param  string $username username of user (required)
      * @param  int $id id of the key to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2721,7 +2721,7 @@ class AdminApi
      * @param  string $username username of user (required)
      * @param  int $id id of the key to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2974,11 +2974,11 @@ class AdminApi
      * Edit an existing user
      *
      * @param  string $username username of user to edit (required)
-     * @param  \Efsa\Client\Model\EditUserOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditUserOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\User
+     * @return \Efsa\Client\Gitea\Model\User
      */
     public function adminEditUser($username, $body = null)
     {
@@ -2992,11 +2992,11 @@ class AdminApi
      * Edit an existing user
      *
      * @param  string $username username of user to edit (required)
-     * @param  \Efsa\Client\Model\EditUserOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditUserOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\User, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\User, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminEditUserWithHttpInfo($username, $body = null)
     {
@@ -3032,20 +3032,20 @@ class AdminApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\User' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\User' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\User', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\User', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\User';
+            $returnType = '\Efsa\Client\Gitea\Model\User';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3063,7 +3063,7 @@ class AdminApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\User',
+                        '\Efsa\Client\Gitea\Model\User',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3079,7 +3079,7 @@ class AdminApi
      * Edit an existing user
      *
      * @param  string $username username of user to edit (required)
-     * @param  \Efsa\Client\Model\EditUserOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditUserOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3100,14 +3100,14 @@ class AdminApi
      * Edit an existing user
      *
      * @param  string $username username of user to edit (required)
-     * @param  \Efsa\Client\Model\EditUserOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditUserOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function adminEditUserAsyncWithHttpInfo($username, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\User';
+        $returnType = '\Efsa\Client\Gitea\Model\User';
         $request = $this->adminEditUserRequest($username, $body);
 
         return $this->client
@@ -3147,7 +3147,7 @@ class AdminApi
      * Create request for operation 'adminEditUser'
      *
      * @param  string $username username of user to edit (required)
-     * @param  \Efsa\Client\Model\EditUserOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditUserOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3285,9 +3285,9 @@ class AdminApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Organization[]
+     * @return \Efsa\Client\Gitea\Model\Organization[]
      */
     public function adminGetAllOrgs($page = null, $limit = null)
     {
@@ -3303,9 +3303,9 @@ class AdminApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Organization[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Organization[], HTTP status code, HTTP response headers (array of strings)
      */
     public function adminGetAllOrgsWithHttpInfo($page = null, $limit = null)
     {
@@ -3341,20 +3341,20 @@ class AdminApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Organization[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Organization[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Organization[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Organization[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Organization[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Organization[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3372,7 +3372,7 @@ class AdminApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Organization[]',
+                        '\Efsa\Client\Gitea\Model\Organization[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3416,7 +3416,7 @@ class AdminApi
      */
     public function adminGetAllOrgsAsyncWithHttpInfo($page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Organization[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Organization[]';
         $request = $this->adminGetAllOrgsRequest($page, $limit);
 
         return $this->client
@@ -3588,9 +3588,9 @@ class AdminApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\User[]
+     * @return \Efsa\Client\Gitea\Model\User[]
      */
     public function adminGetAllUsers($page = null, $limit = null)
     {
@@ -3606,9 +3606,9 @@ class AdminApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\User[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\User[], HTTP status code, HTTP response headers (array of strings)
      */
     public function adminGetAllUsersWithHttpInfo($page = null, $limit = null)
     {
@@ -3644,20 +3644,20 @@ class AdminApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\User[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\User[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\User[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\User[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\User[]';
+            $returnType = '\Efsa\Client\Gitea\Model\User[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3675,7 +3675,7 @@ class AdminApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\User[]',
+                        '\Efsa\Client\Gitea\Model\User[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3719,7 +3719,7 @@ class AdminApi
      */
     public function adminGetAllUsersAsyncWithHttpInfo($page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\User[]';
+        $returnType = '\Efsa\Client\Gitea\Model\User[]';
         $request = $this->adminGetAllUsersRequest($page, $limit);
 
         return $this->client
@@ -3892,7 +3892,7 @@ class AdminApi
      * @param  int $limit page size of results (optional)
      * @param  string $pattern pattern of repositories to search for (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string[]
      */
@@ -3911,7 +3911,7 @@ class AdminApi
      * @param  int $limit page size of results (optional)
      * @param  string $pattern pattern of repositories to search for (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string[], HTTP status code, HTTP response headers (array of strings)
      */

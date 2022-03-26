@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Model;
+namespace Efsa\Client\Gitea\Model;
 
 use \ArrayAccess;
-use \Efsa\Client\ObjectSerializer;
+use \Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * UpdateFileOptions Class Doc Comment
  *
  * @category Class
  * @description UpdateFileOptions options for updating files Note: &#x60;author&#x60; and &#x60;committer&#x60; are optional (if only one is given, it will be used for the other, otherwise the authenticated user will be used)
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,11 +60,11 @@ class UpdateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'author' => '\Efsa\Client\Model\Identity',
+        'author' => '\Efsa\Client\Gitea\Model\Identity',
         'branch' => 'string',
-        'committer' => '\Efsa\Client\Model\Identity',
+        'committer' => '\Efsa\Client\Gitea\Model\Identity',
         'content' => 'string',
-        'dates' => '\Efsa\Client\Model\CommitDateOptions',
+        'dates' => '\Efsa\Client\Gitea\Model\CommitDateOptions',
         'from_path' => 'string',
         'message' => 'string',
         'new_branch' => 'string',
@@ -269,7 +269,7 @@ class UpdateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets author
      *
-     * @return \Efsa\Client\Model\Identity|null
+     * @return \Efsa\Client\Gitea\Model\Identity|null
      */
     public function getAuthor()
     {
@@ -279,7 +279,7 @@ class UpdateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets author
      *
-     * @param \Efsa\Client\Model\Identity|null $author author
+     * @param \Efsa\Client\Gitea\Model\Identity|null $author author
      *
      * @return self
      */
@@ -317,7 +317,7 @@ class UpdateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets committer
      *
-     * @return \Efsa\Client\Model\Identity|null
+     * @return \Efsa\Client\Gitea\Model\Identity|null
      */
     public function getCommitter()
     {
@@ -327,7 +327,7 @@ class UpdateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets committer
      *
-     * @param \Efsa\Client\Model\Identity|null $committer committer
+     * @param \Efsa\Client\Gitea\Model\Identity|null $committer committer
      *
      * @return self
      */
@@ -365,7 +365,7 @@ class UpdateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets dates
      *
-     * @return \Efsa\Client\Model\CommitDateOptions|null
+     * @return \Efsa\Client\Gitea\Model\CommitDateOptions|null
      */
     public function getDates()
     {
@@ -375,7 +375,7 @@ class UpdateFileOptions implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets dates
      *
-     * @param \Efsa\Client\Model\CommitDateOptions|null $dates dates
+     * @param \Efsa\Client\Gitea\Model\CommitDateOptions|null $dates dates
      *
      * @return self
      */

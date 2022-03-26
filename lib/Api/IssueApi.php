@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Gitea;
+namespace Efsa\Client\Gitea\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Efsa\Client\ApiException;
-use Efsa\Client\Configuration;
-use Efsa\Client\HeaderSelector;
-use Efsa\Client\ObjectSerializer;
+use Efsa\Client\Gitea\ApiException;
+use Efsa\Client\Gitea\Configuration;
+use Efsa\Client\Gitea\HeaderSelector;
+use Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * IssueApi Class Doc Comment
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -122,11 +122,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\IssueLabelsOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\IssueLabelsOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Label[]
+     * @return \Efsa\Client\Gitea\Model\Label[]
      */
     public function issueAddLabel($owner, $repo, $index, $body = null)
     {
@@ -142,11 +142,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\IssueLabelsOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\IssueLabelsOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Label[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Label[], HTTP status code, HTTP response headers (array of strings)
      */
     public function issueAddLabelWithHttpInfo($owner, $repo, $index, $body = null)
     {
@@ -182,20 +182,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Label[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Label[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Label[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Label[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Label[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Label[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -213,7 +213,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Label[]',
+                        '\Efsa\Client\Gitea\Model\Label[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -231,7 +231,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\IssueLabelsOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\IssueLabelsOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -254,14 +254,14 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\IssueLabelsOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\IssueLabelsOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function issueAddLabelAsyncWithHttpInfo($owner, $repo, $index, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Label[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Label[]';
         $request = $this->issueAddLabelRequest($owner, $repo, $index, $body);
 
         return $this->client
@@ -303,7 +303,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\IssueLabelsOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\IssueLabelsOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -471,7 +471,7 @@ class IssueApi
      * @param  int $index index of the issue (required)
      * @param  string $user user to subscribe (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -490,7 +490,7 @@ class IssueApi
      * @param  int $index index of the issue (required)
      * @param  string $user user to subscribe (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -779,11 +779,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\AddTimeOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\AddTimeOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\TrackedTime
+     * @return \Efsa\Client\Gitea\Model\TrackedTime
      */
     public function issueAddTime($owner, $repo, $index, $body = null)
     {
@@ -799,11 +799,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\AddTimeOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\AddTimeOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\TrackedTime, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\TrackedTime, HTTP status code, HTTP response headers (array of strings)
      */
     public function issueAddTimeWithHttpInfo($owner, $repo, $index, $body = null)
     {
@@ -839,20 +839,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\TrackedTime' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\TrackedTime' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\TrackedTime', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\TrackedTime', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\TrackedTime';
+            $returnType = '\Efsa\Client\Gitea\Model\TrackedTime';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -870,7 +870,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\TrackedTime',
+                        '\Efsa\Client\Gitea\Model\TrackedTime',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -888,7 +888,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\AddTimeOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\AddTimeOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -911,14 +911,14 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\AddTimeOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\AddTimeOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function issueAddTimeAsyncWithHttpInfo($owner, $repo, $index, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\TrackedTime';
+        $returnType = '\Efsa\Client\Gitea\Model\TrackedTime';
         $request = $this->issueAddTimeRequest($owner, $repo, $index, $body);
 
         return $this->client
@@ -960,7 +960,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\AddTimeOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\AddTimeOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1127,9 +1127,9 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\WatchInfo
+     * @return \Efsa\Client\Gitea\Model\WatchInfo
      */
     public function issueCheckSubscription($owner, $repo, $index)
     {
@@ -1146,9 +1146,9 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\WatchInfo, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\WatchInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function issueCheckSubscriptionWithHttpInfo($owner, $repo, $index)
     {
@@ -1184,20 +1184,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\WatchInfo' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\WatchInfo' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\WatchInfo', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\WatchInfo', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\WatchInfo';
+            $returnType = '\Efsa\Client\Gitea\Model\WatchInfo';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1215,7 +1215,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\WatchInfo',
+                        '\Efsa\Client\Gitea\Model\WatchInfo',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1261,7 +1261,7 @@ class IssueApi
      */
     public function issueCheckSubscriptionAsyncWithHttpInfo($owner, $repo, $index)
     {
-        $returnType = '\Efsa\Client\Model\WatchInfo';
+        $returnType = '\Efsa\Client\Gitea\Model\WatchInfo';
         $request = $this->issueCheckSubscriptionRequest($owner, $repo, $index);
 
         return $this->client
@@ -1463,7 +1463,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1481,7 +1481,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1753,11 +1753,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\CreateIssueCommentOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateIssueCommentOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Comment
+     * @return \Efsa\Client\Gitea\Model\Comment
      */
     public function issueCreateComment($owner, $repo, $index, $body = null)
     {
@@ -1773,11 +1773,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\CreateIssueCommentOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateIssueCommentOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Comment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Comment, HTTP status code, HTTP response headers (array of strings)
      */
     public function issueCreateCommentWithHttpInfo($owner, $repo, $index, $body = null)
     {
@@ -1813,20 +1813,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Comment' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Comment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Comment', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Comment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Comment';
+            $returnType = '\Efsa\Client\Gitea\Model\Comment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1844,7 +1844,7 @@ class IssueApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Comment',
+                        '\Efsa\Client\Gitea\Model\Comment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1862,7 +1862,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\CreateIssueCommentOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateIssueCommentOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1885,14 +1885,14 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\CreateIssueCommentOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateIssueCommentOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function issueCreateCommentAsyncWithHttpInfo($owner, $repo, $index, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Comment';
+        $returnType = '\Efsa\Client\Gitea\Model\Comment';
         $request = $this->issueCreateCommentRequest($owner, $repo, $index, $body);
 
         return $this->client
@@ -1934,7 +1934,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\CreateIssueCommentOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateIssueCommentOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2099,11 +2099,11 @@ class IssueApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateIssueOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateIssueOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Issue
+     * @return \Efsa\Client\Gitea\Model\Issue
      */
     public function issueCreateIssue($owner, $repo, $body = null)
     {
@@ -2118,11 +2118,11 @@ class IssueApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateIssueOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateIssueOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Issue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Issue, HTTP status code, HTTP response headers (array of strings)
      */
     public function issueCreateIssueWithHttpInfo($owner, $repo, $body = null)
     {
@@ -2158,20 +2158,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Issue' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Issue' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Issue', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Issue', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Issue';
+            $returnType = '\Efsa\Client\Gitea\Model\Issue';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2189,7 +2189,7 @@ class IssueApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Issue',
+                        '\Efsa\Client\Gitea\Model\Issue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2206,7 +2206,7 @@ class IssueApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateIssueOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateIssueOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2228,14 +2228,14 @@ class IssueApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateIssueOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateIssueOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function issueCreateIssueAsyncWithHttpInfo($owner, $repo, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Issue';
+        $returnType = '\Efsa\Client\Gitea\Model\Issue';
         $request = $this->issueCreateIssueRequest($owner, $repo, $body);
 
         return $this->client
@@ -2276,7 +2276,7 @@ class IssueApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateIssueOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateIssueOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2427,11 +2427,11 @@ class IssueApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateLabelOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateLabelOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Label
+     * @return \Efsa\Client\Gitea\Model\Label
      */
     public function issueCreateLabel($owner, $repo, $body = null)
     {
@@ -2446,11 +2446,11 @@ class IssueApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateLabelOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateLabelOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Label, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Label, HTTP status code, HTTP response headers (array of strings)
      */
     public function issueCreateLabelWithHttpInfo($owner, $repo, $body = null)
     {
@@ -2486,20 +2486,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Label' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Label' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Label', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Label', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Label';
+            $returnType = '\Efsa\Client\Gitea\Model\Label';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2517,7 +2517,7 @@ class IssueApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Label',
+                        '\Efsa\Client\Gitea\Model\Label',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2534,7 +2534,7 @@ class IssueApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateLabelOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateLabelOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2556,14 +2556,14 @@ class IssueApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateLabelOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateLabelOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function issueCreateLabelAsyncWithHttpInfo($owner, $repo, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Label';
+        $returnType = '\Efsa\Client\Gitea\Model\Label';
         $request = $this->issueCreateLabelRequest($owner, $repo, $body);
 
         return $this->client
@@ -2604,7 +2604,7 @@ class IssueApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateLabelOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateLabelOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2755,11 +2755,11 @@ class IssueApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateMilestoneOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateMilestoneOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Milestone
+     * @return \Efsa\Client\Gitea\Model\Milestone
      */
     public function issueCreateMilestone($owner, $repo, $body = null)
     {
@@ -2774,11 +2774,11 @@ class IssueApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateMilestoneOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateMilestoneOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Milestone, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Milestone, HTTP status code, HTTP response headers (array of strings)
      */
     public function issueCreateMilestoneWithHttpInfo($owner, $repo, $body = null)
     {
@@ -2814,20 +2814,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Milestone' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Milestone' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Milestone', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Milestone', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Milestone';
+            $returnType = '\Efsa\Client\Gitea\Model\Milestone';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2845,7 +2845,7 @@ class IssueApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Milestone',
+                        '\Efsa\Client\Gitea\Model\Milestone',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2862,7 +2862,7 @@ class IssueApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateMilestoneOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateMilestoneOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2884,14 +2884,14 @@ class IssueApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateMilestoneOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateMilestoneOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function issueCreateMilestoneAsyncWithHttpInfo($owner, $repo, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Milestone';
+        $returnType = '\Efsa\Client\Gitea\Model\Milestone';
         $request = $this->issueCreateMilestoneRequest($owner, $repo, $body);
 
         return $this->client
@@ -2932,7 +2932,7 @@ class IssueApi
      *
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
-     * @param  \Efsa\Client\Model\CreateMilestoneOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateMilestoneOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3085,7 +3085,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of issue to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3103,7 +3103,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of issue to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3376,7 +3376,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of comment to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3394,7 +3394,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of comment to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3668,7 +3668,7 @@ class IssueApi
      * @param  int $index this parameter is ignored (required)
      * @param  int $id id of comment to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3687,7 +3687,7 @@ class IssueApi
      * @param  int $index this parameter is ignored (required)
      * @param  int $id id of comment to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3976,9 +3976,9 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content content (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3995,9 +3995,9 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4050,7 +4050,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4073,7 +4073,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4112,7 +4112,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4278,9 +4278,9 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content content (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4297,9 +4297,9 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4352,7 +4352,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4375,7 +4375,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4414,7 +4414,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4581,7 +4581,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the label to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4599,7 +4599,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the label to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4872,7 +4872,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  string $id the milestone to delete, identified by ID and if not available by name (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4890,7 +4890,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  string $id the milestone to delete, identified by ID and if not available by name (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5163,7 +5163,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to stop the stopwatch on (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5181,7 +5181,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to stop the stopwatch on (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5455,7 +5455,7 @@ class IssueApi
      * @param  int $index index of the issue (required)
      * @param  string $user user witch unsubscribe (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5474,7 +5474,7 @@ class IssueApi
      * @param  int $index index of the issue (required)
      * @param  string $user user witch unsubscribe (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5765,7 +5765,7 @@ class IssueApi
      * @param  int $index index of the issue (required)
      * @param  int $id id of time to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5784,7 +5784,7 @@ class IssueApi
      * @param  int $index index of the issue (required)
      * @param  int $id id of time to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6073,11 +6073,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditIssueCommentOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditIssueCommentOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Comment
+     * @return \Efsa\Client\Gitea\Model\Comment
      */
     public function issueEditComment($owner, $repo, $id, $body = null)
     {
@@ -6093,11 +6093,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditIssueCommentOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditIssueCommentOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Comment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Comment, HTTP status code, HTTP response headers (array of strings)
      */
     public function issueEditCommentWithHttpInfo($owner, $repo, $id, $body = null)
     {
@@ -6133,20 +6133,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Comment' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Comment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Comment', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Comment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Comment';
+            $returnType = '\Efsa\Client\Gitea\Model\Comment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6164,7 +6164,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Comment',
+                        '\Efsa\Client\Gitea\Model\Comment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6182,7 +6182,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditIssueCommentOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditIssueCommentOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6205,14 +6205,14 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditIssueCommentOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditIssueCommentOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function issueEditCommentAsyncWithHttpInfo($owner, $repo, $id, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Comment';
+        $returnType = '\Efsa\Client\Gitea\Model\Comment';
         $request = $this->issueEditCommentRequest($owner, $repo, $id, $body);
 
         return $this->client
@@ -6254,7 +6254,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditIssueCommentOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditIssueCommentOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6421,11 +6421,11 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index this parameter is ignored (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditIssueCommentOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditIssueCommentOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Comment
+     * @return \Efsa\Client\Gitea\Model\Comment
      */
     public function issueEditCommentDeprecated($owner, $repo, $index, $id, $body = null)
     {
@@ -6442,11 +6442,11 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index this parameter is ignored (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditIssueCommentOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditIssueCommentOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Comment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Comment, HTTP status code, HTTP response headers (array of strings)
      */
     public function issueEditCommentDeprecatedWithHttpInfo($owner, $repo, $index, $id, $body = null)
     {
@@ -6482,20 +6482,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Comment' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Comment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Comment', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Comment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Comment';
+            $returnType = '\Efsa\Client\Gitea\Model\Comment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6513,7 +6513,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Comment',
+                        '\Efsa\Client\Gitea\Model\Comment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6532,7 +6532,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index this parameter is ignored (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditIssueCommentOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditIssueCommentOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6556,14 +6556,14 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index this parameter is ignored (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditIssueCommentOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditIssueCommentOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function issueEditCommentDeprecatedAsyncWithHttpInfo($owner, $repo, $index, $id, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Comment';
+        $returnType = '\Efsa\Client\Gitea\Model\Comment';
         $request = $this->issueEditCommentDeprecatedRequest($owner, $repo, $index, $id, $body);
 
         return $this->client
@@ -6606,7 +6606,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index this parameter is ignored (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditIssueCommentOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditIssueCommentOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6786,11 +6786,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to edit (required)
-     * @param  \Efsa\Client\Model\EditIssueOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditIssueOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Issue
+     * @return \Efsa\Client\Gitea\Model\Issue
      */
     public function issueEditIssue($owner, $repo, $index, $body = null)
     {
@@ -6806,11 +6806,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to edit (required)
-     * @param  \Efsa\Client\Model\EditIssueOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditIssueOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Issue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Issue, HTTP status code, HTTP response headers (array of strings)
      */
     public function issueEditIssueWithHttpInfo($owner, $repo, $index, $body = null)
     {
@@ -6846,20 +6846,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Issue' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Issue' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Issue', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Issue', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Issue';
+            $returnType = '\Efsa\Client\Gitea\Model\Issue';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6877,7 +6877,7 @@ class IssueApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Issue',
+                        '\Efsa\Client\Gitea\Model\Issue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6895,7 +6895,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to edit (required)
-     * @param  \Efsa\Client\Model\EditIssueOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditIssueOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6918,14 +6918,14 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to edit (required)
-     * @param  \Efsa\Client\Model\EditIssueOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditIssueOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function issueEditIssueAsyncWithHttpInfo($owner, $repo, $index, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Issue';
+        $returnType = '\Efsa\Client\Gitea\Model\Issue';
         $request = $this->issueEditIssueRequest($owner, $repo, $index, $body);
 
         return $this->client
@@ -6967,7 +6967,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to edit (required)
-     * @param  \Efsa\Client\Model\EditIssueOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditIssueOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7133,11 +7133,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to create or update a deadline on (required)
-     * @param  \Efsa\Client\Model\EditDeadlineOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditDeadlineOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\IssueDeadline
+     * @return \Efsa\Client\Gitea\Model\IssueDeadline
      */
     public function issueEditIssueDeadline($owner, $repo, $index, $body = null)
     {
@@ -7153,11 +7153,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to create or update a deadline on (required)
-     * @param  \Efsa\Client\Model\EditDeadlineOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditDeadlineOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\IssueDeadline, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\IssueDeadline, HTTP status code, HTTP response headers (array of strings)
      */
     public function issueEditIssueDeadlineWithHttpInfo($owner, $repo, $index, $body = null)
     {
@@ -7193,20 +7193,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\IssueDeadline' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\IssueDeadline' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\IssueDeadline', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\IssueDeadline', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\IssueDeadline';
+            $returnType = '\Efsa\Client\Gitea\Model\IssueDeadline';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7224,7 +7224,7 @@ class IssueApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\IssueDeadline',
+                        '\Efsa\Client\Gitea\Model\IssueDeadline',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7242,7 +7242,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to create or update a deadline on (required)
-     * @param  \Efsa\Client\Model\EditDeadlineOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditDeadlineOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7265,14 +7265,14 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to create or update a deadline on (required)
-     * @param  \Efsa\Client\Model\EditDeadlineOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditDeadlineOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function issueEditIssueDeadlineAsyncWithHttpInfo($owner, $repo, $index, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\IssueDeadline';
+        $returnType = '\Efsa\Client\Gitea\Model\IssueDeadline';
         $request = $this->issueEditIssueDeadlineRequest($owner, $repo, $index, $body);
 
         return $this->client
@@ -7314,7 +7314,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to create or update a deadline on (required)
-     * @param  \Efsa\Client\Model\EditDeadlineOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditDeadlineOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7480,11 +7480,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the label to edit (required)
-     * @param  \Efsa\Client\Model\EditLabelOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditLabelOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Label
+     * @return \Efsa\Client\Gitea\Model\Label
      */
     public function issueEditLabel($owner, $repo, $id, $body = null)
     {
@@ -7500,11 +7500,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the label to edit (required)
-     * @param  \Efsa\Client\Model\EditLabelOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditLabelOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Label, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Label, HTTP status code, HTTP response headers (array of strings)
      */
     public function issueEditLabelWithHttpInfo($owner, $repo, $id, $body = null)
     {
@@ -7540,20 +7540,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Label' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Label' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Label', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Label', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Label';
+            $returnType = '\Efsa\Client\Gitea\Model\Label';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7571,7 +7571,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Label',
+                        '\Efsa\Client\Gitea\Model\Label',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7589,7 +7589,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the label to edit (required)
-     * @param  \Efsa\Client\Model\EditLabelOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditLabelOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7612,14 +7612,14 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the label to edit (required)
-     * @param  \Efsa\Client\Model\EditLabelOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditLabelOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function issueEditLabelAsyncWithHttpInfo($owner, $repo, $id, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Label';
+        $returnType = '\Efsa\Client\Gitea\Model\Label';
         $request = $this->issueEditLabelRequest($owner, $repo, $id, $body);
 
         return $this->client
@@ -7661,7 +7661,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the label to edit (required)
-     * @param  \Efsa\Client\Model\EditLabelOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditLabelOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7827,11 +7827,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $id the milestone to edit, identified by ID and if not available by name (required)
-     * @param  \Efsa\Client\Model\EditMilestoneOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditMilestoneOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Milestone
+     * @return \Efsa\Client\Gitea\Model\Milestone
      */
     public function issueEditMilestone($owner, $repo, $id, $body = null)
     {
@@ -7847,11 +7847,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $id the milestone to edit, identified by ID and if not available by name (required)
-     * @param  \Efsa\Client\Model\EditMilestoneOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditMilestoneOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Milestone, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Milestone, HTTP status code, HTTP response headers (array of strings)
      */
     public function issueEditMilestoneWithHttpInfo($owner, $repo, $id, $body = null)
     {
@@ -7887,20 +7887,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Milestone' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Milestone' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Milestone', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Milestone', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Milestone';
+            $returnType = '\Efsa\Client\Gitea\Model\Milestone';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7918,7 +7918,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Milestone',
+                        '\Efsa\Client\Gitea\Model\Milestone',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7936,7 +7936,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $id the milestone to edit, identified by ID and if not available by name (required)
-     * @param  \Efsa\Client\Model\EditMilestoneOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditMilestoneOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7959,14 +7959,14 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $id the milestone to edit, identified by ID and if not available by name (required)
-     * @param  \Efsa\Client\Model\EditMilestoneOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditMilestoneOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function issueEditMilestoneAsyncWithHttpInfo($owner, $repo, $id, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Milestone';
+        $returnType = '\Efsa\Client\Gitea\Model\Milestone';
         $request = $this->issueEditMilestoneRequest($owner, $repo, $id, $body);
 
         return $this->client
@@ -8008,7 +8008,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  string $id the milestone to edit, identified by ID and if not available by name (required)
-     * @param  \Efsa\Client\Model\EditMilestoneOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditMilestoneOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -8175,9 +8175,9 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Comment
+     * @return \Efsa\Client\Gitea\Model\Comment
      */
     public function issueGetComment($owner, $repo, $id)
     {
@@ -8194,9 +8194,9 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Comment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Comment, HTTP status code, HTTP response headers (array of strings)
      */
     public function issueGetCommentWithHttpInfo($owner, $repo, $id)
     {
@@ -8232,20 +8232,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Comment' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Comment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Comment', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Comment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Comment';
+            $returnType = '\Efsa\Client\Gitea\Model\Comment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8263,7 +8263,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Comment',
+                        '\Efsa\Client\Gitea\Model\Comment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8309,7 +8309,7 @@ class IssueApi
      */
     public function issueGetCommentAsyncWithHttpInfo($owner, $repo, $id)
     {
-        $returnType = '\Efsa\Client\Model\Comment';
+        $returnType = '\Efsa\Client\Gitea\Model\Comment';
         $request = $this->issueGetCommentRequest($owner, $repo, $id);
 
         return $this->client
@@ -8511,9 +8511,9 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment to edit (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Reaction[]
+     * @return \Efsa\Client\Gitea\Model\Reaction[]
      */
     public function issueGetCommentReactions($owner, $repo, $id)
     {
@@ -8530,9 +8530,9 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment to edit (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Reaction[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Reaction[], HTTP status code, HTTP response headers (array of strings)
      */
     public function issueGetCommentReactionsWithHttpInfo($owner, $repo, $id)
     {
@@ -8568,20 +8568,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Reaction[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Reaction[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Reaction[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Reaction[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Reaction[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Reaction[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8599,7 +8599,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Reaction[]',
+                        '\Efsa\Client\Gitea\Model\Reaction[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8645,7 +8645,7 @@ class IssueApi
      */
     public function issueGetCommentReactionsAsyncWithHttpInfo($owner, $repo, $id)
     {
-        $returnType = '\Efsa\Client\Model\Reaction[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Reaction[]';
         $request = $this->issueGetCommentReactionsRequest($owner, $repo, $id);
 
         return $this->client
@@ -8849,9 +8849,9 @@ class IssueApi
      * @param  \DateTime $since if provided, only comments updated since the specified time are returned. (optional)
      * @param  \DateTime $before if provided, only comments updated before the provided time are returned. (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Comment[]
+     * @return \Efsa\Client\Gitea\Model\Comment[]
      */
     public function issueGetComments($owner, $repo, $index, $since = null, $before = null)
     {
@@ -8870,9 +8870,9 @@ class IssueApi
      * @param  \DateTime $since if provided, only comments updated since the specified time are returned. (optional)
      * @param  \DateTime $before if provided, only comments updated before the provided time are returned. (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Comment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Comment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function issueGetCommentsWithHttpInfo($owner, $repo, $index, $since = null, $before = null)
     {
@@ -8908,20 +8908,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Comment[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Comment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Comment[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Comment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Comment[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Comment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8939,7 +8939,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Comment[]',
+                        '\Efsa\Client\Gitea\Model\Comment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8989,7 +8989,7 @@ class IssueApi
      */
     public function issueGetCommentsAsyncWithHttpInfo($owner, $repo, $index, $since = null, $before = null)
     {
-        $returnType = '\Efsa\Client\Model\Comment[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Comment[]';
         $request = $this->issueGetCommentsRequest($owner, $repo, $index, $since, $before);
 
         return $this->client
@@ -9211,9 +9211,9 @@ class IssueApi
      * @param  int $limit page size of results (optional)
      * @param  \DateTime $before if provided, only comments updated before the provided time are returned. (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\TimelineComment[]
+     * @return \Efsa\Client\Gitea\Model\TimelineComment[]
      */
     public function issueGetCommentsAndTimeline($owner, $repo, $index, $since = null, $page = null, $limit = null, $before = null)
     {
@@ -9234,9 +9234,9 @@ class IssueApi
      * @param  int $limit page size of results (optional)
      * @param  \DateTime $before if provided, only comments updated before the provided time are returned. (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\TimelineComment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\TimelineComment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function issueGetCommentsAndTimelineWithHttpInfo($owner, $repo, $index, $since = null, $page = null, $limit = null, $before = null)
     {
@@ -9272,20 +9272,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\TimelineComment[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\TimelineComment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\TimelineComment[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\TimelineComment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\TimelineComment[]';
+            $returnType = '\Efsa\Client\Gitea\Model\TimelineComment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9303,7 +9303,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\TimelineComment[]',
+                        '\Efsa\Client\Gitea\Model\TimelineComment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9357,7 +9357,7 @@ class IssueApi
      */
     public function issueGetCommentsAndTimelineAsyncWithHttpInfo($owner, $repo, $index, $since = null, $page = null, $limit = null, $before = null)
     {
-        $returnType = '\Efsa\Client\Model\TimelineComment[]';
+        $returnType = '\Efsa\Client\Gitea\Model\TimelineComment[]';
         $request = $this->issueGetCommentsAndTimelineRequest($owner, $repo, $index, $since, $page, $limit, $before);
 
         return $this->client
@@ -9591,9 +9591,9 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Issue
+     * @return \Efsa\Client\Gitea\Model\Issue
      */
     public function issueGetIssue($owner, $repo, $index)
     {
@@ -9610,9 +9610,9 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Issue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Issue, HTTP status code, HTTP response headers (array of strings)
      */
     public function issueGetIssueWithHttpInfo($owner, $repo, $index)
     {
@@ -9648,20 +9648,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Issue' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Issue' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Issue', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Issue', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Issue';
+            $returnType = '\Efsa\Client\Gitea\Model\Issue';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9679,7 +9679,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Issue',
+                        '\Efsa\Client\Gitea\Model\Issue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9725,7 +9725,7 @@ class IssueApi
      */
     public function issueGetIssueAsyncWithHttpInfo($owner, $repo, $index)
     {
-        $returnType = '\Efsa\Client\Model\Issue';
+        $returnType = '\Efsa\Client\Gitea\Model\Issue';
         $request = $this->issueGetIssueRequest($owner, $repo, $index);
 
         return $this->client
@@ -9929,9 +9929,9 @@ class IssueApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Reaction[]
+     * @return \Efsa\Client\Gitea\Model\Reaction[]
      */
     public function issueGetIssueReactions($owner, $repo, $index, $page = null, $limit = null)
     {
@@ -9950,9 +9950,9 @@ class IssueApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Reaction[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Reaction[], HTTP status code, HTTP response headers (array of strings)
      */
     public function issueGetIssueReactionsWithHttpInfo($owner, $repo, $index, $page = null, $limit = null)
     {
@@ -9988,20 +9988,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Reaction[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Reaction[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Reaction[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Reaction[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Reaction[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Reaction[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10019,7 +10019,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Reaction[]',
+                        '\Efsa\Client\Gitea\Model\Reaction[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10069,7 +10069,7 @@ class IssueApi
      */
     public function issueGetIssueReactionsAsyncWithHttpInfo($owner, $repo, $index, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Reaction[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Reaction[]';
         $request = $this->issueGetIssueReactionsRequest($owner, $repo, $index, $page, $limit);
 
         return $this->client
@@ -10287,9 +10287,9 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the label to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Label
+     * @return \Efsa\Client\Gitea\Model\Label
      */
     public function issueGetLabel($owner, $repo, $id)
     {
@@ -10306,9 +10306,9 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the label to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Label, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Label, HTTP status code, HTTP response headers (array of strings)
      */
     public function issueGetLabelWithHttpInfo($owner, $repo, $id)
     {
@@ -10344,20 +10344,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Label' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Label' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Label', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Label', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Label';
+            $returnType = '\Efsa\Client\Gitea\Model\Label';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10375,7 +10375,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Label',
+                        '\Efsa\Client\Gitea\Model\Label',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10421,7 +10421,7 @@ class IssueApi
      */
     public function issueGetLabelAsyncWithHttpInfo($owner, $repo, $id)
     {
-        $returnType = '\Efsa\Client\Model\Label';
+        $returnType = '\Efsa\Client\Gitea\Model\Label';
         $request = $this->issueGetLabelRequest($owner, $repo, $id);
 
         return $this->client
@@ -10623,9 +10623,9 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Label[]
+     * @return \Efsa\Client\Gitea\Model\Label[]
      */
     public function issueGetLabels($owner, $repo, $index)
     {
@@ -10642,9 +10642,9 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Label[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Label[], HTTP status code, HTTP response headers (array of strings)
      */
     public function issueGetLabelsWithHttpInfo($owner, $repo, $index)
     {
@@ -10680,20 +10680,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Label[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Label[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Label[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Label[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Label[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Label[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10711,7 +10711,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Label[]',
+                        '\Efsa\Client\Gitea\Model\Label[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10757,7 +10757,7 @@ class IssueApi
      */
     public function issueGetLabelsAsyncWithHttpInfo($owner, $repo, $index)
     {
-        $returnType = '\Efsa\Client\Model\Label[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Label[]';
         $request = $this->issueGetLabelsRequest($owner, $repo, $index);
 
         return $this->client
@@ -10959,9 +10959,9 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  string $id the milestone to get, identified by ID and if not available by name (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Milestone
+     * @return \Efsa\Client\Gitea\Model\Milestone
      */
     public function issueGetMilestone($owner, $repo, $id)
     {
@@ -10978,9 +10978,9 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  string $id the milestone to get, identified by ID and if not available by name (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Milestone, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Milestone, HTTP status code, HTTP response headers (array of strings)
      */
     public function issueGetMilestoneWithHttpInfo($owner, $repo, $id)
     {
@@ -11016,20 +11016,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Milestone' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Milestone' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Milestone', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Milestone', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Milestone';
+            $returnType = '\Efsa\Client\Gitea\Model\Milestone';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11047,7 +11047,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Milestone',
+                        '\Efsa\Client\Gitea\Model\Milestone',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11093,7 +11093,7 @@ class IssueApi
      */
     public function issueGetMilestoneAsyncWithHttpInfo($owner, $repo, $id)
     {
-        $returnType = '\Efsa\Client\Model\Milestone';
+        $returnType = '\Efsa\Client\Gitea\Model\Milestone';
         $request = $this->issueGetMilestoneRequest($owner, $repo, $id);
 
         return $this->client
@@ -11298,9 +11298,9 @@ class IssueApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Milestone[]
+     * @return \Efsa\Client\Gitea\Model\Milestone[]
      */
     public function issueGetMilestonesList($owner, $repo, $state = null, $name = null, $page = null, $limit = null)
     {
@@ -11320,9 +11320,9 @@ class IssueApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Milestone[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Milestone[], HTTP status code, HTTP response headers (array of strings)
      */
     public function issueGetMilestonesListWithHttpInfo($owner, $repo, $state = null, $name = null, $page = null, $limit = null)
     {
@@ -11358,20 +11358,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Milestone[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Milestone[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Milestone[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Milestone[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Milestone[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Milestone[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11389,7 +11389,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Milestone[]',
+                        '\Efsa\Client\Gitea\Model\Milestone[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11441,7 +11441,7 @@ class IssueApi
      */
     public function issueGetMilestonesListAsyncWithHttpInfo($owner, $repo, $state = null, $name = null, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Milestone[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Milestone[]';
         $request = $this->issueGetMilestonesListRequest($owner, $repo, $state, $name, $page, $limit);
 
         return $this->client
@@ -11663,9 +11663,9 @@ class IssueApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Comment[]
+     * @return \Efsa\Client\Gitea\Model\Comment[]
      */
     public function issueGetRepoComments($owner, $repo, $since = null, $before = null, $page = null, $limit = null)
     {
@@ -11685,9 +11685,9 @@ class IssueApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Comment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Comment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function issueGetRepoCommentsWithHttpInfo($owner, $repo, $since = null, $before = null, $page = null, $limit = null)
     {
@@ -11723,20 +11723,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Comment[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Comment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Comment[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Comment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Comment[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Comment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11754,7 +11754,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Comment[]',
+                        '\Efsa\Client\Gitea\Model\Comment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11806,7 +11806,7 @@ class IssueApi
      */
     public function issueGetRepoCommentsAsyncWithHttpInfo($owner, $repo, $since = null, $before = null, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Comment[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Comment[]';
         $request = $this->issueGetRepoCommentsRequest($owner, $repo, $since, $before, $page, $limit);
 
         return $this->client
@@ -12036,9 +12036,9 @@ class IssueApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Issue[]
+     * @return \Efsa\Client\Gitea\Model\Issue[]
      */
     public function issueListIssues($owner, $repo, $state = null, $labels = null, $q = null, $type = null, $milestones = null, $since = null, $before = null, $created_by = null, $assigned_by = null, $mentioned_by = null, $page = null, $limit = null)
     {
@@ -12066,9 +12066,9 @@ class IssueApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Issue[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Issue[], HTTP status code, HTTP response headers (array of strings)
      */
     public function issueListIssuesWithHttpInfo($owner, $repo, $state = null, $labels = null, $q = null, $type = null, $milestones = null, $since = null, $before = null, $created_by = null, $assigned_by = null, $mentioned_by = null, $page = null, $limit = null)
     {
@@ -12104,20 +12104,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Issue[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Issue[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Issue[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Issue[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Issue[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Issue[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12135,7 +12135,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Issue[]',
+                        '\Efsa\Client\Gitea\Model\Issue[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12203,7 +12203,7 @@ class IssueApi
      */
     public function issueListIssuesAsyncWithHttpInfo($owner, $repo, $state = null, $labels = null, $q = null, $type = null, $milestones = null, $since = null, $before = null, $created_by = null, $assigned_by = null, $mentioned_by = null, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Issue[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Issue[]';
         $request = $this->issueListIssuesRequest($owner, $repo, $state, $labels, $q, $type, $milestones, $since, $before, $created_by, $assigned_by, $mentioned_by, $page, $limit);
 
         return $this->client
@@ -12487,9 +12487,9 @@ class IssueApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Label[]
+     * @return \Efsa\Client\Gitea\Model\Label[]
      */
     public function issueListLabels($owner, $repo, $page = null, $limit = null)
     {
@@ -12507,9 +12507,9 @@ class IssueApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Label[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Label[], HTTP status code, HTTP response headers (array of strings)
      */
     public function issueListLabelsWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
@@ -12545,20 +12545,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Label[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Label[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Label[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Label[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Label[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Label[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12576,7 +12576,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Label[]',
+                        '\Efsa\Client\Gitea\Model\Label[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12624,7 +12624,7 @@ class IssueApi
      */
     public function issueListLabelsAsyncWithHttpInfo($owner, $repo, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Label[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Label[]';
         $request = $this->issueListLabelsRequest($owner, $repo, $page, $limit);
 
         return $this->client
@@ -12826,11 +12826,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content content (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Reaction|\Efsa\Client\Model\Reaction
+     * @return \Efsa\Client\Gitea\Model\Reaction|\Efsa\Client\Gitea\Model\Reaction
      */
     public function issuePostCommentReaction($owner, $repo, $id, $content = null)
     {
@@ -12846,11 +12846,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Reaction|\Efsa\Client\Model\Reaction, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Reaction|\Efsa\Client\Gitea\Model\Reaction, HTTP status code, HTTP response headers (array of strings)
      */
     public function issuePostCommentReactionWithHttpInfo($owner, $repo, $id, $content = null)
     {
@@ -12886,32 +12886,32 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Reaction' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Reaction' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Reaction', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Reaction', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 201:
-                    if ('\Efsa\Client\Model\Reaction' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Reaction' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Reaction', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Reaction', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Reaction';
+            $returnType = '\Efsa\Client\Gitea\Model\Reaction';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12929,7 +12929,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Reaction',
+                        '\Efsa\Client\Gitea\Model\Reaction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12937,7 +12937,7 @@ class IssueApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Reaction',
+                        '\Efsa\Client\Gitea\Model\Reaction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12955,7 +12955,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -12978,14 +12978,14 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function issuePostCommentReactionAsyncWithHttpInfo($owner, $repo, $id, $content = null)
     {
-        $returnType = '\Efsa\Client\Model\Reaction';
+        $returnType = '\Efsa\Client\Gitea\Model\Reaction';
         $request = $this->issuePostCommentReactionRequest($owner, $repo, $id, $content);
 
         return $this->client
@@ -13027,7 +13027,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $id id of the comment to edit (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -13193,11 +13193,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content content (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Reaction|\Efsa\Client\Model\Reaction
+     * @return \Efsa\Client\Gitea\Model\Reaction|\Efsa\Client\Gitea\Model\Reaction
      */
     public function issuePostIssueReaction($owner, $repo, $index, $content = null)
     {
@@ -13213,11 +13213,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Reaction|\Efsa\Client\Model\Reaction, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Reaction|\Efsa\Client\Gitea\Model\Reaction, HTTP status code, HTTP response headers (array of strings)
      */
     public function issuePostIssueReactionWithHttpInfo($owner, $repo, $index, $content = null)
     {
@@ -13253,32 +13253,32 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Reaction' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Reaction' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Reaction', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Reaction', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 201:
-                    if ('\Efsa\Client\Model\Reaction' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Reaction' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Reaction', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Reaction', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Reaction';
+            $returnType = '\Efsa\Client\Gitea\Model\Reaction';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -13296,7 +13296,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Reaction',
+                        '\Efsa\Client\Gitea\Model\Reaction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13304,7 +13304,7 @@ class IssueApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Reaction',
+                        '\Efsa\Client\Gitea\Model\Reaction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13322,7 +13322,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -13345,14 +13345,14 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function issuePostIssueReactionAsyncWithHttpInfo($owner, $repo, $index, $content = null)
     {
-        $returnType = '\Efsa\Client\Model\Reaction';
+        $returnType = '\Efsa\Client\Gitea\Model\Reaction';
         $request = $this->issuePostIssueReactionRequest($owner, $repo, $index, $content);
 
         return $this->client
@@ -13394,7 +13394,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\EditReactionOption $content (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditReactionOption $content (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -13562,7 +13562,7 @@ class IssueApi
      * @param  int $index index of the issue (required)
      * @param  int $id id of the label to remove (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -13581,7 +13581,7 @@ class IssueApi
      * @param  int $index index of the issue (required)
      * @param  int $id id of the label to remove (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -13870,11 +13870,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\IssueLabelsOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\IssueLabelsOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Label[]
+     * @return \Efsa\Client\Gitea\Model\Label[]
      */
     public function issueReplaceLabels($owner, $repo, $index, $body = null)
     {
@@ -13890,11 +13890,11 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\IssueLabelsOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\IssueLabelsOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Label[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Label[], HTTP status code, HTTP response headers (array of strings)
      */
     public function issueReplaceLabelsWithHttpInfo($owner, $repo, $index, $body = null)
     {
@@ -13930,20 +13930,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Label[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Label[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Label[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Label[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Label[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Label[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -13961,7 +13961,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Label[]',
+                        '\Efsa\Client\Gitea\Model\Label[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13979,7 +13979,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\IssueLabelsOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\IssueLabelsOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -14002,14 +14002,14 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\IssueLabelsOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\IssueLabelsOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function issueReplaceLabelsAsyncWithHttpInfo($owner, $repo, $index, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Label[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Label[]';
         $request = $this->issueReplaceLabelsRequest($owner, $repo, $index, $body);
 
         return $this->client
@@ -14051,7 +14051,7 @@ class IssueApi
      * @param  string $owner owner of the repo (required)
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue (required)
-     * @param  \Efsa\Client\Model\IssueLabelsOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\IssueLabelsOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -14218,7 +14218,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to add tracked time to (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -14236,7 +14236,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to add tracked time to (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -14522,9 +14522,9 @@ class IssueApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Issue[]
+     * @return \Efsa\Client\Gitea\Model\Issue[]
      */
     public function issueSearchIssues($state = null, $labels = null, $milestones = null, $q = null, $priority_repo_id = null, $type = null, $since = null, $before = null, $assigned = null, $created = null, $mentioned = null, $review_requested = null, $owner = null, $team = null, $page = null, $limit = null)
     {
@@ -14554,9 +14554,9 @@ class IssueApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Issue[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Issue[], HTTP status code, HTTP response headers (array of strings)
      */
     public function issueSearchIssuesWithHttpInfo($state = null, $labels = null, $milestones = null, $q = null, $priority_repo_id = null, $type = null, $since = null, $before = null, $assigned = null, $created = null, $mentioned = null, $review_requested = null, $owner = null, $team = null, $page = null, $limit = null)
     {
@@ -14592,20 +14592,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Issue[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Issue[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Issue[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Issue[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Issue[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Issue[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -14623,7 +14623,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Issue[]',
+                        '\Efsa\Client\Gitea\Model\Issue[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14695,7 +14695,7 @@ class IssueApi
      */
     public function issueSearchIssuesAsyncWithHttpInfo($state = null, $labels = null, $milestones = null, $q = null, $priority_repo_id = null, $type = null, $since = null, $before = null, $assigned = null, $created = null, $mentioned = null, $review_requested = null, $owner = null, $team = null, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Issue[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Issue[]';
         $request = $this->issueSearchIssuesRequest($state, $labels, $milestones, $q, $priority_repo_id, $type, $since, $before, $assigned, $created, $mentioned, $review_requested, $owner, $team, $page, $limit);
 
         return $this->client
@@ -14980,7 +14980,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to create the stopwatch on (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -14998,7 +14998,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to create the stopwatch on (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -15271,7 +15271,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to stop the stopwatch on (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -15289,7 +15289,7 @@ class IssueApi
      * @param  string $repo name of the repo (required)
      * @param  int $index index of the issue to stop the stopwatch on (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -15564,9 +15564,9 @@ class IssueApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\User[]
+     * @return \Efsa\Client\Gitea\Model\User[]
      */
     public function issueSubscriptions($owner, $repo, $index, $page = null, $limit = null)
     {
@@ -15585,9 +15585,9 @@ class IssueApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\User[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\User[], HTTP status code, HTTP response headers (array of strings)
      */
     public function issueSubscriptionsWithHttpInfo($owner, $repo, $index, $page = null, $limit = null)
     {
@@ -15623,20 +15623,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\User[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\User[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\User[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\User[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\User[]';
+            $returnType = '\Efsa\Client\Gitea\Model\User[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -15654,7 +15654,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\User[]',
+                        '\Efsa\Client\Gitea\Model\User[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15704,7 +15704,7 @@ class IssueApi
      */
     public function issueSubscriptionsAsyncWithHttpInfo($owner, $repo, $index, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\User[]';
+        $returnType = '\Efsa\Client\Gitea\Model\User[]';
         $request = $this->issueSubscriptionsRequest($owner, $repo, $index, $page, $limit);
 
         return $this->client
@@ -15927,9 +15927,9 @@ class IssueApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\TrackedTime[]
+     * @return \Efsa\Client\Gitea\Model\TrackedTime[]
      */
     public function issueTrackedTimes($owner, $repo, $index, $user = null, $since = null, $before = null, $page = null, $limit = null)
     {
@@ -15951,9 +15951,9 @@ class IssueApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\TrackedTime[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\TrackedTime[], HTTP status code, HTTP response headers (array of strings)
      */
     public function issueTrackedTimesWithHttpInfo($owner, $repo, $index, $user = null, $since = null, $before = null, $page = null, $limit = null)
     {
@@ -15989,20 +15989,20 @@ class IssueApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\TrackedTime[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\TrackedTime[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\TrackedTime[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\TrackedTime[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\TrackedTime[]';
+            $returnType = '\Efsa\Client\Gitea\Model\TrackedTime[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -16020,7 +16020,7 @@ class IssueApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\TrackedTime[]',
+                        '\Efsa\Client\Gitea\Model\TrackedTime[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16076,7 +16076,7 @@ class IssueApi
      */
     public function issueTrackedTimesAsyncWithHttpInfo($owner, $repo, $index, $user = null, $since = null, $before = null, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\TrackedTime[]';
+        $returnType = '\Efsa\Client\Gitea\Model\TrackedTime[]';
         $request = $this->issueTrackedTimesRequest($owner, $repo, $index, $user, $since, $before, $page, $limit);
 
         return $this->client

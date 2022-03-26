@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Efsa\Client\Gitea;
+namespace Efsa\Client\Gitea\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Efsa\Client\ApiException;
-use Efsa\Client\Configuration;
-use Efsa\Client\HeaderSelector;
-use Efsa\Client\ObjectSerializer;
+use Efsa\Client\Gitea\ApiException;
+use Efsa\Client\Gitea\Configuration;
+use Efsa\Client\Gitea\HeaderSelector;
+use Efsa\Client\Gitea\ObjectSerializer;
 
 /**
  * OrganizationApi Class Doc Comment
  *
  * @category Class
- * @package  Efsa\Client
+ * @package  Efsa\Client\Gitea
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -120,11 +120,11 @@ class OrganizationApi
      * Create a repository in an organization
      *
      * @param  string $org name of organization (required)
-     * @param  \Efsa\Client\Model\CreateRepoOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Repository
+     * @return \Efsa\Client\Gitea\Model\Repository
      */
     public function createOrgRepo($org, $body = null)
     {
@@ -138,11 +138,11 @@ class OrganizationApi
      * Create a repository in an organization
      *
      * @param  string $org name of organization (required)
-     * @param  \Efsa\Client\Model\CreateRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Repository, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Repository, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOrgRepoWithHttpInfo($org, $body = null)
     {
@@ -178,20 +178,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Repository' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Repository' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Repository', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Repository', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Repository';
+            $returnType = '\Efsa\Client\Gitea\Model\Repository';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -209,7 +209,7 @@ class OrganizationApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Repository',
+                        '\Efsa\Client\Gitea\Model\Repository',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -225,7 +225,7 @@ class OrganizationApi
      * Create a repository in an organization
      *
      * @param  string $org name of organization (required)
-     * @param  \Efsa\Client\Model\CreateRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -246,14 +246,14 @@ class OrganizationApi
      * Create a repository in an organization
      *
      * @param  string $org name of organization (required)
-     * @param  \Efsa\Client\Model\CreateRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createOrgRepoAsyncWithHttpInfo($org, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Repository';
+        $returnType = '\Efsa\Client\Gitea\Model\Repository';
         $request = $this->createOrgRepoRequest($org, $body);
 
         return $this->client
@@ -293,7 +293,7 @@ class OrganizationApi
      * Create request for operation 'createOrgRepo'
      *
      * @param  string $org name of organization (required)
-     * @param  \Efsa\Client\Model\CreateRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -429,11 +429,11 @@ class OrganizationApi
      * Create a repository in an organization
      *
      * @param  string $org name of organization (required)
-     * @param  \Efsa\Client\Model\CreateRepoOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Repository
+     * @return \Efsa\Client\Gitea\Model\Repository
      */
     public function createOrgRepoDeprecated($org, $body = null)
     {
@@ -447,11 +447,11 @@ class OrganizationApi
      * Create a repository in an organization
      *
      * @param  string $org name of organization (required)
-     * @param  \Efsa\Client\Model\CreateRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Repository, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Repository, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOrgRepoDeprecatedWithHttpInfo($org, $body = null)
     {
@@ -487,20 +487,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Repository' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Repository' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Repository', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Repository', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Repository';
+            $returnType = '\Efsa\Client\Gitea\Model\Repository';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -518,7 +518,7 @@ class OrganizationApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Repository',
+                        '\Efsa\Client\Gitea\Model\Repository',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -534,7 +534,7 @@ class OrganizationApi
      * Create a repository in an organization
      *
      * @param  string $org name of organization (required)
-     * @param  \Efsa\Client\Model\CreateRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -555,14 +555,14 @@ class OrganizationApi
      * Create a repository in an organization
      *
      * @param  string $org name of organization (required)
-     * @param  \Efsa\Client\Model\CreateRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createOrgRepoDeprecatedAsyncWithHttpInfo($org, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Repository';
+        $returnType = '\Efsa\Client\Gitea\Model\Repository';
         $request = $this->createOrgRepoDeprecatedRequest($org, $body);
 
         return $this->client
@@ -602,7 +602,7 @@ class OrganizationApi
      * Create request for operation 'createOrgRepoDeprecated'
      *
      * @param  string $org name of organization (required)
-     * @param  \Efsa\Client\Model\CreateRepoOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateRepoOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -740,7 +740,7 @@ class OrganizationApi
      * @param  int $id id of the team (required)
      * @param  string $username username of the user to add (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -757,7 +757,7 @@ class OrganizationApi
      * @param  int $id id of the team (required)
      * @param  string $username username of the user to add (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1013,7 +1013,7 @@ class OrganizationApi
      * @param  string $org organization that owns the repo to add (required)
      * @param  string $repo name of the repo to add (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1031,7 +1031,7 @@ class OrganizationApi
      * @param  string $org organization that owns the repo to add (required)
      * @param  string $repo name of the repo to add (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1303,7 +1303,7 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  string $username username of the user (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1320,7 +1320,7 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  string $username username of the user (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1572,11 +1572,11 @@ class OrganizationApi
      *
      * Create an organization
      *
-     * @param  \Efsa\Client\Model\CreateOrgOption $organization organization (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateOrgOption $organization organization (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Organization
+     * @return \Efsa\Client\Gitea\Model\Organization
      */
     public function orgCreate($organization)
     {
@@ -1589,11 +1589,11 @@ class OrganizationApi
      *
      * Create an organization
      *
-     * @param  \Efsa\Client\Model\CreateOrgOption $organization (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateOrgOption $organization (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Organization, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Organization, HTTP status code, HTTP response headers (array of strings)
      */
     public function orgCreateWithHttpInfo($organization)
     {
@@ -1629,20 +1629,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Organization' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Organization' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Organization', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Organization', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Organization';
+            $returnType = '\Efsa\Client\Gitea\Model\Organization';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1660,7 +1660,7 @@ class OrganizationApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Organization',
+                        '\Efsa\Client\Gitea\Model\Organization',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1675,7 +1675,7 @@ class OrganizationApi
      *
      * Create an organization
      *
-     * @param  \Efsa\Client\Model\CreateOrgOption $organization (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateOrgOption $organization (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1695,14 +1695,14 @@ class OrganizationApi
      *
      * Create an organization
      *
-     * @param  \Efsa\Client\Model\CreateOrgOption $organization (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateOrgOption $organization (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function orgCreateAsyncWithHttpInfo($organization)
     {
-        $returnType = '\Efsa\Client\Model\Organization';
+        $returnType = '\Efsa\Client\Gitea\Model\Organization';
         $request = $this->orgCreateRequest($organization);
 
         return $this->client
@@ -1741,7 +1741,7 @@ class OrganizationApi
     /**
      * Create request for operation 'orgCreate'
      *
-     * @param  \Efsa\Client\Model\CreateOrgOption $organization (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateOrgOption $organization (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1869,11 +1869,11 @@ class OrganizationApi
      * Create a hook
      *
      * @param  string $org name of the organization (required)
-     * @param  \Efsa\Client\Model\CreateHookOption $body body (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateHookOption $body body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Hook
+     * @return \Efsa\Client\Gitea\Model\Hook
      */
     public function orgCreateHook($org, $body)
     {
@@ -1887,11 +1887,11 @@ class OrganizationApi
      * Create a hook
      *
      * @param  string $org name of the organization (required)
-     * @param  \Efsa\Client\Model\CreateHookOption $body (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateHookOption $body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Hook, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Hook, HTTP status code, HTTP response headers (array of strings)
      */
     public function orgCreateHookWithHttpInfo($org, $body)
     {
@@ -1927,20 +1927,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Hook' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Hook' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Hook', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Hook', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Hook';
+            $returnType = '\Efsa\Client\Gitea\Model\Hook';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1958,7 +1958,7 @@ class OrganizationApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Hook',
+                        '\Efsa\Client\Gitea\Model\Hook',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1974,7 +1974,7 @@ class OrganizationApi
      * Create a hook
      *
      * @param  string $org name of the organization (required)
-     * @param  \Efsa\Client\Model\CreateHookOption $body (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateHookOption $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1995,14 +1995,14 @@ class OrganizationApi
      * Create a hook
      *
      * @param  string $org name of the organization (required)
-     * @param  \Efsa\Client\Model\CreateHookOption $body (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateHookOption $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function orgCreateHookAsyncWithHttpInfo($org, $body)
     {
-        $returnType = '\Efsa\Client\Model\Hook';
+        $returnType = '\Efsa\Client\Gitea\Model\Hook';
         $request = $this->orgCreateHookRequest($org, $body);
 
         return $this->client
@@ -2042,7 +2042,7 @@ class OrganizationApi
      * Create request for operation 'orgCreateHook'
      *
      * @param  string $org name of the organization (required)
-     * @param  \Efsa\Client\Model\CreateHookOption $body (required)
+     * @param  \Efsa\Client\Gitea\Model\CreateHookOption $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2184,11 +2184,11 @@ class OrganizationApi
      * Create a label for an organization
      *
      * @param  string $org name of the organization (required)
-     * @param  \Efsa\Client\Model\CreateLabelOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateLabelOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Label
+     * @return \Efsa\Client\Gitea\Model\Label
      */
     public function orgCreateLabel($org, $body = null)
     {
@@ -2202,11 +2202,11 @@ class OrganizationApi
      * Create a label for an organization
      *
      * @param  string $org name of the organization (required)
-     * @param  \Efsa\Client\Model\CreateLabelOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateLabelOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Label, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Label, HTTP status code, HTTP response headers (array of strings)
      */
     public function orgCreateLabelWithHttpInfo($org, $body = null)
     {
@@ -2242,20 +2242,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Label' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Label' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Label', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Label', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Label';
+            $returnType = '\Efsa\Client\Gitea\Model\Label';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2273,7 +2273,7 @@ class OrganizationApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Label',
+                        '\Efsa\Client\Gitea\Model\Label',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2289,7 +2289,7 @@ class OrganizationApi
      * Create a label for an organization
      *
      * @param  string $org name of the organization (required)
-     * @param  \Efsa\Client\Model\CreateLabelOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateLabelOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2310,14 +2310,14 @@ class OrganizationApi
      * Create a label for an organization
      *
      * @param  string $org name of the organization (required)
-     * @param  \Efsa\Client\Model\CreateLabelOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateLabelOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function orgCreateLabelAsyncWithHttpInfo($org, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Label';
+        $returnType = '\Efsa\Client\Gitea\Model\Label';
         $request = $this->orgCreateLabelRequest($org, $body);
 
         return $this->client
@@ -2357,7 +2357,7 @@ class OrganizationApi
      * Create request for operation 'orgCreateLabel'
      *
      * @param  string $org name of the organization (required)
-     * @param  \Efsa\Client\Model\CreateLabelOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateLabelOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2493,11 +2493,11 @@ class OrganizationApi
      * Create a team
      *
      * @param  string $org name of the organization (required)
-     * @param  \Efsa\Client\Model\CreateTeamOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateTeamOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Team
+     * @return \Efsa\Client\Gitea\Model\Team
      */
     public function orgCreateTeam($org, $body = null)
     {
@@ -2511,11 +2511,11 @@ class OrganizationApi
      * Create a team
      *
      * @param  string $org name of the organization (required)
-     * @param  \Efsa\Client\Model\CreateTeamOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateTeamOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Team, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Team, HTTP status code, HTTP response headers (array of strings)
      */
     public function orgCreateTeamWithHttpInfo($org, $body = null)
     {
@@ -2551,20 +2551,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Efsa\Client\Model\Team' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Team' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Team', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Team', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Team';
+            $returnType = '\Efsa\Client\Gitea\Model\Team';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2582,7 +2582,7 @@ class OrganizationApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Team',
+                        '\Efsa\Client\Gitea\Model\Team',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2598,7 +2598,7 @@ class OrganizationApi
      * Create a team
      *
      * @param  string $org name of the organization (required)
-     * @param  \Efsa\Client\Model\CreateTeamOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateTeamOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2619,14 +2619,14 @@ class OrganizationApi
      * Create a team
      *
      * @param  string $org name of the organization (required)
-     * @param  \Efsa\Client\Model\CreateTeamOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateTeamOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function orgCreateTeamAsyncWithHttpInfo($org, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Team';
+        $returnType = '\Efsa\Client\Gitea\Model\Team';
         $request = $this->orgCreateTeamRequest($org, $body);
 
         return $this->client
@@ -2666,7 +2666,7 @@ class OrganizationApi
      * Create request for operation 'orgCreateTeam'
      *
      * @param  string $org name of the organization (required)
-     * @param  \Efsa\Client\Model\CreateTeamOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\CreateTeamOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2803,7 +2803,7 @@ class OrganizationApi
      *
      * @param  string $org organization that is to be deleted (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2819,7 +2819,7 @@ class OrganizationApi
      *
      * @param  string $org organization that is to be deleted (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3057,7 +3057,7 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  int $id id of the hook to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3074,7 +3074,7 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  int $id id of the hook to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3329,7 +3329,7 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  int $id id of the label to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3346,7 +3346,7 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  int $id id of the label to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3601,7 +3601,7 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  string $username username of the user (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3618,7 +3618,7 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  string $username username of the user (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3872,7 +3872,7 @@ class OrganizationApi
      *
      * @param  int $id id of the team to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3888,7 +3888,7 @@ class OrganizationApi
      *
      * @param  int $id id of the team to delete (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4124,11 +4124,11 @@ class OrganizationApi
      * Edit an organization
      *
      * @param  string $org name of the organization to edit (required)
-     * @param  \Efsa\Client\Model\EditOrgOption $body body (required)
+     * @param  \Efsa\Client\Gitea\Model\EditOrgOption $body body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Organization
+     * @return \Efsa\Client\Gitea\Model\Organization
      */
     public function orgEdit($org, $body)
     {
@@ -4142,11 +4142,11 @@ class OrganizationApi
      * Edit an organization
      *
      * @param  string $org name of the organization to edit (required)
-     * @param  \Efsa\Client\Model\EditOrgOption $body (required)
+     * @param  \Efsa\Client\Gitea\Model\EditOrgOption $body (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Organization, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Organization, HTTP status code, HTTP response headers (array of strings)
      */
     public function orgEditWithHttpInfo($org, $body)
     {
@@ -4182,20 +4182,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Organization' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Organization' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Organization', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Organization', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Organization';
+            $returnType = '\Efsa\Client\Gitea\Model\Organization';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4213,7 +4213,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Organization',
+                        '\Efsa\Client\Gitea\Model\Organization',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4229,7 +4229,7 @@ class OrganizationApi
      * Edit an organization
      *
      * @param  string $org name of the organization to edit (required)
-     * @param  \Efsa\Client\Model\EditOrgOption $body (required)
+     * @param  \Efsa\Client\Gitea\Model\EditOrgOption $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4250,14 +4250,14 @@ class OrganizationApi
      * Edit an organization
      *
      * @param  string $org name of the organization to edit (required)
-     * @param  \Efsa\Client\Model\EditOrgOption $body (required)
+     * @param  \Efsa\Client\Gitea\Model\EditOrgOption $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function orgEditAsyncWithHttpInfo($org, $body)
     {
-        $returnType = '\Efsa\Client\Model\Organization';
+        $returnType = '\Efsa\Client\Gitea\Model\Organization';
         $request = $this->orgEditRequest($org, $body);
 
         return $this->client
@@ -4297,7 +4297,7 @@ class OrganizationApi
      * Create request for operation 'orgEdit'
      *
      * @param  string $org name of the organization to edit (required)
-     * @param  \Efsa\Client\Model\EditOrgOption $body (required)
+     * @param  \Efsa\Client\Gitea\Model\EditOrgOption $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4440,11 +4440,11 @@ class OrganizationApi
      *
      * @param  string $org name of the organization (required)
      * @param  int $id id of the hook to update (required)
-     * @param  \Efsa\Client\Model\EditHookOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditHookOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Hook
+     * @return \Efsa\Client\Gitea\Model\Hook
      */
     public function orgEditHook($org, $id, $body = null)
     {
@@ -4459,11 +4459,11 @@ class OrganizationApi
      *
      * @param  string $org name of the organization (required)
      * @param  int $id id of the hook to update (required)
-     * @param  \Efsa\Client\Model\EditHookOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditHookOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Hook, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Hook, HTTP status code, HTTP response headers (array of strings)
      */
     public function orgEditHookWithHttpInfo($org, $id, $body = null)
     {
@@ -4499,20 +4499,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Hook' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Hook' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Hook', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Hook', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Hook';
+            $returnType = '\Efsa\Client\Gitea\Model\Hook';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4530,7 +4530,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Hook',
+                        '\Efsa\Client\Gitea\Model\Hook',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4547,7 +4547,7 @@ class OrganizationApi
      *
      * @param  string $org name of the organization (required)
      * @param  int $id id of the hook to update (required)
-     * @param  \Efsa\Client\Model\EditHookOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditHookOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4569,14 +4569,14 @@ class OrganizationApi
      *
      * @param  string $org name of the organization (required)
      * @param  int $id id of the hook to update (required)
-     * @param  \Efsa\Client\Model\EditHookOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditHookOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function orgEditHookAsyncWithHttpInfo($org, $id, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Hook';
+        $returnType = '\Efsa\Client\Gitea\Model\Hook';
         $request = $this->orgEditHookRequest($org, $id, $body);
 
         return $this->client
@@ -4617,7 +4617,7 @@ class OrganizationApi
      *
      * @param  string $org name of the organization (required)
      * @param  int $id id of the hook to update (required)
-     * @param  \Efsa\Client\Model\EditHookOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditHookOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4768,11 +4768,11 @@ class OrganizationApi
      *
      * @param  string $org name of the organization (required)
      * @param  int $id id of the label to edit (required)
-     * @param  \Efsa\Client\Model\EditLabelOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditLabelOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Label
+     * @return \Efsa\Client\Gitea\Model\Label
      */
     public function orgEditLabel($org, $id, $body = null)
     {
@@ -4787,11 +4787,11 @@ class OrganizationApi
      *
      * @param  string $org name of the organization (required)
      * @param  int $id id of the label to edit (required)
-     * @param  \Efsa\Client\Model\EditLabelOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditLabelOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Label, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Label, HTTP status code, HTTP response headers (array of strings)
      */
     public function orgEditLabelWithHttpInfo($org, $id, $body = null)
     {
@@ -4827,20 +4827,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Label' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Label' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Label', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Label', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Label';
+            $returnType = '\Efsa\Client\Gitea\Model\Label';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4858,7 +4858,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Label',
+                        '\Efsa\Client\Gitea\Model\Label',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4875,7 +4875,7 @@ class OrganizationApi
      *
      * @param  string $org name of the organization (required)
      * @param  int $id id of the label to edit (required)
-     * @param  \Efsa\Client\Model\EditLabelOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditLabelOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4897,14 +4897,14 @@ class OrganizationApi
      *
      * @param  string $org name of the organization (required)
      * @param  int $id id of the label to edit (required)
-     * @param  \Efsa\Client\Model\EditLabelOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditLabelOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function orgEditLabelAsyncWithHttpInfo($org, $id, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Label';
+        $returnType = '\Efsa\Client\Gitea\Model\Label';
         $request = $this->orgEditLabelRequest($org, $id, $body);
 
         return $this->client
@@ -4945,7 +4945,7 @@ class OrganizationApi
      *
      * @param  string $org name of the organization (required)
      * @param  int $id id of the label to edit (required)
-     * @param  \Efsa\Client\Model\EditLabelOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditLabelOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5095,11 +5095,11 @@ class OrganizationApi
      * Edit a team
      *
      * @param  int $id id of the team to edit (required)
-     * @param  \Efsa\Client\Model\EditTeamOption $body body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditTeamOption $body body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Team
+     * @return \Efsa\Client\Gitea\Model\Team
      */
     public function orgEditTeam($id, $body = null)
     {
@@ -5113,11 +5113,11 @@ class OrganizationApi
      * Edit a team
      *
      * @param  int $id id of the team to edit (required)
-     * @param  \Efsa\Client\Model\EditTeamOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditTeamOption $body (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Team, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Team, HTTP status code, HTTP response headers (array of strings)
      */
     public function orgEditTeamWithHttpInfo($id, $body = null)
     {
@@ -5153,20 +5153,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Team' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Team' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Team', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Team', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Team';
+            $returnType = '\Efsa\Client\Gitea\Model\Team';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5184,7 +5184,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Team',
+                        '\Efsa\Client\Gitea\Model\Team',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5200,7 +5200,7 @@ class OrganizationApi
      * Edit a team
      *
      * @param  int $id id of the team to edit (required)
-     * @param  \Efsa\Client\Model\EditTeamOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditTeamOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5221,14 +5221,14 @@ class OrganizationApi
      * Edit a team
      *
      * @param  int $id id of the team to edit (required)
-     * @param  \Efsa\Client\Model\EditTeamOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditTeamOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function orgEditTeamAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Efsa\Client\Model\Team';
+        $returnType = '\Efsa\Client\Gitea\Model\Team';
         $request = $this->orgEditTeamRequest($id, $body);
 
         return $this->client
@@ -5268,7 +5268,7 @@ class OrganizationApi
      * Create request for operation 'orgEditTeam'
      *
      * @param  int $id id of the team to edit (required)
-     * @param  \Efsa\Client\Model\EditTeamOption $body (optional)
+     * @param  \Efsa\Client\Gitea\Model\EditTeamOption $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5405,9 +5405,9 @@ class OrganizationApi
      *
      * @param  string $org name of the organization to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Organization
+     * @return \Efsa\Client\Gitea\Model\Organization
      */
     public function orgGet($org)
     {
@@ -5422,9 +5422,9 @@ class OrganizationApi
      *
      * @param  string $org name of the organization to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Organization, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Organization, HTTP status code, HTTP response headers (array of strings)
      */
     public function orgGetWithHttpInfo($org)
     {
@@ -5460,20 +5460,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Organization' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Organization' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Organization', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Organization', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Organization';
+            $returnType = '\Efsa\Client\Gitea\Model\Organization';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5491,7 +5491,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Organization',
+                        '\Efsa\Client\Gitea\Model\Organization',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5533,7 +5533,7 @@ class OrganizationApi
      */
     public function orgGetAsyncWithHttpInfo($org)
     {
-        $returnType = '\Efsa\Client\Model\Organization';
+        $returnType = '\Efsa\Client\Gitea\Model\Organization';
         $request = $this->orgGetRequest($org);
 
         return $this->client
@@ -5704,9 +5704,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Organization[]
+     * @return \Efsa\Client\Gitea\Model\Organization[]
      */
     public function orgGetAll($page = null, $limit = null)
     {
@@ -5722,9 +5722,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Organization[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Organization[], HTTP status code, HTTP response headers (array of strings)
      */
     public function orgGetAllWithHttpInfo($page = null, $limit = null)
     {
@@ -5760,20 +5760,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Organization[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Organization[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Organization[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Organization[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Organization[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Organization[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5791,7 +5791,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Organization[]',
+                        '\Efsa\Client\Gitea\Model\Organization[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5835,7 +5835,7 @@ class OrganizationApi
      */
     public function orgGetAllAsyncWithHttpInfo($page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Organization[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Organization[]';
         $request = $this->orgGetAllRequest($page, $limit);
 
         return $this->client
@@ -6007,9 +6007,9 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  int $id id of the hook to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Hook
+     * @return \Efsa\Client\Gitea\Model\Hook
      */
     public function orgGetHook($org, $id)
     {
@@ -6025,9 +6025,9 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  int $id id of the hook to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Hook, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Hook, HTTP status code, HTTP response headers (array of strings)
      */
     public function orgGetHookWithHttpInfo($org, $id)
     {
@@ -6063,20 +6063,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Hook' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Hook' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Hook', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Hook', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Hook';
+            $returnType = '\Efsa\Client\Gitea\Model\Hook';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6094,7 +6094,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Hook',
+                        '\Efsa\Client\Gitea\Model\Hook',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6138,7 +6138,7 @@ class OrganizationApi
      */
     public function orgGetHookAsyncWithHttpInfo($org, $id)
     {
-        $returnType = '\Efsa\Client\Model\Hook';
+        $returnType = '\Efsa\Client\Gitea\Model\Hook';
         $request = $this->orgGetHookRequest($org, $id);
 
         return $this->client
@@ -6324,9 +6324,9 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  int $id id of the label to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Label
+     * @return \Efsa\Client\Gitea\Model\Label
      */
     public function orgGetLabel($org, $id)
     {
@@ -6342,9 +6342,9 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  int $id id of the label to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Label, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Label, HTTP status code, HTTP response headers (array of strings)
      */
     public function orgGetLabelWithHttpInfo($org, $id)
     {
@@ -6380,20 +6380,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Label' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Label' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Label', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Label', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Label';
+            $returnType = '\Efsa\Client\Gitea\Model\Label';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6411,7 +6411,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Label',
+                        '\Efsa\Client\Gitea\Model\Label',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6455,7 +6455,7 @@ class OrganizationApi
      */
     public function orgGetLabelAsyncWithHttpInfo($org, $id)
     {
-        $returnType = '\Efsa\Client\Model\Label';
+        $returnType = '\Efsa\Client\Gitea\Model\Label';
         $request = $this->orgGetLabelRequest($org, $id);
 
         return $this->client
@@ -6640,9 +6640,9 @@ class OrganizationApi
      *
      * @param  int $id id of the team to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Team
+     * @return \Efsa\Client\Gitea\Model\Team
      */
     public function orgGetTeam($id)
     {
@@ -6657,9 +6657,9 @@ class OrganizationApi
      *
      * @param  int $id id of the team to get (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Team, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Team, HTTP status code, HTTP response headers (array of strings)
      */
     public function orgGetTeamWithHttpInfo($id)
     {
@@ -6695,20 +6695,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Team' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Team' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Team', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Team', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Team';
+            $returnType = '\Efsa\Client\Gitea\Model\Team';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6726,7 +6726,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Team',
+                        '\Efsa\Client\Gitea\Model\Team',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6768,7 +6768,7 @@ class OrganizationApi
      */
     public function orgGetTeamAsyncWithHttpInfo($id)
     {
-        $returnType = '\Efsa\Client\Model\Team';
+        $returnType = '\Efsa\Client\Gitea\Model\Team';
         $request = $this->orgGetTeamRequest($id);
 
         return $this->client
@@ -6939,9 +6939,9 @@ class OrganizationApi
      * @param  string $username username of user (required)
      * @param  string $org name of the organization (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\OrganizationPermissions
+     * @return \Efsa\Client\Gitea\Model\OrganizationPermissions
      */
     public function orgGetUserPermissions($username, $org)
     {
@@ -6957,9 +6957,9 @@ class OrganizationApi
      * @param  string $username username of user (required)
      * @param  string $org name of the organization (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\OrganizationPermissions, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\OrganizationPermissions, HTTP status code, HTTP response headers (array of strings)
      */
     public function orgGetUserPermissionsWithHttpInfo($username, $org)
     {
@@ -6995,20 +6995,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\OrganizationPermissions' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\OrganizationPermissions' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\OrganizationPermissions', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\OrganizationPermissions', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\OrganizationPermissions';
+            $returnType = '\Efsa\Client\Gitea\Model\OrganizationPermissions';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7026,7 +7026,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\OrganizationPermissions',
+                        '\Efsa\Client\Gitea\Model\OrganizationPermissions',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7070,7 +7070,7 @@ class OrganizationApi
      */
     public function orgGetUserPermissionsAsyncWithHttpInfo($username, $org)
     {
-        $returnType = '\Efsa\Client\Model\OrganizationPermissions';
+        $returnType = '\Efsa\Client\Gitea\Model\OrganizationPermissions';
         $request = $this->orgGetUserPermissionsRequest($username, $org);
 
         return $this->client
@@ -7256,7 +7256,7 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  string $username username of the user (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -7273,7 +7273,7 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  string $username username of the user (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7528,7 +7528,7 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  string $username username of the user (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -7545,7 +7545,7 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  string $username username of the user (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7800,9 +7800,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Organization[]
+     * @return \Efsa\Client\Gitea\Model\Organization[]
      */
     public function orgListCurrentUserOrgs($page = null, $limit = null)
     {
@@ -7818,9 +7818,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Organization[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Organization[], HTTP status code, HTTP response headers (array of strings)
      */
     public function orgListCurrentUserOrgsWithHttpInfo($page = null, $limit = null)
     {
@@ -7856,20 +7856,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Organization[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Organization[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Organization[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Organization[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Organization[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Organization[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7887,7 +7887,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Organization[]',
+                        '\Efsa\Client\Gitea\Model\Organization[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7931,7 +7931,7 @@ class OrganizationApi
      */
     public function orgListCurrentUserOrgsAsyncWithHttpInfo($page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Organization[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Organization[]';
         $request = $this->orgListCurrentUserOrgsRequest($page, $limit);
 
         return $this->client
@@ -8104,9 +8104,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Hook[]
+     * @return \Efsa\Client\Gitea\Model\Hook[]
      */
     public function orgListHooks($org, $page = null, $limit = null)
     {
@@ -8123,9 +8123,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Hook[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Hook[], HTTP status code, HTTP response headers (array of strings)
      */
     public function orgListHooksWithHttpInfo($org, $page = null, $limit = null)
     {
@@ -8161,20 +8161,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Hook[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Hook[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Hook[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Hook[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Hook[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Hook[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8192,7 +8192,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Hook[]',
+                        '\Efsa\Client\Gitea\Model\Hook[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8238,7 +8238,7 @@ class OrganizationApi
      */
     public function orgListHooksAsyncWithHttpInfo($org, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Hook[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Hook[]';
         $request = $this->orgListHooksRequest($org, $page, $limit);
 
         return $this->client
@@ -8426,9 +8426,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Label[]
+     * @return \Efsa\Client\Gitea\Model\Label[]
      */
     public function orgListLabels($org, $page = null, $limit = null)
     {
@@ -8445,9 +8445,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Label[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Label[], HTTP status code, HTTP response headers (array of strings)
      */
     public function orgListLabelsWithHttpInfo($org, $page = null, $limit = null)
     {
@@ -8483,20 +8483,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Label[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Label[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Label[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Label[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Label[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Label[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8514,7 +8514,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Label[]',
+                        '\Efsa\Client\Gitea\Model\Label[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8560,7 +8560,7 @@ class OrganizationApi
      */
     public function orgListLabelsAsyncWithHttpInfo($org, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Label[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Label[]';
         $request = $this->orgListLabelsRequest($org, $page, $limit);
 
         return $this->client
@@ -8748,9 +8748,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\User[]
+     * @return \Efsa\Client\Gitea\Model\User[]
      */
     public function orgListMembers($org, $page = null, $limit = null)
     {
@@ -8767,9 +8767,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\User[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\User[], HTTP status code, HTTP response headers (array of strings)
      */
     public function orgListMembersWithHttpInfo($org, $page = null, $limit = null)
     {
@@ -8805,20 +8805,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\User[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\User[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\User[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\User[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\User[]';
+            $returnType = '\Efsa\Client\Gitea\Model\User[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8836,7 +8836,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\User[]',
+                        '\Efsa\Client\Gitea\Model\User[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8882,7 +8882,7 @@ class OrganizationApi
      */
     public function orgListMembersAsyncWithHttpInfo($org, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\User[]';
+        $returnType = '\Efsa\Client\Gitea\Model\User[]';
         $request = $this->orgListMembersRequest($org, $page, $limit);
 
         return $this->client
@@ -9070,9 +9070,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\User[]
+     * @return \Efsa\Client\Gitea\Model\User[]
      */
     public function orgListPublicMembers($org, $page = null, $limit = null)
     {
@@ -9089,9 +9089,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\User[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\User[], HTTP status code, HTTP response headers (array of strings)
      */
     public function orgListPublicMembersWithHttpInfo($org, $page = null, $limit = null)
     {
@@ -9127,20 +9127,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\User[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\User[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\User[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\User[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\User[]';
+            $returnType = '\Efsa\Client\Gitea\Model\User[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9158,7 +9158,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\User[]',
+                        '\Efsa\Client\Gitea\Model\User[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9204,7 +9204,7 @@ class OrganizationApi
      */
     public function orgListPublicMembersAsyncWithHttpInfo($org, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\User[]';
+        $returnType = '\Efsa\Client\Gitea\Model\User[]';
         $request = $this->orgListPublicMembersRequest($org, $page, $limit);
 
         return $this->client
@@ -9392,9 +9392,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Repository[]
+     * @return \Efsa\Client\Gitea\Model\Repository[]
      */
     public function orgListRepos($org, $page = null, $limit = null)
     {
@@ -9411,9 +9411,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Repository[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Repository[], HTTP status code, HTTP response headers (array of strings)
      */
     public function orgListReposWithHttpInfo($org, $page = null, $limit = null)
     {
@@ -9449,20 +9449,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Repository[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Repository[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Repository[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Repository[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Repository[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Repository[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9480,7 +9480,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Repository[]',
+                        '\Efsa\Client\Gitea\Model\Repository[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9526,7 +9526,7 @@ class OrganizationApi
      */
     public function orgListReposAsyncWithHttpInfo($org, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Repository[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Repository[]';
         $request = $this->orgListReposRequest($org, $page, $limit);
 
         return $this->client
@@ -9713,9 +9713,9 @@ class OrganizationApi
      * @param  int $id id of the team (required)
      * @param  string $username username of the member to list (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\User
+     * @return \Efsa\Client\Gitea\Model\User
      */
     public function orgListTeamMember($id, $username)
     {
@@ -9731,9 +9731,9 @@ class OrganizationApi
      * @param  int $id id of the team (required)
      * @param  string $username username of the member to list (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\User, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\User, HTTP status code, HTTP response headers (array of strings)
      */
     public function orgListTeamMemberWithHttpInfo($id, $username)
     {
@@ -9769,20 +9769,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\User' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\User' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\User', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\User', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\User';
+            $returnType = '\Efsa\Client\Gitea\Model\User';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9800,7 +9800,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\User',
+                        '\Efsa\Client\Gitea\Model\User',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9844,7 +9844,7 @@ class OrganizationApi
      */
     public function orgListTeamMemberAsyncWithHttpInfo($id, $username)
     {
-        $returnType = '\Efsa\Client\Model\User';
+        $returnType = '\Efsa\Client\Gitea\Model\User';
         $request = $this->orgListTeamMemberRequest($id, $username);
 
         return $this->client
@@ -10031,9 +10031,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\User[]
+     * @return \Efsa\Client\Gitea\Model\User[]
      */
     public function orgListTeamMembers($id, $page = null, $limit = null)
     {
@@ -10050,9 +10050,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\User[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\User[], HTTP status code, HTTP response headers (array of strings)
      */
     public function orgListTeamMembersWithHttpInfo($id, $page = null, $limit = null)
     {
@@ -10088,20 +10088,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\User[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\User[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\User[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\User[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\User[]';
+            $returnType = '\Efsa\Client\Gitea\Model\User[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10119,7 +10119,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\User[]',
+                        '\Efsa\Client\Gitea\Model\User[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10165,7 +10165,7 @@ class OrganizationApi
      */
     public function orgListTeamMembersAsyncWithHttpInfo($id, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\User[]';
+        $returnType = '\Efsa\Client\Gitea\Model\User[]';
         $request = $this->orgListTeamMembersRequest($id, $page, $limit);
 
         return $this->client
@@ -10353,9 +10353,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Repository[]
+     * @return \Efsa\Client\Gitea\Model\Repository[]
      */
     public function orgListTeamRepos($id, $page = null, $limit = null)
     {
@@ -10372,9 +10372,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Repository[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Repository[], HTTP status code, HTTP response headers (array of strings)
      */
     public function orgListTeamReposWithHttpInfo($id, $page = null, $limit = null)
     {
@@ -10410,20 +10410,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Repository[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Repository[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Repository[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Repository[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Repository[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Repository[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10441,7 +10441,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Repository[]',
+                        '\Efsa\Client\Gitea\Model\Repository[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10487,7 +10487,7 @@ class OrganizationApi
      */
     public function orgListTeamReposAsyncWithHttpInfo($id, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Repository[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Repository[]';
         $request = $this->orgListTeamReposRequest($id, $page, $limit);
 
         return $this->client
@@ -10675,9 +10675,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Team[]
+     * @return \Efsa\Client\Gitea\Model\Team[]
      */
     public function orgListTeams($org, $page = null, $limit = null)
     {
@@ -10694,9 +10694,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Team[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Team[], HTTP status code, HTTP response headers (array of strings)
      */
     public function orgListTeamsWithHttpInfo($org, $page = null, $limit = null)
     {
@@ -10732,20 +10732,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Team[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Team[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Team[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Team[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Team[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Team[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10763,7 +10763,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Team[]',
+                        '\Efsa\Client\Gitea\Model\Team[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10809,7 +10809,7 @@ class OrganizationApi
      */
     public function orgListTeamsAsyncWithHttpInfo($org, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Team[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Team[]';
         $request = $this->orgListTeamsRequest($org, $page, $limit);
 
         return $this->client
@@ -10997,9 +10997,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\Organization[]
+     * @return \Efsa\Client\Gitea\Model\Organization[]
      */
     public function orgListUserOrgs($username, $page = null, $limit = null)
     {
@@ -11016,9 +11016,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\Organization[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\Organization[], HTTP status code, HTTP response headers (array of strings)
      */
     public function orgListUserOrgsWithHttpInfo($username, $page = null, $limit = null)
     {
@@ -11054,20 +11054,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\Organization[]' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\Organization[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\Organization[]', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\Organization[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\Organization[]';
+            $returnType = '\Efsa\Client\Gitea\Model\Organization[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11085,7 +11085,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\Organization[]',
+                        '\Efsa\Client\Gitea\Model\Organization[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11131,7 +11131,7 @@ class OrganizationApi
      */
     public function orgListUserOrgsAsyncWithHttpInfo($username, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\Organization[]';
+        $returnType = '\Efsa\Client\Gitea\Model\Organization[]';
         $request = $this->orgListUserOrgsRequest($username, $page, $limit);
 
         return $this->client
@@ -11318,7 +11318,7 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  string $username username of the user (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -11335,7 +11335,7 @@ class OrganizationApi
      * @param  string $org name of the organization (required)
      * @param  string $username username of the user (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -11590,7 +11590,7 @@ class OrganizationApi
      * @param  int $id id of the team (required)
      * @param  string $username username of the user to remove (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -11607,7 +11607,7 @@ class OrganizationApi
      * @param  int $id id of the team (required)
      * @param  string $username username of the user to remove (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -11863,7 +11863,7 @@ class OrganizationApi
      * @param  string $org organization that owns the repo to remove (required)
      * @param  string $repo name of the repo to remove (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -11881,7 +11881,7 @@ class OrganizationApi
      * @param  string $org organization that owns the repo to remove (required)
      * @param  string $repo name of the repo to remove (required)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -12156,9 +12156,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Efsa\Client\Model\InlineResponse200
+     * @return \Efsa\Client\Gitea\Model\InlineResponse200
      */
     public function teamSearch($org, $q = null, $include_desc = null, $page = null, $limit = null)
     {
@@ -12177,9 +12177,9 @@ class OrganizationApi
      * @param  int $page page number of results to return (1-based) (optional)
      * @param  int $limit page size of results (optional)
      *
-     * @throws \Efsa\Client\ApiException on non-2xx response
+     * @throws \Efsa\Client\Gitea\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Efsa\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Efsa\Client\Gitea\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function teamSearchWithHttpInfo($org, $q = null, $include_desc = null, $page = null, $limit = null)
     {
@@ -12215,20 +12215,20 @@ class OrganizationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Efsa\Client\Model\InlineResponse200' === '\SplFileObject') {
+                    if ('\Efsa\Client\Gitea\Model\InlineResponse200' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Efsa\Client\Model\InlineResponse200', []),
+                        ObjectSerializer::deserialize($content, '\Efsa\Client\Gitea\Model\InlineResponse200', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Efsa\Client\Model\InlineResponse200';
+            $returnType = '\Efsa\Client\Gitea\Model\InlineResponse200';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12246,7 +12246,7 @@ class OrganizationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Efsa\Client\Model\InlineResponse200',
+                        '\Efsa\Client\Gitea\Model\InlineResponse200',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12296,7 +12296,7 @@ class OrganizationApi
      */
     public function teamSearchAsyncWithHttpInfo($org, $q = null, $include_desc = null, $page = null, $limit = null)
     {
-        $returnType = '\Efsa\Client\Model\InlineResponse200';
+        $returnType = '\Efsa\Client\Gitea\Model\InlineResponse200';
         $request = $this->teamSearchRequest($org, $q, $include_desc, $page, $limit);
 
         return $this->client
